@@ -1,0 +1,644 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMP 1000: Think Like a Computer &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script defer="" src="_static/jquery.js"></script>
+    <script defer="" src="_static/underscore.js"></script>
+    <script defer="" src="_static/doctools.js"></script>
+    <script defer="" src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="1. General Introduction" href="GeneralIntro/toctree.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="#" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='#' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=index'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1. </span>General Introduction' data-toggle="tooltip" >              
+    <a href="GeneralIntro/toctree.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="comp-1000-think-like-a-computer">
+<h1>COMP 1000: Think Like a Computer<a class="headerlink" href="#comp-1000-think-like-a-computer" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to COMP 1000 (SCI 1000 in Fall 2022)!</p>
+<p>This is a brand new course designed to introduce people to programming, which is a fundamental skill within Computer Science. At the same time as learning about programming, we will also begin right away by thinking about people: the end users who interact with teh software you develop. And when we think about people as end users, we must think about ethics. Thus, this course combines: Programming, Interactivity, and Ethics. PIE!</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="GeneralIntro/toctree.html">1. General Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/intro-TheWayoftheProgram.html">1.1. Introduction: The Way of the Program</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GeneralIntro/intro-TheWayoftheProgram.html#learning-goals">1.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GeneralIntro/intro-TheWayoftheProgram.html#objectives">1.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/Algorithms.html">1.2. Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/ThePythonProgrammingLanguage.html">1.3. The Python Programming Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/SpecialWaystoExecutePythoninthisBook.html">1.4. Special Ways to Execute Python in this Book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/MoreAboutPrograms.html">1.5. More About Programs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GeneralIntro/MoreAboutPrograms.html#preview-of-control-structures">1.5.1. Preview of Control Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/FormalandNaturalLanguages.html">1.6. Formal and Natural Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/ATypicalFirstProgram.html">1.7. A Typical First Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/WPPredictBeforeYouRun.html">1.8. 👩‍💻 Predict Before You Run!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/WPToUnderstandaProgramChangeIt.html">1.9. 👩‍💻 To Understand a Program, Change It!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/Comments.html">1.10. Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/Glossary.html">1.11. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeneralIntro/Exercises.html">1.12. Chapter Assessment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="GeneralIntro/Exercises.html#contributed-exercises">1.12.1. Contributed Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="SimplePythonData/toctree.html">2. Variables, Statements, and Expressions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/intro-VariablesExpressionsandStatements.html">2.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/intro-VariablesExpressionsandStatements.html#learning-goals">2.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/intro-VariablesExpressionsandStatements.html#objectives">2.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Values.html">2.2. Values and Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Operators.html">2.3. Operators and Operands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/FunctionCalls.html">2.4. Function Calls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/FunctionCalls.html#function-calls-as-part-of-complex-expressions">2.4.1. Function calls as part of complex expressions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/FunctionCalls.html#functions-are-objects-parentheses-invoke-functions">2.4.2. Functions are objects; parentheses invoke functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/DataTypes.html">2.5. Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/ConvertTypeFunctions.html">2.6. Type conversion functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Variables.html">2.7. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/VariableNamesandKeywords.html">2.8. Variable Names and Keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/WPChoosingtheRightVariableName.html">2.9. 👩‍💻 Choosing the Right Variable Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/StatementsandExpressions.html">2.10. Statements and Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/OrderofOperations.html">2.11. Order of Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Reassignment.html">2.12. Reassignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/Reassignment.html#developing-your-mental-model-of-how-python-evaluates">2.12.1. Developing your mental model of How Python Evaluates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/UpdatingVariables.html">2.13. Updating Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/HardCoding.html">2.14. 👩‍💻 Hard-Coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Input.html">2.15. Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Glossary.html">2.16. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/Exercises.html">2.17. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="SimplePythonData/Exercises.html#contributed-exercises">2.17.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SimplePythonData/week1a2.html">2.18. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Debugging/toctree.html">3. Debugging</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/intro-DebuggingGeneral.html">3.1. Introduction to Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/intro-DebuggingGeneral.html#learning-goals">3.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/intro-DebuggingGeneral.html#objectives">3.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/intro-HowtobeaSuccessfulProgrammer.html">3.2. 👩‍💻 Programming in the Real World</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/intro-HowtobeaSuccessfulProgrammer.html#debugging">3.3. 👩‍💻 Debugging</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/intro-HowtobeaSuccessfulProgrammer.html#how-to-avoid-debugging">3.3.1. How to Avoid Debugging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/BeginningtipsforDebugging.html">3.4. 👩‍💻 Beginning tips for Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/Syntaxerrors.html">3.5. Syntax errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/RuntimeErrors.html">3.6. Runtime Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/SemanticErrors.html">3.7. Semantic Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/SemanticErrors.html#test-cases">3.7.1. Test Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/KnowyourerrorMessages.html">3.8. 👩‍💻 Know Your Error Messages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/KnowyourerrorMessages.html#syntaxerror">3.8.1. SyntaxError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/KnowyourerrorMessages.html#typeerror">3.8.2. TypeError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/KnowyourerrorMessages.html#nameerror">3.8.3. NameError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/KnowyourerrorMessages.html#valueerror">3.8.4. ValueError</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Debugging/Exercises.html">3.9. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Debugging/Exercises.html#contributed-exercises">3.9.1. Contributed Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PythonModules/toctree.html">4. Python Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonModules/intro-PythonModules.html">4.1. Introduction to Python Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonModules/intro-PythonModules.html#learning-goals">4.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonModules/intro-PythonModules.html#objectives">4.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PythonModules/intro-ModulesandGettingHelp.html">4.2. Modules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonModules/intro-ModulesandGettingHelp.html#importing-modules">4.2.1. Importing Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonModules/intro-ModulesandGettingHelp.html#syntax-for-importing-modules-and-functionality">4.2.2. Syntax for Importing Modules and Functionality</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PythonModules/Therandommodule.html">4.3. The <code class="docutils literal notranslate"><span class="pre">random</span></code> module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonModules/Glossary.html">4.4. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonModules/Exercises.html">4.5. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonModules/Exercises.html#contributed-exercises">4.5.1. Contributed Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PythonTurtle/toctree.html">5. Python Turtle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/intro-HelloLittleTurtles.html">5.1. Hello Little Turtles!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/intro-HelloLittleTurtles.html#learning-goals">5.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/intro-HelloLittleTurtles.html#objectives">5.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/OurFirstTurtleProgram.html">5.2. Our First Turtle Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/InstancesAHerdofTurtles.html">5.3. Instances: A Herd of Turtles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/ObjectInstances.html">5.4. Object Oriented Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/ObjectInstances.html#user-defined-classes">5.4.1. User-defined Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/ObjectInstances.html#instances">5.4.2. Instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/ObjectInstances.html#attributes">5.4.3. Attributes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/ObjectInstances.html#methods">5.4.4. Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/RepetitionwithaForLoop.html">5.5. Repetition with a For Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/AFewMoreturtleMethodsandObservations.html">5.6. A Few More <code class="docutils literal notranslate"><span class="pre">turtle</span></code> Methods and Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/SummaryOfTurtleMethods.html">5.7. Summary of Turtle Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/WPIncrementalProgramming.html">5.8. 👩‍💻  Incremental Programming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/WPCommonTurtleErrors.html">5.9. 👩‍💻 Common <code class="docutils literal notranslate"><span class="pre">turtle</span></code> Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/Exercises.html">5.10. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PythonTurtle/Exercises.html#contributed-exercises">5.10.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/week1a3.html">5.11. Chapter Assessment - Turtle and Object Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PythonTurtle/week1a3.html#chapter-assessment-drawing-with-turtle">5.12. Chapter Assessment - Drawing with Turtle</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Sequences/toctree.html">6. Sequences</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/intro-Sequences.html">6.1. Introduction: Sequences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/intro-Sequences.html#learning-goals">6.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/intro-Sequences.html#objectives">6.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/StringsandLists.html">6.2. Strings and Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/StringsandLists.html#strings">6.2.1. Strings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/StringsandLists.html#lists">6.2.2. Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/StringsandLists.html#tuples">6.2.3. Tuples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/IndexOperatorWorkingwiththeCharactersofaString.html">6.3. Index Operator: Working with the Characters of a String</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/IndexOperatorWorkingwiththeCharactersofaString.html#index-operator-accessing-elements-of-a-list-or-tuple">6.3.1. Index Operator: Accessing Elements of a List or Tuple</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/DisabmiguatingSquareBrackets.html">6.4. Disambiguating []: creation vs indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/Length.html">6.5. Length</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/TheSliceOperator.html">6.6. The Slice Operator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/TheSliceOperator.html#list-slices">6.6.1. List Slices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/TheSliceOperator.html#tuple-slices">6.6.2. Tuple Slices</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/ConcatenationandRepetition.html">6.7. Concatenation and Repetition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/CountandIndex.html">6.8. Count and Index</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/CountandIndex.html#count">6.8.1. Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/CountandIndex.html#index">6.8.2. Index</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/SplitandJoin.html">6.9. Splitting and Joining Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/Exercises.html">6.10. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Sequences/Exercises.html#contributed-exercises">6.10.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Sequences/week2a1.html">6.11. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Iteration/toctree.html">7. Iteration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/intro-Iteration.html">7.1. Introduction: Iteration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/TheforLoop.html">7.2. The <strong>for</strong> Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/FlowofExecutionoftheforLoop.html">7.3. Flow of Execution of the for Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/Stringsandforloops.html">7.4. Strings and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/Listsandforloops.html">7.5. Lists and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/Listsandforloops.html#using-the-range-function-to-generate-a-sequence-to-iterate-over">7.5.1. Using the <cite>range</cite> Function to Generate a Sequence to Iterate Over</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/Listsandforloops.html#iteration-simplifies-our-turtle-program">7.5.2. Iteration Simplifies our Turtle Program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/TheAccumulatorPattern.html">7.6. The Accumulator Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/TraversalandtheforLoopByIndex.html">7.7. Traversal and the <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop: By Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/NestedIterationImageProcessing.html">7.8. Nested Iteration: Image Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/NestedIterationImageProcessing.html#the-rgb-color-model">7.8.1. The RGB Color Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/NestedIterationImageProcessing.html#image-objects">7.8.2. Image Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/NestedIterationImageProcessing.html#image-processing-and-nested-iteration">7.8.3. Image Processing and Nested Iteration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/WPPrintingIntermediateResults.html">7.9. 👩‍💻 Printing Intermediate Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/WPNamingVariablesinForLoops.html">7.10. 👩‍💻 Naming Variables in For Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/GeneralizedSequences.html">7.11. The Gory Details: Iterables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/WPKeepingTrackofYourIteratorVariableYourIterable.html">7.12. 👩‍💻 Keeping Track of Your Iterator Variable and Your Iterable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/Glossary.html">7.13. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/Exercises.html">7.14. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Iteration/Exercises.html#contributed-exercises">7.14.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Iteration/week2a2.html">7.15. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Conditionals/toctree.html">8. Conditionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/intro-TurtlesandConditionals.html">8.1. Intro: What we can do with Turtles and Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/intro-TurtlesandConditionals.html#learning-goals">8.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/intro-TurtlesandConditionals.html#objectives">8.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/BooleanValuesandBooleanExpressions.html">8.2. Boolean Values and Boolean Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Logicaloperators.html">8.3. Logical operators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/Logicaloperators.html#smart-evaluation">8.3.1. Smart Evaluation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Theinandnotinoperators.html">8.4. The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/PrecedenceofOperators.html">8.5. Precedence of Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/ConditionalExecutionBinarySelection.html">8.6. Conditional Execution: Binary Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/OmittingtheelseClauseUnarySelection.html">8.7. Omitting the <code class="docutils literal notranslate"><span class="pre">else</span></code> Clause: Unary Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Nestedconditionals.html">8.8. Nested conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Chainedconditionals.html">8.9. Chained conditionals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/TheAccumulatorPatternwithConditionals.html">8.10. The Accumulator Pattern with Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/TheAccumulatorPatternwithConditionals.html#accumulating-the-max-value">8.10.1. Accumulating the Max Value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/WPSettingUpConditionals.html">8.11. 👩‍💻 Setting Up Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/WPSettingUpConditionals.html#choosing-your-type-of-conditional">8.11.1. Choosing your type of Conditional</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Glossary.html">8.12. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/Exercises.html">8.13. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Conditionals/Exercises.html#contributed-exercises">8.13.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Conditionals/week3a1.html">8.14. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Files/toctree.html">9. Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Files/intro-WorkingwithDataFiles.html">9.1. Introduction: Working with Data Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Files/intro-WorkingwithDataFiles.html#learning-goals">9.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Files/intro-WorkingwithDataFiles.html#objectives">9.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Files/ReadingaFile.html">9.2. Reading a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/AlternativeFileReadingMethods.html">9.3. Alternative File Reading Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/Iteratingoverlinesinafile.html">9.4. Iterating over lines in a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/FindingaFileonyourDisk.html">9.5. Finding a File in your Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/With.html">9.6. Using <code class="docutils literal notranslate"><span class="pre">with</span></code> for Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/FilesRecipe.html">9.7. Recipe for Reading and Processing a File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/WritingTextFiles.html">9.8. Writing Text Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/CSVFormat.html">9.9. CSV Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/ReadingCSVFiles.html">9.10. Reading in data from a CSV File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/WritingCSVFiles.html">9.11. Writing data to a CSV File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/WPTipsHandlingFiles.html">9.12. 👩‍💻 Tips on Handling Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/Glossary.html">9.13. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Files/Exercises.html">9.14. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Files/Exercises.html#contributed-exercises">9.14.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Files/ChapterAssessment.html">9.15. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Functions/toctree.html">10. Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Functions/intro-Functions.html">10.1. Introduction to Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Functions/intro-Functions.html#topics">10.1.1. Topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Functions/intro-Functions.html#learning-objectives">10.1.2. Learning Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/FunctionDefinitions.html">10.2. Function Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/FunctionInvocation.html">10.3. Function Invocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/FunctionParameters.html">10.4. Function Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Returningavaluefromafunction.html">10.5. Returning a value from a function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/DecodingaFunction.html">10.6. 👩‍💻 Decoding a Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/TypeAnnotations.html">10.7. Type Annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Afunctionthataccumulates.html">10.8. A function that accumulates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Variablesandparametersarelocal.html">10.9. Variables and parameters are local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/GlobalVariables.html">10.10. Global Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Functionscancallotherfunctions.html">10.11. Functions can call other functions (Composition)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/FlowofExecutionSummary.html">10.12. Flow of Execution Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Printvsreturn.html">10.13. 👩‍💻 Print vs. return</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/PassingMutableObjects.html">10.14. Passing Mutable Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/SideEffects.html">10.15. Side Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Glossary.html">10.16. Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/Exercises.html">10.17. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Functions/Exercises.html#contributed-exercises">10.17.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Functions/ChapterAssessment.html">10.18. Chapter Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MoreAboutIteration/toctree.html">11. More About Iteration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/intro-indefiniteiteration.html">11.1. Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MoreAboutIteration/intro-indefiniteiteration.html#learning-goals">11.1.1. Learning Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MoreAboutIteration/intro-indefiniteiteration.html#objectives">11.1.2. Objectives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/ThewhileStatement.html">11.2. The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/listenerLoop.html">11.3. The Listener Loop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MoreAboutIteration/listenerLoop.html#other-uses-of-while">11.3.1. Other uses of <code class="docutils literal notranslate"><span class="pre">while</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="MoreAboutIteration/listenerLoop.html#sentinel-values">11.3.1.1. Sentinel Values</a></li>
+<li class="toctree-l4"><a class="reference internal" href="MoreAboutIteration/listenerLoop.html#validating-input">11.3.1.2. Validating Input</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/RandomlyWalkingTurtles.html">11.4. Randomly Walking Turtles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/BreakandContinue.html">11.5. Break and Continue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/WPInfiniteLoops.html">11.6. 👩‍💻 Infinite Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/Exercises.html">11.7. Exercises</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MoreAboutIteration/Exercises.html#contributed-exercises">11.7.1. Contributed Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MoreAboutIteration/ChapterAssessment.html">11.8. Chapter Assessment</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="section-2-another-random-section">
+<h2>SECTION 2: Another Random Section<a class="headerlink" href="#section-2-another-random-section" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="FrontBackMatter/contrib.html">Contributor List</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FrontBackMatter/contrib.html#second-edition">Second Edition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FrontBackMatter/contrib.html#first-edition">First Edition</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="FrontBackMatter/foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FrontBackMatter/preface.html">Preface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FrontBackMatter/preface.html#get-in-the-learning-zone">Get in the Learning Zone</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+  <li id="relations-next" class="navLink" title='Next Section - 1. General Introduction' data-toggle="tooltip" >
+    <a href="GeneralIntro/toctree.html" aria-label="Next - 1. General Introduction">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
