@@ -32,9 +32,9 @@ In this case, we refer to the materials as arguments or inputs and the resulting
 
 .. note::
 
-    Don't confuse the "output value" of a function with the output window. The output of a function is a Python value and we can never really see the internal representation of a value. But we can draw pictures to help us imagine what values are, or we can print them to see an external representation in the output window.
+    The output of a function is a Python value and we can never really see the internal representation of a value. But we can draw pictures to help us imagine what values are, or we can print them to see an external representation in the console.
 
-    To confuse things even more, ``print`` is actually a function. All functions produce output values. Only the ``print`` function causes things to appear in the output window.
+    You have already used a function: ``print``. The ``print`` function causes things to appear in the console.
 
 It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.
 
@@ -72,9 +72,9 @@ Notice that when a function takes more than one input parameter, the inputs are 
 that the order of the inputs matters. The value before the comma is treated as the first input, the value after it
 as the second input.
 
-Again, remember that when Python performs computations, the results are only shown in the output window if there's a
+Again, remember that when Python performs computations, the results are only shown in the console if there's a
 print statement that says to do that. In the activecode window above, ``square(5)`` produces the value 25 but we never
-get to see that in the output window, because it is not printed.
+get to see that in the console, because it is not printed.
 
 Function calls as part of complex expressions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,12 +109,9 @@ Let's take a look at how that last execution unfolds.
 Functions are objects; parentheses invoke functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Remember that earlier we mentioned that some kinds of Python objects don't have a nice printed representation? Functions are
-themselves just objects. If you tell Python to print the function object, rather than printing the results of invoking
-the function object, you'll get one of those not-so-nice printed representations.
 
-Just typing the name of the function refers to the function as an object. Typing the name of the function followed by
-parentheses ``()`` invokes the function.
+Just typing the name of the function refers to the function as an object, as in the first line in the example below. Typing the name of the function followed by
+parentheses ``()`` invokes the function. Of course, you have to put any input values that the function needs inside the parentheses. 
 
 .. activecode:: ac2_4_4
    :include: ac2_4_1
@@ -123,3 +120,5 @@ parentheses ``()`` invokes the function.
 
    print(square)
    print(square(3))
+
+In the second line of the example above, the square function is called with the input ``3``. The square function evaluates the input and retunrs the value ``9``. The value ``9`` is then passed as the input to the print function. The print function displays ``9`` on the console. 
