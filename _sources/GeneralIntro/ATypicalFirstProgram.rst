@@ -25,13 +25,13 @@ looks like this.
     print("Hello, World!")
 
 This is an example of using the **print function**, which doesn't actually
-print anything on paper. It displays a value on the screen. In this case, the result is the phrase:
+print anything on paper. It displays a value on the screen, in the programming console. Programmers do their work in development environments (software applications designed specifically for developing programs). In a development environment there is typically one part of the window where the programmer edits the program, and another part of the window, called the console, where output (such as from a print statement) is displayed. In this case, the result on the console is the phrase:
 
 ::
 
     Hello, World!
 
-Here is the example in an activecode window, where you can run it and modify it.
+Here is the example in an activecode window, where you can run it and modify it. When you click the Save & Run button, a grey console window appears below the activecode window. That is where output from print() statements will always appear.
 
 .. activecode:: ac1_7_1
 
@@ -48,12 +48,12 @@ possible.
 
 .. mchoice:: question1_7_1
    :answer_a: sends information to the printer to be printed on paper.
-   :answer_b: displays a value on the screen.
+   :answer_b: displays a value in the console.
    :answer_c: tells the computer to put the information in print, rather than cursive, format.
    :answer_d: tells the computer to speak the information.
    :correct: b
    :feedback_a: Within the Python programming language, the print statement has nothing to do with the printer.
-   :feedback_b: Yes, the print statement is used to display the value of the thing being printed.
+   :feedback_b: Yes, the print statement is used to display the value of the thing being printed. This shows up in the console, which is typically only seen by the programmer, not the end user.
    :feedback_c: The format of the information is called its font and has nothing to do with the print statement.
    :feedback_d: That would be nice! But no...
 

@@ -14,7 +14,7 @@
 Special Ways to Execute Python in this Book
 -------------------------------------------
 
-This book provides two additional ways to execute Python programs.  Both techniques are designed to assist you as you
+This book provides two ways to execute Python programs.  Both techniques are designed to assist you as you
 learn the Python programming language.  They will help you increase your understanding of how Python programs work.
 
 
@@ -56,7 +56,7 @@ created and modified. In activecode, the source code executes from beginning to 
 can see the final result. In codelens you can see and control the step by step progress. 
 Note that the red arrow always points to the next line of code that is going to be executed. 
 The light green arrow points to the line that was just executed. Click on the "Show in 
-Codelens" button to make the codelens window show up, and then click on the Forward button 
+Codelens" button in the code example above to make the codelens window show up, and then click on the Forward button 
 a few times to step through the execution.  
 
 Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.

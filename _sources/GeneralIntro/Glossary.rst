@@ -42,9 +42,16 @@ Glossary
         To translate a program written in a high-level language into a
         low-level language all at once, in preparation for later execution.
 
+    console
+        A window in a development environment that shows program output in text format, usually only seen 
+        by the programmmer, and not seen by the end user. 
+
     debugging
         The process of finding and removing any of the three kinds of
-        programming errors: ***syntax error***, ***semantic error***, and ***runtime error***. 
+        programming errors: ***syntax error***, ***semantic error***, and ***runtime error***.
+
+    end user
+        A person who makes use of a program, as distinct from a programmer, who writes the program.  
 
     exception
         Another name for a runtime error.
@@ -64,6 +71,10 @@ Glossary
     interpret
         To execute a program in a high-level language by translating it one
         line at a time.
+
+    interactive
+        A type of program that receives input from end users while it is running, and might also 
+        display output on the screen for those end users (as distinct from text output shown in the console). 
 
     low-level language
         A programming language that is designed to be easy for a computer to
@@ -92,6 +103,9 @@ Glossary
     program
         A sequence of instructions that specifies to a computer actions and
         computations to be performed.
+        
+    programmer
+        A person who writes, edits or maintains programs, using a programming language (such as Python).
 
     programming language
          A vocabulary and set of grammatical rules for instructing a computer or computing device to perform specific tasks.
