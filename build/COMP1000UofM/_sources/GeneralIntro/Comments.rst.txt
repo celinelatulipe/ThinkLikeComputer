@@ -21,7 +21,7 @@ For this reason, it is a good idea to add notes to your programs to explain in
 natural language what the program is doing.  These notes are called comments.
 
 A **comment** in a computer program is text that is intended only for the human
-reader - it is completely ignored by the interpreter.
+reader (the programmer)  - it is completely ignored by the interpreter.
 In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
 Here is a new version of *Hello, World!*.
 
@@ -49,7 +49,7 @@ programs much easier for humans to parse.  Use them liberally!
    :answer_d: Nothing in a short program.  They are only needed for really large programs.
    :correct: b
    :feedback_a: Comments are ignored by the computer.
-   :feedback_b: The computer ignores comments.  It’s for the humans that will “consume” your program.
+   :feedback_b: The computer ignores comments.  It’s for the human programmers that will read, and possibly edit, the program.
    :feedback_c: Comments can provide much needed information for anyone reading the program.
    :feedback_d: Even small programs benefit from comments.
 

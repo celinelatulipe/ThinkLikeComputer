@@ -266,9 +266,9 @@ symbolic computation, such as searching for and replacing text in a document or
 <p>The details look different in different languages, but a few basic instructions
 appear in just about every language.</p>
 <dl class="simple">
-<dt>input</dt><dd><p>Get data from the keyboard, a file, or some other device.</p>
+<dt>input</dt><dd><p>Get data from the user via keyboard or mouse input, or from a file, or some other device.</p>
 </dd>
-<dt>output</dt><dd><p>Display data on the screen or send data to a file or other device.</p>
+<dt>output</dt><dd><p>Display data on the screen for an end user, in the console for the programmer, or send data to a file or other device.</p>
 </dd>
 <dt>math and logic</dt><dd><p>Perform basic mathematical operations like addition and multiplication
 and logical operations like <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
@@ -291,7 +291,7 @@ instructions.</p>
 If these make sense to you now, that’s great!
 However, we don’t expect you to understand these yet - understanding will come later.</p>
 <p>First we have structures that allow us to iterate over something.
-We can look at strings character-by-character or lists item-by-item until we’ve reached the end of them by using something called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+We can look at strings character-by-character or lists item-by-item until we’ve reached the end of them by using something called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. Run the program below to see what is output to the console:</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=ac1_5_1 data-question_label="1.5.1.1">
@@ -309,7 +309,7 @@ for character in "Cool string":
 </div>
 </div>
 <p>We can also iterate without a definite stopping point with <code class="docutils literal notranslate"><span class="pre">while</span></code> loops.
-You might use this if you want to receive input from the user of your program but you don’t know how long it’ll take for them to be done with your code.</p>
+You might use this if you want to receive input from the user of your program but you don’t know how long it’ll take for them to be done with your code. Run the program below and add some items to a grocery list:</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=ac1_5_2 data-question_label="1.5.1.2">
@@ -328,6 +328,7 @@ while grocery_item != "done":
 </textarea>
 </div>
 </div>
+<p>Note that in the example above, you could run this program repeatedly and give it a different number of items each time you run it.</p>
 <p>Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found.
 Conditionals, as they’re called, allow us to do that.
 Check out how adding conditionals to our code can change what we can write about regarding grocery shopping.</p>

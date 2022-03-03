@@ -26,10 +26,10 @@ The details look different in different languages, but a few basic instructions
 appear in just about every language.
 
 input
-    Get data from the keyboard, a file, or some other device.
+    Get data from the user via keyboard or mouse input, or from a file, or some other device.
 
 output
-    Display data on the screen or send data to a file or other device.
+    Display data on the screen for an end user, in the console for the programmer, or send data to a file or other device.
 
 math and logic
     Perform basic mathematical operations like addition and multiplication
@@ -57,7 +57,7 @@ If these make sense to you now, that's great!
 However, we don't expect you to understand these yet - understanding will come later. 
 
 First we have structures that allow us to iterate over something. 
-We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop.
+We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop. Run the program below to see what is output to the console:
 
 .. activecode:: ac1_5_1
 
@@ -65,7 +65,7 @@ We can look at strings character-by-character or lists item-by-item until we've 
        print(character)
 
 We can also iterate without a definite stopping point with ``while`` loops. 
-You might use this if you want to receive input from the user of your program but you don't know how long it'll take for them to be done with your code.
+You might use this if you want to receive input from the user of your program but you don't know how long it'll take for them to be done with your code. Run the program below and add some items to a grocery list:
 
 .. activecode:: ac1_5_2
 
@@ -73,6 +73,9 @@ You might use this if you want to receive input from the user of your program bu
    while grocery_item != "done":
        grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
        print(grocery_item)
+
+
+Note that in the example above, you could run this program repeatedly and give it a different number of items each time you run it. 
 
 Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found. 
 Conditionals, as they're called, allow us to do that. 
