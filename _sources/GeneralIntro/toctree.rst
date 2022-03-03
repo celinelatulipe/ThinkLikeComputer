@@ -7,6 +7,8 @@ General Introduction
 
    intro-TheWayoftheProgram.rst
    Algorithms.rst
+   Interactivity.rst
+   Ethics.rst
    ThePythonProgrammingLanguage.rst
    SpecialWaystoExecutePythoninthisBook.rst
    MoreAboutPrograms.rst

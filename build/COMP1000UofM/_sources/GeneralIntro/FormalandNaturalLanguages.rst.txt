@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: intro-6-
+   :prefix: intro-8-
    :start: 1
 
 Formal and Natural Languages

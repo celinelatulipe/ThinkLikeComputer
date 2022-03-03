@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.8. Formal and Natural Languages &#8212; COMP 1000: Think Like a Computer</title>
+    <title>1.3. Interactivity &#8212; COMP 1000: Think Like a Computer</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
@@ -35,8 +35,8 @@
     <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.9. A Typical First Program" href="ATypicalFirstProgram.html" />
-    <link rel="prev" title="1.7. More About Programs" href="MoreAboutPrograms.html" />
+    <link rel="next" title="1.4. Ethics" href="Ethics.html" />
+    <link rel="prev" title="1.2. Algorithms" href="Algorithms.html" />
 
 
 <link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
@@ -197,7 +197,7 @@
             <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
             <li class="divider"></li>
             <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
-            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=FormalandNaturalLanguages'>Report A Problem</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=Interactivity'>Report A Problem</a></li>
           </ul>
         </li>
         <!-- end help menu dropdown -->
@@ -214,14 +214,14 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.7. </span>More About Programs" data-toggle="tooltip">
-    <a href="MoreAboutPrograms.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.2. </span>Algorithms" data-toggle="tooltip">
+    <a href="Algorithms.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">1.9. </span>A Typical First Program' data-toggle="tooltip" >              
-    <a href="ATypicalFirstProgram.html" >
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.4. </span>Ethics' data-toggle="tooltip" >              
+    <a href="Ethics.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
   </li>
@@ -256,116 +256,66 @@
 
 
   
-  <div class="section" id="formal-and-natural-languages">
-<h1><span class="section-number">1.8. </span>Formal and Natural Languages<a class="headerlink" href="#formal-and-natural-languages" title="Permalink to this headline">¶</a></h1>
-<p><strong>Natural languages</strong> are the languages that people speak, such as English,
-Spanish, Korean, and Mandarin Chinese. They were not designed by people (although people try to
-impose some order on them); they evolved naturally.</p>
-<p><strong>Formal languages</strong> are languages that are designed by people for specific
-applications. For example, the notation that mathematicians use is a formal
-language that is particularly good at denoting relationships among numbers and
-symbols. Chemists use a formal language to represent the chemical structure of
-molecules. And most importantly:</p>
-<blockquote>
-<div><p><em>Programming languages are formal languages that have been designed to
-express computations.</em></p>
-</div></blockquote>
-<p>Formal languages tend to have strict rules about syntax. For example, <code class="docutils literal notranslate"><span class="pre">3+3=6</span></code>
-is a syntactically correct mathematical statement, but <code class="docutils literal notranslate"><span class="pre">3=+6$</span></code> is not.
-H<sub>2</sub>O is a syntactically correct chemical name, but <sub>2</sub>Zz is
-not.</p>
-<p>Syntax rules come in two flavors, pertaining to <strong>tokens</strong> and structure.
-Tokens are the basic elements of the language, such as words, numbers, and
-chemical elements. One of the problems with <code class="docutils literal notranslate"><span class="pre">3=+6$</span></code> is that <code class="docutils literal notranslate"><span class="pre">$</span></code> is not a
-legal token in mathematics (at least as far as we know). Similarly,
-<sub>2</sub>Zz is not legal because there is no element with the abbreviation
-<code class="docutils literal notranslate"><span class="pre">Zz</span></code>.</p>
-<p>The second type of syntax rule pertains to the <strong>structure</strong> of a statement—
-that is, the way the tokens are arranged. The statement <code class="docutils literal notranslate"><span class="pre">3=+6$</span></code> is
-structurally illegal because you can’t place a plus sign immediately after an
-equal sign.  Similarly, molecular formulas have to have subscripts after the
-element name, not before.</p>
-<p>When you read a sentence in English or a statement in a formal language, you
-have to figure out what the structure of the sentence is (although in a natural
-language you do this subconsciously). This process is called <strong>parsing</strong>.</p>
-<p>For example, when you hear the sentence, “The other shoe fell”, you understand
-that the other shoe is the subject and fell is the verb.  Once you have parsed
-a sentence, you can figure out what it means, or the <strong>semantics</strong> of the sentence.
-Assuming that you know what a shoe is and what it means to fall, you will
-understand the general implication of this sentence.</p>
-<p>Although formal and natural languages have many features in common — tokens,
-structure, syntax, and semantics — there are many differences:</p>
-<dl class="glossary">
-<dt id="term-ambiguity">ambiguity<a class="headerlink" href="#term-ambiguity" title="Permalink to this term">¶</a></dt><dd><p>Natural languages are full of ambiguity, which people deal with by
-using contextual clues and other information. Formal languages are
-designed to be nearly or completely unambiguous, which means that any
-statement has exactly one meaning, regardless of context.</p>
-</dd>
-<dt id="term-redundancy">redundancy<a class="headerlink" href="#term-redundancy" title="Permalink to this term">¶</a></dt><dd><p>In order to make up for ambiguity and reduce misunderstandings, natural
-languages employ lots of redundancy. As a result, they are often
-verbose.  Formal languages are less redundant and more concise.</p>
-</dd>
-<dt id="term-literalness">literalness<a class="headerlink" href="#term-literalness" title="Permalink to this term">¶</a></dt><dd><p>Formal languages mean exactly what they say.  On the other hand,
-natural languages are full of idiom and metaphor. If someone says, “The
-other shoe fell”, there is probably no shoe and nothing falling.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You’ll need to find the original joke to understand the idiomatic
-meaning of the other shoe falling.  <em>Yahoo! Answers</em> thinks it
-knows!</p>
+  <div class="section" id="interactivity">
+<span id="index-0"></span><h1><span class="section-number">1.3. </span>Interactivity<a class="headerlink" href="#interactivity" title="Permalink to this headline">¶</a></h1>
+<p>Consider the following code we introduced in the previous section:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=alg_impl_int data-question_label="1.3.1">
+<div id=alg_impl_int_question class="ac_question col-md-12">
+
 </div>
-</dd>
-</dl>
-<p>People who grow up speaking a natural language—that is, everyone—often have a hard
-time adjusting to formal languages. In some ways, the difference between natural and formal
-language is like the difference between poetry and prose, but more
-so:</p>
-<dl class="glossary simple">
-<dt id="term-poetry">poetry<a class="headerlink" href="#term-poetry" title="Permalink to this term">¶</a></dt><dd><p>Words are used for their sounds as well as for their meaning, and the
-whole poem together creates an effect or emotional response. Ambiguity
-is not only common but often deliberate.</p>
-</dd>
-<dt id="term-prose">prose<a class="headerlink" href="#term-prose" title="Permalink to this term">¶</a></dt><dd><p>The literal meaning of words is more important, and the structure
-contributes more meaning. Prose is more amenable to analysis than
-poetry but still often ambiguous.</p>
-</dd>
-<dt id="term-program">program<a class="headerlink" href="#term-program" title="Permalink to this term">¶</a></dt><dd><p>The meaning of a computer program is unambiguous and literal, and can
-be understood entirely by analysis of the tokens and structure.</p>
-</dd>
-</dl>
-<p>Here are some suggestions for reading programs (and other formal languages).
-First, remember that formal languages are much more dense than natural
-languages, so it takes longer to read them. Also, the structure is very
-important, so it is usually not a good idea to read from top to bottom, left to
-right. Instead, learn to parse the program in your head, identifying the tokens
-and interpreting the structure.  Finally, the details matter. Little things
-like spelling errors and bad punctuation, which you can get away with in
-natural languages, can make a big difference in a formal language.</p>
+<textarea data-lang="python" id="alg_impl_int_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+radius = int(input("Enter the radius:"))
+area = (radius * radius) * 3.1415
+print("The area of a circle with radius", radius, "is:", area)
+</textarea>
+</div>
+</div>
+<p>This program is <strong>interactive</strong> because it asks for input from an <strong>end user</strong>. The end user is a person who might <strong>use</strong> your program, but will never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your <strong>programmer</strong> hat. When you type a number into the dialog box that comes up, you are wearing your <strong>end user</strong> hat.</p>
+<p>Let’s take a look at a version of this program that is not interactive:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=alg_impl_int_v2 data-question_label="1.3.2">
+<div id=alg_impl_int_v2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="alg_impl_int_v2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+radius = 15
+area = (radius * radius) * 3.1415
+print("The area of a circle with radius", radius, "is:", area)
+</textarea>
+</div>
+</div>
+<p>If you run this program, no dialog box pops up, and the user does not get to provide any input at all.  Instead there is a hard-coded value for the radius: <code class="docutils literal notranslate"><span class="pre">15</span></code>. And
+so this program can only calculate one thing: the area of a circle with a radius of 15. That’s pretty boring and not very useful! Adding interactivity
+to our programs makes them more dynamic and useful. The output of many of the programs in this book is displayed
+in the <strong>console</strong> - that’s the grey output window underneath the activecode window. The console is where errors and output
+messages appear and that is something a programmer or technology specialist uses. Most end users don’t see
+what is printed out to the programmer’s console.</p>
+<p>A program that is not interactive (that does not get input from a person <strong>while the program is running</strong> is called a <strong>batch</strong> program. Sometimes batch programs read input from a file, or sometimes data is hard-coded right into the program, like the value <code class="docutils literal notranslate"><span class="pre">15</span></code> in the example above. Batch programs are used for data processing in many big companies. And often, when people are learning how to program, the first programs are batch programs because they are often simple: get some input, do something with it, spit out a result. Interactive programs are more complicated, because they often involve waiting for users to do things, and then doing things in response. However, interactive programs are really common in real life: every app that you use on your phone, your laptop, your smart watch, your video game console, oryour fitness tracker is an interactive program.</p>
+<p>In this book we will teach you some of the basic elements of interactivity and interactive programming. We will show you how you can design interfaces that show the output of your programs to end users on a screen by popping up message boxes, drawing images on a canvas that the user can interact with, or presenting graphical user interfaces that have buttons and menus that a user can interact with. These interactivity elements will be interspersed throughout the book alongside more traditional batch programs that just output data to the console.</p>
 <p><strong>Check your understanding</strong></p>
 
             <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.8.1" data-multipleanswers="false"  id="question1_6_1"  style="visibility: hidden;">
-            <p>intro-8-1: The differences between natural and formal languages include:</p>
+            <ul data-component="multiplechoice" data-question_label="1.3.3" data-multipleanswers="false"  id="question1_2_3"  style="visibility: hidden;">
+            <p>intro-3-3: The output of a program that an end user typically sees is:</p>
 
-            <li data-component="answer"  id="question1_6_1_opt_a">natural languages can be parsed while formal languages cannot.</li><li data-component="feedback">Actually both languages can be parsed (determining the structure of the sentence), but formal languages can be parsed more easily in software.</li>
+            <li data-component="answer"  id="question1_2_3_opt_a">Always exactly the same as what the programmer sees.</li><li data-component="feedback">The programmer gets lots of output from a program that helps them ensure the program is working correctly. An end user doesn't need to see all of that. They just need the result presented to them.</li>
             
-            <li data-component="answer" data-correct id="question1_6_1_opt_b">ambiguity, redundancy, and literalness.</li><li data-component="feedback">All of these can be present in natural languages, but cannot exist in formal languages.</li>
+            <li data-component="answer"  id="question1_2_3_opt_b">The text that shows up in the console.</li><li data-component="feedback">The console is not usually visible to end users. It is designed to show programming output to the programmer to help them as they develop the program.</li>
             
-            <li data-component="answer"  id="question1_6_1_opt_c">there are no differences between natural and formal languages.</li><li data-component="feedback">There are several differences between the two but they are also similar.</li>
+            <li data-component="answer"  id="question1_2_3_opt_c">Not something the programmer needs to worry about.</li><li data-component="feedback">Programmers are responsible for showing appropriate and understandable output to the end user of the program.</li>
             
-            <li data-component="answer"  id="question1_6_1_opt_d">tokens, structure, syntax, and semantics.</li><li data-component="feedback">These are the similarities between the two.</li>
-            
-
-            </ul>
-            </div>
-            
-            <div class="runestone alert alert-warning">
-            <ul data-component="multiplechoice" data-question_label="1.8.2" data-multipleanswers="false"  id="question1_6_2"  style="visibility: hidden;">
-            <p>intro-8-2: True or False:  Reading a program is like reading other kinds of text.</p>
-
-            <li data-component="answer"  id="question1_6_2_opt_a">True</li><li data-component="feedback">It usually takes longer to read a program because the structure is as important as the content and must be interpreted in smaller pieces for understanding.</li>
-            
-            <li data-component="answer" data-correct id="question1_6_2_opt_b">False</li><li data-component="feedback">It usually takes longer to read a program because the structure is as important as the content and must be interpreted in smaller pieces for understanding.</li>
+            <li data-component="answer" data-correct id="question1_2_3_opt_d">Designed by the programmer and usually shows up as a dialog box or window on screen.</li><li data-component="feedback">Programmers need to design output for the end users who will interact with their program and this usually shows up as part of a graphical user interface: in a dialog box, in a window, etc.</li>
             
 
             </ul>
@@ -378,14 +328,14 @@ natural languages, can make a big difference in a formal language.</p>
   </div>
 
   <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
-<li id="relations-prev" class="navLink" title='Previous Section - 1.7. More About Programs' data-toggle="tooltip">
-  <a href="MoreAboutPrograms.html" aria-label="Previous - 1.7. More About Programs">
+<li id="relations-prev" class="navLink" title='Previous Section - 1.2. Algorithms' data-toggle="tooltip">
+  <a href="Algorithms.html" aria-label="Previous - 1.2. Algorithms">
     <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
   </a>
 </li>
 
-  <li id="relations-next" class="navLink" title='Next Section - 1.9. A Typical First Program' data-toggle="tooltip" >
-    <a href="ATypicalFirstProgram.html" aria-label="Next - 1.9. A Typical First Program">
+  <li id="relations-next" class="navLink" title='Next Section - 1.4. Ethics' data-toggle="tooltip" >
+    <a href="Ethics.html" aria-label="Next - 1.4. Ethics">
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
