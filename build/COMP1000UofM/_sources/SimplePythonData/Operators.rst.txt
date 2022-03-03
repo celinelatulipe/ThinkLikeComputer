@@ -41,7 +41,7 @@ token for multiplication, and ``**`` is the token for exponentiation.
 Addition, subtraction, multiplication, and exponentiation all do what you
 expect.
 
-Remember that if we want to see the results of the computation, the program needs to specify that with the word ``print``. The first three computations occur, but their results are not printed out.
+Remember that if we want to see the results of the computation, the program needs to specify that with the word ``print``. The first three computations occur, but their results are not printed out to the console.
 
 .. activecode:: ac2_3_1
     :nocanvas:
@@ -51,7 +51,7 @@ Remember that if we want to see the results of the computation, the program need
     (5 + 9) * (15 - 7)
     print(7 + 5)
 
-In Python 3, which we will be using, the division operator ``/`` produces a floating point result (even if the result is an integer; ``4/2`` is ``2.0``). If you want truncated division, which ignores the remainder, you can use the ``//`` operator (for example, ``5//2`` is ``2``).
+In Python 3, which we will be using, the division operator ``/`` produces a floating point result (even if the result is an integer): ``4/2`` is ``2.0``. If you want truncated division, which ignores the remainder, you can use the ``//`` operator (for example, ``5//2`` is ``2``).
 
 .. activecode:: ac2_3_2
     :nocanvas:
@@ -60,7 +60,7 @@ In Python 3, which we will be using, the division operator ``/`` produces a floa
     print(5 / 9)
     print(9 // 5)
 
-Pay particular attention to the examples above. Note that ``9//5`` truncates rather than rounding, so it produces the value 1 rather 2.
+Pay particular attention to the examples above. Note that ``9//5`` truncates rather than rounding, so it produces the value 1 rather than 2.
 
 The truncated division operator, ``//``, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus ``7.0 // 3.0`` is ``2.0``.
 

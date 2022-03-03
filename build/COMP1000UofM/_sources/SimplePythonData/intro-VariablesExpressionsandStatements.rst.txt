@@ -49,8 +49,8 @@ Learning Goals
 Objectives
 ----------
 
-* Given some sample code identify variables that reference an object of a particular type
-* Given a variable of one type convert it to another
+* Given some sample code, identify variables that reference an object of a particular type
+* Given a variable of one type, convert it to another
 * Simulate evaluation of an expression and assignment statement
 * Use reassignment to increment a variable (accumulator pattern)
 * Get input from a user and convert the input to the appropriate type
