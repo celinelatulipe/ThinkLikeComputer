@@ -17,5 +17,7 @@ General Introduction
    WPPredictBeforeYouRun.rst
    WPToUnderstandaProgramChangeIt.rst
    Comments.rst
+   HelloLittleTurtles.rst
+   OurFirstTurtleProgram.rst
    Glossary.rst
    Exercises.rst

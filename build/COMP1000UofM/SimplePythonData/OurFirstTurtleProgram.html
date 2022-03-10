@@ -1,0 +1,681 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.17. 🐢 Our First Turtle Program &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.18. Glossary" href="Glossary.html" />
+    <link rel="prev" title="2.16. 🐢 Hello Little Turtles!" href="HelloLittleTurtles.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=OurFirstTurtleProgram'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2.16. </span>🐢 Hello Little Turtles!" data-toggle="tooltip">
+    <a href="HelloLittleTurtles.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">2.18. </span>Glossary' data-toggle="tooltip" >              
+    <a href="Glossary.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="our-first-turtle-program">
+<span id="index-0"></span><h1><span class="section-number">2.17. </span>🐢 Our First Turtle Program<a class="headerlink" href="#our-first-turtle-program" title="Permalink to this headline">¶</a></h1>
+<p>Let’s try a couple of lines of Python code to create a new turtle and
+start drawing a simple figure like a rectangle.
+We will refer to our first turtle using the variable name alex, but remember that you can
+choose any name you wish as long as you follow the naming rules from the previous chapter.</p>
+<p>The program as shown will only draw the first two sides of the rectangle.
+After line 4 you will have a straight line going from the center of the
+drawing canvas towards the right. After line 6, you will have a canvas with a
+turtle and a half drawn rectangle. Press the run button to try it and see.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 29)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 34</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">activecode</span><span class="p">::</span> <span class="n">ac3_2_1</span>
+    <span class="p">:</span><span class="n">tour_1</span><span class="p">:</span> <span class="s2">&quot;Overall Tour&quot;</span><span class="p">;</span> <span class="mi">1</span><span class="o">-</span><span class="mi">6</span><span class="p">:</span> <span class="n">Example01_Tour01_Line01</span><span class="p">;</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Example01_Tour01_Line02</span><span class="p">;</span> <span class="mi">4</span><span class="p">:</span> <span class="n">Example01_Tour01_Line03</span><span class="p">;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Example01_Tour01_Line04</span><span class="p">;</span> <span class="mi">6</span><span class="p">:</span> <span class="n">Example01_Tour01_Line05</span><span class="p">;</span>
+    <span class="p">:</span><span class="n">tour_2</span><span class="p">:</span> <span class="s2">&quot;Line by Line Tour&quot;</span><span class="p">;</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Example01_Tour02_Line01</span><span class="p">;</span> <span class="mi">2</span><span class="p">:</span> <span class="n">Example01_Tour02_Line02</span><span class="p">;</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Example01_Tour02_Line03</span><span class="p">;</span> <span class="mi">4</span><span class="p">:</span> <span class="n">Example01_Tour02_Line04</span><span class="p">;</span> <span class="mi">5</span><span class="p">:</span> <span class="n">Example01_Tour02_Line05</span><span class="p">;</span> <span class="mi">6</span><span class="p">:</span> <span class="n">Example01_Tour02_Line06</span><span class="p">;</span>
+    <span class="p">:</span><span class="n">nocodelens</span><span class="p">:</span>
+
+    <span class="kn">import</span> <span class="nn">turtle</span>             <span class="c1"># allows us to use the turtles library</span>
+    <span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>      <span class="c1"># creates a graphics window</span>
+    <span class="n">alex</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>    <span class="c1"># create a turtle named alex</span>
+    <span class="n">alex</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>         <span class="c1"># tell alex to move forward by 150 units</span>
+    <span class="n">alex</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>             <span class="c1"># turn by 90 degrees</span>
+    <span class="n">alex</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>          <span class="c1"># complete the second side of a rectangle</span>
+
+
+
+</pre></div>
+</div>
+</div>
+<p>Here are a couple of things you’ll need to understand about this program.</p>
+<p>The first line tells Python to load a <strong>module</strong> named <code class="docutils literal notranslate"><span class="pre">turtle</span></code>. That module
+brings us two new types that we can use: the <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> type, and the
+<code class="docutils literal notranslate"><span class="pre">Screen</span></code> type.  The dot notation <code class="docutils literal notranslate"><span class="pre">turtle.Turtle</span></code> means <em>“The Turtle type
+that is defined within the turtle module”</em>. (Remember that Python is case
+sensitive, so the module name, <code class="docutils literal notranslate"><span class="pre">turtle</span></code>, with a lowercase <code class="docutils literal notranslate"><span class="pre">t</span></code>, is different from the
+type <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> because of the uppercase <code class="docutils literal notranslate"><span class="pre">T</span></code>.)</p>
+<p>We then create and open what the turtle module calls a screen (we would
+prefer to call it a window, or in the case of this web version of Python
+simply a canvas), which we assign to variable <code class="docutils literal notranslate"><span class="pre">wn</span></code>. Every window
+contains a <strong>canvas</strong>, which is the area inside the window on which we can draw.</p>
+<p>In line 3 we create a turtle. The variable <code class="docutils literal notranslate"><span class="pre">alex</span></code> is made to refer to this
+turtle. These first three lines set us up so that we are ready to do some drawing.</p>
+<p>In lines 4-6, we instruct the <strong>object</strong> alex to move and to turn. We do this
+by <strong>invoking</strong> or activating alex’s <strong>methods</strong> — these are the instructions that all
+turtles know how to respond to.</p>
+<div class="admonition-complete-the-rectangle admonition">
+<p class="admonition-title">Complete the rectangle …</p>
+<p>Modify the program by adding the commands necessary to have <em>alex</em> complete the
+rectangle.</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 73)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 78</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mchoice:: question3_2_1
+   :answer_a: North
+   :answer_b: South
+   :answer_c: East
+   :answer_d: West
+   :correct: c
+   :feedback_a: Some turtle systems start with the turtle facing north, but not this one.
+   :feedback_b: No, look at the first example with a turtle.  Which direction does the turtle move?
+   :feedback_c: Yes, the turtle starts out facing east.
+   :feedback_d: No, look at the first example with a turtle.  Which direction does the turtle move?
+
+   Which direction does the Turtle face when it is created?
+</pre></div>
+</div>
+</div>
+<p><strong>Mixed up programs</strong></p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 88)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 93</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">parsonsprob</span><span class="p">::</span> <span class="n">pp3_2_1</span>
+
+   <span class="n">The</span> <span class="n">following</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">L</span> <span class="k">as</span> <span class="n">shown</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">picture</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span> <span class="n">of</span> <span class="n">this</span> <span class="n">text</span><span class="p">:</span>
+
+   <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">Figures</span><span class="o">/</span><span class="n">TurtleL4</span><span class="o">.</span><span class="n">png</span>
+      <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">150</span>
+      <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span>
+      <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">image</span> <span class="n">of</span> <span class="n">a</span> <span class="n">navigational</span> <span class="n">compass</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">letter</span> <span class="n">L</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">drawn</span> <span class="n">by</span> <span class="n">Turtle</span>
+
+   <span class="n">But</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">mixed</span> <span class="n">up</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">should</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">necessary</span> <span class="nb">set</span><span class="o">-</span><span class="n">up</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">the</span> <span class="n">turtle</span> <span class="n">module</span><span class="p">,</span> <span class="n">get</span> <span class="n">the</span> <span class="n">window</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">on</span><span class="p">,</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">turtle</span><span class="o">.</span> <span class="n">Remember</span> <span class="n">that</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">starts</span> <span class="n">off</span> <span class="n">facing</span> <span class="n">east</span> <span class="n">when</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">created</span><span class="o">.</span> <span class="n">The</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">south</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">150</span> <span class="n">pixels</span> <span class="n">long</span> <span class="ow">and</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">east</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">75</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span> <span class="n">We</span> <span class="n">have</span> <span class="n">added</span> <span class="n">a</span> <span class="n">compass</span> <span class="n">to</span> <span class="n">the</span> <span class="n">picture</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">directions</span> <span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">west</span><span class="p">,</span> <span class="ow">and</span> <span class="n">east</span><span class="o">.</span>
+
+   <span class="n">Drag</span> <span class="n">the</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">statements</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">left</span> <span class="n">column</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">column</span> <span class="ow">and</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="n">order</span><span class="o">.</span> <span class="n">Then</span> <span class="n">click</span> <span class="n">on</span> <span class="o">*</span><span class="n">Check</span> <span class="n">Me</span><span class="o">*</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">right</span><span class="o">.</span> <span class="n">You</span> <span class="n">will</span> <span class="n">be</span> <span class="n">told</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">order</span><span class="o">.</span>
+   <span class="o">-----</span>
+   <span class="kn">import</span> <span class="nn">turtle</span>
+   <span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+   <span class="n">ella</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+   <span class="o">=====</span>
+   <span class="n">ella</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">ella</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">ella</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">ella</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 111)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 116</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">parsonsprob</span><span class="p">::</span> <span class="n">pp3_2_2</span>
+
+   <span class="n">The</span> <span class="n">following</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">checkmark</span> <span class="k">as</span> <span class="n">shown</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">,</span>
+
+   <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">Figures</span><span class="o">/</span><span class="n">TurtleCheckmark4</span><span class="o">.</span><span class="n">png</span>
+      <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">150</span>
+      <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span>
+      <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">image</span> <span class="n">of</span> <span class="n">a</span> <span class="n">navigational</span> <span class="n">compass</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">checkmark</span> <span class="n">which</span> <span class="ow">is</span> <span class="n">drawn</span> <span class="n">by</span> <span class="n">Turtle</span><span class="o">.</span>
+
+   <span class="n">But</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">mixed</span> <span class="n">up</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">should</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">necessary</span> <span class="nb">set</span><span class="o">-</span><span class="n">up</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">the</span> <span class="n">turtle</span> <span class="n">module</span><span class="p">,</span> <span class="n">get</span> <span class="n">the</span> <span class="n">window</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">on</span><span class="p">,</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">turtle</span><span class="o">.</span> <span class="n">The</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">southeast</span><span class="p">,</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">75</span> <span class="n">pixels</span> <span class="n">long</span><span class="p">,</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">northeast</span><span class="p">,</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">150</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span> <span class="n">We</span> <span class="n">have</span> <span class="n">added</span> <span class="n">a</span> <span class="n">compass</span> <span class="n">to</span> <span class="n">the</span> <span class="n">picture</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">the</span> <span class="n">directions</span> <span class="n">north</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">west</span><span class="p">,</span> <span class="ow">and</span> <span class="n">east</span><span class="o">.</span> <span class="n">Northeast</span> <span class="ow">is</span> <span class="n">between</span> <span class="n">north</span> <span class="ow">and</span> <span class="n">east</span><span class="o">.</span> <span class="n">Southeast</span> <span class="ow">is</span> <span class="n">between</span> <span class="n">south</span> <span class="ow">and</span> <span class="n">east</span><span class="o">.</span>
+
+   <span class="n">Drag</span> <span class="n">the</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">statements</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">left</span> <span class="n">column</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">column</span> <span class="ow">and</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="n">order</span><span class="o">.</span> <span class="n">Then</span> <span class="n">click</span> <span class="n">on</span> <span class="n">Check</span> <span class="n">Me</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">right</span><span class="o">.</span> <span class="n">You</span> <span class="n">will</span> <span class="n">be</span> <span class="n">told</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">order</span><span class="o">.</span>
+   <span class="o">-----</span>
+   <span class="kn">import</span> <span class="nn">turtle</span>
+   <span class="o">=====</span>
+   <span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+   <span class="o">=====</span>
+   <span class="n">maria</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+   <span class="o">=====</span>
+   <span class="n">maria</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+   <span class="n">maria</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">maria</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">maria</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 136)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 141</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">parsonsprob</span><span class="p">::</span> <span class="n">pp3_2_3</span>
+
+   <span class="n">The</span> <span class="n">following</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">single</span> <span class="n">line</span> <span class="n">to</span> <span class="n">the</span> <span class="n">west</span> <span class="k">as</span> <span class="n">shown</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">:</span>
+
+   <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">Figures</span><span class="o">/</span><span class="n">TurtleLineToWest</span><span class="o">.</span><span class="n">png</span>
+      <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">150</span>
+      <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span>
+      <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">image</span> <span class="n">of</span> <span class="n">a</span> <span class="n">line</span> <span class="n">moving</span> <span class="ow">in</span> <span class="n">west</span> <span class="n">direction</span> <span class="n">drawn</span> <span class="n">by</span> <span class="n">Turtle</span><span class="o">.</span> <span class="n">Turtle</span> <span class="n">uses</span> <span class="n">following</span> <span class="n">steps</span><span class="p">:</span> <span class="n">left</span> <span class="n">turn</span> <span class="n">of</span> <span class="mi">180</span> <span class="n">degrees</span><span class="p">,</span> <span class="ow">and</span> <span class="mi">75</span> <span class="n">pixels</span> <span class="n">long</span> <span class="n">line</span>
+
+   <span class="n">But</span> <span class="n">the</span> <span class="n">program</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">mixed</span> <span class="n">up</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">should</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">necessary</span> <span class="nb">set</span><span class="o">-</span><span class="n">up</span><span class="p">:</span> <span class="kn">import</span> <span class="nn">the</span> <span class="n">turtle</span> <span class="n">module</span><span class="p">,</span> <span class="n">get</span> <span class="n">the</span> <span class="n">window</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">on</span><span class="p">,</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">turtle</span><span class="o">.</span>  <span class="n">The</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">west</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">75</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span>
+
+   <span class="n">Drag</span> <span class="n">the</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">statements</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">left</span> <span class="n">column</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">column</span> <span class="ow">and</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="n">order</span><span class="o">.</span> <span class="n">Then</span> <span class="n">click</span> <span class="n">on</span> <span class="o">*</span><span class="n">Check</span> <span class="n">Me</span><span class="o">*</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">right</span><span class="o">.</span> <span class="n">You</span> <span class="n">will</span> <span class="n">be</span> <span class="n">told</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">order</span><span class="o">.</span>
+   <span class="o">-----</span>
+   <span class="kn">import</span> <span class="nn">turtle</span>
+   <span class="n">window</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+   <span class="n">jamal</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</div>
+<p>An object can have various methods — things it can do — and it can also
+have <strong>attributes</strong> — (sometimes called <em>properties</em>). For example, each
+turtle has a <em>color</em> attribute. The method invocation  <code class="docutils literal notranslate"><span class="pre">alex.color(&quot;red&quot;)</span></code>
+will make alex red and the line that it draws will be red too.</p>
+<p>The color of the turtle, the width of its pen(tail), the position of the turtle
+within the window, which way it is facing, and so on are all part of its
+current <strong>state</strong>. Similarly, the window object has a background color which is part of its state.</p>
+<p>Quite a number of methods exist that allow us to modify the turtle and
+window objects. In the example below, we show just show a couple and have only commented
+those lines that are different from the previous example. Note also that we have decided
+to call our turtle object <em>tess</em>.</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 170)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 175</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">activecode</span><span class="p">::</span> <span class="n">ac3_2_2</span>
+    <span class="p">:</span><span class="n">tour_1</span><span class="p">:</span> <span class="s2">&quot;Overall Tour&quot;</span><span class="p">;</span> <span class="mi">1</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span> <span class="n">Example02_Tour01_Line01</span><span class="p">;</span> <span class="mi">4</span><span class="p">:</span> <span class="n">Example02_Tour01_Line02</span><span class="p">;</span> <span class="mi">6</span><span class="p">:</span> <span class="n">Example02_Tour01_Line03</span><span class="p">;</span> <span class="mi">7</span><span class="p">:</span> <span class="n">Example02_Tour01_Line04</span><span class="p">;</span> <span class="mi">8</span><span class="p">:</span> <span class="n">Example02_Tour01_Line05</span><span class="p">;</span> <span class="mi">10</span><span class="p">:</span> <span class="n">Example02_Tour01_Line06</span><span class="p">;</span> <span class="mi">11</span><span class="p">:</span> <span class="n">Example02_Tour01_Line07</span><span class="p">;</span> <span class="mi">12</span><span class="p">:</span> <span class="n">Example02_Tour01_Line08</span><span class="p">;</span> <span class="mi">14</span><span class="p">:</span> <span class="n">Example02_Tour01_Line09</span><span class="p">;</span>
+    <span class="p">:</span><span class="n">tour_2</span><span class="p">:</span> <span class="s2">&quot;Line by Line Tour&quot;</span><span class="p">;</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Example01_Tour02_Line01</span><span class="p">;</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Example01_Tour02_Line02</span><span class="p">;</span> <span class="mi">4</span><span class="p">:</span> <span class="n">Example02_Tour02_Line03</span><span class="p">;</span> <span class="mi">6</span><span class="p">:</span> <span class="n">Example02_Tour02_Line04</span><span class="p">;</span> <span class="mi">7</span><span class="p">:</span> <span class="n">Example02_Tour02_Line05</span><span class="p">;</span> <span class="mi">8</span><span class="p">:</span> <span class="n">Example02_Tour02_Line06</span><span class="p">;</span> <span class="mi">10</span><span class="p">:</span> <span class="n">Example02_Tour02_Line07</span><span class="p">;</span> <span class="mi">11</span><span class="p">:</span> <span class="n">Example02_Tour02_Line08</span><span class="p">;</span> <span class="mi">12</span><span class="p">:</span> <span class="n">Example02_Tour02_Line09</span><span class="p">;</span> <span class="mi">14</span><span class="p">:</span> <span class="n">Example02_Tour02_Line10</span><span class="p">;</span>
+    <span class="p">:</span><span class="n">nocodelens</span><span class="p">:</span>
+
+    <span class="kn">import</span> <span class="nn">turtle</span>
+
+    <span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+    <span class="n">wn</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">)</span>        <span class="c1"># set the window background color</span>
+
+    <span class="n">tess</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+    <span class="n">tess</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>              <span class="c1"># make tess blue</span>
+    <span class="n">tess</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>                 <span class="c1"># set the width of her pen</span>
+
+    <span class="n">tess</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">tess</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+    <span class="n">tess</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+
+    <span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>                <span class="c1"># wait for a user click on the canvas</span>
+
+</pre></div>
+</div>
+</div>
+<p>The last line plays a very important role. The wn variable refers to the window shown
+above. When we invoke its <code class="docutils literal notranslate"><span class="pre">exitonclick</span></code> method, the program pauses execution and waits for the user to click the mouse somewhere in the window.
+When this click event occurs, the response is to close the turtle window and
+exit (stop execution of) the Python program.</p>
+<p>Each time we run this program, a new drawing window pops up, and will remain on the
+screen until we click on it.</p>
+<div class="admonition-extend-this-program admonition">
+<p class="admonition-title">Extend this program …</p>
+<ol class="arabic simple">
+<li><p>Modify this program so that before it creates the window, it prompts
+the user to enter the desired background color.It should store the
+user’s responses in a variable, and modify the color of the window
+according to the user’s wishes.
+(Hint: you can find a list of permitted color names at
+<a class="reference external" href="https://www.w3schools.com/colors/colors_names.asp">https://www.w3schools.com/colors/colors_names.asp</a>. It includes some quite
+unusual ones, like “PeachPuff”  and “HotPink”.)</p></li>
+<li><p>Do similar changes to allow the user, at runtime, to set tess’ color.</p></li>
+<li><p>Do the same for the width of tess’ pen. <em>Hint:</em> your dialog with the
+user will return a string, but tess’ <code class="docutils literal notranslate"><span class="pre">pensize</span></code> method
+expects its argument to be an <code class="docutils literal notranslate"><span class="pre">int</span></code>. That means you need to convert
+the string to an int before you pass it to <code class="docutils literal notranslate"><span class="pre">pensize</span></code>.</p></li>
+</ol>
+</div>
+<p><strong>Check your understanding</strong></p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 217)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 222</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mchoice:: question3_2_2
+   :answer_a: It creates a new turtle object that can be used for drawing.
+   :answer_b: It defines the module turtle which will allow you to create a Turtle object and draw with it.
+   :answer_c: It makes the turtle draw half of a rectangle on the screen.
+   :answer_d: Nothing, it is unnecessary.
+   :correct: b
+   :feedback_a: The line &amp;quotalex = turtle.Turtle()&amp;quot is what actually creates the turtle object.
+   :feedback_b: This line imports the module called turtle, which has all the built in functions for drawing on the screen with the Turtle object.
+   :feedback_c: This functionality is performed with the lines: &amp;quotalex.forward(150)&amp;quot, &amp;quotlex.left(90)&amp;quot, and &amp;quotalex.forward(75)&amp;quot
+   :feedback_d: If we leave it out, Python will give an error saying that it does not know about the name &amp;quotturtle&amp;quot when it reaches the line &amp;quotwn = turtle.Screen()&amp;quot
+
+   Consider the following code:
+
+   .. code-block:: python
+
+     import turtle
+     wn = turtle.Screen()
+     alex = turtle.Turtle()
+     alex.forward(150)
+     alex.left(90)
+     alex.forward(75)
+
+   What does the line &quot;import turtle&quot; do?
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 241)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 246</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mchoice:: question3_2_3
+   :answer_a: This is simply for clarity.  It would also work to just type &quot;Turtle()&quot; instead of &quot;turtle.Turtle()&quot;.
+   :answer_b: The period (.) is what tells Python that we want to invoke a new object.
+   :answer_c: The first &quot;turtle&quot; (before the period) tells Python that we are referring to the turtle module, which is where the object &quot;Turtle&quot; is found.
+   :correct: c
+   :feedback_a: We must specify the name of the module where Python can find the Turtle object.
+   :feedback_b: The period separates the module name from the object name.  The parentheses at the end are what tell Python to invoke a new object.
+   :feedback_c: Yes, the Turtle type is defined in the module turtle.  Remember that Python is case sensitive and Turtle is different from turtle.
+
+   Why do we type ``turtle.Turtle()`` to get a new Turtle object?
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 252)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 257</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">mchoice</span><span class="p">::</span> <span class="n">question3_2_4</span>
+   <span class="p">:</span><span class="n">answer_a</span><span class="p">:</span> <span class="kc">True</span>
+   <span class="p">:</span><span class="n">answer_b</span><span class="p">:</span> <span class="kc">False</span>
+   <span class="p">:</span><span class="n">correct</span><span class="p">:</span> <span class="n">a</span>
+   <span class="p">:</span><span class="n">feedback_a</span><span class="p">:</span> <span class="n">In</span> <span class="n">this</span> <span class="n">chapter</span> <span class="n">you</span> <span class="n">saw</span> <span class="n">one</span> <span class="n">named</span> <span class="n">alex</span> <span class="ow">and</span> <span class="n">one</span> <span class="n">named</span> <span class="n">tess</span><span class="p">,</span> <span class="n">but</span> <span class="nb">any</span> <span class="n">legal</span> <span class="n">variable</span> <span class="n">name</span> <span class="ow">is</span> <span class="n">allowed</span><span class="o">.</span>
+   <span class="p">:</span><span class="n">feedback_b</span><span class="p">:</span> <span class="n">A</span> <span class="n">variable</span><span class="p">,</span> <span class="n">including</span> <span class="n">one</span> <span class="n">referring</span> <span class="n">to</span> <span class="n">a</span> <span class="n">Turtle</span> <span class="nb">object</span><span class="p">,</span> <span class="n">can</span> <span class="n">have</span> <span class="n">whatever</span> <span class="n">name</span> <span class="n">you</span> <span class="n">choose</span> <span class="k">as</span> <span class="n">long</span> <span class="k">as</span> <span class="n">it</span> <span class="n">follows</span> <span class="n">the</span> <span class="n">naming</span> <span class="n">conventions</span> <span class="kn">from</span> <span class="nn">Chapter</span> <span class="mf">2.</span>
+
+   <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">:</span> <span class="n">A</span> <span class="n">Turtle</span> <span class="nb">object</span> <span class="n">can</span> <span class="n">have</span> <span class="nb">any</span> <span class="n">name</span> <span class="n">that</span> <span class="n">follows</span> <span class="n">the</span> <span class="n">naming</span> <span class="n">rules</span> <span class="kn">from</span> <span class="nn">Chapter</span> <span class="mf">2.</span>
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 261)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 266</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.. mchoice:: question3_2_5
+   :answer_a: &lt;img src=&quot;../_static/test1Alt1.png&quot; alt=&quot;right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long&quot;&gt;
+   :answer_b: &lt;img src=&quot;../_static/test1Alt2.png&quot; alt=&quot;left turn of 180 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long&quot;&gt;
+   :answer_c: &lt;img src=&quot;../_static/test1Alt3.png&quot; alt=&quot;left turn of 270 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long&quot;&gt;
+   :answer_d: &lt;img src=&quot;../_static/test1Alt4v2.png&quot; alt=&quot;right turn of 270 degrees before drawing, draw a line 150 pixels long, turn right 90, and draw a line 75 pixels long&quot;&gt;
+   :answer_e: &lt;img src=&quot;../_static/test1correct.png&quot; alt=&quot;left turn of 90 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long&quot;&gt;
+   :correct: e
+   :feedback_a: This code would turn the turtle to the south before drawing
+   :feedback_b: This code would turn the turtle to the west before drawing
+   :feedback_c: This code would turn the turtle to the south before drawing
+   :feedback_d: This code is almost correct, but the short end would be facing east instead of west.
+   :feedback_e: Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.
+
+   Which of the following code would produce the following image?
+
+   .. image:: Figures/turtleTest1.png
+      :alt: long line to north with shorter line to west on top
+</pre></div>
+</div>
+</div>
+<p><strong>Mixed up programs</strong></p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 281)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 286</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">parsonsprob</span><span class="p">::</span> <span class="n">pp3_3_4</span>
+
+   <span class="n">The</span> <span class="n">following</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">L</span> <span class="ow">in</span> <span class="n">white</span> <span class="n">on</span> <span class="n">a</span> <span class="n">blue</span> <span class="n">background</span> <span class="k">as</span> <span class="n">shown</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">,</span>
+
+   <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">Figures</span><span class="o">/</span><span class="n">BlueTurtleL</span><span class="o">.</span><span class="n">png</span>
+      <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">150</span>
+      <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span>
+      <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">image</span> <span class="n">of</span> <span class="n">a</span> <span class="n">navigational</span> <span class="n">compass</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">letter</span> <span class="n">L</span> <span class="n">drawn</span> <span class="n">by</span> <span class="n">Turtle</span><span class="o">.</span>
+
+   <span class="n">But</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">mixed</span> <span class="n">up</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">should</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">necessary</span> <span class="nb">set</span><span class="o">-</span><span class="n">up</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">the</span> <span class="n">turtle</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pen</span> <span class="n">size</span> <span class="n">to</span> <span class="mf">10.</span> <span class="n">The</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">then</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">south</span><span class="p">,</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">150</span> <span class="n">pixels</span> <span class="n">long</span><span class="p">,</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">east</span><span class="p">,</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">75</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span> <span class="n">Finally</span><span class="p">,</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">window</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">the</span> <span class="n">user</span> <span class="n">clicks</span> <span class="ow">in</span> <span class="n">it</span><span class="o">.</span>
+
+   <span class="n">Drag</span> <span class="n">the</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">statements</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">left</span> <span class="n">column</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">column</span> <span class="ow">and</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="n">order</span><span class="o">.</span> <span class="n">Then</span> <span class="n">click</span> <span class="n">on</span> <span class="o">*</span><span class="n">Check</span> <span class="n">Me</span><span class="o">*</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">right</span><span class="o">.</span> <span class="n">You</span> <span class="n">will</span> <span class="n">be</span> <span class="n">told</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">order</span><span class="o">.</span>
+   <span class="o">-----</span>
+   <span class="kn">import</span> <span class="nn">turtle</span>
+   <span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+   <span class="o">=====</span>
+   <span class="n">wn</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+   <span class="n">jamal</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+   <span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/SimplePythonData/OurFirstTurtleProgram.rst</span>, line 310)</p>
+<p>Duplicate ID – see PythonTurtle/OurFirstTurtleProgram, line 315</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">parsonsprob</span><span class="p">::</span> <span class="n">pp3_2_5</span>
+
+   <span class="n">The</span> <span class="n">following</span> <span class="n">program</span> <span class="n">uses</span> <span class="n">a</span> <span class="n">turtle</span> <span class="n">to</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">capital</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">white</span> <span class="n">on</span> <span class="n">a</span> <span class="n">green</span> <span class="n">background</span> <span class="k">as</span> <span class="n">shown</span> <span class="n">to</span> <span class="n">the</span> <span class="n">left</span><span class="p">,</span>
+
+   <span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">Figures</span><span class="o">/</span><span class="n">TurtleT</span><span class="o">.</span><span class="n">png</span>
+      <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">150</span>
+      <span class="p">:</span><span class="n">align</span><span class="p">:</span> <span class="n">left</span>
+      <span class="p">:</span><span class="n">alt</span><span class="p">:</span> <span class="n">image</span> <span class="n">of</span> <span class="n">a</span> <span class="n">letter</span> <span class="n">T</span> <span class="n">drawn</span> <span class="n">by</span> <span class="n">Turtle</span><span class="o">.</span>
+
+   <span class="n">But</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="n">mixed</span> <span class="n">up</span><span class="o">.</span> <span class="n">The</span> <span class="n">program</span> <span class="n">should</span> <span class="n">do</span> <span class="nb">all</span> <span class="n">necessary</span> <span class="nb">set</span><span class="o">-</span><span class="n">up</span><span class="p">,</span> <span class="n">create</span> <span class="n">the</span> <span class="n">turtle</span><span class="p">,</span> <span class="ow">and</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">pen</span> <span class="n">size</span> <span class="n">to</span> <span class="mf">10.</span> <span class="n">After</span> <span class="n">that</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">north</span><span class="p">,</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">150</span> <span class="n">pixels</span> <span class="n">long</span><span class="p">,</span> <span class="n">turn</span> <span class="n">to</span> <span class="n">face</span> <span class="n">west</span><span class="p">,</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">50</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span> <span class="n">Next</span><span class="p">,</span> <span class="n">the</span> <span class="n">turtle</span> <span class="n">should</span> <span class="n">turn</span> <span class="mi">180</span> <span class="n">degrees</span> <span class="ow">and</span> <span class="n">draw</span> <span class="n">a</span> <span class="n">line</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">100</span> <span class="n">pixels</span> <span class="n">long</span><span class="o">.</span> <span class="n">Finally</span><span class="p">,</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">window</span> <span class="n">to</span> <span class="n">close</span> <span class="n">when</span> <span class="n">the</span> <span class="n">user</span> <span class="n">clicks</span> <span class="ow">in</span> <span class="n">it</span><span class="o">.</span>
+
+   <span class="n">Drag</span> <span class="n">the</span> <span class="n">blocks</span> <span class="n">of</span> <span class="n">statements</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">left</span> <span class="n">column</span> <span class="n">to</span> <span class="n">the</span> <span class="n">right</span> <span class="n">column</span> <span class="ow">and</span> <span class="n">put</span> <span class="n">them</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">right</span> <span class="n">order</span><span class="o">.</span> <span class="n">Then</span> <span class="n">click</span> <span class="n">on</span> <span class="o">*</span><span class="n">Check</span> <span class="n">Me</span><span class="o">*</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">right</span><span class="o">.</span> <span class="n">You</span> <span class="n">will</span> <span class="n">be</span> <span class="n">told</span> <span class="k">if</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">lines</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">wrong</span> <span class="n">order</span><span class="o">.</span>
+   <span class="o">-----</span>
+   <span class="kn">import</span> <span class="nn">turtle</span>
+   <span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+   <span class="n">wn</span><span class="o">.</span><span class="n">bgcolor</span><span class="p">(</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+   <span class="n">jamal</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">pensize</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">180</span><span class="p">)</span>
+   <span class="n">jamal</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+   <span class="o">=====</span>
+   <span class="n">wn</span><span class="o">.</span><span class="n">exitonclick</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 2.16. 🐢 Hello Little Turtles!' data-toggle="tooltip">
+  <a href="HelloLittleTurtles.html" aria-label="Previous - 2.16. 🐢 Hello Little Turtles!">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 2.18. Glossary' data-toggle="tooltip" >
+    <a href="Glossary.html" aria-label="Next - 2.18. Glossary">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
