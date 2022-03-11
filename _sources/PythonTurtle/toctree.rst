@@ -5,9 +5,7 @@ Python Turtle
    :caption: Python Turtle
    :maxdepth: 3
 
-   intro-HelloLittleTurtles.rst
-   OurFirstTurtleProgram.rst
-   InstancesAHerdofTurtles.rst
+   intro-InstancesAHerdofTurtles.rst
    ObjectInstances.rst
    RepetitionwithaForLoop.rst
    AFewMoreturtleMethodsandObservations.rst

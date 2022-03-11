@@ -26,7 +26,7 @@ After line 4 you will have a straight line going from the center of the
 drawing canvas towards the right. After line 6, you will have a canvas with a
 turtle and a half drawn rectangle. Press the run button to try it and see.
 
-.. activecode:: ac3_2_1
+.. activecode:: ac3_2_1_1
     :tour_1: "Overall Tour"; 1-6: Example01_Tour01_Line01; 3: Example01_Tour01_Line02; 4: Example01_Tour01_Line03; 5: Example01_Tour01_Line04; 6: Example01_Tour01_Line05;
     :tour_2: "Line by Line Tour"; 1: Example01_Tour02_Line01; 2: Example01_Tour02_Line02; 3: Example01_Tour02_Line03; 4: Example01_Tour02_Line04; 5: Example01_Tour02_Line05; 6: Example01_Tour02_Line06;
     :nocodelens:

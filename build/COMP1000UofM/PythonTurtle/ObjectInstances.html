@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.4. Object Oriented Concepts &#8212; COMP 1000: Think Like a Computer</title>
+    <title>5.2. Object Oriented Concepts &#8212; COMP 1000: Think Like a Computer</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
@@ -35,8 +35,8 @@
     <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.5. Repetition with a For Loop" href="RepetitionwithaForLoop.html" />
-    <link rel="prev" title="5.3. Instances: A Herd of Turtles" href="InstancesAHerdofTurtles.html" />
+    <link rel="next" title="5.3. Repetition with a For Loop" href="RepetitionwithaForLoop.html" />
+    <link rel="prev" title="5.1. Instances: A Herd of Turtles" href="intro-InstancesAHerdofTurtles.html" />
 
 
 <link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
@@ -214,13 +214,13 @@
         
         <!-- 
           
-  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.3. </span>Instances: A Herd of Turtles" data-toggle="tooltip">
-    <a href="InstancesAHerdofTurtles.html" >
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.1. </span>Instances: A Herd of Turtles" data-toggle="tooltip">
+    <a href="intro-InstancesAHerdofTurtles.html" >
       <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
     </a>
   </li>
   
-  <li id="relations-next" title='Next Chapter - <span class="section-number">5.5. </span>Repetition with a For Loop' data-toggle="tooltip" >              
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.3. </span>Repetition with a For Loop' data-toggle="tooltip" >              
     <a href="RepetitionwithaForLoop.html" >
         <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
     </a>
@@ -257,18 +257,18 @@
 
   
   <div class="section" id="object-oriented-concepts">
-<h1><span class="section-number">5.4. </span>Object Oriented Concepts<a class="headerlink" href="#object-oriented-concepts" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5.2. </span>Object Oriented Concepts<a class="headerlink" href="#object-oriented-concepts" title="Permalink to this headline">¶</a></h1>
 <p>It’s been fun drawing things with the turtles. In the process, we’ve slipped in some new concepts and terms. Let’s pull them out and examine them a little more carefully.</p>
 <div class="section" id="user-defined-classes">
-<h2><span class="section-number">5.4.1. </span>User-defined Classes<a class="headerlink" href="#user-defined-classes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.1. </span>User-defined Classes<a class="headerlink" href="#user-defined-classes" title="Permalink to this headline">¶</a></h2>
 <p>First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and much later, new classes of objects. For now, you just need to understand how to use them.</p>
 </div>
 <div class="section" id="instances">
-<h2><span class="section-number">5.4.2. </span>Instances<a class="headerlink" href="#instances" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.2. </span>Instances<a class="headerlink" href="#instances" title="Permalink to this headline">¶</a></h2>
 <p>Given a class like <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> or <code class="docutils literal notranslate"><span class="pre">Screen</span></code>, we create a new instance with a syntax that looks like a function call, <code class="docutils literal notranslate"><span class="pre">Turtle()</span></code>. The Python interpreter figures out that Turtle is a class rather than a function, and so it creates a new instance of the class and returns it. Since the Turtle class was defined in a separate module, (confusingly, also named turtle), we had to refer to the class as turtle.Turtle. Thus, in the programs we wrote <code class="docutils literal notranslate"><span class="pre">turtle.Turtle()</span></code> to make a new turtle. We could also write <code class="docutils literal notranslate"><span class="pre">turtle.Screen()</span></code> to make a new window for our turtles to paint in.</p>
 </div>
 <div class="section" id="attributes">
-<h2><span class="section-number">5.4.3. </span>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.3. </span>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>Each instance can have attributes, sometimes called <strong>instance variables</strong>. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alex</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">500</span>
 <span class="n">tess</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="mi">600</span>
@@ -277,7 +277,7 @@
 </div>
 </div>
 <div class="section" id="methods">
-<h2><span class="section-number">5.4.4. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2.4. </span>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
 <p>Classes have associated <strong>methods</strong>, which are just a special kind of function.  Consider the expression <code class="docutils literal notranslate"><span class="pre">alex.forward(50)</span></code> The interpreter first looks up alex and finds that it is an instance of the class Turtle. Then it looks up the attribute forward and finds that it is a method. Since there is a left parenthesis directly following, the interpreter invokes the method, passing 50 as a parameter.</p>
 <p>The only difference between a method invocation and other function calls is that the object instance itself is also passed as a parameter. Thus <code class="docutils literal notranslate"><span class="pre">alex.forward(50)</span></code> moves alex, while <code class="docutils literal notranslate"><span class="pre">tess.forward(50)</span></code> moves tess.</p>
 <p>Some of the methods of the Turtle class set attributes that affect the actions of other methods. For example, the method pensize changes the width of the drawing pen, and the color method changes the pen’s color.</p>
@@ -291,14 +291,14 @@
   </div>
 
   <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
-<li id="relations-prev" class="navLink" title='Previous Section - 5.3. Instances: A Herd of Turtles' data-toggle="tooltip">
-  <a href="InstancesAHerdofTurtles.html" aria-label="Previous - 5.3. Instances: A Herd of Turtles">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.1. Instances: A Herd of Turtles' data-toggle="tooltip">
+  <a href="intro-InstancesAHerdofTurtles.html" aria-label="Previous - 5.1. Instances: A Herd of Turtles">
     <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
   </a>
 </li>
 
-  <li id="relations-next" class="navLink" title='Next Section - 5.5. Repetition with a For Loop' data-toggle="tooltip" >
-    <a href="RepetitionwithaForLoop.html" aria-label="Next - 5.5. Repetition with a For Loop">
+  <li id="relations-next" class="navLink" title='Next Section - 5.3. Repetition with a For Loop' data-toggle="tooltip" >
+    <a href="RepetitionwithaForLoop.html" aria-label="Next - 5.3. Repetition with a For Loop">
       <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
     </a>
   </li>
