@@ -35,11 +35,24 @@ program:
    area = (radius * radius) * 3
    print("The area of a circle with radius", radius, "is:", area)
 
-In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that programs embed ethhical values, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
+In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that programs embed ethical values, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
 
 
 **Check your understanding**
 
-TODO: add an MC question on ethics. 
+.. mchoice:: ethics_try
+   :answer_a: Writing code for a hospital's medical laser.
+   :answer_b: Designing a new display for a calculator app.
+   :answer_c: Programming software that unlocks a phone based on a face.
+   :answer_d: All of the above.
+   :answer_e: None of the above.
+   :correct: d
+   :feedback_a: Yes, most definitely! Does our code account for people of different ages? Different weights? Different heights? What about people who have different immune systems or diseases? Whatever our code does will affect the end users (in this case, patients at a hospital).
+   :feedback_b: We are embedding our own values here too. How many decimals will we show? Which math operations do we want to be easily accessible? How do we know this display is easy to use? What about the other options?
+   :feedback_c: Facial Recognition software is a hot topic for ethical decisions. How did we make this program? Did you test it on your face? Your mom? Your dad? Your friend from Quebec? What about from Nigeria? Or Brazil? How did you make sure that it works properly for all faces? What about the other options?
+   :feedback_d: You got it! It doesn't matter what kind of code we are writing or designing, the choices we make will affect the product or program! It's important we self-reflect and are aware of how big the impact of our work is on the world.
+   :feedback_e: No, the decisions we make when we code will always have implications on the world. Whether we are designing a small game or coding a program that will be used on a space ship, we embed our morals, values, and ethics into everything we produce.
+
+   Which of the following scenarios would the programmer's decision affect the ethics of the product/result?
 
 
