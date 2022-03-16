@@ -1,4 +1,2 @@
 #random build files I dont think I should be committing
-/build/COMP1000UofM/doctrees/*
-/build/COMP1000UofM/_static/*
-/build/COMP1000UofM/_sources/*
+/build/*
