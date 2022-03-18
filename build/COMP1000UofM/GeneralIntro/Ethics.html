@@ -8,20 +8,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1.4. Ethics &#8212; COMP 1000: Think Like a Computer</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
     <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
     <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
     <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
     <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
-    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+    <link rel="stylesheet" type="text/css" href="../_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.d062db89aaf1dddd.css?v=B02DFDA" />
 
 
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script defer="" src="../_static/jquery.js"></script>
     <script defer="" src="../_static/underscore.js"></script>
     <script defer="" src="../_static/doctools.js"></script>
@@ -30,9 +30,9 @@
     <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
     <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
     <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
-    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
-    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
-    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <script defer="" src="../_static/runtime.b6a5f441f397ace5.bundle.js?v=3F299E7"></script>
+    <script defer="" src="../_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script defer="" src="../_static/runestone.f2a5bb1b0f5cce0b.bundle.js?v=871C0DAB"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.5. The Python Programming Language" href="ThePythonProgrammingLanguage.html" />
@@ -60,7 +60,7 @@
   eBookConfig.build_info = "unknown";
   eBookConfig.python3 = false;
   eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
-  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.runestone_version = '6.0.10';
   eBookConfig.jobehost = '';
   eBookConfig.proxyuri_runs = '';
   eBookConfig.proxyuri_files = '';
@@ -258,7 +258,7 @@
   
   <div class="section" id="ethics">
 <span id="index-0"></span><h1><span class="section-number">1.4. </span>Ethics<a class="headerlink" href="#ethics" title="Permalink to this headline">¶</a></h1>
-<p>You may be wondering why there is a section on ethics in your programming book. You might be thinking that this is where we tell you it is wrong to cheat on your programming assignments. That is true, but that is not what this section is about. Ethics is critically important in computer science. People who are trained in computer science go on to develop technologies that change the world. Technologies impact so much of our day to day life, and so it is absolutely critical that as you learn how to design, develop and deploy technology, that you make decisions so that the technology you put out in the world does not cause harm. That may seem obvious, but it’s not as easy as you think to predict how the technology you develop might be used and abused. Throughout this book we will ask you to pause and consider the technological implications of your choices as a programmer. We hope that you will realize by the end of this course how ethics become embedded in computer code.</p>
+<p>You may be wondering why there is a section on ethics in your programming book. You might be thinking that this is where we tell you it is wrong to cheat on your programming assignments. That is true, but that is not what this section is about. Ethics is critically important in computer science. People who are trained in computer science go on to develop technologies that change the world. Technologies impact so much of our day to day life, and so it is absolutely critical that as you learn how to design, develop and deploy technology, that you make decisions so that the technology you put out in the world does not cause harm. That may seem obvious, but it’s not as easy as you think to predict how the technology you develop might be used and abused. Throughout this book we will ask you to pause and consider the technological implications of your choices as a programmer. By the end of this course, we hope you will recognize the important of ethics in computer code.</p>
 
 <div class="runestone explainer ac_section alert alert-warning">
 <div data-component="activecode" id=alg_impl_ethics data-question_label="1.4.1">
@@ -296,10 +296,27 @@ print("The area of a circle with radius", radius, "is:", area)
 </textarea>
 </div>
 </div>
-<p>In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that’s not an ethical decision - that’s just an error. But the original valud of 3.1415 isn’t the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we’ve just made a differnt decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that programs embed ethhical values, because programs are written by humans. It’s very important to self-reflect on how your values are reflected (or not) in a program you write.</p>
+<p>In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that’s not an ethical decision - that’s just an error. But the original value of 3.1415 isn’t the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we’ve just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that programs embed ethical values, because programs are written by humans. It’s very important to self-reflect on how your values are reflected (or not) in a program you write.</p>
 <p><strong>Check your understanding</strong></p>
-<p>TODO: add an MC question on ethics.</p>
-</div>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="1.4.3" data-multipleanswers="false"  id="ethics_try"  style="visibility: hidden;">
+            <p>intro-4-3: Which of the following scenarios would the programmer’s decision affect the ethics of the product/result?</p>
+
+            <li data-component="answer"  id="ethics_try_opt_a">Writing code for a hospital's medical laser.</li><li data-component="feedback">Yes, most definitely! Does our code account for people of different ages? Different weights? Different heights? What about people who have different immune systems or diseases? Whatever our code does will affect the end users (in this case, patients at a hospital).</li>
+            
+            <li data-component="answer"  id="ethics_try_opt_b">Designing a new display for a calculator app.</li><li data-component="feedback">We are embedding our own values here too. How many decimals will we show? Which math operations do we want to be easily accessible? How do we know this display is easy to use? What about the other options?</li>
+            
+            <li data-component="answer"  id="ethics_try_opt_c">Programming software that unlocks a phone based on a face.</li><li data-component="feedback">Facial Recognition software is a hot topic for ethical decisions. How did we make this program? Did you test it on your face? Your mom? Your dad? Your friend from Quebec? What about from Nigeria? Or Brazil? How did you make sure that it works properly for all faces? What about the other options?</li>
+            
+            <li data-component="answer" data-correct id="ethics_try_opt_d">All of the above.</li><li data-component="feedback">You got it! It doesn't matter what kind of code we are writing or designing, the choices we make will affect the product or program! It's important we self-reflect and are aware of how big the impact of our work is on the world.</li>
+            
+            <li data-component="answer"  id="ethics_try_opt_e">None of the above.</li><li data-component="feedback">No, the decisions we make when we code will always have implications on the world. Whether we are designing a small game or coding a program that will be used on a space ship, we embed our morals, values, and ethics into everything we produce.</li>
+            
+
+            </ul>
+            </div>
+            </div>
 
 
   <div id="scprogresscontainer">
@@ -337,7 +354,7 @@ window.addEventListener('load', (event) => {
     </p>
     <p>
         &copy; Copyright 2022 clatulip.
-      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.10.
     </p>
   </div>
 </footer>
