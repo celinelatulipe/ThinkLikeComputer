@@ -50,7 +50,7 @@ Programming is a skill that allows a computer scientist to take an algorithm and
 a notation (a program) that can be followed by a computer.  A program is written in a **programming language**
 such as Python, the language you will learn in this book.
 
-To help you understand the difference between an algorithm and a program, consider this program to compute
+To help you understand the difference between an algorithm and a program, consider this program which computes
 the area of a circle (hit the 'Save & Run' button to see it execute):
 
 .. activecode:: alg_impl
@@ -65,11 +65,11 @@ that a program is an *implementation* of an algorithm. In this example, both the
 algorithm and the program have three steps. The first step (on line 1) gets some input from
 the user and then turns the input into something the computer can do math with; 
 the second step (line 2) performs a calculation using the information obtained
-in the first step; and the final step (line 3) displays the result to the programmer. Even
+in the first step; and the final step (line 3) displays the result to the user or programmer. Even
 though we haven't covered any details of Python, hopefully you can see the
 correspondence between the steps of the algorithm, which could be followed by a
 human (but not executed by a computer), and the steps of the program, which can
-be executed by a computer (try executing this one using the Run button).
+be executed by a computer (which we ran by clicking 'Save & Run').
 
 Algorithms are important because the process of solving a problem through programming often begins
 by designing an algorithm. The programmer often expresses the algorithm in
