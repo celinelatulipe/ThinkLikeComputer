@@ -54,7 +54,7 @@ A compiler reads the program and translates it completely before the program
 starts running. In this case, the high-level program is called the **source
 code**, and the translated program is called the **object code** or the
 **executable**. Once a program is compiled, you can execute it repeatedly
-without further translation.
+without further translation. If you make changes to your source code, you need to compile your files into an executable again.
 
 .. image:: Figures/compile.png
    :alt: Compile illustration
@@ -77,13 +77,13 @@ command line shell or a jupyter notebook environment.
 
 .. mchoice:: question1_3_1
    :answer_a: the instructions in a program, written in a high-level language.
-   :answer_b: the language that you are programming in (e.g., Python).
+   :answer_b: the language that you are programming in (e.g. Python).
    :answer_c: the environment/tool in which you are programming.
    :answer_d: the number (or “code”) that you must input at the top of each program to tell the computer how to execute your program.
    :correct: a
-   :feedback_a: If the instructions are strored in a file, it is called the source code file.
-   :feedback_b: This language is simply called the programming language, or simply the language. Programs are writte in this language.
-   :feedback_c: The environment may be called the IDE, or integrated development environment, though not always.
+   :feedback_a: If the instructions are stored in a file, it is called the source code file.
+   :feedback_b: This language is simply called the programming language, or simply the language. Programs are written in this language.
+   :feedback_c: The environment may be called the IDE, or Integrated Development Environment, though not always.
    :feedback_d: There is no such number that you must type in at the start of your program.
 
    Source code is another name for:
@@ -112,6 +112,6 @@ command line shell or a jupyter notebook environment.
    :feedback_c: Both compilers and interpreters are software.
    :feedback_d: Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.
 
-   Pick the best replacements for 1 and 2 in the following sentence: When comparing compilers and interpreters, a compiler is like 1 while an interpreter is like 2.
+   Pick the best replacements for **1** and **2** in the following sentence: When comparing compilers and interpreters, a compiler is like **1** while an interpreter is like **2**.
 
 
