@@ -17,7 +17,7 @@ Introduction: The Way of the Program
     :divid: goog_course_intro
 
 The goal of this book is to teach you to understand and create computer programs in Python.
-At the beginning of each chapter, we will outline for you the learning goals and objectives
+At the beginning of each chapter, we will outline the learning goals and objectives
 that should be accomplished once you have gone through the chapter.
 
 Understanding computer programs requires algorithmic, mechanistic thinking.
@@ -45,6 +45,6 @@ Learning Goals
 Objectives
 ~~~~~~~~~~
 
-* To be able to use the activecode component and multiple choice questions in textbook
+* To be able to use the activecode component and multiple choice questions in the textbook
 * To be able to use and interpret the Codelens component
 * To be able to describe what a comment is
