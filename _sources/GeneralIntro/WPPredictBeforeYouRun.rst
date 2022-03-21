@@ -11,17 +11,16 @@
    :prefix: intro-10-
    :start: 1
 
-👩‍💻 Predict Before You Run!
+👩‍💻 WP Predict Before You Run!
 =============================
 
 You've run your first program! You'll be doing that a lot in this book and the programs will become increasingly 
-complicated. One way to help understand what is happening and learn programming is predicting the effect of running a 
-snippet of code before actually running the program. Later on in your development, you may make predictions about large 
+complicated. One way to help understand what is happening and learn programming is **predicting the effect of running a  snippet of code before actually running the program**. Later on in your development, you may make predictions about large 
 snippets of code, but for now you will typically be predicting the effect of executing a single line of code. A prediction 
-will either be about what gets printed out to the console, displayed on screen to the user, or about the value of a variable, or that an error will occur.
+will either be about what gets printed out to the console, displayed on screen to the user, about the value of a variable, or that an error will occur.
 
 A prediction is not a random guess. It is based on some explanation you have about what the current state of 
-variables is and about what you think certain commands in python do.
+variables in your program are and about what you think certain commands in Python do.
 
 While you read the textbook you'll see chapters, pages, or snippets of text that begin with "WP:". This denotes sections 
 that talk about the Way of the Programmer: advice or information that will help you to be a better programmer and make 
