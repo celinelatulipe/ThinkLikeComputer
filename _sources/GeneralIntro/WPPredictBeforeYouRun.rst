@@ -11,7 +11,7 @@
    :prefix: intro-10-
    :start: 1
 
-👩‍💻 WP Predict Before You Run!
+👩‍💻 Predict Before You Run!
 =============================
 
 You've run your first program! You'll be doing that a lot in this book and the programs will become increasingly 
@@ -22,6 +22,6 @@ will either be about what gets printed out to the console, displayed on screen t
 A prediction is not a random guess. It is based on some explanation you have about what the current state of 
 variables in your program are and about what you think certain commands in Python do.
 
-While you read the textbook you'll see chapters, pages, or snippets of text that begin with "WP:". This denotes sections 
+While you read the textbook you'll see chapters, pages, or snippets of text that begin with "👩‍💻:". This denotes sections 
 that talk about the Way of the Programmer: advice or information that will help you to be a better programmer and make 
-better programs. Be on the lookout for other WP pages!
+better programs. Be on the lookout for other 👩‍💻 pages!
