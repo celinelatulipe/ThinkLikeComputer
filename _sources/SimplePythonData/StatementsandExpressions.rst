@@ -22,7 +22,7 @@ Statements and Expressions
     :width: 560
     :align: left
 
-A **statement** is an instruction that the Python interpreter can execute. You have only seen the assignment 
+A **statement** is an instruction that the Python interpreter can execute. You have mostly only seen the assignment 
 statement so far. Some other kinds of statements that you'll see in future chapters are ``while`` statements, 
 ``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds too!)
 
@@ -48,8 +48,8 @@ side of assignment statements. A literal all by itself is a simple expression, a
 .. activecode:: ac2_10_2
     :nocanvas:
 
-    y = 3.14
-    x = len("hello")
+    y = 3.14          # this assignment statement assigns the expression 3.14 to y
+    x = len("hello")  # this evaluates the expression len("hello") then assigns 5 to x
     print(x)
     print(y)
 
@@ -97,8 +97,6 @@ Similarly, when calling a function, instead of putting a literal inside the pare
    print(square(y + square(x)))
    print(sub(square(y), square(x)))
    
-With a function call, it's even possible to have a complex expression before the left parenthesis, as long as that expression evaluates to a function object. For now, though, we will just use variable names (like square, sub, and len) that are directly bound to function objects.
-
 It is important to start learning to read code that contains complex expressions. The Python interpreter examines any line of code and *parses* it into components. For example, if it sees an ``=`` symbol, it will try to treat the whole line as an assignment statement. It will expect to see a valid variable name to the left of the =, and will parse everything to the right of the = as an expression. It will try to figure out whether the right side is a literal, a variable name, an operator expression, or a function call expression. If it's an operator expression, it will further try to parse the sub-expressions before and after the operator. And so on. You should learn to parse lines of code in the same way.
 
 In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after, then combines the two resulting values using the operator. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.
@@ -125,9 +123,10 @@ To start giving you some practice in reading and understanding complicated expre
 
 
 .. parsonsprob:: pp2_10_1
-
-   Please order the code fragments in the order in which the Python interpreter would evaluate them. x is 2 and y is 3. Now the interpreter is executing `square(x + sub(square(y), 2 *x))`.
-
+  
+   The interpreter is executing ``square(x + sub(square(y), 2 * x))``. x is 2 and y is 3. 
+   
+   Arrange the code fragments in the order in which the Python interpreter would evaluate them.     
    -----
    look up the variable square to get the function object
    =====
