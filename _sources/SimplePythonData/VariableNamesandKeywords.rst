@@ -21,7 +21,7 @@ that case matters. ``Bruce`` and ``bruce`` are different variables.
 
 .. caution::
 
-   Variable names can never contain spaces.
+   Variable names can **never** contain spaces.
 
 The underscore character ( ``_``) can also appear in a name. It is often used in
 names with multiple words, such as ``my_name`` or ``price_of_tea_in_china``.
@@ -72,3 +72,17 @@ of your variable names and you don't know why, see if it is on this list.
    :practice: T
 
    True or False:  the following is a legal variable name in Python:   A_good_grade_is_A+
+
+.. mchoice:: question2_8_2
+   :answer_a: january_first_day
+   :answer_b: 1st_january
+   :answer_c: january_1st day_of_week
+   :answer_d: januaryFirst
+   :correct: a
+   :feedback_a: -  Yes, this is a good name to store the day of the week for January 1st.  
+   :feedback_b: -  No, you can't start a variable name with a numeric digit.
+   :feedback_c: -  No, you can't have a space in a variable name.
+   :feedback_d: -  While this variable name is legal, it doesn't follow the convention of using underscores between words and avoiding use of uppercase letters.
+   :practice: T
+
+   Which variable name would be appropriate for storing what day of the week January 1st falls on?
