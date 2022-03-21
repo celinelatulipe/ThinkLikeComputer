@@ -16,10 +16,8 @@
 🐢 Our First Turtle Program
 ---------------------------
 
-Let's try a couple of lines of Python code to create a new turtle and
-start drawing a simple figure like a rectangle.
-We will refer to our first turtle using the variable name alex, but remember that you can
-choose any name you wish as long as you follow the naming rules from the previous chapter.
+Let's try a couple of lines of Python code to create a new turtle and start drawing a simple figure like a rectangle.
+We will refer to our first turtle using the variable name antara, but remember that you can choose any name you wish as long as you follow the naming rules from the previous chapter.
 
 The program as shown will only draw the first two sides of the rectangle.
 After line 4 you will have a straight line going from the center of the
@@ -33,40 +31,37 @@ turtle and a half drawn rectangle. Press the run button to try it and see.
 
     import turtle             # allows us to use the turtles library
     wn = turtle.Screen()      # creates a graphics window
-    alex = turtle.Turtle()    # create a turtle named alex
-    alex.forward(150)         # tell alex to move forward by 150 units
-    alex.left(90)             # turn by 90 degrees
-    alex.forward(75)          # complete the second side of a rectangle
+    antara = turtle.Turtle()    # create a turtle named antara
+    antara.forward(150)         # tell antara to move forward by 150 units
+    antara.left(90)             # turn by 90 degrees
+    antara.forward(75)          # complete the second side of a rectangle
 
 
 
 
 Here are a couple of things you'll need to understand about this program.
 
-The first line tells Python to load a **module** named ``turtle``. That module
+The first line tells Python to load a **module** called ``turtle``. That module
 brings us two new types that we can use: the ``Turtle`` type, and the
 ``Screen`` type.  The dot notation ``turtle.Turtle`` means *"The Turtle type
 that is defined within the turtle module"*. (Remember that Python is case
-sensitive, so the module name, ``turtle``, with a lowercase ``t``, is different from the
-type ``Turtle`` because of the uppercase ``T``.)
+sensitive, so the module name, ``turtle``, with a lowercase ``t``, is different from the type ``Turtle`` because of the uppercase ``T``.)
 
-We then create and open what the turtle module calls a screen (we would
+We then create and open what the turtle module calls a Screen (we would
 prefer to call it a window, or in the case of this web version of Python
 simply a canvas), which we assign to variable ``wn``. Every window
 contains a **canvas**, which is the area inside the window on which we can draw.
 
-In line 3 we create a turtle. The variable ``alex`` is made to refer to this
+In line 3 we create a turtle. The variable ``antara`` is made to refer to this
 turtle. These first three lines set us up so that we are ready to do some drawing.
 
-In lines 4-6, we instruct the **object** alex to move and to turn. We do this
-by **invoking** or activating alex's **methods** --- these are the instructions that all
-turtles know how to respond to.
+In lines 4-6, we instruct the **object** antara to move and to turn. We do this
+by **invoking** or activating antara's **methods** --- these are the instructions that all turtles know how to respond to.
 
 
 .. admonition:: Complete the rectangle ...
 
-    Modify the program by adding the commands necessary to have *alex* complete the
-    rectangle.
+    Modify the program by adding the commands necessary to have *antara* complete the rectangle.
 
 **Check your understanding**
 
@@ -81,7 +76,7 @@ turtles know how to respond to.
    :feedback_c: Yes, the turtle starts out facing east.
    :feedback_d: No, look at the first example with a turtle.  Which direction does the turtle move?
 
-   Which direction does the Turtle face when it is created?
+   Which direction does the turtle face when it is created?
 
 **Mixed up programs**
 
@@ -100,13 +95,13 @@ turtles know how to respond to.
    -----
    import turtle
    window = turtle.Screen()
-   ella = turtle.Turtle()
+   abbas = turtle.Turtle()
    =====
-   ella.right(90)
-   ella.forward(150)
+   abbas.right(90)
+   abbas.forward(150)
    =====
-   ella.left(90)
-   ella.forward(75)
+   abbas.left(90)
+   abbas.forward(75)
 
 .. parsonsprob:: pp3_2_2
 
@@ -253,7 +248,7 @@ screen until we click on it.
    :answer_a: True
    :answer_b: False
    :correct: a
-   :feedback_a: In this chapter you saw one named alex and one named tess, but any legal variable name is allowed.
+   :feedback_a: In this chapter you saw one named tess and one named jamal, but any legal variable name is allowed.
    :feedback_b: A variable, including one referring to a Turtle object, can have whatever name you choose as long as it follows the naming conventions from Chapter 2.
 
    True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.
