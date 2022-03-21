@@ -32,7 +32,7 @@ is a syntactically correct mathematical statement, but ``3=+6$`` is not.
 H\ :sub:`2`\ O is a syntactically correct chemical name, but :sub:`2`\ Zz is
 not.
 
-Syntax rules come in two flavors, pertaining to **tokens** and structure.
+Syntax rules come in two flavors, pertaining to **tokens** and **structure**.
 Tokens are the basic elements of the language, such as words, numbers, and
 chemical elements. One of the problems with ``3=+6$`` is that ``$`` is not a
 legal token in mathematics (at least as far as we know). Similarly,
@@ -79,8 +79,7 @@ structure, syntax, and semantics --- there are many differences:
         .. tip::
 
             You'll need to find the original joke to understand the idiomatic
-            meaning of the other shoe falling.  *Yahoo! Answers* thinks it
-            knows!
+            meaning of the other shoe falling.
 
 People who grow up speaking a natural language---that is, everyone---often have a hard
 time adjusting to formal languages. In some ways, the difference between natural and formal
@@ -91,17 +90,13 @@ so:
 
     poetry
         Words are used for their sounds as well as for their meaning, and the
-        whole poem together creates an effect or emotional response. Ambiguity
-        is not only common but often deliberate.
+        whole poem together creates an effect or emotional response. Ambiguity is not only common but often deliberate.
 
     prose
-        The literal meaning of words is more important, and the structure
-        contributes more meaning. Prose is more amenable to analysis than
-        poetry but still often ambiguous.
+        The literal meaning of words is more important, and the structure contributes more meaning. Prose is more amenable to analysis than poetry but still often ambiguous.
 
     program
-        The meaning of a computer program is unambiguous and literal, and can
-        be understood entirely by analysis of the tokens and structure.
+        The meaning of a computer program is unambiguous and literal, and can be understood entirely by analysis of the tokens and structure.
 
 Here are some suggestions for reading programs (and other formal languages).
 First, remember that formal languages are much more dense than natural
@@ -109,8 +104,7 @@ languages, so it takes longer to read them. Also, the structure is very
 important, so it is usually not a good idea to read from top to bottom, left to
 right. Instead, learn to parse the program in your head, identifying the tokens
 and interpreting the structure.  Finally, the details matter. Little things
-like spelling errors and bad punctuation, which you can get away with in
-natural languages, can make a big difference in a formal language.
+like indentation, spelling errors and bad punctuation, which you can get away with in natural languages, can make a big difference in a formal language.
 
 **Check your understanding**
 

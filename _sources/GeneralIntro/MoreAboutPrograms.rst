@@ -22,8 +22,7 @@ or encoding a video and streaming it across the network.  It can also be a
 symbolic computation, such as searching for and replacing text in a document or
 (strangely enough) compiling a program.
 
-The details look different in different languages, but a few basic instructions
-appear in just about every language.
+The details look different in different languages, but a few basic terms appear in just about every language.
 
 input
     Get data from the user via keyboard or mouse input, or from a file, or some other device.
@@ -32,15 +31,14 @@ output
     Display data on the screen for an end user, in the console for the programmer, or send data to a file or other device.
 
 math and logic
-    Perform basic mathematical operations like addition and multiplication
-    and logical operations like ``and``, ``or``, and ``not``.
+    Perform basic mathematical operations like addition, multiplication and logical operations like ``and``, ``or``, and ``not`` (more on these later).
 
 conditional execution
     Check for certain conditions and execute the appropriate sequence of
     statements.
 
 repetition
-    Perform some action repeatedly, usually with some variation.
+    Perform some action repeatedly, usually with some  variations.
 
 Believe it or not, that's pretty much all there is to it. Every program you've
 ever used, no matter how complicated, is made up of instructions that look more
@@ -52,20 +50,19 @@ instructions.
 Preview of Control Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We won't get too much into python control structures yet, but it is good to mention them early to give you a taste for what you can do with the language! 
+We won't get too much into Python control structures yet, but it is good to mention them early to give you a taste for what you can do with the language! 
 If these make sense to you now, that's great! 
 However, we don't expect you to understand these yet - understanding will come later. 
 
-First we have structures that allow us to iterate over something. 
-We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop. Run the program below to see what is output to the console:
+First we have structures that allow us to iterate over something. We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop. This is a type of repetition instruction. Run the program below to see what the output to the console is:
 
 .. activecode:: ac1_5_1
 
    for character in "Cool string":
        print(character)
 
-We can also iterate without a definite stopping point with ``while`` loops. 
-You might use this if you want to receive input from the user of your program but you don't know how long it'll take for them to be done with your code. Run the program below and add some items to a grocery list:
+We can also iterate without a definite stopping point with ``while`` loops (another type of repetition instruction). 
+You might use this if you want to receive input from the user in your program but you don't know how long it'll take for them to be done entering new input. Run the program below and add some items to a grocery list:
 
 .. activecode:: ac1_5_2
 
@@ -75,11 +72,11 @@ You might use this if you want to receive input from the user of your program bu
        print(grocery_item)
 
 
-Note that in the example above, you could run this program repeatedly and give it a different number of items each time you run it. 
+Note that in the example above, you could run this program repeatedly and give it a different number of items each time you run it. Also note the cancel button does not do anything at this time. That is because we haven't programmed it to do anything!
 
 Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found. 
 Conditionals, as they're called, allow us to do that. 
-Check out how adding conditionals to our code can change what we can write about regarding grocery shopping.
+Check out how adding conditionals to our code can change what we can write about regarding grocery shopping. 
 
 .. activecode:: ac1_5_3
 
@@ -105,7 +102,7 @@ Check out how adding conditionals to our code can change what we can write about
    :correct: a
    :feedback_a: It is just step-by-step instructions that the computer can understand and execute.  Programs often implement algorithms, but note that algorithms are typically less precise than programs and do not have to be written in a programming language.
    :feedback_b: True, but not in this context.  We mean a program as related to a computer.
-   :feedback_c: A program can perform a computation, but by itself it is not one.
+   :feedback_c: A program can perform a computation, but by itself it's not one.
    :feedback_d: Programs often implement algorithms, but they are not the same thing.  An algorithm is a step by step list of instructions, but those instructions are not necessarily precise enough for a computer to follow.  A program must be written in a programming language that the computer knows how to interpret.
 
    A program is:

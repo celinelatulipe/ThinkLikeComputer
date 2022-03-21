@@ -18,7 +18,7 @@
 
 Let's try a couple of lines of Python code to create a new turtle and
 start drawing a simple figure like a rectangle.
-We will refer to our first turtle using the variable name alex, but remember that you can
+We will refer to our first turtle using the variable name antara, but remember that you can
 choose any name you wish as long as you follow the naming rules from the previous chapter.
 
 The program as shown will only draw the first two sides of the rectangle.
@@ -33,10 +33,10 @@ turtle and a half drawn rectangle. Press the run button to try it and see.
 
     import turtle             # allows us to use the turtles library
     wn = turtle.Screen()      # creates a graphics window
-    alex = turtle.Turtle()    # create a turtle named alex
-    alex.forward(150)         # tell alex to move forward by 150 units
-    alex.left(90)             # turn by 90 degrees
-    alex.forward(75)          # complete the second side of a rectangle
+    antara = turtle.Turtle()    # create a turtle named antara
+    antara.forward(150)         # tell antara to move forward by 150 units
+    antara.left(90)             # turn by 90 degrees
+    antara.forward(75)          # complete the second side of a rectangle
 
 
 
@@ -48,7 +48,7 @@ Using the turtle module allows us to easily get a window up on screen and a turt
 
 Line 2 creates a window, which has a name 'wn'. 
 
-Line 3 creates a turtle, which has a name 'alex'.
+Line 3 creates a turtle, which has a name 'antara'.
 
 .. brings us two new types that we can use: the ``Turtle`` type, and the
         ``Screen`` type.  The dot notation ``turtle.Turtle`` means *"The Turtle type
@@ -61,21 +61,21 @@ Line 3 creates a turtle, which has a name 'alex'.
         simply a canvas), which we assign to variable ``wn``. Every window
         contains a **canvas**, which is the area inside the window on which we can draw.
 
-        In line 3 we create a turtle. The variable ``alex`` is made to refer to this
+        In line 3 we create a turtle. The variable ``antara`` is made to refer to this
         turtle.
 
 These first three lines set us up so that we are ready to do some drawing.
 
-In lines 4-6, we instruct the turtle 'alex' to move and to turn. Alex the turtle is an **object** and has things it can do. 
-The alex.<action>(<info>) notation, tells Python that the turtle alex should do certain things (move forward, turn left) and
+In lines 4-6, we instruct the turtle 'antara' to move and to turn. antara the turtle is an **object** and has things it can do. 
+The antara.<action>(<info>) notation, tells Python that the turtle antara should do certain things (move forward, turn left) and
 the information in the brackets gives details on how to do those things (how far to move, how much to turn). 
 
-.. We do this by **invoking** or activating alex's **methods** --- these are the instructions that all turtles know how to respond to.
+.. We do this by **invoking** or activating antara's **methods** --- these are the instructions that all turtles know how to respond to.
 
 
 .. admonition:: Complete the rectangle ...
 
-    Modify the program by adding the commands necessary to have *alex* complete the
+    Modify the program by adding the commands necessary to have *antara* complete the
     rectangle.
 
 **Check your understanding**
@@ -164,5 +164,4 @@ Throughout this textbook, you'll see many examples of 'Mixed up programs' like t
    jamal = turtle.Turtle()
    jamal.left(180)
    jamal.forward(75)
-
 

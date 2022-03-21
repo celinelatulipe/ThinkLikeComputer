@@ -120,12 +120,12 @@ Glossary
         An error that does not occur until the program has started to execute
         but that prevents the program from continuing.
 
+    semantics
+        The meaning of a program.
+
     semantic error
         An error in a program that makes it do something other than what the
         programmer intended.
-
-    semantics
-        The meaning of a program.
 
     shell mode
         A mode of using Python where expressions can be typed and executed in the command
