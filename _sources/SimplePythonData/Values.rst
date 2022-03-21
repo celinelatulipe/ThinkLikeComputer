@@ -33,6 +33,9 @@ The printed representation of a character string, however, is not exactly the sa
 .. activecode:: ac2_2_1
     :nocanvas:
 
+    print(3.2)
+    print("Hello, World!")
+
 .. .. note::
    **Literals** appear in programs. The Python interpreter turns literals into **values**, which have internal representations that people never get to see directly.  **Outputs** are external representations of values that appear in the console. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external representations as values.
 
