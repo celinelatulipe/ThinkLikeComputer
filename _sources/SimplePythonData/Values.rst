@@ -16,8 +16,8 @@ Values and Data Types
 
 A **value** is one of the fundamental things --- like a word or a number --- that a program manipulates. 
 Some values are ``5`` (the result when we add ``2 + 3``), and ``"Hello, World!"``. These objects are classified into 
-different classes, or data types: 4 is an integer, and "Hello, World!" is a string, so-called because it contains a 
-string or sequence of letters. You (and the interpreter) can identify strings because they are enclosed in quotation
+different classes, or data types: 5 is an integer, and "Hello, World!" is a string, so-called because it contains a 
+string or sequence of letters. You (and the Python interpreter) can identify strings because they are enclosed in quotation
 marks.
 
 We can specify values directly in the programs we write. For example we can specify a number as a **literal** just by (literally) typing it directly into the program (e.g., ``5`` or ``4.32``). In a program, we specify a word, or more generally a string of characters, by enclosing the characters inside quotation marks (e.g., ``"Hello, World!"``).
@@ -33,19 +33,16 @@ The printed representation of a character string, however, is not exactly the sa
 .. activecode:: ac2_2_1
     :nocanvas:
 
-    print(3.2)
-    print("Hello, World!")
-
-.. note::
+.. .. note::
    **Literals** appear in programs. The Python interpreter turns literals into **values**, which have internal representations that people never get to see directly.  **Outputs** are external representations of values that appear in the console. When we are being careful, we will use the terms this way. Sometimes, however, we will get a little sloppy and refer to literals or external representations as values.
 
 Numbers with a decimal point belong to a class
 called **float**, because these numbers are represented in a format called
 *floating-point*.  At this stage, you can treat the words *class* and *type*
-interchangeably.  We'll come back to a deeper understanding of what a class
-is in later chapters.
+interchangeably.  You will gain a deeper understanding of what a class
+is in later Computer Science courses.
 
-You will soon encounter other types of objects as well, such as lists, and in later classes dictionaries and sets. Each of these has its own special representation for specifying an object as a literal in a program, and for displaying an object when you print it to the console. For example, list contents are enclosed in square brackets ``[ ]``. 
+You will soon encounter other types of objects as well, such as lists. Each of these has its own special representation for specifying an object as a literal in a program, and for displaying an object when you print it to the console. For example, list contents are enclosed in square brackets ``[ ]``. 
 
 **Check your understanding**
 
