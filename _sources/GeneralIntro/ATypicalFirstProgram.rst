@@ -16,33 +16,39 @@
 A Typical First Program
 -----------------------
 
-Traditionally, the first program written in a new language is called *Hello,
-World!* because all it does is display the words, Hello, World!  In Python, the source code
+Traditionally, the first program written in a new language is called *Hello, World!* because all it does is display the words, Hello, World!  In Python, the source code
 looks like this.
 
 .. sourcecode:: python
 
     print("Hello, World!")
 
-This is an example of using the **print function**, which doesn't actually
-print anything on paper. It displays a value on the screen, in the programming console. Programmers do their work in development environments (software applications designed specifically for developing programs). In a development environment there is typically one part of the window where the programmer edits the program, and another part of the window, called the console, where output (such as from a print statement) is displayed. In this case, the result on the console is the phrase:
+This is an example of using the **print function**, which doesn't actually print anything on paper. It displays a value on the screen, in the programming console. Programmers do their work in development environments (software applications designed specifically for developing programs). In a development environment there is typically one part of the window where the programmer edits the program, and another part of the window, called the console, where output (such as from a print statement) is displayed. The ActiveCode panel is like our development environment. In this case, the result on the console is the phrase:
 
 ::
 
     Hello, World!
 
-Here is the example in an activecode window, where you can run it and modify it. When you click the Save & Run button, a grey console window appears below the activecode window. That is where output from print() statements will always appear.
+Here is the example in an ActiveCode window, where you can run it and modify it. When you click the Save & Run button, a grey console window appears below the ActiveCode window. That is where output from print() statements will always appear.
 
 .. activecode:: ac1_7_1
 
     print("Hello, World!")
 
-The quotation marks in the program mark the beginning and end of the value.
+The quotation marks in the program mark the beginning and end of the string value.
 They don't appear in the result. You'll learn more about why in the next chapter.
 
-Some people judge the quality of a programming language by the simplicity of
-the Hello, World! program. By this standard, Python does about as well as
-possible.
+Some people judge the quality of a programming language by the simplicity of the Hello, World! program. By this standard, Python does about as well as possible.
+
+For comparison in another language the Hello, World! program in Java looks like this:
+
+::
+
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
 
 **Check your understanding**
 
@@ -57,4 +63,4 @@ possible.
    :feedback_c: The format of the information is called its font and has nothing to do with the print statement.
    :feedback_d: That would be nice! But no...
 
-   The print function:
+   The print() statment:
