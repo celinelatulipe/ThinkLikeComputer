@@ -15,7 +15,7 @@
 
 Data Types
 ----------
-If you are not sure what class (data type) a value falls into, Python has a function called
+If you are not sure what type a value is, Python has a function called
 **type** which can tell you.
 
 .. activecode:: ac2_5_1
@@ -74,7 +74,7 @@ Triple quoted strings can even span multiple lines:
 Python doesn't care whether you use single or double quotes or the
 three-of-a-kind quotes to surround your strings.  Once it has parsed the text of
 your program or command, the way it stores the value is identical in all cases,
-and the surrounding quotes are not part of the value.
+and the surrounding quotes are **not** part of the value that is stored.
 
 .. activecode:: ac2_5_6
     :nocanvas:
@@ -82,7 +82,7 @@ and the surrounding quotes are not part of the value.
     print('This is a string.')
     print("""And so is this.""")
 
-So the Python language designers usually chose to surround their strings by
+The Python language designers usually chose to surround their strings by
 single quotes.  What do you think would happen if the string already contained
 single quotes?
 
