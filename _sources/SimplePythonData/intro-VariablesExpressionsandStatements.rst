@@ -43,7 +43,7 @@ Learning Goals
 * To solve problems using the 'accumulator pattern'
 * To understand operator precedence
 * To distinguish between expressions, values, and printed representations
-* To recognize & explain hard coding
+* To recogonize & explain hard coding
 
 
 Objectives
