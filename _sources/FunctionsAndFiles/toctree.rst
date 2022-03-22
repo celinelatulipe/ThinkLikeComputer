@@ -1,11 +1,14 @@
-Files
-:::::
+Functions and Files
+:::::::::::::::::::
 
 .. toctree::
    :caption: Files
    :maxdepth: 2
 
-   intro-WorkingwithDataFiles.rst
+   intro-Functions.rst
+   FunctionDefinitions.rst
+   FunctionInvocation.rst
+   WorkingwithDataFiles.rst
    ReadingaFile.rst
    AlternativeFileReadingMethods.rst
    Iteratingoverlinesinafile.rst
@@ -13,9 +16,6 @@ Files
    With.rst
    FilesRecipe.rst
    WritingTextFiles.rst
-   CSVFormat.rst
-   ReadingCSVFiles.rst
-   WritingCSVFiles.rst
    WPTipsHandlingFiles.rst
    Glossary.rst
    Exercises.rst

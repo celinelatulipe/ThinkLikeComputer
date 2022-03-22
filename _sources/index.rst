@@ -28,24 +28,21 @@ Table of Contents
    :maxdepth: 4
 
    GeneralIntro/toctree.rst
-   SimplePythonData/toctree.rst
+   DataAndInstructions/toctree.rst
    Debugging/toctree.rst
    PythonModules/toctree.rst
-   PythonTurtle/toctree.rst
-   Sequences/toctree.rst
    Iteration/toctree.rst
+   FunctionsAndFiles/toctree.rst
    Conditionals/toctree.rst
-   Files/toctree.rst
-   Functions/toctree.rst
-   MoreAboutIteration/toctree.rst
-
-
-SECTION 2: Another Random Section
-:::::::::::::::::::::::::::::::::
-
-.. toctree::
-   :maxdepth: 2
-
-   FrontBackMatter/contrib.rst
+   IntegrationPause/toctree.rst
+   FunctionsParametersScope/toctree.rst
+   Sequences/toctree.rst
+   IndefiniteIteration/toctree.rst
+   EventHandling/toctree.rst
+   DataScience/toctree.rst
    FrontBackMatter/foreword.rst
    FrontBackMatter/preface.rst
+   FrontBackMatter/contrib.rst
+   FrontBackMatter/copyright.rst
+
+
