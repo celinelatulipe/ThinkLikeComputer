@@ -7,7 +7,7 @@ Sequences
 
    intro-Sequences.rst
    StringsandLists.rst
-   IndexOperatorWorkingwiththeCharactersofaString.rst
+   IndexOperatorWithListsAndTuples.rst
    DisabmiguatingSquareBrackets.rst
    Length.rst
    TheSliceOperator.rst

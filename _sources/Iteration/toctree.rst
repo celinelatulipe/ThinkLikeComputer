@@ -7,7 +7,9 @@ Iteration
 
    intro-Iteration.rst
    TheforLoop.rst
+   TurtleRepetitionwithaForLoop.rst
    FlowofExecutionoftheforLoop.rst
+   IndexOperatorForString.rst
    Stringsandforloops.rst
    Listsandforloops.rst
    TheAccumulatorPattern.rst
@@ -15,7 +17,6 @@ Iteration
    NestedIterationImageProcessing.rst
    WPPrintingIntermediateResults.rst
    WPNamingVariablesinForLoops.rst
-   GeneralizedSequences.rst
    WPKeepingTrackofYourIteratorVariableYourIterable.rst
    Glossary.rst
    Exercises.rst

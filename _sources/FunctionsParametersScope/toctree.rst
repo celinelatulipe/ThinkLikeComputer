@@ -1,14 +1,11 @@
-Functions
-:::::::::
+Function Parameters, Return Values and Scope
+::::::::::::::::::::::::::::::::::::::::::::
 
 .. toctree::
-   :caption: Functions
+   :caption: Function Parameters, Return Values & Scope
    :maxdepth: 2
 
-   intro-Functions.rst
-   FunctionDefinitions.rst
-   FunctionInvocation.rst
-   FunctionParameters.rst
+   intro-FunctionParameters.rst
    Returningavaluefromafunction.rst
    DecodingaFunction.rst
    TypeAnnotations.rst
