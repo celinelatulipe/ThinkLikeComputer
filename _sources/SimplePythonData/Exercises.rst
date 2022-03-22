@@ -390,10 +390,10 @@ Exercises
       print("Number of teaspoons: " + str(teaspoons))
 
 
-Contributed Exercises
-~~~~~~~~~~~~~~~~~~~~~
+.. Contributed Exercises
+.. ~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
+.. .. raw:: html
 
     {% for q in questions: %}
         <div class='oneq full-width'>

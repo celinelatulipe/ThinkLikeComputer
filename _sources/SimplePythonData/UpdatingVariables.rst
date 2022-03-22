@@ -109,6 +109,30 @@ code.
 This will be tedious when we have many things to add together. Later you'll read about an 
 easier way to do this kind of task.
 
+The following turtle example shows some variables used for drawing, but between each use, one of the variables has its value change, resulting in a pattern. Can you predict what the turtle's drawing will look like before you run the code?
+
+.. activecode:: ac2_14_4
+
+  import turtle
+  wn = turtle.Screen()
+  frida = turtle.Turtle()
+
+  y = 200     # y coordinate at the top of the window
+  x = 0       # x coordinate, initially at the center
+  spacing = 50       # variable for spacing between line endpoints
+
+  frida.goto(x, y)       # draw from center to top
+  frida.home()             # go back to center
+  x = x + spacing          # add spacing to x
+  frida.goto(x, y)       # draw from center to top, and new x position
+  frida.home()             # go back to center
+  x = x + spacing          # add spacing to x 
+  frida.goto(x, y)       # draw from center to top, and new x position
+  frida.home()             # go back to center
+
+
+
+
 
 **Check your understanding**
 

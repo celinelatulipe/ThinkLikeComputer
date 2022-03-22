@@ -28,8 +28,7 @@ You can build complex expressions out of simpler ones using **operators**. Opera
 multiplication and division. The values the operator works on are called
 **operands**.
 
-The following are all legal Python expressions whose meaning is more or less
-clear::
+The following are all legal Python expressions::
 
     20 + 32
     5 ** 2
@@ -37,7 +36,7 @@ clear::
 
 The tokens ``+``, ``-``, and ``*``, and the use of parentheses for grouping,
 mean in Python what they mean in mathematics. The asterisk (``*``) is the
-token for multiplication, and ``**`` is the token for exponentiation.
+token for multiplication, and ``**`` is the token for exponentiation (so the second line above evaluates to 5 squared (25)).
 Addition, subtraction, multiplication, and exponentiation all do what you
 expect.
 
@@ -75,7 +74,7 @@ The truncated division operator, ``//``, also works on floating point numbers. I
     remainder
 
 The **modulus operator**, sometimes also called the **remainder operator** or **integer remainder operator** works on integers (and integer expressions) and yields
-the remainder when the first operand is divided by the second. In Python, the
+the remainder when the first operand is divided by the second. In Python (and many other programming languages), the
 modulus operator is a percent sign (``%``). The syntax is the same as for other
 operators.
 

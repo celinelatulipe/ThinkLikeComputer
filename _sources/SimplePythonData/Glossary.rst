@@ -37,13 +37,6 @@ Glossary
         ``=`` is Python's assignment token, which should not be confused
         with the mathematical comparison operator using the same symbol.
 
-    boolean expression
-        An expression that is either true or false.
-
-    boolean value
-        There are exactly two boolean values: ``True`` and ``False``. Boolean
-        values result when a boolean expression is evaluated by the Python
-        interepreter.  They have type ``bool``.
 
     class
         see **data type** below
@@ -164,4 +157,11 @@ Glossary
         program *self documenting*.
 
 
+..    boolean expression
+        An expression that is either true or false.
+
+..    boolean value
+        There are exactly two boolean values: ``True`` and ``False``. Boolean
+        values result when a boolean expression is evaluated by the Python
+        interepreter.  They have type ``bool``.
 

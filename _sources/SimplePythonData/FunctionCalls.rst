@@ -79,7 +79,7 @@ get to see that in the console, because it is not printed.
 Function calls as part of complex expressions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Anywhere in an expression that you can write a literal like a number, you can also write a function invocation that
+Anywhere in an expression that you can write a literal like a number, you can also write a function call that
 produces a number.
 
 For example:
@@ -93,7 +93,7 @@ For example:
    print(sub(square(3), square(1+1)))
 
 
-Let's take a look at how that last execution unfolds.
+Let's take a look at how that last execution unfolds. Press the **Next Step** button below a few times to watch how these two lines of code get evaluated.
 
 .. showeval:: se_ac2_4_1a
    :trace_mode: true
@@ -106,12 +106,12 @@ Let's take a look at how that last execution unfolds.
    print({{sub(9, 4)}}{{5}})
 
 
-Functions are objects; parentheses invoke functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Parentheses invoke functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Just typing the name of the function refers to the function as an object, as in the first line in the example below. Typing the name of the function followed by
-parentheses ``()`` invokes the function. Of course, you have to put any input values that the function needs inside the parentheses. 
+parentheses ``()`` invokes (calls) the function. Of course, you have to put any input values that the function needs inside the parentheses. 
 
 .. activecode:: ac2_4_4
    :include: ac2_4_1

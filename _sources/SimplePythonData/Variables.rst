@@ -76,7 +76,7 @@ that is linked to the variable at the time of execution.  In other words, evalua
     print(pi)
 
 In each case the result is the value of the variable.
-To see this in even more detail, we can run the program using codelens.
+To see this in even more detail, we can run the program using CodeLens.
 
 .. codelens:: clens2_7_1
     :python: py3
@@ -94,9 +94,8 @@ Now, as you step through the statements, you can see
 the variables and the values they reference as those references are
 created.
 
-We use variables in a program to "remember" things, like the current score at
-the football game.  But variables are *variable*. This means they can change
-over time, just like the scoreboard at a football game.  You can assign a value
+We use variables in a program to "remember" things, like a patient's body temperature.  But variables are *variable*. This means they can change
+over time, just like a patient's body temperature can fluctuate during an illness.  You can assign a value
 to a variable, and later assign a different value to the same variable.
 
 .. note::
