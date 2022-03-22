@@ -149,3 +149,18 @@ To start giving you some practice in reading and understanding complicated expre
    add 2 and 5 to get 7
    =====
    run the square function, again, on input 7, returning the value 49
+
+The following turtle example uses assignment statements, where the result of calling turtle functions is stored in variables and then used later.
+
+.. activecode:: ac2_10_6
+   
+   import turtle
+   wn = turtle.Screen()
+   sukram = turtle.Turtle()
+
+   right_side = sukram.window_width()/2  # get window width and divide it by two
+   top_side = sukram.window_height()/2  # get window height and divide it by two
+
+   sukram.goto(right_side, top_side)     # have turtle draw line from center (0,0) to top-right corner
+
+In this turtle example, the Python interpreter sees the ``=`` sign and knows this is an assignment statement. It needs to evaluate the expression on the right and assign it to the variable called ``right_side``. On the right is a turtle function (window_width()), a division operator and the literal value 2. So, the Python interpreter first notices the division operator and knows that a division operator is necessary, and then looks at the two operands to see if they are expressions that need to be evaluated. The literal `2` does not need further evaluation, but the turtle function window_width() needs evaluation. So, it calls that function, which is in the turtle module. That function returns the width of the window or canvas. Whatever that value is now gets divided by 2. The result of that calculation gets stored in `right_side`. If you are wondering why we divide the width by 2, it is because in Python's turtle graphics, the origin (0,0) is located at the center of the window. So, the x coordinate of the right edge of the canvas is width/2 and the x coordinate of the left edge is -(width/2). On line 8, the turtle is moved to the top-right corner, causing a line to be drawn from the center of the window to that corner. This shows how we can use assignments with functions and operators to define where the turtle draws. We'll learn a bit more about the coordinates of the turtle window in a later chapter.  
