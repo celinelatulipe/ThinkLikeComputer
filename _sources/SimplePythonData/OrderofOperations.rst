@@ -69,7 +69,7 @@ rules for its mathematical operators that mathematics does.
 
    This is a second way that parentheses are used in Python. The first way you've already seen is that () indicates a function call, with the inputs going inside the parentheses. How can Python tell when parentheses specify to call a function, and when they are just forcing the order of operations for ambiguous operator expressions? 
    
-   The answer is that if there's a an expression to the left of the parentheses that evaluates to a function object, then the parentheses indicate a function call, and otherwise not. You will have to get used to making the same inference when you see parentheses: is this a function call, or just specifying precedence?  
+   The answer is that if there's a a function to the left of the parentheses, then the parentheses indicate a function call, and otherwise not.   
 
 **Check your understanding**
 
