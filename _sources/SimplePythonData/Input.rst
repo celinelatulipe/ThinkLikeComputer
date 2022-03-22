@@ -47,9 +47,8 @@ earlier.
 
 .. note::
 
-    We often use the word "input" (or, synonymously, argument) to refer to the values that are passed to any function. Do not confuse that with the ``input`` function, which asks the user of a program to type in a value. Like any function, ``input`` itself takes an input argument and produces an output. The input is a character string that is displayed as a prompt to the user. The output is whatever character string the user types.
+    We often use the word "input" (or, synonymously, argument) to refer to the values that are passed to any function. Do not confuse that with the ``input`` **function**, which asks the end user of a program to type in a value. Like any function, ``input`` itself takes an input argument and produces an output. The input is a character string that is displayed as a prompt to the user. The output is whatever character string the user types.
 
-    This is analogous to the potential confusion of function "outputs" with the contents of the output window. Every function produces an output, which is a Python value. Only the print function puts things in the output window. Most functions take inputs, which are Python values. Only the input function invites users to type something.
 
 Here is a program that turns a number of seconds into more human readable counts of hours, 
 minutes, and seconds. A call to ``input()`` allows the user to enter the number of seconds. 
@@ -71,6 +70,24 @@ operators to compute the results.
 
 The variable ``str_seconds`` will refer to the string that is entered by the user. As we said above, even though this string may be ``7684``, it is still a string and not a number.  To convert it to an integer, we use the ``int`` function.
 The result is referred to by ``total_secs``.  Now, each time you run the program, you can enter a new value for the number of seconds to be converted.
+
+Here is a turtle example that asks the user for input on where the turtle should go:
+
+.. activecode:: ac2_16_3
+
+   import turtle
+   wn = turtle.Screen()
+   zhang = turtle.Turtle()
+
+   user_x = input("Enter an x coordinate")
+   user_y = input("Enter a y coordinate")
+
+   x = int(user_x)
+   y = int(user_y)
+
+   zhang.goto(x, y)
+
+The input functions on lines 5 and 6 ask the user to enter coordinates and saves the resulting strings to the `user_x` and `user_y` variables. The statements of lines 8 and 9 convert the strings to integers. On line 11, the turtle draws a line from the center of the window to wherever the user specified. 
 
 **Check your understanding**
 

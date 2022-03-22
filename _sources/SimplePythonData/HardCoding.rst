@@ -29,16 +29,18 @@ hand. That's where **hard-coding** comes in. "Don't hard code" basically means, 
 your program, and you should *not* write things out by hand or do computation in your head -- even if you can do so easily.
 
 When you are writing code or working on the answer to a programming exericse, you should ask yourself: *Would my answer be 
-correct even if the provided variables had different values?* If the answer to that question is no, you're probably hard-
-coding, which you should avoid -- and there's probably at least a slightly more concise way to construct your answer! 
+correct even if the provided variables had different values?* If the answer to that question is no, you're probably hard-coding, which you should avoid -- and there's probably at least a slightly more concise way to construct your answer! 
 
 For example, in this following code, if you're asked in an exercise to create a variable ``zx`` and assign it the value of 
 the sum of the value of ``y`` and the value of ``x``, writing ``zx = 55`` is *hard-coding*. 
 
-.. actex:: hard_coding_example
+.. .. actex:: hard_coding_example
+.. activecode:: ac2_14_11
+
    
    x = 20
    y = 35
+   zx = 55 # this is wrong! If x or y were given different values, this would not be their sum
 
 The operation ``20 + 35`` may be easy math to do in your head or with a calculator, but when you learn to program, you 
 want to train yourself to notice useful patterns of how to solve problems, which will make your life easier (perhaps 

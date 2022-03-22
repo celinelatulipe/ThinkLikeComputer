@@ -43,7 +43,7 @@ Here is what **reassignment** looks like in a reference diagram:
    :alt: reassignment
 
 It is important to note that in mathematics, a statement of equality is always true.  If ``a is equal to b``
-now, then ``a will always equal to b``. In Python, an assignment statement can make
+now, then ``a will always equal to b``. In Python (and other programming languages), an assignment statement can make
 two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
 they don't have to stay that way:
 
@@ -93,6 +93,32 @@ You can step through the code and see how the variable assignments change below.
    that this will help to avoid confusion.  Python
    chose to use the tokens ``=`` for assignment, and ``==`` for equality.  This is a popular
    choice also found in languages like C, C++, Java, and C#.
+
+The following turtle example shows some variables used for drawing, but between each use, the variables have theirevalues changed.
+
+.. activecode:: ac2_13_3
+
+  import turtle
+  wn = turtle.Screen()
+  manuel = turtle.Turtle()
+
+  y = 200    # y coordinate, initially at the top 
+  x = -200       # x coordinate, initially at the left
+
+  manuel.goto(x, y)       # draw from center to x, y
+  manuel.home()             # go back to center
+  x = 200
+  manuel.goto(x, y)       # draw from center to x, y
+  manuel.home()             # go back to center
+  y = -200
+  manuel.goto(x, y)       # draw from center to x, y
+  manuel.home()             # go back to center
+  x = -200
+  manuel.goto(x, y)       # draw from center to x, y
+  manuel.home()             # go back to center
+
+In the above example, the turtle keeps going to the x and y coordinates, but those coordinates are updated, so 
+the turtle draws a different line each time from the center of the screen. 
 
 
 **Check your understanding**
