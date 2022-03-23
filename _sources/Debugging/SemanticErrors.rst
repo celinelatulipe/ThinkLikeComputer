@@ -91,7 +91,7 @@ semantic errors; no one realizes that the program has been producing incorrect r
 results seem reasonable, they are correct. Sometimes, these errors are relatively harmless. But if they involve
 financial transactions or medical equipment, the results can be harmful or even deadly. For this reason, creating test
 cases is an important part of the work that programmers perform in order to help them produce programs that work
-correctly.
+correctly. To put it more bluntly, creating test cases that thoroughly test all aspects of program code is part of ethical programming practice, and releasing programs to be used by end users without doing thorough testing is **unethical**. If you have a career in software development, you may at some point be pressured to release code updates without testing. You have an ethical responsibility to push back against that pressure and insist that the code is tested properly and errors are fixed **before the program is released for general use**.
 
 **Check your understanding**
 
