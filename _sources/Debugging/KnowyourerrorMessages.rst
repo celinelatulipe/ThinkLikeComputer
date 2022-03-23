@@ -14,8 +14,8 @@
 👩‍💻 Know Your Error Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Many problems in your program will lead to an error message. For example as I was
-writing and testing this chapter of the book I wrote the following version of the
+Many problems in your program will lead to an error message. For example, as I was
+writing and testing this chapter of the book, I wrote the following version of the
 example program in the previous section.
 
 .. sourcecode:: python
@@ -80,12 +80,12 @@ messages for the exercises in this book.
     :width: 600
     :align: center
 
-Nearly 90% of the error messages encountered for this problem are SyntaxError,
+Nearly 90% of the error messages encountered for these problem are SyntaxError,
 TypeError, NameError, ValueError, or AttributeError. We will look at these errors in three stages:
 
-* First we will define what these four error messages mean.
+* First, we will define what these four error messages mean.
 * Then, we will look at some examples that cause these errors to occur.
-* Finally we will look at ways to help uncover the root cause of these messages.
+* Finally, we will look at ways to help uncover the root cause of these messages.
 
 
 SyntaxError

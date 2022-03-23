@@ -13,17 +13,6 @@
 
 .. index:: boundary conditions, testing, debugging
 
-👩‍💻 Programming in the Real World
-===================================
-
-Before we dive into the nitty gritty details of debugging, here is a video to give you a flavor for what its like to be a programmer in the real world.
-
-.. youtube:: Os5YyfTjM20
-    :divid: goog_waymo_swes
-    :height: 315
-    :width: 560
-    :align: left
-
 👩‍💻 Debugging
 ===============
 
@@ -49,9 +38,21 @@ it in, and move on to the next homework assignment or programming task. But here
 when you are successful, you are happy, your brain releases a bit of chemical that makes you
 feel good. You need to organize your programming so that you have lots of little successess. It
 turns out your brain doesn't care all that much if you have successfully written hello world,
-or a fast fourier transform (trust me its hard) you still get that little release that makes
-you happy. When you are happy you want to go on and solve the next little problem. Essentially
-I'm telling you once again, start small, get something small working, and then add to it.
+or a fast fourier transform (trust me it's hard) you still get that little release that makes
+you happy. When you are happy you want to go on and solve the next little problem. What we are 
+trying to tell you is this: start small, get something small working, and then add to it. You 
+will be a much happier and more successful programmer if you work in small increments.
+
+Programming in the Real World
+-----------------------------
+
+Before we dive into the nitty gritty details of debugging, here is a video to give you a flavor for what its like to be a programmer in the real world.
+
+.. youtube:: Os5YyfTjM20
+    :divid: goog_waymo_swes
+    :height: 315
+    :width: 560
+    :align: left
 
 How to Avoid Debugging
 ----------------------
@@ -83,25 +84,23 @@ if you work carefully.
     wrong. (This of course means you must be able to recognize if there is an error. And that is done through
     testing.)
 
-    As long as you always test each new bit of code, it is most likely that any error is in the new code you
-    have just added. Less new code means its easier to figure out where the problem is.
+    As long as you always test each new bit of code, it is most likely that any error **is in the new code you
+    have just added**. Less new code means it's easier to figure out where the problem is.
 
 This notion of **Get something working and keep improving it** is a mantra that you can repeat throughout your
-career as a programmer.  It's a great way to avoid the frustrations mentioned above.  Think of it this way.
-Every time you have a little success, your brain releases a tiny bit of chemical that makes you happy.  So, you
-can keep yourself happy and make programming more enjoyable by creating lots of small victories for yourself.
+career as a programmer. Keep yourself happy and make programming more enjoyable by creating lots of small victories for yourself.
 
 .. note::
    The technique of start small and keep improving is the basis of **Agile** software development. This
-   practice is used widely in the industry.
+   practice is used widely in industry.
 
 
-Ok, lets look at an example. Lets solve the problem posed in question 3 at the end of the
+Ok, let's look at an example. Let's solve the problem posed in question 3 at the end of the
 Simple Python Data chapter. Ask the user for the time now (in hours 0 -- 23), and ask for the
 number of hours to wait. Your program should output what the time will be on the clock when
 the alarm goes off.
 
-So, where to start? The problem requires two pieces of input from the user, so lets start
+So, where to start? The problem requires two pieces of input from the user, so let's start
 there and make sure we can get the data we need.
 
 .. activecode:: db_ex3_1
@@ -116,9 +115,9 @@ there and make sure we can get the data we need.
 If you haven't yet, click Run: get in the habit of checking whether small things are working
 before you go on.
 
-So far so good. Now lets take the next step. We need to figure out what the time will be after
+So far so good. Now let's take the next step. We need to figure out what the time will be after
 waiting ``wait_time`` number of hours. A good first approximation to that is to simply add
-``wait_time`` to ``current_time`` and print out the result. So lets try that.
+``wait_time`` to ``current_time`` and print out the result. So let's try that.
 
 .. activecode:: db_ex3_2
 
@@ -148,7 +147,7 @@ This error was probably pretty simple to spot, because we printed out the value 
 ``final_time`` and it is easy to see that the numbers were just concatenated together rather
 than added. So what do we do about the problem? We will need to convert both ``current_time``
 and ``wait_time`` to ``int``. At this stage of your programming development, it can be a good
-idea to include the type of the variable in the variable name itself. So lets look at another
+idea to include the type of the variable in the variable name itself. So let's look at another
 iteration of the program that does that, and the conversion to integer.
 
 
