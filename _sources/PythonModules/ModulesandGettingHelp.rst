@@ -29,14 +29,13 @@ Python as part of the **standard library**. Providing additional functionality t
 
 Functions imported as part of a module live in their own **namespace**.  A namespace is simply a space within which all names are distinct from each other. The same name can be reused in different namespaces but two objects can't have the same name within a single namespace. One example of a namespace is the set of street names within a single city. Many cities have a street called "Main Street", but it's very confusing if two streets in the same city have that name! Another example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the  folder it's in; each folder has its own namespace for files. Note that human names are not part of a namespace that enforces uniqueness; that's why governments have invented unique identifiers to assign to people, like passport numbers.  
 
-The  `Python Documentation <https://docs.python.org/3.6/>`_ site for Python version
-3.6 is an extremely useful reference for all aspects of Python. The site
+The  `Python Documentation <https://docs.python.org/3/index.html>`_ site is an extremely useful reference for all aspects of Python. The site
 contains a listing of all the standard modules that are available with Python
-(see `Global Module Index <https://docs.python.org/3.6/py-modindex.html>`_). You
+(see `Global Module Index <https://docs.python.org/3/py-modindex.html>`_). You
 will also see that there is a
-`Standard Library Reference <https://docs.python.org/3.6/library/index.html>`_
+`Standard Library Reference <https://docs.python.org/3/library/index.html>`_
 and a
-`Tutorial <https://docs.python.org/3.6/tutorial/index.html>`_ as well as
+`Tutorial <https://docs.python.org/3/tutorial/index.html>`_ as well as
 installation instructions, how-tos, and frequently asked questions.  We
 encourage you to become familiar with this site and to use it often.
 
@@ -51,31 +50,36 @@ In order to use Python modules, you have to **import** them into a Python progra
 statement: the word ``import``, and then the *name* of the module. The name is case-sensitive. Roughly translated to 
 English, an import statement says "there's some code in another file; please make its functions and variables 
 available in this file." More technically, an import statement causes all the code in another file to be executed. Any 
-variables that are bound during that execution (including functions that are defined) may then be referred in some way 
-(to be discussed) in the current file.
+variables that are created and functions that are defined during that execution can then be used in the current file.
 
 By convention, all ``import`` commands are put at the very top of your file. They can be put elsewhere, but that can 
-lead to some confusions, so it's best to follow the convention.
+lead to some confusion, so it's best to follow the convention.
 
-Where do these other files that you can import come from? It could be a code file that you wrote yourself, or it could 
-be code that someone else wrote and you copied on to your computer.
+Where do these other files that you can import come from? They may be standard library modules that are available when you install Python, or they may be code files that you wrote yourself, or they could 
+be code that someone else wrote and you downloaded on to your computer.
 
 For example, if you have a file ``myprog.py`` in directory ``~/Desktop/mycode/``, and myprog.py contains a line of 
 code ``import morecode``, then the python interpreter will look for a file called ``morecode.py``, excecute its code, 
-and make its object bindings available for reference in the rest of the code in myprog.py. 
+and make its variables, objects and functions available for reference in the rest of the code in myprog.py. 
 
 Note that it is ``import morecode``, not ``import morecode.py``, but the other file has to be called ``morecode.py``.
 
-The tests you see in your problem sets are also using a Python module that's in the standard library, called 
+In some sense, you can think of importing as being similar to including the code from a module into the code you are writing, as depicted in this diagram:
+
+.. image:: Figures/modules_diagram.png
+
+
+As shown in the diagram, you need to remember that the two sets of code have different namespaces, which typically means that you access the variables and objects in the imported module by using something like ``module_name.variable_name``.
+
+The tests you see in your problem sets make use of a Python module that is in the standard library, called 
 ``unittest``. Right now, you can't see the code that causes those tests to run, because we have hidden it from you, 
-but later in the course, you will learn how to write your own Unit Tests for code, and to do so, you will need to 
+but in later courses, you will learn how to write your own Unit Tests for code, and to do so, you will need to 
 write an import statement at the beginning of your programs. Even before you learn how to write your own tests, you 
 will see code for Unit Tests in your problem set files.
 
 .. admonition:: Don't overwrite standard library modules!
 
-    Given the order of search for external Python modules that is described in the list above, it is possible to 
-    overwrite a standard library. For example, if you create a file ``random.py`` in the same directory where 
+    It is possible to overwrite a standard library. For example, if you create a file ``random.py`` in the same directory where 
     ``myprog.py`` lives, and then myprog.py invokes ``import random``, it will import *your* file rather than the 
     standard library module. That's not usually what you want, so be careful about how you name your python files! 
 
