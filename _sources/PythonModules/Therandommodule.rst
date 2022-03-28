@@ -48,7 +48,7 @@ interval on the left" and the round parenthesis means "open interval on the righ
 but all returned numbers will be strictly less than 1.0.  It is usual to *scale* the results after calling this method, 
 to get them into a range suitable for your application.
 
-In the case shown below, we've converted the result of the method call to a number in the range [0.0, 5.0).  Once more, 
+In the case shown below, we've converted the result of the random() method call to a number in the range [0.0, 5.0).  Once more, 
 these are uniformly distributed numbers --- numbers close to 0 are just as likely to occur as numbers close to 3, or 
 numbers close to 5. If you continue to press the run button you will see random values between 0.0 and up to but not 
 including 5.0.
@@ -70,6 +70,11 @@ value. Each time you ask for another random number, you'll get one based on the 
 of the seed (which is one of the attributes of the generator) will be updated.  The good news is that each time you run 
 your program, the seed value is likely to be different meaning that even though the random numbers are being created 
 algorithmically, you will likely get random behavior each time you execute.
+
+Randomness and Ethics
+=====================
+
+Using random numbers in your programming can be a good way to help ensure fairness. If you have a list of students and you want to choose students to give presentations in a class, using a program that randomly picks a student is likely better than starting alphabetically. If all instructors did this alphabetically, the students whose surnames start with an 'A' or 'B' would always get the chance to present and get feedback and students whose surnames begin with a letter later in the alphabet would not receive the same opportunity. Can you think of software programs that you use that have random elements? How would the program be less fair if it **didn't** use randomness?
 
 **Check your understanding**
 

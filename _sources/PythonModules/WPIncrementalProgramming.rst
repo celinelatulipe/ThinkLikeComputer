@@ -23,7 +23,7 @@ though!
 every level. Of course it's tempting to sit down and crank out an entire program at once. But, 
 when the program -- inevitably -- does not work then you have a myriad of options for things 
 that might be wrong. Where to start? Where to look first? How to figure out what went wrong? 
-I'll get to that in the next section. So, start with something really small. Maybe just two 
+So, start with something really small. Maybe just two 
 lines and then make sure that runs ok. Hitting the run button is quick and easy, and gives you 
 immediate feedback about whether what you have just done is ok or not. Another immediate 
 benefit of having something small working is that you have something to turn in. Turning in a 

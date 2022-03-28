@@ -14,11 +14,12 @@
 Object Oriented Concepts
 ========================
 
-It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully.
+It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully. We mentioned previously, and we'll mention it again here - the turtle module is object-oriented (as are many other modules in Python). Object-oriented programming is not the focus of this course at all. If you continue in computer science, you will learn a lot more about object-oriented programming, which is a really powerful way of thinking about the world and how to solve problems. 
+
 
 User-defined Classes
 --------------------
-First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and much later, new classes of objects. For now, you just need to understand how to use them.
+First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and in later computing courses you will learn how to define your own object classess. For now, you just need to understand how to use them.
 
 Instances
 ---------
@@ -29,7 +30,7 @@ Given a class like ``Turtle`` or ``Screen``, we create a new instance with a syn
 Attributes
 ----------
 
-Each instance can have attributes, sometimes called **instance variables**. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.
+Each instance can have attributes, sometimes called **instance variables**. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound (linked) to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.
 
 .. sourcecode:: python
 
