@@ -5,7 +5,7 @@ Debugging
    :maxdepth: 2
 
    intro-DebuggingGeneral.rst
-   HowtobeaSuccessfulProgrammer.rst
+   intro-HowtobeaSuccessfulProgrammer.rst
    BeginningtipsforDebugging.rst
    Syntaxerrors.rst
    RuntimeErrors.rst

@@ -13,9 +13,11 @@
 
 .. index:: instance
 
-🐢 Our Second Turtle Program
------------------------------
-We already introduced the idea of drawing with turtles. Here is a turtle that starts to draw a dashed line:
+🐢 Exploring the Turtle Module 
+------------------------------
+We already introduced the idea of drawing with turtles. In the next few sections we will delve more deeply into this fun module. The turtle module is designed to help students learning how to program explore programming concepts in a way that is visually fun and interesting. Using turtles also will allow us in later chapters to explore aspects of interactive programming. With turtles, there is a visual output that an end user can view and (as you learn more programming) interact with. 
+
+Here is a turtle that starts to draw a dashed line:
 
 .. activecode:: ac3_5_1_1
     :nocodelens:
@@ -23,6 +25,7 @@ We already introduced the idea of drawing with turtles. Here is a turtle that st
     import turtle             # allows us to use the turtles library
     wn = turtle.Screen()      # creates a graphics window
     maya = turtle.Turtle()    # create a turtle named maya
+
     maya.forward(50)         # tell maya to move forward by 50 units
     maya.penup()             # tell maya to pick up pen, so maya can move without drawing
     maya.forward(25)          # move forward without drawing
@@ -33,28 +36,27 @@ We already introduced the idea of drawing with turtles. Here is a turtle that st
 Now that you know a bit more about Python, we can explain a bit more about what is going on here. 
 
 
-Line 1 imports the Turtle module. This brings us two new types that we can use: the ``Turtle`` type, and the
-        ``Screen`` type.  The dot notation ``turtle.Turtle`` means *"The Turtle type
-        that is defined within the turtle module"*. (Remember that Python is case
-        sensitive, so the module name, ``turtle``, with a lowercase ``t``, is different from the
-        type ``Turtle`` because of the uppercase ``T``.)
+Line 1 imports the Turtle module. This brings us two new **types** that we can use: the ``Turtle`` type, and the
+``Screen`` type.  
 
-        We then create and open what the turtle module calls a screen (we would
-        prefer to call it a window, or in the case of this web version of Python
-        simply a canvas), which we assign to variable ``wn``. Every window
-        contains a **canvas**, which is the area inside the window on which we can draw.
+On line 2, we create and open what the turtle module calls a screen (we would
+prefer to call it a window, or in the case of this web version of Python
+simply a canvas), which we assign to variable ``wn``. The dot notation ``turtle.Screen`` means *"The Screen type
+that is defined within the turtle module"*.  Every screen/window
+contains a **canvas**, which is the area inside the window on which we can draw.
 
-        In line 3 we create a turtle. The variable ``maya`` is made to refer to this
-        turtle.
+In line 3 we create a turtle. Remember that Python is case
+sensitive, so the module name, ``turtle``, with a lowercase ``t``, is different from the
+type ``Turtle`` because of the uppercase ``T``. The variable ``maya`` is made to refer to this
+turtle.
 
 These first three lines set us up so that we are ready to do some drawing.
 
-In lines 4-8, we instruct the turtle 'maya' to move and to turn. Maya the turtle is an **object** and once we have created a turtle object, we can make it perform actions. We do this by **invoking** or activating alex's **methods** --- these are the instructions that all turtles know how to respond to.
+In lines 4-8, we instruct the turtle 'maya' to draw part of a dashed line. Run the program and trace through lines 5-9 to understand what is happening. The turtle only leaves a trace when the tail (pen) is down. When you create a tutrle, their tail is down by default.
 
+.. admonition:: Complete the line ...
 
-.. admonition:: Complete the rectangle ...
-
-    Modify the program by adding the commands necessary to have *maya* make a dotted line that goes to the right edge of the canvas. The code will be repetitive. In a few weeks we will learn how to write this code so that it is more efficient!
+    Modify the program by adding the commands necessary to have *maya* make a dashed line that goes to the right edge of the canvas. The code will be repetitive. In the next chapter we will learn how to write this code so that it is more efficient!
 
 **Check your understanding**
 
@@ -72,19 +74,21 @@ In lines 4-8, we instruct the turtle 'maya' to move and to turn. Maya the turtle
    What instruction do you give a turtle to allow it to move without drawing?
 
 
-An object can have various methods --- things it can do --- and it can also
-have **attributes** --- (sometimes called *properties*). For example, each
+Maya the turtle is an **object** and once we have created a turtle object, we can make it perform actions. Objects have **methods**, things that they can do. We can make use of this by **invoking** or activating turtle **methods**. A method is a set of program instructions that are for a specific type of object. Turtle methods are sets of instrutcions that all turtles know how to respond to. Because maya is an object, we use dot notation to call or invoke the turtle methods; ``maya.forward(50)`` says to call the forward() method, for the turtle object maya, with the specific distance of 50 units. 
+
+In addition to methods --- the things an object can do --- an object can also
+have **attributes** --- (sometimes called *properties*) which store information about the current state of an object. For example, each
 turtle has a *color* attribute. The method invocation  ``maya.color("red")``
-will make maya red and the line that it draws will be red too.
+will make maya red and the line that maya draws will be red too.
 
 The color of the turtle, the width of its pen(tail), the position of the turtle
 within the window, which way it is facing, and so on are all part of its
 current **state**. Similarly, the window object has a background color which is part of its state.
 
 Quite a number of methods exist that allow us to modify the turtle and
-window objects. In the example below, we show just show a couple and have only commented
+window objects. In the example below, we show just a couple and have only commented
 those lines that are different from the previous example. Note also that we have decided
-to call our turtle object *tess*.
+to call our turtle object *tess*. When we create objects, we can call them whatever we want.
 
 .. activecode:: ac3_2_2
     :tour_1: "Overall Tour"; 1-10: Example02_Tour01_Line01; 4: Example02_Tour01_Line02; 6: Example02_Tour01_Line03; 7: Example02_Tour01_Line04; 8: Example02_Tour01_Line05; 10: Example02_Tour01_Line06; 11: Example02_Tour01_Line07; 12: Example02_Tour01_Line08; 14: Example02_Tour01_Line09;
@@ -190,7 +194,7 @@ screen until we click on it.
    :feedback_d: This code is almost correct, but the short end would be facing east instead of west.
    :feedback_e: Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.
 
-   Which of the following code would produce the following image?
+   Which of the following sequence of instructions would produce the following image?
 
    .. image:: Figures/turtleTest1.png
       :alt: long line to north with shorter line to west on top
