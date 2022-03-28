@@ -1,5 +1,5 @@
 #random build files I dont think I should be committing
 /build/*
 .DS_Store
-/__pycache__
+/__pycache__/pavement.cpython-39.pyc
 build_info
