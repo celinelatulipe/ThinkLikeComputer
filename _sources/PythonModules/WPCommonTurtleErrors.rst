@@ -31,7 +31,7 @@ Some of these errors can be applied to other instances as well!
 When you run the example above you'll see how an error occurs. This is because we accidentally left off the ")" when we 
 tell alex to move forward. This is a common error for programmers of any skill level - it's easy to miss one and not 
 notice! If you get a syntax error like this or - expecially in this textbook - one that says there was bad syntax on a 
-line that isn't visible to you, then likely you're missing a parenthesis, quotation, or bracket.
+line that isn't visible to you then likely you're missing a parenthesis, quotation, or bracket.
 
 2. Issues with Variable Names
 

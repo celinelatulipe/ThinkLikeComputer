@@ -11,5 +11,5 @@ Debugging
    RuntimeErrors.rst
    SemanticErrors.rst
    KnowyourerrorMessages.rst
-..   Exercises.rst
+   Exercises.rst
    
