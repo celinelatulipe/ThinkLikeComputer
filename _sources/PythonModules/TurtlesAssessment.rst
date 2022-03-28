@@ -157,8 +157,8 @@ Chapter Assessment - Turtle and Object Mechanics
       :.*: Incorrect, try again.
 
 
-Chapter Assessment - Drawing with Turtle
-----------------------------------------
+Drawing with Turtles
+====================
 
 .. activecode:: assess_ps_01_09a
     :language: python

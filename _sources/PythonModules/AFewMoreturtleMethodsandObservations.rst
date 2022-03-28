@@ -26,7 +26,7 @@ Here are a few more things that you might find useful as you write programs that
   minimalists, and just have one method. There is also a *backward* method. (If you are
   very nerdy, you might enjoy saying ``alex.backward(-100)`` to move alex forward!)
 
-  Reviewing a few basic facts about geometry and number lines, like we've done here is a
+  Reviewing a few basic facts about geometry and number lines, like we've done here, is a
   good start if we're going to play with turtles.
 
 * A turtle's pen can be picked up or put down. This allows us to move a turtle
@@ -90,6 +90,8 @@ One more thing to be careful about. All except one of the shapes you see on the 
 footprints created by ``stamp``. But the program still only has *one* turtle instance --- can you
 figure out which one is the real tess? (Hint: if you're not sure, write a new line of code after the
 ``for`` loop to change tess' color, or to put her pen down and draw a line, or to change her shape, etc.)
+
+
 
 **Mixed up program**
 

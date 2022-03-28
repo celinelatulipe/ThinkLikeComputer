@@ -24,6 +24,9 @@ Learning Goals
 ==============
 
 * Understand that Python is extensible through modules
+* Understand how to use modules
+* Understand the usefulness of random numbers in programming
+* Learn more about using the turtle module 
 
 Objectives
 ==========
@@ -31,3 +34,5 @@ Objectives
 * To import an entire module
 * To import a single function from a module
 * To import a module giving it an alias
+* To learn how to use random() and randrange() to get random floats and ints
+
