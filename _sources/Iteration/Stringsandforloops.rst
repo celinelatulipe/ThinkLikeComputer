@@ -15,7 +15,7 @@ Strings and ``for`` loops
 -------------------------
 
 Since a string is simply a sequence of characters, the ``for`` loop iterates over each character 
-automatically. (As always, try to predict what the output will be from this code before your run it.)
+automatically. (As always, try to predict what the output will be from this code before you run it.)
 
 .. activecode:: ac6_4_1
     :nocanvas:
@@ -23,9 +23,9 @@ automatically. (As always, try to predict what the output will be from this code
     for achar in "Go Spot Go":
         print(achar)
 
-The loop variable ``achar`` is automatically reassigned each character in the string "Go Spot Go".
+The loop variable ``achar`` is automatically assigned each character in the string "Go Spot Go" one at a time.
 We will refer to this type of sequence iteration as **iteration by item**. Note that the for loop 
-processes the characters in a string or items in a sequence one at a time from left to right.
+processes the characters in a string or items in a sequence one at a time **from left to right**.
 
 **Check your understanding**
 
@@ -50,6 +50,34 @@ processes the characters in a string or items in a sequence one at a time from l
          print("HELLO")
    
 .. mchoice:: question6_4_2
+   :answer_a: 1
+   :answer_b: 0
+   :answer_c: 7
+   :answer_d: It depends on the length of the name the user enters.
+   :correct: d
+   :feedback_a: The turtle will move to as many locations as there are letters in the name.
+   :feedback_b: The turtle will move to at least one location.
+   :feedback_c: The turtle will move to as many locations as there are letters in the name.
+   :feedback_d: Yes, if the user enters "Sam", the turtle will move to 3 random locations.
+   :practice: T
+
+   How many times does the turtle in this code move to a random location?
+   
+   .. code-block:: python
+
+        # Turtle name symbol drawing
+        import turtle
+        import random
+        wn = turtle.Screen()
+        annika = turtle.Turtle()
+        s = input("Please enter your name")
+        for ch in s:
+           x = random.randrange(-200, 200)
+           y = random.randrange(-150, 150)
+           annika.goto(x, y)
+
+
+..         .. mchoice:: question6_4_2  # removing this because we haven't covered slice yet
    :answer_a: 4
    :answer_b: 5
    :answer_c: 6
