@@ -11,18 +11,15 @@
    :prefix: turtle-5-
    :start: 1
 
-Repetition with a For Loop
---------------------------
+Turtle Repetition 
+-----------------
 
 Some of the programs we've seen so far are a bit tedious to type. If we want to make a 
-repetitive pattern in our drawings, then it can take many lines of code. Thankfully, Python 
-has a few ways for making this kind of task easier. For now you'll get a brief preview of a helpful control structure and function in Python which you will learn about later.
+repetitive pattern in our turtle drawings, then it can take many lines of code, unless
+we use for loops. A for loop allows Python to execute a program in a non-linear fashion.
+Instead of evaluating the code line by line until it reaches the bottom, once the Python interpreter reaches a for loop, the interpreter will execute the set of lines in the for loop repeatedly, a specific number of times. After doing that, the Python interpreter will then continue to evaluate and execute the instructions that are below the for loop.
 
-The control structure is called a for loop. If you've learned other programming languages 
-then you may be familiar with what it does but the structure may be new. A for loop allows 
-Python to execute a program in a non-linear fashion. Instead of evaluating the code line by line until it reaches the end, once the program reaches a for loop, it will tell the program to execute a set of lines repeatedly. After doing all that, the program will then continue to evaluate and execute whatever is below the for loop.
-
-In the code below, we make use of the ``range`` function to specify how many times the code inside  the for loop will execute. In a later chapter, we will explain exactly what the range function is doing and how it works with the for loop. For now, just try to understand what happens when the following code executes.
+In the code below (which doesn't use turtles), we make use of the ``range`` function to specify how many times the code inside the for loop will execute. We'll see more about the range function throughout this chapter. For now, just try to understand what happens when the following code executes.
 
 .. activecode:: ac3_5_1
 
@@ -36,7 +33,7 @@ In the code below, we make use of the ``range`` function to specify how many tim
 
 There are a few things to notice here for when you use this later on. First, is that the two print statements on line 4 and 5 are executed three times, but we don't print line 4 
 three times and then print line 5 three times. Instead, we print line 4, then line 5. Once 
-that is done the for loop iterates, or brings the program back to the beginning of the for 
+that is done the for loop **iterates**, the Python interpreter jumps back to the beginning of the for 
 loop, and continues to print out lines 4 and 5 again until it has printed them both a total 
 of three times. 
 
@@ -45,8 +42,8 @@ wanted to print them more or fewer times, then we would just need to change the 
 inside of the parentheses on line 3. 
 
 Finally, the indentation is important here. All of the statements that were printed out
-multiple times were indented under the for loop. Once we stopped indenting those lines, 
-then the program was outside of the for loop and it would continue to execute linearly. If 
+multiple times were indented under the for loop. When the Python interpreter finished the for loop (after executing the two indented lines three times), 
+the interpreter jumped down to line 5 to continue executing the code after the loop. If 
 you'd like to watch the execution, checkout the code above in codelens!
 
 Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.

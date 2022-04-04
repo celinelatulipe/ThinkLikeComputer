@@ -14,16 +14,16 @@
 Lists and ``for`` loops
 =======================
 
-It is also possible to perform **list traversal** using iteration by item. A list is a sequence of items, so the ``for`` loop iterates over each item in the list automatically. 
+A list is a sequence of items, so a **list traversal** uses a ``for`` loop to iterate over each item in the list automatically. 
 
 .. activecode:: ac6_5_1
 
     fruits = ["apple", "orange", "banana", "cherry"]
 
-    for afruit in fruits:     # by item
-        print(afruit)
+    for fruit in fruits:     # by item
+        print(fruit)
 
-It almost reads like natural language: For (every) fruit in (the list of) fruits,
+It almost reads like natural language: For (each) fruit in (the list of) fruits,
 print (the name of the) fruit.
 
 
@@ -50,7 +50,7 @@ Thus, instead of ``range(3)``, we could have written ``[0, 1, 2]``.
 The loop variable ``_`` is bound to 0 the first time lines 4 and 5 execute. The next time, ``_`` is bound to 1. Third time, it is bound to 2.
 ``_`` is a strange name for a variable but  if you look carefully at the rules about variable names, it is a legal name. By convention, we use the ``_`` as our loop variable when we don't intend to ever refer to the loop variable. That is, we are just trying to repeat the code block some number of times (once for each item in a sequence), but we are not going to do anything with the particular items. ``_`` will be bound to a different item each time, but we won't ever refer to those particular items in the code.
 
-By contrast, notice that in the previous activecode window, the loop variable is ``afruit``. In that for loop, we *do* refer to each item, with ``print(afruit)``.
+By contrast, notice that in the previous activecode window, the loop variable is ``afruit``. In that for loop, we *do* refer to each item, with ``print(afruit)``. When we are going to refer to the items and do something with them, it is important to use a loop variable name that is descriptive, such as ``afruit``.
 
 Iteration Simplifies our Turtle Program
 ---------------------------------------
@@ -58,9 +58,9 @@ Iteration Simplifies our Turtle Program
 Remember the turtle drawings we made earlier? Let's look again at how we can use for loops there!
 
 To draw a square we'd like to do the same thing four times --- move the turtle forward some 
-distance and turn 90 degrees.  We previously used 8 lines of Python code to have alex draw the four 
+distance and turn 90 degrees.  We previously used 8 lines of Python code to have a turtle draw the four 
 sides of a square.  This next program does exactly the same thing but, with the help of the for 
-statement, uses just three lines (not including the setup code).  Remember that the for statement 
+statement, it uses just three lines (not including the setup code).  Remember that the for statement 
 will repeat the ``forward`` and ``left`` four times, one time for each value in the list.
 
 .. activecode:: ac6_5_2
@@ -165,14 +165,14 @@ statement, ``wn.exitonclick()``.
       :answer_c: Draw one side of a square.
       :correct: c
       :feedback_a: The question is not asking you to describe the outcome of the entire loop, the question is asking you about the outcome of a **single iteration** of the loop.
-      :feedback_b: Notice that aColor is never actually used inside the loop.
+      :feedback_b: Notice that color is never actually used inside the loop.
       :feedback_c: The body of the loop only draws one side of the square.  It will be repeated once for each item in the list.  However, the color of the turtle never changes.
 
       Consider the following code:
 
       .. code-block:: python
 
-        for aColor in ["yellow", "red", "green", "blue"]:
+        for color in ["yellow", "red", "green", "blue"]:
            alex.forward(50)
            alex.left(90)
 

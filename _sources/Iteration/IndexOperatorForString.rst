@@ -56,17 +56,17 @@ expression so long as it evaluates to a valid index value.
 Note that indexing returns a *string* --- Python has no special type for a single character.
 It is just a string of length 1.
 
-Index Operator: Accessing Elements of a List or Tuple
-=====================================================
+Index Operator: Accessing Elements of a List
+============================================
 
-The syntax for accessing the elements of a list or tuple is the same as the syntax for
-accessing the characters of a string.  We use the index operator ( ``[]`` -- not to
-be confused with an empty list). The expression inside the brackets specifies
+The syntax for accessing the elements of a list is the same as the syntax for
+accessing the characters of a string.  We use the index operator  ``[]``
+. The expression inside the brackets specifies
 the index. Remember that the indices start at 0. Any integer expression can be used
 as an index and as with strings, negative index values will locate items from the right instead
 of from the left.
 
-When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean!
+When we say the first, third or nth character of a sequence, we generally mean counting the usual way, starting with 1.  The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  The fourth character in a string is at index 3. The seventh element in a list is at index 6. Make sure you are clear on what you mean!
 
 Try to predict what will be printed out by the following code, and then run it to check your
 prediction. (Actually, it's a good idea to always do that with the code examples. You 
@@ -82,7 +82,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
 .. activecode:: ac5_3_3
 
-    prices = (1.99, 2.00, 5.50, 20.95, 100.98)
+    prices = [1.99, 2.00, 5.50, 20.95, 100.98]
     print(prices[0])
     print(prices[-1])
     print(prices[3-5])
@@ -175,7 +175,7 @@ will learn much more if you force yourself to make a prediction before you see t
    
    Assign the value of the 23rd element of ``l`` to the variable ``checking``.
    ~~~~
-   l = ("hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones")
+   l = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
 
    =====
 

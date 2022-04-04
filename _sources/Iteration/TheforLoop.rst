@@ -30,14 +30,10 @@ Back when we drew the images with turtle it could be quite tedious. If we wanted
 then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon,
 or an octagon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.
 
-A basic building block of all programs is to be able to repeat some code over and over again. We
-refer to this repetitive idea as **iteration**. In this section, we will explore some mechanisms for
-basic iteration.
-
 In Python, the **for** statement allows us to write programs that implement iteration. As a simple
 example, let's say we have some friends, and we'd like to send them each an email inviting them to
 our party. We don't quite know how to send email yet, so for the moment we'll just print a message
-for each friend.
+out to the console to imitate the idea of emailing each friend.
 
 .. activecode:: ac6_2_1
     :nocanvas:
@@ -55,11 +51,12 @@ each friend. Here's how it works:
 * The list of names in the square brackets is the sequence over which we will iterate.
 * Line 2  is the **loop body**.  The loop body is always
   indented. The indentation determines exactly what statements are "in the
-  loop".  The loop body is performed one time for each name in the list.
+  loop". The instruction in the loop body is performed 
+  one time for each name in the list.
 * On each *iteration* or *pass* of the loop, first a check is done to see if
   there are still more items to be processed.  If there are none left (this is
   called the **terminating condition** of the loop), the loop has finished.
-  Program execution continues at the next statement after the loop body.
+  Program execution continues at the next statement **after** the loop body.
 * If there are items still to be processed, the loop variable is updated to
   refer to the next item in the list.  This means, in this case, that the loop
   body is executed here 7 times, and each time ``name`` will refer to a different
@@ -70,6 +67,8 @@ each friend. Here's how it works:
 
 The overall syntax is ``for <loop_var_name> in <sequence>:``
 
-* Between the words for and in, there must be a variable name for the loop variable. You can't put a whole expression there.
+* Between the words **for** and **in**, there must be a **variable name** for the loop variable. You can't put a whole expression there.
 * A colon is required at the end of the line
-* After the word in and before the colon is an expression that must evaluate to a sequence (e.g, a string or a list or a tuple). It could be a literal, or a variable name, or a more complex expression.
+* After the word **in** and before the colon is an expression that must evaluate to a sequence (e.g, a string or a list). It could be a literal, or a variable name, or a more complex expression. In the example on this page, there is a literal list. You will see examples throughout this chapter that show other ways that a sequence can be specified in a for loop.
+* Although in this example there is only one instruction in the loop body, there are 
+  often multiple instructions. 
