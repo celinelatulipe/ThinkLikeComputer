@@ -37,16 +37,16 @@ For example, consider the following code, which computes the sum of the numbers 
 
 In the program above, notice that the variable ``accum`` starts out with a value of 0.  
 Next, the iteration is performed 10 times.  Inside the for loop, the update occurs. 
-``w`` has the value of current item (1 the first time, then 2, then 3, etc.). 
-``accum`` is reassigned a new value which is the old value plus the current value of ``w``.
+``w`` has the value of the current item (1 the first time, then 2, then 3, etc.). 
+``accum`` is reassigned a new value: the old value plus the current value of ``w``.
 
 This pattern of iterating the updating of a variable is commonly referred to as the 
 **accumulator pattern**. We refer to the variable as the **accumulator**. This pattern will come up 
 over and over again. Remember that the key to making it work successfully is to be sure to 
-initialize the variable before you start the iteration. Once inside the iteration, it is required 
+initialize the variable **before** you start the iteration. Once inside the iteration, it is required 
 that you update the accumulator.
 
-Here is the same program in codelens.  Step through the function and watch the "running total" 
+Here is the same program in CodeLens.  Step through the function and watch the "running total" 
 accumulate the result.
 
 .. codelens:: clens6_6_1
@@ -63,36 +63,29 @@ accumulate the result.
 
     What would happen if we indented the print accum statement? Not sure? Make a prediction, then try it and find out.
 
-We can utilize the range function in this situation as well. Previously, you've seen it used when we wanted to draw in 
-turtle. There we used it to iterate a certain number of times. We can do more than that though. The ``range`` function 
+We can utilize the range function in this situation as well. Previously, you've seen it used when we wanted to do repeated drawing instructions with a turtle. There we used it to iterate a certain number of times. We can do more than that though. The ``range`` function 
 takes at least one input - which should be an integer - and returns a list as long as your input. While you can provide 
 two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but 
-not include - the input. Here are the examples: 
+not include - the input. Here are some examples: 
 
 .. activecode:: ac6_8_10
 
-    print("range(5): ")
-    for i in range(5):
-        print(i)
+  print("range(5): ")
+  for i in range(5):
+    print(i)
 
-    print("range(0,5): ")
-    for i in range(0, 5):
-        print(i)
+  print("range(0,5): ")
+  for i in range(0, 5):
+    print(i)
 
-    # Notice the casting of `range` to the `list`
-    print(list(range(5)))
-    print(list(range(0,5)))
+  # We can also print this out by casting `range` to a `list`:
+  print(list(range(5)))
+  print(list(range(0,5)))
 
-    # Note: `range` function is already casted as `list` in the textbook
-    print(range(5))
+One important thing to know about the range function in Python 3 is that if we want to use it outside of iteration, we 
+have to cast it to a list using ``list()``.  
 
-
-
-
-
-One important thing to know about the range function in python3 is that if we want to use it outside of iteration, we 
-have to cast it as a list using ``list()``. Inside the textbook you'll notice that ``range`` works with or without 
-casting it as a list but it is best for you to try and get into the habit of casting it as a list. Here's how you could use the range function in the previous problem.
+Here's how you could use the range function in the previous problem.
 
 .. activecode:: ac6_6_2
 
@@ -110,7 +103,7 @@ casting it as a list but it is best for you to try and get into the habit of cas
 
 Because the range function is exclusive of the ending number, we have to use 11 as the function input. 
 
-We can use the accumulation pattern is count the number of something or to sum up a total. The 
+We can use the accumulation pattern to count the number of something or to sum up a total. The 
 above examples only covered how to get the sum for a list, but we can also count how many items are 
 in the list if we wanted to.
 
@@ -155,9 +148,10 @@ won't be useful but we will still need to count.
 
 .. parsonsprob:: pp6_6_1
 
-   Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user.
+   Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user. Note that indentation matters, so drag code blocks to the right if they should be indented.
    -----
-   n = int(input('How many odd numbers would you like to add together?'))
+   n_str = input('How many odd numbers would you like to add together?')
+   n = int(n_str)
    thesum = 0
    oddnumber = 1
    =====

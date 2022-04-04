@@ -22,7 +22,7 @@ the easier it will be to use them. Here are some tips to make your for loops mor
 readable for yourself and anyone else who may read your programs:
 
 1. Use singular nouns for the iterator variable, which is also called the loop variable (things like "song", "book", "post", "letter", "word").
-2. Use plural nouns for the sequence variable (things like "songs", "books", "posts", "letters", "words").
+2. Use plural nouns for the sequence variable (i.e., name you list something like "songs", "books", "posts", "letters", "words").
 
 While these two tips won't always apply, they are general best practices when it 
 comes to choosing variable names. Below we have an example!

@@ -121,8 +121,8 @@ Chapter Assessment
            self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
 
     myTests().main()
-
-.. activecode:: assess_ps_02_07
+.. the following two activities use .split, so they can be moved to chapter 10 
+.. .. activecode:: assess_ps_02_07
     :language: python
     :autograde: unittest
     :practice: T
@@ -148,7 +148,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_ps_02_08
+.. .. activecode:: assess_ps_02_08
     :language: python
     :autograde: unittest
     :practice: T
