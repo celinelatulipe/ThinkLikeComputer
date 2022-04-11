@@ -17,10 +17,6 @@ Function Invocation
 Defining a new function does not make the function run.
 To execute the function, we need a **function call**. This is also known as a **function invocation**.
 
-.. note::
-
-   This section is a review of something we learned in the beginning of the textbook. 
-
 The way to invoke a function is to refer to it by name, followed by parentheses. Since there are no parameters for
 the function hello, we won't need to put anything inside the parentheses when we call it. Once we've defined a 
 function, we can call it as often as we like and its statements will be executed each time we call it.  
@@ -67,7 +63,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
 .. admonition:: Common Mistake with Functions
 
     It is a common mistake for beginners to forget their parenthesis after the function name. This is particularly 
-    common in the case where there parameters are not required. Because the hello function defined above does not 
+    common in the case where there are no parameters required. Because the hello function defined above does not 
     require parameters, it's easy to forget the parenthesis. This is less common, but still possible, when trying to
     call functions that require parameters.
 
@@ -109,7 +105,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
    :feedback_c: When the function is invoked, it will print two lines, but it has only been defined, not invoked.
    :practice: T
 
-   How many lines will be output by executing this code?
+   How many lines will be printed out to the console by executing this code?
    
    .. code-block:: python
 
@@ -131,7 +127,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
    :feedback_e: Three invocations generate two lines each, plus the line "It works".
    :practice: T
 
-   How many lines will be output by executing this code?
+   How many lines will be printed out to the console by executing this code?
 
    .. code-block:: python
 

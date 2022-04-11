@@ -40,30 +40,21 @@ And each of those is made up of functions as well. For example, the function tha
 
 In this chapter you will learn about named functions, functions that can be referred to by name when you want to execute them.
 
-Introduction to Files
----------------------
-After exploring functions, we are also going to explore working with data outside of our program by reading and writing files. So far, the data we have used in this book have all been either coded right into the program, or have been entered by the user. In real life data ofetn resides in files. For example, the images we worked with in the image processing unit ultimately live in files on your hard drive. Web pages, and word processing documents, and music are other examples of data that live in files. In the second half of this chapter we will introduce the Python concepts necessary to use data from files in our programs.
 
-For our purposes, we will assume that our data files are text files–that is, files filled with characters. The Python programs that you write are stored as text files. We can create these files in any of a number of ways. For example, we could use a text editor to type in and save the data. We could also download the data from a website and then save it in a file. Regardless of how the file is created, Python will allow us to manipulate the contents. 
+Topics
+------
 
+* functions as a means of abstraction
+* local and global scope
+* side effects
 
-Learning Goals
---------------
-
-* To understand functions as a means of abstraction
-* To understand the difference between defining functions and calling functions
-* To understand the structure of file systems
-* To understand opening files with different modes
-* To introduce files as another kind of sequence that one can iterate over
-* To introduce the read/transform/write pattern
-
-Objectives
-----------
+Learning Objectives
+-------------------
 
 At the end of this chapter, you should be able to:
-* create and call simple functions (functions that don't take any parameters)
-* read a single value from each line in a file
-* convert the line to the appropriate value
-* open files and read the contents line by line
-* write out files, line by line
 
+* identify formal parameters and parameter values in a code sample
+* predict the return value of a function given sample parameter values
+* define functions with appropriate names for formal parameter
+* avoid the use of global variables in function definitions by creating formal parameters for all values that are needed
+* identify whether a function has any side effects

@@ -42,12 +42,11 @@ In a function definition, the keyword in the header is ``def``, which is followe
 some *parameter names* enclosed in parentheses. The parameter list may be empty, or it may contain any number of
 parameters separated from one another by commas. In either case, the parentheses are required.
 
-We will come back to the parameters in a little while, but first let's see what happens when a function is executed, 
-using a function without any parameters to illustrate.
+We will come back to parameters in Chapter 9. In this chapter we will focus on creating very simple functions that don't take any parameters. This way you can focus on understanding how to define and invoke (call) functions, and what happens when a function is executed.
 
 Here's the definition of a simple function, hello.
 
-.. activecode:: ac11_1_1
+.. activecode:: ac6_1_1
 
     def hello():
         """This function says hello and greets you"""
@@ -69,30 +68,70 @@ Here's the definition of a simple function, hello.
     By convention, Python programmers use docstrings for the key documentation of
     their functions.
 
-We can apply functions to the turtle drawings we've done in the past as well.
+By convention, function definitions go at the top of a file, after the import statements, but before any other code. You should always put your functions at the top like that. What is critical is that the Python interpreter needs to see the function definition before it sees any calls to that function. The example below doesn't work, because the function definition is **after** the function invocation. 
 
-.. activecode:: ac11_1_2
+.. activecode:: ac6_1_2
+
+    goodbye()   # this won't work because the goodbye function isn't defined yet
+
+    def goodbye():
+        """This function says goodbye and wishes you well"""
+        print("Goodbye")
+        print("We wish you all the best!")
+
+Note that when you run the code above, the error you get is a NameError. The Python Interpreter has no idea what 'goodbye' is, because it hasn't seen anything with that name yet. Fix the code above so that it works.
+
+We can apply functions to make more interesting and complex turtle drawings.
+
+.. activecode:: ac6_1_3
     :nocodelens:
 
+  import turtle
+
+  def draw_small_square():
+    """Make turtle alex draw a square of with side 50."""
+
+    for _ in range(4):
+        alex.forward(50)
+        alex.left(90)
+
+  def draw_big_square():
+    """Make turtle alex draw a square of with side 100."""
+
+    for _ in range(4):
+        alex.forward(100)
+        alex.left(90)
+
+  wn = turtle.Screen()      # Set up the window and its attributes
+  alex = turtle.Turtle()    # create alex
+  alex.speed(10)            # make alex draw fast
+
+  turn_angle = 15           # store a turn angle
+
+  for _ in range(12):       # loop 12 times to go around in a circle
+    alex.color("red")
+    alex.right(turn_angle) # turn by 15 degrees
+    draw_big_square()      # Call the function to draw the big square
+    
+    alex.color("blue")
+    alex.right(turn_angle) # turn by 15 degrees
+    draw_small_square()      # Call the function to draw the small square     
+
+  wn.exitonclick() 
+
+The above example has two different functions: ``draw_small_square`` and ``draw_big_square``. In Chapter 9, when we talk about functions with parameters, we will show how to just have one function to draw a square of any size, by passing the length of the side in as a parameter. 
+
+Each of the two functions has a **docstring** comment and then three lines of code, all indented. Make sure you know where the body of the function ends --- it depends on the indentation and the blank lines don't count for this purpose! This code example calls the two different square functions multiple times from within a for loop. Inside the for loop, we set the pen colour, change the turtle angle, call the function to draw a big square, then change the pen colour again, turn the turtle again, and call the function to draw a small square. The loop runs 12 times. In each loop iteration, the turtle turns a total of 30 degrees, so in total the turtle turns 360 degrees, completing a full revolution.
+
+**Check your understanding**
+
+.. image:: Figures/turtle_triangles.png
+
+.. activecode:: ac_6_1_4
+    :language: python
+    :autograde: unittest
+
+    Write a turtle program that includes a function to draw a triangle (hint: to draw a triangle, turn the turtle 120 degrees three times). Then use a for loop to have a turtle draw five triangles to make a pattern like the one shown above. Turn the turtle each time in the for loop before calling the triangle function. How much to turn the turtle? Divide the number of degrees in a circle by the number of times you want to turn.
+    ~~~~
     import turtle
 
-    def drawSquare(t, sz):
-        """Make turtle t draw a square of with side sz."""
-
-        for i in range(4):
-            t.forward(sz)
-            t.left(90)
-
-
-    wn = turtle.Screen()      # Set up the window and its attributes
-    wn.bgcolor("lightgreen")
-
-    alex = turtle.Turtle()    # create alex
-    drawSquare(alex, 50)      # Call the function to draw the square passing the actual turtle and the actual side size
-
-    wn.exitonclick()
-
-This function is named ``drawSquare``. It has two parameters --- one to tell the function which turtle to move around 
-and the other to tell it the size of the square we want drawn. In the function definition they are called ``t`` and 
-``sz`` respectively. Make sure you know where the body of the function ends --- it depends on the indentation and the 
-blank lines don't count for this purpose!
