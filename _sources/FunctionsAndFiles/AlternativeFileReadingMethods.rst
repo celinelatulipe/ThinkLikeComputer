@@ -15,9 +15,9 @@ Alternative File Reading Methods
 --------------------------------
 
 Once you have a file "object", the thing returned by the open function, Python provides three methods to read data
-from that object. The ``read()`` method returns the entire contents of the file as a single string (or just some
-characters if you provide a number as an input parameter. The ``readlines`` method returns the entire contents of
-the entire file as a list of strings, where each item in the list is one line of the file. The ``readline``
+from that object. The ``read()`` method returns the entire contents of the file as a single string (or just the first *n*  
+characters if you provide a number as an input parameter). The ``readlines`` method returns the entire contents of
+the file as a list of strings, where each item in the list is one line of the file. The ``readline``
 method reads one line from the file and returns it as a string. The strings returned by ``readlines`` or
 ``readline`` will contain the newline character at the end.  :ref:`Table 2 <filemethods2a>` summarizes these
 methods and the following session shows them in action.
@@ -27,9 +27,6 @@ methods and the following session shows them in action.
 ======================== =========================== =====================================
 **Method Name**           **Use**                     **Explanation**
 ======================== =========================== =====================================
-``write``                 ``filevar.write(astring)``  Add a string to the end of the file.
-                                                      ``filevar`` must refer to a file that has
-                                                      been  opened for writing.
 ``read(n)``               ``filevar.read()``          Read and return a string of ``n``
                                                       characters, or the entire file as a
                                                       single string if  ``n`` is not provided.
@@ -38,14 +35,18 @@ methods and the following session shows them in action.
                                                       newline character. If ``n`` is provided as
                                                       a parameter, then only ``n`` characters
                                                       will be returned if the line is longer
-                                                      than ``n``. **Note** the parameter ``n`` is not supported in the browser version of Python, and in fact is rarely used in practice, you can safely ignore it.
+                                                      than ``n``. **Note:** the parameter ``n`` is 
+                                                      not supported in the browser version of Python, 
+                                                      and in fact is rarely used in practice, so 
+                                                      you can safely ignore it.
 ``readlines(n)``          ``filevar.readlines()``     Returns a list of strings, each
                                                       representing a single line of the file.
                                                       If ``n`` is not provided then all lines of
                                                       the file are returned. If ``n`` is provided
                                                       then ``n`` characters are read but ``n`` is
                                                       rounded up so that an entire line is
-                                                      returned.  **Note** Like ``readline`` ``readlines`` ignores the parameter ``n`` in the browser.
+                                                      returned.  **Note:** Like ``readline``,
+                                                      ``readlines`` ignores the parameter ``n`` in the browser.
 ======================== =========================== =====================================
 
 
@@ -62,6 +63,22 @@ until later in this course. We don't need them for handling data from files.
    A common error that novice programmers make is not realizing that all these ways of reading the file contents,
    **use up the file**. After you call readlines(), if you call it again you'll get an empty list.
 
+The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly 
+gets a different line each time, as the file is **used up**.
+
+.. activecode:: ac6_7_1a
+    :nocodelens:
+
+    olympicsfile = open("olympics.txt", "r")
+
+    firstline = olympicsfile.readline()
+    print("the first line of the file is: ", firstline)
+    secondline = olympicsfile.readline()
+    print("the second line of the file is: ", secondline)
+
+    olympicsfile.close()
+
+
 **Check your Understanding**
 
 .. raw:: html
@@ -69,7 +86,7 @@ until later in this course. We don't need them for handling data from files.
     <pre id="school_prompt.txt">
     Writing essays for school can be difficult but
     many students find that by researching their topic that they
-    have more to say and are better informed. Here are the university
+    have more to say and are better informed. Here at the university
     we require many undergraduate students to take a first year writing requirement
     so that they can
     have a solid foundation for their writing skills. This comes
@@ -97,7 +114,7 @@ until later in this course. We don't need them for handling data from files.
    class myTests(TestCaseGui):
 
       def testOne(self):
-         self.assertEqual(num_char, 537, "Testing that num_char has the correct value.")
+         self.assertEqual(num_char, 536, "Testing that num_char has the correct value.")
 
    myTests().main()
 
@@ -183,3 +200,34 @@ until later in this course. We don't need them for handling data from files.
 .. datafile:: emotion_words2.txt
    :fromfile: emotion_words.txt
    :hide:
+
+
+.. raw:: html
+
+    <pre hidden id="olympics.txt">
+    Name,Sex,Age,Team,Event,Medal
+    A Dijiang,M,24,China,Basketball,NA
+    A Lamusi,M,23,China,Judo,NA
+    Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
+    Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
+    Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
+    Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
+    Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
+    John Aalberg,M,31,United States,Cross Country Skiing,NA
+    John Aalberg,M,33,United States,Cross Country Skiing,NA
+    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+    Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
+    "Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
+    Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
+    Jyri Tapani Aalto,M,31,Finland,Badminton,NA
+    Minna Maarit Aalto,F,30,Finland,Sailing,NA
+    Minna Maarit Aalto,F,34,Finland,Sailing,NA
+    Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
+    Timo Antero Aaltonen,M,31,Finland,Athletics,NA
+    Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
+    </pre>
+

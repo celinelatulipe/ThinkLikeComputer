@@ -11,8 +11,8 @@
    :prefix: files-1-
    :start: 1
 
-Introduction: Working with Data Files
-=====================================
+Working with Data Files
+=======================
 
 .. youtube:: zASE-UA2YKg
     :divid: filesintrovideo
@@ -21,9 +21,9 @@ Introduction: Working with Data Files
     :align: left
 
 So far, the data we have used in this book have all been either coded right into the program, or have been
-entered by the user. In real life data reside in files. For example the images we worked with in the image
+entered by the user. In real life data reside in files. For example, the images we worked with in the image
 processing unit ultimately live in files on your hard drive. Web pages, and word processing documents, and
-music are other examples of data that live in files. In this short chapter we will introduce the Python
+music are other examples of data that live in files. In the rest of this chapter we will introduce the Python
 concepts necessary to use data from files in our programs.
 
 For our purposes, we will assume that our data files are text files--that is, files filled with characters.
@@ -46,19 +46,19 @@ you might expect, once a file is opened it becomes a Python object just like all
 ``close``        ``filevariable.close()``   File use is complete.
 ================ ======================== =====================================================
 
-Learning Goals
---------------
+.. Learning Goals
+ --------------
 
-* To understand the structure of file systems
-* To understand opening files with different modes
-* To introduce files as another kind of sequence that one can iterate over
-* To introduce the read/transform/write pattern
-* To introduce parallel assignment to two or three variables
+ * To understand the structure of file systems
+ * To understand opening files with different modes
+ * To introduce files as another kind of sequence that one can iterate over
+ * To introduce the read/transform/write pattern
+ * To introduce parallel assignment to two or three variables
 
-Objectives
-----------
+.. Objectives
+ ----------
 
-* Demonstrate that you can read a single value from each line in a file
-* Convert the line to the appropriate value
-* Read a line and convert it into multiple values using split and assignment to multiple variables
+ * Demonstrate that you can read a single value from each line in a file
+ * Convert the line to the appropriate value
+ * Read a line and convert it into multiple values using split and assignment to multiple variables
 

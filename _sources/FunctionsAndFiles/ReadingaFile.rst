@@ -15,7 +15,7 @@ Reading a File
 ~~~~~~~~~~~~~~
 
 As an example, suppose we have a text file called ``olympics.txt`` that contains
-the data representing about olympians across different years. The contents of the file are shown at the bottom of the page.
+information about olympians across different years. The contents of the file are shown at the bottom of this page.
 
 To open this file, we would call the ``open`` function. The variable,
 ``fileref``, now holds a reference to the file object returned by
