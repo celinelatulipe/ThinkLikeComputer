@@ -8,16 +8,17 @@ Functions and Files
    intro-Functions.rst
    FunctionDefinitions.rst
    FunctionInvocation.rst
+   FunctionPre-PostConditions.rst
    WorkingwithDataFiles.rst
    ReadingaFile.rst
    AlternativeFileReadingMethods.rst
    Iteratingoverlinesinafile.rst
    FindingaFileonyourDisk.rst
-   With.rst
-   FilesRecipe.rst
    WritingTextFiles.rst
    WPTipsHandlingFiles.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
+.. With.rst
+   FilesRecipe.rst
    

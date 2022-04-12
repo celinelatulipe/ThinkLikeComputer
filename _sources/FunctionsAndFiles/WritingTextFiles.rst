@@ -14,17 +14,17 @@
 Writing Text Files
 ------------------
 
-One of the most commonly performed data processing tasks is to read data from a file,
+One of the most common data processing tasks is to read data from a file,
 manipulate it in some way, and then write the resulting data out to a new data file to be used
-for other purposes later. To accomplish this, the ``open`` function discussed above can also be
+for other purposes later. To accomplish this, the ``open`` function discussed earlier can also be
 used to create a new file prepared for writing. Note in :ref:`Table 1<filemethods1a>`
 that the only difference between opening a file for writing and opening a file for reading is
 the use of the ``'w'`` flag instead of the ``'r'`` flag as the second parameter. When we open
 a file for writing, a new, empty file with that name is created and made ready to accept our
-data. If an existing file has the same name, its contents are overwritten. As before, the function returns a reference to the new file object.
+data. If an existing file has the same name, its contents are overwritten. As before, the
+function returns a reference to the new file object.
 
-:ref:`Table 2 <filemethods2a>` shows one additional method on file objects that we have not used
-thus far. The ``write`` method allows us to add data to a text file. Recall that text files
+The ``write`` method allows us to add data to a text file. Recall that text files
 contain sequences of characters. We usually think of these character sequences as being the
 lines of the file where each line ends with the newline ``\n`` character. Be very careful to
 notice that the ``write`` method takes one parameter, a string. When invoked, the characters of
@@ -71,7 +71,6 @@ The complete program is shown below.
 
     As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename.  If you try to overwrite a file that's built in to the page, it may not let you; don't try to get too fancy with our file system simulator!
 
-    Below, we have printed the first 10 characters to the output window.
 
 
 .. activecode:: ac9_7_2
@@ -87,7 +86,9 @@ The complete program is shown below.
     outfile.close()
 
     infile = open(filename, "r")
-    print(infile.read()[:10])
+    first10 = infile.read(10)
+    print(first10)
     infile.close()
 
-
+At the end, we have printed the first 10 characters to the output window. 
+If the output in the console is shorter than you expect, recall two things: first the read(n) function reads the first n *characters* not the first n *lines*. Second, remember that the squares have a ``\n`` after each, and that counts as a character.
