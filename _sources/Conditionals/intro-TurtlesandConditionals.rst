@@ -14,80 +14,63 @@
 Intro: What we can do with Turtles and Conditionals
 ===================================================
 
-So far, our programs have either been a series of statements which always execute sequentially or operations that are applied to each item in an iterable. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters that are not asleep. This is done with something called a **selection** or a **conditional statement**. 
+So far, our programs have either been a series of statements which always execute sequentially, operations that are applied to each item in an iterable, or calls to functions. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters, except the ones that are asleep. These situations represent choices (bold or not bold?, update or not update?) and in programming, this is done with something called a **selection** or a **conditional statement**. 
 
-In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly
+In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly. Run the program below a few times and examine the code.
 
 .. activecode:: ac7_1_1
 
-    import turtle
-    wn = turtle.Screen()
+  # Nesting turtles beach scene
+  import turtle
+  import random
+  wn = turtle.Screen()
+  wn.bgcolor("navajo white") #sandy color
 
-    amy = turtle.Turtle()
-    amy.pencolor("Pink")
-    amy.forward(50)
-    if amy.pencolor() == "Pink":
-        amy.right(60)
-        amy.forward(100)
+  amy = turtle.Turtle()
+  amy.shape("turtle") # make turtle actually turtle shaped
+  amy.penup() # we don't need to draw traces as turtle moves
+
+  for _ in range(20): # repeat loop 20 times
+    # get random location
+    x = random.randrange(-200, 200)
+    y = random.randrange(-200, 200)
+    
+    # go to location 
+    amy.goto(x,y)    
+    
+    # get random angle direction
+    direction = random.randrange(360)
+    amy.setheading(direction)
+    
+    # set turtle color based on direction (angle < 180 is facing up)
+    if direction < 180:
+        amy.color("darkgreen") # heading north to lay eggs
     else:
-        amy.left(60)
-        amy.forward(100)
-        
-    kenji = turtle.Turtle()
-    kenji.forward(60)
-    if kenji.pencolor() == "Pink":
-        kenji.right(60)
-        kenji.forward(100)
-    else:
-        kenji.left(60)
-        kenji.forward(100)
+        amy.color("lightgreen") # heading south back to water
 
-In the above code, we first set amy's pen color to be "Pink" and then move her forward. Next we want one of 
-two actions to happen, either amy should move right and then forward, or left and then forward. The direction 
-that we want her to go in depends on her pen color. If her pen color is set to pink - which is determined by 
-writing ``amy.pencolor() == "Pink"`` which checks to see if the value returned by ``amy.pencolor()`` is the 
-equivalent to the string "Pink" - then we should have her move right and forward. Else (or otherwise) she 
-should move left and forward. Both things can't happen though. She can't move right, forward *and* left, 
-forward. We then do the same thing for kenji, though in this case, we didn't change kenji's pen color.
+    # stamp turtle
+    amy.stamp()
 
-It might seem a bit odd to add the conditionals in this example. Wouldn't we already know that we set up amy 
-and kenji's colors, so why would we need a conditional? While it's true that this isn't the *best* place to 
-use a conditional, we can combine conditional statements with for loops to make something pretty cool! 
+The code uses turtle stamping to draw a beach scene. We create a canvas and turtle, and pick the pen up
+so that there are no traces as the turtle moves around. We are using the stamp() function which just imprints 
+the turtle image on the canvas. We use a for loop to stamp turtles in random locations 20 times. The 
+random.rangrange() function is used to get a random x location and a random y location for the turtle each time
+through the loop, and we move the turtle to that location. We use randrange again to get a random direction (between 
+0 and 360), and rotate the turtle to face that direction using the setheading() function. 
 
-.. activecode:: ac7_1_2
+The conditional part comes in when we decide what color the turtle should be before we do the stamping. To emulate
+turtles heading up a beach to nest, we are colouring pregnant turtles carrying eggs dark green, and turtles that have 
+already laid eggs a lighter green. How do we know which ones to colour light vs. dark? We're going to assume the turtles 
+heading north are going to lay eggs, so if the angle they are facing is between 0 and 180 degrees they are heading more 
+north than south. If the angle they are facing is greater than 180, then they are heading more south, and we will color 
+them light green. The code on line 24 shows the conditional statement ``if direction < 180:``. This statement looks at 
+the current value of the direction variable, and if it is less than 180, the expression (direction < 180) evaluates to true. In that case
+the code in the indented block below executes (so amy's colour would be set to dark green). If the current angle is greater
+than or equal to 180, the expression evaluates to false and the code in the indented block below the ``else`` is executed
+(so amy's colour would be set to light green). What's critical to note here is that amy's colour is either going to be set
+to light green or dark green. Each time through this loop, the code on line 25 will execute, or the code on line 27 will 
+execute, it will never be the case that both lines execute during the same loop iteration.
 
-    import turtle
-    wn = turtle.Screen()
-
-    amy = turtle.Turtle()
-    amy.pencolor("Pink")
-    amy.right(170)
-
-    colors = ["Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Orange", "Pink", "Pink", "Orange", "Yellow", "Purple", "Orange", "Purple", "Yellow", "Orange", "Pink", "Orange", "Purple", "Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Yellow"]
-
-
-    for color in colors:
-        if amy.pencolor() == "Purple":
-            amy.forward(50)
-            amy.right(59)
-        elif amy.pencolor() == "Yellow":
-            amy.forward(65)
-            amy.left(98)
-        elif amy.pencolor() == "Orange":
-            amy.forward(30)
-            amy.left(60)
-        elif amy.pencolor() == "Pink":
-            amy.forward(50)
-            amy.right(57)
-
-        amy.pencolor(color)
-
-The above example combines a for loop with a set of conditional statements. Here, we loop through a list of 
-colors and each iteration checks to see what amy's pen color is. Depending on the pen color, the turtle will 
-move in a certain direction, for a certain distance. Before the for loop iterates, amy's pen color is changed 
-to whatever ``color`` is in the for loop and it continues. Note how the color doesn't change until the end, 
-so that we can start using whatever color amy is set to initally. This means that the last color in the list 
-``colors`` will not be used, though you can see how the icon changes to the appropriate color.
     
 This chapter will further detail how to use conditional statements.
 
