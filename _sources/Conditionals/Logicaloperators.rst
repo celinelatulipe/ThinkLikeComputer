@@ -29,7 +29,7 @@ The semantics (meaning) of these operators is similar to their meaning in Englis
   does ``or`` yield ``False``.
 * ``not x`` yields ``False`` if ``x`` is ``True``, and vice versa.
 
-Look at the following example. See if you can predict the output. Then, Run to see if your predictions were
+Look at the following example. See if you can predict the output. Then, run it to see if your predictions were
 correct:
 
 .. activecode:: logop_ex1
@@ -65,6 +65,23 @@ x is between 0 and 10, not including the endpoints.
    equal to 5 or 6".  However, if we translate this into Python, ``number == 5 or 6``, it will not yield correct
    results. The ``or`` operator must have a complete equality check on both sides.  The correct way to write this is 
    ``number == 5 or number == 6``. Remember that both operands of ``or`` must be booleans in order to yield proper results.
+
+The ``or`` operator is sometimes confusing to new programmers, because it operates differently than the way we use the word 'or' 
+when speaking. The sentence, ''Karina is going to go to grad school or look for a job in industry'' suggests that 
+Karina will do one of these two things, but will not do both. In English, the 'or' we typically use is what we call an 'exclusive or'.
+But in programming, the value of an ``or`` expression is true
+if both operands are true. The **only** time an ``or`` expression evaluates to false is when both operands are false. In the Karina example, 
+it would be true if Karina went to grad school, it would be true if Karina got a job in industry, it would be true if Karina went to grad 
+school **and** got a job in industry. It would only be false if Karina did neither. 
+
+
+.. activecode:: ac7_3_1a
+
+    x = 5
+    y = 7
+
+    print(x < 10 or y > 3)
+
 
 .. index:: short-circuiting
 

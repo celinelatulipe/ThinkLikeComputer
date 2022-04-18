@@ -53,9 +53,11 @@ The boolean expression after the ``if`` statement is called the **condition**.
 If it is true, then the indented statements get executed. If not, then the statements
 indented under the ``else`` clause get executed.
 
-.. sidebar::  Flowchart of a **if** statement with an **else**
+.. .. sidebar::  
 
-   .. image:: Figures/flowchart_if_else.png
+Below is a flowchart of an **if** statement with an **else** clause:
+
+.. image:: Figures/flowchart_if_else.png
 
 
 

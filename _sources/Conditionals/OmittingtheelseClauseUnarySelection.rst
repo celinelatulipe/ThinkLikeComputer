@@ -23,13 +23,18 @@ Omitting the ``else`` Clause: Unary Selection
     :width: 560
     :align: left
 
-.. sidebar::  Flowchart of an **if** with no **else**
+.. ..sidebar::  
 
-   .. image:: Figures/flowchart_if_only.png
 
 Another form of the ``if`` statement is one in which the ``else`` clause is omitted entirely. This creates what 
 is sometimes called **unary selection**. In this case, when the condition evaluates to ``True``, the statements 
 are executed. Otherwise the flow of execution continues to the statement after the body of the ``if``.
+
+Below is a flowchart of an **if** without an **else** clause:
+
+.. image:: Figures/flowchart_if_only.png
+
+Predict the output for the code below and then run it.
 
 .. activecode:: ac7_7_1
 
@@ -38,7 +43,7 @@ are executed. Otherwise the flow of execution continues to the statement after t
         print("The negative number ",  x, " is not valid here.")
     print("This is always printed")
 
-What would be printed if the value of ``x`` is negative?  Try it.
+What would be printed if the value of ``x`` is negative in the example above?  Try it.
 
 **Check your understanding**
 

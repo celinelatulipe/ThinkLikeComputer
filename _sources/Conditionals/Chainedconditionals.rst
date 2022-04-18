@@ -67,6 +67,52 @@ other versions must follow the same order as seen below.
 .. image:: Figures/valid_conditionals.png
    :alt: shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif.
 
+Here is a turtle example that uses chained conditionals.
+
+.. activecode:: ac7_9_2
+
+    import turtle
+    wn = turtle.Screen()
+
+    amy = turtle.Turtle()
+    amy.right(170)
+
+    colors = ["Pink", "Purple", "Yellow", "Orange", "Pink", "Orange", "Yellow", "Purple", "Orange", "Pink", "Pink", "Orange", "Yellow", "Purple", "Orange", "Purple", "Yellow", "Orange", "Pink", "Orange", "Purle", "Purple", "Yellow", "Orange", "Pink", "Blue", "Orange", "Yellow", "Purple"]
+
+
+    for color in colors:
+        amy.pencolor(color)
+
+        if amy.pencolor() == "Purple":
+            amy.forward(50)
+            amy.right(59)
+        elif amy.pencolor() == "Yellow":
+            amy.forward(65)
+            amy.left(98)
+        elif amy.pencolor() == "Orange":
+            amy.forward(30)
+            amy.left(60)
+        elif amy.pencolor() == "Pink":
+            amy.forward(50)
+            amy.right(57)
+        else:
+            print("Uh-oh! I don't know the color: ", color)
+
+    amy.hideturtle()
+
+
+The above example combines a for loop with a set of conditional statements. Here, we loop through a list of 
+colors and each iteration checks to see what amy's pen color is. Depending on the pen color, the turtle will 
+move in a certain direction, for a certain distance. This example also demonstrates a common pattern for chained
+conditionals in which all of the expected things are covered by the various ``elif`` branches, and the ``else``
+is used to notify the programmer with a console message that something unexpected has occurred. In this case, we
+expected only the four colours purple, yellow, orange, and pink. If we get something else, we print a message out 
+(and typically print out the unexpected item), which in this case helps us notice two things: there is a typo and 
+"Purple" is mispelled in one spot, and there is a "Blue" in the list, and so maybe we want to add code to handle 
+that color. You may think that adding such an else clause is unnecessary because you are sure your code works correctly,
+but it's helpful more often than you think. 
+ 
+
 **Check your understanding**
 
 .. mchoice:: question7_9_1
@@ -153,7 +199,7 @@ other versions must follow the same order as seen below.
      else:
          print("c")
 
-.. activecode:: ac7_9_2
+.. activecode:: ac7_9_3
    :language: python
    :autograde: unittest
    :practice: T
