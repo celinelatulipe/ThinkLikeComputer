@@ -55,7 +55,7 @@ While loops may not seem to be necessary when you're iterating over a few items,
 iterating over lots of items. Imagine if you needed to change what happened in the code block. On the left, when you use 
 iteration, this is easy. On the right, when you have hard coded the process, this is more difficult.
  
-.. image:: Figures/iteration_vs_hardcoding.png
+.. image:: Figures/5.4diagram.PNG
    :alt: Demonstration of using iteration over hard coding the iteration.
-   :scale: 30%
+   :scale: 110%
    :align: center
