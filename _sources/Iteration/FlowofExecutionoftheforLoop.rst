@@ -57,5 +57,5 @@ iteration, this is easy. On the right, when you have hard coded the process, thi
  
 .. image:: Figures/5.4diagram.PNG
    :alt: Demonstration of using iteration over hard coding the iteration.
-   :scale: 60%
+   :scale: 110%
    :align: center
