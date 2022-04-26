@@ -17,6 +17,7 @@ Iteration
    WPPrintingIntermediateResults.rst
    TraversalandtheforLoopByIndex.rst
    WPKeepingTrackofYourIteratorVariableYourIterable.rst
+   IterationPowerAndEthics.rst
    NestedIterationImageProcessing.rst
    Glossary.rst
    Exercises.rst
