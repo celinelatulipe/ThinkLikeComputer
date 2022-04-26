@@ -3,3 +3,4 @@
 .DS_Store
 /__pycache__/pavement.cpython-39.pyc
 build_info
+*.swp
