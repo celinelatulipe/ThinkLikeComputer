@@ -9,6 +9,7 @@ Functions and Files
    FunctionDefinitions.rst
    FunctionInvocation.rst
    FunctionPre-PostConditions.rst
+   ListenerFunctions.rst
    WorkingwithDataFiles.rst
    ReadingaFile.rst
    AlternativeFileReadingMethods.rst
