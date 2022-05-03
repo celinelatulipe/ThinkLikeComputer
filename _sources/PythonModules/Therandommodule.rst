@@ -105,3 +105,16 @@ Using random numbers in your programming can be a good way to help ensure fairne
 
    One reason that lotteries don’t use computers to generate random numbers is:
 
+
+.. mchoice:: question13_2_3
+   :answer_a: Run it 10 times and make sure the deck is shuffled differently every time
+   :answer_b: Run it 1000 times and make sure the deck is shuffled differently every time
+   :answer_c: Run it 1000 times and make sure the deck is shuffled differenly 90% of the time. 90% is close enough.
+   :answer_d: It's not possible to guarantee 100% of the time.
+   :correct: d
+   :feedback_a: Does fairness in random mean 'different each time'? How does this help us for the 11th run or 12th?
+   :feedback_b: Does fairness in random mean 'different each time'? How does this help us for the 1001th run or 2000th?
+   :feedback_c: Sometimes a 90% confidence might be ok but 90% does not guarantee fairness ALL the time.
+   :feedback_d: Correct. We can't 100% of the time guarantee the fairness using pseudo-random generation. What we can do is be aware of our code's limitations, run some statistics on likelihood of fairness (like answer c would suggest) and continiously look for ways to pursue fairness in random numbers and algorithms.
+
+   We are writing code to shuffle a deck of cards. How do we guarantee 100% fairness when using random numbers in our code?
