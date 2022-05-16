@@ -56,20 +56,14 @@ function invocations or you can look at the operations that are performed on the
 Here are some clues that can help you determine the type of object associated with any variable, including a 
 function parameter. If you see...
 
-* ``len(x)``, then x must be a string or a list. (Actually, it can also be a
-  dictionary, in which case it is equivalent to the expression
-  ``len(x.keys())``. Later in the course, we will also see some other sequence
-  types that it could be). x can't be a number or a Boolean. 
+* ``len(x)``, then x must be a string or a list (or other type of sequence). x can't be a number or a Boolean. 
 * ``x - y``, x and y must be numbers (integer or float)
 * ``x + y``, x and y must both be numbers, both be strings, or both be lists
-* ``x[3]``, x must be a string or a list containing at least four items, or x
-  must be a dictionary that includes 3 as a key.
-* ``x['3']``, x must be a dictionary, with '3' as a key.
+* ``x[3]``, x must be a string or a list containing at least four items.
 * ``x[y:z]``, x must be a sequence (string or list), and y and z must be
   integers
 * ``x and y``, x and y must be Boolean
-* ``for x in y``, y must be a sequence (string or list) or a dictionary (in which case it's really the dictionary's keys); x must be a character
-  if y is a string; if y is a list, x could be of any type.
+* ``for x in y``, y must be a sequence (string or list); if y is a string, x must be a character; if y is a list, x could be of any type.
 
 **Check your understanding: decode this function definition**
 
@@ -95,8 +89,7 @@ function parameter. If you see...
          if x - y > 0:
             return y -2
          else:
-            z.append(y)
-            return x + 3
+            return len(z) + 3
          
 .. mchoice:: question200_1_2
    :multiple_answers:
@@ -121,8 +114,7 @@ function parameter. If you see...
          if x - y > 0:
             return y -2
          else:
-            z.append(y)
-            return x + 3
+            return len(z) + 3
          
 .. mchoice:: question200_1_3
    :multiple_answers:
@@ -130,13 +122,13 @@ function parameter. If you see...
    :answer_b: float
    :answer_c: list
    :answer_d: string
-   :answer_e: Can't tell
-   :correct: c
-   :feedback_a: append can't be performed on integers.
-   :feedback_b: append can't be performed on floats.
-   :feedback_c: append can be performed on lists.
-   :feedback_d: append can't be performed on strings.
-   :feedback_e: You can tell from some of the operations that are performed on it.
+   :answer_e: list, string or other sequence 
+   :correct: e
+   :feedback_a: len() can't be performed on integers.
+   :feedback_b: len() can't be performed on floats.
+   :feedback_c: len() can be performed on lists, but also on other things.
+   :feedback_d: len() can be performed on strings, but also on other things.
+   :feedback_e: len() can be performed on all strings or sequence types
    :practice: T
 
    What are the possible types of variable z?
@@ -147,8 +139,7 @@ function parameter. If you see...
          if x - y > 0:
             return y -2
          else:
-            z.append(y)
-            return x + 3
+            return len(z) + 3
 
 .. mchoice:: df_question200_1_3
    :multiple_answers:
@@ -157,11 +148,11 @@ function parameter. If you see...
    :answer_c: list
    :answer_d: string
    :answer_e: Can't tell
-   :correct: a,b
-   :feedback_a: y-2 or  x+3 could produce an integer.
-   :feedback_b: y-2 or  x+3 could produce a float.
-   :feedback_c: y-2 or  x+3 can't produce a list.
-   :feedback_d: neither y-2 or  x+3 could produce a string.
+   :correct: a
+   :feedback_a: len() returns an integer, so len()+3 produces an integer.
+   :feedback_b: len()+3 could not produce a float.
+   :feedback_c: len()+3 could not produce a list.
+   :feedback_d: len()+3 could not produce a string.
    :feedback_e: You can tell from the expressions that follow the word return.
    :practice: T
 
@@ -173,5 +164,4 @@ function parameter. If you see...
          if x - y > 0:
             return y -2
          else:
-            z.append(y)
-            return x + 3
+            return len(z) + 3
