@@ -25,8 +25,7 @@ There are many benefits to sharing code publicly and creating open-source work. 
 * Open-source code is exponentially cheaper. Open-source implies you do not need to pay to use the software and you not need to manage any sort of licenses.
 * The security issues that may arise with Open-Source is often addressed by Linus Torvald's "many eyes" theory. The theory has been proven to be true time and again when ethical and expert developers review open-source code to help it enhance it's security capabilities.
 
-Open-source is often term for code and software being shared publically but there exists similar licenses for other resources, such as Creative Commons licenses. They are different types of CC licenses, depending on how strict or loose you want the guidelines around your copyrighted materials to be. A fantastic video explains the different CC licenses available can be found here <https://creativecommons.org/about/videos/creative-commons-kiwi/>
-
+Open-source is often term for code and software being shared publically but there exists similar licenses for other resources, such as Creative Commons licenses. They are different types of CC licenses, depending on how strict or loose you want the guidelines around your copyrighted materials to be.
 
 **Check your understanding**
 
