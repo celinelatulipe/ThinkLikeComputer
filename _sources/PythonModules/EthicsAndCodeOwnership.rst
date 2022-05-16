@@ -12,73 +12,21 @@
    :start: 1
 
 Ethics & Code Ownership
----------------------
+-----------------------
+We have all heard about movie and brand copyrights but what about code? If you write a piece of code, do you own it? In Canada, an original work (including code) is automatically protected by copyright, from the moment you create it. This doesn't make your idea protected, just your work. For example, you might remember the viral game, *Flappy Bird*. In fact, in 2014, there were 864 Flappy Bird clones in the Google Play store and none of them broke copyright. Copyright protects the author from someone replicating their code *exactly* but it does not copyright the idea itself. However, imagine you work for a company and use Microsoft Word for your work. You want to finish from home but your own home computer doesn't have Microsoft word so you nake an extra copy of the software and install it at home so that you can finish. This is software copyright infringment.
 
-We often want to use **random numbers** in programs.  Here are a few typical uses:
+Now imagine, since, you know that it is copyright infringment to duplicate Microsoft word, you install LibreOffice instead. LibreOffice is an alternative to Word software and this is copyright legal. How is this possible? Enter the idea of open-source.
 
-* To play a game of chance where the computer needs to throw some dice, pick a
-  number, or flip a coin,
-* To shuffle a deck of playing cards randomly,
-* To randomly allow a new enemy spaceship to appear and shoot at you,
-* To simulate possible rainfall when we make a computerized model for
-  estimating the environmental impact of building a dam,
-* For encrypting your banking session on the Internet.
+* benefits of open source
+* using someones ideas
+* using someones code
+* when is it ok?
+* video link for CCL
 
-Python provides a module ``random`` that helps with tasks like this. You can take a look at it in the documentation. 
-Here are the key things we can do with it.
-
-.. activecode:: ac13_2_1
-
-    import random
-
-    prob = random.random()
-    print(prob)
-
-    diceThrow = random.randrange(1,7)       # return an int, one of 1,2,3,4,5,6
-    print(diceThrow)
-
-Press the run button a number of times.  Note that the values change each time. These are random numbers.
-
-
-The ``randrange`` function generates an integer between its lower and upper argument where the lower bound is included, but the upper bound is excluded. So, ``randrange(1,7)`` will include numbers from 1-6.  If you omit the first parameter it is assumed to be 0 so ``randrange(10)`` will give you numbers from 0-9.  All the values have an equal probability 
-of occurring (i.e. the results are *uniformly* distributed).
-
-The ``random()`` function returns a floating point number in the range [0.0, 1.0) --- the square bracket means "closed 
-interval on the left" and the round parenthesis means "open interval on the right".  In other words, 0.0 is possible, 
-but all returned numbers will be strictly less than 1.0.  It is usual to *scale* the results after calling this method, 
-to get them into a range suitable for your application.
-
-In the case shown below, we've converted the result of the random() method call to a number in the range [0.0, 5.0).  Once more, 
-these are uniformly distributed numbers --- numbers close to 0 are just as likely to occur as numbers close to 3, or 
-numbers close to 5. If you continue to press the run button you will see random values between 0.0 and up to but not 
-including 5.0.
-
-
-.. activecode:: ac13_2_2
-
-    import random
-
-    prob = random.random()
-    result = prob * 5
-    print(result)
-
-.. index:: deterministic algorithm,  algorithm; deterministic, unit tests
-
-It is important to note that random number generators are based on a **deterministic** algorithm --- repeatable and 
-predictable. So they're called **pseudo-random** generators --- they are not genuinely random. They start with a *seed* 
-value. Each time you ask for another random number, you'll get one based on the current seed attribute, and the state 
-of the seed (which is one of the attributes of the generator) will be updated.  The good news is that each time you run 
-your program, the seed value is likely to be different meaning that even though the random numbers are being created 
-algorithmically, you will likely get random behavior each time you execute.
-
-Randomness and Ethics
-=====================
-
-Using random numbers in your programming can be a good way to help ensure fairness. If you have a list of students and you want to choose students to give presentations in a class, using a program that randomly picks a student is likely better than starting alphabetically. If all instructors did this alphabetically, the students whose surnames start with an 'A' or 'B' would always get the chance to present and get feedback and students whose surnames begin with a letter later in the alphabet would not receive the same opportunity. Can you think of software programs that you use that have random elements? How would the program be less fair if it **didn't** use randomness?
 
 **Check your understanding**
 
-.. mchoice:: question13_2_1
+.. mchoice:: question4_3_1
    :answer_a: prob = random.randrange(1, 101)
    :answer_b: prob = random.randrange(1, 100)
    :answer_c: prob = random.randrange(0, 101)
@@ -91,17 +39,3 @@ Using random numbers in your programming can be a good way to help ensure fairne
    :practice: T
 
    The correct code to generate a random number between 1 and 100 (inclusive) is:
-
-.. mchoice:: question13_2_2
-   :answer_a: There is no computer on the stage for the drawing.
-   :answer_b: Because computers don’t really generate random numbers, they generate pseudo-random numbers.
-   :answer_c: They would just generate the same numbers over and over again.
-   :answer_d: The computer can’t tell what values were already selected, so it might generate all 5’s instead of 5 unique numbers.
-   :correct: b
-   :feedback_a: They could easily put one there.
-   :feedback_b: Computers generate random numbers using a deterministic algorithm.  This means that if anyone ever found out the algorithm they could accurately predict the next value to be generated and would always win the lottery.
-   :feedback_c: This might happen if the same seed value was used over and over again, but they could make sure this was not the case.
-   :feedback_d: While a programmer would need to ensure the computer did not select the same number more than once, it is easy to ensure this.
-
-   One reason that lotteries don’t use computers to generate random numbers is:
-
