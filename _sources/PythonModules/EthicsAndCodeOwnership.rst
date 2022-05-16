@@ -17,11 +17,15 @@ We have all heard about movie and brand copyrights but what about code? If you w
 
 Now imagine, since, you know that it is copyright infringment to duplicate Microsoft word, you install LibreOffice instead. LibreOffice is an alternative to Word software and this is copyright legal. How is this possible? Enter the idea of open-source.
 
-* benefits of open source
-* using someones ideas
-* using someones code
-* when is it ok?
-* video link for CCL
+Open-source softwarfe is computer software that is released under a license in which the copyright holder gives permission to users to use, study, alter and distribute it and the code for it however they see fit. It's not that a copyright holder doesn't exist for the code but rather a license to allow for everyone to benefit from code.
+
+There are many benefits to sharing code publicly and creating open-source work. Such as:
+* Freedom and flexibility of open source code means developers are not waiting on licenses and understanding legalese in order to enhance and update software.
+* Open-source code is seen and critiqued by a global community of people. Developers are more likely to write better code when we know other experts will be looking at it.
+* Open-source code is exponentially cheaper. Open-source implies you do not need to pay to use the software and you not need to manage any sort of licenses.
+* The security issues that may arise with Open-Source is often addressed by Linus Torvald's "many eyes" theory. The theory has been proven to be true time and again when ethical and expert developers review open-source code to help it enhance it's security capabilities.
+
+Open-source is often term for code and software being shared publically but there exists similar licenses for other resources, such as Creative Commons licenses. They are different types of CC licenses, depending on how strict or loose you want the guidelines around your copyrighted materials to be. A fantastic video explains the different CC licenses available can be found here <https://creativecommons.org/about/videos/creative-commons-kiwi/>
 
 
 **Check your understanding**
