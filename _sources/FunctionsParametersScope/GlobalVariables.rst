@@ -48,7 +48,7 @@ For practice, you should rewrite the badsquare example to have a second paramete
 
 There is another variation on this theme of local versus global variables. Assignment statements in the local function cannot 
 change variables defined outside the function. Consider the following
-codelens example:
+CodeLens example:
 
 .. codelens::  clens11_8_1
     :python: py3
@@ -68,7 +68,7 @@ in the local scope compared to the variable ``power`` in the global scope?
 The value of ``power`` in the local scope was different than the global scope.
 That is because in this example ``power`` was used on the left hand side of the
 assignment statement ``power = p``. When a variable name is used on the
-left hand side of an assignment statement Python creates a local variable.
+left hand side of an assignment statement inside a function, Python creates a local variable.
 When a local variable has the same name as a global variable we say that the
 local shadows the global. A **shadow** means that the global variable cannot
 be accessed by Python because the local variable will be found first. This is
@@ -78,7 +78,7 @@ it makes your code confusing and difficult to understand.
 If you really want to change the value of a global variable inside a function,
 you can can do it by explicitly declaring the variable to be global, as in the example
 below. Again, you should *not* do this in your code. The example is here only
-to cement your understanding of how python works.
+to cement your understanding of how Python works.
 
 .. codelens::  clens11_8_2
     :python: py3
@@ -152,6 +152,7 @@ But this example demonstrates that that is clearly not how Python operates.
 
    Can you use the same name for a local variable as a global variable?
 
-.. note:: WP: Scope
+.. note:: WP: Scope 
 
+   [TODO: rewrite this - it's confusing!]
     You may be asking yourself at this point when you should make some object a local variable and when should you make it a global variable. Generally, we do not recommend making variables global. Imagine you are trying to write a program that keeps track of money while purchasing groceries. You may make a variable that represents how much money the person has, called ``wallet``. You also want to make a function called ``purchase``, which will take the name of the item and its price, and then add the item to a list of groceries, and deduct the price from the amount stored in ``wallet``. If you initialize wallet before the function as a variable within the global scope instead of passing it as a third parameter for ``purchase``, then an error would occur because wallet would not be found in the local scope. Though there are ways to get around this, as outlined in this page, if your program was supposed to handle groceries for multiple people, then you would need to declare each wallet as a global variable in the functions that want to use wallet, and that would become very confusing and tedious to deal with. 

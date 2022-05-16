@@ -60,7 +60,7 @@ above makes debugging easier. These temporary variables are referred to as **loc
 Notice something important here. The name of the variable we pass as an argument --- ``toSquare`` --- has nothing to
 do with the name of the formal parameter --- ``x``.  It is as if  ``x = toSquare`` is executed when ``square`` is
 called. It doesn't matter what the value was named in the caller (the place where the function was invoked). Inside
-``square``, it's name is ``x``.  You can see this very clearly in codelens, where the global variables and the local
+``square``, it's name is ``x``.  You can see this very clearly in CodeLens, where the global variables and the local
 variables for the square function are in separate boxes.
 
 .. codelens:: clens11_4_1
@@ -97,7 +97,7 @@ some other way by the caller.
 
 A return statement, once executed, immediately terminates execution of a function, even if it is not the last
 statement in the function. In the following code, when line 3 executes, the value 5 is returned and assigned to the
-variable x, then printed. Lines 4 and 5 never execute. Run the following code and try making some modifications of
+variable x, then printed. Lines 4 and 5 never execute. Run the following code and try making some modifications to 
 it to make sure you understand why "there" and 10 never print out.
 
 .. activecode:: ac11_4_2
@@ -157,6 +157,8 @@ Now, the code:
   print(longer_than_five(list1))
   print(longer_than_five(list2))
 
+Functions as Part of Expressions
+================================
 
 So far, we have just seen return values being assigned to variables. For example, we had the line
 ``squareResult = square(toSquare)``. As with all assignment statements, the right hand side is executed first. It
@@ -168,9 +170,9 @@ Function invocations, however, can also be used as part of more complicated expr
 ``squareResult = 2 * square(toSquare)``. In this case, the value 100 is returned and is then multiplied by 2 to
 produce the value 200. When python evaluates an expression like ``x * 3``, it substitutes the current value of x into
 the expression and then does the multiplication. When python evaluates an expression like ``2 * square(toSquare)``, it
-substitutes the return value 100 for entire function invocation and then does the multiplication.
+substitutes the return value 100 for the entire function invocation and then does the multiplication.
 
-To reiterate, when executing a line of code ``squareResult = 2 * square(toSquare)``, the python
+To reiterate, when executing a line of code like ``squareResult = 2 * square(toSquare)``, the Python
 interpreter does these steps:
 
 #. It's an assignment statement, so evaluate the right-hand side expression ``2 * square(toSquare)``.
@@ -183,12 +185,12 @@ interpreter does these steps:
 
 .. mchoice:: question11_4_1
    :answer_a: You should never use a print statement in a function definition.
-   :answer_b: You should not have any statements in a function after the return statement.  Once the function gets to the return statement it will immediately stop executing the function.
+   :answer_b: The print statement will never execute
    :answer_c: You must calculate the value of x+y+z before you return it.
    :answer_d: A function cannot return a number.
    :correct: b
    :feedback_a: Although you should not mistake print for return, you may include print statements inside your functions.
-   :feedback_b: This is a very common mistake so be sure to watch out for it when you write your code!
+   :feedback_b: Return statements should usually be the last statement in a function, except in circumstances where they are in a conditional statement that detects the function should stop executing.
    :feedback_c: Python will automatically calculate the value x+y+z and then return it in the statement as it is written
    :feedback_d: Functions can return any legal data, including (but not limited to) numbers, strings, lists, dictionaries, etc.
    :practice: T
