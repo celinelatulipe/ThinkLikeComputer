@@ -11,13 +11,82 @@
    :prefix: func-3-
    :start: 1
 
-Function Parameters
--------------------
+Introduction: Function Parameters
+---------------------------------
 
-Named functions are nice because, once they are defined and we understand what they do, we can refer to them by name
-and not think too much about what they do. With parameters, functions are even more powerful, because they can do
-pretty much the same thing on each invocation, but not exactly the same thing. The parameters can cause them to do
-something a little different.
+Functions are nice because we can call them repeatedly to execute the same set of code over and over again. With parameters, functions are even more powerful, because they can do
+pretty much the same thing on each invocation, but with slight variation, accoding to the values you send to the function. We've played a lot with turtles, and in Chapter 6 we created two different turtle functions to have a turtle draw a small square and a big square repeatedly to make a flower image:
+
+.. activecode:: ac9_1_1a
+    :nocodelens:
+
+    import turtle
+
+    def draw_small_square():
+        """Make turtle alex draw a square of with side 50."""
+
+        for _ in range(4):
+            alex.forward(50)
+            alex.left(90)
+
+    def draw_big_square():
+        """Make turtle alex draw a square of with side 100."""
+
+        for _ in range(4):
+            alex.forward(100)
+            alex.left(90)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+
+    turn_angle = 15           # store a turn angle
+
+    for _ in range(12):       # loop 12 times to go around in a circle
+        alex.color("red")
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_big_square()      # Call the function to draw the big square
+
+        alex.color("blue")
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_small_square()      # Call the function to draw the small square
+
+    wn.exitonclick()
+ 
+With the use of parameters, we can simplify this code so that only one function is needed, and so that it will work for 
+any turtle, not just a turtle named alex:
+
+.. activecode:: ac9_1_2a
+    :nocodelens:
+
+    import turtle
+
+    def draw_square(tur, size):
+        """Make tur draw a square with side length size."""
+
+        for _ in range(4):
+            tur.forward(size)
+            tur.left(90)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+
+    turn_angle = 15           # store a turn angle
+
+    for _ in range(12):       # loop 12 times to go around in a circle
+        alex.color("red")
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 100)      # Call draw_square with large side length
+
+        alex.color("blue")
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 50)      # Call draw_square with small side length
+
+    wn.exitonclick()
+
+In this chapter we will explain all the details of how to construct and call functions with parameters.
+
 
 .. youtube:: Ndw_EgFO_tw
     :divid: goog_function_parms
@@ -40,13 +109,13 @@ You have already been making function invocations with parameters. For example, 
 "abc" or the list [3, 9, "hello"], is a parameter value.
 
 When a function has one or more parameters, the names of the parameters appear in the function definition, and the
-values to assign to those parameters appear inside the parentheses of the function invocation. Let's look at each of
+values to assign to those parameters appear inside the parentheses of the function invocation when you call that function. Let's look at each of
 those a little more carefully.
 
 In the definition, the parameter list is sometimes referred to as the **formal parameters** or **parameter names**.
 These names can be any valid variable name. If there is more than one, they are separated by commas.
 
-In the function invocation, inside the parentheses one value should be provided for each of the parameter names. These
+In the function invocation (call), inside the parentheses one value should be provided for each of the parameter names. These
 values are separated by commas. The values can be specified either directly, or by any python expression including a
 reference to some other variable name.
 
@@ -108,7 +177,7 @@ a parameter that controls how many times the greeting will be printed.
    :python: py3
 
    def hello3(s, n):
-      greeting = "Hello {} ".format(s)
+      greeting = "Hello " + s
       print(greeting*n)
 
    hello3("Wei", 4)
@@ -122,6 +191,109 @@ That's how function invocations always work. Each of the expressions, separated 
 parentheses are evaluated to produce values. Then those values are matched up positionally
 with the formal parameters. The first parameter name is bound to the first value
 provided. The second parameter name is bound to the second value provided. And so on.
+
+Parameter Order and Type
+========================
+
+The order of the parameters matters, and so when you are calling a function with multiple parameters, you need to make sure that you specify the values in the correct order, and that you are passing in the right type of value for each parameter. Let's return to the turtle example and add two more parameters to the square function, to specify the line width and color.
+
+.. activecode:: clens9_1_4a
+    :nocodelens:
+
+    import turtle
+
+    def draw_square(tur, size, linewidth, linecolor):
+        """Make tur draw a square with side length size."""
+
+        tur.pensize(linewidth)
+        tur.pencolor(linecolor)
+
+        for _ in range(4):
+            tur.forward(size)
+            tur.left(90)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+
+    turn_angle = 15           # store a turn angle
+
+    for _ in range(12):       # loop 12 times to go around in a circle
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 100, 4, "red")      # Call draw_square with big side, wide pen & red color
+
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 50, 2, "blue")      # Call draw_square with small side length, thin pen & blue color
+
+    wn.exitonclick()
+
+Note that now we set the color as part of the call to the draw_square method, and we are drawing the flower petal outlines with different thicknesses. The order of the values in the call match the order of the parameters on line 3.
+
+Let's examine the types of errors that we encounter if we mess up specifying the parameters. In the example below, we accidentally leave off the color parameter on line 24, and we get a TypeError noting that we are missing 1 required argument.  
+
+.. activecode:: clens9_1_5a
+    :nocodelens:
+
+    import turtle
+
+    def draw_square(tur, size, linewidth, linecolor):
+        """Make tur draw a square with side length size."""
+
+        tur.pensize(linewidth)
+        tur.pencolor(linecolor)
+
+        for _ in range(4):
+            tur.forward(size)
+            tur.left(90)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+
+    turn_angle = 15           # store a turn angle
+
+    for _ in range(12):       # loop 12 times to go around in a circle
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 100, 4, "red")      # Call draw_square with big side, wide pen & red color
+
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 50, 2)      # Type error caused by forgetting a required parameter
+    wn.exitonclick()
+
+
+In this next example, we swap the order of the middle two parameters on line 24 (side length and line thickness). In this case we get a logic error, the program executes completely, but the output is not what we expect. Instead of a bunch of thin blue squares forming the inner flower petals, we get what looks like a blue circle being drawn over and over again, because we are drawing a square with sides of length 2 and a pen width of 50! 
+
+
+.. activecode:: clens9_1_6a
+    :nocodelens:
+
+    import turtle
+
+    def draw_square(tur, size, linewidth, linecolor):
+        """Make tur draw a square with side length size."""
+
+        tur.pensize(linewidth)
+        tur.pencolor(linecolor)
+
+        for _ in range(4):
+            tur.forward(size)
+            tur.left(90)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+
+    turn_angle = 15           # store a turn angle
+
+    for _ in range(12):       # loop 12 times to go around in a circle
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 100, 4, "red")      # Call draw_square with big side, wide pen & red color
+
+        alex.right(turn_angle) # turn by 15 degrees
+        draw_square(alex, 2, 50, "blue")      # Logic error caused by switching the middle two values
+    wn.exitonclick()
+
+It is also possible to have optional parameters, so that if a programmer leaves off a parameter value when calling a function, the code still runs, but we won't cover that in this course.
 
 **Check your understanding**
 
