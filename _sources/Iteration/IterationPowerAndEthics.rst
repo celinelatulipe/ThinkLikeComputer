@@ -45,26 +45,16 @@ What would you do if the company you worked for asked you to write code that wou
 
 **Check your understanding**
 
-[TODO: come up with questions for this]
-
-.. mchoice:: question14_6_1
-   :answer_a: 0
-   :answer_b: 1
-   :answer_c: 2
-   :answer_d: 3
-   :answer_e: 6
-   :correct: d
-   :feedback_a: idx % 2 is 0 whenever idx is even
-   :feedback_b: idx % 2 is 0 whenever idx is even
-   :feedback_c: idx % 2 is 0 whenever idx is even
-   :feedback_d: idx % 2 is 0 whenever idx is even
-   :feedback_e: idx % 2 is 0 whenever idx is even
-   :practice: T
-
-   How many times is the letter p printed by the following statements?
+.. mchoice:: question13_5_1
+   :answer_a: It's legal and it's ethical since I was given access to all the records so it's okay to share.
+   :answer_b: It's legal but it's unethical. I should know better than to snoop in people private data.
+   :answer_c: It's illegal but my friend is sworn to secrecy so it's okay to share the gossip
+   :answer_d: It's illegal and unethical. I don't want to go to jail or get fired.
+   :correct: b
+   :feedback_a: Computer Scientists aren't bound by HIPAA or anything like that but it certainly is not ethical to go snooping in data that you don't need to be in.
+   :feedback_b: With more data, comes more resposibility. There are actually no laws that stop you from snooping or telling a friend (unless your work contract says otherwise) but nothing about doing so is ethically sound.
+   :feedback_c: It's actually not illegal. Computer Scientists wield a lot of power around data and we don't have a universal standard like HIPAA to protect sensitive information.
+   :feedback_d: It's actually not illegal. Computer Scientists wield a lot of power around data and we don't have a universal standard like HIPAA to protect sensitive information.
    
-   .. code-block:: python
 
-      s = "python"
-      for idx in range(len(s)):
-         print(s[idx % 2])
+   Imagine you are working on designing a webpage as a developer at a banking company. You have access to everyone's accounts and how much money they have saved. With the push of a button you can search through thousands of accounts and find out how much money your best friend has saved up, your teacher, even your boss, no one would even know you looked. You take a peek and can't wait to tell your friend how much money your old teacher has. Is it legal or ethical for you to share what you've seen in their data?
