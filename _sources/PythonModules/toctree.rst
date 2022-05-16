@@ -7,6 +7,7 @@ Python Modules
 
    intro-PythonModules.rst
    ModulesandGettingHelp.rst
+   EthicsAndCodeOwnership.rst
    Therandommodule.rst
    ExploringTurtleModule.rst
    InstancesAHerdofTurtles.rst
