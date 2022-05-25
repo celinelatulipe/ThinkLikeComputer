@@ -11,82 +11,9 @@
    :prefix: func-3-
    :start: 1
 
-Introduction: Function Parameters
----------------------------------
 
-Functions are nice because we can call them repeatedly to execute the same set of code over and over again. With parameters, functions are even more powerful, because they can do
-pretty much the same thing on each invocation, but with slight variation, accoding to the values you send to the function. We've played a lot with turtles, and in Chapter 6 we created two different turtle functions to have a turtle draw a small square and a big square repeatedly to make a flower image:
-
-.. activecode:: ac9_1_1a
-    :nocodelens:
-
-    import turtle
-
-    def draw_small_square():
-        """Make turtle alex draw a square of with side 50."""
-
-        for _ in range(4):
-            alex.forward(50)
-            alex.left(90)
-
-    def draw_big_square():
-        """Make turtle alex draw a square of with side 100."""
-
-        for _ in range(4):
-            alex.forward(100)
-            alex.left(90)
-
-    wn = turtle.Screen()      # Set up the window and its attributes
-    alex = turtle.Turtle()    # create alex
-    alex.speed(10)            # make alex draw fast
-
-    turn_angle = 15           # store a turn angle
-
-    for _ in range(12):       # loop 12 times to go around in a circle
-        alex.color("red")
-        alex.right(turn_angle) # turn by 15 degrees
-        draw_big_square()      # Call the function to draw the big square
-
-        alex.color("blue")
-        alex.right(turn_angle) # turn by 15 degrees
-        draw_small_square()      # Call the function to draw the small square
-
-    wn.exitonclick()
- 
-With the use of parameters, we can simplify this code so that only one function is needed, and so that it will work for 
-any turtle, not just a turtle named alex:
-
-.. activecode:: ac9_1_2a
-    :nocodelens:
-
-    import turtle
-
-    def draw_square(tur, size):
-        """Make tur draw a square with side length size."""
-
-        for _ in range(4):
-            tur.forward(size)
-            tur.left(90)
-
-    wn = turtle.Screen()      # Set up the window and its attributes
-    alex = turtle.Turtle()    # create alex
-    alex.speed(10)            # make alex draw fast
-
-    turn_angle = 15           # store a turn angle
-
-    for _ in range(12):       # loop 12 times to go around in a circle
-        alex.color("red")
-        alex.right(turn_angle) # turn by 15 degrees
-        draw_square(alex, 100)      # Call draw_square with large side length
-
-        alex.color("blue")
-        alex.right(turn_angle) # turn by 15 degrees
-        draw_square(alex, 50)      # Call draw_square with small side length
-
-    wn.exitonclick()
-
-In this chapter we will explain all the details of how to construct and call functions with parameters.
-
+Function Parameters
+-------------------
 
 .. youtube:: Ndw_EgFO_tw
     :divid: goog_function_parms
@@ -94,8 +21,8 @@ In this chapter we will explain all the details of how to construct and call fun
     :width: 560
     :align: left
 
-The figure below shows this relationship. A function needs certain information to do its work. These values, often
-called **arguments** or **actual parameters** or **parameter values**, are passed to the function by the user.
+Parameters make functions more powerful because they enable the function to operate with slight variation by passing in pieces of information that the function needs in order to do its work. These values, often
+called **arguments** or **actual parameters** or **parameter values**, are passed to the function by the programmer. It is important to note that the programmer who wrote the function may be a different person than the programmer who uses the function. Here is a representation of a function that takes in information through parameters:
 
 .. image:: Figures/blackboxproc.png
 

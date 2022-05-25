@@ -19,12 +19,12 @@ illustrations of return values in intro texts like this one show the returned va
 it, as in ``print(square(g(2)))``.
 
 The print statement is fairly easy to understand. It takes a python object and outputs a printed representation of it 
-in the output window. You can think of the print statement as something that takes an object from the land of the 
-program and makes it visible to the land of the human observer.
+in the output console. In this Runestone book, that shows up in the little window beneath the activecode area. You can think of the print statement as something that takes an object from the land of the 
+program and makes it visible to the land of the programmer.
 
 .. note::
 
-   **Print is for people**. Remember that slogan. Printing has no effect on the ongoing execution of a program. It doesn't assign a value to a variable. It doesn't return a value from a function call.
+   **Print is for programmers**. Remember that slogan. Printing has no effect on the ongoing execution of a program. It doesn't assign a value to a variable. It doesn't return a value from a function call.
 
 If you're confused, chances are the source of your confusion is really about returned values and the evaluation of 
 complex expressions. A function that returns a value is producing a value for use *by the program*, in particular for 
@@ -45,8 +45,7 @@ you use the result of the function call for? There are three possibilities.
     The returned value may be:
     
     * Assigned to a variable. For example, ``w = square(3)``
-    * Put in a list. For example, ``L.append(square(3))``
-    * Put in a dictionary. For example, ``d[3] = square(3)``
+    * Put in a list. For example, ``L.append(square(3))`` (We'll learn about append in the next chapter!)
 
 #. Use it in a more complex expression. 
     In that case, think of the return value as 
@@ -56,8 +55,8 @@ you use the result of the function call for? There are three possibilities.
 
 #. Print it for human consumption. 
     For example, ``print(square(3))`` outputs 9 to the
-    output area. Note that, unless the return value is first  saved as in possibility 1, it will be available
-    only to the humans watching the output area, not to the program as it continues executing.
+    console. Note that, unless the return value is first  saved as in possibility 1, it will be available
+    only to the programmer watching the console, not to the program as it continues executing.
 
 If your only purpose in running a function is to make an output visible for human consumption, there are two ways to 
 do it. You can put one or more print statements inside the function definition and not bother to return anything from 

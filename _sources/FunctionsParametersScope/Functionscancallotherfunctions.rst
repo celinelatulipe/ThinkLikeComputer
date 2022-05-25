@@ -58,41 +58,73 @@ Also notice that when ``square`` is called (at Step 8, for example), there are t
 ``square`` and one for ``sum_of_squares``.  Each group of local variables is called a **stack frame**. The variables 
 ``x``, and ``y`` are local variables in both functions. These are completely different variables, even though they
 have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice 
-that at step 9, y has the value 25 is one frame and 2 in the other.  
+that at step 9, y has the value 25 in one frame and 2 in the other.  
 
 What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the 
-``square`` function. If it didn't find it there, it would go look in the global frame.  
+``square`` function. If it didn't find it there, it would go look in the global frame. 
 
-Let's use composition to build up a little more useful function. Recall from the dictionaries chapter that we had a two-step process for finding the letter that appears most frequently in a text string:
+In the example below, we create a turtle drawing program that uses function composition.
 
-1. Accumulate a dictionary with letters as keys and counts as values. See :ref:`example <accumulating_counts>`.
-2. Find the best key from that dictionary. See :ref:`example <accumulating_best_key>`.
+.. activecode:: ac9_8_1a
+   :nocodelens:
 
-We can make functions for each of those and then compose them into a single function that finds the most common letter.
+   import turtle
+   import random
 
-.. activecode:: ac_11_9_1
+   def random_col(tur):
+        """ Sets turtle to a random color """
+        red = random.random()
+        green = random.random()
+        blue = random.random()
+        tur.color(red, green, blue)
+   
 
-    def most_common_letter(s):
-        frequencies = count_freqs(s)
-        return best_key(frequencies)
+   def random_location(tur):
+        """ Take turtle to a random location on canvas
+        Pre-conditions: Assume canvas is 400 x 400 """
+        x = random.randrange(-180, 180) # get random x location
+        y = random.randrange(-180, 180) # get random y location
+        tur.penup()
+        tur.goto(x,y) # move to location without drawing
+        tur.pendown()
 
-    def count_freqs(st):
-        d = {}
-        for c in st:
-            if c not in d:
-                 d[c] = 0
-            d[c] = d[c] + 1
-        return d
+   def draw_triangle(tur, side_length):
+       """ draws a triangle in current position and color"""
+       for _ in range(3):
+           tur.forward(side_length)
+           tur.left(120)
+         
 
-    def best_key(dictionary):
-        ks = dictionary.keys()
-        best_key_so_far = list(ks)[0]  # Have to turn ks into a real list before using [] to select an item
-        for k in ks:
-            if dictionary[k] > dictionary[best_key_so_far]:
-                best_key_so_far = k
-        return best_key_so_far
+   def draw_square(tur, side_length):
+       """ draws a square in current position and color"""
+       for _ in range(4):
+           tur.forward(side_length)
+           tur.left(90)
 
-    print(most_common_letter("abbbbbbbbbbbccccddddd"))
+   def draw_design(tur, side_length):
+       """ draws a square with two internal triangles """
+       random_location(tur)
+       random_col(tur)
+       draw_square(tur, side_length)
+       draw_triangle(tur, side_length)
+       tur.forward(side_length)
+       tur.left(90)
+       tur.forward(side_length)
+       tur.left(90)
+       draw_triangle(tur, side_length)
+
+
+   wn = turtle.Screen()
+   yan = turtle.Turtle() 
+   yan.speed(10)
+
+   for _ in range(10):
+        side = random.randrange(30, 100)
+        draw_design(yan, side)
+
+
+
+The turtle example above has 5 different functions. Two of them are **helper functions** that move a turtle to a random location and set a turtle to draw in a random color. The other three are drawing functions that cause the turtle to draw things. The global part of the code (lines -) create the window and the turtle and sets the turtle speed to 10 so the turtle draws quickly. Then there is a for loop that iterates 10 times. Each time through the loop a new random size is generated and then the draw_design() function is called with the random size. The draw_design function calls the other four functions, ane even calls the draw_triangle function twice.
 
 **Check your Understanding**
 

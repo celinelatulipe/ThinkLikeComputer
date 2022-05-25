@@ -76,51 +76,6 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: ac11_15_4
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Afunctionthataccumulates
-
-   Write a function, ``accum``, that takes a list of integers as input and returns the sum of those integers.
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testFourA(self):
-         self.assertEqual(accum([5]), 5, "Tests that accum([5]) returns 5")
-         self.assertEqual(accum([]), 0, "Tests that accum([]) returns 0")
-         self.assertEqual(accum([2,4,6,8]), 20, "Tests that accum([2,4,6,8]) returns 20")
-
-   myTests().main()
-
-.. activecode:: ac11_15_5
-   :language: python
-   :autograde: unittest
-   :practice: T
-   :topics: Functions/Returningavaluefromafunction
-
-   Write a function, ``length``, that takes in a list as the input. If the length of the list is greater than or equal to 5, return "Longer than 5". If the length is less than 5, return "Less than 5".
-   ~~~~
-
-   =====
-
-   from unittest.gui import TestCaseGui
-
-   class myTests(TestCaseGui):
-
-      def testFive(self):
-         self.assertEqual(length([]), "Less than 5", "Tests that length([]) returns 'Less than 5'")
-         self.assertEqual(length([2, 2]), "Less than 5", "Tests that length([2, 2]) returns 'Less than 5'")
-         self.assertEqual(length([4, 4, 4, 3, 5, 6, 7, 8, 9]), "Longer than 5", "Tests that length([4, 4, 4, 3, 5, 6, 7, 8, 9]) returns 'Longer than 5'")
-         self.assertEqual(length([1, 1, 1, 1, 1]), "Longer than 5", "Tests that length([1, 1, 1, 1, 1]) returns 'Longer than 5'")
-
-   myTests().main()
-
 .. activecode:: ac11_15_6
    :language: python
    :autograde: unittest

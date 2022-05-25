@@ -5,7 +5,8 @@ Function Parameters, Return Values and Scope
    :caption: Function Parameters, Return Values & Scope
    :maxdepth: 2
 
-   intro-FunctionParameters.rst
+   intro-FunctionsPart_II.rst
+   FunctionParameters.rst
    Returningavaluefromafunction.rst
    DecodingaFunction.rst
    TypeAnnotations.rst
@@ -15,9 +16,10 @@ Function Parameters, Return Values and Scope
    Functionscancallotherfunctions.rst
    FlowofExecutionSummary.rst
    Printvsreturn.rst
-   PassingMutableObjects.rst
-   SideEffects.rst
+   ListenerFunctionsWithParameters.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
-      
+
+.. PassingMutableObjects.rst
+.. SideEffects.rst

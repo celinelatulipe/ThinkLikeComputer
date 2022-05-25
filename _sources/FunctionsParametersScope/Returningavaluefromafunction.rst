@@ -11,8 +11,8 @@
    :prefix: func-4-
    :start: 1
 
-Returning a value from a function
----------------------------------
+Return Values 
+-------------
 
 .. image:: Figures/function_call.gif
    :alt: gif of a box labeled function with three spaces on the top for input and a space on the bottom for output. Three arrows enter the top and are labeled as input or arguments. The function box shakes, and then one arrow leaves the bottom of the function box.
