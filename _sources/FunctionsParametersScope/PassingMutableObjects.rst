@@ -14,7 +14,7 @@
 Passing Mutable Objects
 -----------------------
 
-Take a look at the following code example. Can you predict what will happen when you run it?
+Take a look at the following code example. Can you predict what is printed out?
 
 .. activecode:: ac11_12_1
    
@@ -26,12 +26,12 @@ Take a look at the following code example. Can you predict what will happen when
    print(num)
 
 Use **Show CodeLens** to step through the code to see why the assignment to the formal parameter ``y``
-inside ``double`` did not affect the argument ``num``. An assignment to a formal parameter inside a function **never**
+inside ``double`` (line 2) did not affect the argument ``num``. An assignment to a formal parameter inside a function **never**
 affects the argument in the caller.
 
 On the other hand, if you are passing a mutable object, such as a list, to a function, and the function alters the
 object's state, that state change will be visible to the caller when the function returns. Take a look at the following
-example.
+example. 
 
 .. activecode:: ac11_12_2
      
@@ -44,7 +44,7 @@ example.
    print(mylst)
 
 Try stepping through this in codelens to see what happens. The state of the list referenced by ``lst`` is altered
-by ``changeit``, and since ``mylst`` is an alias for ``lst``, ``mylst`` is affected by the actions taken by the function.
+by ``changeit``, and since ``lst`` is an alias for ``mylst``, ``mylst`` is affected by the actions taken by the function.
 
 Look closely at this line::
 
@@ -60,7 +60,7 @@ To see that difference, try changing that line to the following::
 Then, run again. This time, ``mylist`` is not altered. To understand why, use CodeLens to step carefully through the code
 and observe how the assignment to ``lst`` causes it to refer to a separate list.
 
-Take a moment to experiment some more with the ``changeit`` function. Change the body of the function to the following::
+Take a moment to experiment some more with the ``changeit`` function. Change the body of the function to the following:
 
     lst.append("Michigan Wolverines")
 
@@ -71,6 +71,7 @@ Then, try again with this as the body::
     lst = lst + ["Michigan Wolverines"]
 
 Step through using CodeLens. Here, we create a new list using the concatenation operator, and ``mylst`` is not affected by the change.
+
 
 Understanding the techniques that functions can and cannot use to alter the state of mutable parameters is important.
 You may want to take some time to study the information on this page more thoroughly and play with the examples until
