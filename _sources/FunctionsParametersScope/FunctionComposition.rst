@@ -19,8 +19,8 @@
     composition
     function; composition
 
-Functions can call other functions (Composition)
-------------------------------------------------
+Function Composition (functions calling functions)
+--------------------------------------------------
 
 It is important to understand that each of the functions we write can be used and called from other functions we 
 write. This is one of the most important ways that computer programmers take a large problem and break it down into a 
@@ -118,13 +118,13 @@ In the example below, we create a turtle drawing program that uses function comp
    yan = turtle.Turtle() 
    yan.speed(10)
 
-   for _ in range(10):
+   for _ in range(5):
         side = random.randrange(30, 100)
         draw_design(yan, side)
 
 
 
-The turtle example above has 5 different functions. Two of them are **helper functions** that move a turtle to a random location and set a turtle to draw in a random color. The other three are drawing functions that cause the turtle to draw things. The global part of the code (lines -) create the window and the turtle and sets the turtle speed to 10 so the turtle draws quickly. Then there is a for loop that iterates 10 times. Each time through the loop a new random size is generated and then the draw_design() function is called with the random size. The draw_design function calls the other four functions, ane even calls the draw_triangle function twice.
+The turtle example above has 5 different functions. Two of them are **helper functions** that move a turtle to a random location and set a turtle to draw in a random color. The other three are drawing functions that cause the turtle to draw things. The global part of the code (lines 47-53) create the window and the turtle and sets the turtle speed to 10 so the turtle draws quickly. Then there is a for loop that iterates 10 times. Each time through the loop a new random size is generated and then the draw_design() function is called with the random size. The draw_design function calls the other four functions, ane even calls the draw_triangle function twice.
 
 **Check your Understanding**
 

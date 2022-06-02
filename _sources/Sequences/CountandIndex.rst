@@ -11,26 +11,28 @@
    :prefix: sequences-8-
    :start: 1
 
-Count and Index
-===============
-
-As you create more complex programs, you will find that some tasks are commonly done. Python has some 
-built-in functions and methods to help you with these tasks. This page will cover two helpful methods 
-for both strings and lists: count and index.
+Count and Index Methods
+=======================
 
 You've learned about methods before when drawing with the turtle module. There, you used 
-``.forward(50)`` and ``.color("purple")`` to complete actions. We refer to forward and color as methods 
-of the turtle class. Objects like strings and lists also have methods that we can use.
+``.forward(50)`` and ``.color("purple")`` to complete actions. We refer to forward() and color() as methods 
+of the turtle class. Objects like strings, tuples, and lists also have methods that we can use.
+
+As you create more complex programs, you will find that some tasks are commonly done and Python objects often have
+built-in methods to help you with these tasks. This page will cover two helpful methods 
+that can be called on sequence objects like strings, lists and tuples: count() and index().
+
 
 Count
 -----
 
-The first method we'll talk about is called ``count``. It requires that you provide one argument, which 
+The first method we'll talk about is called ``count``. You can call the count() method on any string, list, or tuple, by using 
+``variable_name.count(<itemtocount>)``. The count() method requires that you provide one argument, which 
 is what you would like to count. The method then returns the number of times that the argument occured 
-in the string/list the method was used on. There are some differences between count for strings and 
+in the string/list/tuple the method was used on. There are some differences between count for strings and 
 count for lists. When you use count on a string, the argument can only be a string. You can't count how 
 many times the integer 2 appears in a string, though you can count how many times the string "2" appears 
-in a string. For lists, the argument is not restricted to just strings.
+in a string. For lists and tuples, the argument can be any type: a string, an integer, a floating point number, a boolean value, etc.
 
 .. activecode:: ac5_8_1
    
@@ -51,7 +53,7 @@ using count on.
    print(z.count("electron"))
 
 When you run the activecode window above, you'll see how count with a list works. Notice how "4" has a 
-count of zero but 4 has a count of three? This is because the list ``z`` only contains the integer 4. 
+count of zero but 4 has a count of three. This is because the list ``z`` only contains the integer 4. 
 There are never any strings that are 4. Additionally, when we check the count of "a", we see that the 
 program returns zero. Though some of the words in the list contain the letter "a", the program is 
 looking for items in the list that are *just* the letter "a". 
@@ -61,7 +63,7 @@ Index
 
 The other method that can be helpful for both strings and lists is the ``index`` method. The ``index`` 
 method requires one argument, and, like the ``count`` method, it takes only strings when index is used 
-on strings, and any type when it is used on lists. For both strings and lists, ``index`` returns the 
+on strings, and any type when it is used on lists/tuples. For any sequence type, ``index`` returns the 
 leftmost index where the argument is found. If it is unable to find the argument in the string or list, 
 then an error will occur.
 
@@ -91,7 +93,20 @@ Here's another example.
 
 In the activecode window above, we're trying to see where "autumn" is in the list seasons. However, 
 there is no string called autumn (though there is string called "fall" which is likely what the program 
-is looking for). Remember that an error occurs if the argument is not in the string or list.
+is looking for). Remember that an error occurs if the argument is not in the string or list. This seems problematic:
+it seems like you can't ask for the index of something in a list/tuple without potential causing your program to crash. The
+solution to this is to first use the **in** operator to check if the item exists in the sequence, and then, if it does, ask for the index. See
+the above example modified below:
+
+.. activecode:: ac5_8_5
+
+   seasons = ["winter", "spring", "summer", "fall"]
+
+   if "autumn" in seasons:
+        print(seasons.index("autumn"))  
+   else:
+        print('"autumn" is not in the list of seasons.')
+
 
 **Check your understanding**
 

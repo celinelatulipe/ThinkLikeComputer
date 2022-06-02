@@ -11,15 +11,14 @@ Function Parameters, Return Values and Scope
    DecodingaFunction.rst
    TypeAnnotations.rst
    Afunctionthataccumulates.rst
-   Variablesandparametersarelocal.rst
-   GlobalVariables.rst
-   Functionscancallotherfunctions.rst
+   LocalGlobalVariablesScope.rst
+   FunctionComposition.rst
    FlowofExecutionSummary.rst
    Printvsreturn.rst
+   FunctionSideEffects.rst
    ListenerFunctionsWithParameters.rst
    Glossary.rst
    Exercises.rst
    ChapterAssessment.rst
 
 .. PassingMutableObjects.rst
-.. SideEffects.rst
