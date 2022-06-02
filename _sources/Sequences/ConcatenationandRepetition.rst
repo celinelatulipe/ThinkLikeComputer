@@ -13,34 +13,40 @@
 
 .. index::
    single: +; list concatenation
-   single: *; list repetition
 
 
 Concatenation and Repetition
-----------------------------
+============================
 
-Again, as with strings, the ``+`` operator concatenates lists.  
-Similarly, the ``*`` operator repeats the items in a list a given number of times.
 
-.. activecode:: ac5_7_1
+Concatenation
+-------------
 
-    fruit = ["apple","orange","banana","cherry"]
-    print([1,2] + [3,4])
-    print(fruit+[6,7,8,9])
+As with strings, the ``+`` operator concatenates lists and tuples.  
 
-    print([0] * 4)
+.. activecode:: ac10_6_1
 
-It is important to see that these operators create new lists from the elements of the operand lists.  
+    fruit1 = ["apple","orange","banana","cherry"]
+    fruit2 = ["kiwi", "pineapple", "mango", "strawberry", "blueberry", "rhubarb"]
+    veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+    veggies2 = ("celery", "onion", "cauliflower", "bok choy", "tomato", "pepper")
+    all_fruit = fruit1 + fruit2
+    print(all_fruit)
+    print(fruit1)
+    all_veg = veggies1 + veggies2
+    print(all_veg)
+    print(veggies2)
+
+It is important to see that these operators create new lists/tuples from the elements of the operand lists/tuples.  
 If you concatenate a list with 2 items and a list with 4 items, you will get a new list with 6 items 
-(not a list with two sublists).  Similarly, repetition of a list of 2 items 4 times will give a list 
-with 8 items.
+(not a list with two sublists). 
 
-One way for us to make this more clear is to run a part of this example in codelens.  
+One way for us to make this more clear is to run a part of this example in CodeLens.  
 As you step through the code, you will see the variables being created and the lists that they refer to. 
 Pay particular attention to the fact that when ``newlist`` is created by the statement 
-``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the codelens object diagram.  The objects are different.
+``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the CodeLens object diagram.  The objects are different.
 
-.. codelens:: clens5_7_1
+.. codelens:: ac10_6_2
     :python: py3
 
     fruit = ["apple","orange","banana","cherry"]
@@ -48,7 +54,6 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
 
     newlist = fruit + numlist
 
-    zeros = [0] * 4
 
 .. note:: WP: Adding types together
 
@@ -58,6 +63,47 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
     case, it means putting the string into its own list and then adding the two together like so: 
     ``['first'] + ["second"]``. This process will look different for other types though. Remember that there
     are functions to convert types!
+
+
+The following code won't run, because the third line attempts to add two different types (a list and a tuple). Run it to see the error. 
+
+.. activecode:: ac10_6_3
+
+    fruit1 = ["apple","orange","banana","cherry"]
+    veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+    produce_basket = fruit1 + veggies1
+    print(produce_basket)
+
+Fix the error above by converting veggies1 to a list in the expression on line 3: ``list(veggies1)``
+
+Repetition
+----------
+
+Similarly, the ``*`` operator repeats the items in a list or tuple a given number of times.  So, repetition of a list of 2 items 4 times will give a list 
+with 8 items.
+
+
+.. activecode:: ac10_6_4
+
+    fruit1 = ["apple","orange","banana","cherry"]
+    veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+    many_fruit = fruit1 * 3
+    print("Many fruits: ", many_fruit)
+    print(fruit1) # doesn't change original list!
+    many_veg = veggies1 * 4
+    print("Many veggies:", many_veg)
+    print(veggies1) # doesn't change original tuple!
+
+As with concatenation, these operations do not have any effect on the input lists/tuples, they create new lists. You can reassign the new list back to the same variable name though: 
+
+.. activecode:: ac10_6_5
+
+    fruit1 = ["apple","orange","banana","cherry"]
+    print(fruit1)
+    fruit1 = fruit1 * 3
+    print(fruit1)
+
+
 
 **Check your understanding**
 

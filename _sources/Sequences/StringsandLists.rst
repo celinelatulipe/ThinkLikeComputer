@@ -11,15 +11,13 @@
    :prefix: sequences-2-
    :start: 1
 
-Strings and Lists
-=================
+Strings, Lists and Tuples
+=========================
 
 Throughout the first chapters of this book we have used strings to represent words or phrases that we
-wanted to print out. Our definition was simple: a string is simply some characters inside quotes.
-In this chapter we explore strings in much more detail.
-
-Additionally, we explore lists, which are very much like strings but can hold different types.
-
+wanted to print out. Our definition was simple: a string is simply some characters inside quotes. A string is like a list, but can hold different types of objects.
+In Chapter 5, when we introduced for loops, we introduced the index operator to access individual characters of a string while iterating over a string and we introduced lists of items that we can iterate over as well.
+In this chapter, we explore strings and lists in much more detail. 
 
 Strings
 -------
@@ -90,11 +88,12 @@ that consists of multiple other expressions, separated by commas.
 
     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
 
-The key difference between lists and tuples is that a tuple is immutable, meaning that its contents can't be changed after the tuple is
-created. We will examine the mutability of lists in detail in the chapter on :ref:`Mutability <mutability>`.
+The key difference between lists and tuples is that a tuple is **immutable**, meaning that its contents can't be changed after the tuple is
+created. So, once a tuple is created, it's not possible to add another value to it, to remove a value from it, or replace any of the values in the tuple. 
 
-To create a tuple with a single element (but you're probably not likely to do that too often), we have to include the
-final comma, because without the final comma, Python treats the ``(5)`` below as an integer in parentheses:
+.. We will examine the mutability of lists in detail in the chapter on :ref:`Mutability <mutability>`.
+
+To create a tuple with a single element (but you're probably not likely to do that too often), you have to include a comma after the item, because without that comma, Python treats the item as a string, float or integer. For example, in the code below, Python treats ``(5)`` as an integer in parentheses, but treats ``(5,)`` as a tuple:
 
 .. activecode:: ac5_2_1
 
@@ -103,6 +102,22 @@ final comma, because without the final comma, Python treats the ``(5)`` below as
 
     x = (5)
     print(type(x))
+
+You might wonder why anyone would create a tuple - what's the point of data that can't be changed? Tuples are often used for exactly that purpose - to create data that can't be accidentally tampered with. For really important information, it may be criticial to be able to verify that data was not edited after it was entered/created.
+
+
+Index Operator: Accessing Elements of a String, List or Tuple
+-------------------------------------------------------------
+
+In Chapter 5, we introduced the index operator and how it is used to access elements of a string or list. We review this briefly here - the index operator applies to tuples in the same way.
+
+We use the index operator ( ``[]``) to access an individual element of a string, list, or tuple.  The expression inside the brackets specifies
+the index and must evaluate to an integer (the 3.75th element of a list doesn't make any sense!). Remember that indices start at 0. Any integer expression can be used
+as an index and a negative index value will locate items from the right instead
+of from the left.
+
+While we are taught as children to count from 1, in most programming languages we count/index from zero. This means that when we talk about the first item, we need to remember that is at index 0, and when we talk about the second item, it is at index 1. The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean! If you find indexing from zero weird, it might help to think about the index as **the offset from the first position** in the list, tuple, or string. So if we declare a string variable like this: ``greeting = "hello"``, the letter 'e' is offset by 1 from the first character and we access the 'e' by using ``greeting[1]``. 
+
 
 
 **Check your understanding**

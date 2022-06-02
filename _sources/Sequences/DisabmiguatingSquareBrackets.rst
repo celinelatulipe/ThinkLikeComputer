@@ -49,7 +49,7 @@ Though it may be easier to distinguish in this above activecode, below may be a 
    print(n_lst)
 
 Here, we see a list called ``lst`` being assigned to a list with one element, zero. Then, we see how ``n_lst`` is assigned 
-the value associated with the first element of lst. Dispite the variable names, only one of the above variables is 
+the value associated with the first element of lst. Despite the variable names, only one of the above variables is 
 assigned to a list. Note that in this example, what sets creating apart from indexing is the reference to the list to let 
 python know that you are extracting an element from another list.
 

@@ -7,13 +7,14 @@ Sequences
 
    intro-Sequences.rst
    StringsandLists.rst
-   IndexOperatorWithListsAndTuples.rst
    DisabmiguatingSquareBrackets.rst
    Length.rst
    TheSliceOperator.rst
    ConcatenationandRepetition.rst
    CountandIndex.rst
    SplitandJoin.rst
+   PassingMutableObjects.rst
+   MutableObjectSideEffects.rst
    Exercises.rst
    week2a1.rst
    

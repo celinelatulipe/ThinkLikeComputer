@@ -23,10 +23,10 @@ of words. By default, any number of whitespace characters is considered a word b
 .. activecode:: ac5_9_1
 
     song = "The rain in Spain..."
-    wds = song.split()
-    print(wds)
+    wd_lst = song.split()
+    print(wd_lst)
 
-An optional argument called a **delimiter** can be used to specify which characters to use as word boundaries.
+An optional argument called a **delimiter** can be used to specify which character(s) to use as word boundaries.
 
 .. image:: Figures/split_on_e.jpeg
    :alt: shows example of splitting "leaders and best" on "e"
@@ -36,8 +36,8 @@ The following example uses the string ``ai`` as the delimiter:
 .. activecode:: ac5_9_2
 
     song = "The rain in Spain..."
-    wds = song.split('ai')
-    print(wds)
+    wd_lst = song.split('ai')
+    print(wd_lst)
 
 Notice that the delimiter doesn't appear in the result.
 
@@ -50,18 +50,18 @@ and join the list with the glue between each of the elements.
 
 .. activecode:: ac5_9_3
 
-    wds = ["red", "blue", "green"]
+    wd_lst = ["red", "blue", "green"]
     glue = ';'
-    s = glue.join(wds)
+    s = glue.join(wd_lst)
     print(s)
-    print(wds)
+    print(wd_lst)
 
-    print("***".join(wds))
-    print("".join(wds))
+    print("***".join(wd_lst))
+    print("".join(wd_lst))
 
 
-The list that you glue together (``wds`` in this example) is not modified.  Also,
-you can use empty glue or multi-character strings as glue.
+The list that you glue together (``wd_lst`` in this example) is not modified.  Also,
+you can use empty glue (see line 8 above) or multi-character strings (see line 7 above) as glue.
 
 **Check your understanding**
 

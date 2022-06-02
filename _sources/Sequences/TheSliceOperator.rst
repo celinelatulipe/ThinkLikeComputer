@@ -36,7 +36,7 @@ Or with normal counting from 1, this is the (n+1)st character up to and includin
 
 If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
-end of the string.
+end of the string. What do you think ``fruit[:]`` means?.
 
 .. activecode:: ac5_6_2
 
@@ -44,12 +44,22 @@ end of the string.
     print(fruit[:3])
     print(fruit[3:])
 
-What do you think ``fruit[:]`` means?
+It's important to note that slicing a string does not change the original string (remember - strings are immutable, you can make a copy but once a string is created, it never changes). So if you want to do something with a slice of a string, you can either embed it in an expression, or you can save it to a variable, as in the example below, where we take slices of two strings, concatenate them with a hyphen in between and assign that to a new variable. Note that the original strings have not been changed. 
+
+
+.. activecode:: ac10_5_3a
+
+    parent1_name = "Janus Franklin"
+    parent2_name = "Raj Singh"
+    kids_last_name = parent1_name[6:] + "-" + parent2_name[4:]
+    print("First parent's name: ", parent1_name)
+    print("Second parent's name: ", parent2_name)
+    print("Kid's last name: ", kids_last_name)
 
 List Slices
 ===========
 
-The slice operation we saw with strings also work on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
+The slice operation we saw with strings also works on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
 that if you omit the first index (before the colon), the slice starts at the
 beginning of the sequence. If you omit the second index, the slice goes to the
 end of the sequence.
@@ -69,7 +79,7 @@ Tuple Slices
 We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information.
 Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can
 slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might
-want to change her tuple. We can easily slice off the parts we want and concatenate them with the new tuple.
+want to change her tuple. We can easily slice off the parts we want and concatenate them with a new tuple.  
 
 .. activecode:: ac5_6_4
 
@@ -82,7 +92,7 @@ want to change her tuple. We can easily slice off the parts we want and concaten
     julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
     print(julia)
 
-
+The observant student might notice that the code above appears to modify the tuple assigned to the variable julia. Didn't we say that tuples are immutable? What's happening on line 7 in the above example is that a new tuple is being created, using parts of the old tuple and some new information, and then it is being assigned back to the reference variable julia. This very subtle difference (which unfortunately does not really show in CodeLens) becomes important when we start passing sequences as function parameters later in this chapter.
 
 **Check your understanding**
 
