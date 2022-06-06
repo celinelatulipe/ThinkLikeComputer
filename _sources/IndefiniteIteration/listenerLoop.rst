@@ -19,18 +19,18 @@
 
 .. _listener_loop:
 
-The Listener Loop
-=================
+The Input Listener Loop
+=======================
 
 At the end of the previous section, we advised using a for loop whenever it will be known at the beginning of the
-iteration process how many times the block of code needs to be executed. Usually, in python, you will use a for loop
+iteration process how many times the block of code needs to be executed. Usually, in Python, you will use a for loop
 rather than a while loop. When is it *not* known at the beginning of the iteration how many times the code block needs
-to be executed? The answer is, when it depends on something that happens during the execution.
+to be executed? The answer is, when it depends on something that happens **during** the execution.
 
 One very common pattern is called a **listener loop**. Inside the while loop there is a function call to get user input.
-The loop repeats indefinitely, until a particular input is received.
+The loop repeats indefinitely, until a particular input is received. 
 
-.. activecode:: ac14_3_1
+.. activecode:: ac11_3_1a
 
    theSum = 0
    x = -1
@@ -50,6 +50,72 @@ least once.
 
 If you're at all unsure about how that code works, try adding print statements inside the while loop that print out the
 values of x and theSum.
+
+You've seen a related example to this with our interactive turtle programs that have listener functions:
+
+.. activecode:: ac11_3_2a
+    :nocodelens:
+   
+    import turtle
+    import random
+
+    def random_square(tur):
+        """ Post-Condition: square with random small size 
+            is drawn at turtle's current location """
+        side = random.randrange(10, 30) # get random size
+        for _ in range(4): #draw a square in location
+            tur.forward(side)
+            tur.left(90)
+        return tur
+
+    def random_location(tur):
+        """ Post-Condition: turtle is moved to a random location on canvas
+            Pre-conditions: Assume canvas is 400 x 400 """
+        x = random.randrange(-200, 200) # get random x location
+        y = random.randrange(-200, 200) # get random y location
+        tur.penup() 
+        tur.goto(x,y) # move to location without drawing
+        tur.pendown()
+        return tur
+
+    def random_colour(tur):
+        """ Post-Condition: turtle is a random colour """
+        tur.color(random.random(), random.random(), random.random())
+        return tur
+
+    def key_r():
+        """ draw randomly coloured and positioned square """
+        global alex
+        alex = random_colour(alex)
+        alex = random_location(alex)
+        alex = random_square(alex)
+
+    def key_q():
+        """ close the canvas window """
+        wn.bye()
+
+    def click(x, y):
+        """ go to clicked location, pick random color and draw square """
+        global alex
+        alex.penup()
+        alex.goto(x, y)
+        alex.pendown()
+        alex = random_colour(alex)
+        alex = random_square(alex)
+
+    wn = turtle.Screen()      # Set up the window and its attributes
+    alex = turtle.Turtle()    # create alex
+    alex.speed(10)            # make alex draw fast
+    alex = random_colour(alex)
+    alex = random_location(alex)
+    alex = random_square(alex)
+
+    wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()' when the 'r' key is pressed on the keyboard
+    wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
+    wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
+    wn.listen()             # tell the operating system to listen for events on the canvas window
+
+In this turtle example, the last line of the code is wn.listen(). This allows us to rely on the built-in event loop that the turtle module provides. We don't have to write the listening loop ourselves, we just tell the turtle module what events we want to listen for (the three lines of code right before the last line). The turtle graphics module will just listen for these events, in a loop, until we quit, which causes the canvas to be destroyed and the main event loop ends.
 
 Other uses of ``while``
 ------------------------------
@@ -124,8 +190,6 @@ There are still a few problems with this program.
 * If you enter zero the first time you are asked for a price, the loop will end, and the program
   will try to divide by zero. Use an ``if``/``else`` statement outside the loop to avoid the
   division by zero and tell the user that you can't compute an average without data.
-* This program doesn't display the amounts to two decimal places. You'll be introduced to that in another
-  chapter.
 
 Validating Input
 ~~~~~~~~~~~~~~~~~~~
@@ -135,8 +199,6 @@ sure the user has entered valid input for a prompt. Let's say you want a functio
 that asks a yes-or-no question. In this case, you want to make sure that the person using
 your program enters either a Y for yes or N for no (in either upper or lower case).
 Here is a program that uses a ``while`` loop to keep asking until it receives a valid answer.
-As a preview of coming attractions, it uses
-the ``upper()`` method which is described in String Methods to convert a string to upper case.
 When you run the following code, try typing something other than Y or N to see how the code reacts:
 
 .. activecode:: ac14_3_3
