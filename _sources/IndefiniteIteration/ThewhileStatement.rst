@@ -20,30 +20,47 @@ The ``while`` Statement
     :width: 560
     :align: left
 
-There is another Python statement that can also be used to build an iteration. It is called the ``while`` statement.
-The ``while`` statement provides a much more general mechanism for iterating. Similar to the ``if`` statement, it uses
-a boolean expression to control the flow of execution. The body of while will be repeated as long as the controlling
+The ``while`` statement in Python provides a more general mechanism for iterating. Similar to the ``if`` statement, it uses
+a boolean expression to control the flow of execution. The body of the while loop will be repeated as long as the controlling
 boolean expression evaluates to ``True``.
 
-The following two figures show the flow of control. The first focuses on the flow inside the while loop and the second
-shows the while loop in context.
-
+The following two figures show the flow of control. This shows the flow inside the while loop:
 .. image:: Figures/while_flow.png
    :alt: a diamond at the top has the phrase "Is the condition True?". Two arrows come out it with either the phrase yes or no on the arrows. The yes arrow points to a box that says "evaluate the statemenets in the body of the loop". It then has an arrow that unconditionally points back to "Is the condition True?" diamond. The no arrow escapes the loop and points down past the "evaluate" square.
+
+
+This shows the while loop in context:
+
 
 .. image:: Figures/while_loop.png
    :alt: image showing a rectangle with "code block" written on it on top. Then, text that read "while {condition}": followed by an indented block with "run if {condition} is True" written on it. An arrow points from the bottom of the indented block to the top of the while loop and says "run loop again". At the bottom of the image is an unindented block that says the phrase "code block."
 
 We can use the ``while`` loop to create any type of iteration we wish, including anything that we have previously
-done with a ``for`` loop. For example, the program in the previous section could be rewritten using ``while``.
-Instead of relying on the ``range`` function to produce the numbers for our summation, we will need to produce them
-ourselves. To do this, we will create a variable called ``aNumber`` and initialize it to 1, the first number in the
+done with a ``for`` loop. For example, we have seen programs that look like this when we learned about for loops:
+
+.. activecode:: ac11_2_1a
+   
+   def sumTo(aBound):
+      """ Return the sum of 1+2+3 ... n """
+
+      w = range(aBound)
+      tot = 0
+      for num in w:
+         tot += num
+      return tot
+
+   print(sumTo(10))
+   print(sumTo(15))
+
+
+Instead of relying on the ``range`` function to produce the numbers for our summation, we could use a while loop. 
+To do this, we will create a variable called ``aNumber`` and initialize it to 1, the first number in the
 summation. Every iteration will add ``aNumber`` to the running total until all the values have been used. In order to
 control the iteration, we must create a boolean expression that evaluates to ``True`` as long as we want to keep
 adding values to our running total. In this case, as long as ``aNumber`` is less than or equal to the bound, we
 should keep going.
 
-Here is a new version of the summation program that uses a while statement.
+Here is a new version of the summation program that uses a while statement:
 
 .. activecode:: ac14_2_1
 
@@ -90,8 +107,8 @@ More formally, here is the flow of execution for a ``while`` statement:
 
 #. Evaluate the condition, yielding ``False`` or ``True``.
 #. If the condition is ``False``, exit the ``while`` statement and continue
-   execution at the next statement.
-#. If the condition is ``True``, execute each of the statements in the body and
+   execution at the next statement (after the body of the loop).
+#. If the condition is ``True``, execute each of the statements in the body of the loop and
    then go back to step 1.
 
 The body consists of all of the statements below the header with the same indentation.

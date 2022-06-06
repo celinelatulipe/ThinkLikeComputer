@@ -13,8 +13,8 @@
 
 .. _randomly-walking-turtles:
 
-Randomly Walking Turtles
-------------------------
+Indeterminate Turtles
+---------------------
 
 Suppose we want to entertain ourselves by watching a turtle wander around randomly inside the screen. 
 When we run the program we want the turtle and program to behave in the following way:
