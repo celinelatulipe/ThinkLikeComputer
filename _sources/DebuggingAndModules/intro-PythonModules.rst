@@ -14,7 +14,7 @@
 Introduction to Python Modules
 ------------------------------
 
-One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to one of the packages that allow you to solve real world problems without starting from scratch. This chapter also does a deeper dive into the Turtles module which isn't often used to solve real-world problems, but is a useful and fun module to use when learning how to program.
+One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to how to import and use modules that other people have created. You'll learn about how to use the random module which comes in handy quite frequently in programming. This chapter also does a deeper dive into the Turtles module which isn't often used to solve real-world problems, but is a useful and fun module to use when learning how to program.
 
 .. image:: https://imgs.xkcd.com/comics/python.png
 

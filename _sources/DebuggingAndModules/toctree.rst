@@ -1,10 +1,15 @@
-Python Modules
-::::::::::::::
-
+Debugging and Modules
+:::::::::::::::::::::
 .. toctree::
-   :caption: Python Modules
+   :caption: Debugging and Modules
    :maxdepth: 2
 
+   intro-DebuggingGeneral.rst
+   intro-HowtobeaSuccessfulProgrammer.rst
+   Syntaxerrors.rst
+   RuntimeErrors.rst
+   SemanticErrors.rst
+   KnowyourerrorMessages.rst
    intro-PythonModules.rst
    ModulesandGettingHelp.rst
    EthicsAndCodeOwnership.rst
@@ -13,12 +18,10 @@ Python Modules
    InstancesAHerdofTurtles.rst
    ObjectInstances.rst
    AFewMoreturtleMethodsandObservations.rst
-   SummaryOfTurtleMethods.rst
    WPCommonTurtleErrors.rst
+   EthicsDefaultVariableValues.rst
    Glossary.rst
-   Exercises.rst
    TurtlesAssessment.rst
-.. WPIncrementalProgramming.rst
-   TurtleExercises.rst
 
+..   Exercises.rst
    

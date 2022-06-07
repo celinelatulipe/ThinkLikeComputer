@@ -13,8 +13,9 @@
 
 .. index:: boundary conditions, testing, debugging
 
-👩‍💻 Programming in the Real World
-===================================
+
+👩‍💻 Debugging
+===============
 
 Before we dive into the nitty gritty details of debugging, here is a video to give you a flavor for what its like to be a programmer in the real world.
 
@@ -23,9 +24,6 @@ Before we dive into the nitty gritty details of debugging, here is a video to gi
     :height: 315
     :width: 560
     :align: left
-
-👩‍💻 Debugging
-===============
 
 Programming is a complex process.  Since it is done by human beings, errors may often occur.
 Programming errors are called **bugs** and the process
@@ -192,9 +190,32 @@ one final step, using the modulo operator.
    print("The time after waiting is: ", final_answer)
 
 Of course even in this simple progression, there are other ways you could have gone astray.
-We'll look at some of those and how you track them down in the next section.
 
 
+👩‍💻 Beginning tips for Debugging
+----------------------------------
+
+Debugging a program is a different way of thinking than writing a program.  The process of debugging is much more like being a detective.  Here are a few rules to get you thinking about debugging.
+
+#. Everyone is a suspect (Except Python)!  It's common for beginner programmers to blame Python, but that should be your last resort.  Remember that Python has been used to solve CS1 level problems millions of times by millions of other programmers.  So, Python is probably not the problem.
+
+#. Check your assumptions.  At this point in your career you are still developing your mental model of how Python does its work.  Its natural to think that your code is correct, but with debugging you need to make your code the primary suspect.  Even if you think it is right, you should verify that it really is by liberally using print statements to verify that the values of variables really are what you think they should be.  You'll be surprised how often they are not.
+
+#. Find clues.  This is the biggest job of the detective and right now there are two important kinds of clues for you to understand.
+
+   * Error Messages
+
+   * Print Statements
+
+
+Types of Errors
+---------------
+
+Three kinds of errors can occur in a program: `syntax errors
+<http://en.wikipedia.org/wiki/Syntax_error>`__, `runtime errors
+<http://en.wikipedia.org/wiki/Runtime_error>`__, and `semantic errors
+<http://en.wikipedia.org/wiki/Logic_error>`__.  It is useful to distinguish
+between them in order to track them down more quickly. We will explore these three different types of errors in the next sections of this chapter.
 **Check your understanding**
 
 .. mchoice:: question4_1_1

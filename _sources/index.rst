@@ -30,8 +30,7 @@ Table of Contents
 
    GeneralIntro/toctree.rst
    DataAndInstructions/toctree.rst
-   Debugging/toctree.rst
-   PythonModules/toctree.rst
+   DebuggingAndModules/toctree.rst
    Iteration/toctree.rst
    FunctionsAndFiles/toctree.rst
    Conditionals/toctree.rst
