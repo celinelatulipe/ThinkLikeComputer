@@ -13,13 +13,17 @@
 Integrating Concepts
 ====================
 
-By now you have learned about four of the basic building blocks of programming:
-* how to store and manipulate information using math, logic and other operators
-* how to modularize programs so that instructions for a specific task are separated into functions
-* how to iterate over collections of data (strings of characters, lists of values)
-* how to control the path of execution using conditional statements
+By now you have learned about five of the basic building blocks of programming:
 
-That's a lot! Stop for a moment and congratulate yourself on getting this far! We are going to take a breather now, and not introduce any new concepts. In this chapter you will see examples of how to combine these practices together to solve problems. You'll also get some hints on how to know which one of these concepts to apply in which circumstances.
+* how to store information in **variables**
+* how to process information using math, logic and other **operators**
+* how to modularize programs so that instructions for a specific task are separated into **functions**
+* how to **iterate** over collections of data (strings of characters, lists of values) using **for loops**
+* how to **control the path of execution** using **conditional statements**
+
+That's a lot! Stop for a moment and congratulate yourself on getting this far! We are going to take a breather now, and not introduce any new concepts. In this chapter you will see examples of how to combine functions, iteration, and conditionals together to solve problems. You'll also get some hints on how to know which one of these concepts to apply in which circumstances.
+
+We'll also try to visualize how these things combine using some color-coded diagrams. We'll represent functions as blue blocks, for loops as pink blocks and conditional statements as green blocks.
 
 
 Topics
@@ -31,9 +35,4 @@ Topics
 * How to combine functions and conditionals
 * How to combine all three!
 
-Learning Objectives
--------------------
 
-At the end of this chapter, you should be able to:
-
-[TODO]
