@@ -5,12 +5,10 @@ General Introduction
    :caption: General Introduction
    :maxdepth: 2
 
+   foreword.rst
    intro-TheWayoftheProgram.rst
-   Algorithms.rst
-   Interactivity.rst
-   Ethics.rst
+   AlgorithmsInteractivityAndEthics.rst
    ThePythonProgrammingLanguage.rst
-   SpecialWaystoExecutePythoninthisBook.rst
    MoreAboutPrograms.rst
    FormalandNaturalLanguages.rst
    ATypicalFirstProgram.rst

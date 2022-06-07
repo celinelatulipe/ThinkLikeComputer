@@ -14,6 +14,31 @@
 A Few More ``turtle`` Methods and Observations
 ----------------------------------------------
 
+Here is a table that summarizes common Turtle methods:
+
+==========  ==========  =========================
+Method      Parameters  Description
+==========  ==========  =========================
+Turtle      None          Creates and returns a new turtle object
+forward     distance      Moves the turtle forward
+backward    distance      Moves the turle backward
+right       angle         Turns the turtle clockwise
+left        angle         Turns the turtle counter clockwise
+up          None          Picks up the turtle's tail (pen)
+down        None          Puts down the turtle's tail (pen)
+color       color name    Changes the color of the turtle and pen
+fillcolor   color name    Changes the color the turtle will use to fill a polygon
+heading     None          Returns the current heading
+position    None          Returns the current position
+goto        x,y           Move the turtle to position x,y
+begin_fill  None          Remember the starting point for a filled polygon
+end_fill    None          Close the polygon and fill with the current fill color
+dot         None          Leave a dot at the current position
+stamp       None          Leaves an impression of a turtle shape at the current location
+shape       shapename     Can be set to 'arrow', 'triangle', 'classic', 'turtle', 'circle', or 'square'
+speed       integer       0 = no animation, fastest; 1 = slowest; 10 = very fast
+==========  ==========  =========================
+
 Here are a few more things that you might find useful as you write programs that use turtles.
 
 * Turtle methods can use negative angles or distances. So ``tess.forward(-100)`` will move
@@ -61,7 +86,8 @@ Here are a few more things that you might find useful as you write programs that
 * A turtle can "stamp" its footprint onto the canvas, and this will remain after
   the turtle has moved somewhere else. Stamping works even when the pen is up.
 
-Let's do an example that shows off some of these new features.
+Let's do an example that shows off some of these new features. Note that the code below uses a for loop
+to make the turtle move repeatedly 30 times. We'll cover for loops in the next chapter.
 
 .. activecode:: ac3_7_1
     :nocodelens:
@@ -80,17 +106,14 @@ Let's do an example that shows off some of these new features.
         tess.forward(dist)          # move tess along
         tess.right(24)              # and turn her
         dist = dist + 2
+
+    tess.color("red")
     wn.exitonclick()
 
 
-If you are curious about how far the turtle is traveling each time the for loop iterates, you can add a print
-statement inside of the for loop to print out the value of ``dist``.
-
 One more thing to be careful about. All except one of the shapes you see on the screen here are
-footprints created by ``stamp``. But the program still only has *one* turtle instance --- can you
-figure out which one is the real tess? (Hint: if you're not sure, write a new line of code after the
-``for`` loop to change tess' color, or to put her pen down and draw a line, or to change her shape, etc.)
-
+footprints created by ``stamp``. After the loop, we change tess to be red, and that way you see where
+the actual turtle is (the red one is not a stamp - it's tess!).
 
 
 **Mixed up program**

@@ -23,14 +23,14 @@ This course is being taught for the first time at the University of Manitoba in 
 Table of Contents
 :::::::::::::::::::::::::::
 
+
 .. toctree::
    :numbered:
    :maxdepth: 4
 
    GeneralIntro/toctree.rst
    DataAndInstructions/toctree.rst
-   Debugging/toctree.rst
-   PythonModules/toctree.rst
+   DebuggingAndModules/toctree.rst
    Iteration/toctree.rst
    FunctionsAndFiles/toctree.rst
    Conditionals/toctree.rst
@@ -40,8 +40,6 @@ Table of Contents
    IndefiniteIteration/toctree.rst
    EventHandling/toctree.rst
    DataScience/toctree.rst
-   FrontBackMatter/foreword.rst
-   FrontBackMatter/preface.rst
    FrontBackMatter/contrib.rst
    FrontBackMatter/copyright.rst
 
