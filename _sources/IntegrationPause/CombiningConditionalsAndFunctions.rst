@@ -78,4 +78,108 @@ A few things to note about this example:
 Calling Functions from Conditional Blocks
 -----------------------------------------
 
-[TODO]
+It's quite typical to have different functions for different tasks and then to call those functions depending on what happens at runtime. This is particularly true in event-based programming. The example above has the turtle moving and changing color in response to key presses. We can also imagine a program in which different things happen depending on the value of some variable, so we use a conditional to test that value, and then call various functions in response. In the turtle example below, everything happens in response to key presses. Some key presses change the current drawing color. Pressing the 'd' key causes shapes to be drawn, but the shape is dependent on the pen color. So a conditional tests the pen color, and then calls different shape drawing functions. 
+
+.. activecode:: ac7_4_2a
+    :nocodelens:
+    
+    import turtle
+    import random
+
+
+    def key_r():
+        tami.pencolor("Red")
+
+    def key_g():
+        tami.pencolor("Green")
+
+    def key_b():
+        tami.pencolor("Blue")
+
+
+    def random_move():
+        x = random.randrange(-180, 180)
+        y = random.randrange(-180, 180)
+        tami.penup()
+        tami.goto(x,y)
+        tami.pendown()
+
+    def square():
+        random_move()
+        tami.forward(50)
+        tami.left(90)
+        tami.forward(50)
+        tami.left(90)
+        tami.forward(50)
+        tami.left(90)
+        tami.forward(50)
+        tami.left(90)
+
+    def triangle():
+        random_move()
+        tami.forward(50)
+        tami.left(120)
+        tami.forward(50)
+        tami.left(120)
+        tami.forward(50)
+        tami.left(120)
+
+    def tri_stamp():
+        random_move()
+        tami.stamp()
+        tami.left(120)
+        tami.stamp()
+        tami.left(120)
+        tami.stamp()
+        tami.left(120)
+
+    def key_d():
+        if tami.pencolor() == "Red":
+            square()
+
+        elif tami.pencolor() == "Green":
+            triangle()
+
+        else:
+            tri_stamp()
+    
+    wn = turtle.Screen()
+    tami = turtle.Turtle()
+    tami.shape("turtle")
+    tami.home()
+
+    
+    wn.onkey(key_d, "d")
+    wn.onkey(key_r, "r")
+    wn.onkey(key_g, "g")
+    wn.onkey(key_b, "b")
+    wn.listen()
+    
+
+Things to note about this example:
+
+* The code inside the three drawing functions is repetitive. All of these functions could be improved with for loops, but we wanted this example to only have functions and conditionals. 
+* This example uses function composition. The three drawing functions (square(), triangle() and tri_stamp() all call the random_move() function to get the turtle to a random position on campus first) 
+
+And this is an image that shows the functions being called within the d key handler, which is itself a function, called by the system when the end user presses the d key.
+
+
+.. image:: Figures/d-key_handler.png
+    :width: 400
+    :align: center
+
+
+While the image above depicts what is happening in the d-key handler, it doesn't fully explain the path of execution for this interactive program. Let's look at a bigger diagram that gives a more complete picture of what is happening:
+
+.. image:: Figures/GUI_event_loop_turtles.png
+    :width: 800
+    :align: center
+
+In this diagram, we show that when we create a turtle program that includes event listeners, the turtle module in Python works with the operating system to create what we call a GUI system event loop. That's the big pink rectangle at the left and we don't have to write the code for the event loop - it's handled for us by Python and the turtle module. We have to write some starting code to trigger that: we set up the world and turtle and register the functions that will respond to events we want to listen for, and then we tell Python to start listening. That is what starts the GUI event loop. Python and the turtle module then sit in a loop waiting for user interface events, such as key presses and mouse clicks. When an event occcurs, if it is an event we registered a handler for, that handler function is called. Once we have handled the event, you can think of the flow of execution going back to the pink loop, to wait for another event to handle. Note all of the dashed lines indicate function calls that we don't make in our code. We don't ever call r_key or g_key, etc. They are only called by the system in response to user events. However, we do explicitly call square(), tri_stamp() and triangle() and those functions all call random_move() (which we didn't show in this diagram). 
+
+A few other things you might note her: if an event occurs that we haven't registered a handler function for (such as someone dragging the mouse, or pressing the 'm' key), those events will be ignored and the system will just keep waiting for more events. Also, if the user closes the window (the browser tab in Gather.Town or the turtle canvas window if you run this program on your computer), that will cause the GUI event loop to close, because the events are linked to the turtle canvas/window. 
+
+You'll see more detailed examples of GUI system event loops in a later chapter where we explore event-based programming in more detail.
+
+
+
