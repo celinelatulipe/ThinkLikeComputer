@@ -10,14 +10,16 @@
    :prefix: func-1-
    :start: 1
 
-Registering Listeners
-=======================
+Global Variables in Event-Based Programs
+========================================
 
+- you might have observed that we have been editing global variables in these interactive examples
+  - aren't we not supposed to do that?
+- why do we have to do that?
+  - event handlers can only pass in event information, they don't know about what our application is or what info is needed
 
-What are listeners?
+- is there a way to do this better?
+  - yes! object-oriented programming
 
-
-
-[TODO]
 
 
