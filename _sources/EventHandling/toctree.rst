@@ -12,7 +12,8 @@ Event Handling
    AddingGUIControls.rst
    DefiningEventHandlers.rst
    SimpleGUIEvents.rst
-   GlobalVariablesInEvent-BasedPrograms.rst
+   Event-BasedCompleteExample.rst
+   Event-BasedExample-OO.rst
 ..   Exercises.rst
 ..   ChapterAssessment.rst
    

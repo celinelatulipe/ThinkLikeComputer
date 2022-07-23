@@ -13,7 +13,7 @@
 The SimpleGUI Module
 ====================
 
-The SimpleGUI module was created specifically to help students learn and experiment with event-based interactions. It was designed to work in a web version of Python called CodeSkulptr 3. Unfortunately, simpleGUI is not a module that works inside the Runestone textbook, it only works in codeskulptr. Here is a screenshot of what CodeSkulptr 3 looks like when you first open it, and press the Run button at the top-left:
+The SimpleGUI module was created specifically to help students learn and experiment with event-based interactions. It was designed to work in a web version of Python called CodeSkulptr 3. Unfortunately, simpleGUI is not a module that works inside the Runestone textbook, it only works in CodeSkulptr. Here is a screenshot of what CodeSkulptr 3 looks like when you first open it, and press the Run button at the top-left:
 
 .. image:: Figures/CodeSkulptrBasic.png
     :width: 600
@@ -41,11 +41,19 @@ Go to CodeSkulptr 3 and play with this code: https://py3.codeskulptor.org/. Run 
 * Rename the button handler to button_click instead of click. Make sure you update this in the function definition **and** in the line of code that creates the button
 * Change the button handler function so that it sets the message to be "Hello!"
 
+The window that pops up when you run a CodeSkulptr script with the SimpleGUI module has two labels at the bottom left. These are provided by SimpleGUI as an aid to help novice programmers understand what mouse and keyboard events the SimpleGUI module is recieving.
+
+.. image:: Figures/CodeSkulptr_event_indicators.png
+   :width: 200
+   :align: center
+
+Play around with clicking the mouse in the canvas and typing keys on the keyboard to see these indicators change. Note that just because the SimpleGUI module sees the events doesn't mean something will happen in the canvas window in response to clicks and keypresses. It is up to you to write code to tell the SimpleGUI module and the Python interpreter that you want something to happen in response to such events. 
+
 
 Using Toolkit Documentation
 ---------------------------
 
-There are many different toolkits that you can use for building GUIs (and for other things, too). One of the most important skills you can develop is learning how to read the documentation for a toolkit to figure out how to use it. No-one memorizes all the functions, methods and objects that a toolkit contains, unless they happen to use that toolkit every day. So, when seasoned programmers need to use a toolkit, they typically have the documentation window for that toolkit open in a separate tab, so they can refer to it as they build their program. Clicking the Docs button in the CodeSkulptr 3 interface will automatically open the documentation for you in a new browser tab. Switch to this tab and then click on Graphics Modules. You should see this: 
+There are many different toolkits that you can use for building GUIs (and for other things, too). Every toolkit handles input events slightly differently and offers slightly different sets of interface widgets and ways to customize them. So, one of the most important skills you can develop is learning how to read the documentation for a toolkit to figure out how to use it. No-one memorizes all the functions, methods and objects that a toolkit contains, unless they happen to use that toolkit every day. So, when seasoned programmers need to use a toolkit, they typically have the documentation window for that toolkit open in a separate tab, so they can refer to it as they build their program. Clicking the Docs button in the CodeSkulptr 3 interface will automatically open the documentation for you in a new browser tab. Switch to this tab and then click on Graphics Modules. You should see this: 
 
 
 .. image:: Figures/code_skulptr_doc_basic.png
