@@ -8,17 +8,16 @@
     License".
 
 .. qnum::
-   :prefix: intro-7-
+   :prefix: 1-5-
    :start: 1
 
-.. index:: formal language, natural language, parse, token
-
+.. index:: control structures 
 More About Programs
 -------------------
 
 A **program** is a sequence of instructions that specifies how to perform a
 computation. The computation might be something as complex as rendering an html page in a web browser
-or encoding a video and streaming it across the network.  It can also be a
+or encoding a video and streaming it across a network.  It can also be a
 symbolic computation, such as searching for and replacing text in a document or
 (strangely enough) compiling a program.
 
@@ -56,7 +55,7 @@ However, we don't expect you to understand these yet - understanding will come l
 
 First we have structures that allow us to iterate over something. We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a ``for`` loop. This is a type of repetition instruction. Run the program below to see what the output to the console is:
 
-.. activecode:: ac1_5_1
+.. activecode:: ac_for_loop_preview
 
    for character in "Cool string":
        print(character)
@@ -64,7 +63,7 @@ First we have structures that allow us to iterate over something. We can look at
 We can also iterate without a definite stopping point with ``while`` loops (another type of repetition instruction). 
 You might use this if you want to receive input from the user in your program but you don't know how long it'll take for them to be done entering new input. Run the program below and add some items to a grocery list:
 
-.. activecode:: ac1_5_2
+.. activecode:: ac_while_loop_preview
 
    grocery_item = ""
    while grocery_item != "done":
@@ -78,7 +77,7 @@ Other structures will allow us to only run parts of our programs or only do some
 Conditionals, as they're called, allow us to do that. 
 Check out how adding conditionals to our code can change what we can write about regarding grocery shopping. 
 
-.. activecode:: ac1_5_3
+.. activecode:: ac_conditional_preview
 
    grocery_item = ""
    grocery_list = []
@@ -94,7 +93,7 @@ Check out how adding conditionals to our code can change what we can write about
 
 **Check your understanding**
 
-.. mchoice:: question1_5_1
+.. mchoice:: question_what_is_program
    :answer_a: a sequence of instructions that specifies how to perform a computation.
    :answer_b: something you follow along at a play or concert.
    :answer_c: a computation, even a symbolic computation.

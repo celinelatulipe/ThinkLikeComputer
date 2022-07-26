@@ -50,6 +50,37 @@ Chapter Assessment
             self.assertIn("Hello World", self.getOutput(), "Your output should contain a phrase Hello World")
 
     myTests().main()
+    
+.. mchoice:: assess_question1_1_3
+   :answer_a: nothing, there is an error
+   :answer_b: Catch you later!
+   :answer_c: Good-bye!
+              Hope you are well.
+              Hello!
+   :answer_d: Hello!
+              Hope you are well.
+              Good-bye!
+   :answer_e: Hello!
+              Hope you are well.
+              Good-bye!
+              Catch you later!
+   :correct: c
+   :feedback_a: There is no error in this program.
+   :feedback_b: Catch you later! is a comment, as indicated by the # sign, so it won't be printed
+   :feedback_c: Yes, the lines are printed in the order the Python interpreter gets to them, top to bottom.
+   :feedback_d: While it might make sense to say hello before good-bye, the Python interpreter just follows instructions in order as given
+   :feedback_e: No, that is not the order in which Python sees the instructions. 
+
+   What will be output to the console when the following program is run?
+
+   .. code-block:: python
+
+        # print("Catch you later!")
+        print("Good-bye!")
+        print("Hope you are well.")
+        print("Hello!")
+
+    
 
 
 .. Contributed Exercises

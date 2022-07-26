@@ -8,8 +8,35 @@
     License".
 
 
-Foreword
-========
+Foreword to PIE Edition
+=======================
+
+The Programming, Interactivity and Ethics (PIE) Edition of the FOPP textbook builds on the 
+fantastic content in the FOPP text, but adds in two very strong threads focused on interactive,
+event-based programming, and on ethical issues in programming. The PIE additions and edits were created by
+Dr. Celine Latulipe at the University of Manitoba. The PIE version incldues the following 
+changes and additions from the original FOPP textbook:
+
+* Chapters are reordered - conditionals are earlier, lists are later, functions are split into two chapters.
+* Content is combined into chapters in some cases so that there is one textbook chapter per week
+* Some content is removed for a shorter Canadian semester (13 weeks instead of 15 weeks), and 
+  to make room for interactivity and ethics threads
+* Much more extensive use of Turtles module to focus on interactivity, including using mouse
+  and keyboard callbacks
+* Use of CodeSkulptr/SimpleGUI for more interactive, event-based programming
+* Split functions into two separate chapters (first chapter on functions is about modularity, 
+  second chapter on functions covers parameters and return values). This follows the spiral 
+  model of content presentation.
+* Strong focus on differentiation between the programmer and the end user, to highlight
+  that the programmer is NOT usually the end user, and there are ethical values at play
+  when designing software systems for people.
+* Sections added to most chapters to highlight the ethical impacts of writing code using various
+  programming concepts.
+
+
+
+Original Foreword
+-----------------
 
 By David Beazley
 
@@ -84,10 +111,6 @@ David Beazley University of Chicago Author of the *Python Essential Reference*
 
 Preface
 -------
-
-.. youtube:: y5AzM6c-0lU
-    :divid: goog_welcome
-
 Today, it is hard to imagine life without computers.  We carry them in our pockets, read with them on the couch, and use them on our desk at work.  Computing is the Swiss Army knife of the 21st century: a convenient tool that can be used to solve a wide array of problems. The original computers were large and limited in function: nothing more than very basic calculators. The military was the first to find some of the many applications of this technology: made small, computers could be used to improve the precision of bombing; made large and (relatively) powerful, they could be used to break military codes. As computers continued to grow in power and drop in price, many more peaceful applications were found:
 
 * Scientists in both natural and social sciences can use them to analyze vast quantities of data. For example, astronomers are able to identify distant stars in large images of the sky and sociologists are able to analyze the behavior of all the citizens of a country.
@@ -119,6 +142,8 @@ Get in the Learning Zone
 Programs execute very reliably, and very quickly, but not creatively. Computers do what you tell them to do, not what you mean for them to do. Thus, understanding computer code involves a lot of mental simulation of what will actually happen, not what you wish would happen. This can be frustrating at times but it’s something that you will get better at with practice. As you go through the activities in this class, some will be easy for you to complete, i.e. in your comfort zone. Being in your comfort zone is nice but it probably means you are not learning very much. More challenging activities will encourage you to think through the problems and to refer back to the reading to allow you to enter your learning zone. This is the zone that you strive to be in for as much of the course as possible. Beyond your learning zone lies the panic zone where the problem overwhelms your ability to grow and learn. If you find yourself in the panic zone, please seek help from your instructor and/or classmates: none of the activities in this book are intended to stump you. As you understand how to solve some simpler problems, you will develop the ability to join these solutions together to solve increasingly challenging problems with real-world applications.
 
 .. image:: Figures/LearningZones.png
+    :width: 600
+    :align: center
 
 In addition to mechanistic thinking, writing computer programs requires creative problem solving or the ability to identify a complex situation, think creatively about possible solutions, and express those solutions clearly and accurately. As it turns out, the process of learning to program is an excellent opportunity to practice problem solving skills you can use in other parts of your life. We sincerely believe that the combination of knowledge of Python, creative problem solving skills and expressing those solutions in such a way that a computer can effectively carry them out (computational thinking) will make you more productive and efficient in tackling your work in future classes,whether in Computer Science, Business, Psychology or History. And it may even pique your interest in becoming a Data Scientist or a Computer Scientist.
 

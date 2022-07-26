@@ -8,8 +8,11 @@
     License".
 
 .. qnum::
-   :prefix: intro-12-
+   :prefix: 1-10-
    :start: 1
+
+.. index:: comments
+
 
 Comments
 --------
@@ -23,7 +26,7 @@ reader (the programmer)  - it is completely ignored by the interpreter.
 In Python, the ``#`` token starts a comment.  The rest of the line is ignored.
 Here is a new version of *Hello, World!*.
 
-.. activecode:: ac1_8_1
+.. activecode:: ac_comment 
 
     #---------------------------------------------------
     # This demo program shows off how elegant Python is!
@@ -40,7 +43,7 @@ programs much easier for humans to parse.  Use them liberally!👩‍💻 Ease o
 
 **Check your understanding**
 
-.. mchoice:: question1_8_1
+.. mchoice:: question_comment_purpose
    :answer_a: To tell the computer what you mean in your program.
    :answer_b: For the people who are reading your code to know, in natural language, what the program is doing.
    :answer_c: Nothing, they are extraneous information that is not needed.

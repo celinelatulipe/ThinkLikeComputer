@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: turtle-2-
+   :prefix: 1-12-
    :start: 1
 
 .. index:: instance
@@ -26,7 +26,7 @@ After line 4 you will have a straight line going from the center of the
 drawing canvas towards the right. After line 6, you will have a canvas with a
 turtle and a half drawn rectangle. Press the run button to try it and see.
 
-.. activecode:: ac3_2_1_1
+.. activecode:: ac_turtle_rectangle_tour
     :tour_1: "Overall Tour"; 1-6: Example01_Tour01_Line01; 3: Example01_Tour01_Line02; 4: Example01_Tour01_Line03; 5: Example01_Tour01_Line04; 6: Example01_Tour01_Line05;
     :tour_2: "Line by Line Tour"; 1: Example01_Tour02_Line01; 2: Example01_Tour02_Line02; 3: Example01_Tour02_Line03; 4: Example01_Tour02_Line04; 5: Example01_Tour02_Line05; 6: Example01_Tour02_Line06;
     :nocodelens:
@@ -80,7 +80,7 @@ the information in the brackets gives details on how to do those things (how far
 
 **Check your understanding**
 
-.. mchoice:: question3_2_1
+.. mchoice:: question_turtle_direction
    :answer_a: North
    :answer_b: South
    :answer_c: East
@@ -96,7 +96,7 @@ the information in the brackets gives details on how to do those things (how far
 **Mixed up programs**
 Throughout this textbook, you'll see many examples of 'Mixed up programs' like the one below. These are also known as Parsons' Problems. These are really helpful exercises for new programmers, because they allow you to focus just on the sequencing of the program, and not worry about the syntax (i.e. you don't have to worry about making typos or remembering exactly how a program instruction is supposed to be written). Drag the blocks from the grey box on the left to the yellow box on the right, putting them in the correct order. Click the 'Check' button to test your solution. 
 
-.. parsonsprob:: pp3_2_1
+.. parsonsprob:: pp_turtle_capital_L
 
    The following program uses a turtle to draw a capital L as shown in the picture to the left of this text:
    
@@ -105,7 +105,7 @@ Throughout this textbook, you'll see many examples of 'Mixed up programs' like t
       :align: left 
       :alt: image of a navigational compass and a letter L which is drawn by Turtle
       
-   But the lines are mixed up. The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle. Remember that the turtle starts off facing east when it is created. The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long. We have added a compass to the picture to indicate the directions north, south, west, and east. 
+   But the lines are mixed up. The program should do all necessary set-up: import the turtle module, get the window to draw on, and create the turtle. Remember that the turtle starts off facing east when it is created. The turtle should turn to face south and draw a line that is 150 pixels long and then turn to face east and draw a line that is 75 pixels long. We have added a compass to the picture to indicate the directions north, south, west, and east. Your program doesn't neeed to draw the compass! 
       
    Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on *Check Me* to see if you are right. You will be told if any of the lines are in the wrong order.
    -----
@@ -119,7 +119,7 @@ Throughout this textbook, you'll see many examples of 'Mixed up programs' like t
    ella.left(90)
    ella.forward(75)
 
-.. parsonsprob:: pp3_2_2
+.. parsonsprob:: pp_turtle_checkmark
 
    The following program uses a turtle to draw a checkmark as shown to the left, 
    
@@ -144,7 +144,7 @@ Throughout this textbook, you'll see many examples of 'Mixed up programs' like t
    maria.left(90)
    maria.forward(150)
 
-.. parsonsprob:: pp3_2_3
+.. parsonsprob:: pp_turtle_line_to_west
 
    The following program uses a turtle to draw a single line to the west as shown to the left:
    

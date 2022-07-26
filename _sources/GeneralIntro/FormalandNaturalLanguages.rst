@@ -10,6 +10,8 @@
 .. qnum::
    :prefix: intro-8-
    :start: 1
+   
+.. index:: formal languages
 
 Formal and Natural Languages
 ----------------------------
@@ -108,7 +110,7 @@ like indentation, spelling errors and bad punctuation, which you can get away wi
 
 **Check your understanding**
 
-.. mchoice:: question1_6_1
+.. mchoice:: question_natural_vs_formal
    :answer_a: natural languages can be parsed while formal languages cannot.
    :answer_b: ambiguity, redundancy, and literalness.
    :answer_c: there are no differences between natural and formal languages.
@@ -121,7 +123,7 @@ like indentation, spelling errors and bad punctuation, which you can get away wi
 
    The differences between natural and formal languages include:
 
-.. mchoice:: question1_6_2
+.. mchoice:: question_readingTF
    :answer_a: True
    :answer_b: False
    :correct: b
