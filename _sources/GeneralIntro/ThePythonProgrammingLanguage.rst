@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: intro-5-
+   :prefix: 1-4-
    :start: 1
 
 .. index:: programming language, portable, high-level language,
@@ -48,7 +48,7 @@ program a little at a time, alternately reading lines and performing
 computations.
 
 .. image:: Figures/interpret.png
-   :alt: Interpret illustration
+   :alt: Interpret illustration, shows that source code goes through the interpreter, which runs the program.
 
 A compiler reads the program and translates it completely before the program
 starts running. In this case, the high-level program is called the **source
@@ -57,7 +57,7 @@ code**, and the translated program is called the **object code** or the
 without further translation. If you make changes to your source code, you need to compile your files into an executable again.
 
 .. image:: Figures/compile.png
-   :alt: Compile illustration
+   :alt: Compile illustration, shows that source code goes through the compiler to become object code, and object code is executed to run the program.
 
 Many modern languages use both processes. They are first compiled into a lower
 level language, called **byte code**, and then interpreted by a program called
@@ -87,7 +87,7 @@ environment for learning a programming language like Python since you can experi
 Take a look at the activecode interpreter in action. Try pressing the *Save & Run* button below. (If you are not logged
 in, it will just say *Run*.)
 
-.. activecode:: ac1_4_1
+.. activecode:: activecode_first_ex
 
    print("My first program adds two numbers, 2 and 3:")
    print(2 + 3)
@@ -121,7 +121,7 @@ Sometimes, we will present code examples explicitly in a codelens window in the 
 When we do, think of it as an encouragement to use the codelens features to step through the 
 execution of the program.
 
-.. codelens:: clens1_4_1
+.. codelens:: clens_first_example
     :python: py3
     :showoutput:
 
@@ -132,7 +132,7 @@ execution of the program.
 
 **Check your understanding**
 
-.. mchoice:: question1_3_1
+.. mchoice:: question_what_is_source_code
    :answer_a: the instructions in a program, written in a high-level language.
    :answer_b: the language that you are programming in (e.g. Python).
    :answer_c: the environment/tool in which you are programming.
@@ -145,7 +145,7 @@ execution of the program.
 
    Source code is another name for:
 
-.. mchoice:: question1_3_2
+.. mchoice:: question_high_vs_low_language 
    :answer_a: It is high-level if you are standing and low-level if you are sitting.
    :answer_b: It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.
    :answer_c: It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.
@@ -158,7 +158,7 @@ execution of the program.
 
    What is the difference between a high-level programming language and a low-level programming language?
 
-.. mchoice:: question1_3_3
+.. mchoice:: question_compiler_vs_interpreter
    :answer_a: 1 = a process, 2 = a function
    :answer_b: 1 = translating an entire book, 2 = translating a line at a time
    :answer_c: 1 = software, 2 = hardware
@@ -171,11 +171,11 @@ execution of the program.
 
    Pick the best replacements for **1** and **2** in the following sentence: When comparing compilers and interpreters, a compiler is like **1** while an interpreter is like **2**.
 
-.. mchoice:: question1_4_1
+.. mchoice:: question_activecode_interpreter
    :multiple_answers:
    :answer_a: save programs and reload saved programs.
    :answer_b: type in Python source code.
-   :answer_c: execute Python code right in the text itself within the web browser.
+   :answer_c: execute Python code right in the text itself within the web .. 
    :answer_d: receive a yes/no answer about whether your code is correct or not.
    :correct: a,b,c
    :feedback_a: You can (and should) save the contents of the activecode window.
@@ -185,7 +185,7 @@ execution of the program.
 
    The activecode interpreter allows you to (select all that apply):
 
-.. mchoice:: question1_4_2
+.. mchoice:: question_codelens
    :multiple_answers:
    :answer_a: measure the speed of a program’s execution.
    :answer_b: control the step by step execution of a program.

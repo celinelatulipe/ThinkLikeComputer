@@ -8,10 +8,9 @@
     License".
 
 .. qnum::
-   :prefix: intro-9-
+   :prefix: 1-7-
    :start: 1
 
-.. index:: debugging, bug
 
 A Typical First Program
 -----------------------
@@ -31,7 +30,7 @@ This is an example of using the **print function**, which doesn't actually print
 
 Here is the example in an ActiveCode window, where you can run it and modify it. When you click the Save & Run button, a grey console window appears below the ActiveCode window. That is where output from print() statements will always appear.
 
-.. activecode:: ac1_7_1
+.. activecode:: ac_hello_world
 
     print("Hello, World!")
 
@@ -40,7 +39,7 @@ They don't appear in the result. You'll learn more about why in the next chapter
 
 Some people judge the quality of a programming language by the simplicity of the Hello, World! program. By this standard, Python does about as well as possible.
 
-For comparison in another language the Hello, World! program in Java looks like this:
+For comparison in another language, the Hello, World! program in Java looks like this:
 
 ::
 
@@ -52,7 +51,7 @@ For comparison in another language the Hello, World! program in Java looks like 
 
 **Check your understanding**
 
-.. mchoice:: question1_7_1
+.. mchoice:: question_print_statement
    :answer_a: sends information to the printer to be printed on paper.
    :answer_b: displays a value in the console.
    :answer_c: tells the computer to put the information in print, rather than cursive, format.

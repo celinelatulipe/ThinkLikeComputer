@@ -38,6 +38,14 @@ to contact us. The email address is `jeff@elkner.net <mailto:jeff@elkner.net>`__
 . Substantial changes made due to your suggestions will add you to the next
 version of the contributor list (unless you ask to be omitted). Thank you!
 
+PIE Edition
+~~~~~~~~~~~
+
+The edits to this PIE edition have been made mainly by Celine Latulipe at the University of Manitoba.
+Some of the ethics content was added by Lauren Himbeault, an MSc student advised by Celine Latulipe. Some 
+questions and exercises were suggested by Carter Lupkowski, an undergraduate CS student working with
+Celine and Lauren.
+
 
 Second Edition
 ~~~~~~~~~~~~~~

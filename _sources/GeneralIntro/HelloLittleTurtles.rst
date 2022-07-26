@@ -8,16 +8,11 @@
     License".
 
 .. qnum::
-   :prefix: turtle-1-
+   :prefix: 1-11-
    :start: 1
 
 .. index::
-    object, invoke, method, attribute, state, canvas
-    single: module
-    single: function
-    single: function definition
-    single: definition; function
-    single: turtle module
+   turtles 
 
 .. _turtles_chap:
 
@@ -33,10 +28,6 @@
 There are many *modules* in Python that provide very powerful features that we can use in our own programs. A module is a library of code that can perform some tasks.
 We will talk more about modules in an upcoming chapter. Some of these can send email or fetch web pages. Others allow us to perform complex mathematical calculations or even display graphs.
 In this chapter we will introduce a module that allows us to create a data object called a **turtle** that can be used to draw pictures.
-
-.. turtles and get them
-.. turn left, etc.  Your turtle's tail is also endowed with the ability to leave
-.. to draw shapes and patterns.
 
 Turtle graphics, as it is known, is based on a very simple metaphor. Imagine that you have a turtle that 
 understands English. You can tell your turtle to do simple commands such as go forward and turn right. As the turtle

@@ -8,11 +8,11 @@
     License".
 
 .. qnum::
-   :prefix: intro-2-
+   :prefix: 1-3-
    :start: 1
 
 .. index:: programming language, algorithm, pseudocode,
-           program
+           program, interactivity, ethics
 
 Problem Solving, Interactivity & Ethics
 =======================================
@@ -83,16 +83,7 @@ In the next section, you will learn how to execute Python programs on a computer
 
 Interactivity - Programming for People
 --------------------------------------
-Consider the following code we introduced in the previous section:           
-
-.. activecode:: alg_impl_int
-   :nocodelens:
-
-   radius = int(input("Enter the radius:"))
-   area = (radius * radius) * 3.1415
-   print("The area of a circle with radius", radius, "is:", area)
-
-This program is **interactive** because it asks for input from an **end user**. The end user is a person who might **use** your program, but will never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your **programmer** hat. When you type a number into the dialog box that comes up, you are wearing your **end user** hat.
+Consider the code we introduced in the previous section. The program is **interactive** because it asks for input from an **end user**. The end user is a person who might **use** your program, but will never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your **programmer** hat. When you type a number into the dialog box that comes up, you are wearing your **end user** hat.
 
 Let's take a look at a version of this program that is not interactive:
 
@@ -103,16 +94,15 @@ Let's take a look at a version of this program that is not interactive:
    area = (radius * radius) * 3.1415
    print("The area of a circle with radius", radius, "is:", area)
 
-If you run this program, no dialog box pops up, and the user does not get to provide any input at all.  Instead there is a hard-coded value for the radius: ``15``. And
-so this program can only calculate one thing: the area of a circle with a radius of 15. That's pretty boring and not very useful! Adding interactivity
+If you run this program, no dialog box pops up, and the user does not get to provide any input at all.  Instead, there is a hard-coded value for the radius: ``15``. That means that this program can only calculate one thing: the area of a circle with a radius of 15. That's pretty boring and not very useful! Adding interactivity
 to our programs make them more dynamic and useful. The output of many of the programs in this book is displayed
 in the **console** - that's the grey output window underneath the activecode window. The console is where errors and output 
-messages appear and that is something a programmer or technology specialist uses. Most end users don't see 
-what is printed to the programmer's console. 
+messages appear and that is something a programmer or technology specialist uses. Most of the time, end users don't see 
+what is printed to the programmer's console. In most modern applications, end users will interact with a program through user interface controls and windows. We will get to that as you progress through this book, but often we will have output print to the console, just to keep things simple while you are learning.
 
-A program that is not interactive (that does not get input from a user **while the program is running** is called a **batch** program. Sometimes batch programs read input from a file, or sometimes data is hard-coded right into the program, like the value ``15`` in the example above. Batch programs are used for data processing in many big companies. And often, when people are learning how to program, the first programs are batch programs because they are often simple: get some input, do something with it, spit out a result. Interactive programs are more complicated, because they often involve waiting for users to do things, and then doing things in response. However, interactive programs are really common in real life: every app that you use on your phone, your laptop, your smart watch, your video game console, or your fitness tracker is an interactive program. 
+A program that is not interactive (that does not get input from a user **while the program is running**) is called a **batch** program. Sometimes batch programs read input from a file, or sometimes data is hard-coded right into the program, like the value ``15`` in the example above. Batch programs are used for data processing in many big companies. And often, when people are learning how to program, the first programs are batch programs because they are often simple: get some input, do something with it, spit out a result. Interactive programs are more complicated, because they often involve waiting for users to do things, and then doing things in response. However, interactive programs are really common in real life: every app that you use on your phone, your laptop, your smart watch, your video game console, or your fitness tracker is an interactive program. 
 
-In this book we will teach you some of the basic elements of interactivity and interactive programming. We will show you how you can design interfaces that show the output of your programs to end users on a screen by popping up message boxes, drawing images on a canvas that the user can interact with, or presenting graphical user interfaces that have buttons and menus that a user can interact with. These interactivity elements will be interspersed throughout the book alongside more traditional batch programs that just output data to the console. 
+In this book we will teach you some of the basic elements of interactivity and interactive programming. We will show you how you can design interfaces that show the output of your programs to end users on a screen by popping up message boxes, drawing images on a canvas that the user can interact with, or presenting graphical user interfaces that have buttons and menus that a user can interact with. These interactivity elements will be interspersed throughout the book alongside more traditional batch programs that just output information to the console. 
 
 Ethics - Programming Responsibly
 --------------------------------
@@ -136,14 +126,14 @@ program:
    area = (radius * radius) * 3
    print("The area of a circle with radius", radius, "is:", area)
 
-In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that programs embed ethical values, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
+In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that **programs embed ethical values**, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
 
 
 **Check your understanding**
 
-.. mchoice:: question1_2_2
+.. mchoice:: question_what_is_alg
    :answer_a: A solution to a problem that can be solved by a computer.
-   :answer_b: A step by step sequence of instructions that if followed exactly will solve the problem under consideration.
+   :answer_b: A step by step sequence of instructions that, if followed exactly, will solve the problem under consideration.
    :answer_c: A series of instructions implemented in a programming language.
    :answer_d: A special kind of notation used by programmers.
    :correct: b
@@ -154,7 +144,7 @@ In this version of the program, we have rounded the value of PI down to a whole 
 
    An algorithm is:
 
-.. mchoice:: question1_2_3
+.. mchoice:: question_program_output
    :answer_a: Always exactly the same as what the programmer sees.
    :answer_b: The text that shows up in the console.
    :answer_c: Not something the programmer needs to worry about.
