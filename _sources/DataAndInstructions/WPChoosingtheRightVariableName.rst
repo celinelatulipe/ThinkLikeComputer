@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-9-
+   :prefix: 2-9-
    :start: 1
 
 👩‍💻 Choosing the Right Variable Name

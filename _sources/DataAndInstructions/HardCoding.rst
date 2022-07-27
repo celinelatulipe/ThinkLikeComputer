@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-15-
+   :prefix: 2-14-
    :start: 1
 
 👩‍💻 Hard-Coding
@@ -35,7 +35,7 @@ For example, in this following code, if you're asked in an exercise to create a 
 the sum of the value of ``y`` and the value of ``x``, writing ``zx = 55`` is *hard-coding*. 
 
 .. .. actex:: hard_coding_example
-.. activecode:: ac2_14_11
+.. activecode:: ac2_13_11
 
    
    x = 20

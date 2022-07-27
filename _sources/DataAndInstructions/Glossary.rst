@@ -41,11 +41,6 @@ Glossary
     class
         see **data type** below
 
-    comment
-        Information in a program that is meant for other programmers (or anyone
-        reading the source code) and has no effect on the execution of the
-        program.
-
     data type
         A set of values. The type of a value determines how it can be used in
         expressions. So far, the types you have seen are integers (``int``),
@@ -157,11 +152,4 @@ Glossary
         program *self documenting*.
 
 
-..    boolean expression
-        An expression that is either true or false.
-
-..    boolean value
-        There are exactly two boolean values: ``True`` and ``False``. Boolean
-        values result when a boolean expression is evaluated by the Python
-        interepreter.  They have type ``bool``.
 

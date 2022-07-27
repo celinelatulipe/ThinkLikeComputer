@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-13-
+   :prefix: 2-12-
    :start: 1
 
 Reassignment
@@ -25,7 +25,7 @@ As we have mentioned previously, it is legal to make more than one assignment to
 same variable. A new assignment makes an existing variable refer to a new value
 (and stop referring to the old value).
 
-.. activecode:: ac2_13_1
+.. activecode:: ac2_12_1
 
     bruce = 5
     print(bruce)
@@ -47,7 +47,7 @@ now, then ``a will always equal to b``. In Python (and other programming languag
 two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
 they don't have to stay that way:
 
-.. activecode:: ac2_13_2
+.. activecode:: ac2_12_2
 
     a = 5
     b = a    # after executing this line, a and b are now equal
@@ -62,9 +62,9 @@ Line 4 changes the value of ``a`` but does not change the value of
 Developing your mental model of How Python Evaluates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Its important to start to develop a good mental model of the steps the Python interpreter takes when evaluating an assignment statement.  In an assignment statement, the interpreter first evaluates the code on the right hand side of the assignment operator.  It then gives a name to whatever that is.  The (very short) visualization below shows what is happening.
+It's important to start to develop a good mental model of the steps the Python interpreter takes when evaluating an assignment statement.  In an assignment statement, the interpreter first evaluates the code on the right hand side of the assignment operator.  It then gives a name to whatever that is.  The (very short) visualization below shows what is happening.
 
-.. showeval:: se_ac2_13_1a
+.. showeval:: se_ac2_12_1
     :trace_mode: true
 
     a = 5
@@ -77,7 +77,7 @@ In the first statement ``a = 5`` the literal number 5 evaluates to 5, and is giv
 
 You can step through the code and see how the variable assignments change below.
 
-.. codelens:: clens2_13_1
+.. codelens:: clens2_12_1
     :python: py3
 
     a = 5
@@ -94,28 +94,29 @@ You can step through the code and see how the variable assignments change below.
    chose to use the tokens ``=`` for assignment, and ``==`` for equality.  This is a popular
    choice also found in languages like C, C++, Java, and C#.
 
-The following turtle example shows some variables used for drawing, but between each use, the variables have theirevalues changed.
+The following turtle example shows some variables used for drawing, but between each use, the variables have their values changed.
 
-.. activecode:: ac2_13_3
+.. activecode:: ac2_12_3
+   :nocodelens:
 
-  import turtle
-  wn = turtle.Screen()
-  manuel = turtle.Turtle()
+   import turtle
+   wn = turtle.Screen()
+   manuel = turtle.Turtle()
 
-  y = 200    # y coordinate, initially at the top 
-  x = -200       # x coordinate, initially at the left
+   y = 200    # y coordinate, initially at the top 
+   x = -200       # x coordinate, initially at the left
 
-  manuel.goto(x, y)       # draw from center to x, y
-  manuel.home()             # go back to center
-  x = 200
-  manuel.goto(x, y)       # draw from center to x, y
-  manuel.home()             # go back to center
-  y = -200
-  manuel.goto(x, y)       # draw from center to x, y
-  manuel.home()             # go back to center
-  x = -200
-  manuel.goto(x, y)       # draw from center to x, y
-  manuel.home()             # go back to center
+   manuel.goto(x, y)       # draw from center to x, y
+   manuel.home()             # go back to center
+   x = 200
+   manuel.goto(x, y)       # draw from center to x, y
+   manuel.home()             # go back to center
+   y = -200
+   manuel.goto(x, y)       # draw from center to x, y
+   manuel.home()             # go back to center
+   x = -200
+   manuel.goto(x, y)       # draw from center to x, y
+   manuel.home()             # go back to center
 
 In the above example, the turtle keeps going to the x and y coordinates, but those coordinates are updated, so 
 the turtle draws a different line each time from the center of the screen. 
@@ -123,7 +124,7 @@ the turtle draws a different line each time from the center of the screen.
 
 **Check your understanding**
 
-.. mchoice:: question2_13_1
+.. mchoice:: question2_12_1
    :answer_a: x is 15 and y is 15
    :answer_b: x is 22 and y is 22
    :answer_c: x is 15 and y is 22

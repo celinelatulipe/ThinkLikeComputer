@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-2-
+   :prefix: 2-2-
    :start: 1
 
 Values and Data Types
@@ -30,7 +30,7 @@ The printed representation of a number uses the familiar decimal representation 
 
 The printed representation of a character string, however, is not exactly the same as the literal used to specify the string in a program. For the literal in a program, you enclose the string in quotation marks. The printed representation, in the console, omits the quotation marks.
 
-.. activecode:: ac2_2_1
+.. activecode:: ac_print_literal_values
     :nocanvas:
 
     print(3.2)
@@ -64,3 +64,51 @@ You will soon encounter other types of objects as well, such as lists. Each of t
    .. code-block:: python
 
       print("Hello World!")
+      
+.. mchoice:: question2_2_2
+   :answer_a: String
+   :answer_b: Integer
+   :answer_c: Number
+   :correct: a
+   :feedback_a: Yes, because it is enclosed in quotation marks, it is a string.
+   :feedback_b: No, it is enclosed in quotation marks
+   :feedback_c: No, even though these letters spell out a number word, Python will not see this as a number
+   :practice: T
+
+   What is the data type of the literal in the program below?
+
+   .. code-block:: python
+
+      print("Twenty")
+
+.. mchoice:: question2_2_3
+   :answer_a: String
+   :answer_b: Integer
+   :answer_c: Number
+   :correct: a
+   :feedback_a: Yes, because it is enclosed in quotation marks, it is a string.
+   :feedback_b: No, it is enclosed in quotation marks
+   :feedback_c: No, even though this is numerals, Python will not see this as a number because it is enclosed in quotation marks
+   :practice: T
+
+   What is the data type of the literal in the program below?
+
+   .. code-block:: python
+
+      print("17")
+
+.. mchoice:: question2_2_4
+   :answer_a: String
+   :answer_b: Integer
+   :answer_c: Number
+   :correct: b
+   :feedback_a: No, this is not a String because it is not enclosed in quotation marks.
+   :feedback_b: Yes, this is an integer (or whole number)
+   :feedback_c: No, number is not a specific data type. This is an integer (a type of number that is whole, without a decimal portion)
+   :practice: T
+
+   What is the data type of the literal in the program below?
+
+   .. code-block:: python
+
+      print(341)

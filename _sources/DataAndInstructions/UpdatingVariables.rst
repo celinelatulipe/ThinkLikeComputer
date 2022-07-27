@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-14-
+   :prefix: 2-13-
    :start: 1
 
 Updating Variables
@@ -30,12 +30,12 @@ value of the variable depends on the old.  For example,
 
 This means get the current value of x, add one, and then update x with the new
 value.  The new value of x is the old value of x plus 1.  Although this assignment statement may
-look a bit strange, remember that executing assignment is a two-step process.  First, evaluate the
+look a bit strange, remember that executing assignment statements is a two-step process.  First, evaluate the
 right-hand side expression.  Second, let the variable name on the left-hand side refer to this new
 resulting object.  The fact that ``x`` appears on both sides does not matter.  The semantics of the assignment
-statement makes sure that there is no confusion as to the result. The visualizer makes this very clear.
+statement ensures that there is no confusion as to the result. The visualizer makes this very clear.
 
-.. showeval:: se_ac2_14_1
+.. showeval:: se_ac2_13_1
    :trace_mode: true
 
    x = 6
@@ -47,7 +47,7 @@ statement makes sure that there is no confusion as to the result. The visualizer
 
 
 
-.. activecode:: ac2_14_1
+.. activecode:: ac2_13_1
 
     x = 6        # initialize x
     print(x)
@@ -62,11 +62,12 @@ Before you can update a variable, you have to **initialize** it, usually with a
 simple assignment.  In the above example, ``x`` was initialized to 6.
 
 Updating a variable by adding something to it is called an **increment**; subtracting is
-called a **decrement**.  Sometimes programmers talk about incrementing or decrementing without specifying by how much; when they do they usually mean by 1. Sometimes programmers also talk about **bumping** a variable, which means the same as incrementing it by 1.
+called a **decrement**.  Sometimes programmers talk about incrementing or decrementing without specifying by how much; when they do
+that, they usually mean by 1. Sometimes programmers also talk about **bumping** a variable, which means the same as incrementing it by 1.
 
-Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python ``+=`` is used for incrementing, and ``-=`` for decrementing. In some other languages, there is even a special syntax ``++`` and ``--`` for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 you have to write ``x += 1`` or ``x = x + 1``.
+Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python ``+=`` is used for incrementing, and ``-=`` for decrementing. In some other languages, there is even a special syntax ``++`` and ``--`` for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 in Python you have to write ``x += 1`` or ``x = x + 1``.
 
-.. activecode:: ac2_14_2
+.. activecode:: ac2_13_2
 
     x = 6        # initialize x
     print(x)
@@ -78,7 +79,7 @@ Incrementing and decrementing are such common operations that programming langua
 Imagine that we wanted to not increment by one each time but instead add together the 
 numbers one through ten, but only one at a time.
 
-.. activecode:: ac2_14_3
+.. activecode:: ac2_13_3
   
   s = 1
   print(s)
@@ -111,7 +112,8 @@ easier way to do this kind of task.
 
 The following turtle example shows some variables used for drawing, but between each use, one of the variables has its value change, resulting in a pattern. Can you predict what the turtle's drawing will look like before you run the code?
 
-.. activecode:: ac2_14_4
+.. activecode:: ac2_13_4
+  :nocodelens:
 
   import turtle
   wn = turtle.Screen()
@@ -136,7 +138,7 @@ The following turtle example shows some variables used for drawing, but between 
 
 **Check your understanding**
 
-.. mchoice:: question2_14_1
+.. mchoice:: question2_13_1
    :answer_a: 12
    :answer_b: -1
    :answer_c: 11
@@ -156,7 +158,7 @@ The following turtle example shows some variables used for drawing, but between 
      x = x - 1
      print(x)
 
-.. mchoice:: question2_14_2
+.. mchoice:: question2_13_2
    :answer_a: 12
    :answer_b: 9
    :answer_c: 15
@@ -178,7 +180,7 @@ The following turtle example shows some variables used for drawing, but between 
      x = x + 1
      print(x)
 
-.. parsonsprob:: pp2_14_1
+.. parsonsprob:: pp2_13_1
 
    Construct the code that will result in the value 134 being printed.
    -----

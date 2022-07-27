@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-6-
+   :prefix: 2-6-
    :start: 1
 
 Type conversion functions
@@ -41,8 +41,8 @@ The last case shows that a string has to be a syntactically legal number,
 otherwise you'll get one of those pesky runtime errors.  Modify the example by deleting the
 ``bottles`` and rerun the program.  You should see the integer ``23``.
 
-The type converter ``float`` can turn an integer, a float, or a syntactically
-legal string into a float.
+The type converter ``float`` can turn an integer, or a syntactically
+legal string, into a float.
 
 .. activecode:: ac2_6_2
     :nocanvas:
