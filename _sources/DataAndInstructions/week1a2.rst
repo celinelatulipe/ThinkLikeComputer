@@ -8,17 +8,16 @@
     License".
 
 .. qnum::
-   :prefix: data-19-
+   :prefix: 2-18-
    :start: 1
 
-.. Week 1 Assessment 2
 
-Chapter Assessment
-------------------
+Chapter 2 Assessment
+--------------------
 
 **Check your understanding**
 
-.. activecode:: assess_ps_01_01
+.. activecode:: assess_Ch2_01
     :include: assess_addl_functions
     :language: python
     :autograde: unittest
@@ -41,7 +40,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ps_01_02
+.. activecode:: assess_Ch2_02
     :language: python
     :autograde: unittest
     :practice: T
@@ -70,7 +69,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. mchoice:: assess_question1_1_1_3
+.. mchoice:: assess_Ch2_03
    :multiple_answers:
    :answer_a: a = len("hello worldwelcome!")
    :answer_b: a = 11 + 8
@@ -93,7 +92,7 @@ Chapter Assessment
     z = "hello world"
     y = "welcome!"
 
-.. activecode:: assess_addl_functions
+.. activecode:: assess_Ch2_addl_functions
     :language: python
     :nopre:
     :hidecode:

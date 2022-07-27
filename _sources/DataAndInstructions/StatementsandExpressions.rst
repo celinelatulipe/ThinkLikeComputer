@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-10-
+   :prefix: 2-10-
    :start: 1
 
 .. index:: expression
@@ -24,7 +24,7 @@ Statements and Expressions
 
 A **statement** is an instruction that the Python interpreter can execute. You have mostly only seen the assignment 
 statement so far. Some other kinds of statements that you'll see in future chapters are ``while`` statements, 
-``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds too!)
+``for`` statements, ``if`` statements,  and ``import`` statements. (There are other kinds, too!)
 
 An **expression** is a combination of literals, variable names, operators, and calls to functions. 
 Expressions need to be evaluated. The result of evaluating an expression is a *value* or *object*.
@@ -153,7 +153,8 @@ To start giving you some practice in reading and understanding complicated expre
 The following turtle example uses assignment statements, where the result of calling turtle functions is stored in variables and then used later.
 
 .. activecode:: ac2_10_6
-   
+   :nocodelens:
+
    import turtle
    wn = turtle.Screen()
    sukram = turtle.Turtle()
@@ -163,4 +164,4 @@ The following turtle example uses assignment statements, where the result of cal
 
    sukram.goto(right_side, top_side)     # have turtle draw line from center (0,0) to top-right corner
 
-In this turtle example, the Python interpreter sees the ``=`` sign and knows this is an assignment statement. It needs to evaluate the expression on the right and assign it to the variable called ``right_side``. On the right is a turtle function (window_width()), a division operator and the literal value 2. So, the Python interpreter first notices the division operator and knows that a division operator is necessary, and then looks at the two operands to see if they are expressions that need to be evaluated. The literal `2` does not need further evaluation, but the turtle function window_width() needs evaluation. So, it calls that function, which is in the turtle module. That function returns the width of the window or canvas. Whatever that value is now gets divided by 2. The result of that calculation gets stored in `right_side`. If you are wondering why we divide the width by 2, it is because in Python's turtle graphics, the origin (0,0) is located at the center of the window. So, the x coordinate of the right edge of the canvas is width/2 and the x coordinate of the left edge is -(width/2). On line 8, the turtle is moved to the top-right corner, causing a line to be drawn from the center of the window to that corner. This shows how we can use assignments with functions and operators to define where the turtle draws. We'll learn a bit more about the coordinates of the turtle window in a later chapter.  
+On line 4 in this turtle example, the Python interpreter sees the ``=`` sign and knows this is an assignment statement. It needs to evaluate the expression on the right and assign the result to the variable called ``right_side``. On the right is a turtle function (window_width()), a division operator and the literal value 2. So, the Python interpreter first notices the division operator and knows that a division operator is necessary, and then looks at the two operands to see if they are expressions that need to be evaluated. The literal `2` does not need further evaluation, but the turtle function window_width() needs evaluation. So, it calls that function, which is in the turtle module. That function returns the width of the window or canvas. Whatever that value is now gets divided by 2. The result of that calculation gets stored in `right_side`. If you are wondering why we divide the width by 2, it is because in Python's turtle graphics, the origin (0,0) is located at the center of the window. So, the x coordinate of the right edge of the canvas is width/2 and the x coordinate of the left edge is -(width/2). On line 8, the turtle is moved to the top-right corner, causing a line to be drawn from the center of the window to that corner. This shows how we can use assignments with functions and operators to define where the turtle draws. We'll learn a bit more about the coordinates of the turtle window in a later chapter.  

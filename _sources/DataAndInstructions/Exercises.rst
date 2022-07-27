@@ -10,7 +10,7 @@
 :skipreading:`True`
 
 .. qnum::
-   :prefix: data-18-
+   :prefix: 2-17-
    :start: 1
 
 Exercises
@@ -229,7 +229,7 @@ Exercises
    .. actex:: ex_2_10
       :autograde: unittest
 
-      Write a program that will compute the area of a circle. Prompt the user to enter the radius and save it to avariable called ``radius``. Print a nice message back to the user with the answer.
+      Write a program that will compute the area of a circle. Prompt the user to enter the radius and save it to a variable called ``radius``. Print a nice message back to the user with the answer.
       ~~~~
       pi = 3.14
 

@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-16-
+   :prefix: 2-15-
    :start: 1
 
 .. index:: order of operations, rules of precedence
@@ -74,6 +74,7 @@ The result is referred to by ``total_secs``.  Now, each time you run the program
 Here is a turtle example that asks the user for input on where the turtle should go:
 
 .. activecode:: ac2_16_3
+   :nocodelens:
 
    import turtle
    wn = turtle.Screen()

@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-5-
+   :prefix: 2-5-
    :start: 1
 
 .. index:: type converter functions, int, float, str, truncation
@@ -19,7 +19,6 @@ If you are not sure what type a value is, Python has a function called
 **type** which can tell you.
 
 .. activecode:: ac2_5_1
-    :nocanvas:
 
     print(type("Hello, World!"))
     print(type(17))
@@ -29,8 +28,9 @@ If you are not sure what type a value is, Python has a function called
 
 We can also use this to find out about types that we use from imported modules, like the turtle module. 
 
+
 .. activecode:: ac2_5_2
-    :nocanvas:
+    :nocodelens:
 
     import turtle
     win = turtle.Screen()
@@ -47,7 +47,6 @@ What about values like ``"17"`` and ``"3.2"``? They look like numbers, but they
 are in quotation marks like strings.
 
 .. activecode:: ac2_5_3
-    :nocanvas:
 
     print(type("17"))
     print(type("3.2"))
@@ -58,7 +57,6 @@ Strings in Python can be enclosed in either single quotes (``'``) or double
 quotes (``"``), or three of each (``'''`` or ``"""``)
 
 .. activecode:: ac2_5_4
-    :nocanvas:
 
     print(type('This is a string.'))
     print(type("And so is this."))
@@ -73,7 +71,6 @@ Strings enclosed with three occurrences of either quote symbol are called
 triple quoted strings.  They can contain either single or double quotes:
 
 .. activecode:: ac2_5_5
-    :nocanvas:
 
     print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
 
@@ -81,7 +78,6 @@ triple quoted strings.  They can contain either single or double quotes:
 Triple quoted strings can even span multiple lines:
 
 .. activecode:: ac2_5_6
-    :nocanvas:
 
     print("""This message will span
     several lines
@@ -93,7 +89,6 @@ your program or command, the way it stores the value is identical in all cases,
 and the surrounding quotes are **not** part of the value that is stored.
 
 .. activecode:: ac2_5_7
-    :nocanvas:
 
     print('This is a string.')
     print("""And so is this.""")
@@ -107,7 +102,6 @@ groups of three digits, as in ``42,000``. This is not a legal integer in
 Python, but it does mean something else, which is legal:
 
 .. activecode:: ac2_5_8
-    :nocanvas:
 
     print(42500)
     print(42,500)
@@ -118,7 +112,6 @@ treat this as a *pair* of values. In fact, a print statement can print any numbe
 as you separate them by commas. Notice that the values are separated by spaces when they are displayed.
 
 .. activecode:: ac2_5_9
-    :nocanvas:
 
     print(42, 17, 56, 34, 11, 4.35, 32)
     print(3.4, "hello", 45)
@@ -129,7 +122,7 @@ formal languages are strict, the notation is concise, and even the smallest
 change might mean something quite different from what you intended.
 
 .. note::
-   The examples in this online text describe how print works in Python 3. If you install Python 2.7 on your machine, it will work slightly differently. One difference is that print is not called as a function, so there are no parentheses around the values to be printed.
+   The examples in this online text describe how print works in Python 3. If you install Python 2.7 on your machine, it will work slightly differently. One difference is that print is not called as a function, so there are no parentheses around the values to be printed. We recommend that you install Python 3.x, not the older Python 2 version. 
 
 **Check your understanding**
 

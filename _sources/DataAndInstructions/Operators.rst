@@ -8,7 +8,7 @@
     License".
 
 .. qnum::
-   :prefix: data-3-
+   :prefix: 2-3-
    :start: 1
 
 .. _input:
@@ -42,7 +42,7 @@ expect.
 
 Remember that if we want to see the results of the computation, the program needs to specify that with the word ``print``. The first three computations occur, but their results are not printed out to the console.
 
-.. activecode:: ac2_3_1
+.. activecode:: ac_operators_example_not_printing
     :nocanvas:
 
     20 + 32
@@ -52,7 +52,7 @@ Remember that if we want to see the results of the computation, the program need
 
 In Python 3, which we will be using, the division operator ``/`` produces a floating point result (even if the result is an integer): ``4/2`` is ``2.0``. If you want truncated division, which ignores the remainder, you can use the ``//`` operator (for example, ``5//2`` is ``2``).
 
-.. activecode:: ac2_3_2
+.. activecode:: ac_integer_floating_division
     :nocanvas:
 
     print(9 / 5)
@@ -63,7 +63,7 @@ Pay particular attention to the examples above. Note that ``9//5`` truncates rat
 
 The truncated division operator, ``//``, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus ``7.0 // 3.0`` is ``2.0``.
 
-.. activecode:: ac2_3_3
+.. activecode:: ac_integer_floating_division2
    :nocanvas:
 
    print(7.0 / 3.0)
@@ -78,7 +78,7 @@ the remainder when the first operand is divided by the second. In Python (and ma
 modulus operator is a percent sign (``%``). The syntax is the same as for other
 operators.
 
-.. activecode:: ac2_3_4
+.. activecode:: ac_modulus_example
     :nocanvas:
 
     print(7 // 3)    # This is the integer division operator

@@ -10,7 +10,7 @@
 .. _simple_python_data:
 
 .. qnum::
-   :prefix: data-1-
+   :prefix: 2-1-
    :start: 1
 
 Introduction
@@ -40,19 +40,21 @@ Learning Goals
 --------------
 
 * To understand Python's storage model
-* To solve problems using the 'accumulator pattern'
+* To understand how to assign values to variables so they can be stored and reused
 * To understand operator precedence
 * To distinguish between expressions, values, and printed representations
 * To recognize & explain hard coding
+* To understand how to get input from an end user
 
 
 Objectives
 ----------
+After completing the exercises in this chapter, you should be able to: 
 
 * Given some sample code, identify variables that reference an object of a particular type
 * Given a variable of one type, convert it to another
 * Simulate evaluation of an expression and assignment statement
-* Use reassignment to increment a variable (accumulator pattern)
+* Use reassignment to increment a variable 
 * Get input from a user and convert the input to the appropriate type
 * Identify the following types of values: strings, integers, floats, functions
 * Recognize valid vs. invalid variable names
