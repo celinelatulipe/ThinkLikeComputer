@@ -95,7 +95,7 @@ created. So, once a tuple is created, it's not possible to add another value to 
 
 To create a tuple with a single element (but you're probably not likely to do that too often), you have to include a comma after the item, because without that comma, Python treats the item as a string, float or integer. For example, in the code below, Python treats ``(5)`` as an integer in parentheses, but treats ``(5,)`` as a tuple:
 
-.. activecode:: ac5_2_1
+.. activecode:: ac9_2_1
 
     t = (5,)
     print(type(t))
@@ -122,7 +122,7 @@ While we are taught as children to count from 1, in most programming languages w
 
 **Check your understanding**
 
-.. mchoice:: question5_2_1
+.. mchoice:: question9_2_1
    :answer_a: False
    :answer_b: True
    :correct: a

@@ -14,7 +14,7 @@ Chapter Assessment
 
 **Check your understanding**
 
-.. activecode:: assess_ps3_1_1_1
+.. activecode:: assess_6_14_1
     :language: python
     :autograde: unittest
     :practice: T
@@ -37,7 +37,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ps3_1_1_2
+.. activecode:: assess_6_14_2
     :language: python
     :autograde: unittest
     :practice: T
@@ -63,7 +63,7 @@ Chapter Assessment
             self.assertIn('for ', self.getEditorText(), "Testing that your code has a for loop")
     myTests().main()
 
-.. activecode:: assess_ps3_1_1_3
+.. activecode:: assess_6_14_3
     :language: python
     :autograde: unittest
     :practice: T
@@ -90,7 +90,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ps3_1_1_4
+.. activecode:: assess_6_14_4
     :language: python
     :autograde: unittest
     :practice: T
@@ -119,7 +119,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ps3_1_1_5
+.. activecode:: assess_6_14_5
     :language: python
     :autograde: unittest
     :practice: T
@@ -146,7 +146,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ac3_1_1_6
+.. activecode:: assess_6_14_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -168,7 +168,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: assess_ac3_1_1_7
+.. activecode:: assess_6_14_7
    :language: python
    :autograde: unittest
    :practice: T
@@ -199,7 +199,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: assess_ac3_1_1_8
+.. activecode:: assess_6_14_8
    :language: python
    :autograde: unittest
    :practice: T
@@ -220,7 +220,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: assess_ac3_1_1_9
+.. activecode:: assess_6_14_9
    :language: python
    :autograde: unittest
    :practice: T
@@ -242,7 +242,7 @@ Chapter Assessment
 
    myTests().main()   
 
-.. activecode:: assess_ac3_1_1_10
+.. activecode:: assess_6_14_10
    :language: python
    :autograde: unittest
    :practice: T

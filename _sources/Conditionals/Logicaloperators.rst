@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-3-
-   :start: 1
 
 .. index::logical operator
    operator; logical
@@ -44,7 +41,7 @@ Although you can use boolean operators with simple boolean literals or variables
 example, they are often combined with the comparison operators, as in this example. Again, before you
 run this, see if you can predict the outcome:
 
-.. activecode:: ac7_3_1
+.. activecode:: ac6_3_1
 
     x = 5
     print(x > 0 and x < 10)
@@ -75,7 +72,7 @@ it would be true if Karina went to grad school, it would be true if Karina got a
 school **and** got a job in industry. It would only be false if Karina did neither. 
 
 
-.. activecode:: ac7_3_1a
+.. activecode:: ac6_3_2
 
     x = 5
     y = 7
@@ -167,7 +164,7 @@ operations in an ``if`` statement or ``while`` loop using boolean logic with ``a
 
 **Check your understanding**
 
-.. mchoice:: question7_3_1
+.. mchoice:: question6_3_1
    :answer_a: x &gt; 0 and &lt; 5
    :answer_b: 0 &lt; x &lt; 5
    :answer_c: x &gt; 0 or x &lt; 5
@@ -181,7 +178,7 @@ operations in an ``if`` statement or ``while`` loop using boolean logic with ``a
 
    What is the correct Python expression for checking to see if a number stored in a variable x is between 0 and 5.
 
-.. mchoice:: question7_3_2
+.. mchoice:: question6_3_2
    :practice: T
    :multiple_answers:
    :answer_a: Option A
@@ -205,7 +202,7 @@ operations in an ``if`` statement or ``while`` loop using boolean logic with ``a
          print('Yes!')
 
 
-.. mchoice:: question7_3_3
+.. mchoice:: question6_3_3
    :practice: T
    :answer_a: Option A
    :answer_b: Option B

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-1-
-   :start: 1
-
 Intro: What we can do with Turtles and Conditionals
 ===================================================
 
@@ -18,7 +14,7 @@ So far, our programs have either been a series of statements which always execut
 
 In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly. Run the program below a few times and examine the code.
 
-.. activecode:: ac7_1_1
+.. activecode:: ac6_1_1
 
   # Nesting turtles beach scene
   import turtle

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-10-
-   :start: 1
-
 Chapter Assessment
 ==================
 
@@ -26,7 +22,7 @@ Chapter Assessment
    :fromfile: emotion_words.txt
    :hide:
 
-.. activecode:: ac9_10_1
+.. activecode:: ac5_15_1
    :language: python
    :autograde: unittest
    :practice: T
@@ -47,7 +43,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: ac9_10_2
+.. activecode:: ac5_15_2
    :language: python
    :autograde: unittest
    :practice: T
@@ -69,7 +65,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac9_10_3
+.. activecode:: ac5_15_3
    :language: python
    :autograde: unittest
    :practice: T
@@ -91,7 +87,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac9_10_4
+.. activecode:: ac5_15_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -114,7 +110,7 @@ Chapter Assessment
    myTests().main()   
 
 
-.. activecode:: ac9_10_5
+.. activecode:: ac5_15_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -136,7 +132,7 @@ Chapter Assessment
    myTests().main()
  
 
-.. activecode:: ac9_10_6
+.. activecode:: ac5_15_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -158,7 +154,7 @@ Chapter Assessment
    myTests().main() 
 
 
-.. activecode:: ac9_10_7
+.. activecode:: ac5_15_7
    :language: python
    :autograde: unittest
    :practice: T
@@ -180,7 +176,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac9_10_8
+.. activecode:: ac5_15_8
    :language: python
    :autograde: unittest
    :practice: T
@@ -201,7 +197,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: ac_9_10_9
+.. activecode:: ac_5_15_9
    :language: python
    :autograde: unittest
    :practice: T

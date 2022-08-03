@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-5-
-   :start: 1
-
 .. index:: conditional branching, conditional execution, if, elif, else,
            if statement, compound statement, statement block, block, body,
            pass statement
@@ -38,7 +34,7 @@ Level     Category        Operators
 
   This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.
 
-  .. activecode:: ac7_5_1
+  .. activecode:: ac6_5_1
 
 .. admonition:: Common Mistake!
 
@@ -57,7 +53,7 @@ Level     Category        Operators
 
 **Check your understanding**
 
-.. mchoice:: question7_5_1
+.. mchoice:: question6_5_1
    :answer_a: ((5*3) &gt; 10) and ((4+6) == 11)
    :answer_b: (5*(3 &gt; 10)) and (4 + (6 == 11))
    :answer_c: ((((5*3) &gt; 10) and 4)+6) == 11
@@ -73,7 +69,7 @@ Level     Category        Operators
 
 Here is an animation for the above expression:
 
-.. showeval:: se_ac7_5_1
+.. showeval:: se_ac6_5_1
    :trace_mode: true
 
    5 * 3 > 10 and 4 + 6 == 11

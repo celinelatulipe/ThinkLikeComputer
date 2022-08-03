@@ -23,7 +23,7 @@ Length
 
 The ``len`` function, when applied to a string, returns the number of characters in a string.
 
-.. activecode:: ac5_5_1
+.. activecode:: ac9_4_1
 
     fruit = "Banana"
     print(len(fruit))
@@ -32,7 +32,7 @@ The ``len`` function, when applied to a string, returns the number of characters
 To get the last letter of a string, you might be tempted to try something like
 this:
 
-.. activecode:: ac5_5_2
+.. activecode:: ac9_4_2
 
     fruit = "Banana"
     sz = len(fruit)
@@ -44,7 +44,7 @@ that there is no letter at index position 6 in ``"Banana"``. Since we started co
 six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length.
 Give it a try in the example above.
 
-.. activecode:: ac5_5_3
+.. activecode:: ac9_4_3
 
     fruit = "Banana"
     sz = len(fruit)
@@ -77,7 +77,7 @@ As with strings, the function ``len`` returns the length of a list (the number o
 However, since lists can have items which are themselves sequences (e.g., strings), 
 it important to note that ``len`` only returns the top-most length.
 
-.. activecode:: ac5_5_4
+.. activecode:: ac9_4_4
 
     alist =  ["hello", 2.0, 5]
     print(len(alist))
@@ -87,7 +87,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
 
 **Check your understanding**
 
-.. mchoice:: question5_5_1
+.. mchoice:: question9_4_1
    :answer_a: 11
    :answer_b: 12
    :correct: b
@@ -102,7 +102,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
       s = "python rocks"
       print(len(s))
 
-.. mchoice:: question5_5_2
+.. mchoice:: question9_4_2
    :answer_a: 4
    :answer_b: 5
    :correct: b
@@ -118,7 +118,7 @@ Note that ``alist[0]`` is the string ``"hello"``, which has length 5.
      print(len(alist))
 
 
-.. activecode:: ac5_5_5
+.. activecode:: ac9_4_5
    :language: python
    :autograde: unittest
    :practice: T

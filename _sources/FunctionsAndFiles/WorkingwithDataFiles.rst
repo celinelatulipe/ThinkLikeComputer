@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-1-
-   :start: 1
 
 Working with Data Files
 =======================

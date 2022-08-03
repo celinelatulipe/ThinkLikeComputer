@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-7-
-   :start: 1
-
 .. index:: unary selection
    else; omitted
 
@@ -36,7 +32,7 @@ Below is a flowchart of an **if** without an **else** clause:
 
 Predict the output for the code below and then run it.
 
-.. activecode:: ac7_7_1
+.. activecode:: ac6_7_1
 
     x = 10
     if x < 0:
@@ -47,7 +43,7 @@ What would be printed if the value of ``x`` is negative in the example above?  T
 
 **Check your understanding**
 
-.. mchoice:: question7_7_1
+.. mchoice:: question6_7_1
    :answer_a: Output a
    :answer_b: Output b
    :answer_c: Output c
@@ -81,7 +77,7 @@ What would be printed if the value of ``x`` is negative in the example above?  T
      The negative number -10 is not valid here
 
 
-.. mchoice:: question7_7_2
+.. mchoice:: question6_7_2
    :answer_a: No
    :answer_b: Yes
    :correct: b

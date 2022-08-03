@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-4-
-   :start: 1
 
 Disambiguating []: creation vs indexing
 =======================================
@@ -21,13 +18,13 @@ You have currently encountered two instances where we have used square brackets.
 is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing 
 an already created list while simply creating a list does not.
 
-.. activecode:: ac5_4_1
+.. activecode:: ac9_3_1
 
    new_lst = []
 
 In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.
 
-.. activecode:: ac5_4_2
+.. activecode:: ac9_3_2
 
    new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
    part_of_new_lst = new_lst[0]
@@ -40,7 +37,7 @@ Additionally, we have to specify what element we want to extract. This belongs i
 
 Though it may be easier to distinguish in this above activecode, below may be a bit more difficult.
 
-.. activecode:: ac5_4_3
+.. activecode:: ac9_3_3
 
    lst = [0]
    n_lst = lst[0]
@@ -53,7 +50,7 @@ the value associated with the first element of lst. Despite the variable names, 
 assigned to a list. Note that in this example, what sets creating apart from indexing is the reference to the list to let 
 python know that you are extracting an element from another list.
 
-.. mchoice:: question5_4_1
+.. mchoice:: question9_3_1
    :multiple_answers:
    :answer_a: w = [a]
    :answer_b: y = a[]

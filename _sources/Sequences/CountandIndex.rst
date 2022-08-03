@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-8-
-   :start: 1
 
 Count and Index Methods
 =======================
@@ -34,7 +31,7 @@ count for lists. When you use count on a string, the argument can only be a stri
 many times the integer 2 appears in a string, though you can count how many times the string "2" appears 
 in a string. For lists and tuples, the argument can be any type: a string, an integer, a floating point number, a boolean value, etc.
 
-.. activecode:: ac5_8_1
+.. activecode:: ac9_7_1
    
    a = "I have had an apple on my desk before!"
    print(a.count("e"))
@@ -44,7 +41,7 @@ The activecode window above demonstrates the use of count on a string. Just like
 when we had to specify which turtle was changing color or moving, we have to specify which string we are 
 using count on.
 
-.. activecode:: ac5_8_2
+.. activecode:: ac9_7_2
    
    z = ['atoms', 4, 'neutron', 6, 'proton', 4, 'electron', 4, 'electron', 'atoms']
    print(z.count("4"))
@@ -67,7 +64,7 @@ on strings, and any type when it is used on lists/tuples. For any sequence type,
 leftmost index where the argument is found. If it is unable to find the argument in the string or list, 
 then an error will occur.
 
-.. activecode:: ac5_8_3
+.. activecode:: ac9_7_3
 
    music = "Pull out your music and dancing can begin"
    bio = ["Metatarsal", "Metatarsal", "Fibula", [], "Tibia", "Tibia", 43, "Femur", "Occipital", "Metatarsal"]
@@ -85,7 +82,7 @@ in ``bio``, the method will only return the location of one of them.
 
 Here's another example.
 
-.. activecode:: ac5_8_4
+.. activecode:: ac9_7_4
 
    seasons = ["winter", "spring", "summer", "fall"]
 
@@ -98,7 +95,7 @@ it seems like you can't ask for the index of something in a list/tuple without p
 solution to this is to first use the **in** operator to check if the item exists in the sequence, and then, if it does, ask for the index. See
 the above example modified below:
 
-.. activecode:: ac5_8_5
+.. activecode:: ac9_7_5
 
    seasons = ["winter", "spring", "summer", "fall"]
 
@@ -110,7 +107,7 @@ the above example modified below:
 
 **Check your understanding**
 
-.. mchoice:: question5_8_1
+.. mchoice:: question9_7_1
    :answer_a: 5
    :answer_b: 6
    :answer_c: 13
@@ -131,7 +128,7 @@ the above example modified below:
       qu = "wow, welcome week!"
       ty = qu.index("we")
 
-.. mchoice:: question5_8_2
+.. mchoice:: question9_7_2
    :answer_a: 0
    :answer_b: 2
    :answer_c: 3
@@ -150,7 +147,7 @@ the above example modified below:
       qu = "wow, welcome week! Were you wanting to go?"
       ty = qu.count("we")
 
-.. mchoice:: question5_8_3
+.. mchoice:: question9_7_3
    :answer_a: 0
    :answer_b: -1
    :answer_c: There is an error.

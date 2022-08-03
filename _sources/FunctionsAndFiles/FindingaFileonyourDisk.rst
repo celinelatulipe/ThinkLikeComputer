@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-2-
-   :start: 1
 
 Finding a File in your Filesystem
 =================================
@@ -39,7 +36,7 @@ If you will ever move your programs and data to another computer (e.g., to share
 
 **Check Your Understanding**
 
-.. mchoice:: question9_2_1
+.. mchoice:: question5_10_1
    :answer_a: open("YearlyProjections.csv", "r")
    :answer_b: open("../CompanyData/YearlyProjections.csv", "r")
    :answer_c: open("CompanyData/YearlyProjections.csv", "r")
@@ -55,7 +52,7 @@ If you will ever move your programs and data to another computer (e.g., to share
 
    Say you are in a directory called Project. In it, you have a file with your Python code. You would like to read in data from a file called "YearlyProjections.csv" which is in a folder called CompanyData, which is inside of Project. What is the best way to open the file in your Python program?
 
-.. mchoice:: question9_2_2
+.. mchoice:: question5_10_2
    :multiple_answers:
    :answer_a: "Stacy/Applications/README.txt"
    :answer_b: "/Users/Raquel/Documents/graduation_plans.doc"

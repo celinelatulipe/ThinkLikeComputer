@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-2-
-   :start: 1
 
 Function Invocation
 -------------------
@@ -21,7 +18,7 @@ The way to invoke a function is to refer to it by name, followed by parentheses.
 the function hello, we won't need to put anything inside the parentheses when we call it. Once we've defined a 
 function, we can call it as often as we like and its statements will be executed each time we call it.  
 
-.. codelens:: clens11_2_1
+.. codelens:: clens5_3_1
    :python: py3
 
    def hello():
@@ -69,7 +66,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
 
 **Check your understanding**
 
-.. mchoice:: question11_2_1
+.. mchoice:: question5_3_1
    :answer_a: A named sequence of statements.
    :answer_b: Any sequence of statements.
    :answer_c: A mathematical expression that calculates a value.
@@ -82,7 +79,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
 
    What is a function in Python?
 
-.. mchoice:: question11_2_2
+.. mchoice:: question5_3_2
    :answer_a: To improve the speed of execution
    :answer_b: To help the programmer organize programs into chunks that match how they think about the solution to the problem.
    :answer_c: All Python programs must be written using functions
@@ -95,7 +92,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
 
    What is one main purpose of a function?
 
-.. mchoice:: question11_2_3
+.. mchoice:: question5_3_3
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2
@@ -113,7 +110,7 @@ The same process of invocation occurs again on line 10, with lines 2 and 3 getti
          print("Hello")
          print("Glad to meet you")
 
-.. mchoice:: question11_2_4
+.. mchoice:: question5_3_4
    :answer_a: 0
    :answer_b: 1
    :answer_c: 3

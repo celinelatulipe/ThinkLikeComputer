@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-7-
-   :start: 1
-
 Writing Text Files
 ------------------
 
@@ -41,7 +37,7 @@ then it can be written into the file.
 The program below solves part of the problem. We first want to make sure that we've written the
 correct code to calculate the square of each number.
 
-.. activecode:: ac9_7_1
+.. activecode:: ac5_11_1
 
     for number in range(1, 13):
         square = number * number
@@ -73,7 +69,7 @@ The complete program is shown below.
 
 
 
-.. activecode:: ac9_7_2
+.. activecode:: ac5_11_2
     :nocodelens:
 
     filename = "squared_numbers.txt"

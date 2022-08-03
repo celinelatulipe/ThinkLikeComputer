@@ -9,10 +9,6 @@
 
 :skipreading:`True`
 
-.. qnum::
-   :prefix: files-9-
-   :start: 1
-
 Exercises
 ---------
 
@@ -75,7 +71,7 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
-            .. actex:: ac9_9_1
+            .. actex:: ac5_14_1
                 :nocodelens:
                 :available_files: studentdata.txt
 
@@ -145,7 +141,7 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
-            .. actex:: ac9_9_2
+            .. actex:: ac5_14_2
                :nocodelens:
                :available_files: travel_plans.txt
 
@@ -170,7 +166,7 @@ The file below is ``emotion_words.txt``.
 
         .. tab:: Question
 
-            .. actex:: ac9_9_3
+            .. actex:: ac5_14_3
                :nocodelens:
                :available_files: emotion_words.txt
 
@@ -189,13 +185,3 @@ The file below is ``emotion_words.txt``.
                myTests().main()
 
 
-Contributed Exercises
-~~~~~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-    {% for q in questions: %}
-        <div class='oneq full-width'>
-            {{ q['htmlsrc']|safe }}
-        </div>
-    {% endfor %}
