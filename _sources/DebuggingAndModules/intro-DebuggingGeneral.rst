@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: debug-1-
-   :start: 1
 
 Introduction to Debugging
 =========================
@@ -46,5 +43,5 @@ Learning Goals
 Objectives
 ----------
 
-* Given a piece of code identify the Syntax errors based on error messages
+* Given a piece of code identify the syntax errors based on error messages
 * Given a piece of code find the (ValueError, TypeError, SyntaxError, ParseError, NameError)

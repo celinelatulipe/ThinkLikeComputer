@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-2-
-   :start: 1
-
 .. index:: for loop, iteration, body
    loop; for
 
@@ -35,7 +31,7 @@ example, let's say we have some friends, and we'd like to send them each an emai
 our party. We don't quite know how to send email yet, so for the moment we'll just print a message
 out to the console to imitate the idea of emailing each friend.
 
-.. activecode:: ac6_2_1
+.. activecode:: ac4_2_1
     :nocanvas:
     :tour_1: "Overall Tour"; 1-2: Example04_Tour01_Line01; 2: Example04_Tour01_Line02; 1: Example04_Tour01_Line03;
 

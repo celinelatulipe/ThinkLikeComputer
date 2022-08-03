@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-3-
-   :start: 1
-
 .. index:: control flow, flow of execution
 
 Flow of Execution of the for Loop

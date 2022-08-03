@@ -7,12 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. _for_by_index:
-
-.. qnum::
-   :prefix: moreiter-6-
-   :start: 1
-
 The Power of Iteration
 ----------------------
 
@@ -45,9 +39,9 @@ What would you do if the company you worked for asked you to write code that wou
 
 **Check your understanding**
 
-.. mchoice:: question13_5_1
+.. mchoice:: question4_13_1
    :answer_a: It's legal and it's ethical since I was given access to all the records so it's okay to share.
-   :answer_b: It's legal but it's unethical. I should know better than to snoop in people private data.
+   :answer_b: It's legal but it's unethical. I should know better than to snoop in people's private data.
    :answer_c: It's illegal but my friend is sworn to secrecy so it's okay to share the gossip
    :answer_d: It's illegal and unethical. I don't want to go to jail or get fired.
    :correct: b

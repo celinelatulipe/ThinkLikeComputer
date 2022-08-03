@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-4-
-   :start: 1
 
 Object Oriented Concepts
 ========================

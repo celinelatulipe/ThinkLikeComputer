@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: ethics-2-
-   :start: 1
-
 Ethics & Code Ownership
 -----------------------
 We have all heard about movie and brand copyrights but what about code? If you write a piece of code, do you own it? In Canada and the US, an original work (including code) is automatically protected by copyright, from the moment you create it. This doesn't make your **idea** protected, just your specific piece of work. If you want to protect the idea from being copied you need a patent. For example, you might remember the viral game, *Flappy Bird*. In fact, in 2014, there were 864 Flappy Bird clones in the Google Play store and none of them broke copyright. Copyright protects the author from someone replicating their code **exactly** but it does not protect the idea itself from being copied. However, imagine you work for a company and use Microsoft Word for your work. You want to finish from home but your own home computer doesn't have Microsoft Word, so you make an extra copy of the software and install it at home so that you can finish. This is software copyright infringment.
@@ -30,7 +26,7 @@ Open-source is often used to designate code and software being shared publically
 
 **Check your understanding**
 
-.. mchoice:: question4_3_1
+.. mchoice:: question3_9_1
    :answer_a: is free from copyright rules so I can use it however I want.
    :answer_b: is copyrighted, but has a license that lets me use it for free and copy and extend it.
    :answer_c: is only a thing for big companies so I don't have to worry about it.

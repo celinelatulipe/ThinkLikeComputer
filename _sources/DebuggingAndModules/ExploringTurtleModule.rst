@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-2-
-   :start: 1
-
 .. index:: instance
 
 🐢 Exploring the Turtle Module 
@@ -19,7 +15,7 @@ We already introduced the idea of drawing with turtles. In the next few sections
 
 Here is a turtle that starts to draw a dashed line:
 
-.. activecode:: ac3_5_1_1
+.. activecode:: ac3_11_1
     :nocodelens:
 
     import turtle             # allows us to use the turtles library
@@ -60,7 +56,7 @@ In lines 4-8, we instruct the turtle 'maya' to draw part of a dashed line. Run t
 
 **Check your understanding**
 
-.. mchoice:: question5_1
+.. mchoice:: question3_11_1
    :answer_a: forward()
    :answer_b: forward_penup()
    :answer_c: penup()
@@ -90,7 +86,7 @@ window objects. In the example below, we show just a couple and have only commen
 those lines that are different from the previous example. Note also that we have decided
 to call our turtle object *tess*. When we create objects, we can call them whatever we want.
 
-.. activecode:: ac3_2_2
+.. activecode:: ac3_11_2
     :tour_1: "Overall Tour"; 1-10: Example02_Tour01_Line01; 4: Example02_Tour01_Line02; 6: Example02_Tour01_Line03; 7: Example02_Tour01_Line04; 8: Example02_Tour01_Line05; 10: Example02_Tour01_Line06; 11: Example02_Tour01_Line07; 12: Example02_Tour01_Line08; 14: Example02_Tour01_Line09;
     :tour_2: "Line by Line Tour"; 1: Example01_Tour02_Line01; 3: Example01_Tour02_Line02; 4: Example02_Tour02_Line03; 6: Example02_Tour02_Line04; 7: Example02_Tour02_Line05; 8: Example02_Tour02_Line06; 10: Example02_Tour02_Line07; 11: Example02_Tour02_Line08; 12: Example02_Tour02_Line09; 14: Example02_Tour02_Line10;
     :nocodelens:
@@ -137,7 +133,7 @@ screen until we click on it.
 
 **Check your understanding**
 
-.. mchoice:: question3_2_2
+.. mchoice:: question3_11_2
    :answer_a: It creates a new turtle object that can be used for drawing.
    :answer_b: It defines the module turtle which will allow you to create a Turtle object and draw with it.
    :answer_c: It makes the turtle draw half of a rectangle on the screen.
@@ -161,7 +157,7 @@ screen until we click on it.
 
    What does the line "import turtle" do?
 
-.. mchoice:: question3_2_3
+.. mchoice:: question3_11_3
    :answer_a: This is simply for clarity.  It would also work to just type "Turtle()" instead of "turtle.Turtle()".
    :answer_b: The period (.) is what tells Python that we want to invoke a new object.
    :answer_c: The first "turtle" (before the period) tells Python that we are referring to the turtle module, which is where the object "Turtle" is found.
@@ -172,7 +168,7 @@ screen until we click on it.
 
    Why do we type ``turtle.Turtle()`` to get a new Turtle object?
 
-.. mchoice:: question3_2_4
+.. mchoice:: question3_11_4
    :answer_a: True
    :answer_b: False
    :correct: a
@@ -181,7 +177,7 @@ screen until we click on it.
 
    True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.
 
-.. mchoice:: question3_2_5
+.. mchoice:: question3_11_5
    :answer_a: <img src="../_static/test1Alt1.png" alt="right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long">
    :answer_b: <img src="../_static/test1Alt2.png" alt="left turn of 180 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long">
    :answer_c: <img src="../_static/test1Alt3.png" alt="left turn of 270 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long">
@@ -201,7 +197,7 @@ screen until we click on it.
 
 **Mixed up programs**
 
-.. parsonsprob:: pp3_3_4
+.. parsonsprob:: pp3_11_1
 
    The following program uses a turtle to draw a capital L in white on a blue background as shown to the left, 
    
@@ -230,7 +226,7 @@ screen until we click on it.
    jamal.forward(75)
    wn.exitonclick()
 
-.. parsonsprob:: pp3_2_5
+.. parsonsprob:: pp3_11_2
 
    The following program uses a turtle to draw a capital T in white on a green background as shown to the left, 
    

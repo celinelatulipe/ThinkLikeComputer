@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-9-
-   :start: 1
-
 👩‍💻 Common ``turtle`` Errors
 ==============================
 
@@ -19,7 +15,7 @@ Some of these errors can be applied to other instances as well!
 
 1. Forgetting a Parenthesis
 
-.. activecode:: ac3_9_1
+.. activecode:: ac3_15_1
 
    import turtle
    wn = turtle.Screen()
@@ -38,7 +34,7 @@ line that isn't visible to you, then likely you're missing a parenthesis, quotat
 Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or swiching 
 letters around. Other times we accidentally refer to the wrong variable name. Checkout the code below for some examples.
 
-.. activecode:: ac3_9_2
+.. activecode:: ac3_15_2
 
    import turtle
    wn = turtle.Screen()
@@ -47,7 +43,7 @@ letters around. Other times we accidentally refer to the wrong variable name. Ch
    alex.forward(50)
    alex.right(90)
 
-.. activecode:: ac3_9_3
+.. activecode:: ac3_15_3
 
    import turtle
    wn = turtle.Screen()
@@ -56,7 +52,7 @@ letters around. Other times we accidentally refer to the wrong variable name. Ch
    june.forward(50)
    right.june(90)             #switched the variable for jane with the direction to turn in
 
-.. activecode:: ac3_9_4
+.. activecode:: ac3_15_4
 
    import turtle
    wn = turtle.Screen()
@@ -70,7 +66,7 @@ letters around. Other times we accidentally refer to the wrong variable name. Ch
 We can also incorrectly provide arguments to a method or function. When that happens, you'll see an error message like the 
 one below.
 
-.. activecode:: ac3_9_5
+.. activecode:: ac3_15_5
 
    import turtle
    wn = turtle.Screen()

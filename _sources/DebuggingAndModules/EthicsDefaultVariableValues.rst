@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-6-
-   :start: 1
-
 Ethics: Variable Defaults Embed Values
 ======================================
 

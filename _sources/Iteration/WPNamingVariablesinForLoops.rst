@@ -6,11 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-8-
-   :start: 1
-
-.. _naming_variables_in_for_loops:
 
 👩‍💻 Naming Variables in For Loops
 ===================================
@@ -27,7 +22,7 @@ readable for yourself and anyone else who may read your programs:
 While these two tips won't always apply, they are general best practices when it 
 comes to choosing variable names. Below we have an example!
 
-.. activecode:: ac6_8_1
+.. activecode:: ac4_8_1
    :include: ac6_8_3
 
    # x is a list defined elsewhere
@@ -39,7 +34,7 @@ Since we can't see the contents of x right now - this might be the case if we ha
 a long program - then these names would make the program hard to understand. Let's 
 compare this to a program that does the same thing, but uses better names.
 
-.. activecode:: ac6_8_2
+.. activecode:: ac4_8_2
    :include: ac6_8_3
 
    # genres is a list defined elsewhere
@@ -52,7 +47,7 @@ Here what we expect is much more clear, even if we didn't see how genres was ini
 The code below was used to initialize x and genres so you're free to look at it but you 
 don't need to run it!
 
-.. activecode:: ac6_8_3
+.. activecode:: a46_8_3
    :hidecode:
 
    x = ["jazz", "pop", "rock", "country", "punk", "folk", "hip-hop", "rap", "alternative"]

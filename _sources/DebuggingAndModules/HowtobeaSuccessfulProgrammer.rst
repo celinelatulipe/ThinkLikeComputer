@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: debug-1-
-   :start: 1
-
 .. index:: boundary conditions, testing, debugging
 
 
@@ -102,7 +98,7 @@ the alarm goes off.
 So, where to start? The problem requires two pieces of input from the user, so lets start
 there and make sure we can get the data we need.
 
-.. activecode:: db_ex3_1
+.. activecode:: ac3_2_1
 
    current_time = input("what is the current time (in hours)?")
    wait_time = input("How many hours do you want to wait")
@@ -118,7 +114,7 @@ So far so good. Now lets take the next step. We need to figure out what the time
 waiting ``wait_time`` number of hours. A good first approximation to that is to simply add
 ``wait_time`` to ``current_time`` and print out the result. So lets try that.
 
-.. activecode:: db_ex3_2
+.. activecode:: ac3_2_2
 
    current_time = input("what is the current time (in hours 0--23)?")
    wait_time = input("How many hours do you want to wait")
@@ -131,7 +127,7 @@ waiting ``wait_time`` number of hours. A good first approximation to that is to 
 
 Hmm, when you run that example you see that something funny has happened.
 
-.. mchoice:: db_q_ex3_1
+.. mchoice:: mc_3_2_1
    :answer_a: Python is stupid and does not know how to add properly.
    :answer_b: There is nothing wrong here.
    :answer_c: Python is doing string concatenation, not integer addition.
@@ -150,7 +146,7 @@ idea to include the type of the variable in the variable name itself. So lets lo
 iteration of the program that does that, and the conversion to integer.
 
 
-.. activecode:: db_ex3_3
+.. activecode:: ac3_2_3
 
    current_time_str = input("what is the current time (in hours 0-23)?")
    wait_time_str = input("How many hours do you want to wait")
@@ -175,7 +171,7 @@ to deal with telling the user when something is wrong we will not worry about th
 So finally we need to account for those numbers that are bigger than 23. For this we will need
 one final step, using the modulo operator.
 
-.. activecode:: db_ex3_4
+.. activecode:: ac3_2_4
 
    current_time_str = input("what is the current time (in hours 0-23)?")
    wait_time_str = input("How many hours do you want to wait")
@@ -218,7 +214,7 @@ Three kinds of errors can occur in a program: `syntax errors
 between them in order to track them down more quickly. We will explore these three different types of errors in the next sections of this chapter.
 **Check your understanding**
 
-.. mchoice:: question4_1_1
+.. mchoice:: mc3_2_2
    :answer_a: tracking down programming errors and correcting them.
    :answer_b: removing all the bugs from your house.
    :answer_c: finding all the bugs in the program.

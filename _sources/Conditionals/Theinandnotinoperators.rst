@@ -16,7 +16,7 @@ The ``in`` and ``not in`` operators
 
 The ``in`` operator tests if one string is a substring of another:
 
-.. activecode:: ac4_3_1
+.. activecode:: ac6_4_1
     
     print('p' in 'apple')
     print('i' in 'apple')
@@ -27,7 +27,7 @@ Note that a string is a substring of itself, and the empty string is a
 substring of any other string. (Also note that computer scientists 
 like to think about these edge cases quite carefully!) 
 
-.. activecode:: ac4_3_2
+.. activecode:: ac6_4_2
     
     print('a' in 'a')
     print('apple' in 'apple')
@@ -36,7 +36,7 @@ like to think about these edge cases quite carefully!)
     
 The ``not in`` operator returns the logical opposite result of ``in``.
 
-.. activecode:: ac4_3_3
+.. activecode:: ac6_4_3
 
     print('x' not in 'apple')
 
@@ -51,7 +51,7 @@ We can also use the ``in`` and ``not in`` operators on lists!
 However, remember how you were able to check to see if an "a" was in "apple"? 
 Let's try that again to see if there's an "a" somewhere in the following list.
 
-.. activecode:: ac4_4_5
+.. activecode:: ac6_4_5
 
     print("a" in ["apple", "absolutely", "application", "nope"])
 

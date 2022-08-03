@@ -9,17 +9,14 @@
 
 :skipreading:`True`
 
-.. qnum::
-   :prefix: iter-11-
-   :start: 1
 
 Exercises
 =========
 
 
-.. question:: q6_11_1
+.. question:: q4_16_1
 
-    .. actex:: ex6_11_1
+    .. actex:: ex4_16_1
 
         In Robert McCloskey's
         book *Make Way for Ducklings*, the names of the ducklings are Jack, Kack, Lack,
@@ -55,9 +52,9 @@ Exercises
         myTests().main()
 
 
-.. question:: q6_11_2
+.. question:: q4_16_2
 
-    .. actex:: ex6_11_2
+    .. actex:: ex4_16_2
 
         Get the user to enter some text and print it out in reverse order.
         ~~~~
@@ -130,15 +127,35 @@ Exercises
                 self.assertTrue(len(outer_loops)==2 and len(inner_loops)>=0, 'Checking for-statements')
         myTests().main()
 
-.. question:: iter_ex_6
+   
+.. question:: iter_ex_8
 
-   .. actex:: ex_3_6
-      :nocodelens:
+   .. parsonsprob:: pp_4_16_1
 
-      Write a program that asks the user for the number of sides, the length of the side, the color, and the fill color of a
-      regular polygon.  The program should draw the polygon and then fill it in.
-      ~~~~
+      Write a program that will go through a list of temperatures and print them out to the user.
+      -----
+      temperatures = [-3, 78, 95, 28, 56, 42, 56, 81, -10, -]
+      =====
+      for temp in temperatures:
+      =====
+          print("The weather outside is: " + str(temp))
 
+.. question:: iter_ex_9
+
+   .. parsonsprob:: pp_4_16_2
+
+      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted.
+      -----
+      students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
+      =====
+      num_students = 0
+      =====
+      for student in students:
+      =====
+          print("Welcome to class, " + student)
+      =====
+          num_students += 1
+          print(str(num_students) + "student(s) have entered the classroom")
 
 .. question:: iter_ex_7
 
@@ -187,34 +204,5 @@ Exercises
            .. disqus::
                 :shortname: interactivepython
                 :identifier: a7e34946f59f348f2bfeb3f918eb57b7a
-
-.. question:: iter_ex_8
-
-   .. parsonsprob:: pp_3_8
-
-      Write a program that will go through a list of temperatures and print them out to the user.
-      -----
-      temperatures = [-3, 78, 95, 28, 56, 42, 56, 81, -10, -]
-      =====
-      for temp in temperatures:
-      =====
-          print("The weather outside is: " + str(temp))
-
-.. question:: iter_ex_9
-
-   .. parsonsprob:: pp_3_9
-
-      Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted.
-      -----
-      students = ["Jay", "Stacy", "Iman", "Trisha", "Ahmed", "Daniel", "Shadae", "Tosin", "Charlotte"]
-      =====
-      num_students = 0
-      =====
-      for student in students:
-      =====
-          print("Welcome to class, " + student)
-      =====
-          num_students += 1
-          print(str(num_students) + "student(s) have entered the classroom")
 
 

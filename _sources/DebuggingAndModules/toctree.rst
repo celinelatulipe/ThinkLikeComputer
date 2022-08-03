@@ -5,7 +5,7 @@ Debugging and Modules
    :maxdepth: 2
 
    intro-DebuggingGeneral.rst
-   intro-HowtobeaSuccessfulProgrammer.rst
+   HowtobeaSuccessfulProgrammer.rst
    Syntaxerrors.rst
    RuntimeErrors.rst
    SemanticErrors.rst
