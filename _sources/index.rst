@@ -3,7 +3,7 @@
 COMP 1000: Think Like a Computer 
 ==================================================
 
-Welcome to COMP 1000 (SCI 1000 in Fall 2022)!
+Welcome to COMP 1000 (SCI 1002 in Fall 2022)!
 
 This is a brand new course designed to introduce people to programming, which is a fundamental skill within Computer Science. At the same time as learning about programming, we will also begin right away by thinking about people: the end users who interact with teh software you develop. And when we think about people as end users, we must think about ethics. Thus, this course combines: Programming, Interactivity, and Ethics. PIE!
 
@@ -39,7 +39,7 @@ Table of Contents
    Sequences/toctree.rst
    IndefiniteIteration/toctree.rst
    EventHandling/toctree.rst
-   DataScience/toctree.rst
+   Review/toctree.rst
    FrontBackMatter/contrib.rst
    FrontBackMatter/copyright.rst
 
