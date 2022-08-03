@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
 Function Definition
 -------------------
 
@@ -46,7 +42,7 @@ We will come back to parameters in Chapter 9. In this chapter we will focus on c
 
 Here's the definition of a simple function, hello.
 
-.. activecode:: ac6_1_1
+.. activecode:: ac5_2_1
 
     def hello():
         """This function says hello and greets you"""
@@ -70,7 +66,7 @@ Here's the definition of a simple function, hello.
 
 By convention, function definitions go at the top of a file, after the import statements, but before any other code. You should always put your functions at the top like that. What is critical is that the Python interpreter needs to see the function definition before it sees any calls to that function. The example below doesn't work, because the function definition is **after** the function invocation. 
 
-.. activecode:: ac6_1_2
+.. activecode:: ac5_2_2
 
     goodbye()   # this won't work because the goodbye function isn't defined yet
 
@@ -83,7 +79,7 @@ Note that when you run the code above, the error you get is a NameError. The Pyt
 
 We can apply functions to make more interesting and complex turtle drawings.
 
-.. activecode:: ac6_1_3
+.. activecode:: ac5_2_3
     :nocodelens:
 
   import turtle
@@ -127,7 +123,7 @@ Each of the two functions has a **docstring** comment and then three lines of co
 
 .. image:: Figures/turtle_triangles.png
 
-.. activecode:: ac_6_1_4
+.. activecode:: ac_5_2_4
     :language: python
     :autograde: unittest
 

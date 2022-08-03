@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-5-
-   :start: 1
-
 Iterating over lines in a file
 ------------------------------
 
@@ -23,7 +19,7 @@ the **newline** character. If you evaluate a string that contains a newline char
 represented as ``\n``. If you print a string that contains a newline you will not see the ``\n``, you will just
 see its effects (a carriage return). To see this in action run the following code:
 
-.. activecode:: ac9_5_1
+.. activecode:: ac5_9_1
     :nocodelens:
 
     sentences = "This is a string.\nThis part of the string is on a new line."
@@ -53,7 +49,7 @@ breaks the string into a series of smaller strings, and stores the smaller strin
 specific items out of the list and prints them out to the console. We'll cover the split() method in detail in Chapter 10.
 The important thing to see here is that the instructions inside the for loop execute, operating on each line of the file in turn. 
 
-.. activecode:: ac6_8_1a
+.. activecode:: ac5_9_2
     :nocodelens:
 
     olympicsfile = open("olympics.txt", "r")
@@ -70,7 +66,7 @@ iterate through the contents of a file one line at a time, without first reading
 little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared
 to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.
 
-.. activecode:: ac6_8_2a
+.. activecode:: ac5_9_3
     :nocodelens:
 
     olympicsfile = open("olympics.txt", "r")
@@ -125,7 +121,7 @@ to read it. And when you start dealing with big files, you may notice the effici
     Nervous anxious jittery jumpy tense uneasy apprehensive
     </pre>
 
-.. activecode:: ac6_8_3a
+.. activecode:: ac5_9_4
    :available_files: emotion_words.txt
    :language: python
    :nocodelens:

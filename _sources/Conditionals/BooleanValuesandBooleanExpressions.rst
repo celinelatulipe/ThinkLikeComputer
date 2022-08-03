@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-2-
-   :start: 1
-
 .. index:: True, False, boolean value
    comparison; numbers
    single:  <; numbers
@@ -38,7 +34,7 @@ There are only two **boolean values**.  They are ``True`` and ``False``.  Capita
 is important, since ``true`` and ``false`` are not boolean values (remember Python is case
 sensitive).
 
-.. activecode:: ac7_2_1
+.. activecode:: ac6_2_1
 
     print(True)
     print(type(True))
@@ -51,7 +47,7 @@ sensitive).
     types shown below.
 
 
-.. activecode:: ac7_2_2
+.. activecode:: ac6_2_2
 
     print(type(True))
     print(type("True"))
@@ -60,7 +56,7 @@ A **boolean expression** is an expression that evaluates to a boolean value.
 The equality operator, ``==``, compares two values and produces a boolean value related to whether the
 two values are equal to one another.
 
-.. activecode:: ac7_2_3
+.. activecode:: ac6_2_3
 
     print(5 == 5)
     print(5 == 6)
@@ -98,7 +94,7 @@ is legal and ``7 = a`` is not. (Can you explain why?)
 
 **Check your understanding**
 
-.. mchoice:: question7_2_1
+.. mchoice:: question6_2_1
    :multiple_answers:
    :answer_a: True
    :answer_b: 3 == 4

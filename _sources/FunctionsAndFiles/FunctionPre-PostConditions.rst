@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-2-
-   :start: 1
 
 Ethics: Documenting Function Assumptions  
 ----------------------------------------
@@ -20,7 +17,7 @@ the function is appropriate to use (and when it might not be appropriate), and h
 funtion. Let's look at an example. 
 
 
-.. activecode:: ac6_4_1a
+.. activecode:: ac5_4_1
     :nocodelens:
   
     import turtle
@@ -67,7 +64,7 @@ This example uses function composition: one function calls another function. The
 
 The purple and pink flowers are rotated slightly compared to the red flower. If you look at the code, after drawing the red flower the turtle turns right 45 degrees, moves to the new location and then starts drawing the flower. The turtle is facing north-east when it starts drawing the second flower; the rotation of the flower is defined by the heading of the turtle. There are a lot of aspects of program state that can come into play here, and it is appropriate for you as the developer of the code to communicate how this function will behave when it is called. Let's look at a slightly modified version of the same code below:
 
-.. activecode:: ac6_4_2a
+.. activecode:: ac5_4_2
     :nocodelens:
   
     import turtle
@@ -127,7 +124,7 @@ Function Pre-Conditions
 =======================
 Pre-conditions define the assumptions that the programmer expects to be true in order for the function to work as expected. In this modification of the example above, you can see that pre-conditions have been added for both functions:
 
-.. activecode:: ac6_4_3a
+.. activecode:: ac5_4_3
     :nocodelens:
   
     import turtle
@@ -190,7 +187,7 @@ Function Post-Conditions
 
 Post-conditions identify how the state of your program will be different *after* running the function. The program from above is presented below with post-conditions added for both functions:
 
-.. activecode:: ac6_4_4a
+.. activecode:: ac5_4_4
     :nocodelens:
   
     import turtle

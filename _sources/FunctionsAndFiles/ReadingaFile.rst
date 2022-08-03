@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-3-
-   :start: 1
 
 Reading a File
 ~~~~~~~~~~~~~~
@@ -23,7 +20,7 @@ To open this file, we would call the ``open`` function. The variable,
 the ``close`` method. After the file is closed any further attempts to
 use ``fileref`` will result in an error.
 
-.. activecode:: ac9_2_1
+.. activecode:: ac5_7_1
     :available_files: olympics.txt
     :nocodelens:
 

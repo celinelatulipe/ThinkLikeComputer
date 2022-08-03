@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: files-4-
-   :start: 1
 
 Alternative File Reading Methods
 --------------------------------
@@ -22,7 +19,6 @@ method reads one line from the file and returns it as a string. The strings retu
 ``readline`` will contain the newline character at the end.  :ref:`Table 2 <filemethods2a>` summarizes these
 methods and the following session shows them in action.
 
-.. _filemethods2a:
 
 ======================== =========================== =====================================
 **Method Name**           **Use**                     **Explanation**
@@ -66,7 +62,7 @@ until later in this course. We don't need them for handling data from files.
 The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly 
 gets a different line each time, as the file is **used up**.
 
-.. activecode:: ac6_7_1a
+.. activecode:: ac5_8_1
     :nocodelens:
 
     olympicsfile = open("olympics.txt", "r")
@@ -97,7 +93,7 @@ gets a different line each time, as the file is **used up**.
     </pre>
 
 
-.. activecode:: ac9_4_1
+.. activecode:: ac5_8_2
    :language: python
    :nocodelens:
    :autograde: unittest
@@ -135,7 +131,7 @@ gets a different line each time, as the file is **used up**.
     I only know English!
     </pre>
 
-.. activecode:: ac9_4_2
+.. activecode:: ac5_8_3
    :available_files: travel_plans2.txt
    :language: python
    :nocodelens:
@@ -169,7 +165,7 @@ gets a different line each time, as the file is **used up**.
     Nervous anxious jittery jumpy tense uneasy apprehensive
     </pre>
 
-.. activecode:: ac9_4_3
+.. activecode:: ac5_8_4
    :available_files: emotion_words2.txt
    :language: python
    :nocodelens:

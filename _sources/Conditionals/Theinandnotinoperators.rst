@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-4-
-   :start: 1
-
 The ``in`` and ``not in`` operators
 -----------------------------------
 

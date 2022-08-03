@@ -9,10 +9,6 @@
     
 :skipreading:`True`
 
-.. qnum::
-   :prefix: condition-14-
-   :start: 1
-
 Exercises
 ---------
 
@@ -22,7 +18,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_1
+            .. actex:: ac6_13_1
 
                 Write code that asks the user to enter a numeric score (0-100). In response, it should print out the score and corresponding letter grade, according to the table below.
             
@@ -86,7 +82,7 @@ Exercises
            
         .. tab:: Answer
 
-            .. activecode:: ans7_14_1
+            .. activecode:: ans6_13_1
             
                sc = input("Enter a score from 0 to 100 (decimal points are allowed)")
                fl_sc = float(sc)
@@ -111,7 +107,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac7_14_2
+           .. actex:: ac6_13_2
 
                 A year is a **leap year** if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is **also** evenly divisible by 400 then it is a leap year. Write code that asks the user to input a year and output True if it's a leap year, or False otherwise. Use if statements.
         
@@ -184,7 +180,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_3
+            .. actex:: ac6_13_3
 
                 What do these expressions evaluate to?
             
@@ -209,7 +205,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_4
+            .. actex:: ac6_13_4
 
                 Give the **logical opposites** of these conditions, meaning an expression that would 
                 produce False whenever this expression produces True, and vice versa.  You are not 
@@ -227,7 +223,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_5
+            .. actex:: ac6_13_5
                 :nocodelens:
 
                 Provided are the lengths of two sides of a right-angled triangle. Assign the length of the hypotenuse the the variable ``hypo_len``.  (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
@@ -251,7 +247,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac7_14_6
+           .. actex:: ac6_13_6
                :practice: T
                :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
@@ -276,7 +272,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac7_14_7
+           .. actex:: ac6_13_7
                :practice: T
                :topics: Conditionals/TheAccumulatorPatternwithConditionals
                :nocodelens:
@@ -310,7 +306,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_8
+            .. actex:: ac6_13_8
 
                 Given the lengths of three sides of a triange, determine whether the triangle is right angled. If it is, the assign ``True`` to the variable ``is_rightangled``. If it's not, then assign ``False`` to the variable ``is_rightangled``.
 
@@ -375,7 +371,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac7_14_9
+            .. actex:: ac6_13_9
 
                Implement the calculator for the date of Easter.
    
@@ -442,7 +438,7 @@ Exercises
 
 #.
 
-   .. parsonsprob:: pp7_14_11
+   .. parsonsprob:: pp6_13_11
 
       Write a program that will print out a greeting to each student in the list. This list should also keep track of how many students have been greeted and note that each time a new student has been greeted. When only one student has entered, the program should say "The first student has entered!". Afterwards, the program should say "There are {number here} students in the classroom!".
       -----
@@ -463,7 +459,7 @@ Exercises
 
 #.
 
-   .. parsonsprob:: pp7_14_12
+   .. parsonsprob:: pp6_13_12
 
       Piece together a program so that it can successfully print out one print statement, given the value of x.
       -----

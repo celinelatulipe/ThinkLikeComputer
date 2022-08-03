@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-9-
-   :start: 1
-
 .. index::
    single: chained conditional
    single: conditional; chained
@@ -48,7 +44,7 @@ branch executes.
 
 Here is the same program using ``elif``.
 
-.. activecode:: ac7_9_1
+.. activecode:: ac6_9_1
 
     x = 10
     y = 10
@@ -69,7 +65,7 @@ other versions must follow the same order as seen below.
 
 Here is a turtle example that uses chained conditionals.
 
-.. activecode:: ac7_9_2
+.. activecode:: ac6_9_2
 
     import turtle
     wn = turtle.Screen()
@@ -115,7 +111,7 @@ but it's helpful more often than you think.
 
 **Check your understanding**
 
-.. mchoice:: question7_9_1
+.. mchoice:: question6_9_1
    :answer_a: I only
    :answer_b: II only
    :answer_c: III only
@@ -178,7 +174,7 @@ but it's helpful more often than you think.
      else:
          print(x, " is 0")
 
-.. mchoice:: question7_9_2
+.. mchoice:: question6_9_2
    :answer_a: a
    :answer_b: b
    :answer_c: c
@@ -199,7 +195,7 @@ but it's helpful more often than you think.
      else:
          print("c")
 
-.. activecode:: ac7_9_3
+.. activecode:: ac6_9_3
    :language: python
    :autograde: unittest
    :practice: T
@@ -221,7 +217,7 @@ but it's helpful more often than you think.
 
    myTests().main()
 
-.. activecode:: ac7_9_4
+.. activecode:: ac6_9_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -241,7 +237,7 @@ but it's helpful more often than you think.
 
    myTests().main()
 
-.. activecode:: ac7_9_5
+.. activecode:: ac6_9_5
    :language: python
    :autograde: unittest
    :practice: T

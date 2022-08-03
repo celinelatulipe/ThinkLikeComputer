@@ -6,9 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-2-
-   :start: 1
 
 Listener Functions
 ------------------
@@ -17,7 +14,7 @@ We have talked about interactivity: you have gotten input from the end user and 
 
 First, let's consider this turtle drawing example.
 
-.. activecode:: ac6_5_a
+.. activecode:: ac5_5_1
     :nocodelens:
 
     import turtle
@@ -59,7 +56,7 @@ If we wanted to draw more than one square, we could put a loop around lines 30-3
  
 Run the code below, click your cursor inside the canvas and then type the 'r' key a few times to see it in action. Now the end user is in control!
 
-.. activecode:: ac6_5_b
+.. activecode:: ac5_5_2
     :nocodelens:
    
     import turtle
@@ -107,7 +104,7 @@ Run the code below, click your cursor inside the canvas and then type the 'r' ke
 
 Let's add one more listener function to this script that ends the script. The version below adds a listener event for key_q that closes the canvas and ends the script. 
 
-.. activecode:: ac6_5_c
+.. activecode:: ac5_5_3
     :nocodelens:
    
     import turtle
@@ -160,7 +157,7 @@ Let's add one more listener function to this script that ends the script. The ve
 
 Try it out yourself. Add two functions to the code below. Add a function that draws a triangle (just copy, paste and edit the square function to draw three sides, with a turning angle of 120 instead of 90). Then add a listener function that can be called in response to the end user typing 't'. Then add a line of code at the bottom of the script to tell the computer what function to call when the user types 't'. 
 
-.. activecode:: ac6_5_d
+.. activecode:: ac5_5_4
     :nocodelens:
    
     import turtle
@@ -222,7 +219,7 @@ There are a number of other events we can listen for and respond to, such as mou
 **Check your understanding**
 
 
-.. mchoice:: question6_5_a
+.. mchoice:: question5_5_a
    :answer_a: 0
    :answer_b: 1
    :answer_c: It doesn't - there is an error in the code
@@ -261,7 +258,7 @@ There are a number of other events we can listen for and respond to, such as mou
     wn.listen()             
      
 
-.. mchoice:: question6_5_b
+.. mchoice:: question5_5_2
    :answer_a: At least once
    :answer_b: 1
    :answer_c: It doesn't - there is an error in the code
@@ -304,7 +301,7 @@ There are a number of other events we can listen for and respond to, such as mou
     wn.onkey(hello, 'h')
     wn.listen()  
 
-.. mchoice:: question6_5_c
+.. mchoice:: question5_5_3
    :answer_a: At least once
    :answer_b: It doesn't - there is an error in the code
    :answer_c: 1

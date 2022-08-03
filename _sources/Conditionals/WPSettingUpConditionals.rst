@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: condition-11-
-   :start: 1
 
 👩‍💻 Setting Up Conditionals
 =============================
@@ -38,7 +35,7 @@ For example, if you wanted to find all of the words that have the letter 'n' in 
 that needs to happen when a word does not contain the letter 'n' then you won't need an else 
 clause. The program should just continue onward!
 
-.. mchoice:: question7_11_1
+.. mchoice:: question6_11_1
    :answer_a: If statement - Else statement
    :answer_b: If statement - Elif statement
    :answer_c: If statement - If statement
@@ -52,7 +49,7 @@ clause. The program should just continue onward!
 
    What is the best set of conditonal statements provided based on the following prompt? You want to keep track of all the words that have the letter 't' and in a separate variable you want to keep track of all the words that have the letter 'z' in them.
 
-.. mchoice:: question7_11_2
+.. mchoice:: question6_11_2
    :answer_a: If statement - Elif statemenet - Else statement
    :answer_b: If statement - Else statement
    :answer_c: If statement - Nested If statement

@@ -18,5 +18,5 @@ Conditionals
    WPSettingUpConditionals.rst
    Glossary.rst
    Exercises.rst
-   week3a1.rst
+   ChapterAssessment.rst
    
