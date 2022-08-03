@@ -7,17 +7,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-4-
-   :start: 1
-
 Strings and ``for`` loops
 -------------------------
 
 Since a string is simply a sequence of characters, the ``for`` loop iterates over each character 
 automatically. (As always, try to predict what the output will be from this code before you run it.)
 
-.. activecode:: ac6_4_1
+.. activecode:: ac4_6_1
     :nocanvas:
 
     for achar in "Go Spot Go":
@@ -29,7 +25,7 @@ processes the characters in a string or items in a sequence one at a time **from
 
 **Check your understanding**
 
-.. mchoice:: question6_4_1
+.. mchoice:: question4_6_1
    :answer_a: 10
    :answer_b: 11
    :answer_c: 12
@@ -49,7 +45,7 @@ processes the characters in a string or items in a sequence one at a time **from
       for ch in s:
          print("HELLO")
    
-.. mchoice:: question6_4_2
+.. mchoice:: question4_6_2
    :answer_a: 1
    :answer_b: 0
    :answer_c: 7

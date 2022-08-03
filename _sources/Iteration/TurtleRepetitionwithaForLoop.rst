@@ -21,7 +21,7 @@ Instead of evaluating the code line by line until it reaches the bottom, once th
 
 In the code below (which doesn't use turtles), we make use of the ``range`` function to specify how many times the code inside the for loop will execute. We'll see more about the range function throughout this chapter. For now, just try to understand what happens when the following code executes.
 
-.. activecode:: ac3_5_1
+.. activecode:: ac4_3_1
 
    print("This will execute first")
 
@@ -48,7 +48,7 @@ you'd like to watch the execution, checkout the code above in codelens!
 
 Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.
 
-.. activecode:: ac3_5_2
+.. activecode:: ac4_3_2
 
    import turtle
    wn = turtle.Screen()
@@ -61,11 +61,10 @@ Now it's time to combine this with the Turtle module. We can do a lot of cool st
        elan.right(90)
        distance = distance + 10
 
-.. note::
 
-    Try it out yourself in the space below. What can you make?
+Try it out yourself in the space below. What can you make?
 
-    .. activecode:: ac3_5_3
+.. activecode:: ac4_3_3
 
-       import turtle
-       wn = turtle.Screen()
+   import turtle
+   wn = turtle.Screen()

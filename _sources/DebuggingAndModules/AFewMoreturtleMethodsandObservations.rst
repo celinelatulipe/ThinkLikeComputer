@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-7-
-   :start: 1
-
 A Few More ``turtle`` Methods and Observations
 ----------------------------------------------
 
@@ -89,7 +85,7 @@ Here are a few more things that you might find useful as you write programs that
 Let's do an example that shows off some of these new features. Note that the code below uses a for loop
 to make the turtle move repeatedly 30 times. We'll cover for loops in the next chapter.
 
-.. activecode:: ac3_7_1
+.. activecode:: ac3_14_1
     :nocodelens:
 
     import turtle
@@ -118,7 +114,7 @@ the actual turtle is (the red one is not a stamp - it's tess!).
 
 **Mixed up program**
 
-.. parsonsprob:: pp3_7_1
+.. parsonsprob:: pp3_14_1
 
    The following program uses the stamp method to create a circle of turtle shapes as shown to the left: 
    
@@ -151,7 +147,7 @@ the actual turtle is (the red one is not a stamp - it's tess!).
 
 **Mixed up program**
 
-.. parsonsprob:: pp3_7_2
+.. parsonsprob:: pp3_14_2
 
    The following program uses the stamp method to create a line of turtle shapes as shown to the left:
     

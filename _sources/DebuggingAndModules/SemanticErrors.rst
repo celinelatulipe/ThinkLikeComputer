@@ -7,14 +7,7 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: debug-6-
-   :start: 1
-
 .. index:: semantic error, logic error, error; semantic, error; logic, test case
-    single: Holmes, Sherlock
-    single: Doyle, Arthur Conan
-    single: Linux
 
 Semantic Errors
 ===============
@@ -95,7 +88,7 @@ correctly.
 
 **Check your understanding**
 
-.. mchoice:: question4_6_1
+.. mchoice:: question3_5_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a semi-colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -107,7 +100,7 @@ correctly.
 
    Which of the following is a semantic error?
 
-.. mchoice:: question4_6_2
+.. mchoice:: question3_5_2
    :answer_a: The programmer.
    :answer_b: The compiler / interpreter.
    :answer_c: The computer.

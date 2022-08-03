@@ -7,12 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. _for_by_index:
-
-.. qnum::
-   :prefix: moreiter-6-
-   :start: 1
-
 Traversal and the ``for`` Loop: By Index
 ----------------------------------------
 
@@ -22,7 +16,7 @@ For example, consider the list ``['apple', 'pear', 'apricot', 'cherry', 'peach']
 
 Thus, we can iterate through the indexes by generating a sequence of them, using the ``range`` function.
 
-.. activecode:: ac14_6_5a
+.. activecode:: ac4_11_1
 
    fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
    for n in range(5):
@@ -32,7 +26,7 @@ In order to make the iteration more general, we can use the ``len`` function to 
 a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves 
 correctly when using ``len`` of the string as its parameter value.
 
-.. activecode:: ac14_6_5
+.. activecode:: ac4_11_2
 
    fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
    for n in range(len(fruits)):
@@ -41,7 +35,7 @@ correctly when using ``len`` of the string as its parameter value.
 
 In some other programming languages, that's the only way to iterate through a sequence, by iterating through the positions and extracting the items at each of the positions. Python code is often easier to read because we don't have to do iteration that way. Compare the iteration above with the more "pythonic" approach below.
 
-.. activecode:: ac14_6_5c
+.. activecode:: ac4_11_3
 
    fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
    for fruit in fruits:
@@ -53,7 +47,7 @@ If we really want to print the indexes (positions) along with the fruit names, t
 
 **Check your understanding**
 
-.. mchoice:: question14_6_1
+.. mchoice:: question4_11_1
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2

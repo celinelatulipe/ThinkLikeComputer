@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-1-
-   :start: 1
-
 Introduction: Iteration
 =======================
 
@@ -27,9 +23,5 @@ This pattern of processing is called a traversal, or iteration over the characte
 
 You'll also see examples in this chapter of how iteration simplifies the code needed to make turtles draw shapes. Iteration takes advantage of a fundamental difference between humans and computers: computers can repeat a set of instructions hundreds or thousands of times very quickly, and they don't get bored doing the same thing over and over again, the way that humans would. This makes computers powerful and that has ethical implications that we will also discuss in this chatper.
 
-.. Iteration Simplifies our Turtle Program
-.. Add “here’s what we can do with turtle now, if we use iteration”; borrow from thinkcspy
 
-
-.. To draw a square we’d like to do the same thing four times — move the turtle forward some distance and turn 90 degrees. We previously used 8 lines of Python code to have alex draw the four sides of a square. This next program does exactly the same thing but, with the help of the for statement, uses just three lines (not including the setup code). Remember that the for statement will repeat the forward and left four times, one time for each value in the list.
 

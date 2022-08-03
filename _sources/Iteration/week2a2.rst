@@ -7,18 +7,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-12-
-   :start: 1
-
-.. Week 2 Assessment 2
 
 Chapter Assessment
 ------------------
 
 **Check your understanding**
 
-.. activecode:: assess_ps_02_01
+.. activecode:: assess_4_17_01
     :language: python
     :autograde: unittest
     :practice: T
@@ -26,7 +21,7 @@ Chapter Assessment
 
     Write one for loop to print out each character of the string ``my_str`` on a separate line.
     ~~~~
-    my_str = "MICHIGAN"
+    my_str = "MANITOBA"
 
     =====
 
@@ -36,12 +31,12 @@ Chapter Assessment
 
       def test_output(self):
         self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-        self.assertIn("M\nI\nC\nH\nI\nG\nA\nN", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+        self.assertIn("M\nA\nN\nI\nT\nO\nB\nA", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
 
     myTests().main()
 
 
-.. activecode:: assess_ps_02_02
+.. activecode:: assess_4_17_02
     :language: python
     :autograde: unittest
     :practice: T
@@ -66,7 +61,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_ps_02_03
+.. activecode:: assess_4_17_03
     :language: python
     :autograde: unittest
     :practice: T
@@ -88,7 +83,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_ps_02_04
+.. activecode:: assess_4_17_04
     :language: python
     :autograde: unittest
 
@@ -99,7 +94,7 @@ Chapter Assessment
 
 
 
-.. activecode:: assess_ps_02_05
+.. activecode:: assess_4_17_05
     :language: python
     :autograde: unittest
     :practice: T
@@ -173,7 +168,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ps_02_09
+.. activecode:: assess_4_17_09
    :language: python
    :autograde: unittest
    :practice: T

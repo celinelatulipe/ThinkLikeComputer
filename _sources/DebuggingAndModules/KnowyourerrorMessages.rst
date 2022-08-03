@@ -36,7 +36,7 @@ we have done everything right!
 
 Let's try the program again, but this time in an activecode:
 
-.. activecode:: ac4_7_1
+.. activecode:: ac3_6_1
 
    current_time_str = input("What is the current time (in hours 0-23)?")
    wait_time_str = input("How many hours do you want to wait")
@@ -59,7 +59,7 @@ statement.
    Python interpreter. The interpreter in activecode is limited in many ways, but it is intended for beginners,
    including the wording chosen to describe errors.
 
-.. mchoice:: question4_7_1
+.. mchoice:: question3_6_1
    :answer_a: You cannot use a variable on both the left and right hand sides of an assignment statement.
    :answer_b: wait_time_int does not have a value so it cannot be used on the right hand side.
    :answer_c: This is not really an error, Python is broken.
@@ -111,7 +111,7 @@ See if you can figure out what caused them.
 
         Find and fix the error in the following code.
 
-        .. activecode:: ac4_7_2
+        .. activecode:: ac3_6_2
 
            current_time_str = input("What is the current time (in hours 0-23)?")
            wait_time_str = input("How many hours do you want to wait"
@@ -167,7 +167,7 @@ something. In this case a right parenthesis.
 
         Find and fix the error in the following code.
 
-        .. activecode:: ac4_7_3
+        .. activecode:: ac3_6_3
 
            current_time_str = input("What is the "current time" (in hours 0-23)?")
            wait_time_str = input("How many hours do you want to wait")
@@ -240,7 +240,7 @@ given by the error message is an accurate indication of the line.
 Here's an example of a type error created by a Polish learner.  See if you can find
 and fix the error.
 
-.. activecode:: ac4_7_4
+.. activecode:: ac3_6_4
 
     a = input('wpisz godzine')
     x = input('wpisz liczbe godzin')
@@ -313,7 +313,7 @@ mis-remember the name of a variable or even a function you want to call. You hav
 seen one example of a NameError at the beginning of this section. Here is another one.
 See if you can get this program to run successfully:
 
-.. activecode:: ac4_7_5
+.. activecode:: ac3_6_5
 
     str_time = input("What time is it now?")
     str_wait_time = input("What is the number of hours to wait?")
@@ -356,7 +356,7 @@ highlighted. Most often that will be the typo right there.
 
 Here is another one for you to try:
 
-.. activecode:: ac4_7_6
+.. activecode:: ac3_6_6
 
 	n = input("What time is it now (in hours)?")
 	n = imt(n)
@@ -382,7 +382,7 @@ Here is another one for you to try:
 
 And one last bit of code to fix.
 
-.. activecode:: ac4_7_7
+.. activecode:: ac3_6_7
 
     present_time = input("Enter the present timein hours:")
     set_alarm = input("Set the hours for alarm:")
@@ -433,7 +433,7 @@ Value errors occur when you pass a parameter to a function and the function is
 expecting a certain limitations on the values, and the value passed is not compatible.
 We can illustrate that with this particular program in two different ways.
 
-.. activecode:: ac4_7_8
+.. activecode:: ac3_6_8
 
    current_time_str = input("What is the current time (in hours 0-23)?")
    current_time_int = int(current_time_str)

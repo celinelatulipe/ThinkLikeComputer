@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-7-
-   :start: 1
-
 👩‍💻 Keeping Track of Your Iterator Variable and Your Iterable
 ===============================================================
 
@@ -19,7 +15,7 @@ The iterable is the object that you will parsing through in a for loop, typicall
 
 The iterator (loop) variable is the variable which stores an element of the iterable (such as an item in the list or a single character from a String) when the for loop is being executed. Each time the loop iterates, the value of the iterator variable will change to a different element of the iterable.
 
-.. mchoice:: question6_100_1
+.. mchoice:: question4_12_1
    :answer_a: string
    :answer_b: list
    :answer_d: iterable
@@ -40,7 +36,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
            print(item)
 
 
-.. mchoice:: question6_100_2
+.. mchoice:: question4_12_2
    :answer_a: string
    :answer_b: list
    :answer_c: iterable
@@ -60,7 +56,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
        for z in t:
            print(z)
 
-.. mchoice:: question6_100_3
+.. mchoice:: question4_12_3
    :answer_a: string
    :answer_b: list
    :answer_c: iterable
@@ -81,7 +77,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
            print(z)
 
 
-.. mchoice:: question6_100_4
+.. mchoice:: question4_12_4
    :answer_a: string
    :answer_b: list
    :answer_c: iterable
@@ -102,7 +98,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
            print(z)
 
 
-.. mchoice:: question6_100_5
+.. mchoice:: question4_12_5
    :answer_a: string
    :answer_b: list
    :answer_c: iterable
@@ -124,7 +120,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
 
 
 
-.. mchoice:: question6_100_6
+.. mchoice:: question4_12_6
    :answer_a: string
    :answer_b: list
    :answer_c: integer
@@ -145,7 +141,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
            print(z)
 
 
-.. mchoice:: question6_100_7
+.. mchoice:: question4_12_7
    :answer_a: string
    :answer_b: list
    :answer_c: integer
@@ -166,7 +162,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
            print(z)
 
 
-.. mchoice:: question6_100_8
+.. mchoice:: question4_12_8
    :answer_a: string
    :answer_b: list
    :answer_c: integer
@@ -186,7 +182,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
        for z in t:
            print(z)
 
-.. mchoice:: question6_100_9
+.. mchoice:: question4_12_9
    :answer_a: string
    :answer_b: list
    :answer_c: integer
@@ -208,7 +204,7 @@ The iterator (loop) variable is the variable which stores an element of the iter
 
 As you go through the codelens window, you will be asked a set of questions.
 
-.. codelens:: clensQuestion6_100_10
+.. codelens:: clensQuestions4_12_1
    :question: What is the value of the iterator variable after line 3 executes?
    :feedback: The value of the iterator variable is changed inside of the for loop.
    :breakline: 3
@@ -218,7 +214,7 @@ As you go through the codelens window, you will be asked a set of questions.
    for val in item:
        val = val + "!"
 
-.. codelens:: clensQuestion6_100_11
+.. codelens:: clensQuestion4_12_2
    :question: What is the value of the iterator variable after line 2 executes?
    :feedback: Remember that the value of the iterator variable changes each time.
    :breakline: 2

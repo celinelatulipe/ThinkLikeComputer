@@ -7,11 +7,7 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: turtle-3-
-   :start: 1
-
-.. index:: for loop
+.. index:: instance  
 
 Instances: A Herd of Turtles
 ----------------------------
@@ -23,7 +19,7 @@ draw with a thin pink pen and be at some position, while tess might be going in 
 direction with a fat black pen. So here is what happens when alex completes a square and
 tess completes a triangle:
 
-.. activecode:: ac3_3_1
+.. activecode:: ac3_12_1
    :tour_1: "Overall Tour"; 1-31: Example03_Tour01_Line01; 1-3: Example03_Tour01_Line02; 6-8: Example03_Tour01_Line03; 10: Example03_Tour01_Line04; 6,10: Example03_Tour01_Line05; 12-17: Example03_Tour01_Line06; 19-20: Example03_Tour01_Line07; 22-29: Example03_Tour01_Line08; 31: Example03_Tour01_Line09;
    :tour_2: "Line by Line Tour"; 1: Example01_Tour02_Line01; 2: Example01_Tour02_Line02; 3: Example02_Tour02_Line03; 6: Example02_Tour02_Line04; 7: Example03_Tour02_Line05; 8: Example03_Tour02_Line06; 10: Example01_Tour02_Line03; 6,10: Example03_Tour01_Line05; 12-17: Example03_Tour02_Line09; 12-13: Example03_Tour02_Line10; 12: Example03_Tour02_Line11; 13: Example03_Tour02_Line12; 14-15: Example03_Tour02_Line13; 14: Example03_Tour02_Line14; 15: Example03_Tour02_Line15; 16-17: Example03_Tour02_Line16; 16: Example03_Tour02_Line17; 17: Example03_Tour02_Line18; 19-20: Example03_Tour01_Line07; 19: Example03_Tour02_Line20; 20: Example03_Tour02_Line21; 22-29: Example03_Tour01_Line08; 10: Example03_Tour02_Line23; 22-23: Example03_Tour02_Line24; 22: Example03_Tour02_Line25; 23: Example03_Tour02_Line26; 24-25: Example03_Tour02_Line27; 26-27: Example03_Tour02_Line28; 28-29: Example03_Tour02_Line29; 31: Example02_Tour02_Line10;
    :nocodelens:
@@ -88,7 +84,7 @@ Here are some *How to think like a computer scientist* observations:
 
 **Check your understanding**
 
-.. mchoice:: question3_3_1
+.. mchoice:: question3_12_1
    :answer_a: True
    :answer_b: False
    :correct: b
@@ -99,7 +95,7 @@ Here are some *How to think like a computer scientist* observations:
 
 **Mixed up programs**
 
-.. parsonsprob:: pp3_3_1
+.. parsonsprob:: pp3_12_1
 
    The following program has one turtle, "jamal", draw a capital L in blue and then another, "tina", draw a line to the west in orange as shown to the left: 
    
@@ -132,7 +128,7 @@ Here are some *How to think like a computer scientist* observations:
    =====
    wn.exitonclick()
 
-.. parsonsprob:: pp3_3_2
+.. parsonsprob:: pp3_12_2
 
    The following program has one turtle, "jamal", draw a line to the north in blue and then another, "tina", draw a line to the east in orange as shown to the left, 
    

@@ -7,16 +7,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-5-
-   :start: 1
 
 Lists and ``for`` loops
 =======================
 
-A list is a sequence of items, so a **list traversal** uses a ``for`` loop to iterate over each item in the list automatically. 
+A list is a sequence of items, and in a later chapter you will learn all about various ways to create, build and edit lists. For now, let's focus on using lists. A **list traversal** uses a ``for`` loop to iterate over each item in the list automatically. Consider this example:
 
-.. activecode:: ac6_5_1
+.. activecode:: ac4_7_1
 
     fruits = ["apple", "orange", "banana", "cherry"]
 
@@ -34,7 +31,7 @@ Using the `range` Function to Generate a Sequence to Iterate Over
 We are now in a position to understand the inner workings we glossed over previously when we first introduced repeated execution with a for loop.
 Here was the example:
 
-.. activecode:: ac_6_5_1a
+.. activecode:: ac4_7_2
 
    print("This will execute first")
 
@@ -63,7 +60,7 @@ sides of a square.  This next program does exactly the same thing but, with the 
 statement, it uses just three lines (not including the setup code).  Remember that the for statement 
 will repeat the ``forward`` and ``left`` four times, one time for each value in the list.
 
-.. activecode:: ac6_5_2
+.. activecode:: ac4_7_3
    :nocodelens:
 
    import turtle            # set up alex
@@ -84,7 +81,7 @@ The values [0,1,2,3] were provided to make the loop body execute 4 times.
 We could have used any four values.  For example, consider the following program.
 
 
-.. activecode:: ac6_5_3
+.. activecode:: ac4_7_4
    :nocodelens:
 
    import turtle            # set up alex
@@ -102,7 +99,7 @@ Since there are four items in the list, the iteration will still occur four time
 take on each color in the list.  We can even take this one step further and use the value of 
 ``aColor`` as part of the computation.
 
-.. activecode:: ac6_5_4
+.. activecode:: ac4_7_5
     :nocodelens:
 
     import turtle            # set up alex
@@ -128,7 +125,7 @@ statement, ``wn.exitonclick()``.
 
 **Check your Understanding**
 
-.. mchoice:: question6_5_1
+.. mchoice:: question4_7_1
    :answer_a: 8
    :answer_b: 9
    :answer_c: 15
@@ -148,7 +145,7 @@ statement, ``wn.exitonclick()``.
       for ch in p:
          print(ch)
 
-.. mchoice:: question6_5_2
+.. mchoice:: question4_7_2
    :answer_a: They are indented to the same degree from the loop header.
    :answer_b: There is always exactly one line in the loop body.
    :answer_c: The loop body ends with a semi-colon (;) which is not shown in the code above.
@@ -159,7 +156,7 @@ statement, ``wn.exitonclick()``.
 
    How does python know what statements are contained in the loop body?
 
-.. mchoice:: question6_5_3
+.. mchoice:: question4_7_3
       :answer_a: Draw a square using the same color for each side.
       :answer_b: Draw a square using a different color for each side.
       :answer_c: Draw one side of a square.

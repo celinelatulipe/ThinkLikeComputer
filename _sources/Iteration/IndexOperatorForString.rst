@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-3-
-   :start: 1
-
 .. index:: 
    single: [ ]; string indexing
    index; string
@@ -30,7 +26,7 @@ from postion 0 to position 13.
 It is also the case that the positions are named from right to left using negative numbers where -1 is 
 the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.
 
-.. activecode:: ac5_3_1
+.. activecode:: ac4_5_1
     
     school = "Luther College"
     m = school[2]
@@ -72,7 +68,7 @@ Try to predict what will be printed out by the following code, and then run it t
 prediction. (Actually, it's a good idea to always do that with the code examples. You 
 will learn much more if you force yourself to make a prediction before you see the output.)
 
-.. activecode:: ac5_3_2
+.. activecode:: ac4_5_2
     
     numbers = [17, 123, 87, 34, 66, 8398, 44]
     print(numbers[2])
@@ -80,7 +76,7 @@ will learn much more if you force yourself to make a prediction before you see t
     print(numbers[-2])
 
 
-.. activecode:: ac5_3_3
+.. activecode:: ac4_5_3
 
     prices = [1.99, 2.00, 5.50, 20.95, 100.98]
     print(prices[0])
@@ -89,7 +85,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
 **Check your understanding**
 
-.. mchoice:: question5_3_1
+.. mchoice:: question4_5_1
    :answer_a: t
    :answer_b: h
    :answer_c: c
@@ -108,7 +104,7 @@ will learn much more if you force yourself to make a prediction before you see t
       s = "python rocks"
       print(s[3])
 
-.. mchoice:: question5_3_2
+.. mchoice:: question4_5_2
    :answer_a: tr
    :answer_b: to
    :answer_c: ps
@@ -129,7 +125,7 @@ will learn much more if you force yourself to make a prediction before you see t
       s = "python rocks"
       print(s[2] + s[-4])
 
-.. mchoice:: question5_3_3
+.. mchoice:: question4_5_3
    :answer_a: [ ]
    :answer_b: 3.14
    :answer_c: False
@@ -148,7 +144,7 @@ will learn much more if you force yourself to make a prediction before you see t
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[5])
 
-.. activecode:: ac5_3_4
+.. activecode:: ac4_5_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -168,7 +164,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
-.. activecode:: ac5_3_5
+.. activecode:: ac4_5_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -188,7 +184,7 @@ will learn much more if you force yourself to make a prediction before you see t
 
    myTests().main()
 
-.. activecode:: ac5_3_6
+.. activecode:: ac4_5_6
    :language: python
    :autograde: unittest
    :practice: T

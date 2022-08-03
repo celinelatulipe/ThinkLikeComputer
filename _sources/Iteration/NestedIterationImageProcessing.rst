@@ -7,12 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-7-
-   :start: 1
-
-.. _image_proc:
-
 Nested Iteration: Image Processing
 ----------------------------------
 
@@ -88,7 +82,7 @@ In the example below, we first create a pixel with 45 units of red, 76 units of 
 We then print the current amount of red, change the amount of red, and finally, set the amount of blue to be
 the same as the current amount of green.
 
-.. activecode::  ac14_7_1
+.. activecode::  ac4_14_1
     :nocodelens:
 
     import image
@@ -102,7 +96,7 @@ the same as the current amount of green.
 
 **Check your understanding**
 
-.. mchoice:: question14_7_1
+.. mchoice:: question4_14_1
    :answer_a: Dark red
    :answer_b: Light red
    :answer_c: Dark green
@@ -157,7 +151,7 @@ intensities.
 
 
 
-.. activecode::  ac14_7_2
+.. activecode::  ac4_14_2
     :nocodelens:
 
     import image
@@ -175,7 +169,7 @@ pixel at column 45, row 55, has RGB values of 165, 161, and 158.  Try a few othe
 
 **Check your understanding**
 
-.. mchoice:: question14_7_2
+.. mchoice:: question4_14_2
    :answer_a: 149 132 122
    :answer_b: 183 179 170
    :answer_c: 165 161 158
@@ -220,7 +214,7 @@ the output from this nested iteration will show that for each value of ``i``, al
 Here is the same example in activecode. Try it. Note that the value of ``i`` stays the same while the value of ``j``
 changes. The inner iteration, in effect, is moving faster than the outer iteration.
 
-.. activecode:: ac14_7_3
+.. activecode:: ac4_14_3
 
     for i in range(5):
         for j in range(3):
@@ -229,7 +223,7 @@ changes. The inner iteration, in effect, is moving faster than the outer iterati
 Another way to see this in more detail is to examine the behavior with codelens. Step through the iterations to see the
 flow of control as it occurs with the nested iteration. Again, for every value of ``i``, all of the values of ``j`` will occur. You can see that the inner iteration completes before going on to the next pass of the outer iteration.
 
-.. codelens:: clens14_7_1
+.. codelens:: clens4_14_1
 
     for i in range(5):
         for j in range(3):
@@ -277,7 +271,7 @@ there is an ``exitonclick`` method call at the very end which will close the win
 you to "clear the screen" before drawing the next negative.
 
 
-.. activecode::  ac14_7_4
+.. activecode::  ac4_14_4
     :nocodelens:
 
     import image
@@ -331,7 +325,7 @@ rows. We still create a negative image, but you can see that the pixels update i
 
 **Check your understanding**
 
-.. mchoice:: question14_7_3
+.. mchoice:: question4_14_3
    :answer_a: Output a
    :answer_b: Output b
    :answer_c: Output c
@@ -386,7 +380,7 @@ rows. We still create a negative image, but you can see that the pixels update i
       0   1
 
 
-.. mchoice:: question14_7_4
+.. mchoice:: question4_14_4
    :answer_a: It would look like a red-washed version of the bell image
    :answer_b: It would be a solid red rectangle the same size as the original image
    :answer_c: It would look the same as the original image

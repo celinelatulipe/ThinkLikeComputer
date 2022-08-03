@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: debug-5
-   :start: 1
-
 .. index:: error;runtime, runtime error
 
 Runtime Errors
@@ -54,7 +50,7 @@ chapter dedicated to that topic.
 
 **Check your understanding**
 
-.. mchoice:: question4_5_1
+.. mchoice:: question3_4_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -66,7 +62,7 @@ chapter dedicated to that topic.
 
    Which of the following is a run-time error?
 
-.. mchoice:: question4_5_2
+.. mchoice:: question3_4_2
    :answer_a: The programmer.
    :answer_b: The interpreter.
    :answer_c: The computer.

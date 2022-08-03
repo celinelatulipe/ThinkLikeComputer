@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-7-
-   :start: 1
-
 👩‍💻 Printing Intermediate Results
 ===================================
 
@@ -23,7 +19,7 @@ a value. If something is going wrong you can compare what you expect to happen t
 is actually happening. Consider the following example, which only prints out the value of 
 the accumlator after the for loop.
 
-.. activecode:: ac6_7_1
+.. activecode:: ac4_10_1
 
    w = range(10)
 
@@ -35,7 +31,7 @@ the accumlator after the for loop.
 Say we weren't sure what ``num`` was being assigned each time we iterated. One way to find out 
 would be to add a print statement inside of the for loop.
 
-.. activecode:: ac6_7_2
+.. activecode:: ac4_10_2
 
    w = range(10)
 
@@ -47,7 +43,7 @@ would be to add a print statement inside of the for loop.
 
 If we wanted to see what was happening to ``tot`` as well, we could print that out in the for loop too!
 
-.. activecode:: ac6_7_3
+.. activecode:: ac4_10_3
    
    w = range(10)
 
@@ -63,7 +59,7 @@ Finally, if we wanted to make these numbers easier to understand, we could add m
 to make them easier to read! This is especially important when you have a loop that is complex or will iterate many times. If your console is full of information from print statements, it can be hard to decipher. But adding informative print 
 statements, as in the example below, makes it much easier to see what is happening. 
 
-.. activecode:: ac6_7_4
+.. activecode:: ac4_10_4
    
    w = range(10)
 

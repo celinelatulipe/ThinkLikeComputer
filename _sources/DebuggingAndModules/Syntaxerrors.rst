@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: debug-4-
-   :start: 1
-
 .. index:: syntax error, error; syntax; runtime error, exception, safe language
 
 Syntax errors
@@ -69,7 +65,7 @@ couple of spaces at the beginning of one of the lines.
 
 **Check your understanding**
 
-.. mchoice:: question4_4_1
+.. mchoice:: question3_3_1
    :answer_a: Attempting to divide by 0.
    :answer_b: Forgetting a colon at the end of a statement where one is required.
    :answer_c: Forgetting to divide by 100 when printing a percentage amount.
@@ -81,7 +77,7 @@ couple of spaces at the beginning of one of the lines.
 
    Which of the following is a syntax error?
 
-.. mchoice:: question4_4_2
+.. mchoice:: question3_3_2
    :answer_a: The programmer.
    :answer_b: The compiler / interpreter.
    :answer_c: The computer.

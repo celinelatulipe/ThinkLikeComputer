@@ -7,12 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: iter-6-
-   :start: 1
-
-.. _accum_pattern:
-      
 The Accumulator Pattern
 =======================
 
@@ -27,7 +21,7 @@ The anatomy of the accumulation pattern includes:
    
 For example, consider the following code, which computes the sum of the numbers in a list.
 
-.. activecode:: ac6_6_1
+.. activecode:: ac4_9_1
 
    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    accum = 0
@@ -49,7 +43,7 @@ that you update the accumulator.
 Here is the same program in CodeLens.  Step through the function and watch the "running total" 
 accumulate the result.
 
-.. codelens:: clens6_6_1
+.. codelens:: clens4_9_1
    :python: py3
 
    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -68,7 +62,7 @@ takes at least one input - which should be an integer - and returns a list as lo
 two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but 
 not include - the input. Here are some examples: 
 
-.. activecode:: ac6_8_10
+.. activecode:: ac4_9_2
 
   print("range(5): ")
   for i in range(5):
@@ -87,7 +81,7 @@ have to cast it to a list using ``list()``.
 
 Here's how you could use the range function in the previous problem.
 
-.. activecode:: ac6_6_2
+.. activecode:: ac4_9_3
 
    accum = 0
    for w in range(11):
@@ -107,7 +101,7 @@ We can use the accumulation pattern to count the number of something or to sum u
 above examples only covered how to get the sum for a list, but we can also count how many items are 
 in the list if we wanted to.
 
-.. activecode:: ac6_6_3
+.. activecode:: ac4_9_4
 
    nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
    count = 0
@@ -123,7 +117,7 @@ won't be useful but we will still need to count.
 
 **Check your understanding**
 
-.. mchoice:: question6_6_1
+.. mchoice:: question4_9_1
    :answer_a: It will print out 10 instead of 55
    :answer_b: It will cause a run-time error
    :answer_c: It will print out 0 instead of 55
@@ -146,7 +140,7 @@ won't be useful but we will still need to count.
    What happens if you put the initialization of accum inside the for loop as the first
    instruction in the loop?
 
-.. parsonsprob:: pp6_6_1
+.. parsonsprob:: pp4_9_1
 
    Rearrange the code statements so that the program will add up the first n odd numbers where n is provided by the user. Note that indentation matters, so drag code blocks to the right if they should be indented.
    -----
@@ -162,7 +156,7 @@ won't be useful but we will still need to count.
    =====
    print(thesum)
 
-.. activecode:: ac6_6_4
+.. activecode:: ac4_9_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -181,7 +175,7 @@ won't be useful but we will still need to count.
 
    myTests().main()
 
-.. activecode:: ac6_6_10
+.. activecode:: ac4_9_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -202,7 +196,7 @@ won't be useful but we will still need to count.
 
    myTests().main()
 
-.. activecode:: ac6_8_9
+.. activecode:: ac4_9_7
    :language: python
    :autograde: unittest
    :practice: T

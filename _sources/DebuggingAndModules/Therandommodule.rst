@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: modules-2-
-   :start: 1
 
 The ``random`` module
 ---------------------
@@ -27,7 +24,7 @@ We often want to use **random numbers** in programs.  Here are a few typical use
 Python provides a module ``random`` that helps with tasks like this. You can take a look at it in the documentation. 
 Here are the key things we can do with it.
 
-.. activecode:: ac13_2_1
+.. activecode:: ac3_10_1
 
     import random
 
@@ -54,7 +51,7 @@ numbers close to 5. If you continue to press the run button you will see random 
 including 5.0.
 
 
-.. activecode:: ac13_2_2
+.. activecode:: ac3_10_2
 
     import random
 
@@ -78,7 +75,7 @@ Using random numbers in your programming can be a good way to help ensure fairne
 
 **Check your understanding**
 
-.. mchoice:: question13_2_1
+.. mchoice:: question3_10_1
    :answer_a: prob = random.randrange(1, 101)
    :answer_b: prob = random.randrange(1, 100)
    :answer_c: prob = random.randrange(0, 101)
@@ -92,7 +89,7 @@ Using random numbers in your programming can be a good way to help ensure fairne
 
    The correct code to generate a random number between 1 and 100 (inclusive) is:
 
-.. mchoice:: question13_2_2
+.. mchoice:: question3_10_2
    :answer_a: There is no computer on the stage for the drawing.
    :answer_b: Because computers don’t really generate random numbers, they generate pseudo-random numbers.
    :answer_c: They would just generate the same numbers over and over again.
@@ -106,7 +103,7 @@ Using random numbers in your programming can be a good way to help ensure fairne
    One reason that lotteries don’t use computers to generate random numbers is:
 
 
-.. mchoice:: question13_2_3
+.. mchoice:: question3_10_3
    :answer_a: Run it 10 times and make sure the deck is shuffled differently every time
    :answer_b: Run it 1000 times and make sure the deck is shuffled differently every time
    :answer_c: Run it 1000 times and make sure the deck is shuffled differenly 90% of the time. 90% is close enough.
