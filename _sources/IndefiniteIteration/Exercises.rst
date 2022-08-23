@@ -9,10 +9,6 @@
 
 :skipreading:`True`
 
-.. qnum::
-   :prefix: moreiter-9-
-   :start: 1
-
 Exercises
 ---------
 
@@ -24,7 +20,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac14_9_1
+           .. actex:: ac10_7_1
 
               **1.** Using a while loop, create a list ``numbers`` that contains the numbers 0 through 35. Your while loop should initialize a counter variable to 0. On each iteration, the loop should append the current value of the counter to the list and the counter should increase by 1. The while loop should stop when the counter is greater than 35.
               ~~~~
@@ -50,7 +46,7 @@ Exercises
 
 .. question:: moreiter_ex_2
 
-   .. actex:: ac14_9_2
+   .. actex:: ac10_7_2
 
       Using a while loop, create a list called ``L`` that contains the numbers 0 to 10. (i.e.: Your while loop should initialize a counter variable to 0. On each iteration, the loop should append the current value of the counter variable to ``L`` and then increase the counter by 1. The while loop should stop once the counter variable is greater than 10.)
       ~~~~
@@ -72,7 +68,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac14_9_3
+           .. actex:: ac10_7_3
 
               Using a while loop, create a list called ``nums`` that contains the numbers 0 though 20. (i.e: your while looop should initialize a counter variable on 0. During each iteration, the loop should append the current value of the counter variable to ``nums`` and then increase the counter by 1. The while loop should stop once the counter variable is greater than 20)
               ~~~~
@@ -89,7 +85,7 @@ Exercises
 
 .. question:: moreiter_ex_4
 
-    .. actex:: ac14_9_4
+    .. actex:: ac10_7_4
        :nocodelens:
 
        Modify the walking turtle program so that rather than a 90 degree left or right turn the
@@ -103,7 +99,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac14_9_5
+           .. actex:: ac10_7_5
               :nocodelens:
 
               Modify the turtle walk program so that you have two turtles each with a
@@ -189,7 +185,7 @@ Exercises
 
 .. question:: moreiter_ex_6
 
-   .. actex:: ac14_9_6
+   .. actex:: ac10_7_6
       :nocodelens:
 
       Create a while loop that initializes a counter at 0 and will run until the counter reaches 50. If the value of the counter is divisible by 10, append the value to the list, ``tens``.
@@ -208,7 +204,7 @@ Exercises
 
 .. question:: moreiter_ex_7
 
-   .. actex:: ac14_9_7
+   .. actex:: ac10_7_7
       :nocodelens:
 
       Use a while loop to iterate through the numbers 0 through 35. If a number is divisible by 3, it should be appended to a list called ``three_nums``.

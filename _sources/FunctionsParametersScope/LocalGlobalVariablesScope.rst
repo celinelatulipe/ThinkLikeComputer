@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-7-
-   :start: 1
-
 .. index:: local variable
    variable; local
    lifetime
@@ -37,7 +33,7 @@ An assignment statement in a function creates a **local variable** for the varia
 assignment operator. It is called local because this variable only exists inside the function and you cannot use it
 outside. For example, consider again the ``square`` function:
  
-.. activecode:: ac9_7_1a
+.. activecode:: ac8_7_1
 
    def square(x):
        y = x * x
@@ -81,7 +77,7 @@ local and global variables, and that you really shouldn't do it.
 
 Look at the following, nonsensical variation of the square function.
 
-.. activecode:: ac9_7_2a
+.. activecode:: ac8_7_2
 
     def badsquare(x):
         y = x ** power
@@ -105,7 +101,7 @@ There is another variation on this theme of local versus global variables. Assig
 change variables defined outside the function. Consider the following
 CodeLens example:
 
-.. codelens::  clens9_7_1a
+.. codelens::  clens8_7_1
     :python: py3
 
     def powerof(x,p):
@@ -135,7 +131,7 @@ you can can do it by explicitly declaring the variable to be global, as in the e
 below. Again, you should *not* do this in your code. The example is here only
 to cement your understanding of how Python works.
 
-.. codelens::  clens9_7_2a
+.. codelens::  clens8_7_2
     :python: py3
 
     def powerof(x,p):
@@ -160,7 +156,7 @@ formal parameter will cause a change to the value of the variable that was
 used as the actual parameter, especially when the two share the same name.
 But this example demonstrates that that is clearly not how Python operates.
 
-.. codelens:: clens9_7_3a
+.. codelens:: clens8_7_3
     :python: py3
 
     def square(x):
@@ -174,7 +170,7 @@ But this example demonstrates that that is clearly not how Python operates.
  
 **Check Your Understanding**
  
-.. mchoice:: question9_7_1a
+.. mchoice:: question8_7_1
    :answer_a: True
    :answer_b: False
    :correct: b
@@ -184,7 +180,7 @@ But this example demonstrates that that is clearly not how Python operates.
  
    True or False: Local variables can be referenced outside of the function they were defined in.
 
-.. fillintheblank:: question9_7_2a
+.. fillintheblank:: question8_7_2
  
    Which of the following are local variables? Please, write them in order of what line they are on in the code.
 
@@ -210,7 +206,7 @@ But this example demonstrates that that is clearly not how Python operates.
       :item: item is not a local variable.
       :.*: Incorrect, try again.
  
-.. mchoice:: question9_7_3a
+.. mchoice:: question8_7_3
    :answer_a: 4
    :answer_b: 6
    :answer_c: 10
@@ -235,7 +231,7 @@ But this example demonstrates that that is clearly not how Python operates.
          
      print(subtract(x)) 
  
-.. mchoice:: question9_7_4a
+.. mchoice:: question8_7_4
    :answer_a: 33
    :answer_b: 12
    :answer_c: There is an error in the code.
@@ -260,7 +256,7 @@ But this example demonstrates that that is clearly not how Python operates.
  
      print(producing(adding(4)))
  
-.. mchoice:: question9_7_5a
+.. mchoice:: question8_7_5
    :answer_a: 1
    :answer_b: 9
    :answer_c: 10
@@ -284,7 +280,7 @@ But this example demonstrates that that is clearly not how Python operates.
      adding()
 
 
-.. mchoice:: question9_7_6a
+.. mchoice:: question8_7_6
    :answer_a: Its value
    :answer_b: The range of statements in the code where a variable can be accessed.
    :answer_c: Its name
@@ -295,7 +291,7 @@ But this example demonstrates that that is clearly not how Python operates.
 
    What is a variable's scope?
 
-.. mchoice:: question9_7_7a
+.. mchoice:: question8_7_7
    :answer_a: A temporary variable that is only used inside a function
    :answer_b: The same as a parameter
    :answer_c: Another name for any variable
@@ -306,7 +302,7 @@ But this example demonstrates that that is clearly not how Python operates.
 
    What is a local variable?
 
-.. mchoice:: question9_7_8a
+.. mchoice:: question8_7_8
    :answer_a: Yes, and there is no reason not to.
    :answer_b: Yes, but it is considered bad form.
    :answer_c: No, it will cause an error.

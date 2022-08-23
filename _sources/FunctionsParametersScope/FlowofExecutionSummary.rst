@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-10-
-   :start: 1
-
 .. index:: flow of execution
 
 Flow of Execution Summary
@@ -38,7 +34,7 @@ should skip the body of the function until you reach a point where that function
 
 **Check your understanding**
 
-.. mchoice:: question11_10_1
+.. mchoice:: question8_9_1
    :answer_a: 1, 2, 3, 5, 6, 7 9, 10, 11
    :answer_b: 9, 10, 11, 1, 2, 3, 5, 6, 7
    :answer_c: 9, 10, 11, 5, 6, 7, 1, 2, 3,
@@ -72,7 +68,7 @@ should skip the body of the function until you reach a point where that function
    Refering to the line numbers, in what order are the statements excuted?
 
 
-.. mchoice:: question11_10_2
+.. mchoice:: question8_9_2
    :answer_a: 25
    :answer_b: 5
    :answer_c: 125

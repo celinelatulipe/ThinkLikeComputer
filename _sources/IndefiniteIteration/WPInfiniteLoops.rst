@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-11-
-   :start: 1
-
 👩‍💻 Infinite Loops
 --------------------
 
@@ -35,7 +31,7 @@ Additionally, if the while condition is ``while True:`` and there is no break, t
 
 Another case where an infinite loop is likely to occur is when you have reassiged the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below (if it takes too long, try reloading the page and stepping through this example in codelens):
 
-.. activecode:: ac14_11_1
+.. activecode:: ac10_6_1
 
     b = 15
 
@@ -49,4 +45,4 @@ the value of 5 inside, on line 4. By the time 7 has been added to b on line 6, w
 check if b is less than 60. Because it isn't we again run line 4, and set the value of b to 5 
 again. There is no way to break out of this loop.
 
-Sometimes programs can take a while to run, so how can you determine if your code is just talking a while or if it is stuck inside an infinite loop? Print statements are for people, so take advantage of them! You can add print statements to keep track of how your variables are changing as the program processes the instructions given to them. 
+Sometimes programs can take a while to run, so how can you determine if your code is just talking a while or if it is stuck inside an infinite loop? Print statements are for programmers, so take advantage of them! You can add print statements to keep track of how your variables are changing as the program processes the instructions given to them. 

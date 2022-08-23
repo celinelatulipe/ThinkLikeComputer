@@ -6,11 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
-    
 SimpleGUI Events
 ================
 The SimpleGUI module has three user interface widgets/controls that respond to user events: buttons, text input boxes and the frame. As we saw in the previous section, the button handler does not take any parameters. It is simply called when the button is clicked. And the text input handler takes one parameter, which is how it receives the string of text the user entered. The frame can respond to mouse clicks and keypress events. The four events that the system can listen for while the frame is active are: key up, key down, mouse click and mouse drag. The mouse events (and their handler functions) are only triggered if the clicks or drags are on the canvas.

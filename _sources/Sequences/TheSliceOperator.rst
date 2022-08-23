@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-6-
-   :start: 1
-
 .. index::
    single: [ : ]; string slice
    slice; string
@@ -21,7 +17,7 @@ The Slice Operator
 A substring of a string is called a **slice**. Selecting a slice is similar to
 selecting a character:
 
-.. activecode:: ac5_6_1
+.. activecode:: ac9_5_1
 
     singers = "Peter, Paul, and Mary"
     print(singers[0:5])
@@ -38,7 +34,7 @@ If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
 end of the string. What do you think ``fruit[:]`` means?.
 
-.. activecode:: ac5_6_2
+.. activecode:: ac9_5_2
 
     fruit = "banana"
     print(fruit[:3])
@@ -47,7 +43,7 @@ end of the string. What do you think ``fruit[:]`` means?.
 It's important to note that slicing a string does not change the original string (remember - strings are immutable, you can make a copy but once a string is created, it never changes). So if you want to do something with a slice of a string, you can either embed it in an expression, or you can save it to a variable, as in the example below, where we take slices of two strings, concatenate them with a hyphen in between and assign that to a new variable. Note that the original strings have not been changed. 
 
 
-.. activecode:: ac10_5_3a
+.. activecode:: ac9_5_3
 
     parent1_name = "Janus Franklin"
     parent2_name = "Raj Singh"
@@ -64,7 +60,7 @@ that if you omit the first index (before the colon), the slice starts at the
 beginning of the sequence. If you omit the second index, the slice goes to the
 end of the sequence.
 
-.. activecode:: ac5_6_3
+.. activecode:: ac9_5_4
 
     a_list = ['a', 'b', 'c', 'd', 'e', 'f']
     print(a_list[1:3])
@@ -81,7 +77,7 @@ Thankfully we can also use the slice operation on tuples as well as strings and 
 slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might
 want to change her tuple. We can easily slice off the parts we want and concatenate them with a new tuple.  
 
-.. activecode:: ac5_6_4
+.. activecode:: ac9_5_5
 
     julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
     print(julia[2])
@@ -96,7 +92,7 @@ The observant student might notice that the code above appears to modify the tup
 
 **Check your understanding**
 
-.. mchoice:: question5_6_1
+.. mchoice:: question9_5_1
    :answer_a: python
    :answer_b: rocks
    :answer_c: hon r
@@ -115,7 +111,7 @@ The observant student might notice that the code above appears to modify the tup
       s = "python rocks"
       print(s[3:8])
 
-.. mchoice:: question5_6_2
+.. mchoice:: question9_5_2
    :answer_a: [ [ ], 3.14, False]
    :answer_b: [ [ ], 3.14]
    :answer_c: [ [56, 57, "dog"], [ ], 3.14, False]
@@ -132,7 +128,7 @@ The observant student might notice that the code above appears to modify the tup
      alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
      print(alist[4:])
 
-.. mchoice:: question5_6_3
+.. mchoice:: question9_5_3
    :answer_a: 2
    :answer_b: 3
    :answer_c: 4
@@ -152,7 +148,7 @@ The observant student might notice that the code above appears to modify the tup
      print(len(L[1:-1]))
 
 
-.. activecode:: ac5_6_5
+.. activecode:: ac9_5_4
    :language: python
    :autograde: unittest
    :practice: T

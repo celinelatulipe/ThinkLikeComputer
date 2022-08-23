@@ -6,17 +6,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-2-
-   :start: 1
-
 Listener Functions with Parameters
 ----------------------------------
 
 Recall that in Chapter 6 we learned about adding interactivity to programs by adding **listener functions** that can respond to user events. The script below draws one random square, and then allows more squares to be drawn whenever the user presses the r key. The **key_r** function is a listener function that only gets called when the operating system detects that the r key is pressed by the user, while the turtle window is **listening** (note the statement on line X that tells the operating system to listen for events on this turtle graphics window).  
 
 
-.. activecode:: ac9_12_1a
+.. activecode:: ac8_12_1
     :nocodelens:
    
     import turtle
@@ -68,7 +64,7 @@ Recall that in Chapter 6 we learned about adding interactivity to programs by ad
 
 Now that we know about function parameters, we can revisit these listener functions and make use of other types of user events. What if we want the user to define not just when to add a square, but **where** to add a square? We can register a listener function that will listen for mouse click events. The reason we need parameters is that the operating system, when passing a mouse click event to Python, will pass along x and y coordinates of where in the turtle window the click happened. Those coordinates will be stored in x and y parameters. The script below is a modification of the one above that adds a mouse click listener.
 
-.. activecode:: ac9_12_2a
+.. activecode:: ac8_12_2
     :nocodelens:
    
     import turtle
@@ -129,7 +125,7 @@ Now that we know about function parameters, we can revisit these listener functi
 
 Try this out yourself in the script below. The script registers four listener functions. Two are already complete. Complete the other two functions, as specified in the comments. 
 
-.. activecode:: ac9_12_3a
+.. activecode:: ac8_12_3
     :nocodelens:
    
     import turtle
@@ -164,7 +160,7 @@ Try this out yourself in the script below. The script registers four listener fu
 **Check your understanding**
 
 
-.. mchoice:: question9_12_1_a
+.. mchoice:: question8_12_1
    :answer_a: center of the canvas
    :answer_b: 100, 100 
    :answer_c: It doesn't - the 'here' function is never called

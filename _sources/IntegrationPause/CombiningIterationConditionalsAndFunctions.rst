@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
 Combining Iterations, Conditionals and Functions
 ================================================
 
@@ -17,7 +13,7 @@ In this section, we will look at examples where we combine all three of these bu
 
 Let's look at an example of a program that uses all of these components, combined and nested together. This program is designed to check through a list of potential passwords and determine whether each password meets a set of four requirements. Run the program. This program is not interactive, so the output is only in the console. But note the use of functions, loops, conditionals and how they are combined.
 
-.. activecode:: ac7_5_1a
+.. activecode:: ac7_5_1
 
     # Password Checking Program
     # check whether each password has at least 8 characters, at least 1 number,
@@ -100,5 +96,4 @@ Here are some things to pay attention to in the image above:
 * These functions are editing global variables and we've already told you that's not a great idea, in the chapter on functions and parameters we will show you a better way to write code like this. 
 * When you are working with lists the following pattern is really common: a function containing a loop containing a conditional, and the code above shows that pattern repeated four times. In the main() function we are iterating over the list of passwords and testing various things about each. In the top three functions, we are iterating over the characters in the current password to test whether the character meets some particular condition.
 
-[TODO: Add another example combining all three]
 

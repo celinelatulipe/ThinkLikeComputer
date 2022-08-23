@@ -7,14 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-5-
-   :start: 1
-
 A function that accumulates
 ---------------------------
 
-We have used the ``len`` function a lot already. If it weren't part of python, our lives as programmers would have been 
+We have used the ``len`` function a lot already. If it weren't part of Python, our lives as programmers would have been 
 a lot harder.
 
 Well, actually, not that much harder. Now that we know how to define functions, we could define ``len`` ourselves if it 
@@ -23,7 +19,7 @@ same idea and just wrap it in a function definition. We'll call it ``mylen`` to 
 which already exists. We actually *could* call it len, but that wouldn't be a very good idea, because it would replace 
 the original len function, and our implementation may not be a very good one.
 
-.. activecode:: ac11_5_1
+.. activecode:: ac8_6_1
 
    def mylen(seq):
        c = 0 # initialize count variable to 0
@@ -35,7 +31,7 @@ the original len function, and our implementation may not be a very good one.
    print(mylen([1, 2, 7]))
 
 
-.. parsonsprob:: pp11_5_1
+.. parsonsprob:: pp8_6_1
 
    Rearrange the code statements to match the activecode window above. (This is an exercise in noticing where the indenting and outdenting happens, and where the return statement goes.)
    
@@ -55,7 +51,7 @@ the original len function, and our implementation may not be a very good one.
 
 **Check your Understanding**
 
-.. activecode:: ac11_5_2
+.. activecode:: ac8_6_2
    :language: python
    :autograde: unittest
    :practice: T
@@ -77,7 +73,7 @@ the original len function, and our implementation may not be a very good one.
 
    myTests().main() 
 
-.. activecode:: ac11_5_3
+.. activecode:: ac8_6_3
    :language: python
    :autograde: unittest
    :practice: T

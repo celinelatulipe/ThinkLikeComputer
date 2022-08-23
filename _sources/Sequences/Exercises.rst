@@ -9,16 +9,12 @@
 
 :skipreading:`True`
 
-.. qnum::
-   :prefix: seq-11-
-   :start: 1
-
 Exercises
 ---------
 
 #.
 
-   .. parsonsprob:: pp5_11_1
+   .. parsonsprob:: pp9_11_1
 
       Write a program that will print out the length of each item in the list as well as the first and last characters of the item.
       -----
@@ -38,7 +34,7 @@ Exercises
 
 #.
 
-   .. parsonsprob:: pp5_11_2
+   .. parsonsprob:: pp9_11_2
 
       Write code to determine how many t's are in the following sentences.
       -----
@@ -56,7 +52,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_6
+           .. actex:: ac9_11_6
 
               Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.  Implement a Python function that works like the following:
    
@@ -69,7 +65,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_6
+            .. activecode:: answer9_11_6
 
                 def count(obj, lst):
                     count = 0
@@ -123,7 +119,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_8
+           .. actex:: ac9_11_8
 
                 Write a Python function that will take a list of 100 random integers between 0 and 1000 and return the maximum value.  (Note: there is a builtin function named ``max`` but pretend you cannot use it.)
                 ~~~~
@@ -155,7 +151,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_8
+            .. activecode:: answer9_11_8
 
                 import random
 
@@ -184,7 +180,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_9
+           .. actex:: ac9_11_9
 
               Write a function ``sum_of_squares(xs)`` that computes the sum
               of the squares of the numbers in the list ``xs``.  For example,
@@ -211,7 +207,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_10
+           .. actex:: ac9_11_10
 
               Write a function to count how many odd numbers are in a list.
               ~~~~
@@ -235,7 +231,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_10
+            .. activecode:: answer9_11_10
 
                 import random
 
@@ -266,7 +262,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_11
+           .. actex:: ac9_11_11
 
               Sum up all the even numbers in a list.
               ~~~~
@@ -292,7 +288,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_12
+           .. actex:: ac9_11_12
 
               Sum up all the negative numbers in a list.
               ~~~~
@@ -316,7 +312,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_12
+            .. activecode:: answer9_11_12
 
                 import random
 
@@ -341,13 +337,3 @@ Exercises
 
 
 
-Contributed Exercises
-~~~~~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-    {% for q in questions: %}
-        <div class='oneq full-width'>
-            {{ q['htmlsrc']|safe }}
-        </div>
-    {% endfor %}

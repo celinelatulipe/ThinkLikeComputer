@@ -6,12 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
-
-
 Adding GUI Controls
 ===================
 
@@ -21,7 +15,9 @@ Adding Labels
 -------------
 Labels are considered static interface elements: they aren't clickable and they don't allow the user to do anything, they simply provide information. So, there is no event handler that needs to be attached to a label. Try adding a label to the SimpleGUI starter code. Flip back to the browser tab where the codeskulptr starter example is, and add a label, like this:
 
-``label1 = frame.add_label("This is a label")``
+.. code-block:: python
+    
+   label1 = frame.add_label("This is a label")
 
 If you add the above line of code after the line of code that creates the button, and then you run the application, you should see something like this:
 
@@ -31,7 +27,9 @@ If you add the above line of code after the line of code that creates the button
 
 Now, let's go back to the documentation and look at the related function for changing label text. Click on the 'control.set_text()' link on the documentation page (under the example code for adding a label). The documentation for the ``set_text()`` function shows some examples of how to use this function. Let's make the example program change the label text when the user clicks the button. Add the following text to the click() handler:
 
-``label1.set_text("You clicked!")``
+.. code-block:: python
+    
+    label1.set_text("You clicked!")
 
 Now, when you run the program and click the button, the program should update the text displayed on the canvas and it should update the label in the controls at the left, like this:
 
@@ -43,13 +41,13 @@ Adding Buttons
 --------------
 Let's add a button that changes the canvas background color. The button that is in the starter code is not assigned to a variable, but we want our background color button to have a variable so we can change the button label. Add the following code:
 
-.. admonition:: SimpleGUI button: 
+.. code-block:: python
 
     bkg_button = frame.add_button("White Background", bkg_button_click)
 
 Note that in this line of code we have said that we want a button and we want the button to have text on it that says "White Background", and that we want the function 'bkg_button_click' to run when this button is clicked. So, we need to create a function that has that name. At the top of the script, add the following code to define this function:
 
-.. admonition:: SimpleGUI button click handler: 
+.. code-block:: python
 
     def bkg_button_click():
         frame.set_canvas_background("White")

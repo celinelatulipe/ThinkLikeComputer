@@ -45,7 +45,7 @@ Remember that to follow Python conventions, we want to declare functions at the 
 
 Here is an example of this:
 
-.. activecode:: ac7_2_1a
+.. activecode:: ac7_2_1
 
 
     def cubeInput():
@@ -71,7 +71,7 @@ That's not a very exciting example, but it demonstrates a few things:
 
 Let's look at a turtle example, with a few different functions called from inside a loop.
 
-.. activecode:: ac7_2_2a
+.. activecode:: ac7_2_2
    :nocodelens:
 
    import turtle
@@ -145,7 +145,7 @@ Just as you can have function calls inside loops, you can also have loops inside
 Here is a modification of the turtle program from above that makes use of a loop inside a function, as well as a loop in the main code that calls the function:
 
 
-.. activecode:: ac7_2_3a
+.. activecode:: ac7_2_3
    :nocodelens:
 
    import turtle
@@ -200,7 +200,7 @@ The example above demonstrates the following:
 
 ** Check your understanding **
 
-.. mchoice:: question7_2_1a
+.. mchoice:: question7_2_1
    :answer_a: None
    :answer_b: 6
    :answer_c: 5

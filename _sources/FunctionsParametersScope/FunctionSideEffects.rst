@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-13-
-   :start: 1
-
 Side Effects
 ------------
 
@@ -25,7 +21,7 @@ output is a side effect of calling the function. Both of these are good examples
 
 Directly editing a global variable is another side effect, but it is one we typically want to avoid. For example, consider the code below:
 
-.. codelens:: clens9_12_1
+.. codelens:: clens8_11_1
    :python: py3
 
    def double(n):
@@ -43,7 +39,7 @@ The way to avoid using side effects to change global variables is to use return 
 and set that global variable to be equal to a value returned from the function. For example, the following is a better version 
 of the code above.
 
-.. codelens:: clens9_12_2
+.. codelens:: clens8_11_2
    :python: py3
 
    def double(n):
@@ -68,7 +64,7 @@ Documenting Side Effects
 
 When you create functions that have side effects, it is particularly important to document these as post-conditions. This may not be necessary when you are using print() statements inside a function to help debug things while you are in the middle of programming, as those are likely temporary statements that will be removed before you submit/share your code. But other side effects are really critical to document. Here is an example:
 
-.. activecode:: ac_9_12_a
+.. activecode:: ac_8_11_1
 
    import turtle
    import random

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-7-
-   :start: 1
-
 .. index::
    single: +; list concatenation
 
@@ -24,7 +20,7 @@ Concatenation
 
 As with strings, the ``+`` operator concatenates lists and tuples.  
 
-.. activecode:: ac10_6_1
+.. activecode:: ac9_6_1
 
     fruit1 = ["apple","orange","banana","cherry"]
     fruit2 = ["kiwi", "pineapple", "mango", "strawberry", "blueberry", "rhubarb"]
@@ -46,7 +42,7 @@ As you step through the code, you will see the variables being created and the l
 Pay particular attention to the fact that when ``newlist`` is created by the statement 
 ``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the CodeLens object diagram.  The objects are different.
 
-.. codelens:: ac10_6_2
+.. codelens:: ac9_6_2
     :python: py3
 
     fruit = ["apple","orange","banana","cherry"]
@@ -67,7 +63,7 @@ Pay particular attention to the fact that when ``newlist`` is created by the sta
 
 The following code won't run, because the third line attempts to add two different types (a list and a tuple). Run it to see the error. 
 
-.. activecode:: ac10_6_3
+.. activecode:: ac9_6_3
 
     fruit1 = ["apple","orange","banana","cherry"]
     veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
@@ -83,7 +79,7 @@ Similarly, the ``*`` operator repeats the items in a list or tuple a given numbe
 with 8 items.
 
 
-.. activecode:: ac10_6_4
+.. activecode:: ac9_6_4
 
     fruit1 = ["apple","orange","banana","cherry"]
     veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
@@ -96,7 +92,7 @@ with 8 items.
 
 As with concatenation, these operations do not have any effect on the input lists/tuples, they create new lists. You can reassign the new list back to the same variable name though: 
 
-.. activecode:: ac10_6_5
+.. activecode:: ac9_6_5
 
     fruit1 = ["apple","orange","banana","cherry"]
     print(fruit1)

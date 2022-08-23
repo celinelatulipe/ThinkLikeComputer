@@ -7,17 +7,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-13-
-   :start: 1
-
 Mutable Object Side Effects
 ---------------------------
 
 When we pass mutable objects, like lists, to functions, the contenst of those objects can be changed within the function. This is a side effect, if the
 object is not returned from the function. Consider the following example, which we have seen before:
 
-.. codelens:: clens10_10_1a
+.. codelens:: clens9_10_1
    :python: py3
 
    def bison(lst):
@@ -33,7 +29,7 @@ When this code runs and we print out mylst, it looks different from what's in my
 
 We can avoid confusing side effects when passing around mutable objects by passing in a copy of the object and then returning the modified copy and reassigning it to the variable. This makes it much more obvious that the function is altering the mutable object. Here is the code above rewritten to do this:
 
-.. codelens:: clens10_10_2a
+.. codelens:: clens9_10_2
    :python: py3
 
    def bison(lst):
@@ -55,7 +51,7 @@ Side Effects in Interactive Programs
 
 When we program interactively and use listener functions, we end up modifying global variable and objects and creating side effects. This is because the listener functions that you can register must only have the parameters relevant to the interaction event. Let's revisit an earlier example:
 
-.. activecode:: ac10_10_1a
+.. activecode:: ac9_10_1_1
     :nocodelens:
    
     import turtle
@@ -116,7 +112,7 @@ When we program interactively and use listener functions, we end up modifying gl
 
 In this interactive programming example, it isn't possible to pass the turtle object (alex) to the listener functions key_r() or click() because these functions' parameters are confined to the parameters needed for responding to specific events. The key_r function is registered to execute when the user presses the r key and as a key listener function it takes no parameters. The click function is registered to execute when the user clicks the mouse and as a mouse-click listener function it must take two parameters so the operating system can pass in the information about where the user clicked the mouse (x and y). We can make this code have fewer side-effects by modifying it as shown below.
 
-.. activecode:: ac10_10_2a
+.. activecode:: ac9_10_1_2
     :nocodelens:
    
     import turtle
@@ -184,7 +180,7 @@ So, in the code above, we specify that we want to access and edit the global tur
 
 **Check your understanding**
 
-.. mchoice:: question10_10_1a
+.. mchoice:: question9_10_1
    :answer_a: none
    :answer_b: 1 
    :answer_c: 2
@@ -220,7 +216,7 @@ So, in the code above, we specify that we want to access and edit the global tur
     wn.onclick(here)
     wn.listen()             
 
-.. mchoice:: question10_10_1a
+.. mchoice:: question9_10_2
    :answer_a: There is no side effect, because the turtle is returned
    :answer_b: The turtle's internally stored coordinated are different
    :answer_c: A msg has been written on the canvas, and the turtle icon is in a different place 
@@ -230,7 +226,6 @@ So, in the code above, we specify that we want to access and edit the global tur
    :feedback_b: Because the turtle is a mutable object, and it is returned from the functions, changes to it are not considered side effects
    :feedback_c: Yes changes to what the user sees on the canvas are side effects.
    :feedback_d: Because the turtle is a mutable object, and it is returned from the functions, changes to it are not considered side effects
-
    :practice: T
 
    What is a side effect of the write_msg function?

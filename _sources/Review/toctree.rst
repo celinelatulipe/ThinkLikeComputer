@@ -1,11 +1,11 @@
-Review with Data Science
-::::::::::::::::::::::::
+Review
+::::::
 
 .. toctree::
-   :caption: Review with Data Science
+   :caption: Review
    :maxdepth: 2
 
-   intro-ReviewWithDataScience.rst
+   intro-Review.rst
 ..   Glossary.rst
 ..   Exercises.rst
 ..   ChapterAssessment.rst

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-11-
-   :start: 1
-
 👩‍💻 Print vs. return
 ----------------------
 
@@ -75,7 +71,7 @@ between print and return. Keep working at it until it makes sense to you!
 
 **Check your understanding**
 
-.. mchoice:: question11_11_1
+.. mchoice:: question8_10_1
    :answer_a: 2
    :answer_b: 5
    :answer_c: 7
@@ -104,7 +100,7 @@ between print and return. Keep working at it until it makes sense to you!
 
        print(h(2))
 
-.. mchoice:: question11_11_2
+.. mchoice:: question8_10_2
    :answer_a: 2
    :answer_b: 5
    :answer_c: 7

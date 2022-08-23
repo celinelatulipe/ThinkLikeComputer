@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-annotate
-   :start: 1
-
 .. index:: 
    type annotation
    
@@ -96,7 +92,7 @@ the readability of your code, and you should use them in your programs.
 
 **Check your understanding**
 
-.. mchoice:: question_ta_1
+.. mchoice:: question8_5_1
    :answer_a: The value 4.5 is displayed on the screen.
    :answer_b: The value 2.52 is displayed on the screen.
    :answer_c: A crash occurs because 2.5 is not a string

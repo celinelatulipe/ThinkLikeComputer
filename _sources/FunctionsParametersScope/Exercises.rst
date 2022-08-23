@@ -9,10 +9,6 @@
 
 :skipreading:`True`
 
-.. qnum::
-   :prefix: func-14-
-   :start: 1
-
 Exercises
 =========
 #.
@@ -21,7 +17,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_1
+           .. actex:: ac8_14_1
 
               Write a function named ``num_test`` that takes a number as input. If the number is greater than 10, the function should return "Greater than 10." If the number is less than 10, the function should return "Less than 10." If the number is equal to 10, the function should return "Equal to 10."
               ~~~~
@@ -49,7 +45,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_2
+           .. actex:: ac8_14_2
 
               Write a function that will return the number of digits in an integer.
               ~~~~
@@ -75,7 +71,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_2
+            .. activecode:: answer8_14_2
 
                 def numDigits(n):
                     n_str = str(n)
@@ -99,7 +95,7 @@ Exercises
 
         .. tab:: Question 
 
-           .. actex:: ac11_14_3
+           .. actex:: ac8_14_3
       
               Write a function that reverses its string argument.
               ~~~~
@@ -128,7 +124,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_4
+           .. actex:: ac8_14_4
               :nocodelens:
 
               Write a function that mirrors its string argument, 
@@ -157,7 +153,7 @@ Exercises
 
         .. tab:: Answer
 
-            .. activecode:: answer11_14_4
+            .. activecode:: answer8_14_4
                 :nocodelens:
 
                 def reverse(mystr):
@@ -186,7 +182,7 @@ Exercises
 
         .. tab:: Question 
 
-           .. actex:: ac11_14_5
+           .. actex:: ac8_14_5
               :nocodelens:
 
               Write a function that removes all occurrences of a given letter from a string.
@@ -218,7 +214,7 @@ Exercises
 
         .. tab:: Question 
 
-           .. actex:: ac11_14_7
+           .. actex:: ac8_14_7
 
               Write a function ``replace(s, old, new)`` that replaces all occurences of
               ``old`` with ``new`` in a string ``s``::
@@ -255,7 +251,7 @@ Exercises
 
         .. tab:: Question
 
-            .. actex:: ac11_14_13
+            .. actex:: ac8_14_13
                 :nocodelens:
 
                 Write a function ``findHypot``.  The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse. (Hint:  ``x ** 0.5`` will return the square root, or use ``sqrt`` from the math module)
@@ -282,7 +278,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_14
+           .. actex:: ac8_14_14
                :nocodelens:
 
                Write a function called ``is_even(n)`` that takes an integer as an argument and returns ``True`` if the argument is an **even number** and ``False`` if it is **odd**.
@@ -308,7 +304,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_15
+           .. actex:: ac8_14_15
                :nocodelens:
 
                Now write the function ``is_odd(n)`` that returns ``True`` when ``n`` is odd and ``False`` otherwise.
@@ -337,7 +333,7 @@ Exercises
 
         .. tab:: Question
 
-           .. actex:: ac11_14_16
+           .. actex:: ac8_14_16
 
                Write a function ``is_rightangled`` which, given the length of three sides of a triangle, will determine whether the triangle is right-angled. Assume that the third argument to the function is always the longest side. It will return ``True`` if the triangle is right-angled, or ``False`` otherwise.
 
@@ -370,13 +366,3 @@ Exercises
 
                myTests().main()
 
-Contributed Exercises
-~~~~~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-    {% for q in questions: %}
-        <div class='oneq full-width'>
-            {{ q['htmlsrc']|safe }}
-        </div>
-    {% endfor %}

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-3-
-   :start: 1
-
 Introduction: Functions Part II
 -------------------------------
 
@@ -18,7 +14,7 @@ You already learned how to create basic functions in Chapter 4. Functions are ni
 
 We've played a lot with turtles, and in Chapter 6 we created two different turtle functions to have a turtle draw a small square and a big square repeatedly to make a flower image:
 
-.. activecode:: ac9_1_1a
+.. activecode:: ac8_1_1
     :nocodelens:
 
     import turtle
@@ -57,7 +53,7 @@ We've played a lot with turtles, and in Chapter 6 we created two different turtl
 With the use of parameters, we can simplify this code so that only one function is needed, and so that it will work for 
 any turtle, not just a turtle named alex:
 
-.. activecode:: ac9_1_2a
+.. activecode:: ac8_1_2
     :nocodelens:
 
     import turtle
@@ -94,7 +90,7 @@ Topics
 * passing information to and from functions
 * local and global scope
 * documenting functions
-.. * side effects
+* side effects
 
 Learning Objectives
 ===================
@@ -106,6 +102,6 @@ At the end of this chapter, you should be able to:
 * define functions with appropriate names for formal parameters
 * use type annotations to specify expected parameter and return types
 * avoid the use of global variables in function definitions by creating formal parameters for all values that are needed
-.. * identify whether a function has any side effects
+* identify whether a function has any side effects
 
 

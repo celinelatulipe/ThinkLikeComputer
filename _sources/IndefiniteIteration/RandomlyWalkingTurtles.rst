@@ -7,12 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-4-
-   :start: 1
-
-.. _randomly-walking-turtles:
-
 Indeterminate Turtles
 ---------------------
 
@@ -56,7 +50,7 @@ we already know how to do well and get them working. Since having it always retu
 be a good idea we will write our version to decide randomly. Let's say that there is a 90% chance 
 the turtle is still in the window and 10% that the turtle has escaped.
 
-.. activecode:: ac14_4_1
+.. activecode:: ac10_4_1
     :nocodelens:
 
     import random
@@ -128,7 +122,7 @@ statements and set ``stillIn`` to ``True`` in an else clause.
 
 Here is the full version of our random walk program.
 
-.. activecode:: ac14_4_2
+.. activecode:: ac10_4_2
     :nocodelens:
 
     import random
@@ -175,11 +169,9 @@ if you ever need to write a similar program, you can reuse this function with co
 next time you need it. Breaking up this program into a couple of parts is another example of 
 functional decomposition.
 
-.. index:: 3n + 1 sequence
-
 **Check your understanding**
 
-.. mchoice:: question14_4_1
+.. mchoice:: question10_4_1
    :answer_a: Returns True if the turtle is still on the screen and False if the turtle is no longer on the screen.
    :answer_b: Uses a while loop to move the turtle randomly until it goes off the screen.
    :answer_c: Turns the turtle right or left at random and moves the turtle forward 50.
