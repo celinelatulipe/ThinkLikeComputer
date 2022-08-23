@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-2-
-   :start: 1
-
 The ``while`` Statement
 -----------------------
 
@@ -25,6 +21,7 @@ a boolean expression to control the flow of execution. The body of the while loo
 boolean expression evaluates to ``True``.
 
 The following two figures show the flow of control. This shows the flow inside the while loop:
+
 .. image:: Figures/while_flow.png
    :alt: a diamond at the top has the phrase "Is the condition True?". Two arrows come out it with either the phrase yes or no on the arrows. The yes arrow points to a box that says "evaluate the statemenets in the body of the loop". It then has an arrow that unconditionally points back to "Is the condition True?" diamond. The no arrow escapes the loop and points down past the "evaluate" square.
 
@@ -38,7 +35,7 @@ This shows the while loop in context:
 We can use the ``while`` loop to create any type of iteration we wish, including anything that we have previously
 done with a ``for`` loop. For example, we have seen programs that look like this when we learned about for loops:
 
-.. activecode:: ac11_2_1a
+.. activecode:: ac10_2_1
    
    def sumTo(aBound):
       """ Return the sum of 1+2+3 ... n """
@@ -62,7 +59,7 @@ should keep going.
 
 Here is a new version of the summation program that uses a while statement:
 
-.. activecode:: ac14_2_1
+.. activecode:: ac10_2_2
 
     def sumTo(aBound):
         """ Return the sum of 1+2+3 ... n """
@@ -86,7 +83,7 @@ of control continues to the ``return`` statement.
 
 The same program in codelens will allow you to observe the flow of execution.
 
-.. codelens:: clens14_2_1
+.. codelens:: clens10_2_1
     :python: py3
 
     def sumTo(aBound):
@@ -146,7 +143,7 @@ the beginning of the iteration process how many times the block of code needs to
 
 **Check your understanding**
 
-.. mchoice:: question14_2_1
+.. mchoice:: question10_2_1
    :answer_a: True
    :answer_b: False
    :correct: a
@@ -155,7 +152,7 @@ the beginning of the iteration process how many times the block of code needs to
 
    True or False: You can rewrite any for-loop as a while-loop.
 
-.. mchoice:: question14_2_2
+.. mchoice:: question10_2_2
    :answer_a: n starts at 10 and is incremented by 1 each time through the loop, so it will always be positive
    :answer_b: answer starts at 1 and is incremented by n each time, so it will always be positive
    :answer_c: You cannot compare n to 0 in while loop.  You must compare it to another variable.
@@ -178,7 +175,7 @@ the beginning of the iteration process how many times the block of code needs to
        n = n + 1
      print(answer)
 
-.. mchoice:: question14_2_3
+.. mchoice:: question10_2_3
    :answer_a: a for-loop or a while-loop
    :answer_b: only a for-loop
    :answer_c: only a while-loop
@@ -191,7 +188,7 @@ the beginning of the iteration process how many times the block of code needs to
    Which type of loop can be used to perform the following iteration: You choose a positive integer at random and then print the numbers from 1 up to and including the selected integer.
 
 
-.. activecode:: ac14_2_2
+.. activecode:: ac10_2_3
    :practice: T
 
    Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called ``eve_nums``.
@@ -208,7 +205,7 @@ the beginning of the iteration process how many times the block of code needs to
 
    myTests().main()
 
-.. activecode:: ac14_2_3
+.. activecode:: ac10_2_4
     :practice: T
 
     Below, we've provided a for loop that sums all the elements of ``list1``. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name ``accum``.
@@ -233,7 +230,7 @@ the beginning of the iteration process how many times the block of code needs to
 
     myTests().main()
 
-.. activecode:: ac14_2_4
+.. activecode:: ac10_2_5
     :practice: T
 
     Write a function called ``stop_at_four`` that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.

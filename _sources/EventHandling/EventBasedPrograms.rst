@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
 Program Architecture
 =====================
 
@@ -20,7 +16,7 @@ Batch Programming
 -----------------
 A batch program is very simple in it's architecture: it starts, it runs sequentially through a set of code instructions, perhaps taking a few detours to code that is in functions, and perhaps making a few decisions based on data that is read in, random numbers or other information, and then it gets to the end and closes. The program below is an example of a very simple batch program:
 
-.. activecode:: ac11_2_1b
+.. activecode:: ac11_2_1
 
     s = "what if we went to the zoo"
     count = 0

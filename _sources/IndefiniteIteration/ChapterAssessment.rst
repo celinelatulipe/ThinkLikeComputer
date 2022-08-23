@@ -7,14 +7,10 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-10-
-   :start: 1
-
 Chapter Assessment
 ------------------
 
-.. activecode:: ac14_10_1
+.. activecode:: ac10_8_1
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
     
@@ -35,7 +31,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: ac14_10_2
+.. activecode:: ac10_8_2
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
@@ -56,7 +52,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: ac14_10_3
+.. activecode:: ac10_8_3
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 
@@ -76,7 +72,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: ac14_10_4
+.. activecode:: ac10_8_4
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
@@ -98,7 +94,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: ac14_10_5
+.. activecode:: ac10_8_5
     :practice: T
     :topics: MoreAboutIteration/ThewhileStatement
 
@@ -124,7 +120,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: ac14_10_6
+.. activecode:: ac10_8_6
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
 

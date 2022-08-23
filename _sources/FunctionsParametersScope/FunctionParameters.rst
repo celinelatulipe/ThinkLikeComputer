@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-3-
-   :start: 1
-
 
 Function Parameters
 -------------------
@@ -49,7 +45,7 @@ reference to some other variable name.
 That can get kind of confusing, so let's start by looking at a function with just one parameter. The revised hello
 function personalizes the greeting: the person to greet is specified by the parameter.
 
-.. codelens:: clens11_3_1
+.. codelens:: clens8_2_1
    :python: py3
 
    def hello2(s):
@@ -71,7 +67,7 @@ is evaluated before control is passed to the function. The value is assigned to 
 Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value,
 the value that was 'passed into' the function.
 
-.. showeval:: eval11_3_1
+.. showeval:: eval8_2_1
    :trace_mode: true
 
    def hello2(s):
@@ -88,7 +84,7 @@ the value that was 'passed into' the function.
 
 To get a feel for that, let's invoke hello2 using some more complicated expressions. Try some of your own, too.
 
-.. activecode:: ac11_3_1
+.. activecode:: ac8_2_1
 
    def hello2(s):
        print("Hello " + s)
@@ -100,7 +96,7 @@ To get a feel for that, let's invoke hello2 using some more complicated expressi
 Now let's consider a function with two parameters. This version of hello takes
 a parameter that controls how many times the greeting will be printed.
 
-.. codelens:: clens11_3_2
+.. codelens:: clens8_2_2
    :python: py3
 
    def hello3(s, n):
@@ -124,7 +120,7 @@ Parameter Order and Type
 
 The order of the parameters matters, and so when you are calling a function with multiple parameters, you need to make sure that you specify the values in the correct order, and that you are passing in the right type of value for each parameter. Let's return to the turtle example and add two more parameters to the square function, to specify the line width and color.
 
-.. activecode:: clens9_1_4a
+.. activecode:: clens8_2_1_1
     :nocodelens:
 
     import turtle
@@ -158,7 +154,7 @@ Note that now we set the color as part of the call to the draw_square method, an
 
 Let's examine the types of errors that we encounter if we mess up specifying the parameters. In the example below, we accidentally leave off the color parameter on line 24, and we get a TypeError noting that we are missing 1 required argument.  
 
-.. activecode:: clens9_1_5a
+.. activecode:: clens8_2_1_2
     :nocodelens:
 
     import turtle
@@ -191,7 +187,7 @@ Let's examine the types of errors that we encounter if we mess up specifying the
 In this next example, we swap the order of the middle two parameters on line 24 (side length and line thickness). In this case we get a logic error, the program executes completely, but the output is not what we expect. Instead of a bunch of thin blue squares forming the inner flower petals, we get what looks like a blue circle being drawn over and over again, because we are drawing a square with sides of length 2 and a pen width of 50! 
 
 
-.. activecode:: clens9_1_6a
+.. activecode:: clens8_2_1_3
     :nocodelens:
 
     import turtle
@@ -224,7 +220,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
 
 **Check your understanding**
 
-.. mchoice:: question11_3_1
+.. mchoice:: question8_2_1
    :answer_a: def greet(t):
    :answer_b: def greet:
    :answer_c: greet(t, n):
@@ -238,7 +234,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
 
    Which of the following is a valid function header (first line of a function definition)?
 
-.. mchoice:: question11_3_2
+.. mchoice:: question8_2_2
    :answer_a: def print_many(x, y):
    :answer_b: print_many
    :answer_c: print_many(x, y)
@@ -258,7 +254,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
          for i in range(y):
              print(x)
 
-.. mchoice:: question11_3_3
+.. mchoice:: question8_2_3
    :answer_a: i
    :answer_b: x
    :answer_c: x, y
@@ -278,7 +274,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
          for i in range(y):
              print(x)
 
-.. mchoice:: question11_3_4
+.. mchoice:: question8_2_4
    :answer_a: print_many(x, y)
    :answer_b: print_many
    :answer_c: print_many("Greetings")
@@ -302,7 +298,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
 
       z = 3
 
-.. mchoice:: question11_3_5
+.. mchoice:: question8_2_5
    :answer_a: True
    :answer_b: False
    :correct: a
@@ -311,7 +307,7 @@ It is also possible to have optional parameters, so that if a programmer leaves 
 
    True or false: A function can be called several times by placing a function call in the body of a for loop.
 
-.. mchoice:: question11_3_6
+.. mchoice:: question8_2_6
    :answer_a: Hello
    :answer_b: Goodbye
    :answer_c: s1

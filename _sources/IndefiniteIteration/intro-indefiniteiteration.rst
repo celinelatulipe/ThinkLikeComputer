@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-1-
-   :start: 1
-
 .. index:: for loop
     iteration, assignment, assignment statement, reassignment
     single: statement; assignment

@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: UFunc-1-
-   :start: 1
-
 👩‍💻 Decoding a Function
 -------------------------
 
@@ -67,7 +63,7 @@ function parameter. If you see...
 
 **Check your understanding: decode this function definition**
 
-.. mchoice:: question200_1_1
+.. mchoice:: question8_4_1
    :answer_a: 0
    :answer_b: 1
    :answer_c: 2
@@ -91,7 +87,7 @@ function parameter. If you see...
          else:
             return len(z) + 3
          
-.. mchoice:: question200_1_2
+.. mchoice:: question8_4_2
    :multiple_answers:
    :answer_a: integer
    :answer_b: float
@@ -116,7 +112,7 @@ function parameter. If you see...
          else:
             return len(z) + 3
          
-.. mchoice:: question200_1_3
+.. mchoice:: question8_4_3
    :multiple_answers:
    :answer_a: integer
    :answer_b: float
@@ -141,7 +137,7 @@ function parameter. If you see...
          else:
             return len(z) + 3
 
-.. mchoice:: df_question200_1_3
+.. mchoice:: df_question8_4_3
    :multiple_answers:
    :answer_a: integer
    :answer_b: float

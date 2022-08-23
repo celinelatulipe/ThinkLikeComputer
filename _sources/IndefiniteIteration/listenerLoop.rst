@@ -7,17 +7,11 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-3-
-   :start: 1
-
 .. index::
     single: sentinel value
     single: value; sentinel
     single: validation
     single: input; validating
-
-.. _listener_loop:
 
 The Input Listener Loop
 =======================
@@ -30,7 +24,7 @@ to be executed? The answer is, when it depends on something that happens **durin
 One very common pattern is called a **listener loop**. Inside the while loop there is a function call to get user input.
 The loop repeats indefinitely, until a particular input is received. 
 
-.. activecode:: ac11_3_1a
+.. activecode:: ac10_3_1
 
    theSum = 0
    x = -1
@@ -53,7 +47,7 @@ values of x and theSum.
 
 You've seen a related example to this with our interactive turtle programs that have listener functions:
 
-.. activecode:: ac11_3_2a
+.. activecode:: ac10_3_2
     :nocodelens:
    
     import turtle
@@ -160,7 +154,7 @@ We don't have a "little plastic bar" data type in Python, so we'll do the next b
 will use a ``price`` of zero to mean "this is my last item." In this program,
 zero is a **sentinel value**, a value used to signal the end of the loop. Here's the code:
 
-.. activecode:: ac14_3_2
+.. activecode:: ac10_3_3
     :timelimit: 60000
 
     def checkout():
@@ -201,7 +195,7 @@ your program enters either a Y for yes or N for no (in either upper or lower cas
 Here is a program that uses a ``while`` loop to keep asking until it receives a valid answer.
 When you run the following code, try typing something other than Y or N to see how the code reacts:
 
-.. activecode:: ac14_3_3
+.. activecode:: ac10_3_4
     :timelimit: 60000
 
     def get_yes_or_no(message):

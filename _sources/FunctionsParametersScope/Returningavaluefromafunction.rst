@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-4-
-   :start: 1
-
 Return Values 
 -------------
 
@@ -41,7 +37,7 @@ number. Here is the black-box diagram with the Python code following.
 
 .. image:: Figures/squarefun.png
 
-.. activecode:: ac11_4_1
+.. activecode:: ac8_3_1
 
     def square(x):
         y = x * x
@@ -63,7 +59,7 @@ called. It doesn't matter what the value was named in the caller (the place wher
 ``square``, it's name is ``x``.  You can see this very clearly in CodeLens, where the global variables and the local
 variables for the square function are in separate boxes.
 
-.. codelens:: clens11_4_1
+.. codelens:: clens8_3_1
     :python: py3
 
     def square(x):
@@ -78,7 +74,7 @@ There is one more aspect of function return values that should be noted. All Pyt
 mistake made by beginning Python programmers. As you step through this example, pay very close attention to the return
 value in the local variables listing. Then look at what is printed when the function is over.
 
-.. codelens:: clens11_4_2
+.. codelens:: clens8_3_2
     :python: py3
 
     def square(x):
@@ -100,7 +96,7 @@ statement in the function. In the following code, when line 3 executes, the valu
 variable x, then printed. Lines 4 and 5 never execute. Run the following code and try making some modifications to 
 it to make sure you understand why "there" and 10 never print out.
 
-.. activecode:: ac11_4_2
+.. activecode:: ac8_3_2
 
   def weird():
       print("here")
@@ -138,7 +134,7 @@ First, an English plan for this new function to define called ``longer_than_five
 
 Now, the code:
 
-.. activecode:: ac11_4_3
+.. activecode:: ac8_3_3
 
   def longer_than_five(list_of_names):
       for name in list_of_names: # iterate over the list to look at each name
@@ -183,7 +179,7 @@ interpreter does these steps:
 
 **Check your understanding**
 
-.. mchoice:: question11_4_1
+.. mchoice:: question8_3_1
    :answer_a: You should never use a print statement in a function definition.
    :answer_b: The print statement will never execute
    :answer_c: You must calculate the value of x+y+z before you return it.
@@ -203,7 +199,7 @@ interpreter does these steps:
          return x+y+z
          print('the answer is', x+y+z)
 
-.. mchoice:: question11_4_2
+.. mchoice:: question8_3_2
    :answer_a: The value None
    :answer_b: The value of x+y+z
    :answer_c: The string 'x+y+z'
@@ -220,7 +216,7 @@ interpreter does these steps:
     def addEm(x, y, z):
         print(x+y+z)
 
-.. mchoice:: question11_4_3
+.. mchoice:: question8_3_3
    :answer_a: 25
    :answer_b: 50
    :answer_c: 25 + 25
@@ -240,7 +236,7 @@ interpreter does these steps:
 
        print(square(5) + square(5))
 
-.. mchoice:: question11_4_4
+.. mchoice:: question8_3_4
    :answer_a: 8
    :answer_b: 16
    :answer_c: Error: can't put a function invocation inside parentheses
@@ -259,7 +255,7 @@ interpreter does these steps:
 
        print(square(square(2)))
 
-.. mchoice:: question11_4_5
+.. mchoice:: question8_3_5
    :answer_a: 1
    :answer_b: Yes
    :answer_c: First one was longer
@@ -288,7 +284,7 @@ interpreter does these steps:
        else:
            print("Second one was at least as long")
 
-.. mchoice:: question11_4_6
+.. mchoice:: question8_3_6
    :answer_a: square
    :answer_b: g
    :answer_c: a number
@@ -312,7 +308,7 @@ interpreter does these steps:
 
        print(square(g(2)))
 
-.. mchoice:: question11_4_7
+.. mchoice:: question8_3_7
    :answer_a: 3
    :answer_b: 2
    :answer_c: None
@@ -337,7 +333,7 @@ interpreter does these steps:
 
        show_me_numbers([4,2,3])
 
-.. activecode:: ac11_4_4
+.. activecode:: ac8_3_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -357,7 +353,7 @@ interpreter does these steps:
    myTests().main()
 
 
-.. activecode:: ac11_4_5
+.. activecode:: ac8_3_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -377,7 +373,7 @@ interpreter does these steps:
 
    myTests().main()
 
-.. activecode:: ac11_4_6
+.. activecode:: ac8_3_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -398,7 +394,7 @@ interpreter does these steps:
    myTests().main()
 
 
-.. activecode:: ac11_4_7
+.. activecode:: ac8_3_7
    :language: python
    :autograde: unittest
    :practice: T
@@ -418,7 +414,7 @@ interpreter does these steps:
 
    myTests().main()
 
-.. activecode:: ac11_4_8
+.. activecode:: ac8_3_8
    :language: python
    :autograde: unittest
    :practice: T
@@ -438,7 +434,7 @@ interpreter does these steps:
    myTests().main()
 
 
-.. activecode:: ac11_4_9
+.. activecode:: ac8_3_9
    :language: python
    :autograde: unittest
    :practice: T
@@ -458,7 +454,7 @@ interpreter does these steps:
 
    myTests().main()
 
-.. activecode:: ac11_4_10
+.. activecode:: ac8_3_10
    :language: python
    :autograde: unittest
    :practice: T

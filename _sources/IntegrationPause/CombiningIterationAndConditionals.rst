@@ -33,7 +33,7 @@ The image above shows a few different versions of what it might look like to hav
 
 Let's look at a simple example that encodes a user's text input.
 
-.. activecode:: ac7_3_1b
+.. activecode:: ac7_3_1
 
    user_text = input("Please enter a word with no spaces:")
 
@@ -69,7 +69,7 @@ When we are iterating across a list of items, we often need to inspect each item
 
 The code below accomplishes this by using an if statement inside a for loop. We are also using the append method on lists, which we cover soon in the Sequences chapter.
 
-.. activecode:: ac7_3_2a
+.. activecode:: ac7_3_2
 
    greetings = ["hello", "good bye", "have a nice day", "ciao", "see ya", "bye", "bonjour", "au revoir", "adios"]
    phrase_greetings = []

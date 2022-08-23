@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
 A Complete Event-Based GUI Example
 ==================================
 
@@ -285,4 +281,4 @@ You may be wondering if there is a better way to do this. And there is. The bett
 creating objects (turtles and screens) and calling methods of objects (like forward() and pen_down()). In the next section, you will see a version of the program above completely rewritten in an object-oriented fashion, and not a single global variable is assigned in any of the functions. 
 
 
-TODO: add some exercises interspersed above: have them add more colours, have them make the font size vary by adding three font size buttons (small, med, large). 
+.. TODO: add some exercises interspersed above: have them add more colours, have them make the font size vary by adding three font size buttons (small, med, large). 

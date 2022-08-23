@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: moreiter-5-
-   :start: 1
-
 Break and Continue
 ------------------
 
@@ -23,7 +19,7 @@ to the next outdented code that exists after the while loop.
 .. image:: Figures/while_and_break.png
    :alt: image showing a rectangle with "code block" written on it on top. Then, text that read "while {condition}": followed by an indented block with "..." written on it. break is then written and another indented block is placed after the phrase break, which has "... (skipped)" written on it. Finally, an unindented block belonging to code outside the while loop is at the bottom. It says "code block". An arrow points from the word break to the unindented block at the bottom and the phrase "break out of the loop" is written.
 
-.. activecode:: ac14_5_1
+.. activecode:: ac10_5_1
     
     while True:
         print("this phrase will always print")
@@ -37,7 +33,7 @@ way to stop the while loop because the condition is always set to True!
 
 Here is a more realistic example of the use of a break statement:
 
-.. activecode:: ac14_5_1a
+.. activecode:: ac10_5_2
     
     count = 0
     items = []
@@ -64,7 +60,7 @@ and maybe do more iterations depending on the condition set for the while loop.
 .. image:: Figures/while_and_continue.png
    :alt: image showing a rectangle with "code block" written on it on top. Then, text that read "while {condition}": followed by an indented block with "..." written on it. continue is then written and another indented block is placed after the phrase continue, which has "... (skipped)" written on it. Finally, an unindented block belonging to code outside the while loop is at the bottom. It says "code block". An arrow points from the word continue to the while conditional statement at the top of the while loop. The phrase "continue at the start of the loop" is written.
 
-.. activecode:: ac14_5_2
+.. activecode:: ac10_5_3
 
     x = 0 
     while x < 10:
@@ -83,7 +79,7 @@ the next iteration.
 
 Here is the inventory example from above, but this time we don't add the count of items to the inventory list if the count is 0:
 
-.. activecode:: ac14_5_2b
+.. activecode:: ac10_5_4
     
     count = 0
     items = []

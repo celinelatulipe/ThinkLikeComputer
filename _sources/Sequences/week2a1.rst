@@ -7,18 +7,13 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: sequences-10-
-   :start: 1
-
-.. Week 2 Assessment 1
 
 Chapter Assessment
 ------------------
 
 **Check your understanding**
 
-.. mchoice:: assess_question2_1_1_1
+.. mchoice:: assess_question9_12_1
    :answer_a: zpzpzpzpzp
    :answer_b: zzzzzppppp
    :answer_c: pzpzpzpzpz
@@ -43,7 +38,7 @@ Chapter Assessment
     m = c*5
     print(m)
 
-.. activecode:: assess_ac_2_1_1_2
+.. activecode:: assess_ac_9_12_2
     :autograde: unittest
     :language: python
     :practice: T
@@ -68,7 +63,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ac_2_1_1_3
+.. activecode:: assess_ac_9_12_3
     :autograde: unittest
     :language: python
     :practice: T
@@ -99,7 +94,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. mchoice:: assess_question2_1_1_4
+.. mchoice:: assess_question9_12_4
    :answer_a: ['travel', 'lights', 'moon']
    :answer_b: ['world', 'travel', 'lights']
    :answer_c: ['travel', 'lights']
@@ -120,7 +115,7 @@ Chapter Assessment
     new = ls[2:4]
     print(new)
 
-.. mchoice:: assess_question2_1_1_5
+.. mchoice:: assess_question9_12_5
    :answer_a: string
    :answer_b: integer
    :answer_c: float
@@ -140,7 +135,7 @@ Chapter Assessment
     l = ['w', '7', 0, 9]
     m = l[1:2]
 
-.. mchoice:: assess_question2_1_1_6
+.. mchoice:: assess_question9_12_6
    :answer_a: string
    :answer_b: integer
    :answer_c: float
@@ -160,7 +155,7 @@ Chapter Assessment
     l = ['w', '7', 0, 9]
     m = l[1]
 
-.. mchoice:: assess_question2_1_1_7
+.. mchoice:: assess_question9_12_7
    :answer_a: string
    :answer_b: integer
    :answer_c: float
@@ -180,7 +175,7 @@ Chapter Assessment
     b = "My, what a lovely day"
     x = b.split(',')
 
-.. mchoice:: assess_question2_1_1_8
+.. mchoice:: assess_question9_12_8
    :answer_a: string
    :answer_b: integer
    :answer_c: float
@@ -203,7 +198,7 @@ Chapter Assessment
     y = z.split()
     a = "".join(y)
 
-.. activecode:: assess_ac2_1_1_9
+.. activecode:: assess_ac9_12_9
     :autograde: unittest
     :language: python
     :practice: T
@@ -228,7 +223,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_ac2_1_1_10
+.. activecode:: assess_ac9_12_10
     :autograde: unittest
     :language: python
     :practice: T
@@ -252,7 +247,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: access_ac_2_1_1_11
+.. activecode:: access_ac_9_12_11
    :language: python
    :autograde: unittest
    :practice: T
@@ -275,7 +270,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: access_ac_2_1_1_12
+.. activecode:: access_ac_9_12_12
    :language: python
    :autograde: unittest
    :practice: T
@@ -298,7 +293,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: assess_ac_2_1_1_13
+.. activecode:: assess_ac_9_12_13
    :language: python
    :autograde: unittest
    :practice: T

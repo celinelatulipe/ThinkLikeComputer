@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-12-
-   :start: 1
-
 Passing Mutable vs Immuatable Objects
 -------------------------------------
 
@@ -18,7 +14,7 @@ Now that you have a deeper understanding of sequences, we need to revisit functi
 
 Take a look at the following code example. Can you predict what is printed out?
 
-.. activecode:: ac10_9_1
+.. activecode:: ac9_9_1
    
    def double(y):
        y = 2 * y
@@ -38,7 +34,7 @@ On the other hand, if you are passing a mutable object, such as a list, to a fun
 object's state, that state change will be visible globally when the function returns. Take a look at the following
 example, where a list is passed in to a function. 
 
-.. activecode:: ac10_9_2
+.. activecode:: ac9_9_2
      
    def changeit(lst):
        lst[0] = "Manitoba"
@@ -87,7 +83,7 @@ Passing Tuples
 
 Tuples are just like lists, except they are not mutable. If you pass a tuple into a function and that function tries to modify the contents of it, an error will be thrown. Consider this example:
 
-.. activecode:: ac10_9_3
+.. activecode:: ac9_9_3
      
    def changeit(lst):
        lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
@@ -99,7 +95,7 @@ Tuples are just like lists, except they are not mutable. If you pass a tuple int
 
 If you want this to work, you need to convert the tuple into a list, and then store a returned list:
 
-.. activecode:: ac10_9_4
+.. activecode:: ac9_9_4
      
    def changeit(lst):
        lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
@@ -117,7 +113,7 @@ Ethics & Data Protection
 
 We most often use lists for storing data, because we often want the flexibility of being able to edit and change information. However, sometimes there is important data (private personal data, health data, salaries, etc.) that needs to be protected from tampering. As a programmer, if you need to share data but you want to ensure the data isn't tampered with, you can send the data as a tuple. This allows a function to make use of the data, but not change it. Consider this example, which makes use of the accumulator pattern, reading from a tuple, but not modifying it:
 
-.. activecode:: ac10_9_5
+.. activecode:: ac9_9_5
      
    def avg_salaries(lst):
        sum = 0;

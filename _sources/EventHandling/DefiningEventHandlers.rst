@@ -6,10 +6,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-1-
-   :start: 1
-
 Event Handlers
 ==============
 
@@ -60,7 +56,7 @@ It is fairly typical that event handler functions are really short. They often c
 
 Let's look at a turtle example to think about this:
 
-.. activecode:: ac11_6_1a
+.. activecode:: ac11_6_1
     :nocodelens:
    
     import turtle

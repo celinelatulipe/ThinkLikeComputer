@@ -7,10 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: func-9-
-   :start: 1
-
 .. index::
     functional decomposition
     generalization
@@ -30,7 +26,7 @@ Here's a simple example of functional decomposition using two functions. The fir
 computes the square of a given number. The second function called ``sum_of_squares`` makes use of square to compute
 the sum of three numbers that have been squared.
 
-.. codelens:: clens11_9_1
+.. codelens:: clens8_8_1
     :python: py3
 
     def square(x):
@@ -65,7 +61,7 @@ What happens when you to refer to variable y on line 3? Python looks up the valu
 
 In the example below, we create a turtle drawing program that uses function composition.
 
-.. activecode:: ac9_8_1a
+.. activecode:: ac8_8_1
    :nocodelens:
 
    import turtle
@@ -128,7 +124,7 @@ The turtle example above has 5 different functions. Two of them are **helper fun
 
 **Check your Understanding**
 
-.. activecode:: ac11_9_1
+.. activecode:: ac8_8_1
    :language: python
    :autograde: unittest
    :practice: T
