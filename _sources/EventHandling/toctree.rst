@@ -14,6 +14,7 @@ Event Handling
    SimpleGUIEvents.rst
    Event-BasedCompleteExample.rst
    Event-BasedExample-OO.rst
+   EthicalDesignChoices.rst
 ..   Exercises.rst
 ..   ChapterAssessment.rst
    
