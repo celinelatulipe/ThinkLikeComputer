@@ -40,6 +40,7 @@ Table of Contents
    IndefiniteIteration/toctree.rst
    EventHandling/toctree.rst
    Review/toctree.rst
+   Labs/toctree.rst
    FrontBackMatter/contrib.rst
    FrontBackMatter/copyright.rst
 
