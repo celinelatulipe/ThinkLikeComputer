@@ -27,7 +27,13 @@ Your objective in this level is to complete the code below so that a turtle draw
     You are given some code to start with, do not edit these lines!
 
 .. activecode:: lab2_level1
-   :nocodelens:
+    :nocodelens:
+
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 2, Part 1
+    ################################################################
    
     import math              #imports the math library
     import turtle              #imports the turtle library
@@ -57,7 +63,12 @@ Building upon your program from level 1, your objective is to calculate the area
 
 
 .. activecode:: lab2_level2
-   :nocodelens:
+    :nocodelens:
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 2, Part 2
+    ################################################################
    
 
 #. Copy your code from Level 1 into the active code window above.
@@ -78,7 +89,13 @@ Objective: Convert this code into a generalized program that uses user input to 
 
 
 .. activecode:: lab2_level3   
-   :nocodelens:
+    :nocodelens:
+
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 2, Part 3
+    ################################################################
 
     import turtle             
     wn = turtle.Screen()      
