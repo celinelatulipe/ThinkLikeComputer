@@ -64,6 +64,7 @@ Building upon your program from level 1, your objective is to calculate the area
 
 .. activecode:: lab2_level2
     :nocodelens:
+
     ################################################################
     # Student name, ID & lab section
     # Date
