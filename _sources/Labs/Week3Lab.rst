@@ -28,6 +28,13 @@ The program below contains multiple errors. Your objective is to debug the progr
    You do not need to delete any lines of code, only edit/add.
 
 .. activecode:: lab3_level1
+
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 3, Part 1
+    ################################################################
+
    
     #This is a program that calculates annual compound interest
     
@@ -64,6 +71,12 @@ Your objective is to debug the program, and match the expected output (see below
 
 
 .. activecode:: lab3_level2
+
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 3, Part 2
+    ################################################################
 
     #This program calculates your tax rate for the years 2020 and 2021
     
@@ -110,6 +123,12 @@ You must recreate the output using the following guidelines:
 
 .. activecode:: lab3_level3   
    :nocodelens:
+
+    ################################################################
+    # Student name, ID & lab section
+    # Date
+    # Lab 3, Part 3
+    ################################################################
 
     import turtle             
     wn = turtle.Screen()      
