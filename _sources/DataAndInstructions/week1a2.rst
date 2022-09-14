@@ -143,7 +143,7 @@ Chapter 2 Assessment
     .. fillintheblank:: assess_Ch2_cdq3
 
        The image above shows a program that just completed executing (we know this because the green arrow is on the last line and there is no red arrow in the image). At the end of the program, which variables changed from their original value during the program's execution?
-       List each one in the box below, separated by a white space.
+       List each *variable* in the box below, separated by a white space.
 
        -    :a c:      Correct! Even though c finished with the same value it started with, it still was updated during the code execution.
             :a c e:     Not quite. Variable e is made up of values from a and b but it never gets reassigned.
