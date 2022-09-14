@@ -116,7 +116,7 @@ Chapter 2 Assessment
     .. fillintheblank:: assess_Ch2_cdq1
 
        Which variables in the image above are assigned string values?
-       List each one in the box below, separated by a white space.
+       List each *variable* in the box below, separated by a white space.
 
        -    :a e f g h i:   Correct. You typically use whole numbers for ages after age 1.
             :.*:    There are 6 in total, can you find them all? Remember that variables are case sensitive.
@@ -131,7 +131,7 @@ Chapter 2 Assessment
        Which line number(s) will print an integer as the result of the given operation?
        List each one in the box below, separated by a white space.
 
-       -    :3:      Correct! All the others either use floats or integers with the '/' operation which always returns a float.
+       -    :3 6:      Correct! All the others either use floats or integers with the '/' operation which always returns a float.
 
             :.*:     Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
 

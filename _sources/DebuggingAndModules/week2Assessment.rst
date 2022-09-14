@@ -9,14 +9,14 @@ Chapter Assessment - Debugging and Modules
 
 **Check your understanding**
 
-.. image:: Figures/cdq3-4.png
+.. image:: Figures/cdq3-1.png
     :width: 600
     :align: center 
     :alt: module random being imported
 
 .. mchoice:: mc_ch3_cdq1
-   :answer_a: variable
-   :answer_b: object
+   :answer_a: variables
+   :answer_b: objects
    :answer_c: modules can be called as variables or modules
    :answer_d: none, they are their own unique label
    :correct: b
@@ -29,14 +29,14 @@ Chapter Assessment - Debugging and Modules
    Given the above screenshot of the CodeLens animation , we can say that modules (e.g random) are which of the following?
 
 
-.. image:: Figures/cdq3-3.png
+.. image:: Figures/cdq3-2.png
     :width: 600
     :align: center 
     :alt: calculating the mean of 3 numbers
 
 .. fillintheblank:: fib_ch3_cdq2
 
-   Consider the above screenshot of the CodeLens animation. This code is supposed calculate the mean (average) of the 3 numbers but there is a semantic error on which line number?
+   Consider the above screenshot of the CodeLens animation. This code is supposed to calculate the mean (average) of the 3 numbers but there is a semantic error on which line number?
 
    -    :4: Correct! Order of operations comes into play here and we need some brackets. Try writing this code for yourself with the right brackets and see if you can get the correct mean (should be 4).
         :1: Semantic errors have to do with logic. This is assigning max a value. There is no logic happening here.
@@ -45,7 +45,7 @@ Chapter Assessment - Debugging and Modules
         :5: Semantic errors have to do with logic. This is printing the calculated value. There is no logic happening here.
 
 
-.. image:: Figures/cdq3-1.png
+.. image:: Figures/cdq3-3.png
     :width: 600
     :align: center 
     :alt: code with type error in it
