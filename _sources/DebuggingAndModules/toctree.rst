@@ -22,6 +22,6 @@ Debugging and Modules
    EthicsDefaultVariableValues.rst
    Glossary.rst
    TurtlesAssessment.rst
-
+   week2Assessment.rst
 ..   Exercises.rst
    
