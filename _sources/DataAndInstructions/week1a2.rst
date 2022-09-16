@@ -7,9 +7,6 @@
     the license is included in the section entitled "GNU Free Documentation
     License".
 
-.. qnum::
-   :prefix: 2-18-
-   :start: 1
 
 
 Chapter 2 Assessment
@@ -17,7 +14,7 @@ Chapter 2 Assessment
 
 **Check your understanding**
 
-.. activecode:: assess_Ch2_01
+.. activecode:: assess_ch2_1
     :include: assess_addl_functions
     :language: python
     :autograde: unittest
@@ -40,7 +37,7 @@ Chapter 2 Assessment
 
     myTests().main()
 
-.. activecode:: assess_Ch2_02
+.. activecode:: assess_ch2_2
     :language: python
     :autograde: unittest
     :practice: T
@@ -69,7 +66,7 @@ Chapter 2 Assessment
     myTests().main()
 
 
-.. mchoice:: assess_Ch2_03
+.. mchoice:: assess_ch2_3
    :multiple_answers:
    :answer_a: a = len("hello worldwelcome!")
    :answer_b: a = 11 + 8
@@ -92,7 +89,7 @@ Chapter 2 Assessment
     z = "hello world"
     y = "welcome!"
 
-.. activecode:: assess_Ch2_addl_functions
+.. activecode:: assess_ch2_4
     :language: python
     :nopre:
     :hidecode:
@@ -104,42 +101,39 @@ Chapter 2 Assessment
     def square(num):
         return num**2
 
-.. image:: Figures/cdq2-1.png
-    :width: 600
-    :align: center 
-    :alt: image of numerous variables being declared and assigned values
+.. fillintheblank:: assess_ch2_5
 
-.. fillintheblank:: assess_Ch2_cdq1
+    .. image:: Figures/cdq2-1.png
+        :width: 900
+        :align: center 
+        :alt: image of numerous variables being declared and assigned values
 
-   Which variables in the image above are assigned string values?
-   List each *variable* in the box below, separated by a white space.
+   Which variables in the image above are assigned string values? List each *variable* in the box below, separated by a white space.
 
    -    :a e f g h i:   Correct. You typically use whole numbers for ages after age 1.
         :.*:    There are 6 in total, can you find them all? Remember that variables are case sensitive.
 
-.. image:: Figures/cdq2-2.png
-    :width: 600
-    :align: center 
-    :alt: image of numerous variables being declared and assigned values
+.. fillintheblank:: assess_ch2_6
 
-.. fillintheblank:: assess_Ch2_cdq2
+    .. image:: Figures/cdq2-2.png
+        :width: 900
+        :align: center 
+        :alt: image of numerous variables being declared and assigned values
 
-   Which line number(s) will print an integer as the result of the given operation?
-   List each one in the box below, separated by a white space.
+   Which line number(s) will print an integer as the result of the given operation? List each variable in the box below, separated by a white space.
 
    -    :3 6:      Correct! All the others either use floats or integers with the '/' operation which always returns a float.
 
         :.*:     Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
 
-.. image:: Figures/cdq2-3.png
-    :width: 600
-    :align: center 
-    :alt: image of numerous variables being declared and assigned values
+.. fillintheblank:: assess_ch2_7
 
-.. fillintheblank:: assess_Ch2_cdq3
+    .. image:: Figures/cdq2-3.png
+        :width: 900
+        :align: center 
+        :alt: image of numerous variables being declared and assigned values
 
-   The image above shows a program that just completed executing (we know this because the green arrow is on the last line and there is no red arrow in the image). At the end of the program, which variables changed from their original value during the program's execution?
-   List each *variable* in the box below, separated by a white space.
+   The image above shows a program that just completed executing (we know this because the green arrow is on the last line and there is no red arrow in the image). At the end of the program, which variables changed from their original value during the program's execution? List each *variable* in the box below, separated by a white space.
 
    -    :a c:      Correct! Even though c finished with the same value it started with, it still was updated during the code execution.
         :a c e:     Not quite. Variable e is made up of values from a and b but it never gets reassigned.
