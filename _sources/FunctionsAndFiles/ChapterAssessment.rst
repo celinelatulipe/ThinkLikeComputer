@@ -22,7 +22,7 @@ Chapter Assessment
    :fromfile: emotion_words.txt
    :hide:
 
-.. activecode:: ac5_15_1
+.. activecode:: assess_ch5_1
    :language: python
    :autograde: unittest
    :practice: T
@@ -43,7 +43,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: ac5_15_2
+.. activecode:: assess_ch5_2
    :language: python
    :autograde: unittest
    :practice: T
@@ -65,7 +65,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac5_15_3
+.. activecode:: assess_ch5_3
    :language: python
    :autograde: unittest
    :practice: T
@@ -87,7 +87,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac5_15_4
+.. activecode:: assess_ch5_4
    :language: python
    :autograde: unittest
    :practice: T
@@ -110,7 +110,7 @@ Chapter Assessment
    myTests().main()   
 
 
-.. activecode:: ac5_15_5
+.. activecode:: assess_ch5_5
    :language: python
    :autograde: unittest
    :practice: T
@@ -132,7 +132,7 @@ Chapter Assessment
    myTests().main()
  
 
-.. activecode:: ac5_15_6
+.. activecode:: assess_ch5_6
    :language: python
    :autograde: unittest
    :practice: T
@@ -154,7 +154,7 @@ Chapter Assessment
    myTests().main() 
 
 
-.. activecode:: ac5_15_7
+.. activecode:: assess_ch5_7
    :language: python
    :autograde: unittest
    :practice: T
@@ -176,7 +176,7 @@ Chapter Assessment
    myTests().main()
 
 
-.. activecode:: ac5_15_8
+.. activecode:: assess_ch5_8
    :language: python
    :autograde: unittest
    :practice: T
@@ -197,7 +197,7 @@ Chapter Assessment
 
    myTests().main()
 
-.. activecode:: ac_5_15_9
+.. activecode:: assess_ch5_9
    :language: python
    :autograde: unittest
    :practice: T

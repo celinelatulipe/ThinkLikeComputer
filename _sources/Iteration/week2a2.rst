@@ -13,7 +13,7 @@ Chapter Assessment
 
 **Check your understanding**
 
-.. activecode:: assess_4_17_01
+.. activecode:: assess_ch4_1
     :language: python
     :autograde: unittest
     :practice: T
@@ -36,7 +36,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_02
+.. activecode:: assess_ch4_2
     :language: python
     :autograde: unittest
     :practice: T
@@ -61,7 +61,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_03
+.. activecode:: assess_ch4_3
     :language: python
     :autograde: unittest
     :practice: T
@@ -83,7 +83,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_04
+.. activecode:: assess_ch4_4
     :language: python
     :autograde: unittest
 
@@ -94,7 +94,7 @@ Chapter Assessment
 
 
 
-.. activecode:: assess_4_17_05
+.. activecode:: assess_ch4_5
     :language: python
     :autograde: unittest
     :practice: T
@@ -143,7 +143,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. .. activecode:: assess_ps_02_08
+.. .. activecode:: assess_ch4_6
     :language: python
     :autograde: unittest
     :practice: T
@@ -168,7 +168,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_4_17_09
+.. activecode:: assess_ch4_7
    :language: python
    :autograde: unittest
    :practice: T
