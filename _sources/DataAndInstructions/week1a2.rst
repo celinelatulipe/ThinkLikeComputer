@@ -18,7 +18,7 @@ Chapter 2 Assessment
 **Check your understanding**
 
 .. activecode:: assess_Ch2_01
-    :include: assess_addl_functions
+    :include: assess_Ch2_addl_functions
     :language: python
     :autograde: unittest
     :topics: SimplePythonData/FunctionCalls
