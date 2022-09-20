@@ -116,7 +116,7 @@ Chapter Assessment
            self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
 
     myTests().main()
-.. the following two activities use .split, so they can be moved to chapter 10 
+.. the following two activities use .split, so they can be moved to chapter 10
 .. .. activecode:: assess_ps_02_07
     :language: python
     :autograde: unittest
@@ -187,3 +187,19 @@ Chapter Assessment
          self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
 
    myTests().main()
+
+.. fillintheblank:: assess_ch4_8_lh
+
+     .. image:: Figures/cdq4-1.png
+         :width: 900
+         :align: center
+         :alt: image of numerous variables being declared and assigned values
+
+    The range function shown returns a |blank| of numbers starting at |blank| and ending at |blank|
+
+    -    :list|sequence|range:   Correct. This is a range of numbers
+         :.*:    Hmmm what does range() return? Go back and look!
+    -    :0|zero:   Correct. Computer Scientists always start at 0
+         :.*:    Try to think about what number computer scientists always start counting at
+    -    :9|nine:   Correct. Range are inclusive on the starting the number but exclusive on the ending number
+         :.*:    Remember, ranges are exclusive on the ending number
