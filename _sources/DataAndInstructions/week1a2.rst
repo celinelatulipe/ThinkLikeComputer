@@ -101,11 +101,11 @@ Chapter 2 Assessment
     def square(num):
         return num**2
 
-.. fillintheblank:: assess_ch2_5
+.. fillintheblank:: assess_ch2_5_lh
 
     .. image:: Figures/cdq2-1.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    Which variables in the image above are assigned string values? List each *variable* in the box below, separated by a white space.
@@ -113,11 +113,11 @@ Chapter 2 Assessment
    -    :a e f g h i:   Correct. You typically use whole numbers for ages after age 1.
         :.*:    There are 6 in total, can you find them all? Remember that variables are case sensitive.
 
-.. fillintheblank:: assess_ch2_6
+.. fillintheblank:: assess_ch2_6_lh
 
     .. image:: Figures/cdq2-2.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    Which line number(s) will print an integer as the result of the given operation? List each variable in the box below, separated by a white space.
@@ -126,11 +126,11 @@ Chapter 2 Assessment
 
         :.*:     Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
 
-.. fillintheblank:: assess_ch2_7
+.. fillintheblank:: assess_ch2_7_lh
 
     .. image:: Figures/cdq2-3.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    The image above shows a program that just completed executing (we know this because the green arrow is on the last line and there is no red arrow in the image). At the end of the program, which variables changed from their original value during the program's execution? List each *variable* in the box below, separated by a white space.

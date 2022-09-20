@@ -8,7 +8,7 @@
 
 .. Week 1 Assessment 3
 
-Chapter Assessment 
+Chapter Assessment
 ------------------
 
 **Check your understanding**
@@ -68,7 +68,7 @@ Chapter Assessment
    :answer_d: Delete object instances.
    :answer_e: None of the above.
    :correct: a,b,c
-   :feedback_a: Methods can change the value that is associated with an attribute. 
+   :feedback_a: Methods can change the value that is associated with an attribute.
    :feedback_b: Methods can return values.
    :feedback_c: Attributes do not need to be pre-declared; any code can add a new attribute to an instance just by assigning a value to it.
    :feedback_d: You do not explicitly delete object instances; when there are no variables or other references to them, so that they can't be accessed, they are automatically deleted.
@@ -91,7 +91,7 @@ Chapter Assessment
    :feedback_c: student is the object, so it goes before the period; the attribute goes after.
    :feedback_d: This would be the syntax for a function named student being called on a variable named title.
    :feedback_e: Yes, this is the correct syntax to use.
-   :practice: T 
+   :practice: T
    :topics: PythonTurtle/ObjectInstances
 
    For an instance of a class that is assigned to the variable ``student``, what is the proper way to refer to the ``title`` attribute/instance variable?
@@ -176,7 +176,7 @@ Drawing with Turtles
 Debugging & Modules
 ===================
 
-.. mchoice:: assess_ch3_9
+.. mchoice:: assess_ch3_9_lh
    :answer_a: variables
    :answer_b: objects
    :answer_c: modules can be called as variables or objects
@@ -190,18 +190,18 @@ Debugging & Modules
 
    .. image:: Figures/cdq3-1.png
     :width: 900
-    :align: center 
+    :align: center
     :alt: module random being imported
 
    Given the above screenshot of the CodeLens animation, we can say that modules (e.g random) are which of the following?
 
 
 
-.. fillintheblank:: assess_ch3_10
-   
+.. fillintheblank:: assess_ch3_10_lh
+
    .. image:: Figures/cdq3-2.png
     :width: 900
-    :align: center 
+    :align: center
     :alt: calculating the mean of 3 numbers
 
    Consider the above screenshot of the CodeLens animation. This code is supposed to calculate the mean (average) of the 3 numbers but there is a semantic error on which line number?
@@ -216,12 +216,12 @@ Debugging & Modules
 
 
 
-.. fillintheblank:: assess_ch3_11
+.. fillintheblank:: assess_ch3_11_lh
    :casei:
 
    .. image:: Figures/cdq3-3.png
     :width: 900
-    :align: center 
+    :align: center
     :alt: code with type error in it
 
    Fill in the blanks to describe how you would fix the error seen above.
@@ -232,5 +232,3 @@ Debugging & Modules
        :.*: Incorrect. Make sure you are using the correct terminology here. What are we doing to the variable?
    -   :int|string: Correct.
        :.*: Incorrect. What type of data do we need in the variable so that it matches the other variable?
-
-
