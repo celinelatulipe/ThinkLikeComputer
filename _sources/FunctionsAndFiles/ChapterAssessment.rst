@@ -107,7 +107,7 @@ Chapter Assessment
          self.assertEqual(len(beginning_chars), 30, "Testing that beginning_chars has the correct length.")
          self.assertEqual(beginning_chars, "Writing essays for school can ", "Testing that beginning_chars has the correct string.")
 
-   myTests().main()   
+   myTests().main()
 
 
 .. activecode:: assess_ch5_5
@@ -130,7 +130,7 @@ Chapter Assessment
          self.assertEqual(three, ['for', 'find', 'to', 'many', 'they', 'solid', 'for', 'have', 'some', 'ups,'], "Testing that three has the correct value.")
 
    myTests().main()
- 
+
 
 .. activecode:: assess_ch5_6
    :language: python
@@ -151,7 +151,7 @@ Chapter Assessment
       def testOne(self):
          self.assertEqual(emotions, ['Sad', 'Angry', 'Happy', 'Confused', 'Excited', 'Scared', 'Nervous'], "Testing that emotions was created correctly.")
 
-   myTests().main() 
+   myTests().main()
 
 
 .. activecode:: assess_ch5_7
@@ -250,3 +250,62 @@ Chapter Assessment
     10/1/2017,2557,48.42,108.01,246.66,2.36,2589.89,49.05,109.4,30.92
     11/1/2017,2593.61,48.68,108.95,246.67,2.35,2626.9,49.3,110.35,31.3
     12/1/2017,2664.34,48.93,109.88,246.52,2.4,2700.13,49.59,111.36,32.09
+
+
+.. fillintheblank:: assess_ch5_10_lh
+    :casei:
+
+    .. image:: Figures/cdq5-1.png
+        :width: 900
+        :align: center
+        :alt: image of numerous variables being declared and assigned values
+
+    The hello function is a(n) |blank|, while var_x is a(n) |blank|.
+
+    -   :object:      Correct! The arrow tells us that functions are objects because we need to reference them in memory.
+        :.*:          Hmmm try again, what does that arrow mean?
+    -   :variable:    Correct! Variable values are stored directly in the variables themselves so they have no reference arrow
+        :.*:           Hmmm try again, var_x doesn't have an arrow and that value is stored directly in the...?
+
+
+.. mchoice:: assess_ch5_11_lh
+   :multiple_answers:
+   :answer_a: an error
+   :answer_b: 5
+   :answer_c: Hello there, I am a method.
+   :answer_d: x
+   :answer_e: 10
+   :correct: a
+   :feedback_a: This is a correct. The code reads top to bottom and we hit an error of hello() not being defined before any prints happen.
+   :feedback_b: Hmm, this is inside the hello() function. Does our code get that far?
+   :feedback_c: Hmm, this is inside the hello() function. Does our code get that far?
+   :feedback_d: x is a variable, not the value. You can tell because it doesn't have quotes
+   :feedback_e: Hmm, this is at the bottom of our code. Does our code get that far?
+
+   .. image:: Figures/cdq5-2.png
+
+   When this code finishes running, what will print? Select as many as apply.
+
+
+.. clickablearea:: assess_ch5_12_lh
+    :question: Given the image below, select the lines of code that call a function.
+    :feedback: Remember, the () indicate a function (even if there is something between them)    
+    :iscode:
+
+    :click-incorrect:import pickle as p:endclick:
+    :click-incorrect:import random as r:endclick:
+    :click-incorrect:import string as s:endclick:
+
+    :click-incorrect:def say_hello()::endclick:
+          :click-incorrect:var_x = "Matilda"::endclick:
+          :click-correct:print("hi there ", var_x):endclick:
+
+    :click-incorrect:def snacks()::endclick:
+      :click-correct:say_hello():endclick:
+      :click-correct:print("I love snacks"):endclick:
+
+    :click-correct:say_hello():endclick:
+    :click-incorrect:type_y =:endclick: :click-incorrect:"say_hello()":endclick:
+    :click-incorrect:type_h =:endclick: :click-correct:type(say_hello()):endclick:
+
+.. image:: Figures/cdq5-3.png

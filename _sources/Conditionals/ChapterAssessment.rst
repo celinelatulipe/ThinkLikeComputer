@@ -240,7 +240,7 @@ Chapter Assessment
       def testTwo(self):
          self.assertEqual(z, 30, "Testing the value of z.")
 
-   myTests().main()   
+   myTests().main()
 
 .. activecode:: assess_ch6_10
    :language: python
@@ -262,3 +262,60 @@ Chapter Assessment
          self.assertIn('for ', self.getEditorText(), "Testing that your code has a for loop")
 
    myTests().main()
+
+
+.. clickablearea:: assess_ch6_11_lh
+    :question: The following truth table should represent `A and B`. Click on the INCORRECT "A and B" values
+    :table:
+    :correct: 2,3;3,3;
+    :incorrect: 4,3;5,3
+
+    .. image:: Figures/cdq6-1.png
+
+    +-------+---------+---------+
+    |   A   |    B    | A and B |
+    +-------+---------+---------+
+    | True  |  False  | True    |
+    +-------+---------+---------+
+    | False |  False  | True    |
+    +-------+---------+---------+
+    | True  |  True   | True    |
+    +-------+---------+---------+
+    | False |  True   | False   |
+    +-------+---------+---------+
+
+.. clickablearea:: assess_ch6_12_lh
+    :question: This code/image below has a semantic error. Without changing the values of the variables, select the portion of the code that needs to change.
+    :feedback: Consider the different boolean logic operators and what each means
+    :iscode:
+
+    MANITOBA_LEGAL_AGE = :click-incorrect:18:endclick:
+
+    my_age = :click-incorrect:18:endclick:
+
+    :click-incorrect:if my_age:endclick: :click-correct:>:endclick: :click-incorrect:MANITOBA_LEGAL_AGE::endclick:
+      :click-incorrect:print("You are of legal age in Manitoba"):endclick:
+    :click-incorrect:else::endclick:
+        :click-incorrect:print("You are underage in Manitoba"):endclick:
+
+.. image:: Figures/cdq6-2.png
+
+.. fillintheblank:: assess_ch6_13
+    :casei:
+
+    Given that same code/image from the previous question, what operator should be used so the code works as intended?
+
+    -   :>=:      Correct! You are legal in Manitoba if your age is greater than OR equal to 18
+        :.*:      Hmmm try again, you may want to review the different types of boolean operators
+
+
+.. fillintheblank:: assess_ch6_14_lh
+    :casei:
+
+    .. image:: Figures/cdq6-3.png
+
+    Given num = 49 on line 3, what value of i will cause line 14 to run?
+
+    -   :seven|7: Correct! When i = 7, (num % i) will equal 0
+        :.*:      Hmmm try again, what causes the conditional on line 12 to be true?
+        
