@@ -101,7 +101,7 @@ Chapter 2 Assessment
     def square(num):
         return num**2
 
-.. fillintheblank:: assess_ch2_5
+.. fillintheblank:: assess_ch2_5_lh
 
     .. image:: Figures/cdq2-1.png
         :width: 900
@@ -113,7 +113,7 @@ Chapter 2 Assessment
    -    :a e f g h i:   Correct. You typically use whole numbers for ages after age 1.
         :.*:    There are 6 in total, can you find them all? Remember that variables are case sensitive.
 
-.. fillintheblank:: assess_ch2_6
+.. fillintheblank:: assess_ch2_6_lh
 
     .. image:: Figures/cdq2-2.png
         :width: 900
@@ -126,7 +126,7 @@ Chapter 2 Assessment
 
         :.*:     Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
 
-.. fillintheblank:: assess_ch2_7
+.. fillintheblank:: assess_ch2_7_lh
 
     .. image:: Figures/cdq2-3.png
         :width: 900
