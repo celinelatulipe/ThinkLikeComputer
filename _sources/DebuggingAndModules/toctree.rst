@@ -21,6 +21,6 @@ Debugging and Modules
    WPCommonTurtleErrors.rst
    EthicsDefaultVariableValues.rst
    Glossary.rst
-   Week2Assessment.rst
+   week2Assessment.rst
 ..   Exercises.rst
    
