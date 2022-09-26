@@ -15,7 +15,7 @@ Chapter 2 Assessment
 **Check your understanding**
 
 .. activecode:: assess_ch2_1
-    :include: assess_addl_functions
+    :include: assess_Ch2_addl_functions
     :language: python
     :autograde: unittest
     :topics: SimplePythonData/FunctionCalls
@@ -105,7 +105,7 @@ Chapter 2 Assessment
 
     .. image:: Figures/cdq2-1.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    Which variables in the image above are assigned string values? List each *variable* in the box below, separated by a white space.
@@ -117,7 +117,7 @@ Chapter 2 Assessment
 
     .. image:: Figures/cdq2-2.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    Which line number(s) will print an integer as the result of the given operation? List each variable in the box below, separated by a white space.
@@ -130,7 +130,7 @@ Chapter 2 Assessment
 
     .. image:: Figures/cdq2-3.png
         :width: 900
-        :align: center 
+        :align: center
         :alt: image of numerous variables being declared and assigned values
 
    The image above shows a program that just completed executing (we know this because the green arrow is on the last line and there is no red arrow in the image). At the end of the program, which variables changed from their original value during the program's execution? List each *variable* in the box below, separated by a white space.
