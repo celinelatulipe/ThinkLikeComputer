@@ -120,11 +120,10 @@ Chapter 2 Assessment
         :align: center
         :alt: image of numerous variables being declared and assigned values
 
-   Which line number(s) will print an integer as the result of the given operation? List each variable in the box below, separated by a white space.
+   Which line number(s) will print an integer as the result of the given operation? List each line number in the box below, separated by a COMMA.
 
-   -    :3 6:      Correct! All the others either use floats or integers with the '/' operation which always returns a float.
-
-        :.*:     Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
+   -    :3,6:   Correct! All the others either use floats or integers with the '/' operation which always returns a float.
+        :.*:    Not quite. Try it out yourself to check your understanding of '/' and '//'. Make sure you format your answer as numbers separated by spaces as well.
 
 .. fillintheblank:: assess_ch2_7_lh
 
