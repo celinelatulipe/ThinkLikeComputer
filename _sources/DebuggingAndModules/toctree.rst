@@ -23,4 +23,3 @@ Debugging and Modules
    Glossary.rst
    week2Assessment.rst
 ..   Exercises.rst
-   

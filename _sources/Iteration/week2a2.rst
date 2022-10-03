@@ -13,7 +13,7 @@ Chapter Assessment
 
 **Check your understanding**
 
-.. activecode:: assess_4_17_01
+.. activecode:: assess_ch4_1
     :language: python
     :autograde: unittest
     :practice: T
@@ -36,7 +36,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_02
+.. activecode:: assess_ch4_2
     :language: python
     :autograde: unittest
     :practice: T
@@ -61,7 +61,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_03
+.. activecode:: assess_ch4_3
     :language: python
     :autograde: unittest
     :practice: T
@@ -83,7 +83,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. activecode:: assess_4_17_04
+.. activecode:: assess_ch4_4
     :language: python
     :autograde: unittest
 
@@ -94,7 +94,7 @@ Chapter Assessment
 
 
 
-.. activecode:: assess_4_17_05
+.. activecode:: assess_ch4_5
     :language: python
     :autograde: unittest
     :practice: T
@@ -116,7 +116,7 @@ Chapter Assessment
            self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
 
     myTests().main()
-.. the following two activities use .split, so they can be moved to chapter 10 
+.. the following two activities use .split, so they can be moved to chapter 10
 .. .. activecode:: assess_ps_02_07
     :language: python
     :autograde: unittest
@@ -143,7 +143,7 @@ Chapter Assessment
     myTests().main()
 
 
-.. .. activecode:: assess_ps_02_08
+.. .. activecode:: assess_ch4_6
     :language: python
     :autograde: unittest
     :practice: T
@@ -168,7 +168,7 @@ Chapter Assessment
 
     myTests().main()
 
-.. activecode:: assess_4_17_09
+.. activecode:: assess_ch4_7
    :language: python
    :autograde: unittest
    :practice: T
@@ -187,3 +187,52 @@ Chapter Assessment
          self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
 
    myTests().main()
+
+.. fillintheblank:: assess_ch4_8_lh
+
+     .. image:: Figures/cdq4-1.png
+         :width: 900
+         :align: center
+         :alt: image of numerous variables being declared and assigned values
+
+    The range function shown returns a |blank| of numbers starting at |blank| and ending at |blank|.
+
+    -    :list|sequence|range:   Correct. This is a range of numbers
+         :.*:    Hmmm what does range() return? Go back and look!
+    -    :0|zero:   Correct. Computer Scientists always start at 0
+         :.*:    Try to think about what number computer scientists always start counting at
+    -    :9|nine:   Correct. Range are inclusive on the starting the number but exclusive on the ending number
+         :.*:    Remember, ranges are exclusive on the ending number
+
+.. mchoice:: assess_ch4_9_lh
+    :answer_a: for
+    :answer_b: in
+    :answer_c: range
+    :answer_d: len
+    :answer_e: i
+    :correct: a,b
+    :feedback_a: Correct, we cannot have a for loop without for
+    :feedback_b: Correct, we must be going through some kind of sequence (FOR each item IN...)
+    :feedback_c: We don't need to use range(), there are other types of sequences to iterate over
+    :feedback_d: len() helps us determine the length or size of something, not necessarily for loops
+    :feedback_e: We need a variable to iterate over but it doesn't have to be *i*
+
+    .. image:: Figures/cdq4-2.png
+      :width: 900
+      :align: center
+      :alt: image of numerous variables being declared and assigned values
+
+    Which of the following keywords are **required** when writing *for loops*?
+
+.. fillintheblank:: assess_ch4_10_lh
+
+  .. image:: Figures/cdq4-3.png
+    :width: 900
+    :align: center
+    :alt: image of numerous variables being declared and assigned values
+
+  Given the following CodeLens image, what is the next value of j?
+  |blank|
+
+  -    :h:   Correct. The outer loop starts over and the inner loops begins at the first letter in "hello"
+       :.*:    Hmmm not quite, this one is tricky. The next line to execute will be the top of the inner for loop, but then what?
