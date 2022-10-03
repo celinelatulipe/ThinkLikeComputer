@@ -188,41 +188,41 @@ Chapter Assessment
 
    myTests().main()
 
-.. fillintheblank:: assess_ch4_8_lh
+.. mchoice:: assess_ch4_8_lh
+   :answer_a: 0 is printed
+   :answer_b: 1 is printed
+   :answer_c: The variable i checks for the end of the loop
+   :answer_d: An error is thrown
+   :correct: c
+   :feedback_a: Not quite, as shown, 0 has already printed
+   :feedback_b: Not quite, The next line to execute is at the top of the for loop, not the print
+   :feedback_c: Correct! The code needs to check the list and see if there is anything left to do (line 1). Once it realizes it still has numbers to process, the loop continues.
+   :feedback_d: Not quite, this code runs properly, try it yourself.
 
-     .. image:: Figures/cdq4-1.png
-         :width: 900
-         :align: center
-         :alt: image of numerous variables being declared and assigned values
+    .. image:: Figures/cdq4-1.png
+      :width: 900
+      :align: center
+      :alt: image of numerous variables being declared and assigned values
 
-    The range function shown returns a |blank| of numbers starting at |blank| and ending at |blank|.
-
-    -    :list|sequence|range:   Correct. This is a range of numbers
-         :.*:    Hmmm what does range() return? Go back and look!
-    -    :0|zero:   Correct. Computer Scientists always start at 0
-         :.*:    Try to think about what number computer scientists always start counting at
-    -    :9|nine:   Correct. Range are inclusive on the starting the number but exclusive on the ending number
-         :.*:    Remember, ranges are exclusive on the ending number
+    Given the following output, frame, and arrow indicators, what happens in the next step?
 
 .. mchoice:: assess_ch4_9_lh
-    :answer_a: for
-    :answer_b: in
-    :answer_c: range
-    :answer_d: len
-    :answer_e: i
-    :correct: a,b
-    :feedback_a: Correct, we cannot have a for loop without for
-    :feedback_b: Correct, we must be going through some kind of sequence (FOR each item IN...)
-    :feedback_c: We don't need to use range(), there are other types of sequences to iterate over
-    :feedback_d: len() helps us determine the length or size of something, not necessarily for loops
-    :feedback_e: We need a variable to iterate over but it doesn't have to be *i*
+    :answer_a: Because 'o' gets printed twice
+    :answer_b: Because the loop starts again
+    :answer_c: Because the code is checking for another iteration
+    :answer_d: Because there is an error in the code
+    :correct: c
+    :feedback_a: Not quite, there is no reason for 'o' to print again
+    :feedback_b: Not quite, once a loop finishes running in its entirety, it can't hop back up to run again
+    :feedback_c: Correct! The code needs to check in the list and see if there is anything left to do (line 6). Once it realizes there isn't, the code block completes
+    :feedback_d: Not quite, this code runs properly, try it yourself.
 
     .. image:: Figures/cdq4-2.png
       :width: 900
       :align: center
       :alt: image of numerous variables being declared and assigned values
 
-    Which of the following keywords are **required** when writing *for loops*?
+    The red arrow is still pointing to line 6 but we can see in the global frame that j is 'o'. Why is the next line to execute line 6?
 
 .. fillintheblank:: assess_ch4_10_lh
 
@@ -231,8 +231,8 @@ Chapter Assessment
     :align: center
     :alt: image of numerous variables being declared and assigned values
 
-  Given the following CodeLens image, what is the next value of j?
+  The next line to execute is shown with the red arrow (line 4). What line of code will execute next?
   |blank|
 
-  -    :h:   Correct. The outer loop starts over and the inner loops begins at the first letter in "hello"
-       :.*:    Hmmm not quite, this one is tricky. The next line to execute will be the top of the inner for loop, but then what?
+  -    :6:   Correct. The code goes to line 4 and realizes it's done looping over j so it then jumps down to the next line (6).
+       :.*:    Hmmm not quite, this one is tricky. The next line to execute will be the top of the inner for loop, but then what? What letter just printed?
