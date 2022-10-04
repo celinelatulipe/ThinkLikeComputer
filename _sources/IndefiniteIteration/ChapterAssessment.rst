@@ -144,7 +144,7 @@ Chapter Assessment
 
     .. image:: Figures/Chapter_10_1.PNG
         :width: 900
-        :allign: center
+        :align: center
         :alt: Adding to a list of odd number from 1 to 19
 
     Consider the above screenshot of CodeLens animation. what line number has the while loops exit condition? |blank|
@@ -159,7 +159,7 @@ Chapter Assessment
 
     .. image:: Figures/Chapter_10_2.PNG
         :width: 900
-        :allign: center
+        :align: center
         :alt: While loop incrementing a score
 
     The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? |blank|
@@ -183,7 +183,7 @@ Chapter Assessment
 
     .. image:: Figures/Chapter_10_3.PNG
         :width: 900
-        :allign: center
+        :align: center
         :alt: Sum of the first 10 odd numbers
 
     Which of the following are true when considering the above program?
