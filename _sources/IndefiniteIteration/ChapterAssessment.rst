@@ -139,3 +139,51 @@ Chapter Assessment
           self.assertEqual(beginning(['hello', 'hi', 'hiyah', 'howdy', 'what up', 'whats good', 'holla', 'good afternoon', 'good morning', 'sup', 'see yah', 'toodel loo', 'night', 'until later', 'peace', 'bye', 'good-bye', 'g night']),['hello', 'hi', 'hiyah', 'howdy', 'what up', 'whats good', 'holla', 'good afternoon', 'good morning', 'sup'] , "Testing that beginning returns the correct list on input ['hello', 'hi', 'hiyah', 'howdy', 'what up', 'whats good', 'holla', 'good afternoon', 'good morning', 'sup', 'see yah', 'toodel loo', 'night', 'until later', 'peace', 'bye', 'good-bye', 'g night']")
 
     myTests().main()
+
+.. fillintheblank:: assess_ch10_7_lh
+
+    .. image:: Figures/Chapter_10_1.PNG
+        :width: 900
+        :allign: center
+        :alt: Adding to a list of odd number from 1 to 19
+
+    Consider the above screenshot of CodeLens animation. what line number has the while loops exit condition? |blank|
+    How many more times will the exit condition be checked? |blank|
+
+    -   :3: Correct.
+        :.*: Incorrect. The exit condition is the condition we check to see if the code inside the loop will run.
+    -   :8: Correct.
+        :.*: Incorrect. Pay close attention to the screenshot. What is the current value of odd_num and what line will be executed next in the code?
+
+.. fillintheblank:: assess_ch10_8_lh
+
+    .. image:: Figures/Chapter_10_2.PNG
+        :width: 900
+        :allign: center
+        :alt: While loop incrementing a score
+
+    The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? |blank|
+
+    -   :55: Correct.
+        :.*: Incorrect. score currently equals 50. Pay close attention to the red arrow (the line that will execute next), and the line directly after.
+
+.. mchoice:: assess_ch10_9_lh
+    :multiple_answers:
+    :answer_a: The 'continue' is irrelevant to the codes execution.
+    :answer_b: The while loop can be converted into a for loop.
+    :answer_c: The loop is infinite.
+    :answer_d: The variable odd will equal 21 at the end of the loop.
+    :answer_e: The variable odd_sum will equal 21 at the end of the loop.
+    :correct: a b d
+    :feedback_a: Correct, having 'continue' at the end of a while loop does nothing, either way the program is going back to the check the loop condition.
+    :feedback_b: Correct, we know exactly how many times we want this loop to run, therefore we can easily convert it to a for loop.
+    :feedback_c: Incorrect, this loop runs a finite amount of times.
+    :feedback_d: Correct, when odd is 19 the loop still runs, however once odd equals 21, the loop condition fails
+    :feedback_e: Incorrect, take another look at the variable we are asking about...
+
+    .. image:: Figures/Chapter_10_3.PNG
+        :width: 900
+        :allign: center
+        :alt: Sum of the first 10 odd numbers
+
+    Which of the following are true when considering the above program?
