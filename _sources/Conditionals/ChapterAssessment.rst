@@ -265,7 +265,7 @@ Chapter Assessment
 
 
 .. clickablearea:: assess_ch6_11_lh
-    :question: The following truth table should represent `A and B`. Click on the INCORRECT "A and B" values
+    :question: The truth table below is supposed to represent “A and B”, but it has some incorrect values in the third column. Look at the code in CodeLens above to see how Python evaluates “and” operators. Click on the INCORRECT "A and B" values.
     :table:
     :correct: 2,3;3,3;
     :incorrect: 4,3;5,3
@@ -284,8 +284,11 @@ Chapter Assessment
     | False |  True   | False   |
     +-------+---------+---------+
 
+
+.. image:: Figures/cdq6-2.png
+
 .. clickablearea:: assess_ch6_12_lh
-    :question: This code/image below has a semantic error. Without changing the values of the variables, select the portion of the code that needs to change.
+    :question: This code has a semantic error. Notice in the CodeLens image above that the output states the user is underage. Without changing the values of the variables, select the portion of the code that needs to change.
     :feedback: Consider the different boolean logic operators and what each means
     :iscode:
 
@@ -298,7 +301,6 @@ Chapter Assessment
     :click-incorrect:else::endclick:
         :click-incorrect:print("You are underage in Manitoba"):endclick:
 
-.. image:: Figures/cdq6-2.png
 
 .. fillintheblank:: assess_ch6_13
     :casei:
@@ -314,7 +316,7 @@ Chapter Assessment
 
     .. image:: Figures/cdq6-3.png
 
-    Given num = 49 on line 3, what value of i will cause line 14 to run?
+    Given num = 49 on line 3, what value of i will cause line 14 to run? Hint: Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. Notice that in order to reach line 14, line 12 must evaluate to true. Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.
 
     -   :seven|7: Correct! When i = 7, (num % i) will equal 0
         :.*:      Hmmm try again, what causes the conditional on line 12 to be true?
