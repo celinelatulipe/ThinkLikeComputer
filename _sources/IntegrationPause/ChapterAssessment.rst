@@ -22,3 +22,24 @@ Integration Practice
       :width: 400
       :align: center
       :alt: if statement code
+      
+.. mchoice:: assess_ch7_2_lh
+   :answer_a: i
+   :answer_b: ii
+   :answer_c: iii
+   :correct: a
+   :feedback_a: Correct!
+   :feedback_b: Not quite, walk through the code line by line and see what it would produce
+   :feedback_c: Not quite, walk through the code line by line
+
+    .. image:: Figures/cdq7-2.png
+      :width: 400
+      :align: center
+      :alt: if statement code
+
+    Which code snippet would result in the given CodeLens screenshot of the Global frame?
+
+    .. image:: Figures/cdq7-2-mc.png
+      :width: 400
+      :align: center
+      :alt: if statement code
