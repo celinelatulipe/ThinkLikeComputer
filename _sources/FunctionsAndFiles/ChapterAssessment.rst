@@ -289,7 +289,7 @@ Chapter Assessment
 
 .. clickablearea:: assess_ch5_12_lh
     :question: Given the image below, select the lines of code that call a function.
-    :feedback: Remember, the () indicate a function (even if there is something between them)    
+    :feedback: Remember, the () indicate a function (even if there is something between them) and that lines that start with def are DEFINING a function, not calling one.    
     :iscode:
 
     :click-incorrect:import pickle as p:endclick:
@@ -306,6 +306,5 @@ Chapter Assessment
 
     :click-correct:say_hello():endclick:
     :click-incorrect:type_y =:endclick: :click-incorrect:"say_hello()":endclick:
-    :click-incorrect:type_h =:endclick: :click-correct:type(say_hello()):endclick:
 
 .. image:: Figures/cdq5-3.png
