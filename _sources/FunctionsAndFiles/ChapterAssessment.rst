@@ -260,12 +260,12 @@ Chapter Assessment
         :align: center
         :alt: image of numerous variables being declared and assigned values
 
-    The hello function is a(n) |blank|, while var_x is a(n) |blank|.
+    The hello function is in the |blank| scope, while var_x is in the |blank| scope.
 
-    -   :object:      Correct! The arrow tells us that functions are objects because we need to reference them in memory.
-        :.*:          Hmmm try again, what does that arrow mean?
-    -   :variable:    Correct! Variable values are stored directly in the variables themselves so they have no reference arrow
-        :.*:           Hmmm try again, var_x doesn't have an arrow and that value is stored directly in the...?
+    -   :global:      Correct! This function is in the global scope and avalaible for use everywhere.
+        :.*:          Hmmm try again, look at the image to see the different frames
+    -   :local:    Correct! Variables used in a local scope context are only available in that context
+        :.*:           Hmmm try again, look at the image to see the different frames?
 
 
 .. mchoice:: assess_ch5_11_lh
@@ -284,12 +284,12 @@ Chapter Assessment
 
    .. image:: Figures/cdq5-2.png
 
-   When this code finishes running, what will print? Select as many as apply.
+   What does the following code print? Be sure to examine the current state of the program what will happen on the next executable line. Select as many as apply.
 
 
 .. clickablearea:: assess_ch5_12_lh
     :question: Given the image below, select the lines of code that call a function.
-    :feedback: Remember, the () indicate a function (even if there is something between them)    
+    :feedback: Remember, the () indicate a function (even if there is something between them) and that lines that start with def are DEFINING a function, not calling one.    
     :iscode:
 
     :click-incorrect:import pickle as p:endclick:
@@ -306,6 +306,5 @@ Chapter Assessment
 
     :click-correct:say_hello():endclick:
     :click-incorrect:type_y =:endclick: :click-incorrect:"say_hello()":endclick:
-    :click-incorrect:type_h =:endclick: :click-correct:type(say_hello()):endclick:
 
 .. image:: Figures/cdq5-3.png

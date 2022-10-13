@@ -10,7 +10,7 @@ Integration Pause
    CombiningIterationAndConditionals.rst
    CombiningConditionalsAndFunctions.rst
    CombiningIterationConditionalsAndFunctions.rst
+   ChapterAssessment.rst
 ..   Glossary.rst
 ..   Exercises.rst
 ..   ChapterAssessment.rst
-   
