@@ -19,7 +19,7 @@ Level 1
 
 The following function is missing a docstring with pre and post conditions. The objective of this level is to add the missing docstring.
 
-#1. Add the missing docstring. You are to find out what is needed for the function to run (aka pre-conditions) and what the output will be/how the program will be altered by running the function (aka post-conditions). You do not need to add or delete any code in this level, only add the docstring.  
+1. Add the missing docstring. You are to find out what is needed for the function to run (aka pre-conditions) and what the output will be/how the program will be altered by running the function (aka post-conditions). You do not need to add or delete any code in this level, only add the docstring.  
     
 
 .. tip::
@@ -105,7 +105,7 @@ Below is a clip of how your program should work.
 Level 3
 -------
 
-This level is similar to Level 2, except instead of getting random coordinates in response to key presses, you will You will read a file containing turtle coordinates and then send a turtle around the window using those specific coordinates.
+This level is similar to Level 2, except instead of getting random coordinates in response to key presses, you will read a file containing turtle coordinates and then send a turtle around the window using those specific coordinates.
 
 .. tip::
    Take a look at how the file is formatted before you start to code. The coordinate file is shown at the bottom of this page. 
