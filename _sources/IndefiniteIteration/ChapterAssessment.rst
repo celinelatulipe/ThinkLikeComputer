@@ -13,7 +13,7 @@ Chapter Assessment
 .. activecode:: ac10_8_1
     :practice: T
     :topics: MoreAboutIteration/listenerLoop
-    
+
     Write a function, ``sublist``, that takes in a list of numbers as the parameter. In the function, use a while loop to return a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the number 5 (it should not contain the number 5).
     ~~~~
 
@@ -147,7 +147,7 @@ Chapter Assessment
         :align: center
         :alt: Adding to a list of odd number from 1 to 19
 
-    Consider the above screenshot of CodeLens animation. what line number has the while loops exit condition? |blank|
+    Consider the above screenshot of CodeLens animation. what line number has the exit condition for the while loop? |blank|
     How many more times will the exit condition be checked? |blank|
 
     -   :3: Correct.
