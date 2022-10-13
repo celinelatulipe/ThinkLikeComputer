@@ -68,15 +68,14 @@ Level 2
 
 In this level you will create a turtle function that will draw a random line in the window when a key is pressed.
 
-#. The starter code below imports modules and creates a window and a turtle.
-#. Create two global variables to store random x and y coordinates, assign both the value 0 for now. 
-#. Create a function called ``goto_random()``. Inside this function, assign the two global variables random values that range from -200 to 200 (these are left/bottom and right/top window edges). Use the randrange() function to get random numbers. Note that you will need to use the global keyword (followed by the names of the two variables) inside this function so that you can actually assign the variables values.
+#. The starter code below imports modules and creates a window and a turtle. 
+#. Create a function called ``goto_random()``. Inside this function, create two variables to store random x and y coordinates. Assign these variables random values that range from -200 to 200 (these are left/bottom and right/top window edges). Use the randrange() function to get random numbers.
 #. Add a goto() statement that will send the turtle kyra to a random spot in the window, using the variables from the previous step.
-#. Create another function called ``reset()``. This function should return the turtle to the center of the window and clear all the pen lines that the turtle has drawn. 
-#. At the bottom of the program, register the two functions so that they respond to the correct user key presses. The reset() function should be called when the r key is pressed and the goto_random() function should be called when the f key is pressed. 
-#. Call the reset() function near the bottom of the program. This ensures that the turtle window shows up, because a turtle command is acutally called.
+#. Create another function called ``reset()``. This function should return the turtle to the center of the window and clear all the pen lines that the turtle has drawn.
+#. At the bottom of the program, call the reset function. This ensures the turtle window pops up, since a turtle command is called.
+#. Under the reset function call, register the two functions so that they respond to the correct user key presses. The reset() function should be called when the r key is pressed and the goto_random() function should be called when the f key is pressed. 
 #. Finally, add the wn.listen() command at the end. This must be the last line.
-#. Test to make sure this works. Click in the window, then hit the 'g' key a few times to make sure the turtle moves around. Then hit the 'h' key to ensure the turtle returns to the center and all the lines disappear. 
+#. Test to make sure this works. Click in the window, then hit the 'f' key a few times to make sure the turtle moves around. Then hit the 'r' key to ensure the turtle returns to the center and all the lines disappear. 
    
 .. tip:: 
    
@@ -91,7 +90,7 @@ In this level you will create a turtle function that will draw a random line in 
     # Lab 5, Level 2
     ################################################################
 
-    import turtle #iddmports the turtle library
+    import turtle #imports the turtle library
     import random #imports the random library
 
     wn = turtle.Screen() #creates a graphic window
