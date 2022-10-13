@@ -22,7 +22,7 @@ Integration Practice
       :width: 400
       :align: center
       :alt: if statement code
-      
+
 .. mchoice:: assess_ch7_2_lh
    :answer_a: i
    :answer_b: ii
@@ -43,3 +43,16 @@ Integration Practice
       :width: 400
       :align: center
       :alt: if statement code
+
+.. fillintheblank:: assess_ch7_3_lh
+   :casei:
+
+   .. image:: Figures/cdq7-3.png
+    :width: 900
+    :align: center
+    :alt: code to run
+
+  Using the image of the CodeLens program above, what will the program output to the console?
+
+  -   :21: Correct! Great job understanding the code
+      :.*: Incorrect. What is stored in costs? What does the for loop do?
