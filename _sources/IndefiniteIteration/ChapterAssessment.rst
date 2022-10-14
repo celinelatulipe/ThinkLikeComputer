@@ -147,7 +147,7 @@ Chapter Assessment
         :align: center
         :alt: Adding to a list of odd number from 1 to 19
 
-    Consider the above screenshot of CodeLens animation. what line number has the exit condition for the while loop? |blank|
+    Consider the above screenshot of CodeLens animation. What line number has the exit condition for the while loop? |blank|
     How many more times will the exit condition be checked? |blank|
 
     -   :3: Correct.
@@ -169,21 +169,21 @@ Chapter Assessment
 
 .. mchoice:: assess_ch10_9_lh
     :multiple_answers:
-    :answer_a: The 'continue' is irrelevant to the codes execution.
-    :answer_b: The while loop can be converted into a for loop.
-    :answer_c: The loop is infinite.
-    :answer_d: The variable odd will equal 21 at the end of the loop.
-    :answer_e: The variable odd_sum will equal 21 at the end of the loop.
+    :answer_a: The loop exits and number_sum is printed
+    :answer_b: number_sum is now equal to 36
+    :answer_c: The loop continues to execute
+    :answer_d: num is now equal to 0
+    :answer_e: The variable exit remains 1
     :correct: a b d
-    :feedback_a: Correct, having 'continue' at the end of a while loop does nothing, either way the program is going back to the check the loop condition.
-    :feedback_b: Correct, we know exactly how many times we want this loop to run, therefore we can easily convert it to a for loop.
-    :feedback_c: Incorrect, this loop runs a finite amount of times.
-    :feedback_d: Correct, when odd is 19 the loop still runs, however once odd equals 21, the loop condition fails
-    :feedback_e: Incorrect, take another look at the variable we are asking about...
+    :feedback_a: Incorrect, take another look at our exit condition and the variable that the user is changing
+    :feedback_b: Incorrect, number_sum is currently equal to 29 and the next number added will be 0
+    :feedback_c: Correct, this is an infinte loop since we never alter the variable exit's value
+    :feedback_d: Correct, the user has entered 0, overwriting nums previous value of 7
+    :feedback_e: Correct, we did not edit exit's value
 
     .. image:: Figures/Chapter_10_3.PNG
         :width: 900
         :align: center
-        :alt: Sum of the first 10 odd numbers
+        :alt: Infinte loop
 
-    Which of the following are true when considering the above program?
+    The above screenshot is in mid execution. Assuming the user enters 0 next, select all that are true. 
