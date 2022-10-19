@@ -56,10 +56,9 @@ Level 2
 
 In this level, you need to sort grades into categories of A, B, C, D and F. The grades need to be separated as follows: A >= 90, 90 > B >= 75, 75 > C >= 60, 60 > D >= 50, 50 > F
 
-#. Start by importing the random module at the top of your code
 #. Create a for loop that will iterate 50 times.
 #. In the for loop, create a variable that will be set to a random value from 0 to 100.
-#. Inside the for loop write code that will appropriately determine the letter grade that goes with the random numeric grade. You will want to use a chained conditional (if-elif-elif) type of structure to check for the different grade levels.
+#. Inside the for loop write code that will appropriately determine the letter grade that goes with the random numeric grade. You will want to use a chained conditional (if-elif-elif) type of structure to check for the different grade levels. For each level, print out the numeric and associated letter grade. 
 
 The end result should look something like this (this is shortened example):   
 
@@ -70,7 +69,7 @@ The end result should look something like this (this is shortened example):
 
 .. tip:: 
    
-   Reference the textbook Section 6.9 on chained conditionals if you don't remember the syntas.
+   Reference the textbook Section 6.9 on chained conditionals if you don't remember the syntax.
 
 .. activecode:: lab6_level2
     
@@ -79,6 +78,8 @@ The end result should look something like this (this is shortened example):
     # Date
     # Lab 6, Level 2
     ################################################################
+    
+    import random
 
 
 
@@ -86,13 +87,13 @@ The end result should look something like this (this is shortened example):
 Level 3
 -------
 
-In this level you will create a game of chance, similar to the card game war. Two players will have a random number generated between 0 and 52, the player with the higher number will win the point. In the case of a tie, no point is awarded. 20 rounds will be played, after which the winner will be displayed.
+In this level you will create a game of chance, similar to the card game war. Two players will have a random number generated between 0 and 52, the player with the higher number will win the point. In the case of a tie, no point is awarded. 26 rounds will be played, after which the winner will be displayed.
 
-#. Start off by importing the random module into your program and creating two variables to hold the points, one for player 1 and one for player 2. Initialize these variables to 0.
-#. Create a for loop that will iterate 20 times. 
-#. Inside the loop, create two more variables (one for player 1's card and one for player 2's card) and assign them random values between 0 and 53, using the randrange function. 
-#. Create a chained conditional statement that responds to three possible states for this card round: if player 1's card was higher, if player 2's card was higher or if it was a tie. Inside each branch of this chained conditional there should be a print statement printing out both card values and who got the point (see sample screenshot at the bottom of the level)
-#. After the for loop, we want to check to see who won the game. Similar to step 3, we need a chained conditional statement to check player 1 has the most points, layer 2 has the most points or if it is a tie. Inside each branch of the chained conditional there should be a print statement printing out the winner and their final score (see sample photo at the bottom of the level)
+#. Start off by creating two variables to hold points, one for player 1 and one for player 2. Initialize these variables to 0.
+#. Create a for loop that will iterate for 26 rounds - note that we have created a constant for this, which you should use. Because you will want to report the round # later, use an iterator variable with a name that makes sense. 
+#. Inside this loop, create two more variables (one for player 1's card and one for player 2's card) and assign them random values ranging from 0 to 51, using the randrange function. This represents the 52 cards in a standard deck of cards.
+#. Still inside the loop, create a chained conditional statement that responds to three possible states for this card round: if player 1's card was higher, if player 2's card was higher, or if it was a tie. Inside each branch of this chained conditional there should be a print statement printing out both card values and who got the point (see sample screenshot at the bottom of the level). Inside each branch, you also need to assign points to the winner of each round by incrementing player1's points, or player2's points. In the case of a tie, they should both get a point. 
+#. *After* the for loop, we want to check to see who won the game. Similar to step 4, we need a chained conditional statement to check if player 1 has the most points, or if player 2 has the most points, or if it is a tie. Inside each branch of this chained conditional there should be a print statement printing out the winner and their final score (see sample photo at the bottom of the level)
 
 An output example can be seen below (this is a shortened example)
 
@@ -109,12 +110,15 @@ An output example can be seen below (this is a shortened example)
     # Date
     # Lab 6, Level 3
     ################################################################
+    import random
+
+    ROUNDS = 26
 
     
 Bonus: Organizing output is just as important as organizing code! Add round numbers before each round, a blank line after each round and indent the print statements for each round. (See sample output below)
 
 .. tip::
-  Some useful characters for this bonus are '\n' and '\t'
+  Some useful characters for this bonus are: \\n and \\t, which are escape sequences that give you a newline or a tab.
 
 .. image:: Figures/card_rounds_formatted.png
    :width: 300
