@@ -87,12 +87,13 @@ The end result should look something like this (this is shortened example):
 Level 3
 -------
 
-In this level you will create a game of chance, similar to the card game war. Two players will have a random number generated between 0 and 52, the player with the higher number will win the point. In the case of a tie, no point is awarded. 26 rounds will be played, after which the winner will be displayed.
+In this level you will create a game of chance, similar to the card game war. Two players will have a random number generated from 1 to 52 (inclusive), the player with the higher number will win the point. In the case of a tie, a point is awarded to both players. 26 rounds will be played, after which the winner will be displayed.
 
 #. Start off by creating two variables to hold points, one for player 1 and one for player 2. Initialize these variables to 0.
-#. Create a for loop that will iterate for 26 rounds - note that we have created a constant for this, which you should use. Because you will want to report the round # later, use an iterator variable with a name that makes sense. 
-#. Inside this loop, create two more variables (one for player 1's card and one for player 2's card) and assign them random values ranging from 0 to 51, using the randrange function. This represents the 52 cards in a standard deck of cards.
-#. Still inside the loop, create a chained conditional statement that responds to three possible states for this card round: if player 1's card was higher, if player 2's card was higher, or if it was a tie. Inside each branch of this chained conditional there should be a print statement printing out both card values and who got the point (see sample screenshot at the bottom of the level). Inside each branch, you also need to assign points to the winner of each round by incrementing player1's points, or player2's points. In the case of a tie, they should both get a point. 
+#. Create a for loop that will iterate for 26 rounds - note that we have created a constant for this, which you should use. 
+#. Inside this loop, create two more variables (one for player 1's card and one for player 2's card) and assign them random values ranging from 1 to 52 (inclusive), using the randrange function. This represents the 52 cards in a standard deck of cards.
+#. Add a print statement that spritns out both players cards (see the samepl output below).
+#. Still inside the loop, create a chained conditional statement that responds to three possible states for this card round: if player 1's card was higher, if player 2's card was higher, or if it was a tie. Inside each branch of this chained conditional there should be a print statement printing out who got the point (see sample screenshot at the bottom of the level). Inside each branch, you also need to assign points to the winner of each round by incrementing player1's points, or player2's points. In the case of a tie, they should both get a point. 
 #. *After* the for loop, we want to check to see who won the game. Similar to step 4, we need a chained conditional statement to check if player 1 has the most points, or if player 2 has the most points, or if it is a tie. Inside each branch of this chained conditional there should be a print statement printing out the winner and their final score (see sample photo at the bottom of the level)
 
 An output example can be seen below (this is a shortened example)
