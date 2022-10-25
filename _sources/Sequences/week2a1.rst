@@ -349,10 +349,10 @@ Chapter Assessment
    We want to change this program so elments get added from one list to another element by element not char by char. What function would we use?|blank|
    What line should we use this function on? |blank|
 
-    -   :append(): Correct.
-        :.*: Write the function in the following format, function()
-    -   :7: Correct
-        :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
+   -  :append(): Correct.
+      :.*: Write the function in the following format, function()
+   -  :7: Correct
+      :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
 
 .. fillintheblank:: assess_ch9_16_lh
 
@@ -363,8 +363,8 @@ Chapter Assessment
 
    Consider the above Condelens screenshot. How many elements will the string moto be separated into on line 3? |blank|
    
-    -   :6: Correct.
-        :.*: Not quite. We are splitting by the commas, so count the elements between the commas
+   -   :6: Correct.
+       :.*: Not quite. We are splitting by the commas, so count the elements between the commas
 
 
 
