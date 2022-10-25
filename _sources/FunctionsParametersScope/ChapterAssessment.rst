@@ -108,10 +108,10 @@ Chapter Assessment
         :align: center
         :alt: Finding the maximum number
 
-   Given the following function with the class_grades list passed in, what will the return value be? |blank|
+   Looking at the following Codelens output, we have a function called maximum that is in the middle of executing. The purpose is to find the highest value in the list and return it. What will be the return value? |blank|
 
    -  :97: Correct.
-      :.*: Incorrect. Our function is looking for and returning the highest element in class_grades
+      :.*: Incorrect. Our function is looking for and returning the highest element in the class_grades list
 
 .. mchoice:: assess_ch8_2_lh
    :multiple_answers:
@@ -121,10 +121,10 @@ Chapter Assessment
    :answer_d: x_coord
    :answer_e: coord
    :correct: b c e
-   :feedback_a: Incorrect, as seen in the function we are accessing the global variable NUM_COORDS
+   :feedback_a: Incorrect, NUM_COORDS is under the global frame in the Codelens screenshot. Look at the generate_coords frame
    :feedback_b: Correct, we are using the local version of MAX declared inside the function
    :feedback_c: Correct, we are using the local version of MIN declared inside the function
-   :feedback_d: Incorrect, the x_coord append line is using a reference of the global list x_coord
+   :feedback_d: Incorrect, the x_coord append line is using a reference of the global frame list x_coord
    :feedback_e: Correct, the iterator variable is still a variable and in this case it is created locally inside the function
 
    .. image:: Figures/Chapter_8_2.PNG
@@ -132,21 +132,24 @@ Chapter Assessment
       :align: center
       :alt: local vs global variables
 
-   In the above screenshot, select all the variables that are local to the function generate_coords
+   Using the Codelens diagram screenshot, select all the variables that are local to the function generate_coords
 
 .. fillintheblank:: assess_ch8_3_lh
 
-   .. image:: Figures/Chapter_8_3.PNG
+   .. image:: Figures/Chapter_8_4.PNG
       :width: 1200
       :align: center
-      :alt: division function
+      :alt: average function
 
-   Consider the above program. Which variable will the parameter x point to? |blank|
-   Which variable will the parameter y point to? |blank|
+   .. image:: Figures?Chapter_8_4_A
+      :width: 900
+      :align: center
+      :alt: average function output
 
-   -  :combined_grades: Correct.
-      :.*: Incorrect, x will point to the variable in the same parameter position when the function is called
-   - :students: Correct.
-      :.*: Incorrect, y will point to the variable in the same parameter position when the function is called 
+   Consider the above program. Which Codelens screenshot shows the correct program output? |blank|
+
+   -  :1: Correct.
+      :.*: Incorrect, take another look at the grades inside the list and the number of students
+   
       
 
