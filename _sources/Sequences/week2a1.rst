@@ -326,9 +326,9 @@ Chapter Assessment
     :answer_e: print(greeting2[1])
     :correct: a c e
     :feedback_a: Correct
-    :feedback_b: Incorrect, this print out the character 'B'
+    :feedback_b: Incorrect, this prints out the character 'B'
     :feedback_c: Correct
-    :feedback_d: Incorrect, this print out the character 'i'
+    :feedback_d: Incorrect, this prints out the character 'i'
     :feedback_e: Correct
 
     .. image:: Figures/Chapter_9_5.PNG
@@ -341,7 +341,7 @@ Chapter Assessment
 .. fillintheblank:: assess_ch9_15_lh
 
     .. image:: Figures/Chapter_9_2.PNG
-        :width: 900
+        :width: 1200
         :align: center
         :alt: adding elements to a list
 
@@ -350,7 +350,7 @@ Chapter Assessment
    What line should we use this function on? |blank|
 
    .. image:: Figures/Chapter_9_2B.PNG
-    :width: 900
+    :width: 800
     :align: center
     :alt: adding elements to a list output
 
@@ -366,7 +366,7 @@ Chapter Assessment
         :align: center
         :alt: splitting strings
 
-   Consider the above Condelens screenshot. How many elements will the string motto be separated into on line 3? |blank|
+   Consider the above Condelens screenshot. How many elements has the string been split into? |blank|
    
    -   :6: Correct.
        :.*: Not quite. We are splitting by the commas, so count the elements between the commas
