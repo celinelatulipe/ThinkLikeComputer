@@ -114,18 +114,18 @@ Chapter Assessment
       :.*: Incorrect. Our function is looking for and returning the highest element in class_grades
 
 .. mchoice:: assess_ch8_2_lh
-    :multiple_answers:
-    :answer_a: NUM_COORDS
-    :answer_b: MAX
-    :answer_c: MIN
-    :answer_d: x_coord
-    :answer_e: coord
-    :correct: b c e
-    :feedback_a: Incorrect, as seen in the function we are accessing the global variable NUM_COORDS
-    :feedback_b: Correct, we are using the local version of MAX declared inside the function
-    :feedback_c: Correct, we are using the local version of MIN declared inside the function
-    :feedback_d: Incorrect, the x_coord append line is using a reference of the global list x_coord
-    :feedback_e: Correct, the iterator variable is still a variable and in this case it is created locally inside the function
+   :multiple_answers:
+   :answer_a: NUM_COORDS
+   :answer_b: MAX
+   :answer_c: MIN
+   :answer_d: x_coord
+   :answer_e: coord
+   :correct: b c e
+   :feedback_a: Incorrect, as seen in the function we are accessing the global variable NUM_COORDS
+   :feedback_b: Correct, we are using the local version of MAX declared inside the function
+   :feedback_c: Correct, we are using the local version of MIN declared inside the function
+   :feedback_d: Incorrect, the x_coord append line is using a reference of the global list x_coord
+   :feedback_e: Correct, the iterator variable is still a variable and in this case it is created locally inside the function
 
    .. image:: Figures/Chapter_8_2.PNG
       :width: 900
