@@ -104,7 +104,7 @@ Chapter Assessment
 .. fillintheblank:: assess_ch8_1_lh
 
    .. image:: Figures/Chapter_8_1.PNG
-        :width: 900
+        :width: 1200
         :align: center
         :alt: Finding the maximum number
 
@@ -128,7 +128,7 @@ Chapter Assessment
    :feedback_e: Correct, the iterator variable is still a variable and in this case it is created locally inside the function
 
    .. image:: Figures/Chapter_8_2.PNG
-      :width: 900
+      :width: 1200
       :align: center
       :alt: local vs global variables
 
@@ -137,7 +137,7 @@ Chapter Assessment
 .. fillintheblank:: assess_ch8_3_lh
 
    .. image:: Figures/Chapter_8_3.PNG
-      :width: 900
+      :width: 1200
       :align: center
       :alt: division function
 

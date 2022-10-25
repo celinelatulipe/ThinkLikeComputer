@@ -318,18 +318,18 @@ Chapter Assessment
    myTests().main()
 
 .. mchoice:: assess_ch9_14_lh
-     :multiple_answers:
-     :answer_a: e
-     :answer_b: '\n'
-     :answer_c: Syntax error is thrown
-     :answer_d: Welcome to the game
-     :answer_e: Index out of bounds error is thrown
-     :correct: e
-     :feedback_a: Incorrect
-     :feedback_b: Incorrect
-     :feedback_c: Incorrect, an error is thrown but not a syntax error
-     :feedback_d: Incorrect
-     :feedback_e: Correct, we are trying to access an index that does not exist
+    :multiple_answers:
+    :answer_a: e
+    :answer_b: '\n'
+    :answer_c: Syntax error is thrown
+    :answer_d: Welcome to the game
+    :answer_e: Index out of bounds error is thrown
+    :correct: e
+    :feedback_a: Incorrect
+    :feedback_b: Incorrect
+    :feedback_c: Incorrect, an error is thrown but not a syntax error
+    :feedback_d: Incorrect
+    :feedback_e: Correct, we are trying to access an index that does not exist
 
     .. image:: Figures/Chapter_9_1.PNG
         :width: 900
