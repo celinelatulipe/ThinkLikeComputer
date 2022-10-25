@@ -48,7 +48,7 @@ Here is an example of this:
 .. activecode:: ac7_2_1
 
 
-    def cubeInput():
+    def cube_input():
         input_string = input("Enter a number:")
         input_num = int(input_string)
         cube = input_num**3
@@ -57,7 +57,7 @@ Here is an example of this:
     
     for index in range(5):
         print("Round #", index)
-        cubeInput()
+        cube_input()
         
 
     print("That's it. All done.")
@@ -198,7 +198,7 @@ The example above demonstrates the following:
 * using a random value to index into the list of stamp shapes
 * a different sequence from the prior example, here we move the turtle to the new location **then** change its shape and color
 
-** Check your understanding **
+**Check your understanding**
 
 .. mchoice:: question7_2_1
    :answer_a: None
