@@ -346,7 +346,7 @@ Chapter Assessment
         :alt: adding elements to a list
 
    The above program currently adds elements from one list to another char by char. 
-   We want to change this program so elments get added from one list to another element by element not char by char. What function would we use?|blank|
+   We want to change this program so elments get added from one list to another element by element not char by char. What function would we use? |blank|
    What line should we use this function on? |blank|
 
    -  :append(): Correct.
