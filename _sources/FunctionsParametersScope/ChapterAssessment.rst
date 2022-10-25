@@ -114,7 +114,7 @@ Chapter Assessment
       :.*: Incorrect. Our function is looking for and returning the highest element in class_grades
 
 .. mchoice:: assess_ch8_2_lh
-    :multiple answers:
+    :multiple_answers:
     :answer_a: NUM_COORDS
     :answer_b: MAX
     :answer_c: MIN

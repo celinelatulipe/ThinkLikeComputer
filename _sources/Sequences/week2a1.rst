@@ -318,6 +318,7 @@ Chapter Assessment
    myTests().main()
 
 .. mchoice:: assess_ch9_14_lh
+     :multiple_answers:
      :answer_a: e
      :answer_b: '\n'
      :answer_c: Syntax error is thrown
