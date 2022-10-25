@@ -141,12 +141,14 @@ Chapter Assessment
       :align: center
       :alt: average function
 
+   Consider the above program. Which Codelens screenshot shows the correct program output? |blank|
+
    .. image:: Figures/Chapter_8_4_A.PNG
       :width: 900
       :align: center
       :alt: average function output
 
-   Consider the above program. Which Codelens screenshot shows the correct program output? |blank|
+   
 
    -  :1: Correct.
       :.*: Incorrect, take another look at the grades inside the list and the number of students

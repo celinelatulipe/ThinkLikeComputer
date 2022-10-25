@@ -319,24 +319,24 @@ Chapter Assessment
 
 .. mchoice:: assess_ch9_14_lh
     :multiple_answers:
-    :answer_a: e
-    :answer_b: '\n'
-    :answer_c: Syntax error is thrown
-    :answer_d: Welcome to the game
-    :answer_e: Index out of bounds error is thrown
-    :correct: e
-    :feedback_a: Incorrect
-    :feedback_b: Incorrect
-    :feedback_c: Incorrect, an error is thrown but not a syntax error
-    :feedback_d: Incorrect
-    :feedback_e: Correct, we are trying to access an index that does not exist
+    :answer_a: print(greeting1[3])
+    :answer_b: print(greeting2[0])
+    :answer_c: print(greeting3[5])
+    :answer_d: print(greeting3[2])
+    :answer_e: print(greeting2[1])
+    :correct: a c e
+    :feedback_a: Correct
+    :feedback_b: Incorrect, this print out the character 'B'
+    :feedback_c: Correct
+    :feedback_d: Incorrect, this print out the character 'i'
+    :feedback_e: Correct
 
-    .. image:: Figures/Chapter_9_1.PNG
+    .. image:: Figures/Chapter_9_5.PNG
         :width: 900
         :align: center
         :alt: get the last letter of a string
 
-    In the above codelens screenshot, what is the return value of the function?
+    Which print statements would we use to acquire the output shown in the above Codelen screenshot?
 
 .. fillintheblank:: assess_ch9_15_lh
 
@@ -346,11 +346,16 @@ Chapter Assessment
         :alt: adding elements to a list
 
    The above program currently adds elements from one list to another char by char. 
-   We want to change this program so elements get added from one list to another element by element not char by char. What function would we use? |blank|
+   We want to change this program so our output matches the below Codelens screenshot. What function would we use to do this? |blank|
    What line should we use this function on? |blank|
 
+   .. image:: Figures/Chapter_9_2B.PNG
+    :width: 900
+    :align: center
+    :alt: adding elements to a list output
+
    -  :append(): Correct.
-      :.*: Write the function in the following format, function()
+      :.*: Write the function in the following format, function(). Hint: We want to add an elemt to a list.
    -  :7: Correct
       :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
 
@@ -361,7 +366,7 @@ Chapter Assessment
         :align: center
         :alt: splitting strings
 
-   Consider the above Condelens screenshot. How many elements will the string moto be separated into on line 3? |blank|
+   Consider the above Condelens screenshot. How many elements will the string motto be separated into on line 3? |blank|
    
    -   :6: Correct.
        :.*: Not quite. We are splitting by the commas, so count the elements between the commas
