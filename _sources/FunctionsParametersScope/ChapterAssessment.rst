@@ -100,3 +100,53 @@ Chapter Assessment
          self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
 
    myTests().main()
+
+.. fillintheblank:: assess_ch8_1_lh
+
+   .. image:: Figures/Chapter_8_1.PNG
+        :width: 900
+        :align: center
+        :alt: Finding the maximum number
+
+   Given the following function with the class_grades list passed in, what will the return value be? |blank|
+
+   -  :97: Correct.
+      :.*: Incorrect. Our function is looking for and returning the highest element in class_grades
+
+.. mchoice:: assess_ch8_2_lh
+    :multiple answers:
+    :answer_a: NUM_COORDS
+    :answer_b: MAX
+    :answer_c: MIN
+    :answer_d: x_coord
+    :answer_e: coord
+    :correct: b c e
+    :feedback_a: Incorrect, as seen in the function we are accessing the global variable NUM_COORDS
+    :feedback_b: Correct, we are using the local version of MAX declared inside the function
+    :feedback_c: Correct, we are using the local version of MIN declared inside the function
+    :feedback_d: Incorrect, the x_coord append line is using a reference of the global list x_coord
+    :feedback_e: Correct, the iterator variable is still a variable and in this case it is created locally inside the function
+
+   .. image:: Figures/Chapter_8_2.PNG
+      :width: 900
+      :align: center
+      :alt: local vs global variables
+
+   In the above screenshot, select all the variables that are local to the function generate_coords
+
+.. fillintheblank:: assess_ch8_3_lh
+
+   .. image:: Figures/Chapter_8_3.PNG
+      :width: 900
+      :align: center
+      :alt: division function
+
+   Consider the above program. Which variable will the parameter x point to? |blank|
+   Which variable will the parameter y point to? |blank|
+
+   -  :combined_grades: Correct.
+      :.*: Incorrect, x will point to the variable in the same parameter position when the function is called
+   - :students: Correct.
+      :.*: Incorrect, y will point to the variable in the same parameter position when the function is called 
+      
+

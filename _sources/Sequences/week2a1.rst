@@ -316,3 +316,54 @@ Chapter Assessment
 
 
    myTests().main()
+
+.. mchoice:: assess_ch9_14_lh
+     :answer_a: e
+     :answer_b: '\n'
+     :answer_c: Syntax error is thrown
+     :answer_d: Welcome to the game
+     :answer_e: Index out of bounds error is thrown
+     :correct: e
+     :feedback_a: Incorrect
+     :feedback_b: Incorrect
+     :feedback_c: Incorrect, an error is thrown but not a syntax error
+     :feedback_d: Incorrect
+     :feedback_e: Correct, we are trying to access an index that does not exist
+
+    .. image:: Figures/Chapter_9_1.PNG
+        :width: 900
+        :align: center
+        :alt: get the last letter of a string
+
+    In the above codelens screenshot, what is the return value of the function?
+
+.. fillintheblank:: assess_ch9_15_lh
+
+    .. image:: Figures/Chapter_9_2.PNG
+        :width: 900
+        :align: center
+        :alt: adding elements to a list
+
+   The above program currently adds elements from one list to another char by char. 
+   We want to change this program so elments get added from one list to another element by element not char by char. What function would we use?|blank|
+   What line should we use this function on? |blank|
+
+    -   :append(): Correct.
+        :.*: Write the function in the following format, function()
+    -   :7: Correct
+        :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
+
+.. fillintheblank:: assess_ch9_16_lh
+
+    .. image:: Figures/Chapter_9_4.PNG
+        :width: 900
+        :align: center
+        :alt: splitting strings
+
+   Consider the above Condelens screenshot. How many elements will the string moto be separated into on line 3? |blank|
+   
+    -   :6: Correct.
+        :.*: Not quite. We are splitting by the commas, so count the elements between the commas
+
+
+
