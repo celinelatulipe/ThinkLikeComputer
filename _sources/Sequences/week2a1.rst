@@ -336,7 +336,7 @@ Chapter Assessment
         :align: center
         :alt: get the last letter of a string
 
-    Which print statements would we use to acquire the output shown in the above Codelen screenshot?
+    The output above is created by 3 print() statements (one for each variable in ascendenging order ie. greeting1, greeting2, etc).Which print statements would we use to acquire this output?
 
 .. fillintheblank:: assess_ch9_15_lh
 
@@ -354,10 +354,10 @@ Chapter Assessment
     :align: center
     :alt: adding elements to a list output
 
-   -  :append(): Correct.
-      :.*: Write the function in the following format, function(). Hint: We want to add an elemt to a list.
+   -  :append\(\): Correct.
+      :.*: Write the function in the following format, function(). Hint: We want to add an element to a list, not concatenate one char at a time.
    -  :7: Correct
-      :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
+      :.*: Incorrect, look at the code. What line are we currently building our lectures variable on?
 
 .. fillintheblank:: assess_ch9_16_lh
 
@@ -366,10 +366,12 @@ Chapter Assessment
         :align: center
         :alt: splitting strings
 
-   Consider the above Condelens screenshot. How many elements has the string been split into? |blank|
-   
+   Consider the above Condelens screenshot. The program that created this output split the string into a list of tokens. The function split() used |blank| as the delimeter to separate the elements and it resulted in |blank| elements.
+
+   -   :,|comma: Correct.
+       :.*: Not quite. Look at the string and the final list. What do we KNOW was between each animal in the string before it was separated
    -   :6: Correct.
-       :.*: Not quite. We are splitting by the commas, so count the elements between the commas
+       :.*: Not quite. We are splitting by the commas, so count the elements between the commas (and don't forget, computer scientists start at 0)
 
 
 
