@@ -11,7 +11,7 @@ Week 8 Lab
 
 .. admonition:: Material Covered
 
-   Functions with Parameters (Chapter 8)
+   Functions with Parameters and Return Values (Chapter 8)
 
 
 Level 1
@@ -96,8 +96,8 @@ In this level you will create a turtle program that will draw a whole bunch of s
     main()  
 
 #. The starter code above contains two functions: the main function that creates the turtle and the world, and then has a for loop that iterates 10 times, and the move_random function that moves the turtle to random coordinates. Run the code to see what it does. 
-#. Note that on line X, we call the move_random function and pass the turtle. The move random function has a turt parameter, and when it is called, that turt paramter is a reference variable that points at the turtle we created (dorsa). Inside the move_random function, when we give a turtle command we use the name 'turt', but it is actually a reference to our dorsa turtle and causes dorsa to pick up her pen, move, and then put down her pen. Note also, that this means the move_random function can be called with another turtle, and it works no matter what name you give your turtle. 
-#. Look at line y in main. This is a commented out function call. It's commented out because the square function doesn't exist yet. Your job is to create a square function that takes three parameters: a turtle, a number representing the size of square to draw, and a color. Define this function at the top of the script where you see the #TODO. You can choose whatever parameter names you want (it's find to use 'turt' for the turtle, just like in the move_random function). Inside this function, change the turtle to the color passed in, then write the code to draw a square, using the size value. 
+#. Note that on line 30, we call the move_random function and pass the turtle. The move random function has a turt parameter, and when it is called, that turt paramter is a reference variable that points at the turtle we created (dorsa). Inside the move_random function, when we give a turtle command we use the name 'turt', but it is actually a reference to our dorsa turtle and causes dorsa to pick up her pen, move, and then put down her pen. Note also, that this means the move_random function can be called with another turtle, and it works no matter what name you give your turtle. 
+#. Look at line 34 in main. This is a commented out function call. It's commented out because the square function doesn't exist yet. Your job is to create a square function that takes three parameters: a turtle, a number representing the size of square to draw, and a color. Define this function at the top of the script where you see the #TODO. You can choose whatever parameter names you want (it's find to use 'turt' for the turtle, just like in the move_random function). Inside this function, change the turtle to the color passed in, then write the code to draw a square, using the size value. 
 #. Uncomment the square function call in main to test your function. 
 
 
