@@ -316,3 +316,60 @@ Chapter Assessment
 
 
    myTests().main()
+
+.. mchoice:: assess_ch9_14_lh
+    :multiple_answers:
+    :answer_a: print(greeting1[3])
+    :answer_b: print(greeting2[0])
+    :answer_c: print(greeting3[5])
+    :answer_d: print(greeting3[2])
+    :answer_e: print(greeting2[1])
+    :correct: a c e
+    :feedback_a: Correct
+    :feedback_b: Incorrect, this prints out the character 'B'
+    :feedback_c: Correct
+    :feedback_d: Incorrect, this prints out the character 'i'
+    :feedback_e: Correct
+
+    .. image:: Figures/Chapter_9_5.PNG
+        :width: 900
+        :align: center
+        :alt: get the last letter of a string
+
+    Which print statements would we use to acquire the output shown in the above Codelen screenshot?
+
+.. fillintheblank:: assess_ch9_15_lh
+
+    .. image:: Figures/Chapter_9_2.PNG
+        :width: 1200
+        :align: center
+        :alt: adding elements to a list
+
+   The above program currently adds elements from one list to another char by char. 
+   We want to change this program so our output matches the below Codelens screenshot. What function would we use to do this? |blank|
+   What line should we use this function on? |blank|
+
+   .. image:: Figures/Chapter_9_2B.PNG
+    :width: 800
+    :align: center
+    :alt: adding elements to a list output
+
+   -  :append(): Correct.
+      :.*: Write the function in the following format, function(). Hint: We want to add an elemt to a list.
+   -  :7: Correct
+      :.*: Incorrect, look at the code. Currently we are using line 7 to add the elements from one list to another
+
+.. fillintheblank:: assess_ch9_16_lh
+
+    .. image:: Figures/Chapter_9_4.PNG
+        :width: 900
+        :align: center
+        :alt: splitting strings
+
+   Consider the above Condelens screenshot. How many elements has the string been split into? |blank|
+   
+   -   :6: Correct.
+       :.*: Not quite. We are splitting by the commas, so count the elements between the commas
+
+
+
