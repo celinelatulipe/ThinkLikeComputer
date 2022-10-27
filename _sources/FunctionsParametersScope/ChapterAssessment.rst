@@ -108,7 +108,7 @@ Chapter Assessment
         :align: center
         :alt: Finding the maximum number
 
-   Looking at the following Codelens output, we have a function called maximum that is in the middle of executing. The purpose is to find the highest value in the list and return it. What will be the return value? |blank|
+   The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution. The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? |blank|
 
    -  :97: Correct.
       :.*: Incorrect. Our function is looking for and returning the highest element in the class_grades list
@@ -141,7 +141,7 @@ Chapter Assessment
       :align: center
       :alt: average function
 
-   Consider the above program. Which Codelens screenshot shows the correct program output? |blank|
+   Consider the above program. Which Codelens screenshot shows the correct program output? (The options are labelled 1,2,3 in the top right corner of each screenshot) |blank|
 
    .. image:: Figures/Chapter_8_4_A.PNG
       :width: 900
