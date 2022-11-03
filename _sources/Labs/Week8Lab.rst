@@ -97,7 +97,7 @@ In this level you will create a turtle program that will draw a whole bunch of s
 
 #. The starter code above contains two functions: the main function that creates the turtle and the world, and then has a for loop that iterates 10 times, and the move_random function that moves the turtle to random coordinates. Run the code to see what it does. 
 #. Note that on line 30, we call the move_random function and pass the turtle. The move random function has a turt parameter, and when it is called, that turt paramter is a reference variable that points at the turtle we created (dorsa). Inside the move_random function, when we give a turtle command we use the name 'turt', but it is actually a reference to our dorsa turtle and causes dorsa to pick up her pen, move, and then put down her pen. Note also, that this means the move_random function can be called with another turtle, and it works no matter what name you give your turtle. 
-#. Look at line 34 in main. This is a commented out function call. It's commented out because the square function doesn't exist yet. Your job is to create a square function that takes three parameters: a turtle, a number representing the size of square to draw, and a color. Define this function at the top of the script where you see the #TODO. You can choose whatever parameter names you want (it's find to use 'turt' for the turtle, just like in the move_random function). Inside this function, change the turtle to the color passed in, then write the code to draw a square, using the size value. 
+#. Look at line 34 in main. This is a commented out function call. It's commented out because the square function doesn't exist yet. Your job is to create a square function that takes three parameters: a turtle, a number representing the size of square to draw, and a color. Define this function at the top of the script where you see the #TODO. You can choose whatever parameter names you want (it's fine to use 'turt' for the turtle, just like in the move_random function). Inside this function, change the turtle to the color passed in, then write the code to draw a square, using the size value. 
 #. Uncomment the square function call in main to test your function. 
 
 
@@ -116,16 +116,16 @@ In this level you will write a function that takes in a string, and returns the 
 
 
 #. Ask the user to enter a word or phrase and save their response to a string variable.
-#. Define a new function called 'count_vowels'. This function should take a single parameter (you will pass in a string).
+#. Define a new function called 'count_vowels'. This function should take a single parameter (you will pass in the string you just got from the end user).
 #. Inside the function:
 
    #. Create a counter variable and initialize it to 0.
-   #. Write a for loop that loops across the string parameter
+   #. Write a for loop that iterates across the string parameter
    #. For each character in the string, see if it is equal to 'a', or 'e' or 'i' or 'o' or 'u'.
-   #. If it is equal to a vowel, increment the counter variable.
+   #. If it is equal to a vowel, increment the counter variable. Do you need an else block?
    #. After the for loop, add a line that returns the counter variable.
 
-#. Call the count_vowels function. You need to pass in the user's response as a parameter. You also need to assign the return value to a variable. It should look like this: num_vowels = count_vowels(user_text)
+#. Call the count_vowels function. You need to pass in the user's response as a parameter. You also need to assign the return value to a variable.
 #. Print out the result to the console. 
 #. Once this is working, create a loop that iterates 3 times. Put the code that asks the user for a phrase and calls the count_vowel function inside that loop, so that we see the function getting executed multiple times with different values.  
 
