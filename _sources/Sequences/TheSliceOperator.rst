@@ -27,8 +27,7 @@ selecting a character:
 
 The ``slice`` operator ``[n:m]`` returns the part of the string starting
 with the character at index n and
-go up to but *not including* the character at index m.
-Or with normal counting from 1, this is the (n+1)st character up to and including the mth character.
+going up to but *not including* the character at index m.
 
 If you omit the first index (before the colon), the slice starts at the
 beginning of the string. If you omit the second index, the slice goes to the
@@ -74,7 +73,7 @@ Tuple Slices
 
 We can't modify the elements of a tuple, but we can make a variable reference a new tuple holding different information.
 Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can
-slice parts of the old tuple and join up the bits to make the new tuple. So ``julia`` has a new recent film, and we might
+slice parts of the old tuple and join up the bits to make a new tuple. So ``julia`` has a new recent film, and we might
 want to change her tuple. We can easily slice off the parts we want and concatenate them with a new tuple.  
 
 .. activecode:: ac9_5_5
@@ -148,7 +147,7 @@ The observant student might notice that the code above appears to modify the tup
      print(len(L[1:-1]))
 
 
-.. activecode:: ac9_5_4
+.. activecode:: ac9_5_6
    :language: python
    :autograde: unittest
    :practice: T

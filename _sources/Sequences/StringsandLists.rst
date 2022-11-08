@@ -114,7 +114,81 @@ of from the left.
 
 While we are taught as children to count from 1, in most programming languages we count/index from zero. This means that when we talk about the first item, we need to remember that is at index 0, and when we talk about the second item, it is at index 1. The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean! If you find indexing from zero weird, it might help to think about the index as **the offset from the first position** in the list, tuple, or string. So if we declare a string variable like this: ``greeting = "hello"``, the letter 'e' is offset by 1 from the first character and we access the 'e' by using ``greeting[1]``. 
 
+Adding and Removing Items from Lists
+------------------------------------
 
+A different way to build a list is to add items to it one at a time using the append method, like this:
+
+.. activecode:: ac9_2_5_1
+
+    import random
+
+    my_list = []  # start a new, empty list
+    for _ in range(20):
+        my_list.append(random.randrange(200, 800))
+
+    print(my_list)
+    
+You can also use append to add more items to an existing list. New items are added on to the end of the list:
+
+.. activecode:: ac9_2_5_2
+
+    import random
+
+    my_list = []  # start a new, empty list
+    for _ in range(20):
+        my_list.append(random.randrange(200, 800))
+
+    print(my_list)
+    my_list.append(550)
+    my_list.append(378)
+    print(my_list)
+
+You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise you will get an error:
+
+.. activecode:: ac9_2_5_3
+
+   days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+   print(days)
+   if "Monday" in days:
+        days.remove("Monday")
+
+   print(days)
+
+   days.remove("Saturday") # ERROR!
+
+Note that if the item you want to remove is in the list multiple times, the remove method will only remove the first instance of the item:
+
+.. activecode:: ac9_2_5_4
+
+   nums = [6, 4, 7, 1, 4, 9, 5, 4, 2, 3]
+   print(nums)
+
+   if 4 in nums:
+        nums.remove(4)
+
+   print(nums)
+
+There is one other useful method on lists: pop(). Pop removes an item from the end of a list (if you want that item, you need to capture it into a return variable). For example:
+
+.. activecode:: ac9_2_5_5
+
+   import random 
+
+   my_list = []  # create empty list to start
+   for _ in range(5):
+       my_list.append(random.randrange(20, 70))
+       print(my_list)
+
+   # now remove a few items
+   print(my_list.pop())
+   print(my_list)
+
+   item = my_list.pop()   # save the item popped off the list into a variable
+   print(item)
+   print(my_list)
+
+Of course, all of the methods discussed above only apply to lists, because only lists can be changed. You cannot call append() or remove(x) or pop() on a tuple. 
 
 **Check your understanding**
 
