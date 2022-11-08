@@ -58,10 +58,7 @@ Typically, a Python programmer would combine lines 2 and 3 from the above exampl
     lastch = fruit[len(fruit)-1]
 
 
-Though, from what you just learned about using negative indices, using ``fruit[-1]`` would be 
-a more appropriate way to access the last index in a list. 
-
-You can still use the ``len`` function to access other predictable indices, like the middle character of a string.
+You can use the ``len`` function to access other predictable indices, like the middle character of a string.:
 
 .. sourcecode:: python
 
@@ -71,7 +68,7 @@ You can still use the ``len`` function to access other predictable indices, like
 
 As with strings, the function ``len`` returns the length of a list (the number of items in the list).  
 However, since lists can have items which are themselves sequences (e.g., strings), 
-it important to note that ``len`` only returns the top-most length.
+it is important to note that ``len`` only returns the top-most length.
 
 .. activecode:: ac9_4_4
 

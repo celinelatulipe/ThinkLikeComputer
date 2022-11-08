@@ -38,7 +38,7 @@ options(
             'login_required': 'false',
             'loglevel': 0,
             'course_title': project_name,
-            'python3': 'false',
+            'python3': 'true',
             'dburl': '',
             'default_ac_lang': 'python',
             'downloads_enabled': 'false',

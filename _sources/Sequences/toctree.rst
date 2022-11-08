@@ -7,6 +7,7 @@ Sequences
 
    intro-Sequences.rst
    StringsandLists.rst
+   StringsAreImmutable.rst
    DisabmiguatingSquareBrackets.rst
    Length.rst
    TheSliceOperator.rst
