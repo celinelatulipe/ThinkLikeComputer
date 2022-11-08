@@ -17,7 +17,7 @@ Week 9 Lab
 Level 1
 -------
 
-In this level you will combining two lists and remove all the double entries. The starter code below gives you two lists. Follow the steps (all of your code can go inside main()).
+In this level you will combine two lists and remove all the double entries. The starter code below gives you two lists. Follow the steps (all of your code can go inside main()).
 
 #. Create a new list called temp_list and fill it with all the elements from the two provided lists (hint: use '+').
 #. Create another new list called final_list and set it to empty.
@@ -94,7 +94,8 @@ In this level you will be given a jumbled string that you must decode to reveal 
 
 Level 3
 -------
-In this level you will
+In this level you will .... [still to come]
+
 .. activecode:: lab9_level3   
 
     ################################################################
