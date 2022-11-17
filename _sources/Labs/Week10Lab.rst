@@ -50,19 +50,9 @@ This code needs to follow the general pattern in which a boolean flag is initial
     # Lab 10, Level 1
     ################################################################
     
-    def register_lab_students(list):
-        more_to_register = True
-        while more_to_register:
-            name = input("Please enter name of student to register: (or 'q' to quit) ")
-            if (name == 'Q' or name == 'q'):
-                more_to_register = False
-            else: 
-                list.append(name) 
-                print(name, "is now registered in the lab.")
-
     def main():
         student_list = ["Surya Arevik", "Marjan Amen", "Mohamad Mordechai", "Modesta Niketas", "Abraão Ivor" ]
-        student_list = register_lab_students(student_list)
+        #student_list = register_lab_students(student_list)
         print("Students registered for the lab section are:")
         for i in range(len(student_list)):
             print(i, ": ", student_list[i])
@@ -83,8 +73,9 @@ In this level you will make a turtle draw a 5-pointed star pattern.
    
 4. Call the star function from main, passing in the turtle and the size.  Make sure you're getting the correct output (see below).
 
-.. image:: Figures/Lab10_single_star.jpg
-
+.. image:: Figures/Lab10_single_star.png
+   :width: 300
+   :align: center
 
 5. In main(), create a variable called *smallest* and set it to 50. This is the smallest size of star that you want to draw. 
   
@@ -100,7 +91,7 @@ In this level you will make a turtle draw a 5-pointed star pattern.
 Here is what your final output should look like:
 
 .. image:: Figures/Lab10_final_star.png
-   :width: 500
+   :width: 300
    :align: center   
 
 Note that the benefit of using a while loop here is we don't have to guess how many times to run the loop, the while loop's *repeat until some thing is false* logic takes care of that for us. You can play around with different values of *smallest* to control when the turtle stops drawing, which will generate different star effects. 
@@ -160,8 +151,6 @@ In this level you will make a program that takes in user input to move a turtle 
         wn.bgcolor("black")
         jie = turtle.Turtle()
         jie.color("red")
-
-        keep_drawing = True
 
 
    main()
