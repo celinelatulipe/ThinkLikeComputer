@@ -42,9 +42,9 @@ The same algorithm expressed in pseudocode might look something like this:
 
 .. admonition:: Algorithm Example 2 (Pseudocode)
 
-    1. Ask for radius 
-    2. let area = (radius\ :sup:`2`) × π
-    3. Display area 
+    1. Ask user to enter a radius. Save the result in a variable called radius 
+    2. Create a variable called area and store in it the result of calculating (radius\ :sup:`2`) × π
+    3. Display value stored in area to the user
 
 Note how the pseudocode example expresses step 2 more precisely, specifying the formula in mathematical
 terms.
@@ -83,9 +83,9 @@ In the next section, you will learn how to execute Python programs on a computer
 
 Interactivity - Programming for People
 --------------------------------------
-Consider the code we introduced in the previous section. The program is **interactive** because it asks for input from an **end user**. The end user is a person who might **use** your program, but will never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your **programmer** hat. When you type a number into the dialog box that comes up, you are wearing your **end user** hat.
+Consider the code we introduced in the previous section. The program is **interactive** because it asks for input from an **end user**. The end user is a person who might **use** your program, but will likely never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your **programmer** hat. When you type a number into the dialog box that comes up, you are wearing your **end user** hat.
 
-Let's take a look at a version of this program that is not interactive:
+Let's take a look at a version of this program that is *not* interactive:
 
 .. activecode:: alg_impl_int_v2
    :nocodelens:
@@ -106,7 +106,7 @@ In this book we will teach you some of the basic elements of interactivity and i
 
 Ethics - Programming Responsibly
 --------------------------------
-You may be wondering why there is a section on ethics in your programming book. You might be thinking that this is where we tell you it is wrong to cheat on your programming assignments. That is true, but that is not what this section is about. Ethics is critically important in computer science. People who are trained in computer science go on to develop technologies that change the world. Technologies impact so much of our day to day life, and so it is critical that as you learn how to design, develop and deploy technology, you make decisions so that the technology you put out in the world does not cause harm. That may seem obvious, but it's not as easy as you think to predict how the technology you develop might be used and abused. Throughout this book we will ask you to pause and consider the technological implications of your choices as a programmer. By the end of this course, we hope you will recognize the important of ethics in computer code.        
+You may be wondering why there is a section on ethics in your programming book. You might be thinking that this is where we tell you it is wrong to cheat on your programming assignments. That is true, but that is not what this section is about. Ethics is critically important in computer science. People who are trained in computer science go on to develop technologies that change the world. Technologies impact almost every aspect of our day to day life, and so it is critical that as you learn how to design, develop and deploy technology, you make decisions so that the technology you put out in the world does not cause harm. That may seem obvious, but it's not as easy as you think to predict how the technology you develop might be used and abused. Throughout this book we will ask you to pause and consider the ethical implications of your choices as a programmer. By the end of this course, we hope you will recognize the importance of ethics in computer code.        
 
 .. activecode:: alg_impl_ethics
    :nocodelens:
@@ -126,7 +126,7 @@ program:
    area = (radius * radius) * 3
    print("The area of a circle with radius", radius, "is:", area)
 
-In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number is enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that **programs embed ethical values**, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
+In this version of the program, we have rounded the value of PI down to a whole number. After all, 3 is quite close to 3.1415, right? Now you may be thinking, that's not an ethical decision - that's just an error. But the original value of 3.1415 isn't the true value of PI either. If you are a math afficionado, you will recall that PI has many, many digits beyond 3.1415. So, a programmer in the first program made a decision that four digits after the decimal number was enough precision. They made a decision to leave off many digits. In the second version of the program, we've just made a different decision about precision. The decision of level of precision is made by the programmer, and it could have disastrous consequences. What if we are trying to design a part for an airplane and because of this, a part is made the wrong size and that causes a malfunction which leads to a plane crash? One of the things we will discuss throughout this book is the many ways that **programs embed ethical values**, because programs are written by humans. It's very important to self-reflect on how your values are reflected (or not) in a program you write. 
 
 
 **Check your understanding**
