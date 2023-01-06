@@ -73,18 +73,18 @@ available in this online textbook. To do that, you will either
 install python on your computer so that it can run natively, or use a remote server that provides either a
 command line shell or a jupyter notebook environment.
 
-Special Ways to Execute Python in this Book
--------------------------------------------
+ActiveCode in Runestone
+-----------------------
 
 This book provides two ways to execute Python programs.  Both techniques are designed to assist you as you
 learn the Python programming language.  They will help you increase your understanding of how Python programs work.
 
 
-First, you can write, modify, and execute programs using a unique **activecode** interpreter that allows you to execute Python code right
+First, you can write, modify, and execute programs using a unique **ActiveCode** interpreter that allows you to execute Python code right
 in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
 environment for learning a programming language like Python since you can experiment with the language as you are reading.
 
-Take a look at the activecode interpreter in action. Try pressing the *Save & Run* button below. (If you are not logged
+Take a look at the ActiveCode interpreter in action. Try pressing the *Save & Run* button below. (If you are not logged
 in, it will just say *Run*.)
 
 .. activecode:: activecode_first_ex
@@ -102,7 +102,7 @@ As the name suggests, *Save & Run* also *saves* your latest version of the code,
 and you can recover it in later sessions when *logged in*. If *not* logged in,
 *Run* saves versions *only until your browser leaves the current web page*, and then you lose all modifications.
 
-If you are logged in, when a page first loads, each activecode window will have a *Load History* button, to the
+If you are logged in, when a page first loads, each ActiveCode window will have a *Load History* button, to the
 right of the *Save & Run* button.
 If you click on it, or if you run any code, that button turns into a slider.
 If you click on the slider location box, you can use your left and right arrow 
@@ -110,16 +110,19 @@ buttons to switch to other versions you ran.
 Alternatively you can drag the box on the slider. 
 Now move the slider to see a previously saved version of your code. You can edit or run any version.
 
-In addition to activecode, you can also execute Python code with the assistance of a unique visualization tool. This tool, known as **codelens**, allows you to control the step by step execution of a program. It also lets you see the values of all variables as they are created and modified. In activecode, the source code executes from beginning to end and you 
-can see the final result. In codelens you can see and control the step by step progress. 
+CodeLens in Runestone
+---------------------
+
+In addition to ActiveCode, you can also execute Python code with the assistance of a unique visualization tool. This tool, known as **CodeLens**, allows you to control the step by step execution of a program. It also lets you see the values of all variables as they are created and modified. In ActiveCode, the source code executes from beginning to end and you 
+can only see the final result. In CodeLens you can see and control the step by step progress. 
 Note that the red arrow always points to the next line of code that is going to be executed. 
 The light green arrow points to the line that was just executed. Click on the "Show in 
-Codelens" button in the code example above to make the codelens window show up, and then click on the Forward button 
+CodeLens" button in the code example above to make the CodeLens window show up, and then click on the Forward button 
 a few times to step through the execution.  
 
-Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.
-When we do, think of it as an encouragement to use the codelens features to step through the 
-execution of the program.
+Sometimes, we will present code examples explicitly in a CodeLens window in the textbook, as below.
+When we do, think of it as an encouragement to use the CodeLens features to step through the 
+execution of the program to understand how the code is executed. This is really important to to and it will help you learn to 'Think Like a Computer'.
 
 .. codelens:: clens_first_example
     :python: py3
@@ -178,12 +181,12 @@ execution of the program.
    :answer_c: execute Python code right in the text itself within the web .. 
    :answer_d: receive a yes/no answer about whether your code is correct or not.
    :correct: a,b,c
-   :feedback_a: You can (and should) save the contents of the activecode window.
+   :feedback_a: You can (and should) save the contents of the ActiveCode window.
    :feedback_b: You are not limited to running the examples that are already there.  Try adding to them and creating your own.
-   :feedback_c: The activecode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.
-   :feedback_d: Although you can (and should) verify that your code is correct by examining its output, activecode will not directly tell you whether you have correctly implemented your program.
+   :feedback_c: The ActiveCode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.
+   :feedback_d: Although you can (and should) verify that your code is correct by examining its output, ActiveCode will not directly tell you whether you have correctly implemented your program.
 
-   The activecode interpreter allows you to (select all that apply):
+   The ActiveCode interpreter allows you to (select all that apply):
 
 .. mchoice:: question_codelens
    :multiple_answers:
@@ -192,12 +195,12 @@ execution of the program.
    :answer_c: write and execute your own Python code.
    :answer_d: execute the Python code that is in codelens.
    :correct: b,d
-   :feedback_a: In fact, Codelens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.
-   :feedback_b: By using Codelens, you can control the execution of a program step by step. You can even go backwards!
+   :feedback_a: In fact, CodeLens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.
+   :feedback_b: By using CodeLens, you can control the execution of a program step by step. You can even go backwards!
    :feedback_c: Codelens works only for the pre-programmed examples.
-   :feedback_d: By stepping forward through the Python code in Codelens, you are executing the Python program.
+   :feedback_d: By stepping forward through the Python code in CodeLens, you are executing the Python program.
 
-   Codelens allows you to (select all that apply):
+   CodeLens allows you to (select all that apply):
 
 .. index:: program, algorithm
 
