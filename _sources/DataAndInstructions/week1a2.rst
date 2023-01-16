@@ -139,3 +139,23 @@ Chapter 2 Assessment
         :a e:       Not quite. Variable e is made up of values from a and b but it never gets reassigned. Read through the program again to double check which variables get new values during code execution.
         :a:         Almost. Variable a is definitely reassigned during the program but is that the only one? Go back and read the code again to see if there is any others
         :.*:     Not quite. Read through the program again to see which variables are updated during the code execution.
+
+
+.. mchoice:: assess_ch2_8_lh
+    :answer_a: an error
+    :answer_b: sara 11
+    :answer_c: sara11
+    :answer_d: "sara11"
+    :answer_e: "sara 11"
+    :correct: a
+    :feedback_a: This is a correct. When using + to stick strings together, all variables need to be a string. This throws a type error.
+    :feedback_b: Hmm, this would be true if 11 was a string but it isn't
+    :feedback_c: Hmm, not quite, we stick a space on our string in line 3
+    :feedback_d: Hmm, not quite, we stick a space on our string in line 3 and we don't have quotes
+    :feedback_e: Hmm, we don't have quotes in our string
+
+    .. image:: Figures/cdq2-4.png
+
+    What does the following code shown in the codelens image print when it finishes executing?
+
+    
