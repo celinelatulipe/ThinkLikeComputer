@@ -158,4 +158,19 @@ Chapter 2 Assessment
 
     What does the following code shown in the codelens image print when it finishes executing?
 
-    
+
+.. mchoice:: assess_ch2_9_lh
+    :answer_a: 1
+    :answer_b: 2
+    :answer_c: 3
+    :answer_d: 4
+    :correct: c
+    :feedback_a: This is a variable being asssigned a string value
+    :feedback_b: This is a variable being assigned an integer value
+    :feedback_c: Correct, "sara" + " " + age is an expression that we want to evaluate to "sara 11" and store the string in the info variable
+    :feedback_d: This prints the string value stored the info variable
+
+    .. image:: Figures/cdq2-5.png
+
+    Here is that same image of code again. Which line number shows a line of code we would define as an expression?
+
