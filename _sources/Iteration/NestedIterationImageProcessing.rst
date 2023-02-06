@@ -144,7 +144,6 @@ methods described above to access information about the image or to get a specif
 intensities.
 
 
-
 .. raw:: html
 
     <img src="../_static/LutherBellPic.jpg" id="luther.jpg" alt="image of Luther College bell picture">

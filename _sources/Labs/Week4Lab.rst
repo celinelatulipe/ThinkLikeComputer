@@ -21,7 +21,7 @@ The program below is the solution to the Week 2 Lab Level 1 (the turtle drawing 
 
 .. tip::
    
-   You only need to add one line of code (the for loop header) otherwise you should be deleting code
+   You only need to add one line of code (the for loop header) otherwise you should be deleting code.
 
 .. activecode:: lab4_level1
     :nocodelens:
@@ -64,12 +64,12 @@ The program below is the solution to the Week 2 Lab Level 1 (the turtle drawing 
 #. Figure out how many times you need to loop.
 #. Add a for loop that uses the range() function to loop the appropriate number of times.
 #. Put the code to make the turtle move and turn (just once) inside the for loop (make sure the indentation is correct).
-#. Test to make sure the turtle is drawing the octagon properly
+#. Test to make sure the turtle is drawing the octagon properly.
 
 Level 2
 -------
 
-In this level you will create and position six turtles (in Level 3 you will make the turtles race). The turtles need to be lined up on the left side of the screen, spaced out vertically as shown below:
+In this level you will create and position six turtles vertically along the left side of the screen so that they can have a race (in Level 3 you will make the turtles race). The turtles need to be lined up as shown below:
 
 
 .. image:: Figures/racing_turtles_start.png
@@ -79,20 +79,20 @@ In this level you will create and position six turtles (in Level 3 you will make
 
 #. You are given some code below to start with.
 #. Create five more turtles, each with a distinct name.
-#. Create a list with the six turtles in it 
+#. Create a list with the six turtles in it (see tip below).
 
 .. tip:: 
    If your turtles are named t1, t2, etc. create the list like this: ``turtle_list = [t1, t2, t3, t4, t5, t6]``
 
-#. Create a for loop header that will iterate through the list of turtles. The for loop header will need an iterator variable that will get assigned to each turtle as the loop iterates through the list. Give this iterator variable an appropriate name.
-#. Here comes the big step. We want to move the turtles into their start positions. The turtles all start at the left, but each turtle's vertical position is slightly different. So, we need to loop through the turtles, moving them one at a time, changing the vertical position each time through the loop. Follow the steps below to do this.
+4. Create a for loop header that will iterate through the list of turtles. The for loop header will need an iterator variable that will get assigned to each turtle as the loop iterates through the list. **Give this iterator variable an appropriate name.**
+5. Here comes the big step. We want to move the turtles into their start positions. The turtles all start at the left, but each turtle's vertical position is slightly different. So, we need to loop through the turtles, moving them one at a time, changing the vertical position each time through the loop. Follow the steps below to do this.
 
-   #. Start by creating two variables (an x_position and y_position) below the comment saying "Add your code below". We will use these variables to move the turtles into position. We want the x variable to start on the left side of the window. The center of the canvas is (0, 0) and the left edge of the canvas is -200, so set the x position to something like -190. The y variable will need to start near the top of the window for the first turtle, so set it to something like 160 (the top edge of the canvas is 200).
-   #. Add another variable to store the vertical distance you are going to add to space out the turtles. Set this to something like 50 or 60.
-   #. Now add a goto() command in your for loop using these x and y position variables. Remember that your iterator variable will refer to one of your turtles each time through the loop, so you are calling the goto() command on that turtle.
-   #. Decrement your y_position variable to appropriately (use the vertical distance variable you created in sub-step 2). By adding this amount during each iteration of the loop, you will be able to space out the turtles down the left side of the window.
+   a. Start by creating two variables (an X_POSITION that is a constant - use all caps and a y_position) below the comment saying "Add your code below". We will use these variables to move the turtles into position. We want the turtle to start on the left side of the window. The center of the canvas is (0, 0) and the left edge of the canvas is -200, so set the x position to something like -190. The y variable will need to start near the top of the window for the first turtle, so set it to something like 160 (the top edge of the canvas is 200).
+   b. Add a third variable to store the vertical distance you are going to add to space out the turtles. Set this to something like 50 or 60.
+   c. Now add a goto() command in your for loop using these x and y position variables. Remember that your iterator variable will refer to one of your turtles each time through the loop, so you are calling the goto() command on that iterator variable you created with the for loop.
+   d. Decrement your y_position variable appropriately (by subtracting the vertical distance variable you created in sub-step 2). By decrementing the y position variable during each iteration of the loop, you will be able to space out the turtles down the left side of the window.
 
-#. If you run this you should see your turtles move to the left side of the screen, but they are drawing lines as they move. We don't want that! Add a penup() and pendown() command before and after the goto() so that the turtles don't draw while moving into their start positions.
+6. If you run this you should now see your turtles move to the left side of the screen, but they are drawing lines as they move. We don't want that! Add a penup() and pendown() command before and after the goto() so that the turtles don't draw while moving into their start positions.
 
 
 
@@ -134,7 +134,7 @@ This level builds upon your code in level 2. We want to have the turtles race, b
 .. note:: 
    A turtle may go off the right end of the window when you run this code, that is okay. We can prevent this later on once we learn about conditionals.
 
-#. For a fun bonus, at the top of the code where you create each turtle, set each turtle to a different color using the .color("Red") or .color("Blue"), etc. commands.
+5. For a fun bonus, at the top of the code where you create each turtle, set each turtle to a different color using the .color("Red") or .color("Blue"), etc. commands.
 
 .. activecode:: lab4_level3   
    :nocodelens:
