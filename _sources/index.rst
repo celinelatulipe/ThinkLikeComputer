@@ -5,7 +5,7 @@ COMP 1000: Think Like a Computer
 
 Welcome to COMP 1000 (SCI 1002 in Fall 2022 and Winter 2023)!
 
-This is a brand new course designed to introduce people to programming, which is a fundamental skill within Computer Science. At the same time as learning about programming, we will also begin right away by thinking about people: the end users who interact with teh software you develop. And when we think about people as end users, we must think about ethics. Thus, this course combines: Programming, Interactivity, and Ethics. PIE!
+This is a brand new course designed to introduce people to programming, which is a fundamental skill within Computer Science. At the same time as learning about programming, we will also begin right away by thinking about people: the end users who interact with the software you develop. And when we think about people as end users, we must think about ethics. Thus, this course combines: Programming, Interactivity, and Ethics. PIE!
 
 This course is being taught for the first time at the University of Manitoba in Fall 2022 and for the second time in Winter 2023. It is open to any student and is specifically designed for students who have not taken Grade 12 Computer Science. 
 

@@ -60,7 +60,7 @@ funtion. Let's look at an example.
     amy.color("pink")   # draw third flower in pink
     flower()
 
-This example uses function composition: one function calls another function. The flower() function calls the square() function repeatedl, each rotated slightly, to form a small flower. The two functions are defined at the top of the script. Also note the docstrings in each, saying what each function does. The rest of the code sets up the turtle and screen, and then there are a number of commands that move the turtle to different places, set the colour and call the flower() function.
+This example uses function composition: one function calls another function. The flower() function calls the square() function repeatedly, each rotated slightly, to form a small flower. The two functions are defined at the top of the script. Also note the docstrings in each, saying what each function does. The rest of the code sets up the turtle and screen, and then there are a number of commands that move the turtle to different places, set the colour and call the flower() function.
 
 The purple and pink flowers are rotated slightly compared to the red flower. If you look at the code, after drawing the red flower the turtle turns right 45 degrees, moves to the new location and then starts drawing the flower. The turtle is facing north-east when it starts drawing the second flower; the rotation of the flower is defined by the heading of the turtle. There are a lot of aspects of program state that can come into play here, and it is appropriate for you as the developer of the code to communicate how this function will behave when it is called. Let's look at a slightly modified version of the same code below:
 
