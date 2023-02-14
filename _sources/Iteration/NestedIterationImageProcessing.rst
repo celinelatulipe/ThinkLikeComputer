@@ -144,11 +144,14 @@ methods described above to access information about the image or to get a specif
 intensities.
 
 
-.. raw:: html
+.. .. image:: Figures/LutherBellPic.jpg
+    :width: 600
+    :align: center
+   
 
-    <img src="../_static/LutherBellPic.jpg" id="luther.jpg" alt="image of Luther College bell picture">
-
-
+.. datafile:: luther.jpg
+   :image:
+   :fromfile: Figures/LutherBellPic.jpg
 
 .. activecode::  ac4_14_2
     :nocodelens:
@@ -254,15 +257,14 @@ image. Note that there is a lot of processing taking place and this may take a f
 are two other images that you can use (cy.png and goldygopher.png).
 
 
-.. raw:: html
+.. image:: Figures/cy.png
+    :width: 600
+    :align: center
+   
 
-    <img src="../_static/cy.png" id="cy.png"  alt="image of Cy the Cardinal, mascot of the Iowa State University">
-    <h4 style="text-align: center;">cy.png</h4>
-
-.. raw:: html
-
-    <img src="../_static/goldygopher.png" id="goldygopher.png" alt="image of Goldy Gopher, mascot of the University of Minnesota-Twin Cities">
-    <h4 style="text-align: center;">goldygopher.png</h4>
+.. image:: Figures/goldygopher.png
+    :width: 600
+    :align: center
 
 
 Change the name of the file in the ``image.Image()`` call to see how these images look as negatives. Also, note that
