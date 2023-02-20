@@ -19,7 +19,7 @@ Level 1
 
 In this level you will create a function that will take in 3 floats and return the average value of the floats.
 
-#. The starter code below creates three user input variables (floats), asking the user to enter a decimal number (note that we don't use the word *float* in the prompt - end users don't know what floats are!). Create a function header for a function that takes in three parameters and will calculate their average. Name the function something that makes sense and reflects what it will do.
+#. The starter code below creates three user input variables (floats), asking the user to enter a decimal number (note that we don't use the word *float* in the prompt - end users don't know what floats are!). Create a function header for a function that takes in three parameters and will calculate and return their average. Name the function something that makes sense and reflects what it will do. This function expects floating point numbers and returns a floating point number - make sure your header includes appropriate type annotations. 
 
 #. Inside the function, create a variable and assign to it the average value of the three passed in floats. Note: To calculate an average you take the sum of inputs and divide it by the number of inputs.
 
@@ -99,6 +99,7 @@ In this level you will create a turtle program that will draw a whole bunch of s
 #. Note that on line 30, we call the move_random function and pass the turtle. The move random function has a turt parameter, and when it is called, that turt paramter is a reference variable that points at the turtle we created (dorsa). Inside the move_random function, when we give a turtle command we use the name 'turt', but it is actually a reference to our dorsa turtle and causes dorsa to pick up her pen, move, and then put down her pen. Note also, that this means the move_random function can be called with another turtle, and it works no matter what name you give your turtle. 
 #. Look at line 34 in main. This is a commented out function call. It's commented out because the square function doesn't exist yet. Your job is to create a square function that takes three parameters: a turtle, a number representing the size of square to draw, and a color. Define this function at the top of the script where you see the #TODO. You can choose whatever parameter names you want (it's fine to use 'turt' for the turtle, just like in the move_random function). Inside this function, change the turtle to the color passed in, then write the code to draw a square, using the size value. 
 #. Uncomment the square function call in main to test your function. 
+#. Add type annotations to your function and to the move_random function.
 
 
 
@@ -116,7 +117,7 @@ In this level you will write a function that takes in a string, and returns the 
 
 
 #. Ask the user to enter a word or phrase and save their response to a string variable.
-#. Define a new function called 'count_vowels'. This function should take a single parameter (you will pass in the string you just got from the end user).
+#. Define a new function called 'count_vowels'. This function should take a single parameter (you will pass in the string you just got from the end user). The function will return the number of vowels in the string. Add appropriate type annotations. 
 #. Inside the function:
 
    #. Create a counter variable and initialize it to 0.
