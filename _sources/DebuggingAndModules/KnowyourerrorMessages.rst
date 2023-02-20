@@ -80,10 +80,10 @@ messages for the exercises in this book.
     :width: 600
     :align: center
 
-Nearly 90% of the error messages encountered for this problem are SyntaxError,
-TypeError, NameError, ValueError, or AttributeError. We will look at these errors in three stages:
+The vast majority of the error messages encountered for this problem are SyntaxError,
+TypeError, NameError, or ValueError. We will look at these errors in three stages:
 
-* First we will define what these four error messages mean.
+* First we will define what these error messages mean.
 * Then, we will look at some examples that cause these errors to occur.
 * Finally we will look at ways to help uncover the root cause of these messages.
 
