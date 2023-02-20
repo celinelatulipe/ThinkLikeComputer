@@ -182,7 +182,7 @@ But this example demonstrates that that is clearly not how Python operates.
 
 .. fillintheblank:: question8_7_2
  
-   Which of the following are local variables? Please, write them in order of what line they are on in the code.
+   Which of the following are local variables? Write them in the order that they appear in the code.
 
    .. sourcecode:: python
  

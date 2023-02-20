@@ -133,7 +133,7 @@ function parameter. If you see...
 
       def cyu3(x, y, z):
          if x - y > 0:
-            return y -2
+            return len(z) -2
          else:
             return len(z) + 3
 
@@ -145,10 +145,10 @@ function parameter. If you see...
    :answer_d: string
    :answer_e: Can't tell
    :correct: a
-   :feedback_a: len() returns an integer, so len()+3 produces an integer.
-   :feedback_b: len()+3 could not produce a float.
-   :feedback_c: len()+3 could not produce a list.
-   :feedback_d: len()+3 could not produce a string.
+   :feedback_a: len() returns an integer, so both len()+3 and len()-2 produces an integer.
+   :feedback_b: Neither len()+3 or len()-2 could produce a float.
+   :feedback_c: Neither return statement produce a list.
+   :feedback_d: Neither return statement produce a string.
    :feedback_e: You can tell from the expressions that follow the word return.
    :practice: T
 
@@ -158,6 +158,6 @@ function parameter. If you see...
 
       def cyu3(x, y, z):
          if x - y > 0:
-            return y -2
+            return len(z) - 2
          else:
             return len(z) + 3

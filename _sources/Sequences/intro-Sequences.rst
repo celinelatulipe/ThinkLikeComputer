@@ -35,11 +35,14 @@ Learning Goals
 
 * To understand different operations that can be performed on strings, lists, and tuples
 * To distinguish between different uses of [] in Python
+* To understand what it means for strings and tuples to be **immuatable**
+* To understand why passing mutable objects to functions is different than passing immutable objects
 
 Objectives
 ----------
 
 * Predict the output of split and join operations
+* Read and write expressions that use count
 * Read and write expressions that use slices
 * Read and write expressions that use concatenation and repetition
 

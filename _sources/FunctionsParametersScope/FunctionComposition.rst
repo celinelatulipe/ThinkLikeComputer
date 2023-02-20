@@ -124,7 +124,7 @@ The turtle example above has 5 different functions. Two of them are **helper fun
 
 **Check your Understanding**
 
-.. activecode:: ac8_8_1
+.. activecode:: ac8_8_2
    :language: python
    :autograde: unittest
    :practice: T
