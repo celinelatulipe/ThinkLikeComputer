@@ -121,10 +121,33 @@ If a function call expression is a sub-expression of some more complicated expre
 
 To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that's something that will come later in the course.
 
+.. parsonsprob:: pp2_10_0
+  
+   The interpreter is executing ``print(name, "has", num_apples, "apples and", num_pears, "pears, which means they have", (num_apples + num_pears), "pieces of fruit")`` The variable ``name`` holds the string ``Amy``, num_apples is 7 and num_pears is 2. 
+   
+   Arrange the code fragments in the order in which the Python interpreter would evaluate them.     
+   -----
+   look up the variable print to get the function object
+   =====
+   look up the variable name to get "Amy"
+   =====
+   look up the variable num_apples to get 7
+   =====
+   look up the variable num_pears to get 2
+   =====
+   look up the variable num_apples again to get 7
+   =====
+   look up the variable num_pears again to get 2
+   =====
+   add 7 and 2 to get 9
+   =====
+   run the print function passing it the following values to print out: "Amy", "has", 7, "apples and", 2, "pears, which means they have", 9, "pieces of fruit"
+
+Note that we **look up** (but don't execute) functions **as soon as we come across them**. We can't execute functions until we have evaluated all the expressions that form inputs for that function. In the example above, we can't actually call the print function until we have determined the values of num_apples, num_pears and (num_apples + num_pears). Once we know all of these things, we have the complete information to send to the print function, so that's when we execute it. 
 
 .. parsonsprob:: pp2_10_1
   
-   The interpreter is executing ``square(x + sub(square(y), 2 * x))``. x is 2 and y is 3. 
+   The interpreter is executing ``square(x + sub(square(y), 2 * x))`` The variable x stores the value 2 and y stores the value 3. 
    
    Arrange the code fragments in the order in which the Python interpreter would evaluate them.     
    -----
