@@ -20,7 +20,7 @@ In this chapter we have shown the steps in creating an event-based graphical pro
 * Create a draw() function that draws the working area of canvas
 * Tell the Python interpreter to start listening for events on the canvas and the controls
 
-We've shown these steps in bits and pieces, and in this chapter, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You shoould copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together. 
+We've shown these steps in bits and pieces, and in this chapter, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You should copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together. 
 
 .. code-block:: python
     :linenos:
@@ -42,52 +42,46 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
     radius = 10
     fontsize = 12
     canvas_col = "Grey"
-    # list vars to store circles that have been drawn
+    # list vars to store info about circles 
     circle_list = []
     circle_col_list = []
     circle_line_wid_list = []
-    # list vars to store text stamps that have been drawn
+    # list vars to store info about text stamps 
     text_list = []
     text_pos_list = []
     text_col_list = []
     # boolean variable to differentiate clicks/drags 
-    dragged = False
+    dragged = False # we are not dragging when program starts
 
     ################################################################
     # GUI Control Handlers
     ################################################################
-        
+
     def clear_handler():
         """
         Gets called when clear button is clicked
         Clears all lists to remove content from canvas
         """
         clear_canvas()
-        
-    def undo_handler():
-        """ 
-        Gets called when user presses undo button
-        """
-        undo()
-        
+
     def bkg_handler():
         """
         Background toggle button - toggles between white and grey
         """
         toggle_background()
-            
+
     def lw_up_handler():
         """ 
         Linewidth + handler 
         """
         change_line_width(True)
-        
+
     def lw_dn_handler():
         """ 
         Linewidth - handler
         """
         change_line_width(False)
-           
+
     def stamp_txt_handler(txt):
         """ 
         Stamp text input box handler
@@ -103,7 +97,7 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
         """
         for index in range(len(circle_list)):
             canvas.draw_circle(circle_list[index], radius, circle_line_wid_list[index], line_col, circle_col_list[index])
-        
+
         for index in range(len(text_list)):
             canvas.draw_text(text_list[index],text_pos_list[index], fontsize, text_col_list[index])
 
@@ -118,8 +112,12 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
         """
         Mouse drag handler
         """
+        global dragged
+        if not dragged: # start of a drag, store that we are dragging
+            dragged = True
         add_circle(pos)
-        
+
+
     # Handler for mouse click events. Takes one parameter:
     #	a tuple of the position of the mouse at moment of click   
     def click(pos):
@@ -127,8 +125,14 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
         Mouse click handler, if a real click (not end of drag)
         this adds a text stamp to the canvas at location of click
         """
-        add_text_stamp(pos)
-        
+        global dragged
+        if dragged: 
+            # this was just the end of drag, not a real click
+            # don't do anything
+            dragged = False
+        else:
+            add_text_stamp(pos)
+
     # Keypress handler
     def key_handler(key):
         """
@@ -150,9 +154,8 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
             #do nothing
             print("Unknown key event. Try pressing r, g, or b")
             print("key is:", key)
-            return 
-        
-           
+
+
     ###############################
     # Other Functions
     ###############################
@@ -167,27 +170,29 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
         text_list.clear()
         text_pos_list.clear()
         text_col_list.clear()
-        
+
     def change_line_width(up):
         """
         Increases line width by 1 if true is passed, 
         otherwise, decreases line width
         """ 
         global line_wid
+        MIN_LINE_WIDTH = 1
+        MAX_LINE_WIDTH = 5
         if (up): # increase
-            if line_wid < 5:
+            if line_wid < MAX_LINE_WIDTH:
                 line_wid += 1
         else: # decrease
-            if line_wid > 1:
+            if line_wid > MIN_LINE_WIDTH:
                 line_wid -= 1
         lw_label.set_text("Line width: " + str(line_wid))
-        
+
     def set_fill_color(col):
         """ updates fill color for subsequent drawing, updates label """
         global fill_col
         fill_col = col
         fc_label.set_text("Fill color: " + str(fill_col)) 
-        
+
     def toggle_background():
         """ Toggle canvas background between white & grey
             updates button text """
@@ -198,39 +203,28 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
             canvas_col = "Grey"
             bkg_button.set_text('White Background')
         frame.set_canvas_background(canvas_col)
-            
+
     def set_stamp_text(txt):
         """ updates stamp text for subsequent drawing, update label """
         global stamp_text
         stamp_text = txt
         text_stamp_label.set_text("Text stamp: " + stamp_text)
         inp.set_text("")
-        
+
     def add_text_stamp(pos):
-        """ 
-        if this is a real click (not end of drag)
-        add a new text stamp to the list of text stamps
-        """
-        global dragged, can_undo, prev_draw_is_text
-        if dragged: 
-            # this was just the end of drag, not a real click
-            # don't do anything
-            dragged = False
-        else:
-            # this is a real click, so add a new text stamp
-            text_list.append(stamp_text)
-            text_pos_list.append(pos)
-            text_col_list.append(fill_col)
+        """ add a new text stamp to the list of text stamps"""
+
+        text_list.append(stamp_text) 		# store stamp text
+        text_pos_list.append(pos) 		# store stamp location
+        text_col_list.append(fill_col) 		# store stamp color
 
     def add_circle(pos):
         """ Add a circle to the circle list"""
-        global dragged, can_undo, prev_draw_is_text
-        circle_list.append(pos)
-        circle_col_list.append(fill_col)
-        circle_line_wid_list.append(line_wid)
-        dragged = True # need to store this to differentiate end
-                        # of click from a regular mouse click
-            
+        circle_list.append(pos) 		# store circle position
+        circle_col_list.append(fill_col) 	# store color for circle
+        circle_line_wid_list.append(line_wid) 	# store circle line-width
+
+
     #######################################################
     # Set up window, GUI controls & register event handlers
     #######################################################
@@ -259,6 +253,7 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
 
     # Show the frame and start listening
     frame.start()
+
 
 The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-82) and for input device events (lines 83-127), other functions (lines 129-206) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 208-235).
 

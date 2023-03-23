@@ -9,12 +9,12 @@
 Program Architecture
 =====================
 
-When you start becoming a more serious programmer, you will hear people speak of system archtiectures or programming architectures. What this refers to is the way that a program is structured in code. What you have been doing so far has been programming what is commonly known as a batch program. In this chatper, we will highlight the difference between batch program architectures and the most common interactive program architecture: event-based.
+When you start becoming a more serious programmer, you will hear people speak of system archtiectures or programming architectures. What this refers to is the way that a program is structured in code. What you have been doing so far has been programming what is commonly known as a batch program. In this chapter, we will highlight the difference between batch program architectures and the most common interactive program architecture: event-based.
 
 
 Batch Programming
 -----------------
-A batch program is very simple in it's architecture: it starts, it runs sequentially through a set of code instructions, perhaps taking a few detours to code that is in functions, and perhaps making a few decisions based on data that is read in, random numbers or other information, and then it gets to the end and closes. The program below is an example of a very simple batch program:
+A batch program is very simple in its architecture: it starts, it runs sequentially through a set of code instructions, perhaps taking a few detours to code that is in functions, and perhaps making a few decisions based on data that is read in, random numbers or other information, and then it gets to the end and closes. The program below is an example of a very simple batch program:
 
 .. activecode:: ac11_2_1
 
@@ -25,7 +25,7 @@ A batch program is very simple in it's architecture: it starts, it runs sequenti
             count += 1
     print(count)
 
-This program takes some text, processes it using a for loop, prints out something to the console and then ends. A flow-chart that shows how this programmin is structured looks like this:
+This program takes some text, processes it using a for loop, prints out something to the console and then ends. A flow-chart that shows how this program is structured looks like this:
 
 .. image:: Figures/batch_flow_chart.png
     :width: 800
@@ -41,7 +41,7 @@ Here is a simplified, high-level, view of a batch program:
 
 Event-Based Programming
 -----------------------
-Most of the programs that people use day to day aren't like this. They are interactive programs that respond to you - you start them, they do some setup and show you an interface and then they wait for you to do stuff and respond, and then they wait for you to do something else, etc. Using an interactive program can be kind of like a conversation: You do something, they respond, you do something else, they respond in a different way. Here is the overall architecture of an interactive, event-based program:
+Most of the programs that people use day to day aren't batch programs. They are interactive programs that respond to you - you start them, they do some setup and show you an interface and then they wait for you to do stuff and respond, and then they wait for you to do something else, etc. Using an interactive program can be kind of like a conversation: You do something, they respond, you do something else, they respond in a different way. Here is the overall architecture of an interactive, event-based program:
 
 
 .. image:: Figures/event-based-flow-chart.png
