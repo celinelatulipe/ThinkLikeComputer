@@ -21,7 +21,7 @@ Labels are considered static interface elements: they aren't clickable and they 
 
 If you add the above line of code after the line of code that creates the button, and then you run the application, you should see something like this:
 
-.. image:: Figures/simpleGUI_addlabel.png
+.. image:: Figures/simpleGUI_addLabel.png
     :width: 300
     :align: center
 
@@ -78,7 +78,7 @@ We will follow these conventions and modify the code as follows:
 
 
 .. image:: Figures/code_with_input_text.png
-    :width: 300
+    :width: 500
     :align: center
 
 On line 39 we add the input text box to the frame, and then on lines 25-27, we add code to change the canvas display message. Note that on line 25, the function definition for the text input handler has a parameter. When this code is run and the user types text in the box and hits enter, the operating system notifies the Python interpreter that a text input event happened and passes the typed text on. Python gives it to this handler code as the text_input parameter. Then our code uses it by assigning it to our global message variable. Every few milliseconds, the Python interpreter will automatically call the draw method to refresh the canvas in this window, so we don't need to do anything specific to get the new message displayed, it will just happen automatically the next time the draw method is called. Since that happens so frequently, it will feel like the text change happens instantaneously when the user hits the Enter key. 
