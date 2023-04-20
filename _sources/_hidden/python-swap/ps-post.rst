@@ -9,7 +9,7 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. activecode:: ps-fopp-pie-swap1-ac-v2
+.. activecode:: ps-swap1-ac-v2
    :autograde: unittest
 
    Finish writing the code to swap the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value).
@@ -39,7 +39,7 @@ Problems
 
    myTests().main()
 
-.. activecode:: ps-fopp-pie-swap2-ac
+.. activecode:: ps-swap2-ac
    :autograde: unittest
 
    Finish writing the code to swap the values in a and b (so that a ends up with b's initial value and b ends up with a's initial value).
@@ -73,7 +73,7 @@ Problems
 Feedback
 ==================================
 
-.. shortanswer:: ps-fopp-pie-posttest-sa
+.. shortanswer:: ps-posttest-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -82,7 +82,7 @@ What to do next:
 
 .. raw:: html
 
-    <p>Click on the following link to go to the post survey: <b><a id="ps-fopp-pie-postsurvey"><font size="+2">Post Survey</font></a></b></p>
+    <p>Click on the following link to go to the post survey: <b><a id="ps-postsurvey"><font size="+2">Post Survey</font></a></b></p>
 
 .. raw:: html
 
@@ -90,8 +90,8 @@ What to do next:
 
       window.onload = function() {
 
-        a = document.getElementById("ps-fopp-pie-postsurvey")
-        a.href = "ps-fopp-pie-postsurvey.html"
+        a = document.getElementById("ps-postsurvey")
+        a.href = "ps-postsurvey.html"
       };
 
     </script>

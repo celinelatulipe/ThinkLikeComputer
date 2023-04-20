@@ -5,7 +5,7 @@ Please answer the following questions.
 
 ==============
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-1
+.. poll:: ps-CS-self-efficacy-1
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -15,7 +15,7 @@ Please answer the following questions.
 
     Generally I have felt secure about attempting computer programming problems.
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-2
+.. poll:: ps-CS-self-efficacy-2
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -25,7 +25,7 @@ Please answer the following questions.
 
     I am sure I could do advanced work in computer science.
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-3
+.. poll:: ps-CS-self-efficacy-3
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -35,7 +35,7 @@ Please answer the following questions.
 
     I am sure that I can learn programming.
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-4
+.. poll:: ps-CS-self-efficacy-4
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -45,7 +45,7 @@ Please answer the following questions.
 
     I think I could handle more difficult programming problems.
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-5
+.. poll:: ps-CS-self-efficacy-5
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -55,7 +55,7 @@ Please answer the following questions.
 
     I can get good grades in computer science.
 
-.. poll:: ps-fopp-pie-CS-self-efficacy-6
+.. poll:: ps-CS-self-efficacy-6
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -69,7 +69,7 @@ For the next questions please select the answer that best
 matches your familiarity and confidence
 about the specified concept(s).
 
-.. poll:: ps-fopp-pie-prog-se-vars-7
+.. poll:: ps-prog-se-vars-7
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -78,7 +78,7 @@ about the specified concept(s).
 
     Setting the value of a variable like: x = 4
 
-.. poll:: ps-fopp-pie-prog-se-swap-8
+.. poll:: ps-prog-se-swap-8
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -91,7 +91,7 @@ about the specified concept(s).
 Feedback
 ==================================
 
-.. shortanswer:: ps-fopp-pie-presurvey-sa
+.. shortanswer:: ps-presurvey-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -99,7 +99,7 @@ What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="ps-fopp-pie-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
+    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="ps-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
 
 .. raw:: html
 
@@ -107,8 +107,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("ps-fopp-pie-intro")
-        a.href = "ps-fopp-pie-intro.html"
+        a = document.getElementById("ps-intro")
+        a.href = "ps-intro.html"
 
       };
 

@@ -14,7 +14,7 @@ move to different questions, flag a question to remind yourself to review it lat
 and finish the exam.
 
 .. youtube:: CrydSpPplUQ
-    :divid: intro-timed-exam-p3pt-fopp-pie
+    :divid: intro-timed-exam-p3pt
     :optional:
     :width: 650
     :align: center
@@ -24,7 +24,7 @@ Practice Timed Exam
 
 Click the start button to take the practice timed exam.
 
-.. timed:: timed_intro_p3pt_fopp-pie
+.. timed:: timed_intro_p3pt
    :timelimit: 5
    :noresult:
    :nofeedback:
@@ -76,7 +76,7 @@ Click the start button to take the practice timed exam.
 Feedback
 ==================================
 
-.. shortanswer:: p3pt-fopp-pie-pre-timed-intro-sa
+.. shortanswer:: p3pt-pre-timed-intro-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -84,7 +84,7 @@ What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to take the pretest: <b><a id="p3-fopp-pie-pretest"><font size="+2">Pre Test</font></a></b></p>
+    <p>Click on the following link to take the pretest: <b><a id="p3-pretest"><font size="+2">Pre Test</font></a></b></p>
 
 .. raw:: html
 
@@ -92,8 +92,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("p3-fopp-pie-pretest")
-        a.href = "p3-fopp-pie-pretest.html"
+        a = document.getElementById("p3-pretest")
+        a.href = "p3-pretest.html"
 
       };
 

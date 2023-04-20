@@ -28,7 +28,7 @@ Problems
 Feedback
 ==================================
 
-.. shortanswer:: p3-fopp-pie-posttest-sa
+.. shortanswer:: p3-posttest-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -38,7 +38,7 @@ What to do next:
 
 .. raw:: html
 
-    <p>Click on the following link to go to the post survey: <b><a id="p3-fopp-pie-postsurvey"><font size="+2">Post Survey</font></a></b></p>
+    <p>Click on the following link to go to the post survey: <b><a id="p3-postsurvey"><font size="+2">Post Survey</font></a></b></p>
 
 .. raw:: html
 
@@ -46,8 +46,8 @@ What to do next:
 
       window.onload = function() {
 
-        a = document.getElementById("p3-fopp-pie-postsurvey")
-        a.href = "p3-fopp-pie-postsurvey.html"
+        a = document.getElementById("p3-postsurvey")
+        a.href = "p3-postsurvey.html"
       };
 
     </script>

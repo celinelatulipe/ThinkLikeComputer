@@ -28,7 +28,7 @@ Problems
 Feedback
 ==================================
 
-.. shortanswer:: p3-fopp-pie-parsons-sa
+.. shortanswer:: p3-parsons-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -37,7 +37,7 @@ What to do next:
 
 .. raw:: html
 
-    <p>Click on the following link to go to the post test: <b><a id="p3-fopp-pie-post"><font size="+2">Post Test</font></a></b></p>
+    <p>Click on the following link to go to the post test: <b><a id="p3-post"><font size="+2">Post Test</font></a></b></p>
 
 .. raw:: html
 
@@ -45,8 +45,8 @@ What to do next:
 
       window.onload = function() {
 
-        a = document.getElementById("p3-fopp-pie-post")
-        a.href = "p3-fopp-pie-post.html"
+        a = document.getElementById("p3-post")
+        a.href = "p3-post.html"
       };
 
     </script>

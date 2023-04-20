@@ -26,7 +26,7 @@ CONTACT INFORMATION:
 
 **INDEPENDENT CONTACT**:  For further information or if you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact Dr. Pearce's supervisor, Dr. Ayorkor Korsach, akorsah@ashesi.edu.gh. 
 
-.. poll:: p3-fopp-pie-ashesi-parsons-consent
+.. poll:: p3-ashesi-parsons-consent
    :option_1: Yes
    :option_2: No
    :results: instructor
@@ -36,7 +36,7 @@ CONTACT INFORMATION:
 
 **CHECKING YES INDICATES THAT, HAVING READ THE INFORMATION PROVIDED ABOVE, YOU ARE FREELY DECIDING TO PARTICIPATE IN THE RESEARCH PROJECT DESCRIBED IN THIS DOCUMENT.**
 
-.. poll:: p3-fopp-pie-ashesi-parsons-observation
+.. poll:: p3-ashesi-parsons-observation
    :option_1: Yes
    :option_2: No
    :results: instructor
@@ -55,7 +55,7 @@ What to do next:
 
 .. raw:: html
 
-    <p>Click on the following link to begin : <b><a id="p3-fopp-pie-study-intro"> <font size="+2">Begin</font></a></b></p>
+    <p>Click on the following link to begin : <b><a id="p3-study-intro"> <font size="+2">Begin</font></a></b></p>
 
 .. raw:: html
 
@@ -63,8 +63,8 @@ What to do next:
 
       window.onload = function() {
 
-        a = document.getElementById("p3-fopp-pie-study-intro")
-        a.href = "p3-fopp-pie-study-intro.html"
+        a = document.getElementById("p3-study-intro")
+        a.href = "p3-study-intro.html"
       };
 
     </script>

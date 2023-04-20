@@ -16,7 +16,7 @@ to check your solution.
 See the video below for an example.
 
 .. youtube:: Rf7oWHlo-e0
-    :divid: iwgex1-parsons1-p3-fopp-pie
+    :divid: iwgex1-parsons1-ps
     :optional:
     :width: 650
     :height: 415
@@ -24,7 +24,7 @@ See the video below for an example.
 
 Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.
 
-.. parsonsprob:: intro-simple-parsons-no-indent-p3-fopp-pie
+.. parsonsprob:: intro-simple-parsons-no-indent-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -41,7 +41,7 @@ Try to solve the following mixed-up code problem.  This problem doesn't require 
 
 Try to solve the following mixed-up code problem. This problem requires indentation.
 
-.. parsonsprob:: intro-simple-parsons-indent-p3-fopp-pie
+.. parsonsprob:: intro-simple-parsons-indent-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -58,7 +58,7 @@ Try to solve the following mixed-up code problem. This problem requires indentat
 
 Try to solve the following mixed-up code problem. This problem requires indentation and has extra blocks that are not needed in a correct solution.
 
-.. parsonsprob:: intro-simple-parsons-indent-with-dist-p3-fopp-pie
+.. parsonsprob:: intro-simple-parsons-indent-with-dist-ps
    :numbered: left
    :adaptive:
    :practice: T
@@ -84,11 +84,12 @@ than three blocks left.
 See the video below for an example.
 
 .. youtube:: QejZ7u642IU
-    :divid: iwgex1-parsons2-p3-fopp-pie
+    :divid: iwgex1-parsons2-ps
     :optional:
     :width: 650
     :height: 415
     :align: center
+
 
 Solving Write Code Problems
 ==============================
@@ -101,7 +102,7 @@ the code area for compiler errors and/or unit test results.
 See the video below for an example.
 
 .. youtube:: w9hTOJ7iJpE
-    :divid: p3-fopp-pie-write-code-video-ex
+    :divid: js-write-code-video-ex
     :optional:
     :width: 1020
     :height: 826
@@ -109,7 +110,7 @@ See the video below for an example.
 
 Finish writing the code for the following problem.
 
-.. activecode:: intro-sample-write-code-triple-p3-fopp-pie
+.. activecode:: intro-sample-write-code-triple-ps
     :practice: T
     :autograde: unittest
 
@@ -141,66 +142,27 @@ Finish writing the code for the following problem.
 Feedback
 ==================================
 
-.. shortanswer:: p3-fopp-pie-intro-sa
+.. shortanswer:: ps-intro-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
 
-What to do next
-============================
+What to do next:
+================
 
 .. raw:: html
 
-    <p>Click on the following link to go the practice problems: <a id="p3pt-practice"><font size="+2">Practice Problems</font></a></p>
-
+    <p>Click on the following link to go the practice problems: <a id="ps-practice"><font size="+2">Practice Problems</font></a></p>
 
 .. raw:: html
 
-   <script type="text/javascript">
+    <script type="text/javascript" >
 
-     function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-           let c = ca[i];
-           while (c.charAt(0) == ' ') {
-              c = c.substring(1);
-           }
-           if (c.indexOf(name) == 0) {
-              return c.substring(name.length, c.length);
-           }
-        }
-        return "";
-     }
+      window.onload = function() {
 
-     function setCookie(cname, cvalue) {
-        document.cookie = cname + "=" + cvalue + ";";
-     }
+        a = document.getElementById("ps-practice")
+        a.href = "ps-parsons.html"
 
-     window.onload = function() {
 
-        a = document.getElementById("p3pt-practice")
-
-        // get prev set cookie
-        var EXP_COOKIE = 'p3pt-parsons-or-write'
-        var cond = getCookie(EXP_COOKIE);
-
-        // if no prev set cookie: generate random condition and set cookie
-        if (cond != 'p' && cond != 'w') {
-           var v = Math.floor(Math.random() * 2);
-           if (v < 1) {
-               cond = 'p';
-           } else {
-               cond = 'w';
-           }
-           setCookie(EXP_COOKIE, cond);
-        }
-
-        if (cond == 'p') {
-           a.href = "p3-fopp-pie-parsons.html"
-        } else if (cond == 'w') {
-           a.href = "p3-fopp-pie-write.html"
-        }
-     };
-   </script>
+        };
+    </script>

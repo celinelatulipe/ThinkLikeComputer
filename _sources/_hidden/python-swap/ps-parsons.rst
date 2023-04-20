@@ -9,7 +9,7 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. parsonsprob:: ps_fopp-pie-swap_comments_pp
+.. parsonsprob:: ps_swap_comments_pp
    :numbered: left
    :practice: T
    :adaptive:
@@ -27,7 +27,7 @@ Problems
    =====
    # set y to the value of x #distractor: if x already has the value of y you should set y to the value of temp
 
-.. parsonsprob:: ps_fopp-pie-swap_code_and_comments_pp
+.. parsonsprob:: ps_swap_code_and_comments_pp
    :numbered: left
    :practice: T
    :adaptive:
@@ -52,7 +52,7 @@ Problems
    # set y to the value of x
    y = x #distractor: the value of x is set to y so you should set it to the value of temp
 
-.. parsonsprob:: ps_fopp-pie-swap_code_only_pp
+.. parsonsprob:: ps_swap_code_only_pp
    :numbered: left
    :practice: T
    :adaptive:
@@ -75,7 +75,7 @@ Problems
 Feedback
 ==================================
 
-.. shortanswer:: ps-fopp-pie-parsons-sa
+.. shortanswer:: ps-parsons-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -84,7 +84,7 @@ What to do next:
 
 .. raw:: html
 
-    <p>Click on the following link to go to the post test: <b><a id="ps-fopp-pie-post"><font size="+2">Post Test</font></a></b></p>
+    <p>Click on the following link to go to the post test: <b><a id="ps-post"><font size="+2">Post Test</font></a></b></p>
 
 .. raw:: html
 
@@ -92,8 +92,8 @@ What to do next:
 
       window.onload = function() {
 
-        a = document.getElementById("ps-fopp-pie-post")
-        a.href = "ps-fopp-pie-post.html"
+        a = document.getElementById("ps-post")
+        a.href = "ps-post.html"
       };
 
     </script>

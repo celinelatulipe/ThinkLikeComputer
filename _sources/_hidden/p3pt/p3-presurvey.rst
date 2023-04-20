@@ -5,7 +5,7 @@ Please answer the following questions.
 
 ==============
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-1
+.. poll:: p3-CS-self-efficacy-1
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -15,7 +15,7 @@ Please answer the following questions.
 
     Generally I have felt secure about attempting computer programming problems.
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-2
+.. poll:: p3-CS-self-efficacy-2
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -25,7 +25,7 @@ Please answer the following questions.
 
     I am sure I could do advanced work in computer science.
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-3
+.. poll:: p3-CS-self-efficacy-3
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -35,7 +35,7 @@ Please answer the following questions.
 
     I am sure that I can learn programming.
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-4
+.. poll:: p3-CS-self-efficacy-4
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -45,7 +45,7 @@ Please answer the following questions.
 
     I think I could handle more difficult programming problems.
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-5
+.. poll:: p3-CS-self-efficacy-5
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -55,7 +55,7 @@ Please answer the following questions.
 
     I can get good grades in computer science.
 
-.. poll:: p3-fopp-pie-CS-self-efficacy-6
+.. poll:: p3-CS-self-efficacy-6
     :option_1: Strongly disagree
     :option_2: Disagree
     :option_3: Neither agree nor disagree
@@ -69,7 +69,7 @@ For the next questions please select the answer that best
 matches your familiarity and confidence
 about the specified concept(s).
 
-.. poll:: p3-fopp-pie-prog-se-loop-7
+.. poll:: p3-prog-se-loop-7
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -79,7 +79,7 @@ about the specified concept(s).
 
     Loops/Iteration like <code>for n in nums:</code> and <code>for i in range(4):</code>
 
-.. poll:: p3-fopp-pie-prog-se-cond-8
+.. poll:: p3-prog-se-cond-8
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -89,7 +89,7 @@ about the specified concept(s).
 
     Conditionals/Selection Statements like <code>if x < 3:</code>
 
-.. poll:: p3-fopp-pie-prog-se-func-9
+.. poll:: p3-prog-se-func-9
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -99,7 +99,7 @@ about the specified concept(s).
 
     Functions like <code>def get_odd(nums):</code>
 
-.. poll:: p3-fopp-pie-prog-se-list-dic-10
+.. poll:: p3-prog-se-list-dic-10
     :option_1: I am unfamiliar with this concept
     :option_2: I know what it means, but have not used it in a program
     :option_3: I have used this concept in a program, but am not confident about my ability to use it
@@ -112,7 +112,7 @@ about the specified concept(s).
 Feedback
 ==================================
 
-.. shortanswer:: p3-fopp-pie-presurvey-sa
+.. shortanswer:: p3-presurvey-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 
@@ -120,7 +120,7 @@ What to do next
 ============================
 .. raw:: html
 
-    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="p3-fopp-pie-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
+    <p>Click on the following link to learn how to solve different types of problems in this ebook : <b><a id="p3-intro"><font size="+2">Introduction to Problem Types</font></a></b></p>
 
 .. raw:: html
 
@@ -128,8 +128,8 @@ What to do next
 
       window.onload = function() {
 
-        a = document.getElementById("p3-fopp-pie-intro")
-        a.href = "p3-fopp-pie-intro.html"
+        a = document.getElementById("p3-intro")
+        a.href = "p3-intro.html"
 
       };
 
