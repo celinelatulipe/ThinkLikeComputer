@@ -57,15 +57,16 @@ List Slices
 The slice operation we saw with strings also works on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
 that if you omit the first index (before the colon), the slice starts at the
 beginning of the sequence. If you omit the second index, the slice goes to the
-end of the sequence.
+end of the sequence. Before running the code below, complete the comments on lines 2-5 by adding your predictions about what will be printed.
 
 .. activecode:: ac9_5_4
 
     a_list = ['a', 'b', 'c', 'd', 'e', 'f']
-    print(a_list[1:3])
-    print(a_list[:4])
-    print(a_list[3:])
-    print(a_list[:])
+    print(a_list[1:3])  # Predicted output:
+    print(a_list[:4])   # Predicted output:
+    print(a_list[3:])   # Predicted output:
+    print(a_list[:])    # Predicted output:
+
 
 
 Tuple Slices

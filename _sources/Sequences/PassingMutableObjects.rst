@@ -44,7 +44,7 @@ example, where a list is passed in to a function.
    changeit(mylst)
    print(mylst)
 
-Try stepping through this in codelens to see what happens. The state of the list referenced by ``lst`` is altered
+Try stepping through this in Codelens to see what happens. The state of the list referenced by ``lst`` is altered
 by ``changeit``, and since ``lst`` is an alias for ``mylst``, ``mylst`` is affected by the actions taken by the function.
 
 Look closely at this line::
@@ -103,7 +103,7 @@ If you want this to work, you need to convert the tuple into a list, and then st
        return lst
       
    mytuple = ('our', 'students', 'are', 'awesome')
-   modified_list = changeit(list(mytuple))  # sending a tuple to this method is going to cause an error in the method
+   modified_list = changeit(list(mytuple))  # create a list from the tuple, and send that list to changeit
    print(mytuple)
    print(modified_list)
 

@@ -10,7 +10,7 @@
 Mutable Object Side Effects
 ---------------------------
 
-When we pass mutable objects, like lists, to functions, the contenst of those objects can be changed within the function. This is a side effect, if the
+When we pass mutable objects, like lists, to functions, the contents of those objects can be changed within the function. This is a side effect, if the
 object is not returned from the function. Consider the following example, which we have seen before:
 
 .. codelens:: clens9_10_1
@@ -44,12 +44,12 @@ We can avoid confusing side effects when passing around mutable objects by passi
 
 
 On line 7 in the code above, we use the built-in ``list()`` function, which takes a sequence as a 
-parameter and returns a copy of that sequence as a list. Note also that we had to modify the function to return the list. Once these changes are made, teh alterations to the list are no longer considered a side effect, as they are made transparent by returning a changed value.
+parameter and returns a copy of that sequence as a list. Note also that we had to modify the function to return the list. Once these changes are made, the alterations to the list are no longer considered a side effect, as they are made transparent by returning a changed value.
 
 Side Effects in Interactive Programs
 ====================================
 
-When we program interactively and use listener functions, we end up modifying global variable and objects and creating side effects. This is because the listener functions that you can register must only have the parameters relevant to the interaction event. Let's revisit an earlier example:
+When we program interactively and use listener functions, we end up modifying global variables and objects and creating side effects. This is because the listener functions that you can register must only have the parameters relevant to the interaction event. Let's revisit an earlier example:
 
 .. activecode:: ac9_10_1_1
     :nocodelens:
