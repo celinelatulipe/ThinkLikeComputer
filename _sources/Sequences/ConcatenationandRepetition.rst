@@ -28,27 +28,29 @@ As with strings, the ``+`` operator concatenates lists and tuples.
     veggies2 = ("celery", "onion", "cauliflower", "bok choy", "tomato", "pepper")
     all_fruit = fruit1 + fruit2
     print(all_fruit)
+    print(type(all_fruit))
     print(fruit1)
     all_veg = veggies1 + veggies2
     print(all_veg)
+    print(type(all_veg))
     print(veggies2)
 
 It is important to see that these operators create new lists/tuples from the elements of the operand lists/tuples.  
 If you concatenate a list with 2 items and a list with 4 items, you will get a new list with 6 items 
 (not a list with two sublists). 
 
-One way for us to make this more clear is to run a part of this example in CodeLens.  
+One way for us to make this more clear is to run the following example in CodeLens.  
 As you step through the code, you will see the variables being created and the lists that they refer to. 
-Pay particular attention to the fact that when ``newlist`` is created by the statement 
-``newlist = fruit + numlist``, it refers to a completely new list formed by making copies of the items from ``fruit`` and ``numlist``.  You can see this very clearly in the CodeLens object diagram.  The objects are different.
+Pay particular attention to the fact that when ``new_list`` is created by the statement 
+``new_list = fruit_list + num_list``, it refers to a completely new list formed by making copies of the items from ``fruit_list`` and ``num_list``.  You can see this very clearly in the CodeLens object diagram.  The objects are different.
 
 .. codelens:: ac9_6_2
     :python: py3
 
-    fruit = ["apple","orange","banana","cherry"]
-    numlist = [6,7]
+    fruit_list = ["apple","orange","banana","cherry"]
+    num_list = [6,7]
 
-    newlist = fruit + numlist
+    new_list = fruit_list + num_list
 
 
 .. note:: WP: Adding types together
@@ -75,7 +77,7 @@ Fix the error above by converting veggies1 to a list in the expression on line 3
 Repetition
 ----------
 
-Similarly, the ``*`` operator repeats the items in a list or tuple a given number of times.  So, repetition of a list of 2 items 4 times will give a list 
+The ``*`` operator repeats the items in a list or tuple a given number of times.  So, repetition of a list of 2 items 4 times will give a list 
 with 8 items.
 
 
@@ -83,14 +85,14 @@ with 8 items.
 
     fruit1 = ["apple","orange","banana","cherry"]
     veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
-    many_fruit = fruit1 * 3
-    print("Many fruits: ", many_fruit)
+    many_fruits = fruit1 * 3
+    print("Many fruits: ", many_fruist)
     print(fruit1) # doesn't change original list!
-    many_veg = veggies1 * 4
-    print("Many veggies:", many_veg)
+    many_veggies = veggies1 * 4
+    print("Many veggies:", many_veggies)
     print(veggies1) # doesn't change original tuple!
 
-As with concatenation, these operations do not have any effect on the input lists/tuples, they create new lists. You can reassign the new list back to the same variable name though: 
+As with concatenation, these operations do not have any effect on the original lists/tuples, they create new lists. You can reassign the new list back to the same variable name though: 
 
 .. activecode:: ac9_6_5
 

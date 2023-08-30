@@ -11,7 +11,7 @@
 Disambiguating []: creation vs indexing
 =======================================
 
-Square brackets ``[]`` are used in quite a few ways in python. When you're first learning how to use them it may be 
+Square brackets ``[]`` are used in quite a few ways in Python. When you're first learning how to use them it may be 
 confusing, but with practice and repetition they'll be easy to incorporate!
 
 You have currently encountered two instances where we have used square brackets. The first is creating lists and the second 
@@ -20,7 +20,7 @@ an already created list while simply creating a list does not.
 
 .. activecode:: ac9_3_1
 
-   new_lst = []
+   my_lst = []
 
 In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.
 
@@ -29,26 +29,25 @@ In the code above, a new list is created using the empty brackets. Since there's
    new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
    part_of_new_lst = new_lst[0]
 
-In the code above, you'll see how, now that we have elements inside of ``new_lst``, we can index into it. 
-In order to extract an element of the list, we do use ``[]``, but we first have to specify which list we are indexing. 
-Imagine if there was another list in the activecode. 
-How would python know which list we want to index into if we don't tell it? 
-Additionally, we have to specify what element we want to extract. This belongs inside of the brakets. 
+In the code above, both lines use square brackets, but one uses them for list creation and one uses them for indexing. You can differentiate them because with list creation there is nothing between the equal sign and the opening square bracket. On the left side of the equal sign is the variable that the list is being assigned to, and on the right side of the equal sign is the two square brackets with items in the list in between them. On the second line, the square brackets come immediately after a variable name, which tells you that they are indexing into that list variable. Because we have elements inside of ``new_lst``, we can index into it. 
+In order to extract an element of the list, we use ``[]``, but we first have to specify which list we are indexing. Additionally, we have to specify what element we want to extract. This index belongs inside of the brackets. 
 
-Though it may be easier to distinguish in this above activecode, below may be a bit more difficult.
+The code below shows that naming a variable as a list doesn't make it a list.
 
 .. activecode:: ac9_3_3
 
-   lst = [0]
-   n_lst = lst[0]
+   lst = [0]            # using [] to create a new list
+   n_lst = lst[0]       # using [] to index into a list to retrieve an element
 
+   print(type(lst))
+   print(type(n_lst))
+   
    print(lst)
    print(n_lst)
 
-Here, we see a list called ``lst`` being assigned to a list with one element, zero. Then, we see how ``n_lst`` is assigned 
+Here, we see that the variable ``lst`` is assigned a list with one element, zero. Then, we see another variable called ``n_lst`` gets assigned 
 the value associated with the first element of lst. Despite the variable names, only one of the above variables is 
-assigned to a list. Note that in this example, what sets creating apart from indexing is the reference to the list to let 
-python know that you are extracting an element from another list.
+assigned to a list. 
 
 .. mchoice:: question9_3_1
    :multiple_answers:

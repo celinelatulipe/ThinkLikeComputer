@@ -44,18 +44,16 @@ Give it a try in the example above.
 
     fruit = "Banana"
     sz = len(fruit)
-    lastch = fruit[sz-1]
-    print(lastch)
+    last_ch = fruit[sz-1]
+    print(last_ch)
 
-.. Alternatively, in Python we can use **negative indices**, which count backward from the
-.. end of the string. The expression ``fruit[-1]`` yields the last letter,
-.. ``fruit[-2]`` yields the second to last, and so on.  Try it!
+Alternatively, in Python we can use **negative indices**, which count backward from the end of the string. The expression ``fruit[-1]`` yields the last letter, ``fruit[-2]`` yields the second to last, and so on.  Try it!
 
 Typically, a Python programmer would combine lines 2 and 3 from the above example into a single line:
 
 .. sourcecode:: python
 
-    lastch = fruit[len(fruit)-1]
+    last_ch = fruit[len(fruit)-1]
 
 
 You can use the ``len`` function to access other predictable indices, like the middle character of a string.:
@@ -63,8 +61,8 @@ You can use the ``len`` function to access other predictable indices, like the m
 .. sourcecode:: python
 
     fruit = "grape"
-    midchar = fruit[len(fruit)//2]
-    # the value of midchar is "a"
+    mid_char = fruit[len(fruit)//2]
+    # the value of mid_char is "a"
 
 As with strings, the function ``len`` returns the length of a list (the number of items in the list).  
 However, since lists can have items which are themselves sequences (e.g., strings), 

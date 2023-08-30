@@ -11,7 +11,7 @@ Strings, Lists and Tuples
 =========================
 
 Throughout the first chapters of this book we have used strings to represent words or phrases that we
-wanted to print out. Our definition was simple: a string is simply some characters inside quotes. A string is like a list, but can hold different types of objects.
+wanted to print out. Our definition was simple: a string is simply some characters inside quotes. A string is like a list, but it can't hold different types of objects like a list can - a string can only hold some number of characters.
 In Chapter 5, when we introduced for loops, we introduced the index operator to access individual characters of a string while iterating over a string and we introduced lists of items that we can iterate over as well.
 In this chapter, we explore strings and lists in much more detail. 
 
@@ -51,8 +51,8 @@ elements in square brackets ( ``[`` and ``]``).
 
 .. sourcecode:: python
 
-    [10, 20, 30, 40]
-    ["spam", "bungee", "swallow"]
+    list_of_nums = [10, 20, 30, 40]
+    bird_list = ["parrot", "dove", "swallow"]
 
 The first example is a list of four integers. The second is a list of three
 strings. As we said above, the elements of a list don't have to be the same type.  The following
@@ -61,7 +61,7 @@ another list.
 
 .. sourcecode:: python
 
-    ["hello", 2.0, 5, [10, 20]]
+    list_of_things = ["hello", 2.0, 5, [10, 20]]
 
 
 .. note:: WP: Don't Mix Types!
@@ -188,7 +188,7 @@ There is one other useful method on lists: pop(). Pop removes an item from the e
    print(item)
    print(my_list)
 
-Of course, all of the methods discussed above only apply to lists, because only lists can be changed. You cannot call append() or remove(x) or pop() on a tuple. 
+It is important to remember that append(), pop(), and remove() only apply to lists, because only lists can be changed. You cannot call append() or remove() or pop() on a tuple or on a string.
 
 **Check your understanding**
 

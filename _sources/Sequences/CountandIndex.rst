@@ -51,9 +51,9 @@ using count on.
 
 When you run the activecode window above, you'll see how count with a list works. Notice how "4" has a 
 count of zero but 4 has a count of three. This is because the list ``z`` only contains the integer 4. 
-There are n strings in this list that are "4". Additionally, when we check the count of "a", we see that the 
+There are no strings in this list that are "4". Additionally, when we check the count of "a", we see that the 
 program returns zero. Though some of the words in the list *contain* the letter "a", the program is 
-looking for items in the list that are *just* the letter "a". 
+looking for items in the list that are *just* the string "a". 
 
 Index
 -----
