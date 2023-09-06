@@ -20,7 +20,7 @@ In this chapter we have shown the steps in creating an event-based graphical pro
 * Create a draw() function that draws the working area of canvas
 * Tell the Python interpreter to start listening for events on the canvas and the controls
 
-We've shown these steps in bits and pieces, and in this chapter, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You should copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together. 
+We've shown these steps in bits and pieces, and in this section, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You should copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together. 
 
 .. code-block:: python
     :linenos:
@@ -255,25 +255,35 @@ We've shown these steps in bits and pieces, and in this chapter, we want to show
     frame.start()
 
 
-The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-82) and for input device events (lines 83-127), other functions (lines 129-206) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 208-235).
+The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-75) and for input device events (lines 77-129), other functions (lines 132-198) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 201-228).
 
 The way this code works is that there is some drawing state that is saved in the collection of global variables. As the user interacts with the canvas, circles are drawn when the user drags and text is stamped when the user clicks. The color and size of the circles, the color and fontsize of the text, and the background color of the canvas are determined by the values of the global variables. By interacting with the GUI controls, the user can change some of these things (the fill color of the circles/text, the outline width for the circles). The user can also change the value of the text stamp by typing text into the text input box and hitting enter. Whenever such changes are made, they only impact subsequent drawing actions on the canvas. 
 
-Everything that the user draws on the canvas (which in this case is only circles and text stamps) is stored in a series of lists. There are three 'parallel' lists to store information about the circles: the position, the color, and the outline width. So, everytime a new circle is made because the user continues to drag the mouse, a position, a color and an outline width is added to the three lists that store this information. Thus, these three lists will always all bbe the same length. Similarly, everytime the user clicks on the canvas, a text stamp is added. This involves storing the position, the text string, and the color, in three separate lists. 
+Everything that the user draws on the canvas (which in this case is only circles and text stamps) is stored in a series of lists. There are three 'parallel' lists to store information about the circles: the position, the color, and the outline width. So, every time a new circle is made because the user continues to drag the mouse, a position, a color and an outline width is added to the three lists that store this information. Thus, these three lists will always all be the same length. Similarly, every time the user clicks on the canvas, a text stamp is added. This involves storing the position, the text string, and the color, in three separate lists. 
 
-Some of the drawing state is change via key presses. To change the fill color for circles/text, the user has to press 'r', 'g', or 'b' on their keyboard (see lines 110-121, which all call the set_fill_color() function on lines 159-163).
+Some of the drawing state is changed via key presses. To change the fill color for circles/text, the user has to press 'r', 'g', or 'b' on their keyboard (see lines 114-119, which all call the set_fill_color() function).
 
-The user can clear the canvas two ways: by pressing the clear button, or by pressing 'c' on the keyboard. Note that both of these handlers do the same thing: they call the clear_canvas() function. In fact, all of the handlers simply call another function that does the work. While we could have just put the code directly in the handler, it is better to have separate functions so that the code can be invoked in other ways. 
+The user can clear the canvas two ways: by clicking on the clear button, or by typing 'c' on the keyboard. Note that both of these handlers do the same thing: they call the clear_canvas() function. In fact, all of the handlers simply call another function that does the work. While we could have just put the code directly in the handler, it is better to have separate functions so that the code can be invoked in other ways. 
 
-The canvas background color is not something that we have to draw as part of the draw() method - it is drawn automatically for us by the SimpleGUI module. We can specify the color of the background, though, which we do after we create the initial frame, see lines 212 and 213. In addition, the user can toggle the background color between grey and white by pressing the <color> background button. Note that this button always shows the *other* color. So, if the background is currently grey, the button says "White background" telling the user what will happen if they press the button. If you look at the code for the toggle_background() function on lines 
-164-173, you'll note that this code checks what the current background color is, sets the background color to the other one, sets the button to label to say the opposite, and then calls the SimpleGUI frame method, set_canvas_background() to actually update the canvas background color.
+The canvas background color is not something that we have to draw as part of the draw() method - it is drawn automatically for us by the SimpleGUI module. We can specify the color of the background, though, which we do after we create the initial frame, see line 207. In addition, the user can toggle the background color between grey and white by pressing the <color> background button. Note that this button always shows the *other* color. So, if the background is currently grey, the button says "White background" telling the user what will happen if they press the button. If you look at the code for the toggle_background() function on lines 
+169-178, you'll note that this code checks what the current background color is, sets the background color to the other one, sets the button to label to say the opposite, and then calls set_canvas_background() to actually update the canvas background color.
+
+Practice Exercises
+------------------
+
+You should play with this code and modify it in different ways to help yourself explore, understand and practice using event-based programming. Here are a few things to try:
+
+* add more colours associated with other keyboard letters
+* add font size buttons for small, medium and large, along with a global variable for font size
+* add a 'clear stamps' button that, when pressed, clears only the text stamps, but not the circles
+
+
 
 Global Variables in Event-Based Programs
 ----------------------------------------
 As you look through this code, you might have observed that we have been editing global variables throughout. You may be thinking "I thought we weren't supposed to do that???". Remember that the typical way to avoid using global variables is to pass the information around as parameters and return values. But when the action in the program is handled by event handlers that the Python system calls, we can't add arbitrary parameters, and we don't want to return values to the operating system that called our event handler functions. That is why we are having to write new values to these global variables. This is okay for this class, because you are just learning. But it isn't elegant, and programmers like things to be elegant. Most programmers would consider the code above to be quite clunky because of the use of global variables and parallel lists to store information about circles and text stamps. 
 
 You may be wondering if there is a better way to do this. And there is. The better way to handle sets of information like what we see in this example is through object-oriented programming. You've played with object-oriented programming a bit already - we introduced it in Chapter 4 when we introduced the Turtles module. In using Turtles you have been
-creating objects (turtles and screens) and calling methods of objects (like forward() and pen_down()). In the next section, you will see a version of the program above completely rewritten in an object-oriented fashion, and not a single global variable is assigned in any of the functions. 
+creating objects (turtles and screens) and calling methods on objects (like forward() and pen_down()). In the next section, you will see a version of the program above completely rewritten in an object-oriented fashion, and not a single global variable is assigned in any of the functions. 
 
 
-.. TODO: add some exercises interspersed above: have them add more colours, have them make the font size vary by adding three font size buttons (small, med, large). 

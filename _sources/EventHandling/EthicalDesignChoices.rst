@@ -13,7 +13,7 @@ One of the important parts of writing code, especially when it comes to user-fac
 
 When Default Becomes Standard
 -----------------------------
-Let's take iPhones and the default Siri voice. Siri has a feminine-sounding voice by default and while there are options to change this, very few people do. Words such as President and Secretary are already so strongly linked to men and women respectively, defaulting our friendly phone assistant to a feminine voice reinforces this gender bias - that women are always in service roles. There is a lot of power in choosing default settings that often goes unrecognize.
+Let's take iPhones and the default Siri voice. Siri has a feminine-sounding voice by default and while there are options to change this, very few people do. Words such as President and Secretary are already so strongly linked to men and women respectively, defaulting our friendly phone assistant to a feminine voice reinforces this gender bias - that women are always in service roles. There is a lot of power in choosing default settings that often goes unrecognized.
 
 
 Checkboxes, Radio Buttons, Dropdowns...oh my!
@@ -25,7 +25,9 @@ In some scenarious, we can combat default settings by providing a blank choice o
     :width: 300
     :align: center
 
-Choosing to have an "Other" or "Not Specified" option is a solution that may work for some scenarios but for many it does not. When a user goes to select information that will identify them, if they don't see an option for them, we are telling the user, "this software isn't for you". Even with an "unspecified" option, it can make a user feel left out, marginalized, and not considered when they interact with a product. Designers and developers are becoming more mindful of how these decisions affect people but we still see dropdowns for "Religion" or "Ethnicity" that do not allow a user to select more than one. Even with options like "interfaith" and "unspecified gender", we clump peoples with all different backgrounds and genders together. It becomes glaringly obvious that all considersations weren't discussed when implementing a screen. If you go on to develop software, these are decisions you will have to consider, and it is your responsibility to be inclusive so that people don't feel marginalized by your software.
+Choosing to have an "Other" or "Not Specified" option is a solution that may work for some scenarios but for many it does not. When a user goes to select information that will identify them, if they don't see an option for them, we are telling the user, "this software isn't for you". Even with an "unspecified" option, it can make a user feel left out, marginalized, and not considered when they interact with a product.
+
+Designers and developers are becoming more mindful of how these decisions affect people, but we still see dropdowns for "Religion" or "Ethnicity" that do not allow a user to select more than one. Even with options like "interfaith" and "unspecified gender", we clump peoples with all different backgrounds and genders together. It becomes glaringly obvious that all considersations weren't discussed when implementing an interface. If you go on to develop software, these are decisions you will have to consider, and it is your responsibility to be inclusive so that people don't feel marginalized by your software.
 
 **Check your understanding**
 

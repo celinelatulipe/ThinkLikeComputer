@@ -9,7 +9,7 @@
 Event-Based Programming
 =======================
 
-Throughout this book, we have seen tidbits of interactive programming: using the input() statement to get information from the user, and using turtles to draw output in a window for an end user to view. We have even done a little bit of event-based programming by making use of the mouse and keyboard listeneers that are available in the turtle module. In this chapter, we formally introduce the idea of event-based programming, which is the most common form of architecture for interactive programs. The purpose of this chapter is to help you to understand the structure of event-based programming, which underlies many of the software systems, mobile apps, video games, and other digital systems you use daily. This is a huge topic, and there are entire books and courses about how to do event-based programming and how to design user interfaces for such programs. This chapter gives you a high level overview and a chance to briefly try out these concepts. 
+Throughout this book, we have seen tidbits of interactive programming: using the input() statement to get information from the user, and using turtles to draw output in a window for an end user to view. We have even done a little bit of event-based programming by making use of the mouse and keyboard listeneers that are available in the turtle module. In this chapter, we formally introduce the idea of event-based programming, which is the most common way to structure interactive programs. The purpose of this chapter is to help you to understand this structure, which underlies many of the software systems, mobile apps, video games, and other digital systems you use daily. This is a huge topic, and there are entire books and courses about how to do event-based programming and how to design user interfaces for such programs. This chapter gives you a high level overview and a chance to briefly try out these concepts. 
 
 
 
@@ -24,9 +24,9 @@ Topics
 Learning Objectives
 -------------------
 
-At the end of this chapter, you should be able to use the Python simpleGUI module to:
+At the end of this chapter, you should be able to use the Python simpleGUI module in CodeSkulptr to:
 
 * Create a simple graphical user interface
 * Write event handling functions to react to end user actions
-* Register event handler functions for the operating systtem to listen for
+* Register event handler functions for the operating system to listen for
 
