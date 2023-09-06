@@ -54,10 +54,10 @@ Note that in this line of code we have said that we want a button and we want th
 
 Run the simpleGUI starter script and make sure your button appears. Note that the SimpleGUI module places controls in the order you add them to the script. If you want the background button to be at the top, you have to specify it before the other button and the label. Try clicking the new button and make sure that the canvas background changes color.
 
-Now, to make this button better, we can turn it into a toggle button. To do this, we want to find out what the button says, change the color, then change the button to say the other color. So, if the button says "White Background", we want to set the background to white, then change the button text to say "Black Background". If the buttons says "Black Background" we want to do the opposite. The new version of the bkg_button_click() function below does this. Try it in your browser.
+Now, to make this button better, we can turn it into a toggle button. To do this, we want to find out what the button says, change the color, then change the button to say the other color. So, if the button says "White Background", we want to set the background to white, then change the button text to say "Black Background". If the buttons says "Black Background", we want to do the opposite. The new version of the bkg_button_click() function below does this. Make this change in your CodeSkulptr script and test it to make sure it works properly.
 
 .. image:: Figures/bkg_button_code_snippet.png
-    :width: 300
+    :width: 500
     :align: center
 
 

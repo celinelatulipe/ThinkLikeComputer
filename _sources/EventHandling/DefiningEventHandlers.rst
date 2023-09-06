@@ -48,85 +48,13 @@ When you create input event handlers, you need to decide exactly what you want t
 
 Different GUI toolkits will handle events slightly differently. For example, some toolkits will allow you to register events for specific keys, while other toolkits will only allow you to register general key events and then pass you the information about what key was pressed. In this latter case, you need to use conditional statements inside the key event listeners to specify what code executes depending on what key was activated. The SimpleGUI module we are working with in this chapter only handles mouse click and drag and key up and down events. 
 
-Event Handlers Are Short
--------------------------
 
-It is fairly typical that event handler functions are really short. They often contain only one or two lines of code, and these lines just call some other functions. You might think, why not just put the code from those functions straight into the event handlers?
-
-
-Let's look at a turtle example to think about this:
-
-.. activecode:: ac11_6_1
-    :nocodelens:
-   
-    import turtle
-    import random
-
-    def random_square():
-        """ draws a random square with a random small size 
-            at turtle's current location
-             Pre-Condition: Turtle name alex exists """
-        side = random.randrange(10, 30) # get random size
-        for _ in range(4): #draw a square in location
-            alex.forward(side)
-            alex.left(90)
-
-    def move_to_location(x, y):
-        alex.penup() 
-        alex.goto(x,y) # move to location without drawing
-        alex.pendown()
-
-
-    def random_location():
-        """ Take turtle to a random location on canvas
-            Pre-conditions: Assume turtle is named alex, and
-            canvas is 400 x 400 """
-        x = random.randrange(-200, 200) # get random x location
-        y = random.randrange(-200, 200) # get random y location
-        move_to_location(x,y)
-
-    def random_colour():
-        """ Sets turtle to a random colour """
-        alex.color(random.random(), random.random(), random.random())
-
-    def key_r():
-        """ draw randomly coloured and positioned square """
-        random_location()
-        random_colour()
-        random_square()
-
-    def key_c():
-        """ get new random colour """
-        random_colour()
-
-    def key_q():
-        """ close the canvas window """
-        wn.bye()
-
-    def click(x, y):
-        """ go to clicked location and draw square """
-        move_to_location(x,y)
-        random_square()
-
-    wn = turtle.Screen()      # Set up the window and its attributes
-    alex = turtle.Turtle()    # create alex
-    alex.speed(10)            # make alex draw fast
-    random_colour()
-    random_location()
-    random_square()
-
-    wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()' when the 'r' key is pressed on the keyboard
-    wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
-    wn.onkey(key_c, 'c')    # tell the operating system to execute function 'key_c()' when the 'c' key is pressed on the keyboard
-    wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
-    wn.listen()             # tell the operating system to listen for events on the canvas window
-
-This turtle example registers function handlers for a mouse click event and three different key events. In the turtle module, you can register to listen for specific keys, which you will see is different than in the SimpleGUI module. But what you should pay attention to here is the fact that the code in these function handlers is just a few calls to other functions. Note that the move_to_location() function is called from the click event handler, but it is also called from inside the random_location function. Likewise, the random_colour() function is called from the key_r handler and the key_c handler. And the random_square() function is called from the key_r handler and the click handler. If we had put the code that is in random_square() into the click handler directly, we wouldn't be able to use it whenever we want. Remember than we **never call handler functions directly**, they only get called by the system. By putting the square drawing commands into a separate functon, we can call it from the main code (like on line 55), and from various different event handler functions. This organization gives us more flexibility. 
+It is fairly typical that event handler functions are really short. They often contain only one or two lines of code, and these lines just call some other functions. Remember than we **never call handler functions directly**, they only get called by the system. Think about a turtle program that has a function that draws a square in a random location on a canvas. This function can be written once, and then it can be called from a keyboard handler when the user presses 's' and from a mouse handler when the user clicks on the canvas. Each of these handlers would just have one line of code - the call to the random square drawing function. This organization gives us more flexibility, and allows us to not have repeated code (it would be bad to have the same square drawing code in both the keyboard handler for key s, and in the mouse click handler).
 
 Registering Event Handlers
 --------------------------
 
-In addition to writing an event handler function (like the key_r() function in the turtle example above), you also need to register the event handler, so that the Python interpreter knows that you want to receive such events. In some toolkits, you register the event as a separate action. That is the case in the turtle example above, where the last five lines of the program regiseter event handlers. The very last line basically tells the Python interpreter - okay now start listening! In the SimpleGUI module, you register handlers in the same line of code that you use to create the user interface widget (for buttons and textboxes), but you have separate instructions to register the more general event handlers that respond to key presses and mouse clicks. 
+In addition to writing an event handler function, you also need to *register* the event handler, so that the Python interpreter knows that you want to receive such events. In some toolkits, you register the event on a separate line of code That is the case in the turtle examples seen in earlier chapters. In the SimpleGUI module, you register handlers in the same line of code that you use to create the user interface widget (for buttons and textboxes), but you have separate instructions to register the more general event handlers that respond to key presses and mouse clicks. 
 
-In all cases, once you have added GUI elements to the window, written the event handlers, and registered the event handlers, you need something to tell the Python interpreter to start listening for events (in the Turtle module it's ``wn.listen()`` in the SimpleGUI module it's ``frame.start()``).
+In all cases, once you have added GUI elements to the window, written the event handlers, and registered the event handlers, you need something to tell the Python interpreter to start listening for events (in the Turtle module it's ``wn.listen()``; in the SimpleGUI module it's ``frame.start()``).
 
