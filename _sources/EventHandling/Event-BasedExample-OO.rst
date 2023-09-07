@@ -10,15 +10,20 @@
    :prefix: func-1-
    :start: 1
 
-Warning!
-========
-This section is long and involved. If you have gotten to this point in the chapter and your brain is exhausted, you can skip this section and go to the next one. You can always come back and read this later. The content here is not going to be tested. But, if you are interested in what comes later in computer programming, or how to make a more elegant version of the event-based example in the last section, read on!
+Event-Based Programming Made Elegant
+====================================
+
+There is a way to do event-based programming that doesn't involve having lots of global variables to keep track of the state of the program. The solution is to use objects. In this section you'll get a simple introduction to object-oriented programming, and then you can see how the event-based program from the last section can be rewritten in a way that is more elegant, uses no global variables, and is much more easy to extend with new features. 
+
+.. caution::
+
+   This section is long and involved. If you have gotten to this point in the chapter and your brain is exhausted, you can skip this section and go to the next one. You can always come back and read this later. The content here is not going to be tested. But, if you are interested in what comes later in computer programming, or how to make a more elegant version of the event-based example in the last section, read on!
 
 
 A Simple Class Example
-----------------------
+==============================
 
-Object-oriented code is often referred to as 'OO-code' for short. In OO programming, you create objects to represent things in your program. Instead of having a variable for student number, a variable for student name, and a variable for student grade, you can have a single student **object** that stores all of that related information together.  
+Object-oriented code is often referred to as 'OO-code' for short. In OO programming, you create objects to represent things in your program. Instead of having a variable for student number, a variable for student name, and a variable for student grade, you can have a single student object that stores all of that related information together.  
 
 Objects are things that have properties and methods. As an example, a dog has properties that describe the dog (fur color, breed, name, barking sound, name of human owner, age, etc.) and methods that define what it can do (bark, eat, sleep, fetch, etc.). Quite often, calling a method leads to the properties being updated. In object-oriented programming, we create **classes**, which you can think of as blueprints, and from any class you can create objects of that class. So, we could create a general class that can be used to make dog objects:
 
@@ -55,7 +60,7 @@ And then, we can ask the class to give us a dog, specifying properties of the do
 
     bingo = Dog("beagle", "Bingo", "Angie", "brown and white", "Hawoooooooooooo")
 
-The above line of code says create a Dog object, with the following information. It calls a special method inside the Dog class called a **constructor**. In Python a constructor is the method that has the special name __init__. The constructor method builds a new Dog object with the given information and returns a reference to the dog. In the line above the new Dog object is referenced by the variable *bingo*. Visually, this looks like this:
+The above line of code says create a Dog object, with the following information. It calls a special method inside the Dog class called a **constructor**. In Python a constructor is the method that has the special name __init__. The constructor constructs a new Dog object with the given information and returns a reference to the dog. In the line above the new Dog object is referenced by the bingo variable. Visually, this looks like this:
 
 .. image:: Figures/dog_class_diagram.png
     :width: 800
