@@ -21,7 +21,7 @@ There is a way to do event-based programming that doesn't involve having lots of
 
 
 A Simple Class Example
-==============================
+----------------------
 
 Object-oriented code is often referred to as 'OO-code' for short. In OO programming, you create objects to represent things in your program. Instead of having a variable for student number, a variable for student name, and a variable for student grade, you can have a single student object that stores all of that related information together.  
 
