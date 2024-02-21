@@ -1,0 +1,352 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>4.2. The for Loop &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.3. Turtle Repetition" href="TurtleRepetitionwithaForLoop.html" />
+    <link rel="prev" title="4.1. Introduction: Iteration" href="intro-Iteration.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=TheforLoop'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.1. </span>Introduction: Iteration" data-toggle="tooltip">
+    <a href="intro-Iteration.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4.3. </span>Turtle Repetition' data-toggle="tooltip" >              
+    <a href="TurtleRepetitionwithaForLoop.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="the-for-loop">
+<span id="index-0"></span><h1><span class="section-number">4.2. </span>The <strong>for</strong> Loop<a class="headerlink" href="#the-for-loop" title="Permalink to this heading">¶</a></h1>
+
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
+        <div id="forloopvid" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="4.2.1"
+            data-video-width="560" data-video-videoid="X1-UNHUajfk"
+            data-video-divid="forloopvid" data-video-start="0"
+            data-video-end="-1" ></div>
+    </div>
+    <p>Back when we drew the images with turtle it could be quite tedious. If we wanted to draw a square
+then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon,
+or an octagon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.</p>
+<p>In Python, the <strong>for</strong> statement allows us to write programs that implement iteration. As a simple
+example, let’s say we have some friends, and we’d like to send them each an email inviting them to
+our party. We don’t quite know how to send email yet, so for the moment we’ll just print a message
+out to the console to imitate the idea of emailing each friend.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac4_2_1 data-question_label="4.2.2">
+<div id=ac4_2_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac4_2_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio='*doubleq*Overall Tour*doubleq*; 1-2: Example04_Tour01_Line01; 2: Example04_Tour01_Line02; 1: Example04_Tour01_Line03;*atype*'      
+           data-wasm=/_static
+     style="visibility: hidden;">
+for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
+    print("Hi", name, "Please come to my party on Saturday!")
+</textarea>
+</div>
+</div>
+<p>Take a look at the output produced when you press the <code class="docutils literal notranslate"><span class="pre">run</span></code> button. There is one line printed for
+each friend. Here’s how it works:</p>
+<ul class="simple">
+<li><p><strong>name</strong> in this <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is called the <strong>loop variable</strong> or, alternatively, the <strong>iterator variable</strong>.</p></li>
+<li><p>The list of names in the square brackets is the sequence over which we will iterate.</p></li>
+<li><p>Line 2  is the <strong>loop body</strong>.  The loop body is always
+indented. The indentation determines exactly what statements are “in the
+loop”. The instruction in the loop body is performed
+one time for each name in the list.</p></li>
+<li><p>On each <em>iteration</em> or <em>pass</em> of the loop, first a check is done to see if
+there are still more items to be processed.  If there are none left (this is
+called the <strong>terminating condition</strong> of the loop), the loop has finished.
+Program execution continues at the next statement <strong>after</strong> the loop body.</p></li>
+<li><p>If there are items still to be processed, the loop variable is updated to
+refer to the next item in the list.  This means, in this case, that the loop
+body is executed here 7 times, and each time <code class="docutils literal notranslate"><span class="pre">name</span></code> will refer to a different
+friend.</p></li>
+<li><p>At the end of each execution of the body of the loop, Python returns
+to the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement, to see if there are more items to be handled.</p></li>
+</ul>
+<p>The overall syntax is <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">&lt;loop_var_name&gt;</span> <span class="pre">in</span> <span class="pre">&lt;sequence&gt;:</span></code></p>
+<ul class="simple">
+<li><p>Between the words <strong>for</strong> and <strong>in</strong>, there must be a <strong>variable name</strong> for the loop variable. You can’t put a whole expression there.</p></li>
+<li><p>A colon is required at the end of the line</p></li>
+<li><p>After the word <strong>in</strong> and before the colon is an expression that must evaluate to a sequence (e.g, a string or a list). It could be a literal, or a variable name, or a more complex expression. In the example on this page, there is a literal list. You will see examples throughout this chapter that show other ways that a sequence can be specified in a for loop.</p></li>
+<li><p>Although in this example there is only one instruction in the loop body, there are
+often multiple instructions.</p></li>
+</ul>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.1. Introduction: Iteration' data-toggle="tooltip">
+  <a href="intro-Iteration.html" aria-label="Previous - 4.1. Introduction: Iteration">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 4.3. Turtle Repetition' data-toggle="tooltip" >
+    <a href="TurtleRepetitionwithaForLoop.html" aria-label="Next - 4.3. Turtle Repetition">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

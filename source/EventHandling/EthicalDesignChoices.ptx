@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<section xml:id="event-handling_default-bias">
+  <title>Default Bias</title>
+  <introduction>
+    <p>One of the important parts of writing code, especially when it comes to user-facing screens, is default settings. Often it is left up to a team of developers to decide what the default settings of an application or program should be and in this, developers wield a lot of power, often unknowningly. People have an inherent preference for inaction and leaving things as they are. Not many individuals have the know-how, or the will to make minute changes to their computer program or mobile phone. Issues begin to arise when these default options reinforce gender, racial or other negative stereotypes.</p>
+  </introduction>
+  <subsection xml:id="event-handling_when-default-becomes-standard">
+    <title>When Default Becomes Standard</title>
+    <p>Let's take iPhones and the default Siri voice. Siri has a feminine-sounding voice by default and while there are options to change this, very few people do. Words such as President and Secretary are already so strongly linked to men and women respectively, defaulting our friendly phone assistant to a feminine voice reinforces this gender bias - that women are always in service roles. There is a lot of power in choosing default settings that often goes unrecognized.</p>
+  </subsection>
+  <subsection xml:id="event-handling_checkboxes-radio-buttons-dropdowns-oh-my">
+    <title>Checkboxes, Radio Buttons, Dropdowns&#x2026;oh my!</title>
+    <p>In some scenarious, we can combat default settings by providing a blank choice or <q>Select one</q> option and allow the user to make choices. This is often seen when it comes to data entry for fields such as Religion, Title and Gender. But what happens when you don't fit into any of the choices?</p>
+    <image source="EventHandling/Figures/gender-dropdown.png" width="30%"/>
+    <p>Choosing to have an <q>Other</q> or <q>Not Specified</q> option is a solution that may work for some scenarios but for many it does not. When a user goes to select information that will identify them, if they don't see an option for them, we are telling the user, <q>this software isn't for you</q>. Even with an <q>unspecified</q> option, it can make a user feel left out, marginalized, and not considered when they interact with a product.</p>
+    <p>Designers and developers are becoming more mindful of how these decisions affect people, but we still see dropdowns for <q>Religion</q> or <q>Ethnicity</q> that do not allow a user to select more than one. Even with options like <q>interfaith</q> and <q>unspecified gender</q>, we clump peoples with all different backgrounds and genders together. It becomes glaringly obvious that all considersations weren't discussed when implementing an interface. If you go on to develop software, these are decisions you will have to consider, and it is your responsibility to be inclusive so that people don't feel marginalized by your software.</p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question11_1_1">
+      <statement>
+        <p>How can we ensure our code is free from bias?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Make sure we have differently gendered individuals on a development team</p>
+          </statement>
+          <feedback>
+            <p>This might help get different perspectives but you can't guarantee your code is free from bias like this. Everyone has different backgrounds and experiences that make up how they view the world and it's important we remember that.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Ensure we only hire the best developers</p>
+          </statement>
+          <feedback>
+            <p>How do we measure the best? Is it the nicest? The best university? Previous work experience? Best isn't a singly layered quantifiable attribute. This is no way to hire a team that will make a worthwhile product.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Pick default settings from a hat to avoid human bias</p>
+          </statement>
+          <feedback>
+            <p>While this might stop humans from being the final decider, someone still has to fill that.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>You can't write code free from bias</p>
+          </statement>
+          <feedback>
+            <p>Correct, it's not possible. All we can do is make sure we are gathering perspectives and keeping these conversations flowing and open. It's very easy to settle into what's easiest to code or think of but if we never push outside that bubble we never consider who else might benefit from (or be marginalized by) our code.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

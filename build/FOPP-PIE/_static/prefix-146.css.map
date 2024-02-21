@@ -1,0 +1,1 @@
+{"version":3,"file":"prefix-146.css","mappings":"AAAA,mBACI,cACJ","sources":["webpack://WebComponents/./runestone/mchoice/css/mchoice.css"],"sourcesContent":[".runestone label p {\n    display: inline;\n}\n"],"names":[],"sourceRoot":""}

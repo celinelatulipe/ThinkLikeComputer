@@ -1,0 +1,499 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>9.6. The Slice Operator &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.7. Concatenation and Repetition" href="ConcatenationandRepetition.html" />
+    <link rel="prev" title="9.5. Length" href="Length.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=TheSliceOperator'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">9.5. </span>Length" data-toggle="tooltip">
+    <a href="Length.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">9.7. </span>Concatenation and Repetition' data-toggle="tooltip" >              
+    <a href="ConcatenationandRepetition.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="the-slice-operator">
+<span id="index-0"></span><h1><span class="section-number">9.6. </span>The Slice Operator<a class="headerlink" href="#the-slice-operator" title="Permalink to this heading">¶</a></h1>
+<p>A substring of a string is called a <strong>slice</strong>. Selecting a slice is similar to
+selecting a character:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_1 data-question_label="9.6.1">
+<div id=ac9_5_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac9_5_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+singers = "Peter, Paul, and Mary"
+print(singers[0:5])
+print(singers[7:11])
+print(singers[17:21])
+</textarea>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">slice</span></code> operator <code class="docutils literal notranslate"><span class="pre">[n:m]</span></code> returns the part of the string starting
+with the character at index n and
+going up to but <em>not including</em> the character at index m.</p>
+<p>If you omit the first index (before the colon), the slice starts at the
+beginning of the string. If you omit the second index, the slice goes to the
+end of the string. What do you think <code class="docutils literal notranslate"><span class="pre">fruit[:]</span></code> means?.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_2 data-question_label="9.6.2">
+<div id=ac9_5_2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac9_5_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+fruit = "banana"
+print(fruit[:3])
+print(fruit[3:])
+</textarea>
+</div>
+</div>
+<p>It’s important to note that slicing a string does not change the original string (remember - strings are immutable, you can make a copy but once a string is created, it never changes). So if you want to do something with a slice of a string, you can either embed it in an expression, or you can save it to a variable, as in the example below, where we take slices of two strings, concatenate them with a hyphen in between and assign that to a new variable. Note that the original strings have not been changed.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_3 data-question_label="9.6.3">
+<div id=ac9_5_3_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac9_5_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+parent1_name = "Janus Franklin"
+parent2_name = "Raj Singh"
+kids_last_name = parent1_name[6:] + "-" + parent2_name[4:]
+print("First parent's name: ", parent1_name)
+print("Second parent's name: ", parent2_name)
+print("Kid's last name: ", kids_last_name)
+</textarea>
+</div>
+</div>
+<section id="list-slices">
+<h2><span class="section-number">9.6.1. </span>List Slices<a class="headerlink" href="#list-slices" title="Permalink to this heading">¶</a></h2>
+<p>The slice operation we saw with strings also works on lists.  Remember that the first index is the starting point for the slice and the second number is one index past the end of the slice (up to but not including that element).  Recall also
+that if you omit the first index (before the colon), the slice starts at the
+beginning of the sequence. If you omit the second index, the slice goes to the
+end of the sequence. Before running the code below, complete the comments on lines 2-5 by adding your predictions about what will be printed.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_4 data-question_label="9.6.1.1">
+<div id=ac9_5_4_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac9_5_4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+a_list = ['a', 'b', 'c', 'd', 'e', 'f']
+print(a_list[1:3])  # Predicted output:
+print(a_list[:4])   # Predicted output:
+print(a_list[3:])   # Predicted output:
+print(a_list[:])    # Predicted output:
+</textarea>
+</div>
+</div>
+</section>
+<section id="tuple-slices">
+<h2><span class="section-number">9.6.2. </span>Tuple Slices<a class="headerlink" href="#tuple-slices" title="Permalink to this heading">¶</a></h2>
+<p>We can’t modify the elements of a tuple, but we can make a variable reference a new tuple holding different information.
+Thankfully we can also use the slice operation on tuples as well as strings and lists. To construct the new tuple, we can
+slice parts of the old tuple and join up the bits to make a new tuple. So <code class="docutils literal notranslate"><span class="pre">julia</span></code> has a new recent film, and we might
+want to change her tuple. We can easily slice off the parts we want and concatenate them with a new tuple.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_5 data-question_label="9.6.2.1">
+<div id=ac9_5_5_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac9_5_5_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+print(julia[2])
+print(julia[2:6])
+
+print(len(julia))
+
+julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
+print(julia)
+</textarea>
+</div>
+</div>
+<p>The observant student might notice that the code above appears to modify the tuple assigned to the variable julia. Didn’t we say that tuples are immutable? What’s happening on line 7 in the above example is that a new tuple is being created, using parts of the old tuple and some new information, and then it is being assigned back to the reference variable julia. This very subtle difference (which unfortunately does not really show in CodeLens) becomes important when we start passing sequences as function parameters later in this chapter.</p>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9.6.2.2" data-multipleanswers="false"  id="question9_5_1"  style="visibility: hidden;">
+    <p>What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;python rocks&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question9_5_1_opt_a">python</li><li data-component="feedback">That would be s[0:6].</li>
+    
+    <li data-component="answer"  id="question9_5_1_opt_b">rocks</li><li data-component="feedback">That would be s[7:].</li>
+    
+    <li data-component="answer" data-correct='yes' id="question9_5_1_opt_c">hon r</li><li data-component="feedback">Yes, start with the character at index 3 and go up to but not include the character at index 8.</li>
+    
+    <li data-component="answer"  id="question9_5_1_opt_d">Error, you cannot have two numbers inside the [ ].</li><li data-component="feedback">This is called slicing, not indexing. It requires a start and an end.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9.6.2.3" data-multipleanswers="false"  id="question9_5_2"  style="visibility: hidden;">
+    <p>What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">],</span> <span class="p">[</span> <span class="p">],</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">False</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alist</span><span class="p">[</span><span class="mi">4</span><span class="p">:])</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="question9_5_2_opt_a">[ [ ], 3.14, False]</li><li data-component="feedback">Yes, the slice starts at index 4 and goes up to and including the last item.</li>
+    
+    <li data-component="answer"  id="question9_5_2_opt_b">[ [ ], 3.14]</li><li data-component="feedback">By leaving out the upper bound on the slice, we go up to and including the last item.</li>
+    
+    <li data-component="answer"  id="question9_5_2_opt_c">[ [56, 57, "dog"], [ ], 3.14, False]</li><li data-component="feedback">Index values start at 0.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9.6.2.4" data-multipleanswers="false"  id="question9_5_3"  style="visibility: hidden;">
+    <p>What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.34</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;SI106&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question9_5_3_opt_a">2</li><li data-component="feedback">The list begins with the second item of L and includes everything up to but not including the last item.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question9_5_3_opt_b">3</li><li data-component="feedback">Yes, there are 3 items in this list.</li>
+    
+    <li data-component="answer"  id="question9_5_3_opt_c">4</li><li data-component="feedback">The list begins with the second item of L and includes everything up to but not including the last item.</li>
+    
+    <li data-component="answer"  id="question9_5_3_opt_d">5</li><li data-component="feedback">The list begins with the second item of L and includes everything up to but not including the last item.</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac9_5_6 data-question_label="9.6.2.5">
+<div id=ac9_5_6_question class="ac_question">
+<p>Create a new list using the 9th through 12th elements (four items in all) of <code class="docutils literal notranslate"><span class="pre">new_lst</span></code> and assign it to the variable <code class="docutils literal notranslate"><span class="pre">sub_lst</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="ac9_5_6_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(sub_lst, new_lst[8:12], "Testing that sub_lst has the correct elements assigned.")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 9.5. Length' data-toggle="tooltip">
+  <a href="Length.html" aria-label="Previous - 9.5. Length">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 9.7. Concatenation and Repetition' data-toggle="tooltip" >
+    <a href="ConcatenationandRepetition.html" aria-label="Next - 9.7. Concatenation and Repetition">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<section xml:id="data-and-instructions_function-calls">
+  <title>Function Calls</title>
+  <subsection xml:id="data-and-instructions_function-calls-intro">
+    <title>Calling Functions in Python</title>
+    <p>The Python interpreter can compute new values with function calls. You are familiar with the idea of functions from high school algebra. There you might define a function <c>f</c> by specifying how it transforms an input into an output, <c>f(x) = 3x + 2</c>. Then, you might write <c>f(5)</c> and expect to get the value 17.</p>
+    <p>Python adopts a similar syntax for invoking functions. If there is a named function <c>foo</c> that takes a single input, we can invoke foo on the value 5 by writing <c>foo(5)</c>.</p>
+    <p>There are many built-in functions available in Python. You'll be seeing some in this chapter and the next couple of chapters.</p>
+    <p>Functions are like factories that take in some material, do some operation, and then send out the resulting object.</p>
+    <image source="DataAndInstructions/Figures/function_object.png" width="50%" alt="Icon that represents a function. Appears simliar to a factory with three places on top for inputs to come in and a place on the bottom for the output/return value to come out."/>
+    <p>In this case, we refer to the materials as arguments or inputs and the resulting object is referred to as output or return value. This process of taking input, doing something, and then sending back the output is demonstrated in the gif below.</p>
+    <image source="DataAndInstructions/Figures/function_calls.gif" width="50%" alt="Animated gif that deomnstrates using the visual representation of a factory as used above. Shows three arrows coming into the function to represent that input or arguments that a function can require. It then shows the function object shaking, representing an action being completed by the function. Then it shows annother arrow leaving the function image, which represents a return value or output coming from the factory."/>
+    <note>
+      <p>The output of a function is a Python value and we can never really see the internal representation of a value. But we can draw pictures to help us imagine what values are, or we can print them to see an external representation in the console.</p>
+      <p>You have already used a function: <c>print</c>. The <c>print</c> function causes things to appear in the console.</p>
+    </note>
+    <p>It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.</p>
+    <program label="ac2_4_1" interactive="activecode" language="python">
+      <input>
+def square(x):
+  return x * x
+
+def sub(x, y):
+  return x - y
+          </input>
+    <tests>
+    </tests>
+    </program>
+    <p>We've defined two functions above. The code is hidden so as not to bother you (yet) with how functions are defined.
+              <c>square</c> takes a single input parameter, and returns that input multiplied by itself. <c>sub</c> takes two input
+              parameters and returns the result of subtracting the second from the first. Obviously, these functions are not
+              particularly useful, since we have the operators <c>*</c> and <c>-</c> available. But they illustrate how functions work.
+              The visual below illustrates how the <c>square</c> function works.</p>
+    <image source="DataAndInstructions/Figures/square_function.gif" width="50%" alt="a visual of the square function. Four is provided as the input, the function object shakes, and then sixteen comes out from the bottom of the function object."/>
+    <program label="ac2_4_2" interactive="activecode" language="python">
+      <input>
+print(square(3))
+square(5)
+print(sub(6, 4))
+print(sub(5, 9))
+          </input>
+    <tests>
+    </tests>
+    </program>
+    <p>Notice that when a function takes more than one input parameter, the inputs are separated by a comma. Also notice
+              that the order of the inputs matters. The value before the comma is treated as the first input, the value after it
+              as the second input.</p>
+    <p>Again, remember that when Python performs computations, the results are only shown in the console if there's a
+              print statement that says to do that. In the activecode window above, <c>square(5)</c> produces the value 25 but we never
+              get to see that in the console, because it is not printed.</p>
+  </subsection>
+  <subsection xml:id="data-and-instructions_function-calls-as-part-of-complex-expressions">
+    <title>Function calls as part of complex expressions</title>
+    <p>Anywhere in an expression that you can write a literal like a number, you can also write a function call that
+                produces a number.</p>
+    <p>For example:</p>
+    <program label="ac2_4_3" interactive="activecode" language="python">
+      <input>
+print(square(3) + 2)
+print(sub(square(3), square(1+1)))
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>Let's take a look at how that last execution unfolds. Press the <term>Next Step</term> button below a few times to watch how these two lines of code get evaluated.</p>
+    <exercise runestone="se_ac2_4_1a"/> 
+     
+  </subsection>
+  <subsection xml:id="data-and-instructions_parentheses-invoke-functions">
+    <title>Parentheses invoke functions</title>
+    <p>Just typing the name of the function refers to the function as an object, as in the first line in the example below. Typing the name of the function followed by
+                parentheses <c>()</c> invokes (calls) the function. Of course, you have to put any input values that the function needs inside the parentheses.</p>
+    <program label="ac2_4_4" interactive="activecode" language="python">
+      <input>
+print(square)
+print(square(3))
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>In the second line of the example above, the square function is called with the input <c>3</c>. The square function evaluates the input and retunrs the value <c>9</c>. The value <c>9</c> is then passed as the input to the print function. The print function displays <c>9</c> on the console.</p>
+  </subsection>
+</section>

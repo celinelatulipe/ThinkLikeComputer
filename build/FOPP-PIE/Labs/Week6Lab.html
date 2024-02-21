@@ -1,0 +1,417 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>12.6. Week 6 Lab &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.7. Week 7 Lab" href="Week7Lab.html" />
+    <link rel="prev" title="12.5. Week 5 Lab" href="Week5Lab.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=Week6Lab'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">12.5. </span>Week 5 Lab" data-toggle="tooltip">
+    <a href="Week5Lab.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">12.7. </span>Week 7 Lab' data-toggle="tooltip" >              
+    <a href="Week7Lab.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="week-6-lab">
+<h1><span class="section-number">12.6. </span>Week 6 Lab<a class="headerlink" href="#week-6-lab" title="Permalink to this heading">¶</a></h1>
+<div class="admonition-material-covered admonition">
+<p class="admonition-title">Material Covered</p>
+<p>Conditionals, if, if-else, if-elif-else (Chapter 6)</p>
+</div>
+<section id="level-1">
+<h2><span class="section-number">12.6.1. </span>Level 1<a class="headerlink" href="#level-1" title="Permalink to this heading">¶</a></h2>
+<p>In this level you need to search through a string looking for certain key words.</p>
+<ol class="arabic simple">
+<li><p>Underneath the starter code below, create a for loop that will iterate through every word in the key_word list. Make sure you give your iterator variable a good name, as you will need it to refer to each keyword as you iterate through the list.</p></li>
+<li><p>Inside the for loop create an if statement with a condition that checks to see if the current keyword is in the string paragraph.</p>
+<ol class="arabic simple">
+<li><p>If the word is in paragraph, print a message to the console that the word has been found.</p></li>
+<li><p>Otherwise, print that the word was not found.</p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you aren’t sure how to check whether a string is in another string, look at Section 6.4 in the textbook.</p>
+</div>
+<p>Output should look like this:</p>
+<a class="reference internal image-reference" href="../_images/keyword_output.png"><img alt="../_images/keyword_output.png" class="align-center" src="../_images/keyword_output.png" style="width: 300px;" /></a>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lab6_level1 data-question_label="12.6.1.1">
+<div id=lab6_level1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="lab6_level1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 6, Level 1
+################################################################
+
+paragraph = 'computer science can be a rewarding career opportunity. In a world of growing technology, the demand for individuals who have experience with code and artificial intelligence is on the rise'
+
+key_words = ['computer', 'science', 'variables', 'technology', 'security', 'A.I', 'artificial intelligence']
+</textarea>
+</div>
+</div>
+</section>
+<section id="level-2">
+<h2><span class="section-number">12.6.2. </span>Level 2<a class="headerlink" href="#level-2" title="Permalink to this heading">¶</a></h2>
+<p>In this level, you need to sort grades into categories of A, B, C, D and F. The grades need to be separated as follows: A &gt;= 90, 90 &gt; B &gt;= 75, 75 &gt; C &gt;= 60, 60 &gt; D &gt;= 50, 50 &gt; F</p>
+<ol class="arabic simple">
+<li><p>Create a for loop that will iterate 50 times.</p></li>
+<li><p>In the for loop, create a variable that will be set to a random value from 0 to 100.</p></li>
+<li><p>Inside the for loop write code that will appropriately determine the letter grade that goes with the random numeric grade. You will want to use a chained conditional (if-elif-elif) type of structure to check for the different grade levels. For each level, print out the numeric and associated letter grade.</p></li>
+</ol>
+<p>The end result should look something like this (this is shortened example):</p>
+<a class="reference internal image-reference" href="../_images/grade_output.png"><img alt="../_images/grade_output.png" class="align-center" src="../_images/grade_output.png" style="width: 400px;" /></a>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Reference the textbook Section 6.9 on chained conditionals if you don’t remember the syntax.</p>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lab6_level2 data-question_label="12.6.2.1">
+<div id=lab6_level2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="lab6_level2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 6, Level 2
+################################################################
+
+import random
+</textarea>
+</div>
+</div>
+</section>
+<section id="level-3">
+<h2><span class="section-number">12.6.3. </span>Level 3<a class="headerlink" href="#level-3" title="Permalink to this heading">¶</a></h2>
+<p>In this level you will create a game of chance, similar to the card game war. Two players will have a random number generated from 1 to 52 (inclusive), the player with the higher number will win the point. In the case of a tie, a point is awarded to both players. 26 rounds will be played, after which the winner will be displayed.</p>
+<ol class="arabic simple">
+<li><p>Start off by creating two variables to hold points, one for player 1 and one for player 2. Initialize these variables to 0.</p></li>
+<li><p>Create a for loop that will iterate for 26 rounds - note that we have created a constant for this, which you should use.</p></li>
+<li><p>Inside this loop, create two more variables (one for player 1’s card and one for player 2’s card) and assign them random values ranging from 1 to 52 (inclusive), using the randrange function. This represents the 52 cards in a standard deck of cards.</p></li>
+<li><p>Add a print statement that spritns out both players cards (see the samepl output below).</p></li>
+<li><p>Still inside the loop, create a chained conditional statement that responds to three possible states for this card round: if player 1’s card was higher, if player 2’s card was higher, or if it was a tie. Inside each branch of this chained conditional there should be a print statement printing out who got the point (see sample screenshot at the bottom of the level). Inside each branch, you also need to assign points to the winner of each round by incrementing player1’s points, or player2’s points. In the case of a tie, they should both get a point.</p></li>
+<li><p><em>After</em> the for loop, we want to check to see who won the game. Similar to step 4, we need a chained conditional statement to check if player 1 has the most points, or if player 2 has the most points, or if it is a tie. Inside each branch of this chained conditional there should be a print statement printing out the winner and their final score (see sample photo at the bottom of the level)</p></li>
+</ol>
+<p>An output example can be seen below (this is a shortened example)</p>
+<a class="reference internal image-reference" href="../_images/card_rounds.png"><img alt="../_images/card_rounds.png" class="align-center" src="../_images/card_rounds.png" style="width: 300px;" /></a>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lab6_level3 data-question_label="12.6.3.1">
+<div id=lab6_level3_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="lab6_level3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 6, Level 3
+################################################################
+import random
+
+ROUNDS = 26
+</textarea>
+</div>
+</div>
+<p>Bonus: Organizing output is just as important as organizing code! Add round numbers before each round, a blank line after each round and indent the print statements for each round. (See sample output below)</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some useful characters for this bonus are: \n and \t, which are escape sequences that give you a newline or a tab.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/card_rounds_formatted.png"><img alt="../_images/card_rounds_formatted.png" class="align-center" src="../_images/card_rounds_formatted.png" style="width: 300px;" /></a>
+</section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 12.5. Week 5 Lab' data-toggle="tooltip">
+  <a href="Week5Lab.html" aria-label="Previous - 12.5. Week 5 Lab">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 12.7. Week 7 Lab' data-toggle="tooltip" >
+    <a href="Week7Lab.html" aria-label="Next - 12.7. Week 7 Lab">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,484 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>6.6. Conditional Execution: Binary Selection &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.7. Omitting the else Clause: Unary Selection" href="OmittingtheelseClauseUnarySelection.html" />
+    <link rel="prev" title="6.5. Precedence of Operators" href="PrecedenceofOperators.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=ConditionalExecutionBinarySelection'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.5. </span>Precedence of Operators" data-toggle="tooltip">
+    <a href="PrecedenceofOperators.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.7. </span>Omitting the <code class="docutils literal notranslate"><span class="pre">else</span></code> Clause: Unary Selection' data-toggle="tooltip" >              
+    <a href="OmittingtheelseClauseUnarySelection.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="conditional-execution-binary-selection">
+<span id="index-0"></span><h1><span class="section-number">6.6. </span>Conditional Execution: Binary Selection<a class="headerlink" href="#conditional-execution-binary-selection" title="Permalink to this heading">¶</a></h1>
+
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
+        <div id="binaryselection" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="6.6.1"
+            data-video-width="560" data-video-videoid="OQ8uakCJ6yE"
+            data-video-divid="binaryselection" data-video-start="0"
+            data-video-end="-1" ></div>
+    </div>
+    <p>In order to write useful programs, we almost always need the ability to check
+conditions and change the behavior of the program accordingly. <strong>Selection statements</strong>, sometimes
+also referred to as <strong>conditional statements</strong>, give us this ability. The simplest form of selection is the <strong>if statement</strong>.
+This is sometimes referred to as <strong>binary selection</strong> since there are two possible paths of execution.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_6_1 data-question_label="6.6.2">
+<div id=ac6_6_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac6_6_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 15
+
+if x % 2 == 0:
+    print(x, "is even")
+else:
+    print(x, "is odd")
+</textarea>
+</div>
+</div>
+<p>The syntax for an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">BOOLEAN</span> <span class="n">EXPRESSION</span><span class="p">:</span>
+    <span class="n">STATEMENTS_1</span>        <span class="c1"># executed if condition evaluates to True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">STATEMENTS_2</span>        <span class="c1"># executed if condition evaluates to False</span>
+</pre></div>
+</div>
+<p>The boolean expression after the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is called the <strong>condition</strong>.
+If it is true, then the indented statements get executed. If not, then the statements
+indented under the <code class="docutils literal notranslate"><span class="pre">else</span></code> clause get executed.</p>
+<p>Below is a flowchart of an <strong>if</strong> statement with an <strong>else</strong> clause:</p>
+<img alt="../_images/flowchart_if_else.png" src="../_images/flowchart_if_else.png" />
+<p>As with the function definition from the last chapter and other compound
+statements like <code class="docutils literal notranslate"><span class="pre">for</span></code>, the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement consists of a header line and a body. The header
+line begins with the keyword <code class="docutils literal notranslate"><span class="pre">if</span></code> followed by a <em>boolean expression</em> and ends with
+a colon (:).</p>
+<p>The indented statements that follow are called a <strong>block</strong>. The first
+unindented statement marks the end of the block.</p>
+<p>Each of the statements inside the first block of statements is executed in order if the boolean
+expression evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code>. The entire first block of statements
+is skipped if the boolean expression evaluates to <code class="docutils literal notranslate"><span class="pre">False</span></code>, and instead
+all the statements under the <code class="docutils literal notranslate"><span class="pre">else</span></code> clause are executed.</p>
+<p>There is no limit on the number of statements that can appear under the two clauses of an
+<code class="docutils literal notranslate"><span class="pre">if</span></code> statement, but there has to be at least one statement in each block.</p>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.6.3" data-multipleanswers="false"  id="question6_6_1"  style="visibility: hidden;">
+    <p>How many lines of code can appear in the indented code block below the if and else lines in a conditional?</p>
+
+    <li data-component="answer"  id="question6_6_1_opt_a">Just one.</li><li data-component="feedback">Each block may also contain more than one.</li>
+    
+    <li data-component="answer"  id="question6_6_1_opt_b">Zero or more.</li><li data-component="feedback">Each block must contain at least one statement.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question6_6_1_opt_c">One or more.</li><li data-component="feedback">Yes, a block must contain at least one statement and can have many statements.</li>
+    
+    <li data-component="answer"  id="question6_6_1_opt_d">One or more, and each must contain the same number.</li><li data-component="feedback">The blocks may contain different numbers of statements.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.6.4" data-multipleanswers="false"  id="question6_6_2"  style="visibility: hidden;">
+    <p>What does the following code print? (choose from output a, b, c or nothing)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FALSE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question6_6_2_opt_a">TRUE</li><li data-component="feedback">TRUE is printed by the if-block, which only executes if the conditional (in this case, 4+5 == 10) is true.  In this case 5+4 is not equal to 10.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question6_6_2_opt_b">FALSE</li><li data-component="feedback">Since 4+5==10 evaluates to False, Python will skip over the if block and execute the statement in the else block.</li>
+    
+    <li data-component="answer"  id="question6_6_2_opt_c">TRUE on one line and FALSE on the next</li><li data-component="feedback">Python would never print both TRUE and FALSE because it will only execute one of the if-block or the else-block, but not both.</li>
+    
+    <li data-component="answer"  id="question6_6_2_opt_d">Nothing will be printed</li><li data-component="feedback">Python will always execute either the if-block (if the condition is true) or the else-block (if the condition is false).  It would never skip over both blocks.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.6.5" data-multipleanswers="false"  id="question6_6_3"  style="visibility: hidden;">
+    <p>What does the following code print?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FALSE&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TRUE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span> <span class="n">TRUE</span>
+
+<span class="n">b</span><span class="o">.</span>
+   <span class="n">TRUE</span>
+   <span class="n">FALSE</span>
+
+<span class="n">c</span><span class="o">.</span>
+   <span class="n">FALSE</span>
+   <span class="n">TRUE</span>
+<span class="n">d</span><span class="o">.</span>
+   <span class="n">TRUE</span>
+   <span class="n">FALSE</span>
+   <span class="n">TRUE</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question6_6_3_opt_a">Output a</li><li data-component="feedback">Although TRUE is printed after the if-else statement completes, both blocks within the if-else statement print something too.  In this case, Python would have had to have skipped both blocks in the if-else statement, which it never would do.</li>
+    
+    <li data-component="answer"  id="question6_6_3_opt_b">Output b</li><li data-component="feedback">Because there is a TRUE printed after the if-else statement ends, Python will always print TRUE as the last statement.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question6_6_3_opt_c">Output c</li><li data-component="feedback">Python will print FALSE from within the else-block (because 5+4 does not equal 10), and then print TRUE after the if-else statement completes.</li>
+    
+    <li data-component="answer"  id="question6_6_3_opt_d">Output d</li><li data-component="feedback">To print these three lines, Python would have to execute both blocks in the if-else statement, which it can never do.</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_6_2 data-question_label="6.6.6">
+<div id=ac6_6_2_question class="ac_question">
+<p>Write code to assign the string <code class="docutils literal notranslate"><span class="pre">&quot;You</span> <span class="pre">can</span> <span class="pre">apply</span> <span class="pre">to</span> <span class="pre">SI!&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">output</span></code> <em>if</em> the string <code class="docutils literal notranslate"><span class="pre">&quot;SI</span> <span class="pre">106&quot;</span></code> is in the list <code class="docutils literal notranslate"><span class="pre">courses</span></code>. If it is not in <code class="docutils literal notranslate"><span class="pre">courses</span></code>, assign the value <code class="docutils literal notranslate"><span class="pre">&quot;Take</span> <span class="pre">SI</span> <span class="pre">106!&quot;</span></code> to the variable <code class="docutils literal notranslate"><span class="pre">output</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="ac6_6_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+courses = ["ENGR 101", "SI 110", "ENG 125", "SI 106", "CHEM 130"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(output, "You can apply to SI!", "Testing that output has the correct value, given the courses list provided")
+      self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_6_3 data-question_label="6.6.7">
+<div id=ac6_6_3_question class="ac_question">
+<p>Create a variable, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and assign it the value of <code class="docutils literal notranslate"><span class="pre">15</span></code>. Then, write code to see if the value <code class="docutils literal notranslate"><span class="pre">b</span></code> is greater than that of <code class="docutils literal notranslate"><span class="pre">a</span></code>. If it is, <code class="docutils literal notranslate"><span class="pre">a</span></code>’s value should be multiplied by 2. If the value of <code class="docutils literal notranslate"><span class="pre">b</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">a</span></code>, nothing should happen. Finally, create variable <code class="docutils literal notranslate"><span class="pre">c</span></code> and assign it the value of the sum of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="ac6_6_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+a = 20
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwoA(self):
+      self.assertEqual(a, 20, "Testing that a has the correct value.")
+
+   def testTwoB(self):
+      self.assertEqual(c, 35, "Testing that c has the correct value.")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 6.5. Precedence of Operators' data-toggle="tooltip">
+  <a href="PrecedenceofOperators.html" aria-label="Previous - 6.5. Precedence of Operators">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 6.7. Omitting the  else  Clause: Unary Selection' data-toggle="tooltip" >
+    <a href="OmittingtheelseClauseUnarySelection.html" aria-label="Next - 6.7. Omitting the  else  Clause: Unary Selection">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

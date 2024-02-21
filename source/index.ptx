@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<section xml:id="xml_comp-1000-think-like-a-computer">
+  <title>COMP 1000: Think Like a Computer</title>
+  <p>Welcome to COMP 1000!</p>
+  <p>This course is designed to introduce people to programming, which is a fundamental skill within Computer Science. This text is called &#x2018;Think Like a Computer' because the goal is for you to think through and understand how a computer will run the lines of code in a program, whether it's a program you wrote or a program someone else wrote. At the same time as learning about programming and how to think like a computer, we will also begin right away by thinking about people: the end users who <em>interact</em> with the programs you write. And when we think about people as end users, we must think about <em>ethics</em>, because when people interact with computers both good and bad things can result, and it's our responsibility to consider these possibilities. Thus, this course combines Programming, Interactivity, and Ethics: PIE!</p>
+  <subsection xml:id="xml_table-of-contents">
+    <title>Table of Contents</title>
+    <tocToBeReplaced/>
+  </subsection>
+</section>

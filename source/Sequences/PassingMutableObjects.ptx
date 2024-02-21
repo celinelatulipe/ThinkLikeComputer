@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_passing-mutable-vs-immuatable-objects">
+  <title>Passing Mutable vs Immuatable Objects</title>
+  <subsection xml:id="sequences_local-editing">
+    <title>Editing local values</title>
+    <p>Now that you have a deeper understanding of sequences, we need to revisit functions and parameters. In this section, we look at what happens when we pass mutable lists vs. unmutable tuples and strings to functions.</p>
+    <p>Take a look at the following code example. Can you predict what is printed out?</p>
+    <program label="ac9_9_1" interactive="activecode" language="python">
+      <input>
+def double(y):
+    y = 2 * y
+
+num = 5
+double(num)
+print(num)
+        </input>
+      <tests>
+     </tests>
+    </program>
+    <p>Use <term>Show CodeLens</term> to step through the code to see why the assignment to the formal parameter <c>y</c>
+            inside the <c>double</c> function on (line 2) did not affect the global variable <c>num</c>. An assignment to a formal parameter inside a function <term>never</term>
+            affects the argument in the caller.</p>
+  </subsection>
+  <subsection xml:id="sequences_passing-lists">
+    <title>Passing Lists</title>
+    <p>On the other hand, if you are passing a mutable object, such as a list, to a function, and the function alters the
+                object's state, that state change will be visible globally when the function returns. Take a look at the following
+                example, where a list is passed in to a function.</p>
+    <program label="ac9_9_2" interactive="activecode" language="python">
+      <input>
+def changeit(lst):
+    lst[0] = "Manitoba"
+    lst[1] = "Bisons"
+
+mylst = ['our', 'students', 'are', 'awesome']
+changeit(mylst)
+print(mylst)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>Try stepping through this in Codelens to see what happens. The state of the list referenced by <c>lst</c> is altered
+                by <c>changeit</c>, and since <c>lst</c> is an alias for <c>mylst</c>, <c>mylst</c> is affected by the actions taken by the function.</p>
+    <p>Look closely at this line:</p>
+    <pre>lst[0] = "Manitoba"</pre>
+    <p>That statement modifies the state of <c>lst</c> by changing the value in slot 0. Although that line may appear to contradict the
+                statement above that <q>an assignment to a formal parameter inside a function never affects the argument in the caller,</q>
+                note that there is a difference between assigning to a <em>slot</em> of a list, and assigning to the list variable itself.
+                To see that difference, try changing that line to the following:</p>
+    <pre>lst = ["Manitoba", "Bisons"]</pre>
+    <p>Then, run again. This time, <c>mylist</c> is not altered. To understand why, use CodeLens to step carefully through the code
+                and observe how the assignment to <c>lst</c> causes it to refer to a separate list.</p>
+    <p>Take a moment to experiment some more with the <c>changeit</c> function. Change the body of the function to the following:</p>
+    <blockquote>
+      <p>lst.append(<q>Manitoba Bisons</q>)</p>
+    </blockquote>
+    <p>Step through using CodeLens. You should see that <c>mylst</c> is affected by this change, since the state of the list is altered.</p>
+    <p>Then, try again with this as the body:</p>
+    <pre>lst = lst + ["Manitoba Bisons"]</pre>
+    <p>Step through using CodeLens. Here, we create a new list using the concatenation operator, and <c>mylst</c> is not affected by the change.</p>
+    <p>Understanding the techniques that functions can and cannot use to alter the state of mutable parameters is important.
+                You may want to take some time to study the information on this page more thoroughly and play with the examples until
+                you feel confident about your grasp of the material.</p>
+  </subsection>
+  <subsection xml:id="sequences_passing-tuples">
+    <title>Passing Tuples</title>
+    <p>Tuples are just like lists, except they are not mutable. If you pass a tuple into a function and that function tries to modify the contents of it, an error will be thrown. Consider this example:</p>
+    <program label="ac9_9_3" interactive="activecode" language="python">
+      <input>
+def changeit(lst):
+    lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
+    lst[1] = "Bisons"
+
+mytuple = ('our', 'students', 'are', 'awesome')
+changeit(mytuple)  # sending a tuple to this method is going to cause an error in the method
+print(mytuple)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>If you want this to work, you need to convert the tuple into a list, and then store a returned list:</p>
+    <program label="ac9_9_4" interactive="activecode" language="python">
+      <input>
+def changeit(lst):
+    lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
+    lst[1] = "Bisons"
+    return lst
+
+mytuple = ('our', 'students', 'are', 'awesome')
+modified_list = changeit(list(mytuple))  # create a list from the tuple, and send that list to changeit
+print(mytuple)
+print(modified_list)
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </subsection>
+  <subsection xml:id="sequences_ethics-data-protection">
+    <title>Ethics &amp; Data Protection</title>
+    <p>We most often use lists for storing data, because we often want the flexibility of being able to edit and change information. However, sometimes there is important data (private personal data, health data, salaries, etc.) that needs to be protected from tampering. As a programmer, if you need to share data but you want to ensure the data isn't tampered with, you can send the data as a tuple. This allows a function to make use of the data, but not change it. Consider this example, which makes use of the accumulator pattern, reading from a tuple, but not modifying it:</p>
+    <program label="ac9_9_5" interactive="activecode" language="python">
+      <input>
+def avg_salaries(lst):
+    sum = 0;
+    count = 0;
+    for item in lst:
+        sum += item
+        count += 1
+
+    return sum/count
+
+company_salaries = (45376, 27995, 102345, 160300, 86900, 49354, 68451)
+avg_sal = avg_salaries(company_salaries)
+print(avg_sal)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>The avg_salaries function could take a list or a tuple. By passing in a tuple, the programmer ensures the data is not modified. In this case, where the function is in the same file, it's obvious that the list isn't modified inside the function. But often you import modules and use functions that other people have written. As a programmer, you need to ensure that any private data you are responsible for isn't modified inappropriately, and you can do this by using safe structures like tuples.</p>
+    <p>
+      <term>Check Your Understanding</term>
+    </p>
+    <exercise label="mutobj-q1a">
+      <statement>
+        <p>What is the output of the following code fragment?</p>
+        <program language="python">
+          <input>
+def myfun(lst):
+    lst = [1, 2, 3]
+
+mylist = ['a', 'b']
+myfun(mylist)
+print(mylist)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement id="mutobj-q1a_opt_a">
+            <p>[&#x2018;a', &#x2018;b']</p>
+          </statement>
+          <feedback id="mutobj-q1a_opt_a">
+            <p>Correct! <c>mylist</c> is not changed by the assignment in <c>myfun</c>.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="mutobj-q1a_opt_b">
+            <p>[1, 2, 3]</p>
+          </statement>
+          <feedback id="mutobj-q1a_opt_b">
+            <p>Incorrect. <c>mylist</c> is not changed by the assignment in <c>myfun</c>.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="mutobj-q2a">
+      <statement>
+        <p>What is the output of the following code fragment?</p>
+        <program language="python">
+          <input>
+def myfun(lst):
+    del lst[0]
+
+mylist = ['a', 'b']
+myfun(mylist)
+print(mylist)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="mutobj-q2a_opt_a">
+            <p>[&#x2018;a', &#x2018;b']</p>
+          </statement>
+          <feedback id="mutobj-q2a_opt_a">
+            <p>Incorrect. <c>myfun</c> alters the state of the list object by removing the value at slot 0.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="mutobj-q2a_opt_b">
+            <p>[&#x2018;b']</p>
+          </statement>
+          <feedback id="mutobj-q2a_opt_b">
+            <p>Correct! <c>myfun</c> alters the state of the list object by removing the value at slot 0.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

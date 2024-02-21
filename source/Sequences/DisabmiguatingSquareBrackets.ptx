@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_disambiguating-creation-vs-indexing">
+  <title>Disambiguating []: creation vs indexing</title>
+  <p>Square brackets <c>[]</c> are used in quite a few ways in Python. When you're first learning how to use them it may be
+            confusing, but with practice and repetition they'll be easy to incorporate!</p>
+  <p>You have currently encountered two instances where we have used square brackets. The first is creating lists and the second
+            is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing
+            an already created list while simply creating a list does not.</p>
+  <program label="ac9_3_1" interactive="activecode" language="python">
+    <input>
+my_lst = []
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.</p>
+  <program label="ac9_3_2" interactive="activecode" language="python">
+    <input>
+new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
+part_of_new_lst = new_lst[0]
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>In the code above, both lines use square brackets, but one uses them for list creation and one uses them for indexing. You can differentiate them because with list creation there is nothing between the equal sign and the opening square bracket. On the left side of the equal sign is the variable that the list is being assigned to, and on the right side of the equal sign is the two square brackets with items in the list in between them. On the second line, the square brackets come immediately after a variable name, which tells you that they are indexing into that list variable. Because we have elements inside of <c>new_lst</c>, we can index into it.
+            In order to extract an element of the list, we use <c>[]</c>, but we first have to specify which list we are indexing. Additionally, we have to specify what element we want to extract. This index belongs inside of the brackets.</p>
+  <p>The code below shows that naming a variable as a list doesn't make it a list.</p>
+  <program label="ac9_3_3" interactive="activecode" language="python">
+    <input>
+lst = [0]            # using [] to create a new list
+n_lst = lst[0]       # using [] to index into a list to retrieve an element
+
+print(type(lst))
+print(type(n_lst))
+
+print(lst)
+print(n_lst)
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>Here, we see that the variable <c>lst</c> is assigned a list with one element, zero. Then, we see another variable called <c>n_lst</c> gets assigned
+            the value associated with the first element of lst. Despite the variable names, only one of the above variables is
+            assigned to a list.</p>
+  <exercise label="question9_3_1">
+    <statement>
+      <p>Which of the following correctly uses indexing? Assume that <c>a</c> is a list or string. Select as many as apply.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>w = [a]</p>
+        </statement>
+        <feedback>
+          <p>No, due to the way the code was written it creates a list. This list would have one element which is the value assigned to the variable a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>y = a[]</p>
+        </statement>
+        <feedback>
+          <p>Though this tries to use indexing, it does not specify what element should be taken from a.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x = [8]</p>
+        </statement>
+        <feedback>
+          <p>No, this is an example of creating a list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>t = a[0]</p>
+        </statement>
+        <feedback>
+          <p>Yes, this will using indexing to get the value of the first element of a.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

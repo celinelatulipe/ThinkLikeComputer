@@ -1,0 +1,557 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>5.8. Alternative File Reading Methods &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.9. Iterating over lines in a file" href="Iteratingoverlinesinafile.html" />
+    <link rel="prev" title="5.7. Reading a File" href="ReadingaFile.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=AlternativeFileReadingMethods'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.7. </span>Reading a File" data-toggle="tooltip">
+    <a href="ReadingaFile.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.9. </span>Iterating over lines in a file' data-toggle="tooltip" >              
+    <a href="Iteratingoverlinesinafile.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="alternative-file-reading-methods">
+<h1><span class="section-number">5.8. </span>Alternative File Reading Methods<a class="headerlink" href="#alternative-file-reading-methods" title="Permalink to this heading">¶</a></h1>
+<p>Once you have a file “object”, the thing returned by the open function, Python provides three methods to read data
+from that object. The <code class="docutils literal notranslate"><span class="pre">read()</span></code> method returns the entire contents of the file as a single string (or just the first <em>n</em>
+characters if you provide a number as an input parameter). The <code class="docutils literal notranslate"><span class="pre">readlines</span></code> method returns the entire contents of
+the file as a list of strings, where each item in the list is one line of the file. The <code class="docutils literal notranslate"><span class="pre">readline</span></code>
+method reads one line from the file and returns it as a string. The strings returned by <code class="docutils literal notranslate"><span class="pre">readlines</span></code> or
+<code class="docutils literal notranslate"><span class="pre">readline</span></code> will contain the newline character at the end.  <span class="xref std std-ref">Table 2</span> summarizes these
+methods and the following session shows them in action.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Method Name</strong></p></th>
+<th class="head"><p><strong>Use</strong></p></th>
+<th class="head"><p><strong>Explanation</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">read(n)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">filevar.read()</span></code></p></td>
+<td><p>Read and return a string of <code class="docutils literal notranslate"><span class="pre">n</span></code>
+characters, or the entire file as a
+single string if  <code class="docutils literal notranslate"><span class="pre">n</span></code> is not provided.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">readline(n)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">filevar.readline()</span></code></p></td>
+<td><p>Read and return the next line of the file with
+all text up to and including the
+newline character. If <code class="docutils literal notranslate"><span class="pre">n</span></code> is provided as
+a parameter, then only <code class="docutils literal notranslate"><span class="pre">n</span></code> characters
+will be returned if the line is longer
+than <code class="docutils literal notranslate"><span class="pre">n</span></code>. <strong>Note:</strong> the parameter <code class="docutils literal notranslate"><span class="pre">n</span></code> is
+not supported in the browser version of Python,
+and in fact is rarely used in practice, so
+you can safely ignore it.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">readlines(n)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">filevar.readlines()</span></code></p></td>
+<td><p>Returns a list of strings, each
+representing a single line of the file.
+If <code class="docutils literal notranslate"><span class="pre">n</span></code> is not provided then all lines of
+the file are returned. If <code class="docutils literal notranslate"><span class="pre">n</span></code> is provided
+then <code class="docutils literal notranslate"><span class="pre">n</span></code> characters are read but <code class="docutils literal notranslate"><span class="pre">n</span></code> is
+rounded up so that an entire line is
+returned.  <strong>Note:</strong> Like <code class="docutils literal notranslate"><span class="pre">readline</span></code>,
+<code class="docutils literal notranslate"><span class="pre">readlines</span></code> ignores the parameter <code class="docutils literal notranslate"><span class="pre">n</span></code> in the browser.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In this course, we will generally either iterate through the lines returned by <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> with a for loop,
+or use <code class="docutils literal notranslate"><span class="pre">read()</span></code> to get all of the contents as a single string.</p>
+<p>In other programming languages, where they don’t have the convenient for loop method of going through the lines
+of the file one by one, they use a different pattern which requires a different kind of loop, the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.
+Fortunately, you don’t need to learn this other pattern, and we will put off consideration of <code class="docutils literal notranslate"><span class="pre">while</span></code> loops
+until later in this course. We don’t need them for handling data from files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A common error that novice programmers make is not realizing that all these ways of reading the file contents,
+<strong>use up the file</strong>. After you call readlines(), if you call it again you’ll get an empty list.</p>
+</div>
+<p>The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly
+gets a different line each time, as the file is <strong>used up</strong>.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_8_1 data-question_label="5.8.1">
+<div id=ac5_8_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac5_8_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+olympicsfile = open("olympics.txt", "r")
+
+firstline = olympicsfile.readline()
+print("the first line of the file is: ", firstline)
+secondline = olympicsfile.readline()
+print("the second line of the file is: ", secondline)
+
+olympicsfile.close()
+</textarea>
+</div>
+</div>
+<p><strong>Check your Understanding</strong></p>
+<pre id="school_prompt.txt">
+Writing essays for school can be difficult but
+many students find that by researching their topic that they
+have more to say and are better informed. Here at the university
+we require many undergraduate students to take a first year writing requirement
+so that they can
+have a solid foundation for their writing skills. This comes
+in handy for many students.
+Different schools have different requirements, but everyone uses
+writing at some point in their academic career, be it essays, research papers,
+technical write ups, or scripts.
+</pre>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_8_2 data-question_label="5.8.2">
+<div id=ac5_8_2_question class="ac_question">
+<ol class="arabic simple">
+<li><p>Using the file <code class="docutils literal notranslate"><span class="pre">school_prompt2.txt</span></code>, find the number of characters in the file and assign that value to the variable <code class="docutils literal notranslate"><span class="pre">num_char</span></code>.</p></li>
+</ol>
+
+</div>
+<textarea data-lang="python" id="ac5_8_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(num_char, 536, "Testing that num_char has the correct value.")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<pre id="travel_plans.txt">
+This summer I will be travelling.
+I will go to...
+Italy: Rome
+Greece: Athens
+England: London, Manchester
+France: Paris, Nice, Lyon
+Spain: Madrid, Barcelona, Granada
+Austria: Vienna
+I will probably not even want to come back!
+However, I wonder how I will get by with all the different languages.
+I only know English!
+</pre>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_8_3 data-question_label="5.8.3">
+<div id=ac5_8_3_question class="ac_question">
+<ol class="arabic simple" start="2">
+<li><p>Find the number of lines in the file, <code class="docutils literal notranslate"><span class="pre">travel_plans2.txt</span></code>, and assign it to the variable <code class="docutils literal notranslate"><span class="pre">num_lines</span></code>.</p></li>
+</ol>
+
+</div>
+<textarea data-lang="python" id="ac5_8_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(num_lines, 11, "Testing that num_lines is assigned to correct value.")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+<pre id="emotion_words.txt">
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+</pre>
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_8_4 data-question_label="5.8.4">
+<div id=ac5_8_4_question class="ac_question">
+<ol class="arabic simple" start="3">
+<li><p>Create a string called <code class="docutils literal notranslate"><span class="pre">first_forty</span></code> that is comprised of the first 40 characters of <code class="docutils literal notranslate"><span class="pre">emotion_words2.txt</span></code>.</p></li>
+</ol>
+
+</div>
+<textarea data-lang="python" id="ac5_8_4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(first_forty, 'Sad upset blue down melancholy somber bi', "Testing that first_forty was created correctly.")
+myTests().main()
+</textarea>
+</div>
+</div>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>travel_plans2.txt</code></div>
+<pre data-component="datafile" id=travel_plans2.txt data-hidden data-edit="false" data-rows="20" data-cols="65">
+This summer I will be travelling.
+I will go to...
+Italy: Rome
+Greece: Athens
+England: London, Manchester
+France: Paris, Nice, Lyon
+Spain: Madrid, Barcelona, Granada
+Austria: Vienna
+I will probably not even want to come back!
+However, I wonder how I will get by with all the different languages.
+I only know English!
+</pre></div>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>school_prompt2.txt</code></div>
+<pre data-component="datafile" id=school_prompt2.txt data-hidden data-edit="false" data-rows="20" data-cols="65">
+Writing essays for school can be difficult but
+many students find that by researching their topic that they
+have more to say and are better informed. Here are the university
+we require many undergraduate students to take a first year writing requirement
+so that they can
+have a solid foundation for their writing skills. This comes
+in handy for many students.
+Different schools have different requirements, but everyone uses
+writing at some point in their academic career, be it essays, research papers,
+technical write ups, or scripts.
+</pre></div>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>emotion_words2.txt</code></div>
+<pre data-component="datafile" id=emotion_words2.txt data-hidden data-edit="false" data-rows="20" data-cols="62">
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+</pre></div>
+<pre hidden id="olympics.txt">
+Name,Sex,Age,Team,Event,Medal
+A Dijiang,M,24,China,Basketball,NA
+A Lamusi,M,23,China,Judo,NA
+Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
+Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
+Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
+Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
+Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
+John Aalberg,M,31,United States,Cross Country Skiing,NA
+John Aalberg,M,33,United States,Cross Country Skiing,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
+"Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
+Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
+Jyri Tapani Aalto,M,31,Finland,Badminton,NA
+Minna Maarit Aalto,F,30,Finland,Sailing,NA
+Minna Maarit Aalto,F,34,Finland,Sailing,NA
+Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
+Timo Antero Aaltonen,M,31,Finland,Athletics,NA
+Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
+</pre></section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.7. Reading a File' data-toggle="tooltip">
+  <a href="ReadingaFile.html" aria-label="Previous - 5.7. Reading a File">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.9. Iterating over lines in a file' data-toggle="tooltip" >
+    <a href="Iteratingoverlinesinafile.html" aria-label="Next - 5.9. Iterating over lines in a file">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

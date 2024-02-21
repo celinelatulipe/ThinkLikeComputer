@@ -1,0 +1,407 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>1.5. More About Programs &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.6. Formal and Natural Languages" href="FormalandNaturalLanguages.html" />
+    <link rel="prev" title="1.4. The Python Programming Language" href="ThePythonProgrammingLanguage.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=MoreAboutPrograms'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.4. </span>The Python Programming Language" data-toggle="tooltip">
+    <a href="ThePythonProgrammingLanguage.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.6. </span>Formal and Natural Languages' data-toggle="tooltip" >              
+    <a href="FormalandNaturalLanguages.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="more-about-programs">
+<span id="index-0"></span><h1><span class="section-number">1.5. </span>More About Programs<a class="headerlink" href="#more-about-programs" title="Permalink to this heading">¶</a></h1>
+<p>A <strong>program</strong> is a sequence of instructions that specifies how to perform a
+computation. The computation might be something as complex as rendering an html page in a web browser
+or encoding a video and streaming it across a network.  It can also be a
+symbolic computation, such as searching for and replacing text in a document or
+(strangely enough) compiling a program.</p>
+<p>The details look different in different languages, but a few basic terms appear in just about every language.</p>
+<dl class="simple">
+<dt>input</dt><dd><p>Get data from the user via keyboard or mouse input, or from a file, or some other device.</p>
+</dd>
+<dt>output</dt><dd><p>Display data on the screen for an end user, in the console for the programmer, or send data to a file or other device.</p>
+</dd>
+<dt>math and logic</dt><dd><p>Perform basic mathematical operations like addition, multiplication and logical operations like <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code> (more on these later).</p>
+</dd>
+<dt>conditional execution</dt><dd><p>Check for certain conditions and execute the appropriate sequence of
+statements.</p>
+</dd>
+<dt>repetition</dt><dd><p>Perform some action repeatedly, usually with some  variations.</p>
+</dd>
+</dl>
+<p>Believe it or not, that’s pretty much all there is to it. Every program you’ve
+ever used, no matter how complicated, is made up of instructions that look more
+or less like these. Thus, we can describe programming as the process of
+breaking a large, complex task into smaller and smaller subtasks until the
+subtasks are simple enough to be performed with sequences of these basic
+instructions.</p>
+<section id="preview-of-control-structures">
+<h2><span class="section-number">1.5.1. </span>Preview of Control Structures<a class="headerlink" href="#preview-of-control-structures" title="Permalink to this heading">¶</a></h2>
+<p>We won’t get too much into Python control structures yet, but it is good to mention them early to give you a taste for what you can do with the language!
+If these make sense to you now, that’s great!
+However, we don’t expect you to understand these yet - understanding will come later.</p>
+<p>First we have structures that allow us to iterate over something. We can look at strings character-by-character or lists item-by-item until we’ve reached the end of them by using something called a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. This is a type of repetition instruction. Run the program below to see what the output to the console is:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_for_loop_preview data-question_label="1.5.1.1">
+<div id=ac_for_loop_preview_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_for_loop_preview_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+for character in "Cool string":
+    print(character)
+</textarea>
+</div>
+</div>
+<p>We can also iterate without a definite stopping point with <code class="docutils literal notranslate"><span class="pre">while</span></code> loops (another type of repetition instruction).
+You might use this if you want to receive input from the user in your program but you don’t know how long it’ll take for them to be done entering new input. Run the program below and add some items to a grocery list:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_while_loop_preview data-question_label="1.5.1.2">
+<div id=ac_while_loop_preview_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_while_loop_preview_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+grocery_item = ""
+while grocery_item != "done":
+    grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
+    print(grocery_item)
+</textarea>
+</div>
+</div>
+<p>Note that in the example above, you could run this program repeatedly and give it a different number of items each time you run it. Also note the cancel button does not do anything at this time. That is because we haven’t programmed it to do anything!</p>
+<p>Other structures will allow us to only run parts of our programs or only do some task if a certain set of conditions are found.
+Conditionals, as they’re called, allow us to do that.
+Check out how adding conditionals to our code can change what we can write about regarding grocery shopping.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_conditional_preview data-question_label="1.5.1.3">
+<div id=ac_conditional_preview_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_conditional_preview_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+grocery_item = ""
+grocery_list = []
+while grocery_item != "done":
+    grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list then simply type: done")
+    if grocery_item == 'done':
+        continue
+    else:
+        print("adding the item to the list")
+        grocery_list.append(grocery_item)
+print("Here is our grocery list:")
+print(grocery_list)
+</textarea>
+</div>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.5.1.4" data-multipleanswers="false"  id="question_what_is_program"  style="visibility: hidden;">
+    <p>A program is:</p>
+
+    <li data-component="answer" data-correct='yes' id="question_what_is_program_opt_a">a sequence of instructions that specifies how to perform a computation.</li><li data-component="feedback">It is just step-by-step instructions that the computer can understand and execute.  Programs often implement algorithms, but note that algorithms are typically less precise than programs and do not have to be written in a programming language.</li>
+    
+    <li data-component="answer"  id="question_what_is_program_opt_b">something you follow along at a play or concert.</li><li data-component="feedback">True, but not in this context.  We mean a program as related to a computer.</li>
+    
+    <li data-component="answer"  id="question_what_is_program_opt_c">a computation, even a symbolic computation.</li><li data-component="feedback">A program can perform a computation, but by itself it's not one.</li>
+    
+    <li data-component="answer"  id="question_what_is_program_opt_d">the same thing as an algorithm.</li><li data-component="feedback">Programs often implement algorithms, but they are not the same thing.  An algorithm is a step by step list of instructions, but those instructions are not necessarily precise enough for a computer to follow.  A program must be written in a programming language that the computer knows how to interpret.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 1.4. The Python Programming Language' data-toggle="tooltip">
+  <a href="ThePythonProgrammingLanguage.html" aria-label="Previous - 1.4. The Python Programming Language">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 1.6. Formal and Natural Languages' data-toggle="tooltip" >
+    <a href="FormalandNaturalLanguages.html" aria-label="Next - 1.6. Formal and Natural Languages">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

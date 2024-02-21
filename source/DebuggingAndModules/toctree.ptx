@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Debugging and Modules</title>
+        <xi:include href='./intro-DebuggingGeneral.ptx' />
+        <xi:include href='./HowtobeaSuccessfulProgrammer.ptx' />
+        <xi:include href='./Syntaxerrors.ptx' />
+        <xi:include href='./RuntimeErrors.ptx' />
+        <xi:include href='./SemanticErrors.ptx' />
+        <xi:include href='./KnowyourerrorMessages.ptx' />
+        <xi:include href='./intro-PythonModules.ptx' />
+        <xi:include href='./ModulesandGettingHelp.ptx' />
+        <xi:include href='./EthicsAndCodeOwnership.ptx' />
+        <xi:include href='./Therandommodule.ptx' />
+        <xi:include href='./ExploringTurtleModule.ptx' />
+        <xi:include href='./InstancesAHerdofTurtles.ptx' />
+        <xi:include href='./ObjectInstances.ptx' />
+        <xi:include href='./AFewMoreturtleMethodsandObservations.ptx' />
+        <xi:include href='./WPCommonTurtleErrors.ptx' />
+        <xi:include href='./EthicsDefaultVariableValues.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./week2Assessment.ptx' />
+        <!-- <xi:include href='./Exercises.ptx' /> -->
+    </chapter>

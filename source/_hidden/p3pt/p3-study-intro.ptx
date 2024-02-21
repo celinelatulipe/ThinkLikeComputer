@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<section xml:id="p3pt_python-3-with-lists-loops-conditionals-and-functions">
+  <title>Python 3 with Lists, Loops, Conditionals, and Functions</title>
+  <subsection xml:id="p3pt_assignment-information">
+    <title>Assignment Information</title>
+    <p>Thank you for taking part in this assignment! We are using this assignment to try to improve the teaching and learning of programming.</p>
+    <p>This assignment has five parts.  It will take approximately 50 minutes to complete.  Please do the parts in order and answer questions to the best
+                of your ability without any outside help.</p>
+    <p>
+      <term>You may stop working on any problem after you worked
+                    on it for ten minutes or more without solving it, but for full credit, you must try every problem for at least ten minutes.</term>
+    </p>
+    <p>If you have questions about this assignment please email Dr. Jan Pearce at <url href="mailto:jpearce@ashesi.edu.gh" visual="mailto:jpearce@ashesi.edu.gh">jpearce@ashesi.edu.gh</url>.</p>
+    <p>The five parts are:</p>
+    <p>
+      <ul>
+        <li>
+          <p>Pre Survey - Questions about your experience and confidence in computing</p>
+        </li>
+        <li>
+          <p>Introduction - Materials to get you familiar with the types of problems in this study</p>
+        </li>
+        <li>
+          <p>Practice - Practice problems</p>
+        </li>
+        <li>
+          <p>Post Test - Post test problems</p>
+        </li>
+        <li>
+          <p>Post Survey - Post survey problems</p>
+        </li>
+      </ul>
+    </p>
+    <p>Click on the link at the end of each page to get to the next part.</p>
+    <subsubsection xml:id="p3pt_what-to-do-next-5">
+      <title>What to do next:</title>
+      <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to take the pre survey : &lt;b&gt;&lt;a id="p3-survey"&gt; &lt;font size="+2"&gt;Pre Survey&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+      <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("p3-survey")
+    a.href = "p3-presurvey.html"
+  };
+
+&lt;/script&gt;</raw>
+    </subsubsection>
+  </subsection>
+</section>

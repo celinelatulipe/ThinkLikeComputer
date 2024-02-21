@@ -1,0 +1,476 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="pygments.css" type="text/css" />
+    <link rel="stylesheet" href="basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="documentation_options.js"></script>
+    <script defer="" src="jquery.js"></script>
+    <script defer="" src="underscore.js"></script>
+    <script defer="" src="doctools.js"></script>
+    <script defer="" src="matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=cervantes.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-194" name="CodeChat-194" href="#CodeChat-194"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="CodeChat-195" name="CodeChat-195" href="#CodeChat-195"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-196" name="CodeChat-196" href="#CodeChat-196"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-197" name="CodeChat-197" href="#CodeChat-197"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-198" name="CodeChat-198" href="#CodeChat-198"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=1080, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-199" name="CodeChat-199" href="#CodeChat-199"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-200" name="CodeChat-200" href="#CodeChat-200"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="CodeChat-201" name="CodeChat-201" href="#CodeChat-201"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-202" name="CodeChat-202" href="#CodeChat-202"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-203" name="CodeChat-203" href="#CodeChat-203"></a>
+<a id="CodeChat-204" name="CodeChat-204" href="#CodeChat-204"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;cervantes&quot;</span><span class="p">&gt;</span>MIGUEL CERVANTES<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="CodeChat-205" name="CodeChat-205" href="#CodeChat-205"></a>
+<a id="CodeChat-206" name="CodeChat-206" href="#CodeChat-206"></a>
+<a id="CodeChat-207" name="CodeChat-207" href="#CodeChat-207"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;cervantes1&quot;</span><span class="p">&gt;</span>Life and Adventures of Don Quixote<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="CodeChat-208" name="CodeChat-208" href="#CodeChat-208"></a>
+<a id="CodeChat-209" name="CodeChat-209" href="#CodeChat-209"></a><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span> Miguel Cervantes, the son of poor but gentle parents, was born
+<a id="CodeChat-210" name="CodeChat-210" href="#CodeChat-210"></a>nobody quite knows where in Spain, in the year 1547. His favourite
+<a id="CodeChat-211" name="CodeChat-211" href="#CodeChat-211"></a>amusement when a boy was the performance of strolling players. He learned
+<a id="CodeChat-212" name="CodeChat-212" href="#CodeChat-212"></a>grammar and the humanities under Lopez de Hoyos at Madrid, but did not, it
+<a id="CodeChat-213" name="CodeChat-213" href="#CodeChat-213"></a>seems, proceed to the university. He was an early writer of sonnets, and
+<a id="CodeChat-214" name="CodeChat-214" href="#CodeChat-214"></a>tried his hand on a pastoral poem before he had grown moustaches. His first
+<a id="CodeChat-215" name="CodeChat-215" href="#CodeChat-215"></a>acquaintance with the world was acting as chamberlain in the house of a
+<a id="CodeChat-216" name="CodeChat-216" href="#CodeChat-216"></a>cardinal, but this life he presently abandoned for the more stirring career
+<a id="CodeChat-217" name="CodeChat-217" href="#CodeChat-217"></a>of a soldier. After incredible sufferings and adventures, the poor private
+<a id="CodeChat-218" name="CodeChat-218" href="#CodeChat-218"></a>soldier returned wounded to his family and began his career as author. He
+<a id="CodeChat-219" name="CodeChat-219" href="#CodeChat-219"></a>soon established a reputation, and was able to marry a quite adorable good
+<a id="CodeChat-220" name="CodeChat-220" href="#CodeChat-220"></a>lady with dowry sufficient for his needs. However, it was not until late in
+<a id="CodeChat-221" name="CodeChat-221" href="#CodeChat-221"></a>life that he wrote his immortal work &quot;Don Quixote,&quot; which saw the light in
+<a id="CodeChat-222" name="CodeChat-222" href="#CodeChat-222"></a>1604 or 1605. During the remainder of his life he was bitterly assailed by
+<a id="CodeChat-223" name="CodeChat-223" href="#CodeChat-223"></a>the envious and malignant, was seldom out of monetary difficulties, and
+<a id="CodeChat-224" name="CodeChat-224" href="#CodeChat-224"></a>very often in great pain from the disease which finally ended his career at
+<a id="CodeChat-225" name="CodeChat-225" href="#CodeChat-225"></a>Madrid on April 23, 1616--the same day which saw the close of
+<a id="CodeChat-226" name="CodeChat-226" href="#CodeChat-226"></a>Shakespeare&#39;s. <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+<a id="CodeChat-227" name="CodeChat-227" href="#CodeChat-227"></a>
+<a id="CodeChat-228" name="CodeChat-228" href="#CodeChat-228"></a>
+<a id="CodeChat-229" name="CodeChat-229" href="#CodeChat-229"></a><span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>I.--The Knight-Errant of La Mancha<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<a id="CodeChat-230" name="CodeChat-230" href="#CodeChat-230"></a>
+<a id="CodeChat-231" name="CodeChat-231" href="#CodeChat-231"></a>
+<a id="CodeChat-232" name="CodeChat-232" href="#CodeChat-232"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>In a certain village of La Mancha, there lived one of those
+<a id="CodeChat-233" name="CodeChat-233" href="#CodeChat-233"></a>old-fashioned gentlemen who keep a lance in the rack, an ancient target, a
+<a id="CodeChat-234" name="CodeChat-234" href="#CodeChat-234"></a>lean horse, and a greyhound for coursing. His family consisted of a
+<a id="CodeChat-235" name="CodeChat-235" href="#CodeChat-235"></a>housekeeper turned forty, a niece not twenty, and a man who could saddle a
+<a id="CodeChat-236" name="CodeChat-236" href="#CodeChat-236"></a>horse, handle the pruning-hook, and also serve in the house. The master
+<a id="CodeChat-237" name="CodeChat-237" href="#CodeChat-237"></a>himself was nigh fifty years of age, lean-bodied and thin-faced, an early
+<a id="CodeChat-238" name="CodeChat-238" href="#CodeChat-238"></a>riser, and a great lover of hunting. His surname was Quixada, or
+<a id="CodeChat-239" name="CodeChat-239" href="#CodeChat-239"></a>Quesada.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-240" name="CodeChat-240" href="#CodeChat-240"></a>
+<a id="CodeChat-241" name="CodeChat-241" href="#CodeChat-241"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You must know now that when our gentleman had nothing to do--which was
+<a id="CodeChat-242" name="CodeChat-242" href="#CodeChat-242"></a>almost all the year round--he read books on knight-errantry, and with such
+<a id="CodeChat-243" name="CodeChat-243" href="#CodeChat-243"></a>delight that he almost left off his sports, and even sold acres of land to
+<a id="CodeChat-244" name="CodeChat-244" href="#CodeChat-244"></a>buy these books. He would dispute with the curate of the parish, and with
+<a id="CodeChat-245" name="CodeChat-245" href="#CodeChat-245"></a>the barber, as to the best knight in the world. At nights he read these
+<a id="CodeChat-246" name="CodeChat-246" href="#CodeChat-246"></a>romances until it was day; a-day he would read until it was night. Thus, by
+<a id="CodeChat-247" name="CodeChat-247" href="#CodeChat-247"></a>reading much and sleeping little, he lost the use of his reason. His brain
+<a id="CodeChat-248" name="CodeChat-248" href="#CodeChat-248"></a>was full of nothing but enchantments, quarrels, battles, challenges,
+<a id="CodeChat-249" name="CodeChat-249" href="#CodeChat-249"></a>wounds, amorous plaints, torments, and abundance of impossible follies.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-250" name="CodeChat-250" href="#CodeChat-250"></a>
+<a id="CodeChat-251" name="CodeChat-251" href="#CodeChat-251"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Having lost his wits, he stumbled on the oddest fancy that ever entered
+<a id="CodeChat-252" name="CodeChat-252" href="#CodeChat-252"></a>madman&#39;s brain--to turn knight-errant, mount his steed, and, armed
+<a id="CodeChat-253" name="CodeChat-253" href="#CodeChat-253"></a><span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>cap-à-pie<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>, ride through the world, redressing all manner of
+<a id="CodeChat-254" name="CodeChat-254" href="#CodeChat-254"></a>grievances, and exposing himself to every danger, that he might purchase
+<a id="CodeChat-255" name="CodeChat-255" href="#CodeChat-255"></a>everlasting honour and renown.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-256" name="CodeChat-256" href="#CodeChat-256"></a>
+<a id="CodeChat-257" name="CodeChat-257" href="#CodeChat-257"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The first thing he did was to secure a suit of armour that had belonged
+<a id="CodeChat-258" name="CodeChat-258" href="#CodeChat-258"></a>to his great-grandfather. Then he made himself a helmet, which his sword
+<a id="CodeChat-259" name="CodeChat-259" href="#CodeChat-259"></a>demolished at the first stroke. After repairing this mischief, he went to
+<a id="CodeChat-260" name="CodeChat-260" href="#CodeChat-260"></a>visit his horse, whose bones stuck out, but who appeared to his master a
+<a id="CodeChat-261" name="CodeChat-261" href="#CodeChat-261"></a>finer beast than Alexander&#39;s Bucephalus. After four days of thought, he
+<a id="CodeChat-262" name="CodeChat-262" href="#CodeChat-262"></a>decided to call his horse Rozinante, and when the title was decided upon,
+<a id="CodeChat-263" name="CodeChat-263" href="#CodeChat-263"></a>he spent eight days more before he arrived at Don Quixote as a name for
+<a id="CodeChat-264" name="CodeChat-264" href="#CodeChat-264"></a>himself.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-265" name="CodeChat-265" href="#CodeChat-265"></a>
+<a id="CodeChat-266" name="CodeChat-266" href="#CodeChat-266"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>And now he perceived that nothing was wanting save only a lady, on whom
+<a id="CodeChat-267" name="CodeChat-267" href="#CodeChat-267"></a>he might bestow the empire of his heart. There lived close at hand a
+<a id="CodeChat-268" name="CodeChat-268" href="#CodeChat-268"></a>hard-working country lass, Aldonza Lorenzo, on whom sometimes he had cast
+<a id="CodeChat-269" name="CodeChat-269" href="#CodeChat-269"></a>an eye, but who was quite unmindful of the gentleman. Her he selected for
+<a id="CodeChat-270" name="CodeChat-270" href="#CodeChat-270"></a>his peerless lady, and dubbed her with the sweet-sounding name of Dulcinea
+<a id="CodeChat-271" name="CodeChat-271" href="#CodeChat-271"></a>del Toboso.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-272" name="CodeChat-272" href="#CodeChat-272"></a>
+<a id="CodeChat-273" name="CodeChat-273" href="#CodeChat-273"></a>
+<a id="CodeChat-274" name="CodeChat-274" href="#CodeChat-274"></a><span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;&lt;</span><span class="nt">i</span><span class="p">&gt;</span>II.--An Adventure in a Courtyard<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<a id="CodeChat-275" name="CodeChat-275" href="#CodeChat-275"></a>
+<a id="CodeChat-276" name="CodeChat-276" href="#CodeChat-276"></a>
+<a id="CodeChat-277" name="CodeChat-277" href="#CodeChat-277"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>One morning, in the hottest part of July, with great secrecy, he armed
+<a id="CodeChat-278" name="CodeChat-278" href="#CodeChat-278"></a>himself, mounted Rozinante, and rode out of his backyard into the open
+<a id="CodeChat-279" name="CodeChat-279" href="#CodeChat-279"></a>fields. He was disturbed to think that the honour of knighthood had not yet
+<a id="CodeChat-280" name="CodeChat-280" href="#CodeChat-280"></a>been conferred upon him, but determined to rectify this matter at an early
+<a id="CodeChat-281" name="CodeChat-281" href="#CodeChat-281"></a>opportunity, and rode on soliloquising, after the manner of knight-errants,
+<a id="CodeChat-282" name="CodeChat-282" href="#CodeChat-282"></a>as happy as a man might be.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-283" name="CodeChat-283" href="#CodeChat-283"></a>
+<a id="CodeChat-284" name="CodeChat-284" href="#CodeChat-284"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Towards evening he arrived at a common inn, before whose door sat two
+<a id="CodeChat-285" name="CodeChat-285" href="#CodeChat-285"></a>wenches, the companions of some carriers bound for Seville. Don Quixote
+<a id="CodeChat-286" name="CodeChat-286" href="#CodeChat-286"></a>instantly imagined the inn to be a castle, and the wenches to be fair
+<a id="CodeChat-287" name="CodeChat-287" href="#CodeChat-287"></a>ladies taking the air; and as a swine-herd, getting his hogs together in a
+<a id="CodeChat-288" name="CodeChat-288" href="#CodeChat-288"></a>stubble-field near at hand, chanced at that moment to wind his horn, our
+<a id="CodeChat-289" name="CodeChat-289" href="#CodeChat-289"></a>gentleman imagined that this was a signal of his approach, and rode forward
+<a id="CodeChat-290" name="CodeChat-290" href="#CodeChat-290"></a>in the highest spirits.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-291" name="CodeChat-291" href="#CodeChat-291"></a>
+<a id="CodeChat-292" name="CodeChat-292" href="#CodeChat-292"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The extravagant language in which he addressed them astonished the
+<a id="CodeChat-293" name="CodeChat-293" href="#CodeChat-293"></a>wenches as much as his amazing appearance, and they first would have run
+<a id="CodeChat-294" name="CodeChat-294" href="#CodeChat-294"></a>from him, but finally stayed to laugh. Don Quixote rebuked them, whereat
+<a id="CodeChat-295" name="CodeChat-295" href="#CodeChat-295"></a>they laughed the more, and only the innkeeper&#39;s appearance prevented the
+<a id="CodeChat-296" name="CodeChat-296" href="#CodeChat-296"></a>knight&#39;s indignation from carrying him to extremities. This man was for
+<a id="CodeChat-297" name="CodeChat-297" href="#CodeChat-297"></a>peace, and welcomed the strange apparition to his inn with all civility,
+<a id="CodeChat-298" name="CodeChat-298" href="#CodeChat-298"></a>marvelling much to find himself addressed as Sir Castellan. So the knight
+<a id="CodeChat-299" name="CodeChat-299" href="#CodeChat-299"></a>sat down to supper with strange company, and discoursed of chivalry to the
+<a id="CodeChat-300" name="CodeChat-300" href="#CodeChat-300"></a>bewilderment of all present, treating the inn as a castle, the host as a
+<a id="CodeChat-301" name="CodeChat-301" href="#CodeChat-301"></a>noble gentleman, and the wenches as great ladies.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-302" name="CodeChat-302" href="#CodeChat-302"></a>
+<a id="CodeChat-303" name="CodeChat-303" href="#CodeChat-303"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>He presently sought the innkeeper alone in the stable, and, kneeling,
+<a id="CodeChat-304" name="CodeChat-304" href="#CodeChat-304"></a>requested to be dubbed a knight, vowing that he would not move from that
+<a id="CodeChat-305" name="CodeChat-305" href="#CodeChat-305"></a>place till &#39;twas done. The host guessed the distraction of his visitor and
+<a id="CodeChat-306" name="CodeChat-306" href="#CodeChat-306"></a>complied, counselling Don Quixote--who had never read of such things in
+<a id="CodeChat-307" name="CodeChat-307" href="#CodeChat-307"></a>books of chivalry--to provide himself henceforth with money and clean
+<a id="CodeChat-308" name="CodeChat-308" href="#CodeChat-308"></a>shirts, and no longer to ride penniless. That night Don Quixote watched his
+<a id="CodeChat-309" name="CodeChat-309" href="#CodeChat-309"></a>arms by moonlight, laying them upon the horse-trough in the yard of the
+<a id="CodeChat-310" name="CodeChat-310" href="#CodeChat-310"></a>inn, while from a distance the innkeeper and his guests watched the gaunt
+<a id="CodeChat-311" name="CodeChat-311" href="#CodeChat-311"></a>man, now leaning on his lance, and now walking to and fro, with his target
+<a id="CodeChat-312" name="CodeChat-312" href="#CodeChat-312"></a>on his arm.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-313" name="CodeChat-313" href="#CodeChat-313"></a>
+<a id="CodeChat-314" name="CodeChat-314" href="#CodeChat-314"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>It chanced that a carrier came to water his mules, and was about to
+<a id="CodeChat-315" name="CodeChat-315" href="#CodeChat-315"></a>remove the armour, when Don Quixote in a loud voice called him to desist.
+<a id="CodeChat-316" name="CodeChat-316" href="#CodeChat-316"></a>The man took no notice, and Don Quixote, calling upon his Dulcinea to
+<a id="CodeChat-317" name="CodeChat-317" href="#CodeChat-317"></a>assist him, lifted his lance and brought it down on the carrier&#39;s pate,
+<a id="CodeChat-318" name="CodeChat-318" href="#CodeChat-318"></a>laying him flat. A second carrier came, and was treated in like manner; but
+<a id="CodeChat-319" name="CodeChat-319" href="#CodeChat-319"></a>now all the company of them came, and with showers of stones made a
+<a id="CodeChat-320" name="CodeChat-320" href="#CodeChat-320"></a>terrible assault upon the knight. It was only the interference of the
+<a id="CodeChat-321" name="CodeChat-321" href="#CodeChat-321"></a>innkeeper that put an end to this battle, and by careful words he was able
+<a id="CodeChat-322" name="CodeChat-322" href="#CodeChat-322"></a>to appease Don Quixote&#39;s wrath and get him out of the inn.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-323" name="CodeChat-323" href="#CodeChat-323"></a>
+<a id="CodeChat-324" name="CodeChat-324" href="#CodeChat-324"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>On his way the now happy knight found a farmer beating a boy, and
+<a id="CodeChat-325" name="CodeChat-325" href="#CodeChat-325"></a>bidding him desist, inquired the reason of this chastisement. The man,
+<a id="CodeChat-326" name="CodeChat-326" href="#CodeChat-326"></a>afraid of the strange armoured figure, told how this boy did his work badly
+<a id="CodeChat-327" name="CodeChat-327" href="#CodeChat-327"></a>in the field, and deserved his flogging; but the boy declared that the
+<a id="CodeChat-328" name="CodeChat-328" href="#CodeChat-328"></a>farmer owed him wages, and that whenever he asked for them his master
+<a id="CodeChat-329" name="CodeChat-329" href="#CodeChat-329"></a>flogged him. Sternly did the Don command the man to pay the lad&#39;s wages,
+<a id="CodeChat-330" name="CodeChat-330" href="#CodeChat-330"></a>and when the fellow promised to do so directly he got home, and the boy
+<a id="CodeChat-331" name="CodeChat-331" href="#CodeChat-331"></a>protested that he would surely never keep that promise, Don Quixote
+<a id="CodeChat-332" name="CodeChat-332" href="#CodeChat-332"></a>threatened the farmer, saying, &quot;I am the valorous Don Quixote of La Mancha,
+<a id="CodeChat-333" name="CodeChat-333" href="#CodeChat-333"></a>righter of wrongs, revenger and redresser of grievances; remember what you
+<a id="CodeChat-334" name="CodeChat-334" href="#CodeChat-334"></a>have promised and sworn, as you will answer the contrary at your peril.&quot;
+<a id="CodeChat-335" name="CodeChat-335" href="#CodeChat-335"></a>Convinced that the man dare not disobey, he rode forward, and the farmer
+<a id="CodeChat-336" name="CodeChat-336" href="#CodeChat-336"></a>very soon continued his flogging of the boy.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-337" name="CodeChat-337" href="#CodeChat-337"></a>
+<a id="CodeChat-338" name="CodeChat-338" href="#CodeChat-338"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A company of merchants approaching caused Don Quixote to halt in the
+<a id="CodeChat-339" name="CodeChat-339" href="#CodeChat-339"></a>middle of the road, calling upon them to stand until they acknowledged
+<a id="CodeChat-340" name="CodeChat-340" href="#CodeChat-340"></a>Dulcinea del Toboso to be the peerless beauty of the world. This challenge
+<a id="CodeChat-341" name="CodeChat-341" href="#CodeChat-341"></a>was met with prevarication, which enraged Don Quixote, and clapping spurs
+<a id="CodeChat-342" name="CodeChat-342" href="#CodeChat-342"></a>to Rozinante he bore down upon the company with his lance couched.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-343" name="CodeChat-343" href="#CodeChat-343"></a>
+<a id="CodeChat-344" name="CodeChat-344" href="#CodeChat-344"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A stumble of the horse threw him, and as he lay on the ground, unable to
+<a id="CodeChat-345" name="CodeChat-345" href="#CodeChat-345"></a>move, one of the servants of the company came up and broke the lance across
+<a id="CodeChat-346" name="CodeChat-346" href="#CodeChat-346"></a>Don Quixote&#39;s ribs. It was not until a countryman came by that the Don was
+<a id="CodeChat-347" name="CodeChat-347" href="#CodeChat-347"></a>extricated, and then he had to ride back to his own village on the ass of
+<a id="CodeChat-348" name="CodeChat-348" href="#CodeChat-348"></a>the poor labourer, being so stiff and sore as quite incapable to mount
+<a id="CodeChat-349" name="CodeChat-349" href="#CodeChat-349"></a>Rozinante.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-350" name="CodeChat-350" href="#CodeChat-350"></a>
+<a id="CodeChat-351" name="CodeChat-351" href="#CodeChat-351"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The curate and the barber, seeing now what havoc romances of chivalry
+<a id="CodeChat-352" name="CodeChat-352" href="#CodeChat-352"></a>were making in the wits of this good gentleman, ran through his library
+<a id="CodeChat-353" name="CodeChat-353" href="#CodeChat-353"></a>while he lay wounded in bed, burned all his noxious works, and, securely
+<a id="CodeChat-354" name="CodeChat-354" href="#CodeChat-354"></a>locking the door, prepared the tale that enchantment had carried away the
+<a id="CodeChat-355" name="CodeChat-355" href="#CodeChat-355"></a>books and the very chamber itself.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-356" name="CodeChat-356" href="#CodeChat-356"></a>
+<a id="CodeChat-357" name="CodeChat-357" href="#CodeChat-357"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>None of the entreaties of his niece, nor the remonstrances of his
+<a id="CodeChat-358" name="CodeChat-358" href="#CodeChat-358"></a>housekeeper, could stay Don Quixote at home, and he soon prepared for a
+<a id="CodeChat-359" name="CodeChat-359" href="#CodeChat-359"></a>second sally. He persuaded a good, honest country labourer, Sancho Panza by
+<a id="CodeChat-360" name="CodeChat-360" href="#CodeChat-360"></a>name, to enter his service as squire, promising him for reward the first
+<a id="CodeChat-361" name="CodeChat-361" href="#CodeChat-361"></a>island or empire which his lance should happen to conquer. Thus did things
+<a id="CodeChat-362" name="CodeChat-362" href="#CodeChat-362"></a>happen in books of chivalry, and he did not doubt that thus it would happen
+<a id="CodeChat-363" name="CodeChat-363" href="#CodeChat-363"></a>with him.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-364" name="CodeChat-364" href="#CodeChat-364"></a>
+<a id="CodeChat-365" name="CodeChat-365" href="#CodeChat-365"></a>
+<a id="CodeChat-366" name="CodeChat-366" href="#CodeChat-366"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="CodeChat-367" name="CodeChat-367" href="#CodeChat-367"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-368" name="CodeChat-368" href="#CodeChat-368"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;home.html&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="CodeChat-369" name="CodeChat-369" href="#CodeChat-369"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-370" name="CodeChat-370" href="#CodeChat-370"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-371" name="CodeChat-371" href="#CodeChat-371"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;cervantes.html&quot;</span><span class="p">&gt;</span>This Page<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="CodeChat-372" name="CodeChat-372" href="#CodeChat-372"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-373" name="CodeChat-373" href="#CodeChat-373"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;python.html&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-374" name="CodeChat-374" href="#CodeChat-374"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="CodeChat-375" name="CodeChat-375" href="#CodeChat-375"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-376" name="CodeChat-376" href="#CodeChat-376"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

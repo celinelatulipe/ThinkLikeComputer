@@ -1,0 +1,412 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>3.8. Modules &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.9. Ethics &amp; Code Ownership" href="EthicsAndCodeOwnership.html" />
+    <link rel="prev" title="3.7. Introduction to Python Modules" href="intro-PythonModules.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=ModulesandGettingHelp'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3.7. </span>Introduction to Python Modules" data-toggle="tooltip">
+    <a href="intro-PythonModules.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3.9. </span>Ethics &amp; Code Ownership' data-toggle="tooltip" >              
+    <a href="EthicsAndCodeOwnership.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="modules">
+<span id="index-0"></span><h1><span class="section-number">3.8. </span>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">¶</a></h1>
+
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
+        <div id="vid_modules" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="3.8.1"
+            data-video-width="560" data-video-videoid="GCLHuPBtLdQ"
+            data-video-divid="vid_modules" data-video-start="0"
+            data-video-end="-1" ></div>
+    </div>
+    <p>A <strong>module</strong> is a file containing Python definitions and statements intended for
+use in other Python programs. There are many Python modules that come with
+Python as part of the <strong>standard library</strong>. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.</p>
+<p>Functions imported as part of a module live in their own <strong>namespace</strong>.  A namespace is simply a space within which all names are distinct from each other. The same name can be reused in different namespaces but two objects can’t have the same name within a single namespace. One example of a namespace is the set of street names within a single city. Many cities have a street called “Main Street”, but it’s very confusing if two streets in the same city have that name! Another example is the folder organization of file systems. You can have a file called todo in your work folder as well as your personal folder, but you know which is which because of the  folder it’s in; each folder has its own namespace for files. Note that human names are not part of a namespace that enforces uniqueness; that’s why governments have invented unique identifiers to assign to people, like passport numbers.</p>
+<p>The  <a class="reference external" href="https://docs.python.org/3/index.html">Python Documentation</a> site is an extremely useful reference for all aspects of Python. The site
+contains a listing of all the standard modules that are available with Python
+(see <a class="reference external" href="https://docs.python.org/3/py-modindex.html">Global Module Index</a>). You
+will also see that there is a
+<a class="reference external" href="https://docs.python.org/3/library/index.html">Standard Library Reference</a>
+and a
+<a class="reference external" href="https://docs.python.org/3/tutorial/index.html">Tutorial</a> as well as
+installation instructions, how-tos, and frequently asked questions.  We
+encourage you to become familiar with this site and to use it often.</p>
+<p>If you have not done so already, take a look at the Global Module Index.  Here
+you will see an alphabetical listing of all the modules that are available as
+part of the standard library.  Find the turtle module.</p>
+<section id="importing-modules">
+<h2><span class="section-number">3.8.1. </span>Importing Modules<a class="headerlink" href="#importing-modules" title="Permalink to this heading">¶</a></h2>
+<p>In order to use Python modules, you have to <strong>import</strong> them into a Python program. That happens with an import
+statement: the word <code class="docutils literal notranslate"><span class="pre">import</span></code>, and then the <em>name</em> of the module. The name is case-sensitive. Roughly translated to
+English, an import statement says “there’s some code in another file; please make its functions and variables
+available in this file.” More technically, an import statement causes all the code in another file to be executed. Any
+variables that are created and functions that are defined during that execution can then be used in the current file.</p>
+<p>By convention, all <code class="docutils literal notranslate"><span class="pre">import</span></code> commands are put at the very top of your file. They can be put elsewhere, but that can
+lead to some confusion, so it’s best to follow the convention.</p>
+<p>Where do these other files that you can import come from? They may be standard library modules that are available when you install Python, or they may be code files that you wrote yourself, or they could
+be code that someone else wrote and you downloaded on to your computer.</p>
+<p>For example, if you have a file <code class="docutils literal notranslate"><span class="pre">myprog.py</span></code> in directory <code class="docutils literal notranslate"><span class="pre">~/Desktop/mycode/</span></code>, and myprog.py contains a line of
+code <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">morecode</span></code>, then the python interpreter will look for a file called <code class="docutils literal notranslate"><span class="pre">morecode.py</span></code>, excecute its code,
+and make its variables, objects and functions available for reference in the rest of the code in myprog.py.</p>
+<p>Note that it is <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">morecode</span></code>, not <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">morecode.py</span></code>, but the other file has to be called <code class="docutils literal notranslate"><span class="pre">morecode.py</span></code>.</p>
+<p>In some sense, you can think of importing as being similar to including the code from a module into the code you are writing, as depicted in this diagram:</p>
+<img alt="../_images/modules_diagram.png" src="../_images/modules_diagram.png" />
+<p>As shown in the diagram, you need to remember that the two sets of code have different namespaces, which typically means that you access the variables and objects in the imported module by using something like <code class="docutils literal notranslate"><span class="pre">module_name.variable_name</span></code>.</p>
+<p>The tests you see in your problem sets make use of a Python module that is in the standard library, called
+<code class="docutils literal notranslate"><span class="pre">unittest</span></code>. Right now, you can’t see the code that causes those tests to run, because we have hidden it from you,
+but in later courses, you will learn how to write your own Unit Tests for code, and to do so, you will need to
+write an import statement at the beginning of your programs. Even before you learn how to write your own tests, you
+will see code for Unit Tests in your problem set files.</p>
+<div class="admonition-don-t-overwrite-standard-library-modules admonition">
+<p class="admonition-title">Don’t overwrite standard library modules!</p>
+<p>It is possible to overwrite a standard library. For example, if you create a file <code class="docutils literal notranslate"><span class="pre">random.py</span></code> in the same directory where
+<code class="docutils literal notranslate"><span class="pre">myprog.py</span></code> lives, and then myprog.py invokes <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">random</span></code>, it will import <em>your</em> file rather than the
+standard library module. That’s not usually what you want, so be careful about how you name your python files!</p>
+</div>
+</section>
+<section id="syntax-for-importing-modules-and-functionality">
+<h2><span class="section-number">3.8.2. </span>Syntax for Importing Modules and Functionality<a class="headerlink" href="#syntax-for-importing-modules-and-functionality" title="Permalink to this heading">¶</a></h2>
+<p>When you see imported modules in a Python program, there are a few variations that have slightly different consequences.</p>
+<ol class="arabic simple">
+<li><p>The most common is <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">morecode</span></code>. That imports everything in morecode.py. To invoke a function f1 that is defined in morecode.py, you would write <code class="docutils literal notranslate"><span class="pre">morecode.f1()</span></code>. Note that you have to explicitly mention morecode again, to specify that you want the f1 function from the morecode namespace. If you just write <code class="docutils literal notranslate"><span class="pre">f1()</span></code>, python will look for an f1 that was defined in the current file, rather than in morecode.py.</p></li>
+<li><p>You can also give the imported module an alias (a different name, just for when you use it in your program). For example, after executing <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">morecode</span> <span class="pre">as</span> <span class="pre">mc</span></code>, you would invoke <code class="docutils literal notranslate"><span class="pre">f1</span></code> as <code class="docutils literal notranslate"><span class="pre">mc.f1()</span></code>. You have now given the <code class="docutils literal notranslate"><span class="pre">morecode</span></code> module the alias <code class="docutils literal notranslate"><span class="pre">mc</span></code>. Programmers often do this to make code easier to type.</p></li>
+<li><p>A third possibility for importing occurs when you only want to import SOME of the functionality from a module, and you want to make those objects be part of the current module’s namespace. For example, you could write <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">morecode</span> <span class="pre">import</span> <span class="pre">f1</span></code>. Then you could invoke f1 without referencing morecode again: <code class="docutils literal notranslate"><span class="pre">f1()</span></code>.</p></li>
+</ol>
+<div class="admonition-note-python-modules-and-limitations-with-activecode admonition">
+<p class="admonition-title">Note: Python modules and limitations with activecode</p>
+<p>Throughout the chapters of this book, activecode windows allow you to practice the Python that you are learning.
+We mentioned in the first chapter that programming is normally done using some type of development
+environment and that the
+activecode used here was strictly to help us learn.  It is not the way we write production programs.</p>
+<p>To that end, it is necessary to mention that many of the  modules available in standard Python
+will <strong>not</strong> work in the activecode environment.  In fact, only <code class="docutils literal notranslate"><span class="pre">turtle</span></code>, <code class="docutils literal notranslate"><span class="pre">math</span></code>, <code class="docutils literal notranslate"><span class="pre">random</span></code>, and a couple others have been
+ported at this point.  If you wish to explore any
+additional modules, you will need to run from the native python interpreter on your computer.</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.8.2.1" data-multipleanswers="false"  id="question3_8_1"  style="visibility: hidden;">
+    <p>In Python a module is:</p>
+
+    <li data-component="answer" data-correct='yes' id="question3_8_1_opt_a">A file containing Python definitions and statements intended for use in other Python programs.</li><li data-component="feedback">A module can be reused in different programs.</li>
+    
+    <li data-component="answer"  id="question3_8_1_opt_b">A separate block of code within a program.</li><li data-component="feedback">While a module is separate block of code, it is separate from a program.</li>
+    
+    <li data-component="answer"  id="question3_8_1_opt_c">One line of code in a program.</li><li data-component="feedback">The call to a feature within a module may be one line of code, but modules are usually multiple lines of code separate from the program.</li>
+    
+    <li data-component="answer"  id="question3_8_1_opt_d">A file that contains documentation about functions in Python.</li><li data-component="feedback">Each module has its own documentation, but the module itself is more than just documentation.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.8.2.2" data-multipleanswers="false"  id="question3_8_2"  style="visibility: hidden;">
+    <p>To find out information on the standard modules available with Python you should:</p>
+
+    <li data-component="answer" data-correct='yes' id="question3_8_2_opt_a">Go to the Python Documentation site.</li><li data-component="feedback">The site contains a listing of all the standard modules that are available with Python.</li>
+    
+    <li data-component="answer"  id="question3_8_2_opt_b">Look at the import statements of the program you are working with or writing.</li><li data-component="feedback">The import statements only tell you what modules are currently being used in the program, not how to use them or what they contain.</li>
+    
+    <li data-component="answer"  id="question3_8_2_opt_c">Ask the professor.</li><li data-component="feedback">While the professor knows a subset of the modules available in Python, chances are the professor will have to look up the available modules just like you would.</li>
+    
+    <li data-component="answer"  id="question3_8_2_opt_d">Look in this textbook.</li><li data-component="feedback">This book only explains a portion of the modules available.  For a full listing you should look elsewhere.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.8.2.3" data-multipleanswers="false"  id="question3_8_3"  style="visibility: hidden;">
+    <p>True / False:  All standard Python modules will work in activecode.</p>
+
+    <li data-component="answer"  id="question3_8_3_opt_a">True</li><li data-component="feedback">Only a few modules have been ported to work in activecode at this time.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question3_8_3_opt_b">False</li><li data-component="feedback">Only a few modules have been ported to work in activecode at this time.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 3.7. Introduction to Python Modules' data-toggle="tooltip">
+  <a href="intro-PythonModules.html" aria-label="Previous - 3.7. Introduction to Python Modules">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 3.9. Ethics &amp; Code Ownership' data-toggle="tooltip" >
+    <a href="EthicsAndCodeOwnership.html" aria-label="Next - 3.9. Ethics &amp; Code Ownership">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,991 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.9. A Simple Class Example &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12. Review" href="../Review/toctree.html" />
+    <link rel="prev" title="11.8. A Complete Event-Based GUI Example" href="Event-BasedCompleteExample.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=Event-BasedExample-OO'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">11.8. </span>A Complete Event-Based GUI Example" data-toggle="tooltip">
+    <a href="Event-BasedCompleteExample.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">12. </span>Review' data-toggle="tooltip" >              
+    <a href="../Review/toctree.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="a-simple-class-example">
+<h1><span class="section-number">11.9. </span>A Simple Class Example<a class="headerlink" href="#a-simple-class-example" title="Permalink to this headline">¶</a></h1>
+<p>Object-oriented code is often referred to as ‘OO-code’ for short. In OO programming, you create objects to represent things in your program. Instead of having a variable for student number, a variable for student name, and a variable for student grade, you can have a single student object that stores all of that related information together.</p>
+<p>Objects are things that have properties and methods. As an example, a dog has properties that describe the dog (fur color, breed, name, barking sound, name of human owner, age, etc.) and methods that define what it can do (bark, eat, sleep, fetch, etc.). Quite often, calling a method leads to the properties being updated. In object-oriented programming, we create <strong>classes</strong>, which you can think of as blueprints, and from any class you can create objects of that class. So, we could create a general class that can be used to make dog objects:</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+     <span class="n">breed</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+     <span class="n">fur_color</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+     <span class="n">owner_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+     <span class="n">bark_sound</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+     <span class="n">num_balls_fetched</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="n">num_barks</span> <span class="o">=</span> <span class="mi">0</span>
+
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">breed</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">fur_color</span><span class="p">,</span> <span class="n">bark_sound</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">breed</span> <span class="o">=</span> <span class="n">breed</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">owner_name</span> <span class="o">=</span> <span class="n">owner</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">bark_sound</span> <span class="o">=</span> <span class="n">bark_sound</span>
+
+     <span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; fetched a ball!&quot;</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">num_balls_fetched</span> <span class="o">+=</span> <span class="mi">1</span>
+
+     <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bark_sound</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">num_barks</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</td></tr></table></div>
+<p>And then, we can ask the class to give us a dog, specifying properties of the dog we want:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bingo</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;beagle&quot;</span><span class="p">,</span> <span class="s2">&quot;Bingo&quot;</span><span class="p">,</span> <span class="s2">&quot;Angie&quot;</span><span class="p">,</span> <span class="s2">&quot;brown and white&quot;</span><span class="p">,</span> <span class="s2">&quot;Hawoooooooooooo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The above line of code says create a Dog object, with the following information. It calls a special method inside the Dog class called a <strong>constructor</strong>. In Python a constructor is the method that has the special name __init__. The constructor constructs a new Dog object with the given information and returns a reference to the dog. In the line above the new Dog object is referenced by the bingo variable. Visually, this looks like this:</p>
+<a class="reference internal image-reference" href="../_images/dog_class_diagram.png"><img alt="../_images/dog_class_diagram.png" class="align-center" src="../_images/dog_class_diagram.png" style="width: 800px;" /></a>
+<p>Once we have a variable that refers to a Dog object, we can call that object’s methods and read from or write to its properties:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>bingo.fetch()
+bingo.bark()
+bingo.fetch()
+print(bingo.num_barks)
+print(bingo.num_balls_fetched)
+
+CONSOLE OUTPUT:
+
+&gt; Bingo fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Bingo fetched a ball!
+&gt; 1
+&gt; 2
+</pre></div>
+</div>
+<p>Now, you may be looking at this and thinking “Why do we need a class? We could just set up a few variables to store information about Bingo the dog and it would be a lot simpler!”</p>
+<p>But, what if you want to represent many different dogs in your program? Imagine you are programming a simulation to understand dog over-crowding in animal shelters. Let’s look at how we can work with multiple dogs using the class above.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">bingo</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;beagle&quot;</span><span class="p">,</span> <span class="s2">&quot;Bingo&quot;</span><span class="p">,</span> <span class="s2">&quot;Angie&quot;</span><span class="p">,</span> <span class="s2">&quot;brown and white&quot;</span><span class="p">,</span> <span class="s2">&quot;Hawoooooooooooo&quot;</span><span class="p">)</span>
+<span class="n">maxine</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;golden retriever&quot;</span><span class="p">,</span> <span class="s2">&quot;Maxine&quot;</span><span class="p">,</span> <span class="s2">&quot;Tom&quot;</span><span class="p">,</span> <span class="s2">&quot;gold&quot;</span><span class="p">,</span> <span class="s2">&quot;Woooofff&quot;</span><span class="p">)</span>
+<span class="n">fido</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;german shepherd&quot;</span><span class="p">,</span> <span class="s2">&quot;Fido&quot;</span><span class="p">,</span> <span class="s2">&quot;Ellen&quot;</span><span class="p">,</span> <span class="s2">&quot;brown and black&quot;</span><span class="p">,</span> <span class="s2">&quot;Arrroooof&quot;</span><span class="p">)</span>
+<span class="n">sparky</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;yorkshire terrier&quot;</span><span class="p">,</span> <span class="s2">&quot;Sparky&quot;</span><span class="p">,</span> <span class="s2">&quot;Davina&quot;</span><span class="p">,</span> <span class="s2">&quot;blond&quot;</span><span class="p">,</span> <span class="s2">&quot;Yip&quot;</span><span class="p">)</span>
+<span class="n">queenie</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s2">&quot;mixed breed&quot;</span><span class="p">,</span> <span class="s2">&quot;Queenie&quot;</span><span class="p">,</span> <span class="s2">&quot;Ellen&quot;</span><span class="p">,</span> <span class="s2">&quot;black and grey&quot;</span><span class="p">,</span> <span class="s2">&quot;Arf&quot;</span><span class="p">)</span>
+
+<span class="c1"># put dogs into a list</span>
+<span class="n">dogs</span> <span class="o">=</span> <span class="p">[</span><span class="n">bingo</span><span class="p">,</span> <span class="n">maxine</span><span class="p">,</span> <span class="n">fido</span><span class="p">,</span> <span class="n">sparky</span><span class="p">,</span> <span class="n">queenie</span><span class="p">]</span>
+
+<span class="c1"># simulate a bunch of dogs playing</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="c1"># make a random dog bark</span>
+    <span class="n">bark_index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dogs</span><span class="p">))</span>
+    <span class="n">dogs</span><span class="p">[</span><span class="n">bark_index</span><span class="p">]</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+    <span class="c1"># make a random dog fetch</span>
+    <span class="n">fetch_index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dogs</span><span class="p">))</span>
+    <span class="n">dogs</span><span class="p">[</span><span class="n">fetch_index</span><span class="p">]</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
+
+<span class="c1"># print out what each dog did</span>
+<span class="k">for</span> <span class="n">dog</span> <span class="ow">in</span> <span class="n">dogs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; barked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">num_barks</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; times and fetched &quot;</span>
+          <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dog</span><span class="o">.</span><span class="n">num_balls_fetched</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; balls&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Now, using the Dog class, we have created five different dogs, with a bunch of different information about each, and we haven’t had to create 25+ separate variables in our code to represent all of these dogs’ features. Then, we add our dog objects to a list. Then we can start to simulate dog play by picking random dogs from the list and calling the bark() or fetch() methods for those dogs. On lines 22-24, we then iterate across the list of dogs and report how many times each dog barked and how many balls each dog fetched. If you look at the Dog class, you’ll see that we have two property variables to keep track of the number of barks and the number of balls fetched. Every time we call the bark() method on a particular dog, that method increments that variable. What’s critical to understand here is that each dog has their own variable to keep track of the number of barks. You can see that in the sample console output below. You see the print statement “Sparky fetched a ball!” five times. And then if you look at the print statements at the bottom, it says Sparky barked once and fetched 5 balls. This is the power of object oriented programming: grouping things together into classes, creating objects from those classes, and calling methods on those objects.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>CONSOLE OUTPUT:
+&gt; Arf
+&gt; Sparky fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Bingo fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Queenie fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Fido fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Queenie fetched a ball!
+&gt; Arf
+&gt; Sparky fetched a ball!
+&gt; Woooofff
+&gt; Fido fetched a ball!
+&gt; Arrroooof
+&gt; Sparky fetched a ball!
+&gt; Arrroooof
+&gt; Queenie fetched a ball!
+&gt; Woooofff
+&gt; Queenie fetched a ball!
+&gt; Woooofff
+&gt; Queenie fetched a ball!
+&gt; Arf
+&gt; Sparky fetched a ball!
+&gt; Arrroooof
+&gt; Sparky fetched a ball!
+&gt; Arf
+&gt; Fido fetched a ball!
+&gt; Hawoooooooooooo
+&gt; Queenie fetched a ball!
+&gt; Woooofff
+&gt; Fido fetched a ball!
+&gt; Woooofff
+&gt; Fido fetched a ball!
+&gt; Woooofff
+&gt; Maxine fetched a ball!
+&gt; Woooofff
+&gt; Fido fetched a ball!
+&gt; Yip
+&gt; Queenie fetched a ball!
+&gt; Bingo barked 5 times and fetched 1 balls
+&gt; Maxine barked 7 times and fetched 1 balls
+&gt; Fido barked 3 times and fetched 6 balls
+&gt; Sparky barked 1 times and fetched 5 balls
+&gt; Queenie barked 4 times and fetched 7 balls
+</pre></div>
+</div>
+<div class="section" id="the-event-based-gui-example-oo-style">
+<h2><span class="section-number">11.9.1. </span>The Event-Based GUI Example - OO Style<a class="headerlink" href="#the-event-based-gui-example-oo-style" title="Permalink to this headline">¶</a></h2>
+<p>Now, you may be wondering, “Okay, but what does this have to do with event-based programming?”. In event-based programming, we can create a class that stores important information about the state of our program, and use methods to have things happen in the program in response to user interface events. In the example from the previous section, we created a program that allowed the user to draw with colored circles and stamp text. So, for that program, we can create a class to represent the circles, another class to represent text stamps, and a class to represent the overall drawing context.</p>
+<p>Below is the object-oriented version of the SimpleGUI example. Note that there are no global variables at the top. Other than variables for the window frame and buttons at the bottom of the code, the only other global variable in this code is <code class="docutils literal notranslate"><span class="pre">dc</span></code>, which is the reference variable to the drawing context object created on line 222. Look carefully at the object classes defined on lines 95-215. In object-oriented programming, the bulk of the code is in the definition of the objects: defining the properties and the methods that can be called on the objects.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span> <span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+ <span class="c1"># Dr. Celine&#39;s COMP 1000 Event-based Programming Example OO Version</span>
+ <span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+
+ <span class="kn">import</span> <span class="nn">simplegui</span>
+
+ <span class="c1">################################################################</span>
+ <span class="c1"># GUI Control Handlers</span>
+ <span class="c1">################################################################</span>
+
+ <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">):</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Draw handler, called automatically, many times/sec, by SimpleGUI module</span>
+<span class="sd">     DO NOT call this function from other parts of the code.</span>
+<span class="sd">     In this version, we just call the drawing context and ask it to draw itself</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">clear_handler</span><span class="p">():</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Gets called when clear button is clicked</span>
+<span class="sd">     Clears all lists to remove content from canvas</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">clear_canvas</span><span class="p">()</span>
+
+ <span class="k">def</span> <span class="nf">bkg_handler</span><span class="p">():</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Background toggle button - toggles between white and grey</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">toggle_bkgd_color</span><span class="p">()</span>
+
+ <span class="k">def</span> <span class="nf">lw_up_handler</span><span class="p">():</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Linewidth + handler</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">lw_dn_handler</span><span class="p">():</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Linewidth - handler</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+ <span class="k">def</span> <span class="nf">stamp_txt_handler</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Stamp text input box handler</span>
+<span class="sd">     When user types in text and then hits the enter key, this is called</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">set_stamp_text</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+
+ <span class="c1">###########################################################</span>
+ <span class="c1"># Input Device Event Handlers</span>
+ <span class="c1">###########################################################</span>
+
+ <span class="k">def</span> <span class="nf">drag</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Mouse drag handler. Takes one parameter:</span>
+<span class="sd">         a tuple of the current position of the mouse</span>
+<span class="sd">     Called continuously while user is dragging - add a new circle</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">add_circle</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+
+ <span class="k">def</span> <span class="nf">click</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Mouse click handler, Takes one parameter:</span>
+<span class="sd">         a tuple of the position of the mouse at moment of click</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">dc</span><span class="o">.</span><span class="n">add_text_stamp</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+
+ <span class="k">def</span> <span class="nf">key_handler</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Handles key presses, updates global variable fill_col</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Green&quot;</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">clear_canvas</span><span class="p">()</span>
+     <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">38</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
+         <span class="n">dc</span><span class="o">.</span><span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+     <span class="k">else</span><span class="p">:</span>
+         <span class="c1">#do nothing</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown key event. Try pressing r, g, or b&quot;</span><span class="p">)</span>
+         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;key is:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+         <span class="k">return</span>
+
+
+ <span class="c1">######################################################</span>
+ <span class="c1"># OBJECT CLASSES</span>
+ <span class="c1">######################################################</span>
+ <span class="k">class</span> <span class="nc">Circle</span><span class="p">:</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Stores information about a circle, and has a draw method</span>
+<span class="sd">     to draw the circle on the canvas</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">fc</span><span class="p">,</span> <span class="n">lc</span><span class="p">,</span> <span class="n">lw</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">radius</span> <span class="o">=</span> <span class="n">rad</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span> <span class="o">=</span> <span class="n">fc</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">line_col</span> <span class="o">=</span> <span class="n">lc</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span> <span class="o">=</span> <span class="n">lw</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span>
+
+     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canv</span><span class="p">):</span>
+         <span class="n">canv</span><span class="o">.</span><span class="n">draw_circle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_col</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span><span class="p">)</span>
+
+ <span class="k">class</span> <span class="nc">Text_Stamp</span><span class="p">:</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Stores information about a text stamp, and has a draw method</span>
+<span class="sd">     to draw the stamp on the canvas</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+
+     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">fontsize</span> <span class="o">=</span> <span class="n">fs</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">col</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">pos</span> <span class="o">=</span> <span class="n">pos</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">txt</span>
+
+     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canv</span><span class="p">):</span>
+         <span class="n">canv</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fontsize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="p">)</span>
+
+ <span class="k">class</span> <span class="nc">Drawing_Context</span><span class="p">:</span>
+     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">     Stores all the information about the current drawing state</span>
+<span class="sd">     Including what has already been drawn (list of circles &amp; list of text stamps)</span>
+<span class="sd">     Has a draw method to draw everything on the canvas</span>
+<span class="sd">     &quot;&quot;&quot;</span>
+     <span class="n">CANVAS_WIDTH</span> <span class="o">=</span> <span class="mi">400</span>
+     <span class="n">CANVAS_HEIGHT</span> <span class="o">=</span> <span class="mi">400</span>
+     <span class="n">line_col</span> <span class="o">=</span> <span class="s2">&quot;Black&quot;</span>
+     <span class="n">line_wid</span> <span class="o">=</span> <span class="mi">3</span>
+     <span class="n">fill_col</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span>
+     <span class="n">stamp_text</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span>
+     <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span>
+     <span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
+     <span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+
+     <span class="c1"># list vars to store circles/stamps that have been drawn</span>
+     <span class="n">circle_list</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="n">stamp_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+     <span class="c1"># boolean variables to differentiate mouse click/drag</span>
+     <span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span>
+
+     <span class="k">def</span> <span class="nf">clear_canvas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">         Clears all lists to remove content from canvas</span>
+<span class="sd">         &quot;&quot;&quot;</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">circle_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">stamp_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+     <span class="k">def</span> <span class="nf">change_line_width</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">up</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">         Increases line width by 1 if true is passed,</span>
+<span class="sd">         otherwise, decreases line width</span>
+<span class="sd">         &quot;&quot;&quot;</span>
+         <span class="k">if</span> <span class="p">(</span><span class="n">up</span><span class="p">):</span> <span class="c1"># increase</span>
+             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+                 <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span> <span class="o">+=</span> <span class="mi">1</span>
+         <span class="k">else</span><span class="p">:</span> <span class="c1"># decrease</span>
+             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                 <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span> <span class="o">-=</span> <span class="mi">1</span>
+         <span class="n">lw_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span><span class="p">))</span>
+
+     <span class="k">def</span> <span class="nf">set_fill_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; Sets fill color for subsequent drawing &quot;&quot;&quot;</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span> <span class="o">=</span> <span class="n">col</span>
+         <span class="n">fc_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span><span class="p">))</span>
+
+     <span class="k">def</span> <span class="nf">set_stamp_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">txt</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; sets stamp text for subsequenet drawing&quot;&quot;&quot;</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">stamp_text</span> <span class="o">=</span> <span class="n">txt</span>
+         <span class="n">text_stamp_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">stamp_text</span><span class="p">)</span>
+         <span class="n">inp</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># resets input field to blank</span>
+
+     <span class="k">def</span> <span class="nf">toggle_bkgd_color</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; toggles canvas background between grey &amp; white &quot;&quot;&quot;</span>
+         <span class="k">if</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas_col</span> <span class="o">==</span> <span class="s2">&quot;Grey&quot;</span><span class="p">):</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
+             <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Grey Background&quot;</span><span class="p">)</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+             <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;White Background&quot;</span><span class="p">)</span>
+         <span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas_col</span><span class="p">)</span>
+
+     <span class="k">def</span> <span class="nf">add_circle</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; creates a new circle object and adds it to list &quot;&quot;&quot;</span>
+         <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">radius</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_col</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">line_wid</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">circle_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">circle</span><span class="p">)</span>
+         <span class="bp">self</span><span class="o">.</span><span class="n">dragged</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># differentiate end of drag from click</span>
+
+     <span class="k">def</span> <span class="nf">add_text_stamp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; creates a new text stamp object and adds it to list &quot;&quot;&quot;</span>
+         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dragged</span><span class="p">:</span>
+             <span class="c1"># this was just the end of drag, don&#39;t make stamp</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="n">stamp</span> <span class="o">=</span> <span class="n">Text_Stamp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fontsize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fill_col</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stamp_text</span><span class="p">)</span>
+             <span class="bp">self</span><span class="o">.</span><span class="n">stamp_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stamp</span><span class="p">)</span>
+
+     <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
+         <span class="sd">&quot;&quot;&quot; draw everything - iterate through circle &amp; stamp lists &quot;&quot;&quot;</span>
+         <span class="k">for</span> <span class="n">circ</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">circle_list</span><span class="p">:</span>
+             <span class="n">circ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+         <span class="k">for</span> <span class="n">stamp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stamp_list</span><span class="p">:</span>
+             <span class="n">stamp</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
+
+
+ <span class="c1">#######################################################</span>
+ <span class="c1"># Set up window, GUI controls &amp; register event handlers</span>
+ <span class="c1">#######################################################</span>
+
+ <span class="c1"># Create a drawing context</span>
+ <span class="n">dc</span> <span class="o">=</span> <span class="n">Drawing_Context</span><span class="p">()</span>
+
+ <span class="c1"># Frame</span>
+ <span class="n">frame</span> <span class="o">=</span> <span class="n">simplegui</span><span class="o">.</span><span class="n">create_frame</span><span class="p">(</span><span class="s2">&quot;COMP 1000 Demo&quot;</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">CANVAS_WIDTH</span><span class="p">,</span> <span class="n">dc</span><span class="o">.</span><span class="n">CANVAS_HEIGHT</span><span class="p">)</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="n">dc</span><span class="o">.</span><span class="n">canvas_col</span><span class="p">)</span>
+
+ <span class="c1"># Create &amp; Register Buttons &amp; Labels</span>
+ <span class="c1"># labels + bkgd button assigned to variables so they can be updated</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;Clear&#39;</span><span class="p">,</span> <span class="n">clear_handler</span><span class="p">)</span>
+ <span class="n">bkg_button</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;White Background&#39;</span><span class="p">,</span> <span class="n">bkg_handler</span><span class="p">)</span>
+ <span class="n">fc_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="n">dc</span><span class="o">.</span><span class="n">fill_col</span><span class="p">)</span>
+ <span class="n">lw_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">dc</span><span class="o">.</span><span class="n">line_wid</span><span class="p">))</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">lw_up_handler</span><span class="p">)</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw_dn_handler</span><span class="p">)</span>
+ <span class="n">text_stamp_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="n">dc</span><span class="o">.</span><span class="n">stamp_text</span><span class="p">)</span>
+ <span class="n">inp</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;New text stamp:&#39;</span><span class="p">,</span> <span class="n">stamp_txt_handler</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+ <span class="c1"># Register Keyboard and Mouse Event Handlers</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">set_draw_handler</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">set_keydown_handler</span><span class="p">(</span><span class="n">key_handler</span><span class="p">)</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">set_mousedrag_handler</span><span class="p">(</span><span class="n">drag</span><span class="p">)</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">set_mouseclick_handler</span><span class="p">(</span><span class="n">click</span><span class="p">)</span>
+
+ <span class="c1"># Show the frame and start listening</span>
+ <span class="n">frame</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>Most of the functions that were in the previous version are now methods of the drawing context object. And most of the variables that were global variabbles before are now properties of the drawing context.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Circle</span></code> and <code class="docutils literal notranslate"><span class="pre">Text_Stamp</span></code> classes collapse the information from the prior version. In the previous version if we had three text stamps, we would have three entries in three separate lists, and if we wanted to be able to store different font sizes for each text stamp, we would have had to add a fourth list. In this version, the information for each text stamp is stored as properties of that Text_Stamp object. You can see that the Text_Stamp class already has fontsize as a property, so in this new version, it would be very easy to change the program so that every text stamp could have a different font size: we would just add + and - buttons (similar to the line width buttons we already have) and added a font_change() method to the Drawing_Context class. Then, when we create a new text stamp, we would use the current font size.</p>
+<p>Below is a class diagram that shows the relations between the classes in this version:</p>
+<a class="reference internal image-reference" href="../_images/drawing_class_diagram.png"><img alt="../_images/drawing_class_diagram.png" class="align-center" src="../_images/drawing_class_diagram.png" style="width: 800px;" /></a>
+<p>If you look closely at the code for this object-oriented version of the circle and stamp drawing program, you will notice that we never have to use the keyword global to specify that we are changing a global variable. We are using <code class="docutils literal notranslate"><span class="pre">dc</span></code>, which is a global reference variable to the drawing context, but we are never overwriting that variable. Instead, we are calling that variable’s methods and properties to access and make changes to the drawing context. This is a much cleaner and more elegant version, with the same functionality. This version of the program is also easier to extend with new features. If looking at this version of the program seems very confusing to you - don’t stress about it. You have lots of time to learn about object-oriented approaches to programming in future courses.</p>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 11.8. A Complete Event-Based GUI Example' data-toggle="tooltip">
+  <a href="Event-BasedCompleteExample.html" aria-label="Previous - 11.8. A Complete Event-Based GUI Example">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 12. Review' data-toggle="tooltip" >
+    <a href="../Review/toctree.html" aria-label="Next - 12. Review">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

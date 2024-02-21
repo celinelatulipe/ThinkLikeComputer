@@ -1,0 +1,813 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.8. A Complete Event-Based GUI Example &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.9. A Simple Class Example" href="Event-BasedExample-OO.html" />
+    <link rel="prev" title="11.7. SimpleGUI Events" href="SimpleGUIEvents.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=Event-BasedCompleteExample'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">11.7. </span>SimpleGUI Events" data-toggle="tooltip">
+    <a href="SimpleGUIEvents.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">11.9. </span>A Simple Class Example' data-toggle="tooltip" >              
+    <a href="Event-BasedExample-OO.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="a-complete-event-based-gui-example">
+<h1><span class="section-number">11.8. </span>A Complete Event-Based GUI Example<a class="headerlink" href="#a-complete-event-based-gui-example" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we have shown the steps in creating an event-based graphical program that gives the end user an interface and working area or canvas. The steps are:</p>
+<ul class="simple">
+<li><p>Set up any global variables that are neceesary</p></li>
+<li><p>Create GUI controls</p></li>
+<li><p>Create handler functions for the controls</p></li>
+<li><p>Create handler functions for input on the working area or canvas</p></li>
+<li><p>Register the event handlers for the controls</p></li>
+<li><p>Register input listeners for keyboard and mouse events on the canvas</p></li>
+<li><p>Create a draw() function that draws the working area of canvas</p></li>
+<li><p>Tell the Python interpreter to start listening for events on the canvas and the controls</p></li>
+</ul>
+<p>We’ve shown these steps in bits and pieces, and in this chapter, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You shoould copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+<span class="c1"># Dr. Celine&#39;s COMP 1000 Event-based Programming Example</span>
+<span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">simplegui</span>
+
+<span class="c1"># Global Variables</span>
+<span class="n">CANVAS_WIDTH</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="n">CANVAS_HEIGHT</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="c1"># current drawing state</span>
+<span class="n">line_col</span> <span class="o">=</span> <span class="s2">&quot;Black&quot;</span>
+<span class="n">line_wid</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">fill_col</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span>
+<span class="n">stamp_text</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span>
+<span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+<span class="c1"># list vars to store circles that have been drawn</span>
+<span class="n">circle_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">circle_col_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">circle_line_wid_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># list vars to store text stamps that have been drawn</span>
+<span class="n">text_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">text_pos_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">text_col_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># boolean variable to differentiate clicks/drags</span>
+<span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1">################################################################</span>
+<span class="c1"># GUI Control Handlers</span>
+<span class="c1">################################################################</span>
+
+<span class="k">def</span> <span class="nf">clear_handler</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets called when clear button is clicked</span>
+<span class="sd">    Clears all lists to remove content from canvas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">clear_canvas</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">undo_handler</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets called when user presses undo button</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">undo</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">bkg_handler</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Background toggle button - toggles between white and grey</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">toggle_background</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">lw_up_handler</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linewidth + handler</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">lw_dn_handler</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linewidth - handler</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">stamp_txt_handler</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Stamp text input box handler</span>
+<span class="sd">    When user types in text and then hits the enter key, this is called</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">set_stamp_text</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Draw handler, takes canvas as input, keeps canvas up to date</span>
+<span class="sd">    This is called automatically, many times/second, as part of the SimpleGUI module</span>
+<span class="sd">    DO NOT call this function from other parts of the code</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">circle_list</span><span class="p">)):</span>
+        <span class="n">canvas</span><span class="o">.</span><span class="n">draw_circle</span><span class="p">(</span><span class="n">circle_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">radius</span><span class="p">,</span> <span class="n">circle_line_wid_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">line_col</span><span class="p">,</span> <span class="n">circle_col_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text_list</span><span class="p">)):</span>
+        <span class="n">canvas</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="n">text_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">text_pos_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">fontsize</span><span class="p">,</span> <span class="n">text_col_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+<span class="c1">###########################################################</span>
+<span class="c1"># Input Device Event Handlers</span>
+<span class="c1">###########################################################</span>
+
+<span class="c1"># Handler for mouse drag events. Takes one parameter:</span>
+<span class="c1">#   a tuple of the current position of the mouse</span>
+<span class="c1"># This gets called continuously while the user is dragging</span>
+<span class="k">def</span> <span class="nf">drag</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mouse drag handler</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">add_circle</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+<span class="c1"># Handler for mouse click events. Takes one parameter:</span>
+<span class="c1">#   a tuple of the position of the mouse at moment of click</span>
+<span class="k">def</span> <span class="nf">click</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mouse click handler, if a real click (not end of drag)</span>
+<span class="sd">    this adds a text stamp to the canvas at location of click</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">add_text_stamp</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+
+<span class="c1"># Keypress handler</span>
+<span class="k">def</span> <span class="nf">key_handler</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles key presses</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span>
+        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span>
+        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Green&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span>
+        <span class="n">clear_canvas</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">38</span><span class="p">:</span>
+        <span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1">#do nothing</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown key event. Try pressing r, g, or b&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;key is:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="k">return</span>
+
+
+<span class="c1">###############################</span>
+<span class="c1"># Other Functions</span>
+<span class="c1">###############################</span>
+
+<span class="k">def</span> <span class="nf">clear_canvas</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Clears all lists to remove content from canvas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">circle_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">circle_col_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">circle_line_wid_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">text_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">text_pos_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+    <span class="n">text_col_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">change_line_width</span><span class="p">(</span><span class="n">up</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Increases line width by 1 if true is passed,</span>
+<span class="sd">    otherwise, decreases line width</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">line_wid</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">up</span><span class="p">):</span> <span class="c1"># increase</span>
+        <span class="k">if</span> <span class="n">line_wid</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">line_wid</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># decrease</span>
+        <span class="k">if</span> <span class="n">line_wid</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">line_wid</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="n">lw_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_wid</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">set_fill_color</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; updates fill color for subsequent drawing, updates label &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">fill_col</span>
+    <span class="n">fill_col</span> <span class="o">=</span> <span class="n">col</span>
+    <span class="n">fc_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fill_col</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">toggle_background</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Toggle canvas background between white &amp; grey</span>
+<span class="sd">        updates button text &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">bkg_button</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;White Background&#39;</span><span class="p">):</span>
+        <span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
+        <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Grey Background&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+        <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;White Background&#39;</span><span class="p">)</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="n">canvas_col</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">set_stamp_text</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; updates stamp text for subsequent drawing, update label &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">stamp_text</span>
+    <span class="n">stamp_text</span> <span class="o">=</span> <span class="n">txt</span>
+    <span class="n">text_stamp_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="n">stamp_text</span><span class="p">)</span>
+    <span class="n">inp</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_text_stamp</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    if this is a real click (not end of drag)</span>
+<span class="sd">    add a new text stamp to the list of text stamps</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">dragged</span><span class="p">,</span> <span class="n">can_undo</span><span class="p">,</span> <span class="n">prev_draw_is_text</span>
+    <span class="k">if</span> <span class="n">dragged</span><span class="p">:</span>
+        <span class="c1"># this was just the end of drag, not a real click</span>
+        <span class="c1"># don&#39;t do anything</span>
+        <span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># this is a real click, so add a new text stamp</span>
+        <span class="n">text_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stamp_text</span><span class="p">)</span>
+        <span class="n">text_pos_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+        <span class="n">text_col_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fill_col</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_circle</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Add a circle to the circle list&quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">dragged</span><span class="p">,</span> <span class="n">can_undo</span><span class="p">,</span> <span class="n">prev_draw_is_text</span>
+    <span class="n">circle_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="n">circle_col_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fill_col</span><span class="p">)</span>
+    <span class="n">circle_line_wid_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_wid</span><span class="p">)</span>
+    <span class="n">dragged</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># need to store this to differentiate end</span>
+                    <span class="c1"># of click from a regular mouse click</span>
+
+<span class="c1">#######################################################</span>
+<span class="c1"># Set up window, GUI controls &amp; register event handlers</span>
+<span class="c1">#######################################################</span>
+
+<span class="c1"># Frame</span>
+<span class="n">frame</span> <span class="o">=</span> <span class="n">simplegui</span><span class="o">.</span><span class="n">create_frame</span><span class="p">(</span><span class="s2">&quot;COMP 1000 Demo&quot;</span><span class="p">,</span> <span class="n">CANVAS_WIDTH</span><span class="p">,</span> <span class="n">CANVAS_HEIGHT</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="n">canvas_col</span><span class="p">)</span>
+
+<span class="c1"># Create &amp; Register Buttons &amp; Labels</span>
+<span class="c1"># assign labels and bkgd button to vars for updating</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;Clear&#39;</span><span class="p">,</span> <span class="n">clear_handler</span><span class="p">)</span>
+<span class="n">bkg_button</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;White Background&#39;</span><span class="p">,</span> <span class="n">bkg_handler</span><span class="p">)</span>
+<span class="n">fc_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fill_col</span><span class="p">))</span>
+<span class="n">lw_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_wid</span><span class="p">))</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">lw_up_handler</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw_dn_handler</span><span class="p">)</span>
+<span class="n">text_stamp_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="n">stamp_text</span><span class="p">)</span>
+<span class="n">inp</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;New text stamp:&#39;</span><span class="p">,</span> <span class="n">stamp_txt_handler</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+
+
+<span class="c1"># Register Keyboard and Mouse Event Handlers</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_draw_handler</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_keydown_handler</span><span class="p">(</span><span class="n">key_handler</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_mousedrag_handler</span><span class="p">(</span><span class="n">drag</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">set_mouseclick_handler</span><span class="p">(</span><span class="n">click</span><span class="p">)</span>
+
+<span class="c1"># Show the frame and start listening</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</td></tr></table></div>
+<p>The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-82) and for input device events (lines 83-127), other functions (lines 129-206) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 208-235).</p>
+<p>The way this code works is that there is some drawing state that is saved in the collection of global variables. As the user interacts with the canvas, circles are drawn when the user drags and text is stamped when the user clicks. The color and size of the circles, the color and fontsize of the text, and the background color of the canvas are determined by the values of the global variables. By interacting with the GUI controls, the user can change some of these things (the fill color of the circles/text, the outline width for the circles). The user can also change the value of the text stamp by typing text into the text input box and hitting enter. Whenever such changes are made, they only impact subsequent drawing actions on the canvas.</p>
+<p>Everything that the user draws on the canvas (which in this case is only circles and text stamps) is stored in a series of lists. There are three ‘parallel’ lists to store information about the circles: the position, the color, and the outline width. So, everytime a new circle is made because the user continues to drag the mouse, a position, a color and an outline width is added to the three lists that store this information. Thus, these three lists will always all bbe the same length. Similarly, everytime the user clicks on the canvas, a text stamp is added. This involves storing the position, the text string, and the color, in three separate lists.</p>
+<p>Some of the drawing state is change via key presses. To change the fill color for circles/text, the user has to press ‘r’, ‘g’, or ‘b’ on their keyboard (see lines 110-121, which all call the set_fill_color() function on lines 159-163).</p>
+<p>The user can clear the canvas two ways: by pressing the clear button, or by pressing ‘c’ on the keyboard. Note that both of these handlers do the same thing: they call the clear_canvas() function. In fact, all of the handlers simply call another function that does the work. While we could have just put the code directly in the handler, it is better to have separate functions so that the code can be invoked in other ways.</p>
+<p>The canvas background color is not something that we have to draw as part of the draw() method - it is drawn automatically for us by the SimpleGUI module. We can specify the color of the background, though, which we do after we create the initial frame, see lines 212 and 213. In addition, the user can toggle the background color between grey and white by pressing the &lt;color&gt; background button. Note that this button always shows the <em>other</em> color. So, if the background is currently grey, the button says “White background” telling the user what will happen if they press the button. If you look at the code for the toggle_background() function on lines
+164-173, you’ll note that this code checks what the current background color is, sets the background color to the other one, sets the button to label to say the opposite, and then calls the SimpleGUI frame method, set_canvas_background() to actually update the canvas background color.</p>
+<div class="section" id="global-variables-in-event-based-programs">
+<h2><span class="section-number">11.8.1. </span>Global Variables in Event-Based Programs<a class="headerlink" href="#global-variables-in-event-based-programs" title="Permalink to this headline">¶</a></h2>
+<p>As you look through this code, you might have observed that we have been editing global variables throughout. You may be thinking “I thought we weren’t supposed to do that???”. Remember that the typical way to avoid using global variables is to pass the information around as parameters and return values. But when the action in the program is handled by event handlers that the Python system calls, we can’t add arbitrary parameters, and we don’t want to return values to the operating system that called our event handler functions. That is why we are having to write new values to these global variables. This is okay for this class, because you are just learning. But it isn’t elegant, and programmers like things to be elegant. Most programmers would consider the code above to be quite clunky because of the use of global variables and parallel lists to store information about circles and text stamps.</p>
+<p>You may be wondering if there is a better way to do this. And there is. The better way to handle sets of information like what we see in this example is through object-oriented programming. You’ve played with object-oriented programming a bit already - we introduced it in Chapter 4 when we introduced the Turtles module. In using Turtles you have been
+creating objects (turtles and screens) and calling methods of objects (like forward() and pen_down()). In the next section, you will see a version of the program above completely rewritten in an object-oriented fashion, and not a single global variable is assigned in any of the functions.</p>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 11.7. SimpleGUI Events' data-toggle="tooltip">
+  <a href="SimpleGUIEvents.html" aria-label="Previous - 11.7. SimpleGUI Events">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 11.9. A Simple Class Example' data-toggle="tooltip" >
+    <a href="Event-BasedExample-OO.html" aria-label="Next - 11.9. A Simple Class Example">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

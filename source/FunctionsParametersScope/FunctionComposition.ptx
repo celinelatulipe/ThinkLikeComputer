@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<section xml:id="functions-parameters-scope_function-composition-functions-calling-functions-index-0">
+  <title>Function Composition (functions calling functions)</title>
+  <p>It is important to understand that each of the functions we write can be used and called from other functions we
+            write. This is one of the most important ways that computer programmers take a large problem and break it down into a
+            group of smaller problems. This process of breaking a problem into smaller subproblems is called <term>functional decomposition</term>.</p>
+  <p>Here's a simple example of functional decomposition using two functions. The first function called <c>square</c> simply
+            computes the square of a given number. The second function called <c>sum_of_squares</c> makes use of square to compute
+            the sum of three numbers that have been squared.</p>
+  <program label="clens8_8_1" interactive="codelens" language="python">
+    <input>
+def square(x):
+    y = x * x
+    return y
+
+def sum_of_squares(x,y,z):
+    a = square(x)
+    b = square(y)
+    c = square(z)
+
+    return a+b+c
+
+a = -5
+b = 2
+c = 10
+result = sum_of_squares(a,b,c)
+print(result)
+    </input>
+  </program>
+  <p>Even though this is a pretty simple idea, in practice this example illustrates many very important Python concepts,
+            including local and global variables along with parameter passing. Note that the body of <c>square</c> is not executed
+            until it is called from inside the <c>sum_of_squares</c> function for the first time on line 6.</p>
+  <p>Also notice that when <c>square</c> is called (at Step 8, for example), there are two groups of local variables, one for
+            <c>square</c> and one for <c>sum_of_squares</c>.  Each group of local variables is called a <term>stack frame</term>. The variables
+            <c>x</c>, and <c>y</c> are local variables in both functions. These are completely different variables, even though they
+            have the same name. Each function invocation creates a new frame, and variables are looked up in that frame. Notice
+            that at step 9, y has the value 25 in one frame and 2 in the other.</p>
+  <p>What happens when you to refer to variable y on line 3? Python looks up the value of y in the stack frame for the
+            <c>square</c> function. If it didn't find it there, it would go look in the global frame.</p>
+  <p>In the example below, we create a turtle drawing program that uses function composition.</p>
+  <program label="ac8_8_1" interactive="activecode" language="python">
+    <input>
+import turtle
+import random
+
+def random_col(tur):
+     """ Sets turtle to a random color """
+     red = random.random()
+     green = random.random()
+     blue = random.random()
+     tur.color(red, green, blue)
+
+
+def random_location(tur):
+     """ Take turtle to a random location on canvas
+     Pre-conditions: Assume canvas is 400 x 400 """
+     x = random.randrange(-180, 180) # get random x location
+     y = random.randrange(-180, 180) # get random y location
+     tur.penup()
+     tur.goto(x,y) # move to location without drawing
+     tur.pendown()
+
+def draw_triangle(tur, side_length):
+    """ draws a triangle in current position and color"""
+    for _ in range(3):
+        tur.forward(side_length)
+        tur.left(120)
+
+
+def draw_square(tur, side_length):
+    """ draws a square in current position and color"""
+    for _ in range(4):
+        tur.forward(side_length)
+        tur.left(90)
+
+def draw_design(tur, side_length):
+    """ draws a square with two internal triangles """
+    random_location(tur)
+    random_col(tur)
+    draw_square(tur, side_length)
+    draw_triangle(tur, side_length)
+    tur.forward(side_length)
+    tur.left(90)
+    tur.forward(side_length)
+    tur.left(90)
+    draw_triangle(tur, side_length)
+
+
+wn = turtle.Screen()
+yan = turtle.Turtle()
+yan.speed(10)
+
+for _ in range(5):
+     side = random.randrange(30, 100)
+     draw_design(yan, side)
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>The turtle example above has 5 different functions. Two of them are <term>helper functions</term> that move a turtle to a random location and set a turtle to draw in a random color. The other three are drawing functions that cause the turtle to draw things. The global part of the code (lines 47-53) create the window and the turtle and sets the turtle speed to 10 so the turtle draws quickly. Then there is a for loop that iterates 10 times. Each time through the loop a new random size is generated and then the draw_design() function is called with the random size. The draw_design function calls the other four functions, ane even calls the draw_triangle function twice.</p>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <exercise label="ac8_8_2">
+    <statement>
+      <p><term>1.</term> Write two functions, one called <c>addit</c> and one called <c>mult</c>. <c>addit</c> takes one number as an input and adds 5. <c>mult</c> takes one number as an input, and multiplies that input by whatever is returned by <c>addit</c>, and then returns the result.</p>
+    </statement>
+    <program label="ac8_8_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(mult(1), 6,"Testing the function mult with input 1 (should be 6)")
+      self.assertEqual(mult(-2), -6, "Testing the function mult with input -2 (should be -6)")
+      self.assertEqual(mult(0), 0, "Testing the function mult with input 0 (should be 0)")
+
+   def testTwo(self):
+      self.assertEqual(addit(1), 6, "Testing the function addit with input 1 (should be 6)")
+      self.assertEqual(addit(-2), 3, "Testing the function addit with input -2 (should be 3)")
+      self.assertEqual(addit(0), 5, "Testing the function addit with input 0 (should be 5)")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+</section>

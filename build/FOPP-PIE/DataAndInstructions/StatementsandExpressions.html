@@ -1,0 +1,516 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>2.10. Statements and Expressions &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.11. Order of Operations" href="OrderofOperations.html" />
+    <link rel="prev" title="2.9. 👩‍💻 Choosing the Right Variable Name" href="WPChoosingtheRightVariableName.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=StatementsandExpressions'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">2.9. </span>👩‍💻 Choosing the Right Variable Name" data-toggle="tooltip">
+    <a href="WPChoosingtheRightVariableName.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">2.11. </span>Order of Operations' data-toggle="tooltip" >              
+    <a href="OrderofOperations.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="statements-and-expressions">
+<span id="index-0"></span><h1><span class="section-number">2.10. </span>Statements and Expressions<a class="headerlink" href="#statements-and-expressions" title="Permalink to this heading">¶</a></h1>
+
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
+        <div id="expression_vid" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="2.10.1"
+            data-video-width="560" data-video-videoid="3WgmLIsXFkI"
+            data-video-divid="expression_vid" data-video-start="0"
+            data-video-end="-1" ></div>
+    </div>
+    <p>A <strong>statement</strong> is an instruction that the Python interpreter can execute. You have mostly only seen the assignment
+statement so far. Some other kinds of statements that you’ll see in future chapters are <code class="docutils literal notranslate"><span class="pre">while</span></code> statements,
+<code class="docutils literal notranslate"><span class="pre">for</span></code> statements, <code class="docutils literal notranslate"><span class="pre">if</span></code> statements,  and <code class="docutils literal notranslate"><span class="pre">import</span></code> statements. (There are other kinds, too!)</p>
+<p>An <strong>expression</strong> is a combination of literals, variable names, operators, and calls to functions.
+Expressions need to be evaluated. The result of evaluating an expression is a <em>value</em> or <em>object</em>.</p>
+<img alt="table that shows expressions and their value, and type." src="../_images/expression_value_type.png" />
+<p>If you ask Python to <code class="docutils literal notranslate"><span class="pre">print</span></code> an expression, the interpreter <strong>evaluates</strong> the expression and displays the result.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_1 data-question_label="2.10.2">
+<div id=ac2_10_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+print(1 + 1 + (2 * 3))
+print(len("hello"))
+</textarea>
+</div>
+</div>
+<p>In this example <code class="docutils literal notranslate"><span class="pre">len</span></code> is a built-in Python function that returns the number of characters in a string.</p>
+<p>The <em>evaluation of an expression</em> produces a value, which is why expressions can appear on the right hand
+side of assignment statements. A literal all by itself is a simple expression, and so is a variable.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_2 data-question_label="2.10.3">
+<div id=ac2_10_2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+y = 3.14          # this assignment statement assigns the expression 3.14 to y
+x = len("hello")  # this evaluates the expression len("hello") then assigns 5 to x
+print(x)
+print(y)
+</textarea>
+</div>
+</div>
+<p>In a program, anywhere that a literal value (a string or a number) is acceptable, a more complicated expression is also acceptable. Here are all the kinds of expressions we’ve seen so far:</p>
+<dl class="simple">
+<dt>literal</dt><dd><p>e.g., “Hello” or 3.14</p>
+</dd>
+<dt>variable name</dt><dd><p>e.g., x or len</p>
+</dd>
+<dt>operator expression</dt><dd><p>&lt;expression&gt; operator-name &lt;expression&gt;</p>
+</dd>
+<dt>function call expressions</dt><dd><p>&lt;expression&gt;(&lt;expressions separated by commas&gt;)</p>
+</dd>
+</dl>
+<p>Notice that operator expressions (like <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code>) have sub-expressions before and after the operator. Each of these can themselves be simple or complex expressions. In that way, you can build up to having pretty complicated expressions.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_3 data-question_label="2.10.4">
+<div id=ac2_10_3_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+print(2 * len("hello") + len("goodbye"))
+</textarea>
+</div>
+</div>
+<p>Similarly, when calling a function, instead of putting a literal inside the parentheses, a complex expression can be placed inside the parentheses. (Again, we provide some hidden code that defines the functions <code class="docutils literal notranslate"><span class="pre">square</span></code> and <code class="docutils literal notranslate"><span class="pre">sub</span></code>).</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_4 data-question_label="2.10.5">
+<div id=ac2_10_4_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_4_editor" 
+    data-hidecode="true"  data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def square(x):
+   return x * x
+
+def sub(x, y):
+   return x - y
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_5 data-question_label="2.10.6">
+<div id=ac2_10_5_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_5_editor" 
+     data-include="ac2_10_4" data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+x = 2
+y = 1
+print(square(y + 3))
+print(square(y + square(x)))
+print(sub(square(y), square(x)))
+</textarea>
+</div>
+</div>
+<p>It is important to start learning to read code that contains complex expressions. The Python interpreter examines any line of code and <em>parses</em> it into components. For example, if it sees an <code class="docutils literal notranslate"><span class="pre">=</span></code> symbol, it will try to treat the whole line as an assignment statement. It will expect to see a valid variable name to the left of the =, and will parse everything to the right of the = as an expression. It will try to figure out whether the right side is a literal, a variable name, an operator expression, or a function call expression. If it’s an operator expression, it will further try to parse the sub-expressions before and after the operator. And so on. You should learn to parse lines of code in the same way.</p>
+<p>In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after, then combines the two resulting values using the operator. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.</p>
+<p>If a function call expression is a sub-expression of some more complicated expression, as <code class="docutils literal notranslate"><span class="pre">square(x)</span></code> is in <code class="docutils literal notranslate"><span class="pre">sub(square(y),</span> <span class="pre">square(x))</span></code>, then the return value from <code class="docutils literal notranslate"><span class="pre">square(x)</span></code> is passed as an input to the <code class="docutils literal notranslate"><span class="pre">sub</span></code> function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the <code class="docutils literal notranslate"><span class="pre">square</span></code> function is called (twice) before the <code class="docutils literal notranslate"><span class="pre">sub</span></code> function is called, even though the <code class="docutils literal notranslate"><span class="pre">sub</span></code> function comes first when reading the code from left to right.  In the following example we will use the notation of -add- to indicate that Python has looked up the name <cite>add</cite> and determined that it is a function object.</p>
+
+<div data-component="showeval" data-question_label="2.10.7" class="runestone explainer" id="eval2_10_1" data-tracemode="true" >
+    <button class="btn btn-success" id="eval2_10_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="eval2_10_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">x = 5<br />
+y = 7<br />
+add(square(y), square(x))<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["eval2_10_1"] = ['{{add}}{{-add-}}(square(y), square(x)) ## add is a function so eval its arguments', '-add-({{square}}{{-square-}}(y), square(x)) ## square is a function so eval its arguments', '-add-(-square-({{y}}{{7}}), square(x))', '-add-({{-square-(7)}}{{49}}, square(x))', '-add-(49, {{square}}{{-square-}}(x)) ## square is a function so eval its arguments', '-add-(49, -square-({{x}}{{5}}))', '-add-(49, {{-square-(5)}}{{25}})', '{{-add-(49, 25)}}{{74}}'];
+    </script>
+</div>
+<p>To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that’s something that will come later in the course.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="pp2_10_0" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The interpreter is executing <code class="docutils literal notranslate"><span class="pre">print(name,</span> <span class="pre">&quot;has&quot;,</span> <span class="pre">num_apples,</span> <span class="pre">&quot;apples</span> <span class="pre">and&quot;,</span> <span class="pre">num_pears,</span> <span class="pre">&quot;pears,</span> <span class="pre">which</span> <span class="pre">means</span> <span class="pre">they</span> <span class="pre">have&quot;,</span> <span class="pre">(num_apples</span> <span class="pre">+</span> <span class="pre">num_pears),</span> <span class="pre">&quot;pieces</span> <span class="pre">of</span> <span class="pre">fruit&quot;)</span></code> The variable <code class="docutils literal notranslate"><span class="pre">name</span></code> holds the string <code class="docutils literal notranslate"><span class="pre">Amy</span></code>, num_apples is 7 and num_pears is 2.</p>
+<p>Arrange the code fragments in the order in which the Python interpreter would evaluate them.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="2.10.8"          style="visibility: hidden;">
+        look up the variable print to get the function object
+---
+look up the variable name to get "Amy"
+---
+look up the variable num_apples to get 7
+---
+look up the variable num_pears to get 2
+---
+look up the variable num_apples again to get 7
+---
+look up the variable num_pears again to get 2
+---
+add 7 and 2 to get 9
+---
+run the print function passing it the following values to print out: "Amy", "has", 7, "apples and", 2, "pears, which means they have", 9, "pieces of fruit"
+        </pre>
+        </div>
+        </div>
+    <p>Note that we <strong>look up</strong> (but don’t execute) functions <strong>as soon as we come across them</strong>. We can’t execute functions until we have evaluated all the expressions that form inputs for that function. In the example above, we can’t actually call the print function until we have determined the values of num_apples, num_pears and (num_apples + num_pears). Once we know all of these things, we have the complete information to send to the print function, so that’s when we execute it.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="pp2_10_1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The interpreter is executing <code class="docutils literal notranslate"><span class="pre">square(x</span> <span class="pre">+</span> <span class="pre">sub(square(y),</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">x))</span></code> The variable x stores the value 2 and y stores the value 3.</p>
+<p>Arrange the code fragments in the order in which the Python interpreter would evaluate them.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="2.10.9"          style="visibility: hidden;">
+        look up the variable square to get the function object
+---
+look up the variable x to get 2
+---
+look up the variable sub to get the function object
+---
+look up the variable square, again, to get the function object
+---
+look up the variable y to get 3
+---
+run the square function on input 3, returning the value 9
+---
+look up the variable x, again, to get 2
+---
+multiply 2 * 2 to get 4
+---
+run the sub function, passing inputs 9 and 4, returning the value 5
+---
+add 2 and 5 to get 7
+---
+run the square function, again, on input 7, returning the value 49
+        </pre>
+        </div>
+        </div>
+    <p>The following turtle example uses assignment statements, where the result of calling turtle functions is stored in variables and then used later.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac2_10_6 data-question_label="2.10.10">
+<div id=ac2_10_6_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac2_10_6_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+wn = turtle.Screen()
+sukram = turtle.Turtle()
+
+right_side = sukram.window_width()/2  # get window width and divide it by two
+top_side = sukram.window_height()/2  # get window height and divide it by two
+
+sukram.goto(right_side, top_side)     # have turtle draw line from center (0,0) to top-right corner
+</textarea>
+</div>
+</div>
+<p>On line 4 in this turtle example, the Python interpreter sees the <code class="docutils literal notranslate"><span class="pre">=</span></code> sign and knows this is an assignment statement. It needs to evaluate the expression on the right and assign the result to the variable called <code class="docutils literal notranslate"><span class="pre">right_side</span></code>. On the right is a turtle function (window_width()), a division operator and the literal value 2. So, the Python interpreter first notices the division operator and knows that a division operator is necessary, and then looks at the two operands to see if they are expressions that need to be evaluated. The literal <cite>2</cite> does not need further evaluation, but the turtle function window_width() needs evaluation. So, it calls that function, which is in the turtle module. That function returns the width of the window or canvas. Whatever that value is now gets divided by 2. The result of that calculation gets stored in <cite>right_side</cite>. If you are wondering why we divide the width by 2, it is because in Python’s turtle graphics, the origin (0,0) is located at the center of the window. So, the x coordinate of the right edge of the canvas is width/2 and the x coordinate of the left edge is -(width/2). On line 8, the turtle is moved to the top-right corner, causing a line to be drawn from the center of the window to that corner. This shows how we can use assignments with functions and operators to define where the turtle draws. We’ll learn a bit more about the coordinates of the turtle window in a later chapter.</p>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 2.9. 👩‍💻 Choosing the Right Variable Name' data-toggle="tooltip">
+  <a href="WPChoosingtheRightVariableName.html" aria-label="Previous - 2.9. 👩‍💻 Choosing the Right Variable Name">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 2.11. Order of Operations' data-toggle="tooltip" >
+    <a href="OrderofOperations.html" aria-label="Next - 2.11. Order of Operations">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

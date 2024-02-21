@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Event Handling</title>
+        <xi:include href='./intro-Event-BasedProgramming.ptx' />
+        <xi:include href='./EventBasedPrograms.ptx' />
+        <xi:include href='./BuildingaGUI.ptx' />
+        <xi:include href='./SimpleGUIModule.ptx' />
+        <xi:include href='./AddingGUIControls.ptx' />
+        <xi:include href='./DefiningEventHandlers.ptx' />
+        <xi:include href='./SimpleGUIEvents.ptx' />
+        <xi:include href='./Event-BasedCompleteExample.ptx' />
+        <xi:include href='./Event-BasedExample-OO.ptx' />
+        <xi:include href='./EthicalDesignChoices.ptx' />
+        <!-- <xi:include href='./..   Exercises.ptx' />
+        <xi:include href='./..   ChapterAssessment.ptx' /> -->
+    </chapter>

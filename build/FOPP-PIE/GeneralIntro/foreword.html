@@ -1,0 +1,412 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>1.1. Foreword to PIE Edition &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.2. Introduction: The Way of the Program" href="intro-TheWayoftheProgram.html" />
+    <link rel="prev" title="1. General Introduction" href="toctree.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=foreword'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1. </span>General Introduction" data-toggle="tooltip">
+    <a href="toctree.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.2. </span>Introduction: The Way of the Program' data-toggle="tooltip" >              
+    <a href="intro-TheWayoftheProgram.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="foreword-to-pie-edition">
+<h1><span class="section-number">1.1. </span>Foreword to PIE Edition<a class="headerlink" href="#foreword-to-pie-edition" title="Permalink to this heading">¶</a></h1>
+<p>The Programming, Interactivity and Ethics (PIE) Edition of the FOPP textbook builds on the
+fantastic content in the FOPP text, but adds in two very strong threads focused on interactive,
+event-based programming, and on ethical issues in programming. The PIE additions and edits were created by
+Dr. Celine Latulipe at the University of Manitoba. The PIE version incldues the following
+changes and additions from the original FOPP textbook:</p>
+<ul class="simple">
+<li><p>Chapters are reordered - conditionals are earlier, lists are later, functions are split into two chapters.</p></li>
+<li><p>Content is combined into chapters in some cases so that there is one textbook chapter per week</p></li>
+<li><p>Some content is removed for a shorter Canadian semester (13 weeks instead of 15 weeks), and
+to make room for interactivity and ethics threads</p></li>
+<li><p>Much more extensive use of Turtles module to focus on interactivity, including using mouse
+and keyboard callbacks</p></li>
+<li><p>Use of CodeSkulptr/SimpleGUI for more interactive, event-based programming</p></li>
+<li><p>Split functions into two separate chapters (first chapter on functions is about modularity,
+second chapter on functions covers parameters and return values). This follows the spiral
+model of content presentation.</p></li>
+<li><p>Strong focus on differentiation between the programmer and the end user, to highlight
+that the programmer is NOT usually the end user, and there are ethical values at play
+when designing software systems for people.</p></li>
+<li><p>Sections added to most chapters to highlight the ethical impacts of writing code using various
+programming concepts.</p></li>
+</ul>
+<section id="original-foreword">
+<h2><span class="section-number">1.1.1. </span>Original Foreword<a class="headerlink" href="#original-foreword" title="Permalink to this heading">¶</a></h2>
+<p>By David Beazley</p>
+<p>As an educator, researcher, and book author, I am delighted to see the
+completion of this book. Python is a fun and extremely easy-to-use programming
+language that has steadily gained in popularity over the last few years.
+Developed over ten years ago by Guido van Rossum, Python’s simple syntax and
+overall feel is largely derived from ABC, a teaching language that was
+developed in the 1980’s. However, Python was also created to solve real
+problems and it borrows a wide variety of features from programming languages
+such as C++, Java, Modula-3, and Scheme. Because of this, one of Python’s most
+remarkable features is its broad appeal to professional software developers,
+scientists, researchers, artists, and educators.</p>
+<p>Despite Python’s appeal to many different communities, you may still wonder why
+Python? or why teach programming with Python? Answering these questions is no
+simple task—especially when popular opinion is on the side of more
+masochistic alternatives such as C++ and Java.  However, I think the most
+direct answer is that programming in Python is simply a lot of fun and more
+productive.</p>
+<p>When I teach computer science courses, I want to cover important concepts in
+addition to making the material interesting and engaging to students.
+Unfortunately, there is a tendency for introductory programming courses to
+focus far too much attention on mathematical abstraction and for students to
+become frustrated with annoying problems related to low-level details of
+syntax, compilation, and the enforcement of seemingly arcane rules. Although
+such abstraction and formalism is important to professional software engineers
+and students who plan to continue their study of computer science, taking such
+an approach in an introductory course mostly succeeds in making computer
+science boring. When I teach a course, I don’t want to have a room of
+uninspired students. I would much rather see them trying to solve interesting
+problems by exploring different ideas, taking unconventional approaches,
+breaking the rules, and learning from their mistakes. In doing so, I don’t want
+to waste half of the semester trying to sort out obscure syntax problems,
+unintelligible compiler error messages, or the several hundred ways that a
+program might generate a general protection fault.</p>
+<p>One of the reasons why I like Python is that it provides a really nice balance
+between the practical and the conceptual. Since Python is interpreted,
+beginners can pick up the language and start doing neat things almost
+immediately without getting lost in the problems of compilation and linking.
+Furthermore, Python comes with a large library of modules that can be used to
+do all sorts of tasks ranging from web-programming to graphics. Having such a
+practical focus is a great way to engage students and it allows them to
+complete significant projects. However, Python can also serve as an excellent
+foundation for introducing important computer science concepts. Since Python
+fully supports procedures and classes, students can be gradually introduced to
+topics such as procedural abstraction, data structures, and object-oriented
+programming — all of which are applicable to later courses on Java or C++.
+Python even borrows a number of features from functional programming languages
+and can be used to introduce concepts that would be covered in more detail in
+courses on Scheme and Lisp.</p>
+<p>In reading Jeffrey’s preface, I am struck by his comments that Python allowed
+him to see a higher level of success and a lower level of frustration and that
+he was able to move faster with better results.  Although these comments refer
+to his introductory course, I sometimes use Python for these exact same reasons
+in advanced graduate level computer science courses at the University of
+Chicago. In these courses, I am constantly faced with the daunting task of
+covering a lot of difficult course material in a blistering nine week quarter.
+Although it is certainly possible for me to inflict a lot of pain and suffering
+by using a language like C++, I have often found this approach to be
+counterproductive—especially when the course is about a topic unrelated to
+just programming. I find that using Python allows me to better focus on the
+actual topic at hand while allowing students to complete substantial class
+projects.</p>
+<p>Although Python is still a young and evolving language, I believe that it has a
+bright future in education. This book is an important step in that direction.
+David Beazley University of Chicago Author of the <em>Python Essential Reference</em></p>
+</section>
+<section id="preface">
+<h2><span class="section-number">1.1.2. </span>Preface<a class="headerlink" href="#preface" title="Permalink to this heading">¶</a></h2>
+<p>Today, it is hard to imagine life without computers.  We carry them in our pockets, read with them on the couch, and use them on our desk at work.  Computing is the Swiss Army knife of the 21st century: a convenient tool that can be used to solve a wide array of problems. The original computers were large and limited in function: nothing more than very basic calculators. The military was the first to find some of the many applications of this technology: made small, computers could be used to improve the precision of bombing; made large and (relatively) powerful, they could be used to break military codes. As computers continued to grow in power and drop in price, many more peaceful applications were found:</p>
+<ul class="simple">
+<li><p>Scientists in both natural and social sciences can use them to analyze vast quantities of data. For example, astronomers are able to identify distant stars in large images of the sky and sociologists are able to analyze the behavior of all the citizens of a country.</p></li>
+<li><p>Artists and students of literature can use them to analyze great works, to find patterns in them that the human eye or ear had missed and use them to algorithmically generate some new works (examples from literature[<a class="reference external" href="http://www.wbur.org/artery/2015/02/27/digital-humanities">1</a>, <a class="reference external" href="http://www.meredithgoldsmith.com/whartoninteractivemaps/">2</a>] and <a class="reference external" href="https://www.washington.edu/news/2016/11/30/what-makes-bach-sound-like-bach-new-dataset-teaches-algorithms-classical-music/">music</a>).</p></li>
+<li><p>Business people can use them to instantaneously keep track of the health of their business across the globe and analyze past behaviors to better prepare for the future.</p></li>
+<li><p>Doctors and medical researchers can use them to track the effect of new medicines across vast populations of patients.</p></li>
+<li><p>Software engineers can use them to create apps and websites that attract billions of users.</p></li>
+</ul>
+<p>Today, the amount of computing power and the volume of data available to us is staggering.  The field of machine learning is just beginning to harness this power and data and is transforming the field of computer science.  At one level, machine learning, allows programs to do for themselves what programmers have had to do for years, which is to recognize complex patterns in the data. Machine learning algorithms are now routinely doing better than humans in tasks like reading X-rays, or recommending a restaurant to try.</p>
+<p>This course is about exploring the use of computer programs to solve these kinds of problems, whatever your area of interest and major might be.</p>
+<p>To do so, this book will teach you how to understand and create computer programs in Python.
+Python is a programming language that is in wide use both for professional software development and in education. In the professional world, it is used for anything from creating small scripts that rename files in a folder, to developing full web applications such as YouTube, SnapChat and DropBox. In the world of education, Python is a popular language because of its relatively simple syntax, its robust set of built-in functionality and its beginner-friendly error messages. For all these reasons and more, Python has become widespread in the world of data science and machine learning as well; in fact, it is the principal language of <a class="reference external" href="https://www.tensorflow.org/">TensorFlow</a>, Google’s open-source machine learning library.</p>
+<p>At the beginning of each chapter, we will outline for you the learning goals and objectives that should be accomplished once you have gone through the chapter.  And, throughout the textbook, you will find projects that connect what you have learned to solving real world problems.</p>
+<p>Understanding computer programs requires orderly, logical, mechanistic thinking. Programs are just sequences of actions to perform; when executed, they transform input data into output data:</p>
+<ul class="simple">
+<li><p>numbers turn into other numbers (e.g. basic math operations like sin or log)</p></li>
+<li><p>images turn into words or numbers (e.g. a cell phone photo of a diseased-looking leaf of a plant becomes the <a class="reference external" href="https://plantix.net/">name of the disease affecting the plant</a> or <a class="reference external" href="http://cis.mak.ac.ug/index.php/news-events/372-whitefly-mobile-app-to-boost-cassava-disease-diagnosis-and-production">the number of whiteflies</a> infesting it)</p></li>
+<li><p>images turn into other images (e.g. filters in Instagram)</p></li>
+<li><p>words turn into tables (e.g. reporting the <a class="reference external" href="https://www.opensourceshakespeare.org/views/plays/characters/chardisplay.php">number of times each character speaks</a> in Shakespeare’s works)</p></li>
+<li><p>numbers turn into 3D models of great works of art (e.g. Stanford’s <a class="reference external" href="http://graphics.stanford.edu/papers/digmich_falletti/">Michelangelo project</a>)</p></li>
+</ul>
+</section>
+<section id="get-in-the-learning-zone">
+<h2><span class="section-number">1.1.3. </span>Get in the Learning Zone<a class="headerlink" href="#get-in-the-learning-zone" title="Permalink to this heading">¶</a></h2>
+<p>Programs execute very reliably, and very quickly, but not creatively. Computers do what you tell them to do, not what you mean for them to do. Thus, understanding computer code involves a lot of mental simulation of what will actually happen, not what you wish would happen. This can be frustrating at times but it’s something that you will get better at with practice. As you go through the activities in this class, some will be easy for you to complete, i.e. in your comfort zone. Being in your comfort zone is nice but it probably means you are not learning very much. More challenging activities will encourage you to think through the problems and to refer back to the reading to allow you to enter your learning zone. This is the zone that you strive to be in for as much of the course as possible. Beyond your learning zone lies the panic zone where the problem overwhelms your ability to grow and learn. If you find yourself in the panic zone, please seek help from your instructor and/or classmates: none of the activities in this book are intended to stump you. As you understand how to solve some simpler problems, you will develop the ability to join these solutions together to solve increasingly challenging problems with real-world applications.</p>
+<a class="reference internal image-reference" href="../_images/LearningZones.png"><img alt="../_images/LearningZones.png" class="align-center" src="../_images/LearningZones.png" style="width: 600px;" /></a>
+<p>In addition to mechanistic thinking, writing computer programs requires creative problem solving or the ability to identify a complex situation, think creatively about possible solutions, and express those solutions clearly and accurately. As it turns out, the process of learning to program is an excellent opportunity to practice problem solving skills you can use in other parts of your life. We sincerely believe that the combination of knowledge of Python, creative problem solving skills and expressing those solutions in such a way that a computer can effectively carry them out (computational thinking) will make you more productive and efficient in tackling your work in future classes,whether in Computer Science, Business, Psychology or History. And it may even pique your interest in becoming a Data Scientist or a Computer Scientist.</p>
+</section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 1. General Introduction' data-toggle="tooltip">
+  <a href="toctree.html" aria-label="Previous - 1. General Introduction">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 1.2. Introduction: The Way of the Program' data-toggle="tooltip" >
+    <a href="intro-TheWayoftheProgram.html" aria-label="Next - 1.2. Introduction: The Way of the Program">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

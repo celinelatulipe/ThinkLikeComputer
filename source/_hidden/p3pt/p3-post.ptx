@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<section xml:id="p3pt_post-test">
+  <title>Post Test</title>
+  <p>Please answer
+            the following problems to the best of your ability without any
+            outside help. You can stop working on a problem after you worked
+            on it for about five minutes without solving it.</p>
+  <subsection xml:id="p3pt_problems">
+    <title>Problems</title>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=iwgex1-p3-post-upper_center-ac data-questionlist='upper_center' data-points=10          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: upper_center&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=iwgex1-p3-post-is-descending data-questionlist='prestest_is_ascending_ac-post' data-points=10          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: prestest_is_ascending_ac-post&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=iwgex1-p3-sum67-v2 data-questionlist='sum67_fix' data-points=10          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: sum67_fix&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+    <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=iwgex1-p3-lst_two_loop_post data-questionlist='lst_two_loop_post' data-points=10          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: lst_two_loop_post&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+  </subsection>
+  <subsection xml:id="p3pt_feedback">
+    <title>Feedback</title>
+    <exercise label="p3-posttest-sa">
+      <statement>
+        <p>Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="p3pt_what-to-do-next">
+    <title>What to do next:</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to go to the post survey: &lt;b&gt;&lt;a id="p3-postsurvey"&gt;&lt;font size="+2"&gt;Post Survey&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("p3-postsurvey")
+    a.href = "p3-postsurvey.html"
+  };
+
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

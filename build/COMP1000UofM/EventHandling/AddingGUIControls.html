@@ -1,0 +1,360 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.5. Adding GUI Controls &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.6. Event Handlers" href="DefiningEventHandlers.html" />
+    <link rel="prev" title="11.4. The SimpleGUI Module" href="SimpleGUIModule.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=AddingGUIControls'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">11.4. </span>The SimpleGUI Module" data-toggle="tooltip">
+    <a href="SimpleGUIModule.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">11.6. </span>Event Handlers' data-toggle="tooltip" >              
+    <a href="DefiningEventHandlers.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="adding-gui-controls">
+<h1><span class="section-number">11.5. </span>Adding GUI Controls<a class="headerlink" href="#adding-gui-controls" title="Permalink to this headline">¶</a></h1>
+<p>Graphical user interfaces commonly have lots of different controls, often referred to as ‘user interface widgets’. These include buttons, drop-down menus, checkboxes, text input fields, sliders, radio buttons, menus, etc. For any GUI toolkit you use, you will need to look at the library of widgets available to you and browse the documentation to find out how to write the code to add these to your program screen. In most toolkits, there are a lot of configuration options for each widget, such as the size and colour, but there is also often a way to specify the look and feel of the whole set of interface controls at a global level. Similarly, you often need to think about placement - how do you decide where to put each control? Most sophisticated GUI toolkits have something called a ‘layout manager’ and you can use that to help with the layout. You might be thinking ‘this sounds a lot harder than I first thought it would be’ and you’re right. User interface design is somewhat of an art form. It takes practice and skill to design a good user interface. In this course though, we are keeping things simple by using the SimpleGUI module. The SimpleGUI module doesn’t provide options for customizing the look of the widgets or the layout. The user interface controls in SimpleGUI are very limited (just labels, buttons, and text input boxes), and they are only placed in the left hand control area, in the order you specify, from top to bottom. Let’s work through adding a few user interface widgets, continuting to use the starter code example on CodeSkulptr 3.</p>
+<div class="section" id="adding-labels">
+<h2><span class="section-number">11.5.1. </span>Adding Labels<a class="headerlink" href="#adding-labels" title="Permalink to this headline">¶</a></h2>
+<p>Labels are considered static interface elements: they aren’t clickable and they don’t allow the user to do anything, they simply provide information. So, there is no event handler that needs to be attached to a label. Try adding a label to the SimpleGUI starter code. Flip back to the browser tab where the codeskulptr starter example is, and add a label, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label1</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;This is a label&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you add the above line of code after the line of code that creates the button, and then you run the application, you should see something like this:</p>
+<a class="reference internal image-reference" href="../_images/simpleGUI_addlabel.png"><img alt="../_images/simpleGUI_addlabel.png" class="align-center" src="../_images/simpleGUI_addlabel.png" style="width: 300px;" /></a>
+<p>Now, let’s go back to the documentation and look at the related function for changing label text. Click on the ‘control.set_text()’ link on the documentation page (under the example code for adding a label). The documentation for the <code class="docutils literal notranslate"><span class="pre">set_text()</span></code> function shows some examples of how to use this function. Let’s make the example program change the label text when the user clicks the button. Add the following text to the click() handler:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">label1</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;You clicked!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now, when you run the program and click the button, the program should update the text displayed on the canvas and it should update the label in the controls at the left, like this:</p>
+<a class="reference internal image-reference" href="../_images/simpleGUI_label_update.png"><img alt="../_images/simpleGUI_label_update.png" class="align-center" src="../_images/simpleGUI_label_update.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="adding-buttons">
+<h2><span class="section-number">11.5.2. </span>Adding Buttons<a class="headerlink" href="#adding-buttons" title="Permalink to this headline">¶</a></h2>
+<p>Let’s add a button that changes the canvas background color. The button that is in the starter code is not assigned to a variable, but we want our background color button to have a variable so we can change the button label. Add the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bkg_button</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;White Background&quot;</span><span class="p">,</span> <span class="n">bkg_button_click</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that in this line of code we have said that we want a button and we want the button to have text on it that says “White Background”, and that we want the function ‘bkg_button_click’ to run when this button is clicked. So, we need to create a function that has that name. At the top of the script, add the following code to define this function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bkg_button_click</span><span class="p">():</span>
+    <span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="s2">&quot;White&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the simpleGUI starter script and make sure your button appears. Note that the SimpleGUI module places controls in the order you add them to the script. If you want the background button to be at the top, you have to specify it before the other button and the label. Try clicking the new button and make sure that the canvas background changes color.</p>
+<p>Now, to make this button better, we can turn it into a toggle button. To do this, we want to find out what the button says, change the color, then change the button to say the other color. So, if the button says “White Background”, we want to set the background to white, then change the button text to say “Black Background”. If the buttons says “Black Background” we want to do the opposite. The new version of the bkg_button_click() function below does this. Try it in your browser.</p>
+<a class="reference internal image-reference" href="../_images/bkg_button_code_snippet.png"><img alt="../_images/bkg_button_code_snippet.png" class="align-center" src="../_images/bkg_button_code_snippet.png" style="width: 300px;" /></a>
+</div>
+<div class="section" id="adding-text-input-boxes">
+<h2><span class="section-number">11.5.3. </span>Adding Text Input Boxes<a class="headerlink" href="#adding-text-input-boxes" title="Permalink to this headline">¶</a></h2>
+<p>Text boxes allow us to get text from the user, similar to the way the Python input() statement does, but, we get to place the text input box (or multiple input boxes) in a window alongside other user interface elements, so this is much more useful. Let’s add a text input box that allows the user to change the message displayed on the canvas.</p>
+<p>Look at the documentation page and see the description of the text input:</p>
+<a class="reference internal image-reference" href="../_images/text_input_box_doc.png"><img alt="../_images/text_input_box_doc.png" class="align-center" src="../_images/text_input_box_doc.png" style="width: 600px;" /></a>
+<p>The syntax line tells us that we use the ‘add_input()’ method, and we have to give it three parameters: the label (that goes in front of the text input box), the name of the input_handler function, and a width for how wide to make the box. Note that at the bottom of this documentation, there is a line that says “the handler should be defined with one parameter…. This parameter will receive a string of the text input when the user presses the Enter key.” So, that means we need to create a handler for the text input box that has a parameter.  In the example code, we see that it is customary to use ‘text_input’ as the name of this parameter, and to assign the text_input control that is created to a variable called ‘inp’.</p>
+<p>We will follow these conventions and modify the code as follows:</p>
+<a class="reference internal image-reference" href="../_images/code_with_input_text.png"><img alt="../_images/code_with_input_text.png" class="align-center" src="../_images/code_with_input_text.png" style="width: 300px;" /></a>
+<p>On line 39 we add the input text box to the frame, and then on lines 25-27, we add code to change the canvas display message. Note that on line 25, the function definition for the text input handler has a parameter. When this code is run and the user types text in the box and hits enter, the operating system notifies the Python interpreter that a text input event happened and passes the typed text on. Python gives it to this handler code as the text_input parameter. Then our code uses it by assigning it to our global message variable. Every few milliseconds, the Python interpreter will automatically call the draw method to refresh the canvas in this window, so we don’t need to do anything specific to get the new message displayed, it will just happen automatically the next time the draw method is called. Since that happens so frequently, it will feel like the text change happens instantaneously when the user hits the Enter key.</p>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 11.4. The SimpleGUI Module' data-toggle="tooltip">
+  <a href="SimpleGUIModule.html" aria-label="Previous - 11.4. The SimpleGUI Module">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 11.6. Event Handlers' data-toggle="tooltip" >
+    <a href="DefiningEventHandlers.html" aria-label="Next - 11.6. Event Handlers">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

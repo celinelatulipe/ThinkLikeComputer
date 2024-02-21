@@ -1,0 +1,536 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6.10. The Accumulator Pattern with Conditionals &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.11. 👩‍💻 Setting Up Conditionals" href="WPSettingUpConditionals.html" />
+    <link rel="prev" title="6.9. Chained conditionals" href="Chainedconditionals.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=TheAccumulatorPatternwithConditionals'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.9. </span>Chained conditionals" data-toggle="tooltip">
+    <a href="Chainedconditionals.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.11. </span>👩‍💻 Setting Up Conditionals' data-toggle="tooltip" >              
+    <a href="WPSettingUpConditionals.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="the-accumulator-pattern-with-conditionals">
+<h1><span class="section-number">6.10. </span>The Accumulator Pattern with Conditionals<a class="headerlink" href="#the-accumulator-pattern-with-conditionals" title="Permalink to this headline">¶</a></h1>
+<p>Sometimes when we’re accumulating, we don’t want to add to our accumulator every time we iterate.
+Consider, for example, the following program which counts the number of letters in a phrase.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_1 data-question_label="6.10.1">
+<div id=ac6_10_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac6_10_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+phrase = "What a wonderful day to program"
+tot = 0
+for char in phrase:
+    if char != " ":
+        tot = tot + 1
+print(tot)
+</textarea>
+</div>
+</div>
+<p>Here, we <strong>initialize</strong> the accumulator variable to be zero on line two.</p>
+<p>We <strong>iterate</strong> through the sequence (line 3).</p>
+<p>The <strong>update</strong> step happens in two parts. First, we check to see if the value of <code class="docutils literal notranslate"><span class="pre">char</span></code> is not a space. If
+it is not a space, then we update the value of our accumulator variable <code class="docutils literal notranslate"><span class="pre">tot</span></code> (on line 6) by adding one to
+it. If that conditional proves to be False, which means that char <em>is</em> a space, then we don’t update <code class="docutils literal notranslate"><span class="pre">tot</span></code>
+and continue the for loop. We could have written <code class="docutils literal notranslate"><span class="pre">tot</span> <span class="pre">=</span> <span class="pre">tot</span> <span class="pre">+</span> <span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">tot</span> <span class="pre">+=</span> <span class="pre">1</span></code>, either is fine.</p>
+<p>At the end, we have accumulated a the total number of letters in the phrase. Without using the conditional,
+we would have only been able to count how many characters there are in the string and not been able to
+differentiate between spaces and non-spaces.</p>
+<p>We can use conditionals to also count if particular items are in a string or list. The following code finds all occurrences of vowels in the following string.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_2 data-question_label="6.10.2">
+<div id=ac6_10_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac6_10_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+s = "what if we went to the zoo"
+x = 0
+for i in s:
+    if i in ['a', 'e', 'i', 'o', 'u']:
+        x += 1
+print(x)
+</textarea>
+</div>
+</div>
+<p>We can also use <code class="docutils literal notranslate"><span class="pre">==</span></code> to execute a similar operation. Here, we’ll check to see if the character we are iterating over is
+an “o”. If it is an “o” then we will update our counter.</p>
+<img alt="a gif that shows code to check that &quot;o&quot; is in the phrase &quot;onomatopoeia&quot;." src="../_images/accum_o.gif" />
+<div class="section" id="accumulating-the-max-value">
+<h2><span class="section-number">6.10.1. </span>Accumulating the Max Value<a class="headerlink" href="#accumulating-the-max-value" title="Permalink to this headline">¶</a></h2>
+<p>We can also use the accumulation pattern with conditionals to find the maximum or minimum value. Instead of
+continuing to build up the accumulator value like we have when counting or finding a sum, we can reassign the
+accumulator variable to a different value.</p>
+<p>The following example shows how we can get the maximum value from a list of integers.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_3 data-question_label="6.10.1.1">
+<div id=ac6_10_3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac6_10_3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+nums = [9, 3, 8, 11, 5, 29, 2]
+best_num = 0
+for n in nums:
+    if n > best_num:
+        best_num = n
+print(best_num)
+</textarea>
+</div>
+</div>
+<p>Here, we initialize best_num to zero, assuming that there are no negative numbers in the list.</p>
+<p>In the for loop, we check to see if the current value of n is greater than the current value of <code class="docutils literal notranslate"><span class="pre">best_num</span></code>.
+If it is, then we want to <strong>update</strong> <code class="docutils literal notranslate"><span class="pre">best_num</span></code> so that it now is assigned the higher number. Otherwise, we
+do nothing and continue the for loop.</p>
+<p>You may notice that the current structure could be a problem. If the numbers were all negative what would
+happen to our code? What if we were looking for the smallest number but we initialized <code class="docutils literal notranslate"><span class="pre">best_num</span></code> with
+zero? To get around this issue, we can initialize the accumulator variable using one of the numbers in the
+list.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_4 data-question_label="6.10.1.2">
+<div id=ac6_10_4_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac6_10_4_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+nums = [9, 3, 8, 11, 5, 29, 2]
+best_num = nums[0]
+for n in nums:
+    if n > best_num:
+        best_num = n
+print(best_num)
+</textarea>
+</div>
+</div>
+<p>The only thing we changed was the value of <code class="docutils literal notranslate"><span class="pre">best_num</span></code> on line 2 so that the value of <code class="docutils literal notranslate"><span class="pre">best_num</span></code> is the
+first element in <code class="docutils literal notranslate"><span class="pre">nums</span></code>, but the result is still the same!</p>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.10.1.3" data-multipleanswers="false"  id="question6_10_1"  style="visibility: hidden;">
+    <p>What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;We are learning!&quot;</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">]:</span>
+        <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question6_10_1_opt_a">2</li><li data-component="feedback">Though only two of the letters in the list are found, we count them each time they appear.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question6_10_1_opt_b">5</li><li data-component="feedback">Yes, we add to x each time we come across a letter in the list.</li>
+    
+    <li data-component="answer"  id="question6_10_1_opt_c">0</li><li data-component="feedback">Check again what the conditional is evaluating. The value of i will be a character in the string s, so what will happen in the if statement?</li>
+    
+    <li data-component="answer"  id="question6_10_1_opt_d">There is an error in the code so it cannot run.</li><li data-component="feedback">There are no errors in this code.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.10.1.4" data-multipleanswers="false"  id="question6_10_2"  style="visibility: hidden;">
+    <p>What is printed by the following statements?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">min_value</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+   <span class="k">if</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="n">min_value</span><span class="p">:</span>
+       <span class="n">min_value</span> <span class="o">=</span> <span class="n">item</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">min_value</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question6_10_2_opt_a">10</li><li data-component="feedback">Not quite. What is the conditional checking?</li>
+    
+    <li data-component="answer"  id="question6_10_2_opt_b">1</li><li data-component="feedback">min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question6_10_2_opt_c">0</li><li data-component="feedback">Yes, min_value was set to a number that was smaller than any of the numbers in the list, so it was never updated in the for loop.</li>
+    
+    <li data-component="answer"  id="question6_10_2_opt_d">There is an error in the code so it cannot run.</li><li data-component="feedback">The code does not have an error that would prevent it from running.</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_5 data-question_label="6.10.1.5">
+<div id=ac6_10_5_question class="ac_question col-md-12">
+<p>For each string in the list <code class="docutils literal notranslate"><span class="pre">words</span></code>, find the number of characters in the string. If the number of characters in the string is greater than 3, add 1 to the variable <code class="docutils literal notranslate"><span class="pre">num_words</span></code> so that <code class="docutils literal notranslate"><span class="pre">num_words</span></code> should end up with the total number of words with more than 3 characters.</p>
+
+</div>
+<textarea data-lang="python" id="ac6_10_5_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+words = ["water", "chair", "pen", "basket", "hi", "car"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testFive(self):
+      self.assertEqual(num_words, 3, "Testing that num_words has the correct value.")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_10_7 data-question_label="6.10.1.6">
+<div id=ac6_10_7_question class="ac_question col-md-12">
+<p><strong>Challenge</strong> For each word in <code class="docutils literal notranslate"><span class="pre">words</span></code>, add ‘d’ to the end of the word if the word ends in “e” to make it past tense. Otherwise, add ‘ed’ to make it past tense. Save these past tense words to a list called <code class="docutils literal notranslate"><span class="pre">past_tense</span></code>.</p>
+
+</div>
+<textarea data-lang="python" id="ac6_10_7_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "wish"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testNine(self):
+      self.assertEqual(past_tense, ['adopted', 'baked', 'beamed', 'confided', 'grilled', 'planted', 'timed', 'waved', 'wished'], "Testing that the past_tense list is correct.")
+      self.assertIn("else", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+      self.assertIn("for", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+</textarea>
+</div>
+</div>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 6.9. Chained conditionals' data-toggle="tooltip">
+  <a href="Chainedconditionals.html" aria-label="Previous - 6.9. Chained conditionals">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 6.11. 👩‍💻 Setting Up Conditionals' data-toggle="tooltip" >
+    <a href="WPSettingUpConditionals.html" aria-label="Next - 6.11. 👩‍💻 Setting Up Conditionals">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

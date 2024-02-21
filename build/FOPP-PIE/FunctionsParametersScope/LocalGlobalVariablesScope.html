@@ -1,0 +1,632 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>8.7. Scope - Local vs Global Variables &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.8. Function Composition (functions calling functions)" href="FunctionComposition.html" />
+    <link rel="prev" title="8.6. A function that accumulates" href="Afunctionthataccumulates.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=LocalGlobalVariablesScope'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">8.6. </span>A function that accumulates" data-toggle="tooltip">
+    <a href="Afunctionthataccumulates.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">8.8. </span>Function Composition (functions calling functions)' data-toggle="tooltip" >              
+    <a href="FunctionComposition.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="scope-local-vs-global-variables">
+<span id="index-0"></span><h1><span class="section-number">8.7. </span>Scope - Local vs Global Variables<a class="headerlink" href="#scope-local-vs-global-variables" title="Permalink to this heading">¶</a></h1>
+<p>Scope refers to the parts of the program where a variable/object are visible and can be referred to. When you have program
+that has no functions, all of the variables are global. But very few real programs in the world work that way. Most programs
+are divided up into functions, and global variables are passed around, while inside of functions there are also local variables that are used.
+In this section we will take a look at the differences between local and global variables.</p>
+<section id="variable-and-parameters-are-local">
+<h2><span class="section-number">8.7.1. </span>Variable and parameters are local<a class="headerlink" href="#variable-and-parameters-are-local" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone " style="margin-left: auto; margin-right:auto">
+        <div id="goog_local_vars" data-component="youtube" class="align-left youtube-video"
+            data-video-height="315" data-question_label="8.7.1.1"
+            data-video-width="560" data-video-videoid="HdFujZpLFVg"
+            data-video-divid="goog_local_vars" data-video-start="0"
+            data-video-end="-1" ></div>
+    </div>
+    <p>An assignment statement in a function creates a <strong>local variable</strong> for the variable on the left hand side of the
+assignment operator. It is called local because this variable only exists inside the function and you cannot use it
+outside. For example, consider again the <code class="docutils literal notranslate"><span class="pre">square</span></code> function:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac8_7_1 data-question_label="8.7.1.2">
+<div id=ac8_7_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac8_7_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def square(x):
+    y = x * x
+    return y
+
+z = square(10)
+print(y)
+</textarea>
+</div>
+</div>
+<p>Try running this in CodeLens. When a function is invoked in CodeLens, the local scope is separated from global scope by
+a blue box. Variables in the local scope will be placed in the blue box while global variables will stay in the global
+frame. If you press the ‘last &gt;&gt;’ button you will see an error message. When we try to use <code class="docutils literal notranslate"><span class="pre">y</span></code> on line 6 (outside the
+function) Python looks for a global variable named <code class="docutils literal notranslate"><span class="pre">y</span></code> but does not find one. This results in the error:
+<code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">Error:</span> <span class="pre">'y'</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">defined.</span></code></p>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">y</span></code> only exists while the function is being executed — we call this its <strong>lifetime</strong>. When the
+execution of the function terminates (returns), the local variables are destroyed. CodeLens helps you visualize this
+because the local variables disappear after the function returns. Go back and step through the statements paying
+particular attention to the variables that are created when the function is called. Note when they are subsequently
+destroyed as the function returns.</p>
+<p>Formal parameters are also local and act like local variables. For example, the lifetime of <code class="docutils literal notranslate"><span class="pre">x</span></code> begins when
+<code class="docutils literal notranslate"><span class="pre">square</span></code> is called, and its lifetime ends when the function completes its execution.</p>
+<p>So it is not possible for a function to set some local variable to a value, complete its execution, and then when it
+is called again next time, recover the local variable. Each call of the function creates new local variables, and
+their lifetimes expire when the function returns to the caller.</p>
+</section>
+<section id="global-variables">
+<h2><span class="section-number">8.7.2. </span>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this heading">¶</a></h2>
+<p>Variable names that are at the <em>top-level</em>, not inside any function definition,
+are called global.</p>
+<p>It is legal for a function to access a global variable that isn’t passed in as a parameter. However, this is considered
+<strong>bad form</strong> by nearly all programmers and should be avoided in most cases. This subsection
+includes some examples that illustrate the potential interactions of global and
+local variables. These will help you understand exactly how Python works. Hopefully,
+they will also convince you that things can get pretty confusing when you mix
+local and global variables, and that you really shouldn’t do it.</p>
+<p>Look at the following, nonsensical variation of the square function.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac8_7_2 data-question_label="8.7.2.1">
+<div id=ac8_7_2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac8_7_2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def badsquare(x):
+    y = x ** power
+    return y
+
+power = 2
+result = badsquare(10)
+print(result)
+</textarea>
+</div>
+</div>
+<p>Although the <code class="docutils literal notranslate"><span class="pre">badsquare</span></code> function works, it is silly and poorly written. We have done it here to illustrate
+an important rule about how variables are looked up in Python.
+First, Python looks at the variables that are defined as local variables in
+the function.  We call this the <strong>local scope</strong>. If the variable name is not
+found in the local scope, then Python looks at the global variables,
+or <strong>global scope</strong>. This is exactly the case illustrated in the code above.
+<code class="docutils literal notranslate"><span class="pre">power</span></code> is not found locally in <code class="docutils literal notranslate"><span class="pre">badsquare</span></code> but it does exist globally.
+The appropriate way to write this function would be to pass power as a parameter.
+For practice, you should rewrite the badsquare example to have a second parameter called power.</p>
+<p>There is another variation on this theme of local versus global variables. Assignment statements in the local function cannot
+change variables defined outside the function. Consider the following
+CodeLens example:</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="8.7.2.2">
+        <div id=clens8_7_1_question class="ac_question">
+        </div>
+        <div class="pytutorVisualizer" id="clens8_7_1"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 8.7.2.2 (clens8_7_1)</span> </p>
+    </div>
+
+<script>
+var clens8_7_1_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["clens8_7_1"] = {"code": "def powerof(x,p):\n    power = p   # Another dumb mistake\n    y = x ** power\n    return y\n\npower = 3\nresult = powerof(10,2)\nprint(result)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1]}, "ordered_globals": ["powerof"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2, "power": 2}, "ordered_varnames": ["x", "p", "power"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2, "power": 2, "y": 100}, "ordered_varnames": ["x", "p", "power", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2, "power": 2, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "p", "power", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": "100\n"}]};
+</script>
+</div>
+<p>Now step through the code. What do you notice about the values of variable <code class="docutils literal notranslate"><span class="pre">power</span></code>
+in the local scope compared to the variable <code class="docutils literal notranslate"><span class="pre">power</span></code> in the global scope?</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">power</span></code> in the local scope was different than the global scope.
+That is because in this example <code class="docutils literal notranslate"><span class="pre">power</span></code> was used on the left hand side of the
+assignment statement <code class="docutils literal notranslate"><span class="pre">power</span> <span class="pre">=</span> <span class="pre">p</span></code>. When a variable name is used on the
+left hand side of an assignment statement inside a function, Python creates a local variable.
+When a local variable has the same name as a global variable we say that the
+local shadows the global. A <strong>shadow</strong> means that the global variable cannot
+be accessed by Python because the local variable will be found first. This is
+another good reason not to use global variables. As you can see,
+it makes your code confusing and difficult to understand.</p>
+<p>If you really want to change the value of a global variable inside a function,
+you can can do it by explicitly declaring the variable to be global, as in the example
+below. Again, you should <em>not</em> do this in your code. The example is here only
+to cement your understanding of how Python works.</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="8.7.2.3">
+        <div id=clens8_7_2_question class="ac_question">
+        </div>
+        <div class="pytutorVisualizer" id="clens8_7_2"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 8.7.2.3 (clens8_7_2)</span> </p>
+    </div>
+
+<script>
+var clens8_7_2_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["clens8_7_2"] = {"code": "def powerof(x,p):\n    global power  # a really...\n    power = p     # ...bad idea, but valid code\n    y = x ** power\n    return y\n\npower = 3\nresult = powerof(10,2)\nprint(result)\nprint(power)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1]}, "ordered_globals": ["powerof"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 3}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 2}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2}, "ordered_varnames": ["x", "p"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 2}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2, "y": 100}, "ordered_varnames": ["x", "p", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 5, "event": "return", "func_name": "powerof", "globals": {"powerof": ["REF", 1], "power": 2}, "ordered_globals": ["powerof", "power"], "stack_to_render": [{"func_name": "powerof", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 10, "p": 2, "y": 100, "__return__": 100}, "ordered_varnames": ["x", "p", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "powerof_f1"}], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 2, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": ""}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 2, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": "100\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"powerof": ["REF", 1], "power": 2, "result": 100}, "ordered_globals": ["powerof", "power", "result"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "powerof(x, p)", null]}, "stdout": "100\n2\n"}]};
+</script>
+</div>
+<p>To cement all of these ideas even further let’s look at one final example.
+Inside the <code class="docutils literal notranslate"><span class="pre">square</span></code> function we are going to make an assignment to the
+parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>  There’s no good reason to do this other than to emphasize
+the fact that the parameter <code class="docutils literal notranslate"><span class="pre">x</span></code> is a local variable.  If you step through
+the example in CodeLens you will see that although <code class="docutils literal notranslate"><span class="pre">x</span></code> is 0 in the local
+variables for <code class="docutils literal notranslate"><span class="pre">square</span></code>, the <code class="docutils literal notranslate"><span class="pre">x</span></code> in the global scope remains 2.  This is confusing
+to many beginning programmers who think that an assignment to a
+formal parameter will cause a change to the value of the variable that was
+used as the actual parameter, especially when the two share the same name.
+But this example demonstrates that that is clearly not how Python operates.</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="8.7.2.4">
+        <div id=clens8_7_3_question class="ac_question">
+        </div>
+        <div class="pytutorVisualizer" id="clens8_7_3"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 8.7.2.4 (clens8_7_3)</span> </p>
+    </div>
+
+<script>
+var clens8_7_3_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["clens8_7_3"] = {"code": "def square(x):\n    y = x * x\n    x = 0       # assign a new value to the parameter x\n    return y\n\nx = 2\nz = square(x)\nprint(z)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1]}, "ordered_globals": ["square"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 7, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 1, "event": "call", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2}, "ordered_varnames": ["x"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 3, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 2, "y": 4}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 4, "event": "step_line", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 0, "y": 4}, "ordered_varnames": ["x", "y"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 4, "event": "return", "func_name": "square", "globals": {"square": ["REF", 1], "x": 2}, "ordered_globals": ["square", "x"], "stack_to_render": [{"func_name": "square", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"x": 0, "y": 4, "__return__": 4}, "ordered_varnames": ["x", "y", "__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "square_f1"}], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2, "z": 4}, "ordered_globals": ["square", "x", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": ""}, {"line": 8, "event": "return", "func_name": "<module>", "globals": {"square": ["REF", 1], "x": 2, "z": 4}, "ordered_globals": ["square", "x", "z"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "square(x)", null]}, "stdout": "4\n"}]};
+</script>
+</div>
+<p><strong>Check Your Understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.5" data-multipleanswers="false"  id="question8_7_1"  style="visibility: hidden;">
+    <p>True or False: Local variables can be referenced outside of the function they were defined in.</p>
+
+    <li data-component="answer"  id="question8_7_1_opt_a">True</li><li data-component="feedback">Local variables cannot be referenced outside of the function they were defined in.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question8_7_1_opt_b">False</li><li data-component="feedback">Local variables cannot be referenced outside of the function they were defined in.</li>
+    
+
+    </ul>
+    </div>
+    
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="8.7.2.6" id="question8_7_2"  style="visibility: hidden;">
+            <p>Which of the following are local variables? Write them in the order that they appear in the code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">bar</span><span class="p">):</span>
+    <span class="n">aug</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">bar</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;street&quot;</span>
+    <span class="k">return</span> <span class="n">aug</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The local variables are</p>
+<input type="text"><input type="text">
+        <script type="application/json">
+            [[{"regex": "^\\s*bar\\s*$", "regexFlags": "", "feedback": "<p>Good work!</p>\n"}, {"regex": "^\\s*aug\\s*$", "regexFlags": "", "feedback": "<p>While aug is a local variable, it is not the first one in the code.</p>\n"}, {"regex": "^\\s*item\\s*$", "regexFlags": "", "feedback": "<p>item is not a local variable.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect, try again.</p>\n"}], [{"regex": "^\\s*aug\\s*$", "regexFlags": "", "feedback": "<p>Good work!</p>\n"}, {"regex": "^\\s*bar\\s*$", "regexFlags": "", "feedback": "<p>While bar is a local variable, it is not the first one in the code.</p>\n"}, {"regex": "^\\s*item\\s*$", "regexFlags": "", "feedback": "<p>item is not a local variable.</p>\n"}, {"regex": "^\\s*.*\\s*$", "regexFlags": "", "feedback": "<p>Incorrect, try again.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.7" data-multipleanswers="false"  id="question8_7_3"  style="visibility: hidden;">
+    <p>What would be the result of running the following code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">subtract</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">y</span> <span class="o">-</span> <span class="n">z</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">subtract</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="question8_7_3_opt_a">4</li><li data-component="feedback">Correct, the output is right because the subtract function takes in x as the global variable for the z parameter and puts it into the function. The subtract function uses the local variable y for its return.</li>
+    
+    <li data-component="answer"  id="question8_7_3_opt_b">6</li><li data-component="feedback">Incorrect, look again at what is being produced in the subtract function.</li>
+    
+    <li data-component="answer"  id="question8_7_3_opt_c">10</li><li data-component="feedback">Incorrect, look again at what is being produced in the subtract function.</li>
+    
+    <li data-component="answer"  id="question8_7_3_opt_d">Code will give an error because x and z do not match.</li><li data-component="feedback">Incorrect, there shouldn't be any error.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.8" data-multipleanswers="false"  id="question8_7_4"  style="visibility: hidden;">
+    <p>What would be the result of running the following code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">adding</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">z</span>
+
+<span class="k">def</span> <span class="nf">producing</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">z</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">producing</span><span class="p">(</span><span class="n">adding</span><span class="p">(</span><span class="mi">4</span><span class="p">)))</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question8_7_4_opt_a">33</li><li data-component="feedback">Incorrect, look again at what is happening in producing.</li>
+    
+    <li data-component="answer"  id="question8_7_4_opt_b">12</li><li data-component="feedback">Incorrect, look again at what is happening in producing.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question8_7_4_opt_c">There is an error in the code.</li><li data-component="feedback">Yes! There is an error because we reference y in the producing function, but it was defined in adding. Because y is a local variable, we can't use it in both functions without initializing it in both. If we initialized y as 3 in both though, the answer would be 33.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.9" data-multipleanswers="false"  id="question8_7_5"  style="visibility: hidden;">
+    <p>What would be the result of running the following code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">def</span> <span class="nf">adding</span><span class="p">():</span>
+    <span class="n">x</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">adding</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question8_7_5_opt_a">1</li><li data-component="feedback">Incorrect, pay attention to the local scope in the function.</li>
+    
+    <li data-component="answer"  id="question8_7_5_opt_b">9</li><li data-component="feedback">Incorrect, pay attention to the local scope in the function.</li>
+    
+    <li data-component="answer"  id="question8_7_5_opt_c">10</li><li data-component="feedback">Incorrect, pay attention to the local scope in the function.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question8_7_5_opt_d">Error, local variable 'x' is referenced before assignment.</li><li data-component="feedback">This code gives an error because the local variable 'x' was referenced in the local scope before it was assigned a value.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.10" data-multipleanswers="false"  id="question8_7_6"  style="visibility: hidden;">
+    <p>What is a variable’s scope?</p>
+
+    <li data-component="answer"  id="question8_7_6_opt_a">Its value</li><li data-component="feedback">Value is the contents of the variable.  Scope concerns where the variable is &quot;known&quot;.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question8_7_6_opt_b">The range of statements in the code where a variable can be accessed.</li><li data-component="feedback">Correct.</li>
+    
+    <li data-component="answer"  id="question8_7_6_opt_c">Its name</li><li data-component="feedback">The name of a variable is just an identifier or alias.  Scope concerns where the variable is &quot;known&quot;.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.11" data-multipleanswers="false"  id="question8_7_7"  style="visibility: hidden;">
+    <p>What is a local variable?</p>
+
+    <li data-component="answer" data-correct='yes' id="question8_7_7_opt_a">A temporary variable that is only used inside a function</li><li data-component="feedback">Yes, a local variable is a temporary variable that is only known (only exists) in the function it is defined in.</li>
+    
+    <li data-component="answer"  id="question8_7_7_opt_b">The same as a parameter</li><li data-component="feedback">While parameters may be considered local variables, functions may also define and use additional local variables.</li>
+    
+    <li data-component="answer"  id="question8_7_7_opt_c">Another name for any variable</li><li data-component="feedback">Variables that are used outside a function are not local, but rather global variables.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.7.2.12" data-multipleanswers="false"  id="question8_7_8"  style="visibility: hidden;">
+    <p>Can you use the same name for a local variable as a global variable?</p>
+
+    <li data-component="answer"  id="question8_7_8_opt_a">Yes, and there is no reason not to.</li><li data-component="feedback">While there is no problem as far as Python is concerned, it is generally considered bad style because of the potential for the programmer to get confused.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question8_7_8_opt_b">Yes, but it is considered bad form.</li><li data-component="feedback">it is generally considered bad style because of the potential for the programmer to get confused.  If you must use global variables (also generally bad form) make sure they have unique names.</li>
+    
+    <li data-component="answer"  id="question8_7_8_opt_c">No, it will cause an error.</li><li data-component="feedback">Python manages global and local scope separately and has clear rules for how to handle variables with the same name in different scopes, so this will not cause a Python error.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 8.6. A function that accumulates' data-toggle="tooltip">
+  <a href="Afunctionthataccumulates.html" aria-label="Previous - 8.6. A function that accumulates">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 8.8. Function Composition (functions calling functions)' data-toggle="tooltip" >
+    <a href="FunctionComposition.html" aria-label="Next - 8.8. Function Composition (functions calling functions)">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

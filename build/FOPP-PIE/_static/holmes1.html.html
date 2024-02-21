@@ -1,0 +1,599 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="pygments.css" type="text/css" />
+    <link rel="stylesheet" href="basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="documentation_options.js"></script>
+    <script defer="" src="jquery.js"></script>
+    <script defer="" src="underscore.js"></script>
+    <script defer="" src="doctools.js"></script>
+    <script defer="" src="matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=holmes1.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-317" name="CodeChat-317" href="#CodeChat-317"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="CodeChat-318" name="CodeChat-318" href="#CodeChat-318"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-319" name="CodeChat-319" href="#CodeChat-319"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-320" name="CodeChat-320" href="#CodeChat-320"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-321" name="CodeChat-321" href="#CodeChat-321"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=1080, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-322" name="CodeChat-322" href="#CodeChat-322"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-323" name="CodeChat-323" href="#CodeChat-323"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hound of the Baskerville&#39;s<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="CodeChat-324" name="CodeChat-324" href="#CodeChat-324"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-325" name="CodeChat-325" href="#CodeChat-325"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-326" name="CodeChat-326" href="#CodeChat-326"></a>    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;Chapter_1&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Chapter_1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>Chapter 1<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="CodeChat-327" name="CodeChat-327" href="#CodeChat-327"></a>        <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Mr. Sherlock Holmes<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="CodeChat-328" name="CodeChat-328" href="#CodeChat-328"></a>
+<a id="CodeChat-329" name="CodeChat-329" href="#CodeChat-329"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Mr. Sherlock Holmes, who was usually very late in the mornings,
+<a id="CodeChat-330" name="CodeChat-330" href="#CodeChat-330"></a>        save upon those not infrequent occasions when he was up all
+<a id="CodeChat-331" name="CodeChat-331" href="#CodeChat-331"></a>        night, was seated at the breakfast table. I stood upon the
+<a id="CodeChat-332" name="CodeChat-332" href="#CodeChat-332"></a>        hearth-rug and picked up the stick which our visitor had left
+<a id="CodeChat-333" name="CodeChat-333" href="#CodeChat-333"></a>        behind him the night before. It was a fine, thick piece of wood,
+<a id="CodeChat-334" name="CodeChat-334" href="#CodeChat-334"></a>        bulbous-headed, of the sort which is known as a &quot;Penang lawyer.&quot;
+<a id="CodeChat-335" name="CodeChat-335" href="#CodeChat-335"></a>        Just under the head was a broad silver band nearly an inch
+<a id="CodeChat-336" name="CodeChat-336" href="#CodeChat-336"></a>        across. &quot;To James Mortimer, M.R.C.S., from his friends of the
+<a id="CodeChat-337" name="CodeChat-337" href="#CodeChat-337"></a>        C.C.H.,&quot; was engraved upon it, with the date &quot;1884.&quot; It was just
+<a id="CodeChat-338" name="CodeChat-338" href="#CodeChat-338"></a>        such a stick as the old-fashioned family practitioner used to
+<a id="CodeChat-339" name="CodeChat-339" href="#CodeChat-339"></a>        carry<span class="ni">&amp;mdash;</span>dignified, solid, and reassuring.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-340" name="CodeChat-340" href="#CodeChat-340"></a>
+<a id="CodeChat-341" name="CodeChat-341" href="#CodeChat-341"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Well, Watson, what do you make of it?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-342" name="CodeChat-342" href="#CodeChat-342"></a>
+<a id="CodeChat-343" name="CodeChat-343" href="#CodeChat-343"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Holmes was sitting with his back to me, and I had given him no
+<a id="CodeChat-344" name="CodeChat-344" href="#CodeChat-344"></a>        sign of my occupation.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-345" name="CodeChat-345" href="#CodeChat-345"></a>
+<a id="CodeChat-346" name="CodeChat-346" href="#CodeChat-346"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;How did you know what I was doing? I believe you have eyes in
+<a id="CodeChat-347" name="CodeChat-347" href="#CodeChat-347"></a>        the back of your head.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-348" name="CodeChat-348" href="#CodeChat-348"></a>
+<a id="CodeChat-349" name="CodeChat-349" href="#CodeChat-349"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I have, at least, a well-polished, silver-plated coffee-pot in
+<a id="CodeChat-350" name="CodeChat-350" href="#CodeChat-350"></a>        front of me,&quot; said he. &quot;But, tell me, Watson, what do you make of
+<a id="CodeChat-351" name="CodeChat-351" href="#CodeChat-351"></a>        our visitor&#39;s stick? Since we have been so unfortunate as to miss
+<a id="CodeChat-352" name="CodeChat-352" href="#CodeChat-352"></a>        him and have no notion of his errand, this accidental souvenir
+<a id="CodeChat-353" name="CodeChat-353" href="#CodeChat-353"></a>        becomes of importance. Let me hear you reconstruct the man by an
+<a id="CodeChat-354" name="CodeChat-354" href="#CodeChat-354"></a>        examination of it.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-355" name="CodeChat-355" href="#CodeChat-355"></a>
+<a id="CodeChat-356" name="CodeChat-356" href="#CodeChat-356"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I think,&quot; said I, following as far as I could the methods of my
+<a id="CodeChat-357" name="CodeChat-357" href="#CodeChat-357"></a>        companion, &quot;that Dr. Mortimer is a successful, elderly medical
+<a id="CodeChat-358" name="CodeChat-358" href="#CodeChat-358"></a>        man, well-esteemed since those who know him give him this mark of
+<a id="CodeChat-359" name="CodeChat-359" href="#CodeChat-359"></a>        their appreciation.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-360" name="CodeChat-360" href="#CodeChat-360"></a>
+<a id="CodeChat-361" name="CodeChat-361" href="#CodeChat-361"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Good!&quot; said Holmes. &quot;Excellent!&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-362" name="CodeChat-362" href="#CodeChat-362"></a>
+<a id="CodeChat-363" name="CodeChat-363" href="#CodeChat-363"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I think also that the probability is in favour of his being a
+<a id="CodeChat-364" name="CodeChat-364" href="#CodeChat-364"></a>        country practitioner who does a great deal of his visiting on
+<a id="CodeChat-365" name="CodeChat-365" href="#CodeChat-365"></a>        foot.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-366" name="CodeChat-366" href="#CodeChat-366"></a>
+<a id="CodeChat-367" name="CodeChat-367" href="#CodeChat-367"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Why so?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-368" name="CodeChat-368" href="#CodeChat-368"></a>
+<a id="CodeChat-369" name="CodeChat-369" href="#CodeChat-369"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Because this stick, though originally a very handsome one has
+<a id="CodeChat-370" name="CodeChat-370" href="#CodeChat-370"></a>        been so knocked about that I can hardly imagine a town
+<a id="CodeChat-371" name="CodeChat-371" href="#CodeChat-371"></a>        practitioner carrying it. The thick-iron ferrule is worn down, so
+<a id="CodeChat-372" name="CodeChat-372" href="#CodeChat-372"></a>        it is evident that he has done a great amount of walking with
+<a id="CodeChat-373" name="CodeChat-373" href="#CodeChat-373"></a>        it.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-374" name="CodeChat-374" href="#CodeChat-374"></a>
+<a id="CodeChat-375" name="CodeChat-375" href="#CodeChat-375"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Perfectly sound!&quot; said Holmes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-376" name="CodeChat-376" href="#CodeChat-376"></a>
+<a id="CodeChat-377" name="CodeChat-377" href="#CodeChat-377"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;And then again, there is the &#39;friends of the C.C.H.&#39; I should
+<a id="CodeChat-378" name="CodeChat-378" href="#CodeChat-378"></a>        guess that to be the Something Hunt, the local hunt to whose
+<a id="CodeChat-379" name="CodeChat-379" href="#CodeChat-379"></a>        members he has possibly given some surgical assistance, and which
+<a id="CodeChat-380" name="CodeChat-380" href="#CodeChat-380"></a>        has made him a small presentation in return.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-381" name="CodeChat-381" href="#CodeChat-381"></a>
+<a id="CodeChat-382" name="CodeChat-382" href="#CodeChat-382"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Really, Watson, you excel yourself,&quot; said Holmes, pushing back
+<a id="CodeChat-383" name="CodeChat-383" href="#CodeChat-383"></a>        his chair and lighting a cigarette. &quot;I am bound to say that in
+<a id="CodeChat-384" name="CodeChat-384" href="#CodeChat-384"></a>        all the accounts which you have been so good as to give of my own
+<a id="CodeChat-385" name="CodeChat-385" href="#CodeChat-385"></a>        small achievements you have habitually underrated your own
+<a id="CodeChat-386" name="CodeChat-386" href="#CodeChat-386"></a>        abilities. It may be that you are not yourself luminous, but you
+<a id="CodeChat-387" name="CodeChat-387" href="#CodeChat-387"></a>        are a conductor of light. Some people without possessing genius
+<a id="CodeChat-388" name="CodeChat-388" href="#CodeChat-388"></a>        have a remarkable power of stimulating it. I confess, my dear
+<a id="CodeChat-389" name="CodeChat-389" href="#CodeChat-389"></a>        fellow, that I am very much in your debt.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-390" name="CodeChat-390" href="#CodeChat-390"></a>
+<a id="CodeChat-391" name="CodeChat-391" href="#CodeChat-391"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>He had never said as much before, and I must admit that his words
+<a id="CodeChat-392" name="CodeChat-392" href="#CodeChat-392"></a>        gave me keen pleasure, for I had often been piqued by his
+<a id="CodeChat-393" name="CodeChat-393" href="#CodeChat-393"></a>        indifference to my admiration and to the attempts which I had
+<a id="CodeChat-394" name="CodeChat-394" href="#CodeChat-394"></a>        made to give publicity to his methods. I was proud, too, to think
+<a id="CodeChat-395" name="CodeChat-395" href="#CodeChat-395"></a>        that I had so far mastered his system as to apply it in a way
+<a id="CodeChat-396" name="CodeChat-396" href="#CodeChat-396"></a>        which earned his approval. He now took the stick from my hands
+<a id="CodeChat-397" name="CodeChat-397" href="#CodeChat-397"></a>        and examined it for a few minutes with his naked eyes. Then with
+<a id="CodeChat-398" name="CodeChat-398" href="#CodeChat-398"></a>        an expression of interest he laid down his cigarette, and
+<a id="CodeChat-399" name="CodeChat-399" href="#CodeChat-399"></a>        carrying the cane to the window, he looked over it again with a
+<a id="CodeChat-400" name="CodeChat-400" href="#CodeChat-400"></a>        convex lens.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-401" name="CodeChat-401" href="#CodeChat-401"></a>
+<a id="CodeChat-402" name="CodeChat-402" href="#CodeChat-402"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Interesting, though elementary,&quot; said he as he returned to his
+<a id="CodeChat-403" name="CodeChat-403" href="#CodeChat-403"></a>        favourite corner of the settee. &quot;There are certainly one or two
+<a id="CodeChat-404" name="CodeChat-404" href="#CodeChat-404"></a>        indications upon the stick. It gives us the basis for several
+<a id="CodeChat-405" name="CodeChat-405" href="#CodeChat-405"></a>        deductions.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-406" name="CodeChat-406" href="#CodeChat-406"></a>
+<a id="CodeChat-407" name="CodeChat-407" href="#CodeChat-407"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Has anything escaped me?&quot; I asked with some self-importance. &quot;I
+<a id="CodeChat-408" name="CodeChat-408" href="#CodeChat-408"></a>        trust that there is nothing of consequence which I have
+<a id="CodeChat-409" name="CodeChat-409" href="#CodeChat-409"></a>        overlooked?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-410" name="CodeChat-410" href="#CodeChat-410"></a>
+<a id="CodeChat-411" name="CodeChat-411" href="#CodeChat-411"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I am afraid, my dear Watson, that most of your conclusions were
+<a id="CodeChat-412" name="CodeChat-412" href="#CodeChat-412"></a>        erroneous. When I said that you stimulated me I meant, to be
+<a id="CodeChat-413" name="CodeChat-413" href="#CodeChat-413"></a>        frank, that in noting your fallacies I was occasionally guided
+<a id="CodeChat-414" name="CodeChat-414" href="#CodeChat-414"></a>        towards the truth. Not that you are entirely wrong in this
+<a id="CodeChat-415" name="CodeChat-415" href="#CodeChat-415"></a>        instance. The man is certainly a country practitioner. And he
+<a id="CodeChat-416" name="CodeChat-416" href="#CodeChat-416"></a>        walks a good deal.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-417" name="CodeChat-417" href="#CodeChat-417"></a>
+<a id="CodeChat-418" name="CodeChat-418" href="#CodeChat-418"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Then I was right.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-419" name="CodeChat-419" href="#CodeChat-419"></a>
+<a id="CodeChat-420" name="CodeChat-420" href="#CodeChat-420"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;To that extent.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-421" name="CodeChat-421" href="#CodeChat-421"></a>
+<a id="CodeChat-422" name="CodeChat-422" href="#CodeChat-422"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;But that was all.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-423" name="CodeChat-423" href="#CodeChat-423"></a>
+<a id="CodeChat-424" name="CodeChat-424" href="#CodeChat-424"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;No, no, my dear Watson, not all<span class="ni">&amp;mdash;</span>by no means all. I would
+<a id="CodeChat-425" name="CodeChat-425" href="#CodeChat-425"></a>        suggest, for example, that a presentation to a doctor is more
+<a id="CodeChat-426" name="CodeChat-426" href="#CodeChat-426"></a>        likely to come from a hospital than from a hunt, and that when
+<a id="CodeChat-427" name="CodeChat-427" href="#CodeChat-427"></a>        the initials &#39;C.C.&#39; are placed before that hospital the words
+<a id="CodeChat-428" name="CodeChat-428" href="#CodeChat-428"></a>        &#39;Charing Cross&#39; very naturally suggest themselves.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-429" name="CodeChat-429" href="#CodeChat-429"></a>
+<a id="CodeChat-430" name="CodeChat-430" href="#CodeChat-430"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;You may be right.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-431" name="CodeChat-431" href="#CodeChat-431"></a>
+<a id="CodeChat-432" name="CodeChat-432" href="#CodeChat-432"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;The probability lies in that direction. And if we take this as a
+<a id="CodeChat-433" name="CodeChat-433" href="#CodeChat-433"></a>        working hypothesis we have a fresh basis from which to start our
+<a id="CodeChat-434" name="CodeChat-434" href="#CodeChat-434"></a>        construction of this unknown visitor.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-435" name="CodeChat-435" href="#CodeChat-435"></a>
+<a id="CodeChat-436" name="CodeChat-436" href="#CodeChat-436"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Well, then, supposing that &#39;C.C.H.&#39; does stand for &#39;Charing
+<a id="CodeChat-437" name="CodeChat-437" href="#CodeChat-437"></a>        Cross Hospital,&#39; what further inferences may we draw?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-438" name="CodeChat-438" href="#CodeChat-438"></a>
+<a id="CodeChat-439" name="CodeChat-439" href="#CodeChat-439"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Do none suggest themselves? You know my methods. Apply them!&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-440" name="CodeChat-440" href="#CodeChat-440"></a>
+<a id="CodeChat-441" name="CodeChat-441" href="#CodeChat-441"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I can only think of the obvious conclusion that the man has
+<a id="CodeChat-442" name="CodeChat-442" href="#CodeChat-442"></a>        practised in town before going to the country.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-443" name="CodeChat-443" href="#CodeChat-443"></a>
+<a id="CodeChat-444" name="CodeChat-444" href="#CodeChat-444"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I think that we might venture a little farther than this. Look
+<a id="CodeChat-445" name="CodeChat-445" href="#CodeChat-445"></a>        at it in this light. On what occasion would it be most probable
+<a id="CodeChat-446" name="CodeChat-446" href="#CodeChat-446"></a>        that such a presentation would be made? When would his friends
+<a id="CodeChat-447" name="CodeChat-447" href="#CodeChat-447"></a>        unite to give him a pledge of their good will? Obviously at the
+<a id="CodeChat-448" name="CodeChat-448" href="#CodeChat-448"></a>        moment when Dr. Mortimer withdrew from the service of the
+<a id="CodeChat-449" name="CodeChat-449" href="#CodeChat-449"></a>        hospital in order to start in practice for himself. We know there
+<a id="CodeChat-450" name="CodeChat-450" href="#CodeChat-450"></a>        has been a presentation. We believe there has been a change from
+<a id="CodeChat-451" name="CodeChat-451" href="#CodeChat-451"></a>        a town hospital to a country practice. Is it, then, stretching
+<a id="CodeChat-452" name="CodeChat-452" href="#CodeChat-452"></a>        our inference too far to say that the presentation was on the
+<a id="CodeChat-453" name="CodeChat-453" href="#CodeChat-453"></a>        occasion of the change?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-454" name="CodeChat-454" href="#CodeChat-454"></a>
+<a id="CodeChat-455" name="CodeChat-455" href="#CodeChat-455"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;It certainly seems probable.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-456" name="CodeChat-456" href="#CodeChat-456"></a>
+<a id="CodeChat-457" name="CodeChat-457" href="#CodeChat-457"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Now, you will observe that he could not have been on the staff
+<a id="CodeChat-458" name="CodeChat-458" href="#CodeChat-458"></a>        of the hospital, since only a man well-established in a London
+<a id="CodeChat-459" name="CodeChat-459" href="#CodeChat-459"></a>        practice could hold such a position, and such a one would not
+<a id="CodeChat-460" name="CodeChat-460" href="#CodeChat-460"></a>        drift into the country. What was he, then? If he was in the
+<a id="CodeChat-461" name="CodeChat-461" href="#CodeChat-461"></a>        hospital and yet not on the staff he could only have been a
+<a id="CodeChat-462" name="CodeChat-462" href="#CodeChat-462"></a>        house-surgeon or a house-physician<span class="ni">&amp;mdash;</span>little more than a senior
+<a id="CodeChat-463" name="CodeChat-463" href="#CodeChat-463"></a>        student. And he left five years ago<span class="ni">&amp;mdash;</span>the date is on the stick. So
+<a id="CodeChat-464" name="CodeChat-464" href="#CodeChat-464"></a>        your grave, middle-aged family practitioner vanishes into thin
+<a id="CodeChat-465" name="CodeChat-465" href="#CodeChat-465"></a>        air, my dear Watson, and there emerges a young fellow under
+<a id="CodeChat-466" name="CodeChat-466" href="#CodeChat-466"></a>        thirty, amiable, unambitious, absent-minded, and the possessor of
+<a id="CodeChat-467" name="CodeChat-467" href="#CodeChat-467"></a>        a favourite dog, which I should describe roughly as being larger
+<a id="CodeChat-468" name="CodeChat-468" href="#CodeChat-468"></a>        than a terrier and smaller than a mastiff.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-469" name="CodeChat-469" href="#CodeChat-469"></a>
+<a id="CodeChat-470" name="CodeChat-470" href="#CodeChat-470"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>I laughed incredulously as Sherlock Holmes leaned back in his
+<a id="CodeChat-471" name="CodeChat-471" href="#CodeChat-471"></a>        settee and blew little wavering rings of smoke up to the ceiling.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-472" name="CodeChat-472" href="#CodeChat-472"></a>
+<a id="CodeChat-473" name="CodeChat-473" href="#CodeChat-473"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;As to the latter part, I have no means of checking you,&quot; said I,
+<a id="CodeChat-474" name="CodeChat-474" href="#CodeChat-474"></a>        &quot;but at least it is not difficult to find out a few particulars
+<a id="CodeChat-475" name="CodeChat-475" href="#CodeChat-475"></a>        about the man&#39;s age and professional career.&quot; From my small
+<a id="CodeChat-476" name="CodeChat-476" href="#CodeChat-476"></a>        medical shelf I took down the Medical Directory and turned up the
+<a id="CodeChat-477" name="CodeChat-477" href="#CodeChat-477"></a>        name. There were several Mortimers, but only one who could be our
+<a id="CodeChat-478" name="CodeChat-478" href="#CodeChat-478"></a>        visitor. I read his record aloud.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-479" name="CodeChat-479" href="#CodeChat-479"></a>
+<a id="CodeChat-480" name="CodeChat-480" href="#CodeChat-480"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Mortimer, James, M.R.C.S., 1882, Grimpen, Dartmoor,
+<a id="CodeChat-481" name="CodeChat-481" href="#CodeChat-481"></a>        Devon. House-surgeon, from 1882 to 1884, at Charing Cross
+<a id="CodeChat-482" name="CodeChat-482" href="#CodeChat-482"></a>        Hospital. Winner of the Jackson prize for Comparative Pathology,
+<a id="CodeChat-483" name="CodeChat-483" href="#CodeChat-483"></a>        with essay entitled &#39;Is Disease a Reversion?&#39; Corresponding
+<a id="CodeChat-484" name="CodeChat-484" href="#CodeChat-484"></a>        member of the Swedish Pathological Society. Author of &#39;Some
+<a id="CodeChat-485" name="CodeChat-485" href="#CodeChat-485"></a>        Freaks of Atavism&#39; (Lancet 1882). &#39;Do We Progress?&#39; (Journal of
+<a id="CodeChat-486" name="CodeChat-486" href="#CodeChat-486"></a>        Psychology, March, 1883). Medical Officer for the parishes of
+<a id="CodeChat-487" name="CodeChat-487" href="#CodeChat-487"></a>        Grimpen, Thorsley, and High Barrow.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-488" name="CodeChat-488" href="#CodeChat-488"></a>
+<a id="CodeChat-489" name="CodeChat-489" href="#CodeChat-489"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;No mention of that local hunt, Watson,&quot; said Holmes with a
+<a id="CodeChat-490" name="CodeChat-490" href="#CodeChat-490"></a>        mischievous smile, &quot;but a country doctor, as you very astutely
+<a id="CodeChat-491" name="CodeChat-491" href="#CodeChat-491"></a>        observed. I think that I am fairly justified in my inferences. As
+<a id="CodeChat-492" name="CodeChat-492" href="#CodeChat-492"></a>        to the adjectives, I said, if I remember right, amiable,
+<a id="CodeChat-493" name="CodeChat-493" href="#CodeChat-493"></a>        unambitious, and absent-minded. It is my experience that it is
+<a id="CodeChat-494" name="CodeChat-494" href="#CodeChat-494"></a>        only an amiable man in this world who receives testimonials, only
+<a id="CodeChat-495" name="CodeChat-495" href="#CodeChat-495"></a>        an unambitious one who abandons a London career for the country,
+<a id="CodeChat-496" name="CodeChat-496" href="#CodeChat-496"></a>        and only an absent-minded one who leaves his stick and not his
+<a id="CodeChat-497" name="CodeChat-497" href="#CodeChat-497"></a>        visiting-card after waiting an hour in your room.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-498" name="CodeChat-498" href="#CodeChat-498"></a>
+<a id="CodeChat-499" name="CodeChat-499" href="#CodeChat-499"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;And the dog?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-500" name="CodeChat-500" href="#CodeChat-500"></a>
+<a id="CodeChat-501" name="CodeChat-501" href="#CodeChat-501"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Has been in the habit of carrying this stick behind his master.
+<a id="CodeChat-502" name="CodeChat-502" href="#CodeChat-502"></a>        Being a heavy stick the dog has held it tightly by the middle,
+<a id="CodeChat-503" name="CodeChat-503" href="#CodeChat-503"></a>        and the marks of his teeth are very plainly visible. The dog&#39;s
+<a id="CodeChat-504" name="CodeChat-504" href="#CodeChat-504"></a>        jaw, as shown in the space between these marks, is too broad in
+<a id="CodeChat-505" name="CodeChat-505" href="#CodeChat-505"></a>        my opinion for a terrier and not broad enough for a mastiff. It
+<a id="CodeChat-506" name="CodeChat-506" href="#CodeChat-506"></a>        may have been<span class="ni">&amp;mdash;</span>yes, by Jove, it is a curly-haired spaniel.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-507" name="CodeChat-507" href="#CodeChat-507"></a>
+<a id="CodeChat-508" name="CodeChat-508" href="#CodeChat-508"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>He had risen and paced the room as he spoke. Now he halted in the
+<a id="CodeChat-509" name="CodeChat-509" href="#CodeChat-509"></a>        recess of the window. There was such a ring of conviction in his
+<a id="CodeChat-510" name="CodeChat-510" href="#CodeChat-510"></a>        voice that I glanced up in surprise.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-511" name="CodeChat-511" href="#CodeChat-511"></a>
+<a id="CodeChat-512" name="CodeChat-512" href="#CodeChat-512"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;My dear fellow, how can you possibly be so sure of that?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-513" name="CodeChat-513" href="#CodeChat-513"></a>
+<a id="CodeChat-514" name="CodeChat-514" href="#CodeChat-514"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;For the very simple reason that I see the dog himself on our
+<a id="CodeChat-515" name="CodeChat-515" href="#CodeChat-515"></a>        very door-step, and there is the ring of its owner. Don&#39;t move, I
+<a id="CodeChat-516" name="CodeChat-516" href="#CodeChat-516"></a>        beg you, Watson. He is a professional brother of yours, and your
+<a id="CodeChat-517" name="CodeChat-517" href="#CodeChat-517"></a>        presence may be of assistance to me. Now is the dramatic moment
+<a id="CodeChat-518" name="CodeChat-518" href="#CodeChat-518"></a>        of fate, Watson, when you hear a step upon the stair which is
+<a id="CodeChat-519" name="CodeChat-519" href="#CodeChat-519"></a>        walking into your life, and you know not whether for good or ill.
+<a id="CodeChat-520" name="CodeChat-520" href="#CodeChat-520"></a>        What does Dr. James Mortimer, the man of science, ask of Sherlock
+<a id="CodeChat-521" name="CodeChat-521" href="#CodeChat-521"></a>        Holmes, the specialist in crime? Come in!&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-522" name="CodeChat-522" href="#CodeChat-522"></a>
+<a id="CodeChat-523" name="CodeChat-523" href="#CodeChat-523"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The appearance of our visitor was a surprise to me, since I had
+<a id="CodeChat-524" name="CodeChat-524" href="#CodeChat-524"></a>        expected a typical country practitioner. He was a very tall, thin
+<a id="CodeChat-525" name="CodeChat-525" href="#CodeChat-525"></a>        man, with a long nose like a beak, which jutted out between two
+<a id="CodeChat-526" name="CodeChat-526" href="#CodeChat-526"></a>        keen, gray eyes, set closely together and sparkling brightly from
+<a id="CodeChat-527" name="CodeChat-527" href="#CodeChat-527"></a>        behind a pair of gold-rimmed glasses. He was clad in a
+<a id="CodeChat-528" name="CodeChat-528" href="#CodeChat-528"></a>        professional but rather slovenly fashion, for his frock-coat was
+<a id="CodeChat-529" name="CodeChat-529" href="#CodeChat-529"></a>        dingy and his trousers frayed. Though young, his long back was
+<a id="CodeChat-530" name="CodeChat-530" href="#CodeChat-530"></a>        already bowed, and he walked with a forward thrust of his head
+<a id="CodeChat-531" name="CodeChat-531" href="#CodeChat-531"></a>        and a general air of peering benevolence. As he entered his eyes
+<a id="CodeChat-532" name="CodeChat-532" href="#CodeChat-532"></a>        fell upon the stick in Holmes&#39;s hand, and he ran towards it with
+<a id="CodeChat-533" name="CodeChat-533" href="#CodeChat-533"></a>        an exclamation of joy. &quot;I am so very glad,&quot; said he. &quot;I was not
+<a id="CodeChat-534" name="CodeChat-534" href="#CodeChat-534"></a>        sure whether I had left it here or in the Shipping Office. I
+<a id="CodeChat-535" name="CodeChat-535" href="#CodeChat-535"></a>        would not lose that stick for the world.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-536" name="CodeChat-536" href="#CodeChat-536"></a>
+<a id="CodeChat-537" name="CodeChat-537" href="#CodeChat-537"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;A presentation, I see,&quot; said Holmes.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-538" name="CodeChat-538" href="#CodeChat-538"></a>
+<a id="CodeChat-539" name="CodeChat-539" href="#CodeChat-539"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Yes, sir.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-540" name="CodeChat-540" href="#CodeChat-540"></a>
+<a id="CodeChat-541" name="CodeChat-541" href="#CodeChat-541"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;From Charing Cross Hospital?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-542" name="CodeChat-542" href="#CodeChat-542"></a>
+<a id="CodeChat-543" name="CodeChat-543" href="#CodeChat-543"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;From one or two friends there on the occasion of my marriage.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-544" name="CodeChat-544" href="#CodeChat-544"></a>
+<a id="CodeChat-545" name="CodeChat-545" href="#CodeChat-545"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Dear, dear, that&#39;s bad!&quot; said Holmes, shaking his head.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-546" name="CodeChat-546" href="#CodeChat-546"></a>
+<a id="CodeChat-547" name="CodeChat-547" href="#CodeChat-547"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Dr. Mortimer blinked through his glasses in mild astonishment.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-548" name="CodeChat-548" href="#CodeChat-548"></a>
+<a id="CodeChat-549" name="CodeChat-549" href="#CodeChat-549"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Why was it bad?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-550" name="CodeChat-550" href="#CodeChat-550"></a>
+<a id="CodeChat-551" name="CodeChat-551" href="#CodeChat-551"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Only that you have disarranged our little deductions. Your
+<a id="CodeChat-552" name="CodeChat-552" href="#CodeChat-552"></a>        marriage, you say?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-553" name="CodeChat-553" href="#CodeChat-553"></a>
+<a id="CodeChat-554" name="CodeChat-554" href="#CodeChat-554"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Yes, sir. I married, and so left the hospital, and with it all
+<a id="CodeChat-555" name="CodeChat-555" href="#CodeChat-555"></a>        hopes of a consulting practice. It was necessary to make a home
+<a id="CodeChat-556" name="CodeChat-556" href="#CodeChat-556"></a>        of my own.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-557" name="CodeChat-557" href="#CodeChat-557"></a>
+<a id="CodeChat-558" name="CodeChat-558" href="#CodeChat-558"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Come, come, we are not so far wrong, after all,&quot; said Holmes.
+<a id="CodeChat-559" name="CodeChat-559" href="#CodeChat-559"></a>        &quot;And now, Dr. James Mortimer <span class="ni">&amp;mdash;&amp;mdash;&amp;mdash;</span>&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-560" name="CodeChat-560" href="#CodeChat-560"></a>
+<a id="CodeChat-561" name="CodeChat-561" href="#CodeChat-561"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Mister, sir, Mister<span class="ni">&amp;mdash;</span>a humble M.R.C.S.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-562" name="CodeChat-562" href="#CodeChat-562"></a>
+<a id="CodeChat-563" name="CodeChat-563" href="#CodeChat-563"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;And a man of precise mind, evidently.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-564" name="CodeChat-564" href="#CodeChat-564"></a>
+<a id="CodeChat-565" name="CodeChat-565" href="#CodeChat-565"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;A dabbler in science, Mr. Holmes, a picker up of shells on the
+<a id="CodeChat-566" name="CodeChat-566" href="#CodeChat-566"></a>        shores of the great unknown ocean. I presume that it is Mr.
+<a id="CodeChat-567" name="CodeChat-567" href="#CodeChat-567"></a>        Sherlock Holmes whom I am addressing and not <span class="ni">&amp;mdash;&amp;mdash;&amp;mdash;</span>&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-568" name="CodeChat-568" href="#CodeChat-568"></a>
+<a id="CodeChat-569" name="CodeChat-569" href="#CodeChat-569"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;No, this is my friend Dr. Watson.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-570" name="CodeChat-570" href="#CodeChat-570"></a>
+<a id="CodeChat-571" name="CodeChat-571" href="#CodeChat-571"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Glad to meet you, sir. I have heard your name mentioned in
+<a id="CodeChat-572" name="CodeChat-572" href="#CodeChat-572"></a>        connection with that of your friend. You interest me very much,
+<a id="CodeChat-573" name="CodeChat-573" href="#CodeChat-573"></a>        Mr. Holmes. I had hardly expected so dolichocephalic a skull or
+<a id="CodeChat-574" name="CodeChat-574" href="#CodeChat-574"></a>        such well-marked supra-orbital development. Would you have any
+<a id="CodeChat-575" name="CodeChat-575" href="#CodeChat-575"></a>        objection to my running my finger along your parietal fissure? A
+<a id="CodeChat-576" name="CodeChat-576" href="#CodeChat-576"></a>        cast of your skull, sir, until the original is available, would
+<a id="CodeChat-577" name="CodeChat-577" href="#CodeChat-577"></a>        be an ornament to any anthropological museum. It is not my
+<a id="CodeChat-578" name="CodeChat-578" href="#CodeChat-578"></a>        intention to be fulsome, but I confess that I covet your skull.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-579" name="CodeChat-579" href="#CodeChat-579"></a>
+<a id="CodeChat-580" name="CodeChat-580" href="#CodeChat-580"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Sherlock Holmes waved our strange visitor into a chair. &quot;You are
+<a id="CodeChat-581" name="CodeChat-581" href="#CodeChat-581"></a>        an enthusiast in your line of thought, I perceive, sir, as I am
+<a id="CodeChat-582" name="CodeChat-582" href="#CodeChat-582"></a>        in mine,&quot; said he. &quot;I observe from your forefinger that you make
+<a id="CodeChat-583" name="CodeChat-583" href="#CodeChat-583"></a>        your own cigarettes. Have no hesitation in lighting one.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-584" name="CodeChat-584" href="#CodeChat-584"></a>
+<a id="CodeChat-585" name="CodeChat-585" href="#CodeChat-585"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The man drew out paper and tobacco and twirled the one up in the
+<a id="CodeChat-586" name="CodeChat-586" href="#CodeChat-586"></a>        other with surprising dexterity. He had long, quivering fingers
+<a id="CodeChat-587" name="CodeChat-587" href="#CodeChat-587"></a>        as agile and restless as the antennae of an insect.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-588" name="CodeChat-588" href="#CodeChat-588"></a>
+<a id="CodeChat-589" name="CodeChat-589" href="#CodeChat-589"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Holmes was silent, but his little darting glances showed me the
+<a id="CodeChat-590" name="CodeChat-590" href="#CodeChat-590"></a>        interest which he took in our curious companion.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-591" name="CodeChat-591" href="#CodeChat-591"></a>
+<a id="CodeChat-592" name="CodeChat-592" href="#CodeChat-592"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I presume, sir,&quot; said he at last, &quot;that it was not merely for
+<a id="CodeChat-593" name="CodeChat-593" href="#CodeChat-593"></a>        the purpose of examining my skull that you have done me the
+<a id="CodeChat-594" name="CodeChat-594" href="#CodeChat-594"></a>        honour to call here last night and again to-day?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-595" name="CodeChat-595" href="#CodeChat-595"></a>
+<a id="CodeChat-596" name="CodeChat-596" href="#CodeChat-596"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;No, sir, no; though I am happy to have had the opportunity of
+<a id="CodeChat-597" name="CodeChat-597" href="#CodeChat-597"></a>        doing that as well. I came to you, Mr. Holmes, because I
+<a id="CodeChat-598" name="CodeChat-598" href="#CodeChat-598"></a>        recognized that I am myself an unpractical man and because I am
+<a id="CodeChat-599" name="CodeChat-599" href="#CodeChat-599"></a>        suddenly confronted with a most serious and extraordinary
+<a id="CodeChat-600" name="CodeChat-600" href="#CodeChat-600"></a>        problem. Recognizing, as I do, that you are the second highest
+<a id="CodeChat-601" name="CodeChat-601" href="#CodeChat-601"></a>        expert in Europe <span class="ni">&amp;mdash;&amp;mdash;&amp;mdash;</span>&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-602" name="CodeChat-602" href="#CodeChat-602"></a>
+<a id="CodeChat-603" name="CodeChat-603" href="#CodeChat-603"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Indeed, sir! May I inquire who has the honour to be the first?&quot;
+<a id="CodeChat-604" name="CodeChat-604" href="#CodeChat-604"></a>        asked Holmes with some asperity.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-605" name="CodeChat-605" href="#CodeChat-605"></a>
+<a id="CodeChat-606" name="CodeChat-606" href="#CodeChat-606"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;To the man of precisely scientific mind the work of Monsieur
+<a id="CodeChat-607" name="CodeChat-607" href="#CodeChat-607"></a>        Bertillon must always appeal strongly.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-608" name="CodeChat-608" href="#CodeChat-608"></a>
+<a id="CodeChat-609" name="CodeChat-609" href="#CodeChat-609"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Then had you not better consult him?&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-610" name="CodeChat-610" href="#CodeChat-610"></a>
+<a id="CodeChat-611" name="CodeChat-611" href="#CodeChat-611"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;I said, sir, to the precisely scientific mind. But as a
+<a id="CodeChat-612" name="CodeChat-612" href="#CodeChat-612"></a>        practical man of affairs it is acknowledged that you stand alone.
+<a id="CodeChat-613" name="CodeChat-613" href="#CodeChat-613"></a>        I trust, sir, that I have not inadvertently <span class="ni">&amp;mdash;&amp;mdash;&amp;mdash;</span>&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-614" name="CodeChat-614" href="#CodeChat-614"></a>
+<a id="CodeChat-615" name="CodeChat-615" href="#CodeChat-615"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>&quot;Just a little,&quot; said Holmes. &quot;I think, Dr. Mortimer, you would
+<a id="CodeChat-616" name="CodeChat-616" href="#CodeChat-616"></a>        do wisely if without more ado you would kindly tell me plainly
+<a id="CodeChat-617" name="CodeChat-617" href="#CodeChat-617"></a>        what the exact nature of the problem is in which you demand my
+<a id="CodeChat-618" name="CodeChat-618" href="#CodeChat-618"></a>        assistance.&quot;<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-619" name="CodeChat-619" href="#CodeChat-619"></a>
+<a id="CodeChat-620" name="CodeChat-620" href="#CodeChat-620"></a>        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;holmes2.html&quot;</span><span class="p">&gt;</span>Next chapter<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="CodeChat-621" name="CodeChat-621" href="#CodeChat-621"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-622" name="CodeChat-622" href="#CodeChat-622"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

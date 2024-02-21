@@ -1,0 +1,490 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>12.9. Week 9 Lab &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.10. Week 10 Lab" href="Week10Lab.html" />
+    <link rel="prev" title="12.8. Week 8 Lab" href="Week8Lab.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=Week9Lab'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">12.8. </span>Week 8 Lab" data-toggle="tooltip">
+    <a href="Week8Lab.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">12.10. </span>Week 10 Lab' data-toggle="tooltip" >              
+    <a href="Week10Lab.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="week-9-lab">
+<h1><span class="section-number">12.9. </span>Week 9 Lab<a class="headerlink" href="#week-9-lab" title="Permalink to this heading">¶</a></h1>
+<div class="admonition-material-covered admonition">
+<p class="admonition-title">Material Covered</p>
+<p>Sequences (Chapter 9)</p>
+</div>
+<section id="level-1">
+<h2><span class="section-number">12.9.1. </span>Level 1<a class="headerlink" href="#level-1" title="Permalink to this heading">¶</a></h2>
+<p>In this level you will combine two lists and remove all the double entries. The starter code below gives you two lists. Follow the steps (all of your code can go inside main()).</p>
+<ol class="arabic simple">
+<li><p>Create a new list called temp_list and fill it with all the elements from the two provided lists (hint: use ‘+’).</p></li>
+<li><p>Create another new list called final_list and set it to empty.</p></li>
+<li><p>Iterate through temp_list, and for each item, check to see if that item is in final_list, if not, add it to final_list (hint: use append to add the item to final_list).</p></li>
+<li><p>Print out the final list to the console to check the output.</p></li>
+</ol>
+<p>Your output should look like this:</p>
+<a class="reference internal image-reference" href="../_images/Lab9_Level1_output.jpg"><img alt="../_images/Lab9_Level1_output.jpg" class="align-center" src="../_images/Lab9_Level1_output.jpg" style="width: 600px;" /></a>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lab9_level1 data-question_label="12.9.1.1">
+<div id=lab9_level1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="lab9_level1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 9, Level 1
+################################################################
+
+def main():
+    norms_list = ["gas", "toothbrush", "apples", "juice", "chocolate"]
+    anitas_list = ["apples", "grapes", "dog food", "gas", "mustard"]
+
+
+main()
+</textarea>
+</div>
+</div>
+</section>
+<section id="level-2">
+<h2><span class="section-number">12.9.2. </span>Level 2<a class="headerlink" href="#level-2" title="Permalink to this heading">¶</a></h2>
+<p>In this level you are given a jumbled string that you must decode to reveal the hidden message. The starter code below gives you a main function, with a coded message string already provided.</p>
+<ol class="arabic simple">
+<li><p>Define a decoder function that accepts a string input and returns a string output. Make sure you add type annotation for this function. The steps below tell you what to put inside this function. For now just print out and then return the string that is passed in. Call this function from main. Your main function and output should look like this:</p></li>
+</ol>
+<img alt="../_images/Lab9_Level2_first.jpg" src="../_images/Lab9_Level2_first.jpg" />
+<ol class="arabic simple" start="2">
+<li><p>Inside your decoder function, start by reversing the string so that the last character of the string becomes the first, the second last character becomes the second and so on. Reversing a string can be done using the slice operator with [::-1] as the slicing information. Inside your function, print the resulting string after reversing to ensure the reversal has worked.</p></li>
+<li><p>Inside the function, split the message using ‘v’ as the delimiter, saving the result to a temporary list variable. Print out this list to ensure that you have this working.</p></li>
+<li><p>Create a new variable called space and set it equal to a blank space. Now, join the list back together into a string using the newly created space variable. Save the result of this join to a new variable. Print out this joined message to make sure that you have a single string that looks like this:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/Lab9_Level2_partway.jpg"><img alt="../_images/Lab9_Level2_partway.jpg" class="align-center" src="../_images/Lab9_Level2_partway.jpg" style="width: 300px;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>Using a for loop, iterate through each character in the joined message. If the character is a ‘b’ swap it out with an ‘s’. The image below demonstrates how to swap out a character in a string using the index() operator, slices and concatenation.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/Lab9_char_swap.jpg"><img alt="../_images/Lab9_char_swap.jpg" class="align-center" src="../_images/Lab9_char_swap.jpg" style="width: 500px;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>Return the final decoded message. Your output, including all the temporary decodings, should look like this:</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/Lab9_Level2_final.jpg"><img alt="../_images/Lab9_Level2_final.jpg" class="align-center" src="../_images/Lab9_Level2_final.jpg" style="width: 500px;" /></a>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=lab9_level2 data-question_label="12.9.2.1">
+<div id=lab9_level2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="lab9_level2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 9, Level 2
+################################################################
+
+
+def main():
+    message = "tnedutbvbuoidutbvavekilvgniydutbvtratb"
+
+main()
+</textarea>
+</div>
+</div>
+</section>
+<section id="level-3">
+<h2><span class="section-number">12.9.3. </span>Level 3<a class="headerlink" href="#level-3" title="Permalink to this heading">¶</a></h2>
+<p>In this level you will add some functionality to the poetry analyzer code below.</p>
+<p>Run this code right now. The main() function reads in a poem, and then prints out the title. Warning: the spoken word poem that is read in on line 14 has explicit words in it - if you find the F-word offensive, you should use the other poem by commenting out line 14 and uncommenting line 18.</p>
+<p>You can look at the two poem text files at the bottom of this page.</p>
+<p>Your job is to add functions and uncomment the code in main() that calls those functions. Follow the instructions below the code window.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_lab9_level3 data-question_label="12.9.3.1">
+<div id=ac_lab9_level3_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_lab9_level3_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+################################################################
+# Student name, ID & lab section
+# Date
+# Lab 9, Level 3
+################################################################
+
+
+def extract_title(poem):
+    # return the title (words before 'by')
+    first_line_split = poem[0].split("by")
+    return first_line_split[0]
+
+def main():
+    poem_file_name = "ManUp_10Responses.txt"
+    # if you don't want to use the ManUp poem, which has explicit language in it,
+    # you can use the poem instead, by commenting out the line above, and uncommenting
+    # the line below
+    #poem_file_name = "FlandersFields.txt"
+
+    fileref =  open(poem_file_name, "r")
+    lines_list = fileref.readlines()
+
+    title = extract_title(lines_list)
+    print("The title of the poem is: ", title)
+
+    #author = extract_author(lines_list)
+    #print("The author of the poem is: ", author)
+
+    #poem_body = extract_poem_body(lines_list)
+    #for line in poem_body:
+    #    print(line)
+    #    print()
+
+    #average_words = calc_avg_words_per_line(poem_body)
+    #print("There are ", average_words, "average words per line in the poem.")
+
+    #search_word = input("What word do you want to count in the poem? ")
+
+    #num_occurences = count_word(poem_body, search_word)
+    #print("The word ", search_word, "occurs ", num_occurences, "times in the poem")
+
+main()
+</textarea>
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>First follow the example of the extract title function and create a function that will extract and return the author’s name. The author’s name will be on the first line of the file (both poetry files have &lt;title&gt; by &lt;author&gt; as the first line of the file. When you have this working, test it by uncommenting out the two lines in main() that call the extract_author function and print out the result.</p></li>
+<li><p>Next, add an extract_poem_body function. The poem files have the author and title on the first line of the text file and the URL source of the poem on the second line. We need a list of poetry lines that exclude these two. Inside the function use slicing on the list of poetry lines to get a list that excludes the first two lines. Return this smaller <em>list</em> of poetry lines. Again, test to make sure this works, by uncommenting the lines in main() that call this function and print out the poem (including the for loop).</p></li>
+<li><p>Now, define a calc_avg_words_per_line function. This function should loop through the lines of the poem and count how many words are in each line. After looping through all the lines, calculate the average and return it. Test this function by uncommenting the lines in main(). For the 10 responses poem, the average words per line should be 44.4. For the Flanders Fields poem, the average words per line should be 7.6111.</p></li>
+<li><p>The last thing to add is a count_word function. This function should take in the poem and a word, and then return the number of times the word is found in the poem. There are a couple of different ways to do this, keeping in mind that the poem is passed in as a list of lines. In the main() function, uncomment the lines that ask the end user for a search word and then call the count_word() function and prints out the result.</p></li>
+</ol>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>ManUp_10Responses.txt</code></div>
+<pre data-component="datafile" id=ManUp_10Responses.txt  data-edit="false" data-rows="20" data-cols="65">
+10 Responses to the Phrase "Man Up" by Kyle "Guante" Tran Myhre
+Source: "A Love Song, A Death Rattle, A Battle Cry" Kyle "Guante" Tran Myhre, Button Poetry, 2016. Also online: https://guante.info/2012/02/07/10-responses-to-the-phrase-man-up-spoken-word/
+1. Fuck you.
+2. If you want to question my masculinity, like a schoolyard circle of curses, like a swordfight with lightsaber erections, save your breath. Because contrary to what you may believe, not every problem can be solved by “growing a pair.” You can’t arm-wrestle your way out of depression. The CEO of the company that just laid you off does not care how much you bench. And I promise, there is no lite beer in the universe full-bodied enough to make you love yourself.
+3. Man up? Oh that’s that new superhero, right? Mild-mannered supplement salesman Mark Manstrong says the magic words “MAN UP,” and then transforms into THE FIVE O’CLOCK SHADOW, the massively-muscled, deep-voiced, leather-duster-wearing super-man who defends the world from, I don’t know, feelings.
+4. Of course. Why fight to remove our chains, when we can simply compare their lengths? Why step outside the box, when the box has these bad-ass flame decals on it? We men are cigarettes: dangerous, and poisonous, and stupid.
+5. You ever notice how nobody ever says “woman up?” They just imply it. Because women and the women’s movement figured out a long time ago that being directly ordered around by commercials, magazines and music is dehumanizing. When will men figure that out?
+6. The phrase “Man Up” suggests that competence and perseverance are uniquely masculine traits. That women—not to mention any man who doesn’t eat steak, drive a pickup truck, have lots of sex with women—are nothing more than background characters, comic relief, props. More than anything, though, it suggests that to be yourself—whether you wear skinny jeans, listen to Lady Gaga, rock a little eyeliner, drink some other brand of light beer, or write poetry—will cost you.
+7. How many boys have to kill themselves before this country acknowledges the problem? How many women have to be assaulted? How many trans people have to be murdered? We teach boys how to wear the skin of a man, but we also teach them how to raise that skin like a flag and draw blood for it.
+8. Boy babies get blue socks. Girl babies get pink socks. What about purple? What about orange, yellow, chartreuse, cerulean, black, tie-dyed, buffalo plaid, rainbow…
+9. I want to be free, to express myself. Man up. I want to have meaningful, emotional relationships with my brothers. Man up. I want to be weak sometimes. Man up. I want to be strong in a way that isn’t about physical power or dominance. Man up. I want to talk to my son about something other than sports. Man up. I want to be who I am. Man up.
+10. No.
+</pre></div>
+
+<div class="runestone datafile ">
+<div class="datafile_caption">Data file: <code>FlandersFields.txt</code></div>
+<pre data-component="datafile" id=FlandersFields.txt  data-edit="false" data-rows="20" data-cols="65">
+   In Flanders Fields by John McCrae
+Source: https://www.poetryfoundation.org/poems/47380/in-flanders-fields, written in 1918. Public Domain.
+ In Flanders fields the poppies blow
+Between the crosses, row on row,
+    That mark our place; and in the sky
+    The larks, still bravely singing, fly
+Scarce heard amid the guns below.
+We are the Dead. Short days ago
+We lived, felt dawn, saw sunset glow,
+    Loved and were loved, and now we lie,
+        In Flanders fields.
+Take up our quarrel with the foe:
+To you from failing hands we throw
+    The torch; be yours to hold it high.
+    If ye break faith with us who die
+We shall not sleep, though poppies grow
+        In Flanders fields.
+</pre></div>
+</section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 12.8. Week 8 Lab' data-toggle="tooltip">
+  <a href="Week8Lab.html" aria-label="Previous - 12.8. Week 8 Lab">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 12.10. Week 10 Lab' data-toggle="tooltip" >
+    <a href="Week10Lab.html" aria-label="Next - 12.10. Week 10 Lab">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

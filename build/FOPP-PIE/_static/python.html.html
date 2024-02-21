@@ -1,0 +1,330 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="pygments.css" type="text/css" />
+    <link rel="stylesheet" href="basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="documentation_options.js"></script>
+    <script defer="" src="jquery.js"></script>
+    <script defer="" src="underscore.js"></script>
+    <script defer="" src="doctools.js"></script>
+    <script defer="" src="matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=python.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-html notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-48" name="CodeChat-48" href="#CodeChat-48"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="CodeChat-49" name="CodeChat-49" href="#CodeChat-49"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-50" name="CodeChat-50" href="#CodeChat-50"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-51" name="CodeChat-51" href="#CodeChat-51"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-52" name="CodeChat-52" href="#CodeChat-52"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=1080, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-53" name="CodeChat-53" href="#CodeChat-53"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<a id="CodeChat-54" name="CodeChat-54" href="#CodeChat-54"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="CodeChat-55" name="CodeChat-55" href="#CodeChat-55"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="CodeChat-56" name="CodeChat-56" href="#CodeChat-56"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-57" name="CodeChat-57" href="#CodeChat-57"></a>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-headline&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;History&quot;</span><span class="p">&gt;</span>History<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection-bracket&quot;</span><span class="p">&gt;</span>[<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/w/index.php?title=Python_(programming_language)&amp;amp;action=edit&amp;amp;section=1&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Edit section: History&quot;</span><span class="p">&gt;</span>edit<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection-bracket&quot;</span><span class="p">&gt;</span>]<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="CodeChat-58" name="CodeChat-58" href="#CodeChat-58"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;thumb tright&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;thumbinner&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width:152px;&quot;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/150px-Guido_van_Rossum_OSCON_2006_cropped.png&quot;</span> <span class="na">decoding</span><span class="o">=</span><span class="s">&quot;async&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;150&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;225&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;thumbimage&quot;</span> <span class="na">srcset</span><span class="o">=</span><span class="s">&quot;//upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/225px-Guido_van_Rossum_OSCON_2006_cropped.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/9/94/Guido_van_Rossum_OSCON_2006_cropped.png/300px-Guido_van_Rossum_OSCON_2006_cropped.png 2x&quot;</span> <span class="na">data-file-width</span><span class="o">=</span><span class="s">&quot;1175&quot;</span> <span class="na">data-file-height</span><span class="o">=</span><span class="s">&quot;1762&quot;</span> <span class="p">/&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;thumbcaption&quot;</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;magnify&quot;</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Guido van Rossum<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> at OSCON 2006.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="CodeChat-59" name="CodeChat-59" href="#CodeChat-59"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;note&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;hatnote navigation-not-searchable&quot;</span><span class="p">&gt;</span>Main article: <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>History of Python<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="CodeChat-60" name="CodeChat-60" href="#CodeChat-60"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python was conceived in the late 1980s<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-venners-interview-pt-1_31-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-venners-interview-pt-1-31&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>31<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> by <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Guido van Rossum<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> at <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Centrum Wiskunde <span class="ni">&amp;amp;</span> Informatica<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> (CWI) in the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Netherlands<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> as a successor to the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>ABC language<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> (itself inspired by <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>SETL<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>)<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-12_32-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-12-32&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>32<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>, capable of <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>exception handling<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and interfacing with the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Amoeba<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> operating system.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-faq-created_7-1&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-faq-created-7&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>7<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> Its implementation began in December 1989.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-timeline-of-python_33-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-timeline-of-python-33&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>33<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> Van Rossum&#39;s long influence on Python is reflected in the title given to him by the Python community: <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Benevolent Dictator For Life<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> (BDFL)<span class="ni">&amp;#160;&amp;#8211;&amp;#32;</span> a post from which he gave himself permanent vacation on July 12, 2018.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-lj-bdfl-resignation_34-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-lj-bdfl-resignation-34&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>34<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-61" name="CodeChat-61" href="#CodeChat-61"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python 2.0 was released on 16 October 2000 with many major new features, including a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>cycle-detecting<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>garbage collector<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and support for <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Unicode<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-newin-2.0_35-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-newin-2.0-35&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>35<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-62" name="CodeChat-62" href="#CodeChat-62"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python 3.0 was released on 3 December 2008. It was a major revision of the language that is not completely <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>backward-compatible<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-3.0-release_36-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-3.0-release-36&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>36<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> Many of its major features were <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>backported<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> to Python 2.6.x<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-pep-3000_37-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-pep-3000-37&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>37<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> and 2.7.x version series.  Releases of Python 3 include the <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>2to3<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> utility, which automates (at least partially) the translation of Python 2 code to Python 3.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-38&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-38&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>38<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-63" name="CodeChat-63" href="#CodeChat-63"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python 2.7&#39;s <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>end-of-life<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> date was initially set at 2015 then postponed to 2020 out of concern that a large body of existing code could not easily be forward-ported to Python 3.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-39&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-39&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>39<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-40&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-40&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>40<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> In January 2017, Google announced work on a Python 2.7 to <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Go<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>transcompiler<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> to improve performance under concurrent workloads.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-41&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-41&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>41<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-64" name="CodeChat-64" href="#CodeChat-64"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-65" name="CodeChat-65" href="#CodeChat-65"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-headline&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Features_and_philosophy&quot;</span><span class="p">&gt;</span>Features and philosophy<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection&quot;</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection-bracket&quot;</span><span class="p">&gt;</span>[<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/w/index.php?title=Python_(programming_language)&amp;amp;action=edit&amp;amp;section=2&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Edit section: Features and philosophy&quot;</span><span class="p">&gt;</span>edit<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mw-editsection-bracket&quot;</span><span class="p">&gt;</span>]<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="CodeChat-66" name="CodeChat-66" href="#CodeChat-66"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python is a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>multi-paradigm programming language<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>. <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Object-oriented programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>structured programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> are fully supported, and many of its features support <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>functional programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>aspect-oriented programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> (including by <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>metaprogramming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-13_42-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-13-42&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>42<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>metaobjects<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> (magic methods)).<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-14_43-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-14-43&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>43<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> Many other paradigms are supported via extensions, including <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>design by contract<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-15_44-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-15-44&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>44<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-16_45-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-16-45&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>45<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>logic programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-17_46-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-17-46&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>46<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-67" name="CodeChat-67" href="#CodeChat-67"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python uses <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>dynamic typing<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, and a combination of <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>reference counting<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and a cycle-detecting garbage collector for <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>memory management<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>. It also features dynamic <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>name resolution<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> (<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>late binding<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>), which binds method and variable names during program execution.
+<a id="CodeChat-68" name="CodeChat-68" href="#CodeChat-68"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python&#39;s design offers some support for <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>functional programming<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> in the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Lisp<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> tradition. It has <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>filter<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>map<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>, and <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>reduce<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> functions; <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>list comprehensions<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>dictionaries<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, sets and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>generator<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> expressions.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-59_47-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-59-47&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>47<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> The standard library has two modules (itertools and functools) that implement functional tools borrowed from <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Haskell<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> and <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Standard ML<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-18_48-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-18-48&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>48<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-69" name="CodeChat-69" href="#CodeChat-69"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>The language&#39;s core philosophy is summarized in the document <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>The <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Zen of Python<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> (<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>PEP 20<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>), which includes <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>aphorisms<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> such as:<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-PEP20_49-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-PEP20-49&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>49<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-70" name="CodeChat-70" href="#CodeChat-70"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-71" name="CodeChat-71" href="#CodeChat-71"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Beautiful is better than ugly<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-72" name="CodeChat-72" href="#CodeChat-72"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Explicit is better than implicit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-73" name="CodeChat-73" href="#CodeChat-73"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Simple is better than complex<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-74" name="CodeChat-74" href="#CodeChat-74"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Complex is better than complicated<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="CodeChat-75" name="CodeChat-75" href="#CodeChat-75"></a><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Readability counts<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="CodeChat-76" name="CodeChat-76" href="#CodeChat-76"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Rather than having all of its functionality built into its core, Python was designed to be highly <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>extensible<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>. This compact modularity has made it particularly popular as a means of adding programmable interfaces to existing applications. Van Rossum&#39;s vision of a small core language with a large standard library and easily extensible interpreter stemmed from his frustrations with <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>ABC<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, which espoused the opposite approach.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-venners-interview-pt-1_31-1&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-venners-interview-pt-1-31&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>31<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-77" name="CodeChat-77" href="#CodeChat-77"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>While offering choice in coding methodology, the Python philosophy rejects exuberant syntax (such as that of <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Perl<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>) in favor of a simpler, less-cluttered grammar. As <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Alex Martelli<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> put it: &quot;To describe something as &#39;clever&#39; is <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>not<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> considered a compliment in the Python culture.&quot;<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-19_50-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-19-50&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>50<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> Python&#39;s philosophy rejects the Perl &quot;<span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>there is more than one way to do it<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>&quot; approach to language design in favor of &quot;there should be one—and preferably only one—obvious way to do it&quot;.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-PEP20_49-1&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-PEP20-49&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>49<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-78" name="CodeChat-78" href="#CodeChat-78"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python&#39;s developers strive to avoid <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>premature optimization<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, and reject patches to non-critical parts of the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>CPython<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> reference implementation that would offer marginal increases in speed at the cost of clarity.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-20_51-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-20-51&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>51<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span> When speed is important, a Python programmer can move time-critical functions to extension modules written in languages such as C, or use <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>PyPy<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>, a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>just-in-time compiler<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>. <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Cython<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> is also available, which translates a Python script into C and makes direct C-level API calls into the Python interpreter.
+<a id="CodeChat-79" name="CodeChat-79" href="#CodeChat-79"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>An important goal of Python&#39;s developers is keeping it fun to use. This is reflected in the language&#39;s name—a tribute to the British comedy group <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Monty Python<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-24_52-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-24-52&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>52<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>—and in occasionally playful approaches to tutorials and reference materials, such as examples that refer to spam and eggs (from a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>famous Monty Python sketch<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>) instead of the standard <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>foo and bar<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-53&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-53&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>53<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-54&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-54&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>54<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-80" name="CodeChat-80" href="#CodeChat-80"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A common <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>neologism<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> in the Python community is <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>pythonic<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>, which can have a wide range of meanings related to program style. To say that code is pythonic is to say that it uses Python idioms well, that it is natural or shows fluency in the language, that it conforms with Python&#39;s minimalist philosophy and emphasis on readability. In contrast, code that is difficult to understand or reads like a rough transcription from another programming language is called <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>unpythonic<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>.
+<a id="CodeChat-81" name="CodeChat-81" href="#CodeChat-81"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Users and admirers of Python, especially those considered knowledgeable or experienced, are often referred to as <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Pythonists<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>, <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Pythonistas<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>, and <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Pythoneers<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>.<span class="p">&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-27_55-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-27-55&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>55<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;&lt;</span><span class="nt">sup</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cite_ref-AutoNT-25_56-0&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;reference&quot;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cite_note-AutoNT-25-56&quot;</span><span class="p">&gt;</span><span class="ni">&amp;#91;</span>56<span class="ni">&amp;#93;</span><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
+<a id="CodeChat-82" name="CodeChat-82" href="#CodeChat-82"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="CodeChat-83" name="CodeChat-83" href="#CodeChat-83"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="CodeChat-84" name="CodeChat-84" href="#CodeChat-84"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

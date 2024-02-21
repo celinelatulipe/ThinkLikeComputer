@@ -1,0 +1,384 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>7.5. Combining Iterations, Conditionals and Functions &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.6. Integration Practice" href="ChapterAssessment.html" />
+    <link rel="prev" title="7.4. Combining Conditionals and Functions" href="CombiningConditionalsAndFunctions.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=CombiningIterationConditionalsAndFunctions'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.4. </span>Combining Conditionals and Functions" data-toggle="tooltip">
+    <a href="CombiningConditionalsAndFunctions.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">7.6. </span>Integration Practice' data-toggle="tooltip" >              
+    <a href="ChapterAssessment.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="combining-iterations-conditionals-and-functions">
+<h1><span class="section-number">7.5. </span>Combining Iterations, Conditionals and Functions<a class="headerlink" href="#combining-iterations-conditionals-and-functions" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we will look at examples where we combine all three of these building blocks together in various ways. The purpose of looking at these examples, along with the flow charts that are color-coded (blue to show function blocks, green to show conditional blocks, and pink to show iteration blocks) is the ways that these things can all work together. Every program you write will make use of these blocks of code, nested in each other in lots of different ways.</p>
+<p>Let’s look at an example of a program that uses all of these components, combined and nested together. This program is designed to check through a list of potential passwords and determine whether each password meets a set of four requirements. Run the program. This program is not interactive, so the output is only in the console. But note the use of functions, loops, conditionals and how they are combined.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac7_5_1 data-question_label="7.5.1">
+<div id=ac7_5_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac7_5_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Password Checking Program
+# check whether each password has at least 8 characters, at least 1 number,
+# at least one lower-case character, at least one upper-case character
+
+def check_number():
+    """sets globbal pwd_good false if no number is found """
+    global pwd_good
+    for c in current_pwd:
+        if c.isdigit():
+            return
+
+    pwd_good = False
+    print(current_pwd + " has no numbers")
+
+def check_lower():
+    """sets globbal pwd_good false if no lowercase letter is found """
+    global pwd_good
+    for c in current_pwd:
+        if c.islower():
+            return
+
+    pwd_good = False
+    print(current_pwd + " has no lowercase letters")
+
+def check_upper():
+    """sets globbal pwd_good false if no uppercase letter is found """
+    global pwd_good
+    for c in current_pwd:
+        if c.isupper():
+            return
+
+    pwd_good = False
+    print(current_pwd + " has no uppercase letters")
+
+def main():
+    global pwd_good, current_pwd
+    for pwd in pwd_list:
+        pwd_good = True
+        current_pwd = pwd
+        # check len
+        if len(current_pwd) < 8:
+            print(current_pwd + " is too short (must have at least 8 characters)")
+            pwd_good = False
+
+        # check for number
+        check_number()
+
+        # check for lower-case char
+        check_lower()
+
+        # check for upper-case char
+        check_upper()
+
+        if not pwd_good:
+            print("password: " + current_pwd + " is not good.")
+        else:
+            print("password: " + current_pwd + " meets requirements")
+
+        print("*****")
+
+#global variabbles
+pwd_list = ["letmein", "456liteS", "5goodbye", "major7Hug", "334_*2211", "fountain", "2289999", "FUNTIMES4"]
+current_pwd = ""
+pwd_good = True
+
+main()
+</textarea>
+</div>
+</div>
+<p>After you have run the program above, look at the code image below, which highlights with the functions, conditionals and loops with the same color-coding we’ve been using. We’ve also added arrows from the function calls to the function blocks.</p>
+<a class="reference internal image-reference" href="../_images/password_checker_blocks.png"><img alt="../_images/password_checker_blocks.png" class="align-center" src="../_images/password_checker_blocks.png" style="width: 800px;" /></a>
+<p>Here are some things to pay attention to in the image above:</p>
+<ul class="simple">
+<li><p>There is a main() method. This is common practice - the main method is what gets everything going and it then calls other methods. That’s a common programming pattern. Almost all of the code, other than the declaration of global variables, is <strong>inside</strong> functions.</p></li>
+<li><p>The three functions at the top follow a standard search pattern, in which we are looking to find whether there are any instances of a given item in a list. The return statements in the middle of these functions cause the path of execution to jump back to where the function was called: once we have found at least one of the things we are looking for, we don’t need to keep looking. If we loop through the whole list and don’t find what we are looking for, we set a boolean to indicate that.</p></li>
+<li><p>These functions are editing global variables and we’ve already told you that’s not a great idea, in the chapter on functions and parameters we will show you a better way to write code like this.</p></li>
+<li><p>When you are working with lists the following pattern is really common: a function containing a loop containing a conditional, and the code above shows that pattern repeated four times. In the main() function we are iterating over the list of passwords and testing various things about each. In the top three functions, we are iterating over the characters in the current password to test whether the character meets some particular condition.</p></li>
+</ul>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 7.4. Combining Conditionals and Functions' data-toggle="tooltip">
+  <a href="CombiningConditionalsAndFunctions.html" aria-label="Previous - 7.4. Combining Conditionals and Functions">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 7.6. Integration Practice' data-toggle="tooltip" >
+    <a href="ChapterAssessment.html" aria-label="Next - 7.6. Integration Practice">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

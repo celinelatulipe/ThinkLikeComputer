@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<section xml:id="functions-parameters-scope_flow-of-execution-summary-index-0">
+  <title>Flow of Execution Summary</title>
+  <p>When you are working with functions it is really important to know the order in which statements are executed. This is
+            called the <term>flow of execution</term> and we've already talked about it a number of times in this chapter.</p>
+  <p>Execution always begins at the first statement of the program. Statements are executed one at a time, in order, from
+            top to bottom. Function definitions do not alter the flow of execution of the program, but remember that statements
+            inside the function are not executed <term>until the function is called</term>. Function calls are like a detour in the flow of
+            execution. Instead of going to the next statement, the flow jumps to the first line of the called function, executes
+            all the statements there, and then comes back to pick up where it left off.</p>
+  <p>That sounds simple enough, until you remember that one function can call another. While in the middle of one function,
+            the program might have to execute the statements in another function. But while executing that new function, the
+            program might have to execute yet another function!</p>
+  <p>Fortunately, the Python interperter is adept at keeping track of where it is, so each time a function completes, the
+            program picks up where it left off in the function that called it. When it gets to the end of the program, it terminates.</p>
+  <p>What does all that mean for us when we try to understand a program? Don't read from top to bottom. Instead, follow the
+            flow of execution.  This means that you will read the def statements as you are scanning from top to bottom, but you
+            should skip the body of the function until you reach a point where that function is called.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question8_9_1">
+    <statement>
+      <p>Consider the following Python code. Note that line numbers are included on the left.</p>
+      <program language="python">
+        <input>
+def pow(b, p):
+    y = b ** p
+    return y
+
+def square(x):
+    a = pow(x, 2)
+    return a
+
+n = 5
+result = square(n)
+print(result)
+</input>
+      </program>
+      <p>Refering to the line numbers, in what order are the statements excuted?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>1, 2, 3, 5, 6, 7 9, 10, 11</p>
+        </statement>
+        <feedback>
+          <p>The statements inside functions are not executed until the function is called.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9, 10, 11, 1, 2, 3, 5, 6, 7</p>
+        </statement>
+        <feedback>
+          <p>The function headers (lines 1 and 5) are executed first, that is how Python knows that the functions exist when they are called later.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>9, 10, 11, 5, 6, 7, 1, 2, 3,</p>
+        </statement>
+        <feedback>
+          <p>The function headers (lines 1 and 5) are executed first, that is how Python knows that the functions exist when they are called later.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>1, 5, 9, 10, 5, 6, 1, 2, 3, 6, 7, 10, 11</p>
+        </statement>
+        <feedback>
+          <p>Yes, the lines that have function calls in them appear twice, we get to the line, call the function and then return to that statement (this is when we assign return values - after we come back from the function that was called).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1, 5, 9, 10, 5, 6, 7, 1, 2, 3, 11</p>
+        </statement>
+        <feedback>
+          <p>Notice that the pow function is called while in the middle of executing the square function, not after the square function is done.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question8_9_2">
+    <statement>
+      <p>Consider the same Python code.</p>
+      <program language="python">
+        <input>
+def pow(b, p):
+    y = b ** p
+    return y
+
+def square(x):
+    a = pow(x, 2)
+    return a
+
+n = 5
+result = square(n)
+print(result)
+</input>
+      </program>
+      <p>What is printed out?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>25</p>
+        </statement>
+        <feedback>
+          <p>The function square returns the square of its input (via a call to pow).</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>What is printed is the output of the square function.  5 is the input to the square function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>125</p>
+        </statement>
+        <feedback>
+          <p>Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>32</p>
+        </statement>
+        <feedback>
+          <p>Notice that pow is called from within square with a base (b) of 5 and a power (p) of two.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

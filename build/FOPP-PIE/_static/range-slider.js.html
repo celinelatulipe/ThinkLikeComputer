@@ -1,0 +1,414 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="pygments.css" type="text/css" />
+    <link rel="stylesheet" href="basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="documentation_options.js"></script>
+    <script defer="" src="jquery.js"></script>
+    <script defer="" src="underscore.js"></script>
+    <script defer="" src="doctools.js"></script>
+    <script defer="" src="matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=range-slider.js'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-83" name="CodeChat-83" href="#CodeChat-83"></a><span class="cm">/*!</span>
+<a id="CodeChat-84" name="CodeChat-84" href="#CodeChat-84"></a><span class="cm"> *</span>
+<a id="CodeChat-85" name="CodeChat-85" href="#CodeChat-85"></a><span class="cm"> * =======================================================================</span>
+<a id="CodeChat-86" name="CodeChat-86" href="#CodeChat-86"></a><span class="cm"> *  THE SIMPLEST JAVASCRIPT CUSTOM RANGE SLIDER</span>
+<a id="CodeChat-87" name="CodeChat-87" href="#CodeChat-87"></a><span class="cm"> *  Author: Taufik Nurrohman &lt;https://github.com/tovic&gt;</span>
+<a id="CodeChat-88" name="CodeChat-88" href="#CodeChat-88"></a><span class="cm"> * =======================================================================</span>
+<a id="CodeChat-89" name="CodeChat-89" href="#CodeChat-89"></a><span class="cm"> *</span>
+<a id="CodeChat-90" name="CodeChat-90" href="#CodeChat-90"></a><span class="cm"> * This is free and unencumbered software released into the public domain.</span>
+<a id="CodeChat-91" name="CodeChat-91" href="#CodeChat-91"></a><span class="cm"> *</span>
+<a id="CodeChat-92" name="CodeChat-92" href="#CodeChat-92"></a><span class="cm"> * Anyone is free to copy, modify, publish, use, compile, sell, or</span>
+<a id="CodeChat-93" name="CodeChat-93" href="#CodeChat-93"></a><span class="cm"> * distribute this software, either in source code form or as a compiled</span>
+<a id="CodeChat-94" name="CodeChat-94" href="#CodeChat-94"></a><span class="cm"> * binary, for any purpose, commercial or non-commercial, and by any means.</span>
+<a id="CodeChat-95" name="CodeChat-95" href="#CodeChat-95"></a><span class="cm"> *</span>
+<a id="CodeChat-96" name="CodeChat-96" href="#CodeChat-96"></a><span class="cm"> * In jurisdictions that recognize copyright laws, the author or authors</span>
+<a id="CodeChat-97" name="CodeChat-97" href="#CodeChat-97"></a><span class="cm"> * of this software dedicate any and all copyright interest in the</span>
+<a id="CodeChat-98" name="CodeChat-98" href="#CodeChat-98"></a><span class="cm"> * software to the public domain. We make this dedication for the benefit</span>
+<a id="CodeChat-99" name="CodeChat-99" href="#CodeChat-99"></a><span class="cm"> * of the public at large and to the detriment of our heirs and</span>
+<a id="CodeChat-100" name="CodeChat-100" href="#CodeChat-100"></a><span class="cm"> * successors. We intend this dedication to be an overt act of</span>
+<a id="CodeChat-101" name="CodeChat-101" href="#CodeChat-101"></a><span class="cm"> * relinquishment in perpetuity of all present and future rights to this</span>
+<a id="CodeChat-102" name="CodeChat-102" href="#CodeChat-102"></a><span class="cm"> * software under copyright law.</span>
+<a id="CodeChat-103" name="CodeChat-103" href="#CodeChat-103"></a><span class="cm"> *</span>
+<a id="CodeChat-104" name="CodeChat-104" href="#CodeChat-104"></a><span class="cm"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,</span>
+<a id="CodeChat-105" name="CodeChat-105" href="#CodeChat-105"></a><span class="cm"> * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF</span>
+<a id="CodeChat-106" name="CodeChat-106" href="#CodeChat-106"></a><span class="cm"> * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span>
+<a id="CodeChat-107" name="CodeChat-107" href="#CodeChat-107"></a><span class="cm"> * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR</span>
+<a id="CodeChat-108" name="CodeChat-108" href="#CodeChat-108"></a><span class="cm"> * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,</span>
+<a id="CodeChat-109" name="CodeChat-109" href="#CodeChat-109"></a><span class="cm"> * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR</span>
+<a id="CodeChat-110" name="CodeChat-110" href="#CodeChat-110"></a><span class="cm"> * OTHER DEALINGS IN THE SOFTWARE.</span>
+<a id="CodeChat-111" name="CodeChat-111" href="#CodeChat-111"></a><span class="cm"> *</span>
+<a id="CodeChat-112" name="CodeChat-112" href="#CodeChat-112"></a><span class="cm"> * For more information, please refer to &lt;http://unlicense.org&gt;</span>
+<a id="CodeChat-113" name="CodeChat-113" href="#CodeChat-113"></a><span class="cm"> *</span>
+<a id="CodeChat-114" name="CodeChat-114" href="#CodeChat-114"></a><span class="cm"> */</span>
+<a id="CodeChat-115" name="CodeChat-115" href="#CodeChat-115"></a>
+<a id="CodeChat-116" name="CodeChat-116" href="#CodeChat-116"></a><span class="kd">function</span> <span class="nx">rangeSlider</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-117" name="CodeChat-117" href="#CodeChat-117"></a>  <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">,</span>
+<a id="CodeChat-118" name="CodeChat-118" href="#CodeChat-118"></a>  <span class="nx">range</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">),</span>
+<a id="CodeChat-119" name="CodeChat-119" href="#CodeChat-119"></a>  <span class="nx">dragger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">),</span>
+<a id="CodeChat-120" name="CodeChat-120" href="#CodeChat-120"></a>  <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+<a id="CodeChat-121" name="CodeChat-121" href="#CodeChat-121"></a>  <span class="nx">rangeWidth</span><span class="p">,</span> <span class="nx">rangeOffset</span><span class="p">,</span> <span class="nx">draggerWidth</span><span class="p">,</span> <span class="nx">cachePosition</span><span class="p">;</span>
+<a id="CodeChat-122" name="CodeChat-122" href="#CodeChat-122"></a>
+<a id="CodeChat-123" name="CodeChat-123" href="#CodeChat-123"></a>  <span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+<a id="CodeChat-124" name="CodeChat-124" href="#CodeChat-124"></a>    <span class="nx">value</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="c1">// set default value on initiation from `0` to `100` (percentage based)</span>
+<a id="CodeChat-125" name="CodeChat-125" href="#CodeChat-125"></a>    <span class="nx">vertical</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// vertical or horizontal?</span>
+<a id="CodeChat-126" name="CodeChat-126" href="#CodeChat-126"></a>    <span class="nx">rangeClass</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// add extra custom class for the range slider track</span>
+<a id="CodeChat-127" name="CodeChat-127" href="#CodeChat-127"></a>    <span class="nx">draggerClass</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// add extra custom class for the range slider dragger</span>
+<a id="CodeChat-128" name="CodeChat-128" href="#CodeChat-128"></a>    <span class="nx">drag</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* console.log(v); */</span> <span class="p">}</span> <span class="c1">// function to return the range slider value into something</span>
+<a id="CodeChat-129" name="CodeChat-129" href="#CodeChat-129"></a>  <span class="p">};</span>
+<a id="CodeChat-130" name="CodeChat-130" href="#CodeChat-130"></a>
+<a id="CodeChat-131" name="CodeChat-131" href="#CodeChat-131"></a>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="ow">in</span> <span class="nx">defaults</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-132" name="CodeChat-132" href="#CodeChat-132"></a>    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">config</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="nx">config</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">defaults</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<a id="CodeChat-133" name="CodeChat-133" href="#CodeChat-133"></a>  <span class="p">}</span>
+<a id="CodeChat-134" name="CodeChat-134" href="#CodeChat-134"></a>
+<a id="CodeChat-135" name="CodeChat-135" href="#CodeChat-135"></a>  <span class="kd">function</span> <span class="nx">addEventTo</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-136" name="CodeChat-136" href="#CodeChat-136"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-137" name="CodeChat-137" href="#CodeChat-137"></a>      <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+<a id="CodeChat-138" name="CodeChat-138" href="#CodeChat-138"></a>    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-139" name="CodeChat-139" href="#CodeChat-139"></a>      <span class="nx">el</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">);</span>
+<a id="CodeChat-140" name="CodeChat-140" href="#CodeChat-140"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="CodeChat-141" name="CodeChat-141" href="#CodeChat-141"></a>      <span class="nx">el</span><span class="p">[</span><span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">ev</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fn</span><span class="p">;</span>
+<a id="CodeChat-142" name="CodeChat-142" href="#CodeChat-142"></a>    <span class="p">}</span>
+<a id="CodeChat-143" name="CodeChat-143" href="#CodeChat-143"></a>  <span class="p">}</span>
+<a id="CodeChat-144" name="CodeChat-144" href="#CodeChat-144"></a>
+<a id="CodeChat-145" name="CodeChat-145" href="#CodeChat-145"></a>  <span class="kd">var</span> <span class="nx">isVertical</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">vertical</span><span class="p">;</span>
+<a id="CodeChat-146" name="CodeChat-146" href="#CodeChat-146"></a>
+<a id="CodeChat-147" name="CodeChat-147" href="#CodeChat-147"></a>  <span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">&#39; range-slider &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;range-slider-vertical&#39;</span> <span class="o">:</span> <span class="s1">&#39;range-slider-horizontal&#39;</span><span class="p">)).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^ +/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="CodeChat-148" name="CodeChat-148" href="#CodeChat-148"></a>  <span class="nx">range</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;range-slider-track &#39;</span> <span class="o">+</span> <span class="nx">config</span><span class="p">.</span><span class="nx">rangeClass</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/ +$/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="CodeChat-149" name="CodeChat-149" href="#CodeChat-149"></a>  <span class="nx">dragger</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dragger &#39;</span> <span class="o">+</span> <span class="nx">config</span><span class="p">.</span><span class="nx">draggerClass</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/ +$/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="CodeChat-150" name="CodeChat-150" href="#CodeChat-150"></a>
+<a id="CodeChat-151" name="CodeChat-151" href="#CodeChat-151"></a>  <span class="nx">addEventTo</span><span class="p">(</span><span class="nx">range</span><span class="p">,</span> <span class="s2">&quot;mousedown&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-152" name="CodeChat-152" href="#CodeChat-152"></a>    <span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">&#39; no-select&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^ +/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="CodeChat-153" name="CodeChat-153" href="#CodeChat-153"></a>    <span class="nx">rangeWidth</span> <span class="o">=</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+<a id="CodeChat-154" name="CodeChat-154" href="#CodeChat-154"></a>    <span class="nx">rangeOffset</span> <span class="o">=</span> <span class="nx">range</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">().</span><span class="nx">left</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>rangeOffset = range[!isVertical ? ‘offsetLeft’ : ‘offsetTop’];</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-131" name="CodeChat-131" href="#CodeChat-131"></a>    <span class="nx">draggerWidth</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+<a id="CodeChat-132" name="CodeChat-132" href="#CodeChat-132"></a>    <span class="nx">down</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="CodeChat-133" name="CodeChat-133" href="#CodeChat-133"></a>    <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<a id="CodeChat-134" name="CodeChat-134" href="#CodeChat-134"></a>    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<a id="CodeChat-135" name="CodeChat-135" href="#CodeChat-135"></a>  <span class="p">});</span>
+<a id="CodeChat-136" name="CodeChat-136" href="#CodeChat-136"></a>
+<a id="CodeChat-137" name="CodeChat-137" href="#CodeChat-137"></a>  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="s2">&quot;mousemove&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-138" name="CodeChat-138" href="#CodeChat-138"></a>    <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<a id="CodeChat-139" name="CodeChat-139" href="#CodeChat-139"></a>  <span class="p">});</span>
+<a id="CodeChat-140" name="CodeChat-140" href="#CodeChat-140"></a>
+<a id="CodeChat-141" name="CodeChat-141" href="#CodeChat-141"></a>  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="s2">&quot;mouseup&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-142" name="CodeChat-142" href="#CodeChat-142"></a>    <span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/(^| )no-select( |$)/g</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="CodeChat-143" name="CodeChat-143" href="#CodeChat-143"></a>    <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="CodeChat-144" name="CodeChat-144" href="#CodeChat-144"></a>  <span class="p">});</span>
+<a id="CodeChat-145" name="CodeChat-145" href="#CodeChat-145"></a>
+<a id="CodeChat-146" name="CodeChat-146" href="#CodeChat-146"></a>  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s2">&quot;resize&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-147" name="CodeChat-147" href="#CodeChat-147"></a>    <span class="kd">var</span> <span class="nx">woh</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+<a id="CodeChat-148" name="CodeChat-148" href="#CodeChat-148"></a>    <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(((</span><span class="nx">cachePosition</span> <span class="o">/</span> <span class="mf">100</span><span class="p">)</span> <span class="o">*</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="p">(</span><span class="nx">woh</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+<a id="CodeChat-149" name="CodeChat-149" href="#CodeChat-149"></a>    <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="CodeChat-150" name="CodeChat-150" href="#CodeChat-150"></a>  <span class="p">});</span>
+<a id="CodeChat-151" name="CodeChat-151" href="#CodeChat-151"></a>
+<a id="CodeChat-152" name="CodeChat-152" href="#CodeChat-152"></a>  <span class="kd">function</span> <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-153" name="CodeChat-153" href="#CodeChat-153"></a>    <span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+<a id="CodeChat-154" name="CodeChat-154" href="#CodeChat-154"></a>    <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="nx">e</span><span class="p">.</span><span class="nx">pageX</span> <span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">pageY</span><span class="p">;</span>
+<a id="CodeChat-155" name="CodeChat-155" href="#CodeChat-155"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">pos</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-156" name="CodeChat-156" href="#CodeChat-156"></a>      <span class="nx">pos</span> <span class="o">=</span> <span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+<a id="CodeChat-157" name="CodeChat-157" href="#CodeChat-157"></a>    <span class="p">}</span>
+<a id="CodeChat-158" name="CodeChat-158" href="#CodeChat-158"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">down</span> <span class="o">&amp;&amp;</span> <span class="nx">pos</span> <span class="o">&gt;=</span> <span class="nx">rangeOffset</span> <span class="o">&amp;&amp;</span> <span class="nx">pos</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="nx">rangeOffset</span> <span class="o">+</span> <span class="nx">rangeWidth</span><span class="p">))</span> <span class="p">{</span>
+<a id="CodeChat-159" name="CodeChat-159" href="#CodeChat-159"></a>      <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">pos</span> <span class="o">-</span> <span class="nx">rangeOffset</span> <span class="o">-</span> <span class="p">(</span><span class="nx">draggerWidth</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+<a id="CodeChat-160" name="CodeChat-160" href="#CodeChat-160"></a>      <span class="nx">cachePosition</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(((</span><span class="nx">pos</span> <span class="o">-</span> <span class="nx">rangeOffset</span><span class="p">)</span> <span class="o">/</span> <span class="nx">rangeWidth</span><span class="p">)</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+<a id="CodeChat-161" name="CodeChat-161" href="#CodeChat-161"></a>      <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">(</span><span class="nx">cachePosition</span><span class="p">);</span>
+<a id="CodeChat-162" name="CodeChat-162" href="#CodeChat-162"></a>    <span class="p">}</span>
+<a id="CodeChat-163" name="CodeChat-163" href="#CodeChat-163"></a>  <span class="p">}</span>
+<a id="CodeChat-164" name="CodeChat-164" href="#CodeChat-164"></a>
+<a id="CodeChat-165" name="CodeChat-165" href="#CodeChat-165"></a>  <span class="kd">function</span> <span class="nx">initDragger</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-166" name="CodeChat-166" href="#CodeChat-166"></a>    <span class="kd">var</span> <span class="nx">woh</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+<a id="CodeChat-167" name="CodeChat-167" href="#CodeChat-167"></a>    <span class="nx">cachePosition</span> <span class="o">=</span> <span class="p">((</span><span class="nx">config</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mf">100</span><span class="p">)</span> <span class="o">*</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">]);</span>
+<a id="CodeChat-168" name="CodeChat-168" href="#CodeChat-168"></a>    <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cachePosition</span> <span class="o">-</span> <span class="p">(</span><span class="nx">woh</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+<a id="CodeChat-169" name="CodeChat-169" href="#CodeChat-169"></a>    <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<a id="CodeChat-170" name="CodeChat-170" href="#CodeChat-170"></a>  <span class="p">}</span>
+<a id="CodeChat-171" name="CodeChat-171" href="#CodeChat-171"></a>
+<a id="CodeChat-172" name="CodeChat-172" href="#CodeChat-172"></a>  <span class="nx">range</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dragger</span><span class="p">);</span>
+<a id="CodeChat-173" name="CodeChat-173" href="#CodeChat-173"></a>  <span class="nx">elem</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">range</span><span class="p">);</span>
+<a id="CodeChat-174" name="CodeChat-174" href="#CodeChat-174"></a>
+<a id="CodeChat-175" name="CodeChat-175" href="#CodeChat-175"></a>  <span class="nx">initDragger</span><span class="p">();</span>
+<a id="CodeChat-176" name="CodeChat-176" href="#CodeChat-176"></a><span class="p">}</span>
+</pre></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

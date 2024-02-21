@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<section xml:id="labs_general-lab-instructions">
+  <title>General Lab Instructions</title>
+  <subsection xml:id="labs_venue">
+    <title>Venue</title>
+    <p>
+      <ul>
+        <li>
+          <p>Attend the lab section that you are signed up for (check Aurora)</p>
+        </li>
+        <li>
+          <p>Each lab should be completed inside the Runestone Textbook</p>
+        </li>
+        <li>
+          <p>For each part of the lab, show your code to the lab instructor, who may ask you questions to ensure that you did the lab yourself and understand it</p>
+        </li>
+        <li>
+          <p>You can show all three parts to the instructor at once (i.e., don't wait to work on Part 2 until Part 1 gets checked off)</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="labs_getting-help-from-labmates">
+    <title>Getting Help From Labmates</title>
+    <p>Labs are meant to be both a learning experience and a normative assessment. You must do your lab yourself, but it is okay to get help from lab mates. You can look at one another's code and ask each other questions about your code. However, any code that is in your lab must be typed by you (not copied from someone else) and you must understand what and why you are typing that code. If you can't explain what the code does or why it works, you will not get full credit. If someone asks you for help with the lab, don't just tell them what to type if you have yours working. Explain to them what is wrong with their code or how you did yours and <term>why</term>.</p>
+    <p>Do <term>NOT</term> post solutions to labs on Piazza or in any other channels (such as a telegram chat, discord server, etc.).</p>
+  </subsection>
+  <subsection xml:id="labs_grading">
+    <title>Grading</title>
+    <p>Each lab has three levels (parts) and is scored out of 4 points:
+                * Each completed level is worth 1 point.
+                * There is 1 point for properly commenting your code.</p>
+  </subsection>
+  <subsection xml:id="labs_formatting-commenting">
+    <title>Formatting/Commenting</title>
+    <p>Remember to do the following for each lab Level:</p>
+    <p>
+      <ol>
+        <li>
+          <p>Add your full name, student ID and lab section in a comment at the top of the code</p>
+        </li>
+        <li>
+          <p>Add the date in a comment under your name</p>
+        </li>
+        <li>
+          <p>Use good spacing around blocks of code, functions, etc.</p>
+        </li>
+        <li>
+          <p>Use proper indenting (4 spaces for each level of indentation)</p>
+        </li>
+        <li>
+          <p>Add a comment before any code that does something that isn't obvious</p>
+        </li>
+        <li>
+          <p>Add a comment above any functions you create to explain what the function is for</p>
+        </li>
+        <li>
+          <p>Use proper (descriptive, but not insanely long) variable names.</p>
+        </li>
+        <li>
+          <p>If you are using constants (variables whose values NEVER change during the program), use ALL_CAPS (eg. DAYS_IN_WEEK = 7)</p>
+        </li>
+      </ol>
+    </p>
+    <note>
+      <p>Good variable name examples: student_id, num_points, box_width, y_scale_factor</p>
+    </note>
+    <note>
+      <p>Bad variable name examples: var, temp, this_students_id_number, BoxWidth</p>
+    </note>
+  </subsection>
+</section>

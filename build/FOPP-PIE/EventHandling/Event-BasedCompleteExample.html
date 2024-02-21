@@ -1,0 +1,557 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>10.8. A Complete Event-Based GUI Example &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.9. Event-Based Programming Made Elegant" href="Event-BasedExample-OO.html" />
+    <link rel="prev" title="10.7. SimpleGUI Events" href="SimpleGUIEvents.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=Event-BasedCompleteExample'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">10.7. </span>SimpleGUI Events" data-toggle="tooltip">
+    <a href="SimpleGUIEvents.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">10.9. </span>Event-Based Programming Made Elegant' data-toggle="tooltip" >              
+    <a href="Event-BasedExample-OO.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="a-complete-event-based-gui-example">
+<h1><span class="section-number">10.8. </span>A Complete Event-Based GUI Example<a class="headerlink" href="#a-complete-event-based-gui-example" title="Permalink to this heading">¶</a></h1>
+<p>In this chapter we have shown the steps in creating an event-based graphical program that gives the end user an interface and working area or canvas. The steps are:</p>
+<ul class="simple">
+<li><p>Set up any global variables that are neceesary</p></li>
+<li><p>Create GUI controls</p></li>
+<li><p>Create handler functions for the controls</p></li>
+<li><p>Create handler functions for input on the working area or canvas</p></li>
+<li><p>Register the event handlers for the controls</p></li>
+<li><p>Register input listeners for keyboard and mouse events on the canvas</p></li>
+<li><p>Create a draw() function that draws the working area of canvas</p></li>
+<li><p>Tell the Python interpreter to start listening for events on the canvas and the controls</p></li>
+</ul>
+<p>We’ve shown these steps in bits and pieces, and in this section, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You should copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+<span class="linenos">  2</span><span class="c1"># Dr. Celine&#39;s COMP 1000 Event-based Programming Example</span>
+<span class="linenos">  3</span><span class="c1"># &quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+<span class="linenos">  4</span>
+<span class="linenos">  5</span><span class="kn">import</span> <span class="nn">simplegui</span>
+<span class="linenos">  6</span>
+<span class="linenos">  7</span><span class="c1"># Global Variables</span>
+<span class="linenos">  8</span><span class="n">CANVAS_WIDTH</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="linenos">  9</span><span class="n">CANVAS_HEIGHT</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="linenos"> 10</span><span class="c1"># current drawing state</span>
+<span class="linenos"> 11</span><span class="n">line_col</span> <span class="o">=</span> <span class="s2">&quot;Black&quot;</span>
+<span class="linenos"> 12</span><span class="n">line_wid</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="linenos"> 13</span><span class="n">fill_col</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span>
+<span class="linenos"> 14</span><span class="n">stamp_text</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span>
+<span class="linenos"> 15</span><span class="n">radius</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="linenos"> 16</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="linenos"> 17</span><span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+<span class="linenos"> 18</span><span class="c1"># list vars to store info about circles</span>
+<span class="linenos"> 19</span><span class="n">circle_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 20</span><span class="n">circle_col_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 21</span><span class="n">circle_line_wid_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 22</span><span class="c1"># list vars to store info about text stamps</span>
+<span class="linenos"> 23</span><span class="n">text_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 24</span><span class="n">text_pos_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 25</span><span class="n">text_col_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="linenos"> 26</span><span class="c1"># boolean variable to differentiate clicks/drags</span>
+<span class="linenos"> 27</span><span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># we are not dragging when program starts</span>
+<span class="linenos"> 28</span>
+<span class="linenos"> 29</span><span class="c1">################################################################</span>
+<span class="linenos"> 30</span><span class="c1"># GUI Control Handlers</span>
+<span class="linenos"> 31</span><span class="c1">################################################################</span>
+<span class="linenos"> 32</span>
+<span class="linenos"> 33</span><span class="k">def</span> <span class="nf">clear_handler</span><span class="p">():</span>
+<span class="linenos"> 34</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 35</span><span class="sd">    Gets called when clear button is clicked</span>
+<span class="linenos"> 36</span><span class="sd">    Clears all lists to remove content from canvas</span>
+<span class="linenos"> 37</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 38</span>    <span class="n">clear_canvas</span><span class="p">()</span>
+<span class="linenos"> 39</span>
+<span class="linenos"> 40</span><span class="k">def</span> <span class="nf">bkg_handler</span><span class="p">():</span>
+<span class="linenos"> 41</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 42</span><span class="sd">    Background toggle button - toggles between white and grey</span>
+<span class="linenos"> 43</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 44</span>    <span class="n">toggle_background</span><span class="p">()</span>
+<span class="linenos"> 45</span>
+<span class="linenos"> 46</span><span class="k">def</span> <span class="nf">lw_up_handler</span><span class="p">():</span>
+<span class="linenos"> 47</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 48</span><span class="sd">    Linewidth + handler</span>
+<span class="linenos"> 49</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 50</span>    <span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos"> 51</span>
+<span class="linenos"> 52</span><span class="k">def</span> <span class="nf">lw_dn_handler</span><span class="p">():</span>
+<span class="linenos"> 53</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 54</span><span class="sd">    Linewidth - handler</span>
+<span class="linenos"> 55</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 56</span>    <span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos"> 57</span>
+<span class="linenos"> 58</span><span class="k">def</span> <span class="nf">stamp_txt_handler</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+<span class="linenos"> 59</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 60</span><span class="sd">    Stamp text input box handler</span>
+<span class="linenos"> 61</span><span class="sd">    When user types in text and then hits the enter key, this is called</span>
+<span class="linenos"> 62</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 63</span>    <span class="n">set_stamp_text</span><span class="p">(</span><span class="n">txt</span><span class="p">)</span>
+<span class="linenos"> 64</span>
+<span class="linenos"> 65</span><span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="n">canvas</span><span class="p">):</span>
+<span class="linenos"> 66</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 67</span><span class="sd">    Draw handler, takes canvas as input, keeps canvas up to date</span>
+<span class="linenos"> 68</span><span class="sd">    This is called automatically, many times/second, as part of the SimpleGUI module</span>
+<span class="linenos"> 69</span><span class="sd">    DO NOT call this function from other parts of the code</span>
+<span class="linenos"> 70</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 71</span>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">circle_list</span><span class="p">)):</span>
+<span class="linenos"> 72</span>        <span class="n">canvas</span><span class="o">.</span><span class="n">draw_circle</span><span class="p">(</span><span class="n">circle_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">radius</span><span class="p">,</span> <span class="n">circle_line_wid_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">line_col</span><span class="p">,</span> <span class="n">circle_col_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+<span class="linenos"> 73</span>
+<span class="linenos"> 74</span>    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text_list</span><span class="p">)):</span>
+<span class="linenos"> 75</span>        <span class="n">canvas</span><span class="o">.</span><span class="n">draw_text</span><span class="p">(</span><span class="n">text_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">text_pos_list</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">fontsize</span><span class="p">,</span> <span class="n">text_col_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+<span class="linenos"> 76</span>
+<span class="linenos"> 77</span><span class="c1">###########################################################</span>
+<span class="linenos"> 78</span><span class="c1"># Input Device Event Handlers</span>
+<span class="linenos"> 79</span><span class="c1">###########################################################</span>
+<span class="linenos"> 80</span>
+<span class="linenos"> 81</span><span class="c1"># Handler for mouse drag events. Takes one parameter:</span>
+<span class="linenos"> 82</span><span class="c1">#   a tuple of the current position of the mouse</span>
+<span class="linenos"> 83</span><span class="c1"># This gets called continuously while the user is dragging</span>
+<span class="linenos"> 84</span><span class="k">def</span> <span class="nf">drag</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos"> 85</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 86</span><span class="sd">    Mouse drag handler</span>
+<span class="linenos"> 87</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 88</span>    <span class="k">global</span> <span class="n">dragged</span>
+<span class="linenos"> 89</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">dragged</span><span class="p">:</span> <span class="c1"># start of a drag, store that we are dragging</span>
+<span class="linenos"> 90</span>        <span class="n">dragged</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos"> 91</span>    <span class="n">add_circle</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="linenos"> 92</span>
+<span class="linenos"> 93</span>
+<span class="linenos"> 94</span><span class="c1"># Handler for mouse click events. Takes one parameter:</span>
+<span class="linenos"> 95</span><span class="c1">#   a tuple of the position of the mouse at moment of click</span>
+<span class="linenos"> 96</span><span class="k">def</span> <span class="nf">click</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos"> 97</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 98</span><span class="sd">    Mouse click handler, if a real click (not end of drag)</span>
+<span class="linenos"> 99</span><span class="sd">    this adds a text stamp to the canvas at location of click</span>
+<span class="linenos">100</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">101</span>    <span class="k">global</span> <span class="n">dragged</span>
+<span class="linenos">102</span>    <span class="k">if</span> <span class="n">dragged</span><span class="p">:</span>
+<span class="linenos">103</span>        <span class="c1"># this was just the end of drag, not a real click</span>
+<span class="linenos">104</span>        <span class="c1"># don&#39;t do anything</span>
+<span class="linenos">105</span>        <span class="n">dragged</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos">106</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">107</span>        <span class="n">add_text_stamp</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+<span class="linenos">108</span>
+<span class="linenos">109</span><span class="c1"># Keypress handler</span>
+<span class="linenos">110</span><span class="k">def</span> <span class="nf">key_handler</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+<span class="linenos">111</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">112</span><span class="sd">    Handles key presses</span>
+<span class="linenos">113</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">114</span>    <span class="k">if</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span>
+<span class="linenos">115</span>        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Red&quot;</span><span class="p">)</span>
+<span class="linenos">116</span>    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span>
+<span class="linenos">117</span>        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Green&quot;</span><span class="p">)</span>
+<span class="linenos">118</span>    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+<span class="linenos">119</span>        <span class="n">set_fill_color</span><span class="p">(</span><span class="s2">&quot;Blue&quot;</span><span class="p">)</span>
+<span class="linenos">120</span>    <span class="k">elif</span> <span class="nb">chr</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span>
+<span class="linenos">121</span>        <span class="n">clear_canvas</span><span class="p">()</span>
+<span class="linenos">122</span>    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">38</span><span class="p">:</span>
+<span class="linenos">123</span>        <span class="n">change_line_width</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="linenos">124</span>    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="mi">40</span><span class="p">:</span>
+<span class="linenos">125</span>        <span class="n">change_line_width</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">126</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">127</span>        <span class="c1">#do nothing</span>
+<span class="linenos">128</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unknown key event. Try pressing r, g, or b&quot;</span><span class="p">)</span>
+<span class="linenos">129</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;key is:&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="linenos">130</span>
+<span class="linenos">131</span>
+<span class="linenos">132</span><span class="c1">###############################</span>
+<span class="linenos">133</span><span class="c1"># Other Functions</span>
+<span class="linenos">134</span><span class="c1">###############################</span>
+<span class="linenos">135</span>
+<span class="linenos">136</span><span class="k">def</span> <span class="nf">clear_canvas</span><span class="p">():</span>
+<span class="linenos">137</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">138</span><span class="sd">    Clears all lists to remove content from canvas</span>
+<span class="linenos">139</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">140</span>    <span class="n">circle_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">141</span>    <span class="n">circle_col_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">142</span>    <span class="n">circle_line_wid_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">143</span>    <span class="n">text_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">144</span>    <span class="n">text_pos_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">145</span>    <span class="n">text_col_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">146</span>
+<span class="linenos">147</span><span class="k">def</span> <span class="nf">change_line_width</span><span class="p">(</span><span class="n">up</span><span class="p">):</span>
+<span class="linenos">148</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">149</span><span class="sd">    Increases line width by 1 if true is passed,</span>
+<span class="linenos">150</span><span class="sd">    otherwise, decreases line width</span>
+<span class="linenos">151</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">152</span>    <span class="k">global</span> <span class="n">line_wid</span>
+<span class="linenos">153</span>    <span class="n">MIN_LINE_WIDTH</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos">154</span>    <span class="n">MAX_LINE_WIDTH</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="linenos">155</span>    <span class="k">if</span> <span class="p">(</span><span class="n">up</span><span class="p">):</span> <span class="c1"># increase</span>
+<span class="linenos">156</span>        <span class="k">if</span> <span class="n">line_wid</span> <span class="o">&lt;</span> <span class="n">MAX_LINE_WIDTH</span><span class="p">:</span>
+<span class="linenos">157</span>            <span class="n">line_wid</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos">158</span>    <span class="k">else</span><span class="p">:</span> <span class="c1"># decrease</span>
+<span class="linenos">159</span>        <span class="k">if</span> <span class="n">line_wid</span> <span class="o">&gt;</span> <span class="n">MIN_LINE_WIDTH</span><span class="p">:</span>
+<span class="linenos">160</span>            <span class="n">line_wid</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="linenos">161</span>    <span class="n">lw_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_wid</span><span class="p">))</span>
+<span class="linenos">162</span>
+<span class="linenos">163</span><span class="k">def</span> <span class="nf">set_fill_color</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
+<span class="linenos">164</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; updates fill color for subsequent drawing, updates label &quot;&quot;&quot;</span>
+<span class="linenos">165</span>    <span class="k">global</span> <span class="n">fill_col</span>
+<span class="linenos">166</span>    <span class="n">fill_col</span> <span class="o">=</span> <span class="n">col</span>
+<span class="linenos">167</span>    <span class="n">fc_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fill_col</span><span class="p">))</span>
+<span class="linenos">168</span>
+<span class="linenos">169</span><span class="k">def</span> <span class="nf">toggle_background</span><span class="p">():</span>
+<span class="linenos">170</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; Toggle canvas background between white &amp; grey</span>
+<span class="linenos">171</span><span class="sd">        updates button text &quot;&quot;&quot;</span>
+<span class="linenos">172</span>    <span class="k">if</span> <span class="p">(</span><span class="n">bkg_button</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;White Background&#39;</span><span class="p">):</span>
+<span class="linenos">173</span>        <span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
+<span class="linenos">174</span>        <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;Grey Background&#39;</span><span class="p">)</span>
+<span class="linenos">175</span>    <span class="k">else</span><span class="p">:</span>
+<span class="linenos">176</span>        <span class="n">canvas_col</span> <span class="o">=</span> <span class="s2">&quot;Grey&quot;</span>
+<span class="linenos">177</span>        <span class="n">bkg_button</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;White Background&#39;</span><span class="p">)</span>
+<span class="linenos">178</span>    <span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="n">canvas_col</span><span class="p">)</span>
+<span class="linenos">179</span>
+<span class="linenos">180</span><span class="k">def</span> <span class="nf">set_stamp_text</span><span class="p">(</span><span class="n">txt</span><span class="p">):</span>
+<span class="linenos">181</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; updates stamp text for subsequent drawing, update label &quot;&quot;&quot;</span>
+<span class="linenos">182</span>    <span class="k">global</span> <span class="n">stamp_text</span>
+<span class="linenos">183</span>    <span class="n">stamp_text</span> <span class="o">=</span> <span class="n">txt</span>
+<span class="linenos">184</span>    <span class="n">text_stamp_label</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="n">stamp_text</span><span class="p">)</span>
+<span class="linenos">185</span>    <span class="n">inp</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="linenos">186</span>
+<span class="linenos">187</span><span class="k">def</span> <span class="nf">add_text_stamp</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos">188</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; add a new text stamp to the list of text stamps&quot;&quot;&quot;</span>
+<span class="linenos">189</span>
+<span class="linenos">190</span>    <span class="n">text_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stamp_text</span><span class="p">)</span>            <span class="c1"># store stamp text</span>
+<span class="linenos">191</span>    <span class="n">text_pos_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>               <span class="c1"># store stamp location</span>
+<span class="linenos">192</span>    <span class="n">text_col_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fill_col</span><span class="p">)</span>          <span class="c1"># store stamp color</span>
+<span class="linenos">193</span>
+<span class="linenos">194</span><span class="k">def</span> <span class="nf">add_circle</span><span class="p">(</span><span class="n">pos</span><span class="p">):</span>
+<span class="linenos">195</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; Add a circle to the circle list&quot;&quot;&quot;</span>
+<span class="linenos">196</span>    <span class="n">circle_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>                 <span class="c1"># store circle position</span>
+<span class="linenos">197</span>    <span class="n">circle_col_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fill_col</span><span class="p">)</span>        <span class="c1"># store color for circle</span>
+<span class="linenos">198</span>    <span class="n">circle_line_wid_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_wid</span><span class="p">)</span>   <span class="c1"># store circle line-width</span>
+<span class="linenos">199</span>
+<span class="linenos">200</span>
+<span class="linenos">201</span><span class="c1">#######################################################</span>
+<span class="linenos">202</span><span class="c1"># Set up window, GUI controls &amp; register event handlers</span>
+<span class="linenos">203</span><span class="c1">#######################################################</span>
+<span class="linenos">204</span>
+<span class="linenos">205</span><span class="c1"># Frame</span>
+<span class="linenos">206</span><span class="n">frame</span> <span class="o">=</span> <span class="n">simplegui</span><span class="o">.</span><span class="n">create_frame</span><span class="p">(</span><span class="s2">&quot;COMP 1000 Demo&quot;</span><span class="p">,</span> <span class="n">CANVAS_WIDTH</span><span class="p">,</span> <span class="n">CANVAS_HEIGHT</span><span class="p">)</span>
+<span class="linenos">207</span><span class="n">frame</span><span class="o">.</span><span class="n">set_canvas_background</span><span class="p">(</span><span class="n">canvas_col</span><span class="p">)</span>
+<span class="linenos">208</span>
+<span class="linenos">209</span><span class="c1"># Create &amp; Register Buttons &amp; Labels</span>
+<span class="linenos">210</span><span class="c1"># assign labels and bkgd button to vars for updating</span>
+<span class="linenos">211</span><span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;Clear&#39;</span><span class="p">,</span> <span class="n">clear_handler</span><span class="p">)</span>
+<span class="linenos">212</span><span class="n">bkg_button</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;White Background&#39;</span><span class="p">,</span> <span class="n">bkg_handler</span><span class="p">)</span>
+<span class="linenos">213</span><span class="n">fc_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Fill color: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fill_col</span><span class="p">))</span>
+<span class="linenos">214</span><span class="n">lw_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Line width: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">line_wid</span><span class="p">))</span>
+<span class="linenos">215</span><span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">lw_up_handler</span><span class="p">)</span>
+<span class="linenos">216</span><span class="n">frame</span><span class="o">.</span><span class="n">add_button</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw_dn_handler</span><span class="p">)</span>
+<span class="linenos">217</span><span class="n">text_stamp_label</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_label</span><span class="p">(</span><span class="s2">&quot;Text stamp: &quot;</span> <span class="o">+</span> <span class="n">stamp_text</span><span class="p">)</span>
+<span class="linenos">218</span><span class="n">inp</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">add_input</span><span class="p">(</span><span class="s1">&#39;New text stamp:&#39;</span><span class="p">,</span> <span class="n">stamp_txt_handler</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="linenos">219</span>
+<span class="linenos">220</span>
+<span class="linenos">221</span><span class="c1"># Register Keyboard and Mouse Event Handlers</span>
+<span class="linenos">222</span><span class="n">frame</span><span class="o">.</span><span class="n">set_draw_handler</span><span class="p">(</span><span class="n">draw</span><span class="p">)</span>
+<span class="linenos">223</span><span class="n">frame</span><span class="o">.</span><span class="n">set_keydown_handler</span><span class="p">(</span><span class="n">key_handler</span><span class="p">)</span>
+<span class="linenos">224</span><span class="n">frame</span><span class="o">.</span><span class="n">set_mousedrag_handler</span><span class="p">(</span><span class="n">drag</span><span class="p">)</span>
+<span class="linenos">225</span><span class="n">frame</span><span class="o">.</span><span class="n">set_mouseclick_handler</span><span class="p">(</span><span class="n">click</span><span class="p">)</span>
+<span class="linenos">226</span>
+<span class="linenos">227</span><span class="c1"># Show the frame and start listening</span>
+<span class="linenos">228</span><span class="n">frame</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-75) and for input device events (lines 77-129), other functions (lines 132-198) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 201-228).</p>
+<p>The way this code works is that there is some drawing state that is saved in the collection of global variables. As the user interacts with the canvas, circles are drawn when the user drags and text is stamped when the user clicks. The color and size of the circles, the color and fontsize of the text, and the background color of the canvas are determined by the values of the global variables. By interacting with the GUI controls, the user can change some of these things (the fill color of the circles/text, the outline width for the circles). The user can also change the value of the text stamp by typing text into the text input box and hitting enter. Whenever such changes are made, they only impact subsequent drawing actions on the canvas.</p>
+<p>Everything that the user draws on the canvas (which in this case is only circles and text stamps) is stored in a series of lists. There are three ‘parallel’ lists to store information about the circles: the position, the color, and the outline width. So, every time a new circle is made because the user continues to drag the mouse, a position, a color and an outline width is added to the three lists that store this information. Thus, these three lists will always all be the same length. Similarly, every time the user clicks on the canvas, a text stamp is added. This involves storing the position, the text string, and the color, in three separate lists.</p>
+<p>Some of the drawing state is changed via key presses. To change the fill color for circles/text, the user has to press ‘r’, ‘g’, or ‘b’ on their keyboard (see lines 114-119, which all call the set_fill_color() function).</p>
+<p>The user can clear the canvas two ways: by clicking on the clear button, or by typing ‘c’ on the keyboard. Note that both of these handlers do the same thing: they call the clear_canvas() function. In fact, all of the handlers simply call another function that does the work. While we could have just put the code directly in the handler, it is better to have separate functions so that the code can be invoked in other ways.</p>
+<p>The canvas background color is not something that we have to draw as part of the draw() method - it is drawn automatically for us by the SimpleGUI module. We can specify the color of the background, though, which we do after we create the initial frame, see line 207. In addition, the user can toggle the background color between grey and white by pressing the &lt;color&gt; background button. Note that this button always shows the <em>other</em> color. So, if the background is currently grey, the button says “White background” telling the user what will happen if they press the button. If you look at the code for the toggle_background() function on lines
+169-178, you’ll note that this code checks what the current background color is, sets the background color to the other one, sets the button to label to say the opposite, and then calls set_canvas_background() to actually update the canvas background color.</p>
+<section id="practice-exercises">
+<h2><span class="section-number">10.8.1. </span>Practice Exercises<a class="headerlink" href="#practice-exercises" title="Permalink to this heading">¶</a></h2>
+<p>You should play with this code and modify it in different ways to help yourself explore, understand and practice using event-based programming. Here are a few things to try:</p>
+<ul class="simple">
+<li><p>add more colours associated with other keyboard letters</p></li>
+<li><p>add font size buttons for small, medium and large, along with a global variable for font size</p></li>
+<li><p>add a ‘clear stamps’ button that, when pressed, clears only the text stamps, but not the circles</p></li>
+</ul>
+</section>
+<section id="global-variables-in-event-based-programs">
+<h2><span class="section-number">10.8.2. </span>Global Variables in Event-Based Programs<a class="headerlink" href="#global-variables-in-event-based-programs" title="Permalink to this heading">¶</a></h2>
+<p>As you look through this code, you might have observed that we have been editing global variables throughout. You may be thinking “I thought we weren’t supposed to do that???”. Remember that the typical way to avoid using global variables is to pass the information around as parameters and return values. But when the action in the program is handled by event handlers that the Python system calls, we can’t add arbitrary parameters, and we don’t want to return values to the operating system that called our event handler functions. That is why we are having to write new values to these global variables. This is okay for this class, because you are just learning. But it isn’t elegant, and programmers like things to be elegant. Most programmers would consider the code above to be quite clunky because of the use of global variables and parallel lists to store information about circles and text stamps.</p>
+<p>You may be wondering if there is a better way to do this. And there is. The better way to handle sets of information like what we see in this example is through object-oriented programming. You’ve played with object-oriented programming a bit already - we introduced it in Chapter 4 when we introduced the Turtles module. In using Turtles you have been
+creating objects (turtles and screens) and calling methods on objects (like forward() and pen_down()). In the next section, you will see a version of the program above completely rewritten in an object-oriented fashion, and not a single global variable is assigned in any of the functions.</p>
+</section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 10.7. SimpleGUI Events' data-toggle="tooltip">
+  <a href="SimpleGUIEvents.html" aria-label="Previous - 10.7. SimpleGUI Events">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 10.9. Event-Based Programming Made Elegant' data-toggle="tooltip" >
+    <a href="Event-BasedExample-OO.html" aria-label="Next - 10.9. Event-Based Programming Made Elegant">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

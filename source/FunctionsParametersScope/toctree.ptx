@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Function Parameters, Return Values and Scope</title>
+        <xi:include href='./intro-FunctionsPart_II.ptx' />
+        <xi:include href='./FunctionParameters.ptx' />
+        <xi:include href='./Returningavaluefromafunction.ptx' />
+        <xi:include href='./DecodingaFunction.ptx' />
+        <xi:include href='./TypeAnnotations.ptx' />
+        <xi:include href='./Afunctionthataccumulates.ptx' />
+        <xi:include href='./LocalGlobalVariablesScope.ptx' />
+        <xi:include href='./FunctionComposition.ptx' />
+        <xi:include href='./FlowofExecutionSummary.ptx' />
+        <xi:include href='./Printvsreturn.ptx' />
+        <xi:include href='./FunctionSideEffects.ptx' />
+        <xi:include href='./ListenerFunctionsWithParameters.ptx' />
+        <xi:include href='./Glossary.ptx' />
+        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./ChapterAssessment.ptx' />
+    </chapter>

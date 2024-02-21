@@ -1,0 +1,570 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.5. 🐢 Exploring the Turtle Module &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.6. Instances: A Herd of Turtles" href="InstancesAHerdofTurtles.html" />
+    <link rel="prev" title="4.4. The random module" href="Therandommodule.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=ExploringTurtleModule'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">4.4. </span>The <code class="docutils literal notranslate"><span class="pre">random</span></code> module" data-toggle="tooltip">
+    <a href="Therandommodule.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">4.6. </span>Instances: A Herd of Turtles' data-toggle="tooltip" >              
+    <a href="InstancesAHerdofTurtles.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="exploring-the-turtle-module">
+<span id="index-0"></span><h1><span class="section-number">4.5. </span>🐢 Exploring the Turtle Module<a class="headerlink" href="#exploring-the-turtle-module" title="Permalink to this headline">¶</a></h1>
+<p>We already introduced the idea of drawing with turtles. In the next few sections we will delve more deeply into this fun module. The turtle module is designed to help students learning how to program explore programming concepts in a way that is visually fun and interesting. Using turtles also will allow us in later chapters to explore aspects of interactive programming. With turtles, there is a visual output that an end user can view and (as you learn more programming) interact with.</p>
+<p>Here is a turtle that starts to draw a dashed line:</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ac3_5_1_1 data-question_label="4.5.1">
+<div id=ac3_5_1_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac3_5_1_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle             # allows us to use the turtles library
+wn = turtle.Screen()      # creates a graphics window
+maya = turtle.Turtle()    # create a turtle named maya
+
+maya.forward(50)         # tell maya to move forward by 50 units
+maya.penup()             # tell maya to pick up pen, so maya can move without drawing
+maya.forward(25)          # move forward without drawing
+maya.pendown()            # put the pen back down to draw
+maya.forward(50)          # move forward by 50 units
+</textarea>
+</div>
+</div>
+<p>Now that you know a bit more about Python, we can explain a bit more about what is going on here.</p>
+<p>Line 1 imports the Turtle module. This brings us two new <strong>types</strong> that we can use: the <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> type, and the
+<code class="docutils literal notranslate"><span class="pre">Screen</span></code> type.</p>
+<p>On line 2, we create and open what the turtle module calls a screen (we would
+prefer to call it a window, or in the case of this web version of Python
+simply a canvas), which we assign to variable <code class="docutils literal notranslate"><span class="pre">wn</span></code>. The dot notation <code class="docutils literal notranslate"><span class="pre">turtle.Screen</span></code> means <em>“The Screen type
+that is defined within the turtle module”</em>.  Every screen/window
+contains a <strong>canvas</strong>, which is the area inside the window on which we can draw.</p>
+<p>In line 3 we create a turtle. Remember that Python is case
+sensitive, so the module name, <code class="docutils literal notranslate"><span class="pre">turtle</span></code>, with a lowercase <code class="docutils literal notranslate"><span class="pre">t</span></code>, is different from the
+type <code class="docutils literal notranslate"><span class="pre">Turtle</span></code> because of the uppercase <code class="docutils literal notranslate"><span class="pre">T</span></code>. The variable <code class="docutils literal notranslate"><span class="pre">maya</span></code> is made to refer to this
+turtle.</p>
+<p>These first three lines set us up so that we are ready to do some drawing.</p>
+<p>In lines 4-8, we instruct the turtle ‘maya’ to draw part of a dashed line. Run the program and trace through lines 5-9 to understand what is happening. The turtle only leaves a trace when the tail (pen) is down. When you create a tutrle, their tail is down by default.</p>
+<div class="admonition-complete-the-line admonition">
+<p class="admonition-title">Complete the line …</p>
+<p>Modify the program by adding the commands necessary to have <em>maya</em> make a dashed line that goes to the right edge of the canvas. The code will be repetitive. In the next chapter we will learn how to write this code so that it is more efficient!</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4.5.2" data-multipleanswers="false"  id="question5_1"  style="visibility: hidden;">
+            <p>turtle-2-2: What instruction do you give a turtle to allow it to move without drawing?</p>
+
+            <li data-component="answer"  id="question5_1_opt_a">forward()</li><li data-component="feedback">No, forward() just moves the turtle in it's current direction.</li>
+            
+            <li data-component="answer"  id="question5_1_opt_b">forward_penup()</li><li data-component="feedback">No, this is not a valid instruction?</li>
+            
+            <li data-component="answer" data-correct id="question5_1_opt_c">penup()</li><li data-component="feedback">Yes, this instruction picks up a pen, and movement after this will not leave a line.</li>
+            
+            <li data-component="answer"  id="question5_1_opt_d">pendown()</li><li data-component="feedback">No, this instruction puts the pen down, and movement instructions after this will draw a line.</li>
+            
+
+            </ul>
+            </div>
+            <p>Maya the turtle is an <strong>object</strong> and once we have created a turtle object, we can make it perform actions. Objects have <strong>methods</strong>, things that they can do. We can make use of this by <strong>invoking</strong> or activating turtle <strong>methods</strong>. A method is a set of program instructions that are for a specific type of object. Turtle methods are sets of instrutcions that all turtles know how to respond to. Because maya is an object, we use dot notation to call or invoke the turtle methods; <code class="docutils literal notranslate"><span class="pre">maya.forward(50)</span></code> says to call the forward() method, for the turtle object maya, with the specific distance of 50 units.</p>
+<p>In addition to methods — the things an object can do — an object can also
+have <strong>attributes</strong> — (sometimes called <em>properties</em>) which store information about the current state of an object. For example, each
+turtle has a <em>color</em> attribute. The method invocation  <code class="docutils literal notranslate"><span class="pre">maya.color(&quot;red&quot;)</span></code>
+will make maya red and the line that maya draws will be red too.</p>
+<p>The color of the turtle, the width of its pen(tail), the position of the turtle
+within the window, which way it is facing, and so on are all part of its
+current <strong>state</strong>. Similarly, the window object has a background color which is part of its state.</p>
+<p>Quite a number of methods exist that allow us to modify the turtle and
+window objects. In the example below, we show just a couple and have only commented
+those lines that are different from the previous example. Note also that we have decided
+to call our turtle object <em>tess</em>. When we create objects, we can call them whatever we want.</p>
+
+<div class="runestone explainer ac_section alert alert-warning">
+<div data-component="activecode" id=ac3_2_2 data-question_label="4.5.3">
+<div id=ac3_2_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac3_2_2_editor" 
+      data-timelimit=25000     
+    data-audio='*doubleq*Overall Tour*doubleq*; 1-10: Example02_Tour01_Line01; 4: Example02_Tour01_Line02; 6: Example02_Tour01_Line03; 7: Example02_Tour01_Line04; 8: Example02_Tour01_Line05; 10: Example02_Tour01_Line06; 11: Example02_Tour01_Line07; 12: Example02_Tour01_Line08; 14: Example02_Tour01_Line09;*atype**doubleq*Line by Line Tour*doubleq*; 1: Example01_Tour02_Line01; 3: Example01_Tour02_Line02; 4: Example02_Tour02_Line03; 6: Example02_Tour02_Line04; 7: Example02_Tour02_Line05; 8: Example02_Tour02_Line06; 10: Example02_Tour02_Line07; 11: Example02_Tour02_Line08; 12: Example02_Tour02_Line09; 14: Example02_Tour02_Line10;*atype*'      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")        # set the window background color
+
+tess = turtle.Turtle()
+tess.color("blue")              # make tess blue
+tess.pensize(3)                 # set the width of her pen
+
+tess.forward(50)
+tess.left(120)
+tess.forward(50)
+
+wn.exitonclick()                # wait for a user click on the canvas
+</textarea>
+</div>
+</div>
+<p>The last line plays a very important role. The wn variable refers to the window shown
+above. When we invoke its <code class="docutils literal notranslate"><span class="pre">exitonclick</span></code> method, the program pauses execution and waits for the user to click the mouse somewhere in the window.
+When this click event occurs, the response is to close the turtle window and
+exit (stop execution of) the Python program.</p>
+<p>Each time we run this program, a new drawing window pops up, and will remain on the
+screen until we click on it.</p>
+<div class="admonition-extend-this-program admonition">
+<p class="admonition-title">Extend this program …</p>
+<ol class="arabic simple">
+<li><p>Modify this program so that before it creates the window, it prompts
+the user to enter the desired background color.It should store the
+user’s responses in a variable, and modify the color of the window
+according to the user’s wishes.
+(Hint: you can find a list of permitted color names at
+<a class="reference external" href="https://www.w3schools.com/colors/colors_names.asp">https://www.w3schools.com/colors/colors_names.asp</a>. It includes some quite
+unusual ones, like “PeachPuff”  and “HotPink”.)</p></li>
+<li><p>Do similar changes to allow the user, at runtime, to set tess’ color.</p></li>
+<li><p>Do the same for the width of tess’ pen. <em>Hint:</em> your dialog with the
+user will return a string, but tess’ <code class="docutils literal notranslate"><span class="pre">pensize</span></code> method
+expects its argument to be an <code class="docutils literal notranslate"><span class="pre">int</span></code>. That means you need to convert
+the string to an int before you pass it to <code class="docutils literal notranslate"><span class="pre">pensize</span></code>.</p></li>
+</ol>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4.5.4" data-multipleanswers="false"  id="question3_2_2"  style="visibility: hidden;">
+            <p>turtle-2-4: Consider the following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="n">wn</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Screen</span><span class="p">()</span>
+<span class="n">alex</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
+<span class="n">alex</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">alex</span><span class="o">.</span><span class="n">left</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">alex</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">75</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What does the line “import turtle” do?</p>
+
+            <li data-component="answer"  id="question3_2_2_opt_a">It creates a new turtle object that can be used for drawing.</li><li data-component="feedback">The line &quotalex = turtle.Turtle()&quot is what actually creates the turtle object.</li>
+            
+            <li data-component="answer" data-correct id="question3_2_2_opt_b">It defines the module turtle which will allow you to create a Turtle object and draw with it.</li><li data-component="feedback">This line imports the module called turtle, which has all the built in functions for drawing on the screen with the Turtle object.</li>
+            
+            <li data-component="answer"  id="question3_2_2_opt_c">It makes the turtle draw half of a rectangle on the screen.</li><li data-component="feedback">This functionality is performed with the lines: &quotalex.forward(150)&quot, &quotlex.left(90)&quot, and &quotalex.forward(75)&quot</li>
+            
+            <li data-component="answer"  id="question3_2_2_opt_d">Nothing, it is unnecessary.</li><li data-component="feedback">If we leave it out, Python will give an error saying that it does not know about the name &quotturtle&quot when it reaches the line &quotwn = turtle.Screen()&quot</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4.5.5" data-multipleanswers="false"  id="question3_2_3"  style="visibility: hidden;">
+            <p>turtle-2-5: Why do we type <code class="docutils literal notranslate"><span class="pre">turtle.Turtle()</span></code> to get a new Turtle object?</p>
+
+            <li data-component="answer"  id="question3_2_3_opt_a">This is simply for clarity.  It would also work to just type "Turtle()" instead of "turtle.Turtle()".</li><li data-component="feedback">We must specify the name of the module where Python can find the Turtle object.</li>
+            
+            <li data-component="answer"  id="question3_2_3_opt_b">The period (.) is what tells Python that we want to invoke a new object.</li><li data-component="feedback">The period separates the module name from the object name.  The parentheses at the end are what tell Python to invoke a new object.</li>
+            
+            <li data-component="answer" data-correct id="question3_2_3_opt_c">The first "turtle" (before the period) tells Python that we are referring to the turtle module, which is where the object "Turtle" is found.</li><li data-component="feedback">Yes, the Turtle type is defined in the module turtle.  Remember that Python is case sensitive and Turtle is different from turtle.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4.5.6" data-multipleanswers="false"  id="question3_2_4"  style="visibility: hidden;">
+            <p>turtle-2-6: True or False: A Turtle object can have any name that follows the naming rules from Chapter 2.</p>
+
+            <li data-component="answer" data-correct id="question3_2_4_opt_a">True</li><li data-component="feedback">In this chapter you saw one named alex and one named tess, but any legal variable name is allowed.</li>
+            
+            <li data-component="answer"  id="question3_2_4_opt_b">False</li><li data-component="feedback">A variable, including one referring to a Turtle object, can have whatever name you choose as long as it follows the naming conventions from Chapter 2.</li>
+            
+
+            </ul>
+            </div>
+            
+            <div class="runestone alert alert-warning">
+            <ul data-component="multiplechoice" data-question_label="4.5.7" data-multipleanswers="false"  id="question3_2_5"  style="visibility: hidden;">
+            <p>turtle-2-7: Which of the following sequence of instructions would produce the following image?</p>
+<img alt="long line to north with shorter line to west on top" src="../_images/turtleTest1.png" />
+
+            <li data-component="answer"  id="question3_2_5_opt_a"><img src="../_static/test1Alt1.png" alt="right turn of 90 degrees before drawing, draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the south before drawing</li>
+            
+            <li data-component="answer"  id="question3_2_5_opt_b"><img src="../_static/test1Alt2.png" alt="left turn of 180 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the west before drawing</li>
+            
+            <li data-component="answer"  id="question3_2_5_opt_c"><img src="../_static/test1Alt3.png" alt="left turn of 270 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code would turn the turtle to the south before drawing</li>
+            
+            <li data-component="answer"  id="question3_2_5_opt_d"><img src="../_static/test1Alt4v2.png" alt="right turn of 270 degrees before drawing, draw a line 150 pixels long, turn right 90, and draw a line 75 pixels long"></li><li data-component="feedback">This code is almost correct, but the short end would be facing east instead of west.</li>
+            
+            <li data-component="answer" data-correct id="question3_2_5_opt_e"><img src="../_static/test1correct.png" alt="left turn of 90 degrees before drawing,  draw a line 150 pixels long, turn left 90, and draw a line 75 pixels long"></li><li data-component="feedback">Yes, the turtle starts facing east, so to turn it north you can turn left 90 or right 270 degrees.</li>
+            
+
+            </ul>
+            </div>
+            <p><strong>Mixed up programs</strong></p>
+
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="pp3_3_4" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a capital L in white on a blue background as shown to the left,</p>
+<a class="reference internal image-reference" href="../_images/BlueTurtleL.png"><img alt="image of a navigational compass and a letter L drawn by Turtle." class="align-left" src="../_images/BlueTurtleL.png" style="width: 150px;" /></a>
+<p>But the lines are mixed up. The program should do all necessary set-up and create the turtle and set the pen size to 10. The turtle should then turn to face south, draw a line that is 150 pixels long, turn to face east, and draw a line that is 75 pixels long. Finally, set the window to close when the user clicks in it.</p>
+<p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <em>Check Me</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.5.8"         style="visibility: hidden;">
+        import turtle
+wn = turtle.Screen()
+---
+wn.bgcolor("blue")
+jamal = turtle.Turtle()
+---
+jamal.color("white")
+jamal.pensize(10)
+---
+jamal.right(90)
+jamal.forward(150)
+---
+jamal.left(90)
+jamal.forward(75)
+wn.exitonclick()
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone" style="max-width: none;">
+        <div data-component="parsons" id="pp3_2_5" class="alert alert-warning parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program uses a turtle to draw a capital T in white on a green background as shown to the left,</p>
+<a class="reference internal image-reference" href="../_images/TurtleT.png"><img alt="image of a letter T drawn by Turtle." class="align-left" src="../_images/TurtleT.png" style="width: 150px;" /></a>
+<p>But the lines are mixed up. The program should do all necessary set-up, create the turtle, and set the pen size to 10. After that the turtle should turn to face north, draw a line that is 150 pixels long, turn to face west, and draw a line that is 50 pixels long. Next, the turtle should turn 180 degrees and draw a line that is 100 pixels long. Finally, set the window to close when the user clicks in it.</p>
+<p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <em>Check Me</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="4.5.9"         style="visibility: hidden;">
+        import turtle
+wn = turtle.Screen()
+wn.bgcolor("green")
+jamal = turtle.Turtle()
+jamal.color("white")
+jamal.pensize(10)
+---
+jamal.left(90)
+jamal.forward(150)
+---
+jamal.left(90)
+jamal.forward(50)
+---
+jamal.right(180)
+jamal.forward(100)
+---
+wn.exitonclick()
+        </pre>
+        </div>
+        </div>
+    </div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 4.4. The  random  module' data-toggle="tooltip">
+  <a href="Therandommodule.html" aria-label="Previous - 4.4. The  random  module">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 4.6. Instances: A Herd of Turtles' data-toggle="tooltip" >
+    <a href="InstancesAHerdofTurtles.html" aria-label="Next - 4.6. Instances: A Herd of Turtles">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

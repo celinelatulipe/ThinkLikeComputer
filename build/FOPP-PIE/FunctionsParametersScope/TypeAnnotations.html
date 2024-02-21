@@ -1,0 +1,405 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>8.5. Type Annotations &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.6. A function that accumulates" href="Afunctionthataccumulates.html" />
+    <link rel="prev" title="8.4. 👩‍💻 Decoding a Function" href="DecodingaFunction.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=TypeAnnotations'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">8.4. </span>👩‍💻 Decoding a Function" data-toggle="tooltip">
+    <a href="DecodingaFunction.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">8.6. </span>A function that accumulates' data-toggle="tooltip" >              
+    <a href="Afunctionthataccumulates.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="type-annotations">
+<span id="index-0"></span><h1><span class="section-number">8.5. </span>Type Annotations<a class="headerlink" href="#type-annotations" title="Permalink to this heading">¶</a></h1>
+<p>In the previous section, we discussed the decoding work that is required when you look at a function and
+are trying to determine the types of its parameters. In this section, we’ll introduce a feature that can help
+reduce the amount of sleuthing that is needed.</p>
+<p>Consider the following function definition:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="n">msg</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns a string containing two copies of `msg`&quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">msg</span> <span class="o">+</span> <span class="n">msg</span>
+</pre></div>
+</div>
+<p>This function is intended to duplicate a message; if called with the value ‘Hello’, it returns the value
+‘HelloHello’. If called with other types of data, however, it will not work properly. (What will the
+function do if given an <code class="docutils literal notranslate"><span class="pre">int</span></code> or a <code class="docutils literal notranslate"><span class="pre">float</span></code> value?)</p>
+<p>Python allows you to indicate the intended type of the function parameters and the type of the function return value
+in a function definition using a special notation demonstrated in this example:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_annotate1 data-question_label="8.5.1">
+<div id=ac_annotate1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_annotate1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def duplicate(msg: str) -> str:
+    """Returns a string containing two copies of `msg`"""
+
+    return msg + msg
+
+result = duplicate('Hello')
+print(result)
+</textarea>
+</div>
+</div>
+<p>This definition of <code class="docutils literal notranslate"><span class="pre">duplicate</span></code> makes use of type annotations that indicate the function’s parameter type and return
+type. A <strong>type annotation</strong> is an optional notation that specifies the type of a parameter or function result. It
+tells the programmer using the function what kind of data to pass to the function, and what kind of data to expect when
+the function returns a value.</p>
+<p>In the definition above, the annotation <code class="docutils literal notranslate"><span class="pre">:</span> <span class="pre">str</span></code> in <code class="docutils literal notranslate"><span class="pre">msg:</span> <span class="pre">str</span></code> indicates that the caller should pass a <code class="docutils literal notranslate"><span class="pre">str</span></code> value as an argument.
+The annotation  <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">str</span></code> indicates that the function will produce a <code class="docutils literal notranslate"><span class="pre">str</span></code> result.</p>
+<p>Here are some more examples of functions with type annotations:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac_annotate2 data-question_label="8.5.2">
+<div id=ac_annotate2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac_annotate2_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def add(x: int, y: int) -> int:
+    """Returns the sum of `x` and `y`"""
+
+    return x + y
+
+def get_number(msg: str) -> float:
+    """Prompts with `msg` for input; returns numeric response."""
+
+    return float(input(msg))
+
+def display_msg(msg: str):
+    """Displays `msg` with dashed line underneath"""
+
+    print(msg)
+    print('-------------------------------------')
+</textarea>
+</div>
+</div>
+<p>It’s important to understand that adding type annotations to a function definition does not cause the Python interpreter
+to check that the values passed to a function are the expected types, or cause the returned value to be converted to the
+expected type. For example, if the function <code class="docutils literal notranslate"><span class="pre">add</span></code> in the example above is called like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the function will receive two string values, concatenate them, and return the resulting string ‘515’. The <code class="docutils literal notranslate"><span class="pre">int</span></code>
+annotations are completely ignored by the Python interpreter. Think of type annotations as a kind of function
+documentation, and remember that they have no effect on the program’s behavior.</p>
+<p>Type annotations are an optional aspect of documenting functions. Still, type annotations are an important tool to increase
+the readability of your code, and you should use them in your programs.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although type annotations are ignored by the Python interpreter, there are tools such as
+<a class="reference external" href="http://mypy-lang.org/">mypy</a> that can analyze your code containing type annotations and flag potential problems.</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8.5.3" data-multipleanswers="false"  id="question8_5_1"  style="visibility: hidden;">
+    <p>What happens when the following is executed?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Displays `msg` on the screen&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">msg</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="question8_5_1_opt_a">The value 4.5 is displayed on the screen.</li><li data-component="feedback">Correct! Python ignores the ': str' annotation and returns the sum of msg (the float 2.5) + 2.</li>
+    
+    <li data-component="answer"  id="question8_5_1_opt_b">The value 2.52 is displayed on the screen.</li><li data-component="feedback">Incorrect. In this call, msg contains the float value 2.5; the ': str' annotation serves only as documentation.</li>
+    
+    <li data-component="answer"  id="question8_5_1_opt_c">A crash occurs because 2.5 is not a string</li><li data-component="feedback">Incorrect. Python ignores the ': str' annotation and allows the float value 2.5 to be passed to msg.</li>
+    
+    <li data-component="answer"  id="question8_5_1_opt_d">A crash occurs because the expression 'msg + 2' illegally attempts to concatenate a str and an int</li><li data-component="feedback">Incorrect. In this call, msg contains the float value 2.5, not a str, so the + operation is legal.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 8.4. 👩‍💻 Decoding a Function' data-toggle="tooltip">
+  <a href="DecodingaFunction.html" aria-label="Previous - 8.4. 👩‍💻 Decoding a Function">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 8.6. A function that accumulates' data-toggle="tooltip" >
+    <a href="Afunctionthataccumulates.html" aria-label="Next - 8.6. A function that accumulates">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,514 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.4. The Python Programming Language &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.5. More About Programs" href="MoreAboutPrograms.html" />
+    <link rel="prev" title="1.3. Problem Solving, Interactivity &amp; Ethics" href="AlgorithmsInteractivityAndEthics.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=ThePythonProgrammingLanguage'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">1.3. </span>Problem Solving, Interactivity &amp; Ethics" data-toggle="tooltip">
+    <a href="AlgorithmsInteractivityAndEthics.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">1.5. </span>More About Programs' data-toggle="tooltip" >              
+    <a href="MoreAboutPrograms.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="the-python-programming-language">
+<span id="index-0"></span><h1><span class="section-number">1.4. </span>The Python Programming Language<a class="headerlink" href="#the-python-programming-language" title="Permalink to this headline">¶</a></h1>
+<p>The programming language you will be learning is Python. Python is an example
+of a <strong>high-level language</strong>; other high-level languages you might have heard
+of are C++, PHP, and Java.</p>
+<p>As you might infer from the name high-level language, there are also
+<strong>low-level languages</strong>, sometimes referred to as machine languages or assembly
+languages. Loosely speaking, computers can only execute programs written in
+low-level languages. Thus, programs written in a high-level language have to be
+processed before they can run. This extra processing takes some time, which is
+a small disadvantage of high-level languages.
+However, the advantages to high-level languages are enormous.</p>
+<p>First, it is much easier to program in a
+high-level language. Programs written in a high-level language take less time
+to write, they are shorter and easier to read, and they are more likely to be
+correct. Second, high-level languages are <strong>portable</strong>, meaning that they can
+run on different kinds of computers with few or no modifications. Low-level
+programs can run on only one kind of computer and have to be rewritten to run
+on another.</p>
+<p>Due to these advantages, almost all programs are written in high-level
+languages. Low-level languages are used only for a few specialized
+applications.</p>
+<p>Two kinds of programs process high-level languages into low-level languages:
+<strong>interpreters</strong> and <strong>compilers</strong>. An interpreter reads a high-level program
+and executes it, meaning that it does what the program says. It processes the
+program a little at a time, alternately reading lines and performing
+computations.</p>
+<img alt="Interpret illustration, shows that source code goes through the interpreter, which runs the program." src="../_images/interpret.png" />
+<p>A compiler reads the program and translates it completely before the program
+starts running. In this case, the high-level program is called the <strong>source
+code</strong>, and the translated program is called the <strong>object code</strong> or the
+<strong>executable</strong>. Once a program is compiled, you can execute it repeatedly
+without further translation. If you make changes to your source code, you need to compile your files into an executable again.</p>
+<img alt="Compile illustration, shows that source code goes through the compiler to become object code, and object code is executed to run the program." src="../_images/compile.png" />
+<p>Many modern languages use both processes. They are first compiled into a lower
+level language, called <strong>byte code</strong>, and then interpreted by a program called
+a <strong>virtual machine</strong>. Python uses both processes, but because of the way
+programmers interact with it, it is usually considered an interpreted language.</p>
+<p>For the core material in this book, you will not need to install
+or run python natively on your computer. Instead, you’ll be writing simple
+programs and executing them right in your browser.</p>
+<p>At some point, you will find it useful to have a complete python environment, rather than the limited environment
+available in this online textbook. To do that, you will either
+install python on your computer so that it can run natively, or use a remote server that provides either a
+command line shell or a jupyter notebook environment.</p>
+<div class="section" id="special-ways-to-execute-python-in-this-book">
+<h2><span class="section-number">1.4.1. </span>Special Ways to Execute Python in this Book<a class="headerlink" href="#special-ways-to-execute-python-in-this-book" title="Permalink to this headline">¶</a></h2>
+<p>This book provides two ways to execute Python programs.  Both techniques are designed to assist you as you
+learn the Python programming language.  They will help you increase your understanding of how Python programs work.</p>
+<p>First, you can write, modify, and execute programs using a unique <strong>activecode</strong> interpreter that allows you to execute Python code right
+in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
+environment for learning a programming language like Python since you can experiment with the language as you are reading.</p>
+<p>Take a look at the activecode interpreter in action. Try pressing the <em>Save &amp; Run</em> button below. (If you are not logged
+in, it will just say <em>Run</em>.)</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=activecode_first_ex data-question_label="1.4.1.1">
+<div id=activecode_first_ex_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="activecode_first_ex_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+</textarea>
+</div>
+</div>
+<p>Now try modifying the program shown above.  First, modify the string (the sentence in quotations) in the
+first print statement by changing the word <em>adds</em> to the word <em>multiplies</em>.  Now press
+<em>Save &amp; Run</em> again.  You can see that the result of the program has changed.  However, it still prints
+“5” as the answer.  Modify the second print statement by changing the addition symbol, the
+<code class="docutils literal notranslate"><span class="pre">+</span></code>, to the multiplication symbol, <code class="docutils literal notranslate"><span class="pre">*</span></code>.  Press <em>Save &amp; Run</em> again to see the new results.</p>
+<p>As the name suggests, <em>Save &amp; Run</em> also <em>saves</em> your latest version of the code,
+and you can recover it in later sessions when <em>logged in</em>. If <em>not</em> logged in,
+<em>Run</em> saves versions <em>only until your browser leaves the current web page</em>, and then you lose all modifications.</p>
+<p>If you are logged in, when a page first loads, each activecode window will have a <em>Load History</em> button, to the
+right of the <em>Save &amp; Run</em> button.
+If you click on it, or if you run any code, that button turns into a slider.
+If you click on the slider location box, you can use your left and right arrow
+buttons to switch to other versions you ran.
+Alternatively you can drag the box on the slider.
+Now move the slider to see a previously saved version of your code. You can edit or run any version.</p>
+<p>In addition to activecode, you can also execute Python code with the assistance of a unique visualization tool. This tool, known as <strong>codelens</strong>, allows you to control the step by step execution of a program. It also lets you see the values of all variables as they are created and modified. In activecode, the source code executes from beginning to end and you
+can see the final result. In codelens you can see and control the step by step progress.
+Note that the red arrow always points to the next line of code that is going to be executed.
+The light green arrow points to the line that was just executed. Click on the “Show in
+Codelens” button in the code example above to make the codelens window show up, and then click on the Forward button
+a few times to step through the execution.</p>
+<p>Sometimes, we will present code examples explicitly in a codelens window in the textbook, as below.
+When we do, think of it as an encouragement to use the codelens features to step through the
+execution of the program.</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="1.4.1.2">
+        <div id=clens_first_example_question class="ac_question">
+        </div>
+        <div class="pytutorVisualizer" id="clens_first_example"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 1.4.1.2 (clens_first_example)</span> </p>
+    </div>
+
+<script>
+var clens_first_example_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["clens_first_example"] = {"code": "print(\"My first program adds two numbers, 2 and 3:\")\nprint(2 + 3)", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 2, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "My first program adds two numbers, 2 and 3:\n"}, {"line": 2, "event": "return", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": "My first program adds two numbers, 2 and 3:\n5\n"}]};
+</script>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.4.1.3" data-multipleanswers="false"  id="question_what_is_source_code"  style="visibility: hidden;">
+    <p>Source code is another name for:</p>
+
+    <li data-component="answer" data-correct='yes' id="question_what_is_source_code_opt_a">the instructions in a program, written in a high-level language.</li><li data-component="feedback">If the instructions are stored in a file, it is called the source code file.</li>
+    
+    <li data-component="answer"  id="question_what_is_source_code_opt_b">the language that you are programming in (e.g. Python).</li><li data-component="feedback">This language is simply called the programming language, or simply the language. Programs are written in this language.</li>
+    
+    <li data-component="answer"  id="question_what_is_source_code_opt_c">the environment/tool in which you are programming.</li><li data-component="feedback">The environment may be called the IDE, or Integrated Development Environment, though not always.</li>
+    
+    <li data-component="answer"  id="question_what_is_source_code_opt_d">the number (or “code”) that you must input at the top of each program to tell the computer how to execute your program.</li><li data-component="feedback">There is no such number that you must type in at the start of your program.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.4.1.4" data-multipleanswers="false"  id="question_high_vs_low_language"  style="visibility: hidden;">
+    <p>What is the difference between a high-level programming language and a low-level programming language?</p>
+
+    <li data-component="answer"  id="question_high_vs_low_language_opt_a">It is high-level if you are standing and low-level if you are sitting.</li><li data-component="feedback">In this case high and low have nothing to do with altitude.</li>
+    
+    <li data-component="answer"  id="question_high_vs_low_language_opt_b">It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.</li><li data-component="feedback">High and low have nothing to do with the type of device you are programming for.  Instead, look at what it takes to run the program written in the language.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_high_vs_low_language_opt_c">It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.</li><li data-component="feedback">Python is a high level language but must be interpreted into machine code (binary) before it can be executed.</li>
+    
+    <li data-component="answer"  id="question_high_vs_low_language_opt_d">It is high-level if it easy to program in and is very short; it is low-level if it is really hard to program in and the programs are really long.</li><li data-component="feedback">While it is true that it is generally easier to program in a high-level language and programs written in a high-level language are usually shorter, this is not always the case.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.4.1.5" data-multipleanswers="false"  id="question_compiler_vs_interpreter"  style="visibility: hidden;">
+    <p>Pick the best replacements for <strong>1</strong> and <strong>2</strong> in the following sentence: When comparing compilers and interpreters, a compiler is like <strong>1</strong> while an interpreter is like <strong>2</strong>.</p>
+
+    <li data-component="answer"  id="question_compiler_vs_interpreter_opt_a">1 = a process, 2 = a function</li><li data-component="feedback">Compiling is a software process, and running the interpreter is invoking a function, but how is a process different than a function?</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_compiler_vs_interpreter_opt_b">1 = translating an entire book, 2 = translating a line at a time</li><li data-component="feedback">Compilers take the entire source code and produce object code or the executable and interpreters execute the code line by line.</li>
+    
+    <li data-component="answer"  id="question_compiler_vs_interpreter_opt_c">1 = software, 2 = hardware</li><li data-component="feedback">Both compilers and interpreters are software.</li>
+    
+    <li data-component="answer"  id="question_compiler_vs_interpreter_opt_d">1 = object code, 2 = byte code</li><li data-component="feedback">Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.4.1.6" data-multipleanswers="true"  id="question_activecode_interpreter"  style="visibility: hidden;">
+    <p>The activecode interpreter allows you to (select all that apply):</p>
+
+    <li data-component="answer" data-correct='yes' id="question_activecode_interpreter_opt_a">save programs and reload saved programs.</li><li data-component="feedback">You can (and should) save the contents of the activecode window.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_activecode_interpreter_opt_b">type in Python source code.</li><li data-component="feedback">You are not limited to running the examples that are already there.  Try adding to them and creating your own.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_activecode_interpreter_opt_c">execute Python code right in the text itself within the web ..</li><li data-component="feedback">The activecode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.</li>
+    
+    <li data-component="answer"  id="question_activecode_interpreter_opt_d">receive a yes/no answer about whether your code is correct or not.</li><li data-component="feedback">Although you can (and should) verify that your code is correct by examining its output, activecode will not directly tell you whether you have correctly implemented your program.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1.4.1.7" data-multipleanswers="true"  id="question_codelens"  style="visibility: hidden;">
+    <p>Codelens allows you to (select all that apply):</p>
+
+    <li data-component="answer"  id="question_codelens_opt_a">measure the speed of a program’s execution.</li><li data-component="feedback">In fact, Codelens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_codelens_opt_b">control the step by step execution of a program.</li><li data-component="feedback">By using Codelens, you can control the execution of a program step by step. You can even go backwards!</li>
+    
+    <li data-component="answer"  id="question_codelens_opt_c">write and execute your own Python code.</li><li data-component="feedback">Codelens works only for the pre-programmed examples.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question_codelens_opt_d">execute the Python code that is in codelens.</li><li data-component="feedback">By stepping forward through the Python code in Codelens, you are executing the Python program.</li>
+    
+
+    </ul>
+    </div>
+    <span class="target" id="index-1"></span></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 1.3. Problem Solving, Interactivity &amp; Ethics' data-toggle="tooltip">
+  <a href="AlgorithmsInteractivityAndEthics.html" aria-label="Previous - 1.3. Problem Solving, Interactivity &amp; Ethics">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 1.5. More About Programs' data-toggle="tooltip" >
+    <a href="MoreAboutPrograms.html" aria-label="Next - 1.5. More About Programs">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

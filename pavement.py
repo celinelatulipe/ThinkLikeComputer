@@ -58,6 +58,27 @@ options(
     )
 )
 
+#This is copied here as part of the process of the PreTeXt conversion
+template_args={
+            'login_required': 'false',
+            'loglevel': 0,
+            'course_title': project_name,
+            'python3': 'true',
+            'dburl': '',
+            'default_ac_lang': 'python',
+            'downloads_enabled': 'false',
+            'enable_chatcodes': 'false',
+            'allow_pairs': 'false',
+            'dynamic_pages': 'true',
+            'use_services': 'false',
+            'basecourse': project_name,
+            'course_id': project_name,
+            # These are used for non-dynamic books.
+            'appname': 'runestone',
+            'course_url': master_url,
+        }
+
+
 # if we are on runestone-deploy then use the proxy server not canterbury
 if gethostname() == 'runestone-deploy':
     del options.build.template_args['jobe_server']

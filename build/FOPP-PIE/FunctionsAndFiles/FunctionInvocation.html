@@ -1,0 +1,424 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>5.3. Function Invocation &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.4. Ethics: Documenting Function Assumptions" href="FunctionPre-PostConditions.html" />
+    <link rel="prev" title="5.2. Function Definition" href="FunctionDefinitions.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=FunctionInvocation'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.2. </span>Function Definition" data-toggle="tooltip">
+    <a href="FunctionDefinitions.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.4. </span>Ethics: Documenting Function Assumptions' data-toggle="tooltip" >              
+    <a href="FunctionPre-PostConditions.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="function-invocation">
+<h1><span class="section-number">5.3. </span>Function Invocation<a class="headerlink" href="#function-invocation" title="Permalink to this heading">¶</a></h1>
+<p>Defining a new function does not make the function run.
+To execute the function, we need a <strong>function call</strong>. This is also known as a <strong>function invocation</strong>.</p>
+<p>The way to invoke a function is to refer to it by name, followed by parentheses. Since there are no parameters for
+the function hello, we won’t need to put anything inside the parentheses when we call it. Once we’ve defined a
+function, we can call it as often as we like and its statements will be executed each time we call it.</p>
+
+<div class="runestone codelens ">
+    <div class="cd_section" data-component="codelens" data-question_label="5.3.1">
+        <div id=clens5_3_1_question class="ac_question">
+        </div>
+        <div class="pytutorVisualizer" id="clens5_3_1"
+           data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'>
+        </div>
+        <p class="runestone_caption"><span class="runestone_caption_text">Activity: CodeLens 5.3.1 (clens5_3_1)</span> </p>
+    </div>
+
+<script>
+var clens5_3_1_vis;
+
+if (allTraceData === undefined) {
+   var allTraceData = {};
+}
+
+allTraceData["clens5_3_1"] = {"code": "def hello():\n   print(\"Hello\")\n   print(\"Glad to meet you\")\n\nprint(type(hello))\nprint(type(\"hello\"))\n\nhello()\nprint(\"Hey, that just printed two lines with one line of code!\")\nhello()  # do it again, just because we can...", "trace": [{"line": 1, "event": "step_line", "func_name": "<module>", "globals": {}, "ordered_globals": [], "stack_to_render": [], "heap": {}, "stdout": ""}, {"line": 5, "event": "step_line", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": ""}, {"line": 6, "event": "step_line", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n"}, {"line": 8, "event": "step_line", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\n"}, {"line": 1, "event": "call", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f1"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\n"}, {"line": 2, "event": "step_line", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f1"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\n"}, {"line": 3, "event": "step_line", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f1"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\n"}, {"line": 3, "event": "return", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 1, "parent_frame_id_list": [], "encoded_locals": {"__return__": null}, "ordered_varnames": ["__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f1"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\n"}, {"line": 9, "event": "step_line", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\n"}, {"line": 10, "event": "step_line", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\n"}, {"line": 1, "event": "call", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f2"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\n"}, {"line": 2, "event": "step_line", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f2"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\n"}, {"line": 3, "event": "step_line", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {}, "ordered_varnames": [], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f2"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\nHello\n"}, {"line": 3, "event": "return", "func_name": "hello", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [{"func_name": "hello", "is_parent": false, "frame_id": 2, "parent_frame_id_list": [], "encoded_locals": {"__return__": null}, "ordered_varnames": ["__return__"], "is_zombie": false, "is_highlighted": true, "unique_hash": "hello_f2"}], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\nHello\nGlad to meet you\n"}, {"line": 10, "event": "return", "func_name": "<module>", "globals": {"hello": ["REF", 1]}, "ordered_globals": ["hello"], "stack_to_render": [], "heap": {"1": ["FUNCTION", "hello()", null]}, "stdout": "<class 'function'>\n<class 'str'>\nHello\nGlad to meet you\nHey, that just printed two lines with one line of code!\nHello\nGlad to meet you\n"}]};
+</script>
+</div>
+<p>Let’s take a closer look at what happens when you define a function and when you execute the function.
+Try stepping through the code above.</p>
+<p>First, note that in Step 1, when it executes line 1, it does <em>not</em> execute lines 2 and 3. Instead, as you can see in
+blue “Global variables” area, it creates a variable named hello whose value is a python function object. In the
+diagram that object is labeled hello() with a notation above it that it is a function.</p>
+<p>At Step 2, the next line of code to execute is line 5. Just to emphasize that hello is a variable like any other, and
+that functions are python objects like any other, just of a particular type, line 5 prints out the type of the object
+referred to by the variable hello. It’s type is officially ‘function’.</p>
+<p>Line 6 is just there to remind you of the difference between referring to the
+variable name (function name) hello and referring to the string “hello”.</p>
+<p>At Step 4 we get to line 8, which has an invocation of the function. The way function invocation works is that the
+code block inside the function definition is executed in the usual way, but at the end, execution jumps to the point
+after the function invocation.</p>
+<p>You can see that by following the next few steps. At Step 5, the red arrow has moved to line 2, which will execute
+next. We say that <em>control has passed</em> from the top-level program to the function hello. After Steps 5 and 6 print out
+two lines, at Step 7, control will be passed back to the point after where the invocation was started. At Step 8, that
+has happened.</p>
+<p>The same process of invocation occurs again on line 10, with lines 2 and 3 getting executed a second time.</p>
+<div class="admonition-common-mistake-with-functions admonition">
+<p class="admonition-title">Common Mistake with Functions</p>
+<p>It is a common mistake for beginners to forget their parenthesis after the function name. This is particularly
+common in the case where there are no parameters required. Because the hello function defined above does not
+require parameters, it’s easy to forget the parenthesis. This is less common, but still possible, when trying to
+call functions that require parameters.</p>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.2" data-multipleanswers="false"  id="question5_3_1"  style="visibility: hidden;">
+    <p>What is a function in Python?</p>
+
+    <li data-component="answer" data-correct='yes' id="question5_3_1_opt_a">A named sequence of statements.</li><li data-component="feedback">Yes, a function is a named sequence of statements.</li>
+    
+    <li data-component="answer"  id="question5_3_1_opt_b">Any sequence of statements.</li><li data-component="feedback">While functions contain sequences of statements, not all sequences of statements are considered functions.</li>
+    
+    <li data-component="answer"  id="question5_3_1_opt_c">A mathematical expression that calculates a value.</li><li data-component="feedback">While some functions do calculate values, the python idea of a function is slightly different from the mathematical idea of a function in that not all functions calculate values.  Consider, for example, the turtle functions in this section.   They made the turtle draw a specific shape, rather than calculating a value.</li>
+    
+    <li data-component="answer"  id="question5_3_1_opt_d">A statement of the form x = 5 + 4.</li><li data-component="feedback">This statement is called an assignment statement.  It assigns the value on the right (9), to the name on the left (x).</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.3" data-multipleanswers="false"  id="question5_3_2"  style="visibility: hidden;">
+    <p>What is one main purpose of a function?</p>
+
+    <li data-component="answer"  id="question5_3_2_opt_a">To improve the speed of execution</li><li data-component="feedback">Functions have little effect on how fast the program runs.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question5_3_2_opt_b">To help the programmer organize programs into chunks that match how they think about the solution to the problem.</li><li data-component="feedback">While functions are not required, they help the programmer better think about the solution by organizing pieces of the solution into logical chunks that can be reused.</li>
+    
+    <li data-component="answer"  id="question5_3_2_opt_c">All Python programs must be written using functions</li><li data-component="feedback">In the first several chapters, you have seen many examples of Python programs written without the use of functions.  While writing and using functions is desirable and essential for good programming style as your programs get longer, it is not required.</li>
+    
+    <li data-component="answer"  id="question5_3_2_opt_d">To calculate values.</li><li data-component="feedback">Not all functions calculate values.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.4" data-multipleanswers="false"  id="question5_3_3"  style="visibility: hidden;">
+    <p>How many lines will be printed out to the console by executing this code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Glad to meet you&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+
+    <li data-component="answer" data-correct='yes' id="question5_3_3_opt_a">0</li><li data-component="feedback">The code only defines the function. Nothing prints until the function is called.</li>
+    
+    <li data-component="answer"  id="question5_3_3_opt_b">1</li><li data-component="feedback">Check again.</li>
+    
+    <li data-component="answer"  id="question5_3_3_opt_c">2</li><li data-component="feedback">When the function is invoked, it will print two lines, but it has only been defined, not invoked.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5.3.5" data-multipleanswers="false"  id="question5_3_4"  style="visibility: hidden;">
+    <p>How many lines will be printed out to the console by executing this code?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Glad to meet you&quot;</span><span class="p">)</span>
+
+<span class="n">hello</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;It works&quot;</span><span class="p">)</span>
+<span class="n">hello</span><span class="p">()</span>
+<span class="n">hello</span><span class="p">()</span>
+</pre></div>
+</div>
+
+    <li data-component="answer"  id="question5_3_4_opt_a">0</li><li data-component="feedback">Here the the function is invoked and there is also a separate print statement.</li>
+    
+    <li data-component="answer"  id="question5_3_4_opt_b">1</li><li data-component="feedback">There is only one print statement outside the funciton, but the invocations of hello also cause lines to print.</li>
+    
+    <li data-component="answer"  id="question5_3_4_opt_c">3</li><li data-component="feedback">There are three print statements, but the function is invoked more than once.</li>
+    
+    <li data-component="answer"  id="question5_3_4_opt_d">4</li><li data-component="feedback">Each time the function is invoked, it will print two lines, not one.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question5_3_4_opt_e">7</li><li data-component="feedback">Three invocations generate two lines each, plus the line "It works".</li>
+    
+
+    </ul>
+    </div>
+    </section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.2. Function Definition' data-toggle="tooltip">
+  <a href="FunctionDefinitions.html" aria-label="Previous - 5.2. Function Definition">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.4. Ethics: Documenting Function Assumptions' data-toggle="tooltip" >
+    <a href="FunctionPre-PostConditions.html" aria-label="Next - 5.4. Ethics: Documenting Function Assumptions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

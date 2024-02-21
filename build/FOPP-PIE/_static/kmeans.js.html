@@ -1,0 +1,677 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="pygments.css" type="text/css" />
+    <link rel="stylesheet" href="basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="documentation_options.js"></script>
+    <script defer="" src="jquery.js"></script>
+    <script defer="" src="underscore.js"></script>
+    <script defer="" src="doctools.js"></script>
+    <script defer="" src="matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=kmeans.js'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <script type="text/javascript">function CodeChat_doStyle(element) {function walk_tree(elements,func_walk,func_child) {let walk_children = [];for (let index = 0; index < elements.length; ++index) {let that = elements[index];while (that && !func_walk(that)) {that = that.parentElement;}if (that) {that = func_walk(that);walk_children.push(that);while (that && func_child(that)) {that = func_child(that);walk_children.push(that);}}}return walk_children;};element = (typeof element !== 'undefined') ? element : document;let code = element.getElementsByClassName("fenced-code");walk_tree(code, x => x.nextElementSibling, x => x.firstElementChild).map(x =>x.classList.add('CodeChat_noTop'));walk_tree(code, x => x.previousElementSibling, x => x.lastElementChild).map(x =>x.classList.add('CodeChat_noBottom'));}document.addEventListener("DOMContentLoaded", function(event) { CodeChat_doStyle(); });</script><p>Initial inspiration was from: <a class="reference external" href="http://www.bytemuse.com/post/k-means-clustering-visualization/">http://www.bytemuse.com/post/k-means-clustering-visualization/</a></p>
+<div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-8" name="CodeChat-8" href="#CodeChat-8"></a><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-9" name="CodeChat-9" href="#CodeChat-9"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Number of points to be used in the K-Means Visualization</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-29" name="CodeChat-29" href="#CodeChat-29"></a>  <span class="kd">var</span> <span class="nx">NUM_POINTS</span> <span class="o">=</span> <span class="mf">500</span><span class="p">;</span>
+<a id="CodeChat-30" name="CodeChat-30" href="#CodeChat-30"></a>
+<a id="CodeChat-31" name="CodeChat-31" href="#CodeChat-31"></a>  <span class="kd">var</span> <span class="nx">$numClusters</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#num-clusters&#39;</span><span class="p">);</span>
+<a id="CodeChat-32" name="CodeChat-32" href="#CodeChat-32"></a>  <span class="kd">var</span> <span class="nx">numClusters</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numClusters</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-33" name="CodeChat-33" href="#CodeChat-33"></a>  <span class="kd">var</span> <span class="nx">$numCentroids</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#num-centroids&#39;</span><span class="p">);</span>
+<a id="CodeChat-34" name="CodeChat-34" href="#CodeChat-34"></a>  <span class="kd">var</span> <span class="nx">numCentroids</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numClusters</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-35" name="CodeChat-35" href="#CodeChat-35"></a>
+<a id="CodeChat-36" name="CodeChat-36" href="#CodeChat-36"></a>  <span class="kd">var</span> <span class="nx">$rangeSlider</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#range-slider&#39;</span><span class="p">);</span>
+<a id="CodeChat-37" name="CodeChat-37" href="#CodeChat-37"></a>  <span class="kd">var</span> <span class="nx">$meanSquareValue</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.mean-square-value&#39;</span><span class="p">);</span>
+<a id="CodeChat-38" name="CodeChat-38" href="#CodeChat-38"></a>
+<a id="CodeChat-39" name="CodeChat-39" href="#CodeChat-39"></a>  <span class="kd">var</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#kmeans-vis&#39;</span><span class="p">).</span><span class="nx">width</span><span class="p">();</span>
+<a id="CodeChat-40" name="CodeChat-40" href="#CodeChat-40"></a>  <span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">width</span><span class="p">;</span>
+<a id="CodeChat-41" name="CodeChat-41" href="#CodeChat-41"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Create SVG for d3</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-40" name="CodeChat-40" href="#CodeChat-40"></a>  <span class="kd">var</span> <span class="nx">svg</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#kmeans-vis&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
+<a id="CodeChat-41" name="CodeChat-41" href="#CodeChat-41"></a>    <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;width&#39;</span><span class="p">,</span> <span class="nx">width</span><span class="p">)</span>
+<a id="CodeChat-42" name="CodeChat-42" href="#CodeChat-42"></a>    <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
+<a id="CodeChat-43" name="CodeChat-43" href="#CodeChat-43"></a>
+<a id="CodeChat-44" name="CodeChat-44" href="#CodeChat-44"></a>  <span class="nx">pointsGroup</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;points&#39;</span><span class="p">);</span>
+<a id="CodeChat-45" name="CodeChat-45" href="#CodeChat-45"></a>  <span class="kd">var</span> <span class="nx">centroidsGroup</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;centroids&#39;</span><span class="p">);</span>
+<a id="CodeChat-46" name="CodeChat-46" href="#CodeChat-46"></a>  <span class="kd">var</span> <span class="nx">voronoiGroup</span> <span class="o">=</span> <span class="nx">svg</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;voronoi&#39;</span><span class="p">);</span>
+<a id="CodeChat-47" name="CodeChat-47" href="#CodeChat-47"></a>  <span class="kd">var</span> <span class="nx">triangle</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">svg</span><span class="p">.</span><span class="nx">symbol</span><span class="p">().</span><span class="nx">type</span><span class="p">(</span><span class="s1">&#39;triangle-up&#39;</span><span class="p">).</span><span class="nx">size</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="mf">200</span><span class="p">;</span> <span class="p">});</span>
+<a id="CodeChat-48" name="CodeChat-48" href="#CodeChat-48"></a>  <span class="kd">var</span> <span class="nx">colors</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">scale</span><span class="p">.</span><span class="nx">category10</span><span class="p">();</span>
+<a id="CodeChat-49" name="CodeChat-49" href="#CodeChat-49"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Array of (x, y) points that will be classified</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-42" name="CodeChat-42" href="#CodeChat-42"></a>  <span class="kd">var</span> <span class="nx">points</span> <span class="o">=</span> <span class="p">[];</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Array of (x, y) centroids</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-46" name="CodeChat-46" href="#CodeChat-46"></a>  <span class="kd">var</span> <span class="nx">centroids</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="CodeChat-47" name="CodeChat-47" href="#CodeChat-47"></a>  <span class="kd">var</span> <span class="nx">centroidBins</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="CodeChat-48" name="CodeChat-48" href="#CodeChat-48"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Initial randomness. This is what the slider is set to.
+0 means data is very clustered, 100 means completely random</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-54" name="CodeChat-54" href="#CodeChat-54"></a>  <span class="kd">var</span> <span class="nx">randomness</span> <span class="o">=</span> <span class="mf">25</span><span class="p">;</span>
+<a id="CodeChat-55" name="CodeChat-55" href="#CodeChat-55"></a>  <span class="kd">var</span> <span class="nx">$step</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.step&#39;</span><span class="p">);</span>
+<a id="CodeChat-56" name="CodeChat-56" href="#CodeChat-56"></a>
+<a id="CodeChat-57" name="CodeChat-57" href="#CodeChat-57"></a>  <span class="nx">rangeSlider</span><span class="p">(</span><span class="nx">$rangeSlider</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="p">{</span>
+<a id="CodeChat-58" name="CodeChat-58" href="#CodeChat-58"></a>    <span class="nx">value</span><span class="o">:</span> <span class="nx">randomness</span><span class="p">,</span>
+<a id="CodeChat-59" name="CodeChat-59" href="#CodeChat-59"></a>    <span class="nx">drag</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:3.0em;"><p>Update the randomness after the user drags the slider
+and reset the points to be clustered</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-61" name="CodeChat-61" href="#CodeChat-61"></a>      <span class="nx">randomness</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+<a id="CodeChat-62" name="CodeChat-62" href="#CodeChat-62"></a>      <span class="nx">resetPoints</span><span class="p">();</span>
+<a id="CodeChat-63" name="CodeChat-63" href="#CodeChat-63"></a>    <span class="p">}</span>
+<a id="CodeChat-64" name="CodeChat-64" href="#CodeChat-64"></a>  <span class="p">});</span>
+<a id="CodeChat-65" name="CodeChat-65" href="#CodeChat-65"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Resets the text on the centroid button</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-70" name="CodeChat-70" href="#CodeChat-70"></a>  <span class="kd">function</span> <span class="nx">resetCentroidUpdateText</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-71" name="CodeChat-71" href="#CodeChat-71"></a>    <span class="nx">$step</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;find&#39;</span><span class="p">);</span>
+<a id="CodeChat-72" name="CodeChat-72" href="#CodeChat-72"></a>    <span class="nx">$step</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Find closest centroid&#39;</span><span class="p">);</span>
+<a id="CodeChat-73" name="CodeChat-73" href="#CodeChat-73"></a>
+<a id="CodeChat-74" name="CodeChat-74" href="#CodeChat-74"></a>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.active&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<a id="CodeChat-75" name="CodeChat-75" href="#CodeChat-75"></a>    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.closest&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<a id="CodeChat-76" name="CodeChat-76" href="#CodeChat-76"></a>  <span class="p">}</span>
+<a id="CodeChat-77" name="CodeChat-77" href="#CodeChat-77"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Every time the step button is clicked, we alternate between finding the closest
+centroid and updating the centroid</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-152" name="CodeChat-152" href="#CodeChat-152"></a>  <span class="nx">$step</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-153" name="CodeChat-153" href="#CodeChat-153"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">$step</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;find&#39;</span><span class="p">))</span> <span class="p">{</span>
+<a id="CodeChat-154" name="CodeChat-154" href="#CodeChat-154"></a>      <span class="nx">findClosestCentroid</span><span class="p">();</span>
+<a id="CodeChat-155" name="CodeChat-155" href="#CodeChat-155"></a>      <span class="nx">findClosestCentroidAnimation</span><span class="p">();</span>
+<a id="CodeChat-156" name="CodeChat-156" href="#CodeChat-156"></a>      <span class="nx">$step</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;find&#39;</span><span class="p">);</span>
+<a id="CodeChat-157" name="CodeChat-157" href="#CodeChat-157"></a>      <span class="nx">$step</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;Update centroid&#39;</span><span class="p">);</span>
+<a id="CodeChat-158" name="CodeChat-158" href="#CodeChat-158"></a>
+<a id="CodeChat-159" name="CodeChat-159" href="#CodeChat-159"></a>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.active&#39;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<a id="CodeChat-160" name="CodeChat-160" href="#CodeChat-160"></a>      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.update&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<a id="CodeChat-161" name="CodeChat-161" href="#CodeChat-161"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="CodeChat-162" name="CodeChat-162" href="#CodeChat-162"></a>      <span class="nx">updateCentroid</span><span class="p">();</span>
+<a id="CodeChat-163" name="CodeChat-163" href="#CodeChat-163"></a>      <span class="nx">updateCentroidAnimation</span><span class="p">();</span>
+<a id="CodeChat-164" name="CodeChat-164" href="#CodeChat-164"></a>      <span class="nx">resetCentroidUpdateText</span><span class="p">();</span>
+<a id="CodeChat-165" name="CodeChat-165" href="#CodeChat-165"></a>    <span class="p">}</span>
+<a id="CodeChat-166" name="CodeChat-166" href="#CodeChat-166"></a>  <span class="p">});</span>
+<a id="CodeChat-167" name="CodeChat-167" href="#CodeChat-167"></a>
+<a id="CodeChat-168" name="CodeChat-168" href="#CodeChat-168"></a>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.closest&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-169" name="CodeChat-169" href="#CodeChat-169"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.closest&#39;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">))</span> <span class="p">{</span>
+<a id="CodeChat-170" name="CodeChat-170" href="#CodeChat-170"></a>      <span class="nx">$step</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<a id="CodeChat-171" name="CodeChat-171" href="#CodeChat-171"></a>    <span class="p">}</span>
+<a id="CodeChat-172" name="CodeChat-172" href="#CodeChat-172"></a>  <span class="p">});</span>
+<a id="CodeChat-173" name="CodeChat-173" href="#CodeChat-173"></a>
+<a id="CodeChat-174" name="CodeChat-174" href="#CodeChat-174"></a>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.update&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-175" name="CodeChat-175" href="#CodeChat-175"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.update&#39;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">))</span> <span class="p">{</span>
+<a id="CodeChat-176" name="CodeChat-176" href="#CodeChat-176"></a>      <span class="nx">$step</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<a id="CodeChat-177" name="CodeChat-177" href="#CodeChat-177"></a>    <span class="p">}</span>
+<a id="CodeChat-178" name="CodeChat-178" href="#CodeChat-178"></a>  <span class="p">});</span>
+<a id="CodeChat-179" name="CodeChat-179" href="#CodeChat-179"></a>
+<a id="CodeChat-180" name="CodeChat-180" href="#CodeChat-180"></a>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.new-points&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-181" name="CodeChat-181" href="#CodeChat-181"></a>    <span class="nx">resetPoints</span><span class="p">();</span>
+<a id="CodeChat-182" name="CodeChat-182" href="#CodeChat-182"></a>  <span class="p">});</span>
+<a id="CodeChat-183" name="CodeChat-183" href="#CodeChat-183"></a>
+<a id="CodeChat-184" name="CodeChat-184" href="#CodeChat-184"></a>  <span class="nx">$numClusters</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-185" name="CodeChat-185" href="#CodeChat-185"></a>    <span class="kd">var</span> <span class="nx">numClustersNew</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numClusters</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-186" name="CodeChat-186" href="#CodeChat-186"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">numClustersNew</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">numClustersNew</span> <span class="o">!=</span> <span class="nx">numClusters</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-187" name="CodeChat-187" href="#CodeChat-187"></a>      <span class="nx">resetPoints</span><span class="p">();</span>
+<a id="CodeChat-188" name="CodeChat-188" href="#CodeChat-188"></a>    <span class="p">}</span>
+<a id="CodeChat-189" name="CodeChat-189" href="#CodeChat-189"></a>  <span class="p">});</span>
+<a id="CodeChat-190" name="CodeChat-190" href="#CodeChat-190"></a>
+<a id="CodeChat-191" name="CodeChat-191" href="#CodeChat-191"></a>  <span class="nx">$numCentroids</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-192" name="CodeChat-192" href="#CodeChat-192"></a>    <span class="kd">var</span> <span class="nx">numCentroidsNew</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numCentroids</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-193" name="CodeChat-193" href="#CodeChat-193"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">numCentroidsNew</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">numCentroidsNew</span> <span class="o">!=</span> <span class="nx">numCentroids</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-194" name="CodeChat-194" href="#CodeChat-194"></a>      <span class="nx">generateClusters</span><span class="p">();</span>
+<a id="CodeChat-195" name="CodeChat-195" href="#CodeChat-195"></a>    <span class="p">}</span>
+<a id="CodeChat-196" name="CodeChat-196" href="#CodeChat-196"></a>  <span class="p">});</span>
+<a id="CodeChat-197" name="CodeChat-197" href="#CodeChat-197"></a>
+<a id="CodeChat-198" name="CodeChat-198" href="#CodeChat-198"></a>  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.new-centroids&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-199" name="CodeChat-199" href="#CodeChat-199"></a>    <span class="nx">generateClusters</span><span class="p">();</span>
+<a id="CodeChat-200" name="CodeChat-200" href="#CodeChat-200"></a>  <span class="p">});</span>
+<a id="CodeChat-201" name="CodeChat-201" href="#CodeChat-201"></a>
+<a id="CodeChat-202" name="CodeChat-202" href="#CodeChat-202"></a>  <span class="nx">$numClusters</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-203" name="CodeChat-203" href="#CodeChat-203"></a>    <span class="kd">var</span> <span class="nx">numClustersNew</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numClusters</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-204" name="CodeChat-204" href="#CodeChat-204"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">numClustersNew</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">numClustersNew</span> <span class="o">!=</span> <span class="nx">numClusters</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-205" name="CodeChat-205" href="#CodeChat-205"></a>      <span class="nx">resetPoints</span><span class="p">();</span>
+<a id="CodeChat-206" name="CodeChat-206" href="#CodeChat-206"></a>    <span class="p">}</span>
+<a id="CodeChat-207" name="CodeChat-207" href="#CodeChat-207"></a>  <span class="p">});</span>
+<a id="CodeChat-208" name="CodeChat-208" href="#CodeChat-208"></a>
+<a id="CodeChat-209" name="CodeChat-209" href="#CodeChat-209"></a>  <span class="nx">$numCentroids</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-210" name="CodeChat-210" href="#CodeChat-210"></a>    <span class="kd">var</span> <span class="nx">numCentroidsNew</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numCentroids</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-211" name="CodeChat-211" href="#CodeChat-211"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">numCentroidsNew</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">numCentroidsNew</span> <span class="o">!=</span> <span class="nx">numCentroids</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-212" name="CodeChat-212" href="#CodeChat-212"></a>      <span class="nx">generateClusters</span><span class="p">();</span>
+<a id="CodeChat-213" name="CodeChat-213" href="#CodeChat-213"></a>    <span class="p">}</span>
+<a id="CodeChat-214" name="CodeChat-214" href="#CodeChat-214"></a>  <span class="p">});</span>
+<a id="CodeChat-215" name="CodeChat-215" href="#CodeChat-215"></a>
+<a id="CodeChat-216" name="CodeChat-216" href="#CodeChat-216"></a>  <span class="kd">function</span> <span class="nx">uncolorPoints</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-217" name="CodeChat-217" href="#CodeChat-217"></a>    <span class="nx">pointsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+<a id="CodeChat-218" name="CodeChat-218" href="#CodeChat-218"></a>    <span class="nx">pointsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;circle&#39;</span><span class="p">)</span>
+<a id="CodeChat-219" name="CodeChat-219" href="#CodeChat-219"></a>      <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">points</span><span class="p">).</span><span class="nx">enter</span><span class="p">()</span>
+<a id="CodeChat-220" name="CodeChat-220" href="#CodeChat-220"></a>      <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;circle&#39;</span><span class="p">)</span>
+<a id="CodeChat-221" name="CodeChat-221" href="#CodeChat-221"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;cx&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-222" name="CodeChat-222" href="#CodeChat-222"></a>        <span class="k">return</span> <span class="nx">d</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<a id="CodeChat-223" name="CodeChat-223" href="#CodeChat-223"></a>      <span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;cy&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-224" name="CodeChat-224" href="#CodeChat-224"></a>        <span class="k">return</span> <span class="nx">d</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span>
+<a id="CodeChat-225" name="CodeChat-225" href="#CodeChat-225"></a>      <span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="mf">3</span><span class="p">);</span>
+<a id="CodeChat-226" name="CodeChat-226" href="#CodeChat-226"></a>  <span class="p">}</span>
+<a id="CodeChat-227" name="CodeChat-227" href="#CodeChat-227"></a>
+<a id="CodeChat-228" name="CodeChat-228" href="#CodeChat-228"></a>  <span class="kd">function</span> <span class="nx">resetPoints</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-229" name="CodeChat-229" href="#CodeChat-229"></a>    <span class="nx">resetCentroidUpdateText</span><span class="p">();</span>
+<a id="CodeChat-230" name="CodeChat-230" href="#CodeChat-230"></a>    <span class="nx">points</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="CodeChat-231" name="CodeChat-231" href="#CodeChat-231"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Arbitrarily chosen variance and percentageClusteredPoints
+There is no signficance behind the constants except that they looked good
+with the slider.</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-161" name="CodeChat-161" href="#CodeChat-161"></a>    <span class="kd">var</span> <span class="nx">variance</span> <span class="o">=</span> <span class="nx">randomness</span> <span class="o">/</span> <span class="mf">2</span> <span class="o">+</span> <span class="mf">5</span><span class="p">;</span>
+<a id="CodeChat-162" name="CodeChat-162" href="#CodeChat-162"></a>    <span class="kd">var</span> <span class="nx">percentageClusteredPoints</span> <span class="o">=</span> <span class="p">(</span><span class="mf">100</span> <span class="o">-</span> <span class="mf">0.8</span> <span class="o">*</span> <span class="nx">randomness</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100</span><span class="p">;</span>
+<a id="CodeChat-163" name="CodeChat-163" href="#CodeChat-163"></a>
+<a id="CodeChat-164" name="CodeChat-164" href="#CodeChat-164"></a>    <span class="nx">numClusters</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numClusters</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-165" name="CodeChat-165" href="#CodeChat-165"></a>
+<a id="CodeChat-166" name="CodeChat-166" href="#CodeChat-166"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numClusters</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:3.0em;"><p>Creates a normal distribution with mean randomCenter(parameter)
+and variance</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-171" name="CodeChat-171" href="#CodeChat-171"></a>      <span class="kd">var</span> <span class="nx">xNorm</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">random</span><span class="p">.</span><span class="nx">normal</span><span class="p">(</span><span class="nx">randomCenter</span><span class="p">(</span><span class="nx">width</span><span class="p">),</span> <span class="nx">variance</span><span class="p">);</span>
+<a id="CodeChat-172" name="CodeChat-172" href="#CodeChat-172"></a>      <span class="kd">var</span> <span class="nx">yNorm</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">random</span><span class="p">.</span><span class="nx">normal</span><span class="p">(</span><span class="nx">randomCenter</span><span class="p">(</span><span class="nx">height</span><span class="p">),</span> <span class="nx">variance</span><span class="p">);</span>
+<a id="CodeChat-173" name="CodeChat-173" href="#CodeChat-173"></a>
+<a id="CodeChat-174" name="CodeChat-174" href="#CodeChat-174"></a>      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">percentageClusteredPoints</span> <span class="o">*</span> <span class="nx">NUM_POINTS</span> <span class="o">/</span> <span class="nx">numClusters</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-175" name="CodeChat-175" href="#CodeChat-175"></a>        <span class="nx">points</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">normalPt</span><span class="p">(</span><span class="nx">xNorm</span><span class="p">),</span> <span class="nx">normalPt</span><span class="p">(</span><span class="nx">yNorm</span><span class="p">)]);</span>
+<a id="CodeChat-176" name="CodeChat-176" href="#CodeChat-176"></a>      <span class="p">}</span>
+<a id="CodeChat-177" name="CodeChat-177" href="#CodeChat-177"></a>    <span class="p">}</span>
+<a id="CodeChat-178" name="CodeChat-178" href="#CodeChat-178"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Scatter the remaining points randomly</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-184" name="CodeChat-184" href="#CodeChat-184"></a>    <span class="kd">var</span> <span class="nx">length</span> <span class="o">=</span> <span class="nx">points</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<a id="CodeChat-185" name="CodeChat-185" href="#CodeChat-185"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">NUM_POINTS</span> <span class="o">-</span> <span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-186" name="CodeChat-186" href="#CodeChat-186"></a>      <span class="nx">points</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">randomCenter</span><span class="p">(</span><span class="nx">width</span><span class="p">),</span> <span class="nx">randomCenter</span><span class="p">(</span><span class="nx">height</span><span class="p">)]);</span>
+<a id="CodeChat-187" name="CodeChat-187" href="#CodeChat-187"></a>    <span class="p">}</span>
+<a id="CodeChat-188" name="CodeChat-188" href="#CodeChat-188"></a>
+<a id="CodeChat-189" name="CodeChat-189" href="#CodeChat-189"></a>    <span class="nx">uncolorPoints</span><span class="p">();</span>
+<a id="CodeChat-190" name="CodeChat-190" href="#CodeChat-190"></a>    <span class="nx">resetCentroidUpdateText</span><span class="p">();</span>
+<a id="CodeChat-191" name="CodeChat-191" href="#CodeChat-191"></a>    <span class="nx">voronoiGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+<a id="CodeChat-192" name="CodeChat-192" href="#CodeChat-192"></a>
+<a id="CodeChat-193" name="CodeChat-193" href="#CodeChat-193"></a>    <span class="nx">$meanSquareValue</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;not yet calculated&#39;</span><span class="p">);</span>
+<a id="CodeChat-194" name="CodeChat-194" href="#CodeChat-194"></a>  <span class="p">}</span>
+<a id="CodeChat-195" name="CodeChat-195" href="#CodeChat-195"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Randomly generates the clusters and initializes the d3 animation</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-191" name="CodeChat-191" href="#CodeChat-191"></a>  <span class="kd">function</span> <span class="nx">generateClusters</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-192" name="CodeChat-192" href="#CodeChat-192"></a>    <span class="nx">centroids</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="CodeChat-193" name="CodeChat-193" href="#CodeChat-193"></a>    <span class="nx">numCentroids</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">$numCentroids</span><span class="p">.</span><span class="nx">val</span><span class="p">(),</span> <span class="mf">10</span><span class="p">);</span>
+<a id="CodeChat-194" name="CodeChat-194" href="#CodeChat-194"></a>    <span class="nx">uncolorPoints</span><span class="p">();</span>
+<a id="CodeChat-195" name="CodeChat-195" href="#CodeChat-195"></a>    <span class="nx">resetCentroidUpdateText</span><span class="p">();</span>
+<a id="CodeChat-196" name="CodeChat-196" href="#CodeChat-196"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Generate completely random centroids</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-198" name="CodeChat-198" href="#CodeChat-198"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">k</span> <span class="o">&lt;</span> <span class="nx">numCentroids</span><span class="p">;</span> <span class="nx">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-199" name="CodeChat-199" href="#CodeChat-199"></a>      <span class="kd">var</span> <span class="nx">randomX</span> <span class="o">=</span> <span class="nx">randomCenter</span><span class="p">(</span><span class="nx">width</span><span class="p">);</span>
+<a id="CodeChat-200" name="CodeChat-200" href="#CodeChat-200"></a>      <span class="kd">var</span> <span class="nx">randomY</span> <span class="o">=</span> <span class="nx">randomCenter</span><span class="p">(</span><span class="nx">height</span><span class="p">);</span>
+<a id="CodeChat-201" name="CodeChat-201" href="#CodeChat-201"></a>      <span class="nx">centroids</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">randomX</span><span class="p">,</span> <span class="nx">randomY</span><span class="p">]);</span>
+<a id="CodeChat-202" name="CodeChat-202" href="#CodeChat-202"></a>    <span class="p">}</span>
+<a id="CodeChat-203" name="CodeChat-203" href="#CodeChat-203"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Render initial centroid display</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-214" name="CodeChat-214" href="#CodeChat-214"></a>    <span class="nx">centroidsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+<a id="CodeChat-215" name="CodeChat-215" href="#CodeChat-215"></a>    <span class="nx">voronoiGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+<a id="CodeChat-216" name="CodeChat-216" href="#CodeChat-216"></a>
+<a id="CodeChat-217" name="CodeChat-217" href="#CodeChat-217"></a>    <span class="nx">centroidsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<a id="CodeChat-218" name="CodeChat-218" href="#CodeChat-218"></a>      <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">centroids</span><span class="p">).</span><span class="nx">enter</span><span class="p">()</span>
+<a id="CodeChat-219" name="CodeChat-219" href="#CodeChat-219"></a>      <span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<a id="CodeChat-220" name="CodeChat-220" href="#CodeChat-220"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="nx">triangle</span><span class="p">)</span>
+<a id="CodeChat-221" name="CodeChat-221" href="#CodeChat-221"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">ndx</span><span class="p">){</span> <span class="k">return</span> <span class="nx">colors</span><span class="p">(</span><span class="nx">ndx</span><span class="p">);</span> <span class="p">})</span>
+<a id="CodeChat-222" name="CodeChat-222" href="#CodeChat-222"></a>      <span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;stroke&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<a id="CodeChat-223" name="CodeChat-223" href="#CodeChat-223"></a>      <span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;stroke-width&#39;</span><span class="p">,</span> <span class="s1">&#39;0.7&#39;</span><span class="p">)</span>
+<a id="CodeChat-224" name="CodeChat-224" href="#CodeChat-224"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">){</span> <span class="k">return</span> <span class="s1">&#39;translate(&#39;</span> <span class="o">+</span> <span class="nx">d</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="nx">d</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">;</span> <span class="p">});</span>
+<a id="CodeChat-225" name="CodeChat-225" href="#CodeChat-225"></a>
+<a id="CodeChat-226" name="CodeChat-226" href="#CodeChat-226"></a>    <span class="nx">$meanSquareValue</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">&#39;not yet calculated&#39;</span><span class="p">);</span>
+<a id="CodeChat-227" name="CodeChat-227" href="#CodeChat-227"></a>  <span class="p">}</span>
+<a id="CodeChat-228" name="CodeChat-228" href="#CodeChat-228"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>For each point, we find the centroid it is the closest to.</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-251" name="CodeChat-251" href="#CodeChat-251"></a>  <span class="kd">function</span> <span class="nx">findClosestCentroid</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-252" name="CodeChat-252" href="#CodeChat-252"></a>    <span class="nx">centroidBins</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="CodeChat-253" name="CodeChat-253" href="#CodeChat-253"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numCentroids</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-254" name="CodeChat-254" href="#CodeChat-254"></a>      <span class="nx">centroidBins</span><span class="p">.</span><span class="nx">push</span><span class="p">([]);</span>
+<a id="CodeChat-255" name="CodeChat-255" href="#CodeChat-255"></a>    <span class="p">}</span>
+<a id="CodeChat-256" name="CodeChat-256" href="#CodeChat-256"></a>
+<a id="CodeChat-257" name="CodeChat-257" href="#CodeChat-257"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">points</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-258" name="CodeChat-258" href="#CodeChat-258"></a>      <span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="nx">points</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<a id="CodeChat-259" name="CodeChat-259" href="#CodeChat-259"></a>      <span class="kd">var</span> <span class="nx">minDist</span> <span class="o">=</span> <span class="kc">Infinity</span><span class="p">;</span>
+<a id="CodeChat-260" name="CodeChat-260" href="#CodeChat-260"></a>      <span class="kd">var</span> <span class="nx">minIndex</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<a id="CodeChat-261" name="CodeChat-261" href="#CodeChat-261"></a>      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">centroids</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-262" name="CodeChat-262" href="#CodeChat-262"></a>        <span class="nx">centroid</span> <span class="o">=</span> <span class="nx">centroids</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span>
+<a id="CodeChat-263" name="CodeChat-263" href="#CodeChat-263"></a>        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">distance</span><span class="p">(</span><span class="nx">point</span><span class="p">,</span> <span class="nx">centroid</span><span class="p">);</span>
+<a id="CodeChat-264" name="CodeChat-264" href="#CodeChat-264"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">d</span> <span class="o">&lt;</span> <span class="nx">minDist</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-265" name="CodeChat-265" href="#CodeChat-265"></a>          <span class="nx">minDist</span> <span class="o">=</span> <span class="nx">d</span><span class="p">;</span>
+<a id="CodeChat-266" name="CodeChat-266" href="#CodeChat-266"></a>          <span class="nx">minIndex</span> <span class="o">=</span> <span class="nx">j</span><span class="p">;</span>
+<a id="CodeChat-267" name="CodeChat-267" href="#CodeChat-267"></a>        <span class="p">}</span>
+<a id="CodeChat-268" name="CodeChat-268" href="#CodeChat-268"></a>      <span class="p">}</span>
+<a id="CodeChat-269" name="CodeChat-269" href="#CodeChat-269"></a>      <span class="nx">centroidBins</span><span class="p">[</span><span class="nx">minIndex</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span>
+<a id="CodeChat-270" name="CodeChat-270" href="#CodeChat-270"></a>    <span class="p">}</span>
+<a id="CodeChat-271" name="CodeChat-271" href="#CodeChat-271"></a>
+<a id="CodeChat-272" name="CodeChat-272" href="#CodeChat-272"></a>    <span class="kd">var</span> <span class="nx">meanSquaredDistance</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<a id="CodeChat-273" name="CodeChat-273" href="#CodeChat-273"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">centroidBins</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-274" name="CodeChat-274" href="#CodeChat-274"></a>      <span class="nx">bin</span> <span class="o">=</span> <span class="nx">centroidBins</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<a id="CodeChat-275" name="CodeChat-275" href="#CodeChat-275"></a>
+<a id="CodeChat-276" name="CodeChat-276" href="#CodeChat-276"></a>      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">bin</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-277" name="CodeChat-277" href="#CodeChat-277"></a>        <span class="kd">var</span> <span class="nx">dist</span> <span class="o">=</span> <span class="nx">distance</span><span class="p">(</span><span class="nx">centroids</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">bin</span><span class="p">[</span><span class="nx">j</span><span class="p">]);</span>
+<a id="CodeChat-278" name="CodeChat-278" href="#CodeChat-278"></a>        <span class="nx">meanSquaredDistance</span> <span class="o">+=</span> <span class="nx">dist</span> <span class="o">*</span> <span class="nx">dist</span><span class="p">;</span>
+<a id="CodeChat-279" name="CodeChat-279" href="#CodeChat-279"></a>      <span class="p">}</span>
+<a id="CodeChat-280" name="CodeChat-280" href="#CodeChat-280"></a>    <span class="p">}</span>
+<a id="CodeChat-281" name="CodeChat-281" href="#CodeChat-281"></a>
+<a id="CodeChat-282" name="CodeChat-282" href="#CodeChat-282"></a>    <span class="nx">meanSquaredDistance</span> <span class="o">/=</span> <span class="nx">NUM_POINTS</span><span class="p">;</span>
+<a id="CodeChat-283" name="CodeChat-283" href="#CodeChat-283"></a>    <span class="nx">$meanSquareValue</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">meanSquaredDistance</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<a id="CodeChat-284" name="CodeChat-284" href="#CodeChat-284"></a>  <span class="p">}</span>
+<a id="CodeChat-285" name="CodeChat-285" href="#CodeChat-285"></a>
+<a id="CodeChat-286" name="CodeChat-286" href="#CodeChat-286"></a>  <span class="kd">function</span> <span class="nx">findClosestCentroidAnimation</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>TODO: This is terribly inefficient, fix later
+Color the points according to the centroid to which they belong</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-264" name="CodeChat-264" href="#CodeChat-264"></a>    <span class="nx">pointsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span>
+<a id="CodeChat-265" name="CodeChat-265" href="#CodeChat-265"></a>      <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">points</span><span class="p">)</span>
+<a id="CodeChat-266" name="CodeChat-266" href="#CodeChat-266"></a>      <span class="p">.</span><span class="nx">transition</span><span class="p">()</span>
+<a id="CodeChat-267" name="CodeChat-267" href="#CodeChat-267"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">ndx</span><span class="p">){</span>
+<a id="CodeChat-268" name="CodeChat-268" href="#CodeChat-268"></a>        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">centroidBins</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-269" name="CodeChat-269" href="#CodeChat-269"></a>          <span class="k">if</span> <span class="p">(</span><span class="nx">centroidBins</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-270" name="CodeChat-270" href="#CodeChat-270"></a>            <span class="k">return</span> <span class="nx">colors</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<a id="CodeChat-271" name="CodeChat-271" href="#CodeChat-271"></a>          <span class="p">}</span>
+<a id="CodeChat-272" name="CodeChat-272" href="#CodeChat-272"></a>        <span class="p">}</span>
+<a id="CodeChat-273" name="CodeChat-273" href="#CodeChat-273"></a>      <span class="p">});</span>
+<a id="CodeChat-274" name="CodeChat-274" href="#CodeChat-274"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Render voronoi</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-267" name="CodeChat-267" href="#CodeChat-267"></a>    <span class="nx">voronoiGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">).</span><span class="nx">remove</span><span class="p">();</span>
+<a id="CodeChat-268" name="CodeChat-268" href="#CodeChat-268"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Comment these lines out to get rid of Voronoi</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-278" name="CodeChat-278" href="#CodeChat-278"></a>    <span class="nx">voronoiGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<a id="CodeChat-279" name="CodeChat-279" href="#CodeChat-279"></a>      <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">d3</span><span class="p">.</span><span class="nx">geom</span><span class="p">.</span><span class="nx">voronoi</span><span class="p">(</span><span class="nx">centroids</span><span class="p">))</span>
+<a id="CodeChat-280" name="CodeChat-280" href="#CodeChat-280"></a>      <span class="p">.</span><span class="nx">enter</span><span class="p">().</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<a id="CodeChat-281" name="CodeChat-281" href="#CodeChat-281"></a>      <span class="p">.</span><span class="nx">style</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">,</span> <span class="nx">ndx</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-282" name="CodeChat-282" href="#CodeChat-282"></a>        <span class="k">return</span> <span class="nx">colors</span><span class="p">(</span><span class="nx">ndx</span><span class="p">);</span>
+<a id="CodeChat-283" name="CodeChat-283" href="#CodeChat-283"></a>      <span class="p">}).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-284" name="CodeChat-284" href="#CodeChat-284"></a>        <span class="k">return</span> <span class="s1">&#39;M&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;Z&#39;</span><span class="p">;</span>
+<a id="CodeChat-285" name="CodeChat-285" href="#CodeChat-285"></a>      <span class="p">});</span>
+<a id="CodeChat-286" name="CodeChat-286" href="#CodeChat-286"></a>  <span class="p">}</span>
+<a id="CodeChat-287" name="CodeChat-287" href="#CodeChat-287"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Once the points have been assigned to the centroids, updates the
+centroid to be the mean of all points assigned to it</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-282" name="CodeChat-282" href="#CodeChat-282"></a>  <span class="kd">function</span> <span class="nx">updateCentroid</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-283" name="CodeChat-283" href="#CodeChat-283"></a>    <span class="kd">var</span> <span class="nx">meanSquaredDistance</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:2.0em;"><p>Find new centroids</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-291" name="CodeChat-291" href="#CodeChat-291"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">centroidBins</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-292" name="CodeChat-292" href="#CodeChat-292"></a>      <span class="nx">bin</span> <span class="o">=</span> <span class="nx">centroidBins</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<a id="CodeChat-293" name="CodeChat-293" href="#CodeChat-293"></a>      <span class="nx">newCentroid</span> <span class="o">=</span> <span class="nx">avgXY</span><span class="p">(</span><span class="nx">bin</span><span class="p">);</span>
+<a id="CodeChat-294" name="CodeChat-294" href="#CodeChat-294"></a>
+<a id="CodeChat-295" name="CodeChat-295" href="#CodeChat-295"></a>      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">bin</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-296" name="CodeChat-296" href="#CodeChat-296"></a>        <span class="kd">var</span> <span class="nx">dist</span> <span class="o">=</span> <span class="nx">distance</span><span class="p">(</span><span class="nx">newCentroid</span><span class="p">,</span> <span class="nx">bin</span><span class="p">[</span><span class="nx">j</span><span class="p">]);</span>
+<a id="CodeChat-297" name="CodeChat-297" href="#CodeChat-297"></a>        <span class="nx">meanSquaredDistance</span> <span class="o">+=</span> <span class="nx">dist</span> <span class="o">*</span> <span class="nx">dist</span><span class="p">;</span>
+<a id="CodeChat-298" name="CodeChat-298" href="#CodeChat-298"></a>      <span class="p">}</span>
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:3.0em;"><p>If there are no points in the bin, newCentroid may be NaN
+In this case, we don’t update the centroid location</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-309" name="CodeChat-309" href="#CodeChat-309"></a>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">newCentroid</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">newCentroid</span><span class="p">[</span><span class="mf">1</span><span class="p">]))</span> <span class="p">{</span>
+<a id="CodeChat-310" name="CodeChat-310" href="#CodeChat-310"></a>        <span class="nx">centroids</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">newCentroid</span><span class="p">;</span>
+<a id="CodeChat-311" name="CodeChat-311" href="#CodeChat-311"></a>      <span class="p">}</span>
+<a id="CodeChat-312" name="CodeChat-312" href="#CodeChat-312"></a>    <span class="p">}</span>
+<a id="CodeChat-313" name="CodeChat-313" href="#CodeChat-313"></a>
+<a id="CodeChat-314" name="CodeChat-314" href="#CodeChat-314"></a>    <span class="nx">meanSquaredDistance</span> <span class="o">/=</span> <span class="nx">NUM_POINTS</span><span class="p">;</span>
+<a id="CodeChat-315" name="CodeChat-315" href="#CodeChat-315"></a>    <span class="nx">$meanSquareValue</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">meanSquaredDistance</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span>
+<a id="CodeChat-316" name="CodeChat-316" href="#CodeChat-316"></a>  <span class="p">}</span>
+<a id="CodeChat-317" name="CodeChat-317" href="#CodeChat-317"></a>
+<a id="CodeChat-318" name="CodeChat-318" href="#CodeChat-318"></a>  <span class="kd">function</span> <span class="nx">updateCentroidAnimation</span><span class="p">()</span> <span class="p">{</span>
+<a id="CodeChat-319" name="CodeChat-319" href="#CodeChat-319"></a>    <span class="nx">centroidsGroup</span><span class="p">.</span><span class="nx">selectAll</span><span class="p">(</span><span class="s1">&#39;path&#39;</span><span class="p">)</span>
+<a id="CodeChat-320" name="CodeChat-320" href="#CodeChat-320"></a>      <span class="p">.</span><span class="nx">data</span><span class="p">(</span><span class="nx">centroids</span><span class="p">)</span>
+<a id="CodeChat-321" name="CodeChat-321" href="#CodeChat-321"></a>      <span class="p">.</span><span class="nx">transition</span><span class="p">()</span>
+<a id="CodeChat-322" name="CodeChat-322" href="#CodeChat-322"></a>      <span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;transform&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">){</span> <span class="k">return</span> <span class="s1">&#39;translate(&#39;</span> <span class="o">+</span> <span class="nx">d</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;,&#39;</span> <span class="o">+</span> <span class="nx">d</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">;</span> <span class="p">});</span>
+<a id="CodeChat-323" name="CodeChat-323" href="#CodeChat-323"></a>  <span class="p">}</span>
+<a id="CodeChat-324" name="CodeChat-324" href="#CodeChat-324"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Initial generation of clusters</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-312" name="CodeChat-312" href="#CodeChat-312"></a>  <span class="nx">generateClusters</span><span class="p">();</span>
+<a id="CodeChat-313" name="CodeChat-313" href="#CodeChat-313"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Helper functions</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-314" name="CodeChat-314" href="#CodeChat-314"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Generate centers for dist centers and centroids</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-319" name="CodeChat-319" href="#CodeChat-319"></a>  <span class="kd">function</span> <span class="nx">randomCenter</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-320" name="CodeChat-320" href="#CodeChat-320"></a>    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">n</span><span class="p">;</span>
+<a id="CodeChat-321" name="CodeChat-321" href="#CodeChat-321"></a>  <span class="p">};</span>
+<a id="CodeChat-322" name="CodeChat-322" href="#CodeChat-322"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Euclidean distance between points a and b</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-324" name="CodeChat-324" href="#CodeChat-324"></a>  <span class="kd">function</span> <span class="nx">distance</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-325" name="CodeChat-325" href="#CodeChat-325"></a>    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="mf">2</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="nx">a</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="mf">2</span><span class="p">));</span>
+<a id="CodeChat-326" name="CodeChat-326" href="#CodeChat-326"></a>  <span class="p">}</span>
+<a id="CodeChat-327" name="CodeChat-327" href="#CodeChat-327"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Finds the average x value and average y value of all the points in arr</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-331" name="CodeChat-331" href="#CodeChat-331"></a>  <span class="kd">function</span> <span class="nx">avgXY</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-332" name="CodeChat-332" href="#CodeChat-332"></a>    <span class="kd">var</span> <span class="nx">avgX</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">d</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span> <span class="p">})</span> <span class="o">/</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<a id="CodeChat-333" name="CodeChat-333" href="#CodeChat-333"></a>    <span class="kd">var</span> <span class="nx">avgY</span> <span class="o">=</span> <span class="nx">d3</span><span class="p">.</span><span class="nx">sum</span><span class="p">(</span><span class="nx">arr</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">d</span><span class="p">[</span><span class="mf">1</span><span class="p">];</span> <span class="p">})</span> <span class="o">/</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<a id="CodeChat-334" name="CodeChat-334" href="#CodeChat-334"></a>    <span class="k">return</span> <span class="p">[</span><span class="nx">avgX</span><span class="p">,</span> <span class="nx">avgY</span><span class="p">];</span>
+<a id="CodeChat-335" name="CodeChat-335" href="#CodeChat-335"></a>  <span class="p">}</span>
+<a id="CodeChat-336" name="CodeChat-336" href="#CodeChat-336"></a> 
+</pre></div>
+</div>
+<div class="CodeChat-indent" style="margin-left:1.0em;"><p>Given a function normalFn, uses it to generate a value. If the value
+is not within the range (0, width), continues to do so.</p>
+</div><div class="code fenced-code highlight-javascript notranslate"><div class="highlight"><pre><span></span><a id="CodeChat-342" name="CodeChat-342" href="#CodeChat-342"></a>  <span class="kd">function</span> <span class="nx">normalPt</span><span class="p">(</span><span class="nx">normalFn</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-343" name="CodeChat-343" href="#CodeChat-343"></a>    <span class="kd">var</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">normalFn</span><span class="p">();</span>
+<a id="CodeChat-344" name="CodeChat-344" href="#CodeChat-344"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">val</span> <span class="o">&gt;</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">val</span> <span class="o">&lt;</span> <span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+<a id="CodeChat-345" name="CodeChat-345" href="#CodeChat-345"></a>      <span class="k">return</span> <span class="nx">val</span><span class="p">;</span>
+<a id="CodeChat-346" name="CodeChat-346" href="#CodeChat-346"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="CodeChat-347" name="CodeChat-347" href="#CodeChat-347"></a>      <span class="k">return</span> <span class="nx">normalPt</span><span class="p">(</span><span class="nx">normalFn</span><span class="p">);</span>
+<a id="CodeChat-348" name="CodeChat-348" href="#CodeChat-348"></a>    <span class="p">}</span>
+<a id="CodeChat-349" name="CodeChat-349" href="#CodeChat-349"></a>  <span class="p">}</span>
+<a id="CodeChat-350" name="CodeChat-350" href="#CodeChat-350"></a><span class="p">});</span>
+</pre></div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

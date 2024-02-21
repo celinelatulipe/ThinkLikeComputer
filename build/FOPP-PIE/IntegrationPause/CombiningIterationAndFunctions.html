@@ -1,0 +1,508 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>7.2. Combining Iterations and Functions &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.3. Combining Iterations and Conditionals" href="CombiningIterationAndConditionals.html" />
+    <link rel="prev" title="7.1. Integrating Concepts" href="intro-IntegratingConcepts.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=CombiningIterationAndFunctions'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">7.1. </span>Integrating Concepts" data-toggle="tooltip">
+    <a href="intro-IntegratingConcepts.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">7.3. </span>Combining Iterations and Conditionals' data-toggle="tooltip" >              
+    <a href="CombiningIterationAndConditionals.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="combining-iterations-and-functions">
+<h1><span class="section-number">7.2. </span>Combining Iterations and Functions<a class="headerlink" href="#combining-iterations-and-functions" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we will talk about when to use iteration (for loops) vs. when to use functions. We will also look at examples where:</p>
+<ul class="simple">
+<li><p>Inside an iterating for loop, we invoke a function</p></li>
+<li><p>Inside a function, we use iteration</p></li>
+</ul>
+<section id="code-re-use">
+<h2><span class="section-number">7.2.1. </span>Code Re-Use<a class="headerlink" href="#code-re-use" title="Permalink to this heading">¶</a></h2>
+<p>Both functions and iteration are ways to avoid typing the same (or very similar) lines of code over and over again. This is important because if you have similar lines of code and you discover a bug in one of them, or decide to make a change, you have to make that change in all of them. Whenever you are writing code, if you find yourself writing the same (or very similar) lines of code over and over again, you can probably simplify your code, either by putting that code into a function, or by putting that code inside a loop.</p>
+<p>So, if you need to do something multiple times, should you put the code in a loop or in a function? Here are a few ways to think about this:</p>
+<ul class="simple">
+<li><p>if the code performs a specific, well-defined task, it should likely go in a function.</p></li>
+<li><p>if the code may need to be reused at different times, or called from different places in your program, it should likely go in a function</p></li>
+<li><p>If the code needs to be repeated (over and over again at the same time) across a range of values that change, you probably need a loop in order to step through that range of values. The values might be a numerical range, the items in a list or the characters in a string. In any of these cases you likely need a loop.</p></li>
+</ul>
+</section>
+<section id="invoking-functions-inside-loops">
+<h2><span class="section-number">7.2.2. </span>Invoking Functions Inside Loops<a class="headerlink" href="#invoking-functions-inside-loops" title="Permalink to this heading">¶</a></h2>
+<p>A common pattern is to have a loop that iterates through a set of values (a range of numbers, a list of items or the characters in a string), and for each item in that set, call a function to do something. That looks like this:</p>
+<a class="reference internal image-reference" href="../_images/function_inside_loop.png"><img alt="../_images/function_inside_loop.png" class="align-center" src="../_images/function_inside_loop.png" style="width: 400px;" /></a>
+<p>Remember that to follow Python conventions, we want to declare functions at the top of the script. Then we can call the functions anywhere else in the program, including inside of loops.</p>
+<p>Here is an example of this:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac7_2_1 data-question_label="7.2.2.1">
+<div id=ac7_2_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac7_2_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def cube_input():
+    input_string = input("Enter a number:")
+    input_num = int(input_string)
+    cube = input_num**3
+    print("You entered: ", input_string, ". If you cube it, you get: ", cube)
+
+
+for index in range(5):
+    print("Round #", index)
+    cube_input()
+
+
+print("That's it. All done.")
+</textarea>
+</div>
+</div>
+<p>That’s not a very exciting example, but it demonstrates a few things:</p>
+<ul class="simple">
+<li><p>giving functions meaninful names - the function gets input and cubes it</p></li>
+<li><p>not repeating code - the function is called five times from inside a loop. The function is only four lines of code, but if it was repeated five times, it would be 20 lines of code. The code inside the function doesn’t know the round number. It doesn’t need to.</p></li>
+<li><p>use of the exponent operator ( ** )</p></li>
+<li><p>using variable names that contain the type, to avoid confusion (input_string and input_num).</p></li>
+</ul>
+<p>Let’s look at a turtle example, with a few different functions called from inside a loop.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac7_2_2 data-question_label="7.2.2.2">
+<div id=ac7_2_2_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac7_2_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+import random
+
+def stampy():
+    """ create a stamp-star, with three rotated stamps"""
+    abi.stamp()
+    abi.right(120)
+    abi.stamp()
+    abi.right(120)
+    abi.stamp()
+
+
+def change_color():
+    """ change the color of the turtle to a random shade """
+    red = random.random()
+    green = random.random()
+    blue = random.random()
+    abi.color(red, green, blue)
+
+
+def change_stamp():
+    """ change the stamp shape of the turtle """
+    stamp_shape = stamp_list[stamp_index]
+    abi.shape(stamp_shape)
+    print("Abi's shape is now:", stamp_shape)
+
+stamp_list = ["arrow", "turtle", "square", "classic"]
+stamp_index = 0
+wn = turtle.Screen()
+abi = turtle.Turtle()
+
+input_string = input("How many stamps do you want to create?")
+input_num = int(input_string)
+
+for _ in range(input_num):
+    change_color()
+    stamp_index = (stamp_index + 1) % len(stamp_list)
+    change_stamp()
+    x = random.randrange(-180, 180)
+    y = random.randrange(-180, 180)
+    abi.penup()
+    abi.goto(x,y)
+    abi.pendown()
+    stampy()
+
+abi.hideturtle()
+</textarea>
+</div>
+</div>
+<p>The example above demonstrates the following:</p>
+<ul class="simple">
+<li><p>looping a number of times that varies depending on user input</p></li>
+<li><p>calling multiple different functions within a loop</p></li>
+<li><p>creating a list (of some shapes the turtle can be) and using the [] operator to index into it</p></li>
+<li><p>using the modulo operator (%), in this case to keep the index value between 0 and 3 so we keep cycling between four different turtle stamps in the list</p></li>
+<li><p>using the random module to get random numbers in a range (in this case random x and y coordinates that aren’t too close to the edges of the turtle canvas)</p></li>
+<li><p>using the hideturtle() method to make the turtle disappear at the end of the script</p></li>
+<li><p>proper use of docstrings commenting for each function</p></li>
+</ul>
+</section>
+<section id="iterating-inside-functions">
+<h2><span class="section-number">7.2.3. </span>Iterating Inside Functions<a class="headerlink" href="#iterating-inside-functions" title="Permalink to this heading">¶</a></h2>
+<p>Just as you can have function calls inside loops, you can also have loops inside functions. That looks like this:</p>
+<a class="reference internal image-reference" href="../_images/loop_inside_function.png"><img alt="../_images/loop_inside_function.png" class="align-center" src="../_images/loop_inside_function.png" style="width: 400px;" /></a>
+<p>Here is a modification of the turtle program from above that makes use of a loop inside a function, as well as a loop in the main code that calls the function:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac7_2_3 data-question_label="7.2.3.1">
+<div id=ac7_2_3_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac7_2_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+import random
+
+def stampy():
+    """ create a stamp-star, with 6 rotated stamps"""
+    angle = 360/6
+    for _ in range(6):
+        abi.stamp()
+        abi.right(angle)
+
+
+def change_color():
+    """ change the color of the turtle to a random shade """
+    red = random.random()
+    green = random.random()
+    blue = random.random()
+    abi.color(red, green, blue)
+
+def random_location():
+    x = random.randrange(-180, 180)
+    y = random.randrange(-180, 180)
+    abi.penup()
+    abi.goto(x,y)
+    abi.pendown()
+
+def random_stamp():
+    """ change the stamp shape of the turtle """
+    stamp_list = ["arrow", "turtle", "square", "classic"]
+    stamp_index = random.randrange(4)
+    stamp_shape = stamp_list[stamp_index]
+    abi.shape(stamp_shape)
+
+wn = turtle.Screen()
+abi = turtle.Turtle()
+
+for _ in range(5):
+    random_location()
+    random_stamp()
+    change_color()
+    stampy()
+
+abi.hideturtle()
+</textarea>
+</div>
+</div>
+<p>The example above demonstrates the following:</p>
+<ul class="simple">
+<li><p>a loop in the main part of the program that causes five stamps to be drawn</p></li>
+<li><p>a loop in the stampy function that rotates and stamps the turtle 6 times</p></li>
+<li><p>using a random value to index into the list of stamp shapes</p></li>
+<li><p>a different sequence from the prior example, here we move the turtle to the new location <strong>then</strong> change its shape and color</p></li>
+</ul>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7.2.3.2" data-multipleanswers="false"  id="question7_2_1"  style="visibility: hidden;">
+    <p>In the last turtle program above, how many times does the turtle stamp?</p>
+
+    <li data-component="answer"  id="question7_2_1_opt_a">None</li><li data-component="feedback">The turtle definitely makes some stamps</li>
+    
+    <li data-component="answer"  id="question7_2_1_opt_b">6</li><li data-component="feedback">Every time the stampy function is called, the turtle makes 6 stamps, but the stampy function is called multiple times</li>
+    
+    <li data-component="answer"  id="question7_2_1_opt_c">5</li><li data-component="feedback">The stampy function is called 5 times, but then in the stampy function the turtle stamps more than once.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question7_2_1_opt_d">30</li><li data-component="feedback">Yes, the stampy function is called 5 times, and in the function the turtle stamps 6 times, so that is 30 stamps!</li>
+    
+    <li data-component="answer"  id="question7_2_1_opt_e">undetermined</li><li data-component="feedback">This program doesn't stamp a random number of times, so you can determine the number of stamps.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 7.1. Integrating Concepts' data-toggle="tooltip">
+  <a href="intro-IntegratingConcepts.html" aria-label="Previous - 7.1. Integrating Concepts">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 7.3. Combining Iterations and Conditionals' data-toggle="tooltip" >
+    <a href="CombiningIterationAndConditionals.html" aria-label="Next - 7.3. Combining Iterations and Conditionals">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

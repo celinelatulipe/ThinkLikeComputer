@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title><title><no title></title></title>
+  <meta http-equiv="content-type" content="text/html; charset=None">
+  <link rel="stylesheet" href="pygments.css" type="text/css">
+</head>
+<body>
+<h2><title><no title></title></h2>
+
+<div class="highlight"><pre><span></span><span class="cm">/*!</span>
+<span class="cm"> *</span>
+<span class="cm"> * =======================================================================</span>
+<span class="cm"> *  THE SIMPLEST JAVASCRIPT CUSTOM RANGE SLIDER</span>
+<span class="cm"> *  Author: Taufik Nurrohman &lt;https://github.com/tovic&gt;</span>
+<span class="cm"> * =======================================================================</span>
+<span class="cm"> *</span>
+<span class="cm"> * This is free and unencumbered software released into the public domain.</span>
+<span class="cm"> *</span>
+<span class="cm"> * Anyone is free to copy, modify, publish, use, compile, sell, or</span>
+<span class="cm"> * distribute this software, either in source code form or as a compiled</span>
+<span class="cm"> * binary, for any purpose, commercial or non-commercial, and by any means.</span>
+<span class="cm"> *</span>
+<span class="cm"> * In jurisdictions that recognize copyright laws, the author or authors</span>
+<span class="cm"> * of this software dedicate any and all copyright interest in the</span>
+<span class="cm"> * software to the public domain. We make this dedication for the benefit</span>
+<span class="cm"> * of the public at large and to the detriment of our heirs and</span>
+<span class="cm"> * successors. We intend this dedication to be an overt act of</span>
+<span class="cm"> * relinquishment in perpetuity of all present and future rights to this</span>
+<span class="cm"> * software under copyright law.</span>
+<span class="cm"> *</span>
+<span class="cm"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,</span>
+<span class="cm"> * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF</span>
+<span class="cm"> * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.</span>
+<span class="cm"> * IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR</span>
+<span class="cm"> * OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,</span>
+<span class="cm"> * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR</span>
+<span class="cm"> * OTHER DEALINGS IN THE SOFTWARE.</span>
+<span class="cm"> *</span>
+<span class="cm"> * For more information, please refer to &lt;http://unlicense.org&gt;</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
+
+<span class="kd">function</span> <span class="nx">rangeSlider</span><span class="p">(</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">html</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">,</span>
+  <span class="nx">range</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">),</span>
+  <span class="nx">dragger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">),</span>
+  <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nx">rangeWidth</span><span class="p">,</span> <span class="nx">rangeOffset</span><span class="p">,</span> <span class="nx">draggerWidth</span><span class="p">,</span> <span class="nx">cachePosition</span><span class="p">;</span>
+
+  <span class="kd">var</span> <span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">value</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="c1">// set default value on initiation from `0` to `100` (percentage based)</span>
+    <span class="nx">vertical</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// vertical or horizontal?</span>
+    <span class="nx">rangeClass</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// add extra custom class for the range slider track</span>
+    <span class="nx">draggerClass</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="c1">// add extra custom class for the range slider dragger</span>
+    <span class="nx">drag</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* console.log(v); */</span> <span class="p">}</span> <span class="c1">// function to return the range slider value into something</span>
+  <span class="p">};</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="ow">in</span> <span class="nx">defaults</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="ow">typeof</span> <span class="nx">config</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;undefined&quot;</span><span class="p">)</span> <span class="nx">config</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">defaults</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">addEventTo</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">el</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">ev</span><span class="p">,</span> <span class="nx">fn</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">el</span><span class="p">[</span><span class="s1">&#39;on&#39;</span> <span class="o">+</span> <span class="nx">ev</span><span class="p">]</span> <span class="o">=</span> <span class="nx">fn</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">var</span> <span class="nx">isVertical</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">vertical</span><span class="p">;</span>
+
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">&#39; range-slider &#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;range-slider-vertical&#39;</span> <span class="o">:</span> <span class="s1">&#39;range-slider-horizontal&#39;</span><span class="p">)).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^ +/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+  <span class="nx">range</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;range-slider-track &#39;</span> <span class="o">+</span> <span class="nx">config</span><span class="p">.</span><span class="nx">rangeClass</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/ +$/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+  <span class="nx">dragger</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;dragger &#39;</span> <span class="o">+</span> <span class="nx">config</span><span class="p">.</span><span class="nx">draggerClass</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/ +$/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+  <span class="nx">addEventTo</span><span class="p">(</span><span class="nx">range</span><span class="p">,</span> <span class="s2">&quot;mousedown&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="p">(</span><span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">&#39; no-select&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/^ +/</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="nx">rangeWidth</span> <span class="o">=</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+    <span class="nx">rangeOffset</span> <span class="o">=</span> <span class="nx">range</span><span class="p">.</span><span class="nx">getBoundingClientRect</span><span class="p">().</span><span class="nx">left</span><span class="p">;</span>
+    <span class="c1">// rangeOffset = range[!isVertical ? &#39;offsetLeft&#39; : &#39;offsetTop&#39;];</span>
+    <span class="nx">draggerWidth</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+    <span class="nx">down</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="s2">&quot;mousemove&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span> <span class="s2">&quot;mouseup&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">html</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">html</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/(^| )no-select( |$)/g</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="nx">addEventTo</span><span class="p">(</span><span class="nb">window</span><span class="p">,</span> <span class="s2">&quot;resize&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">woh</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+    <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(((</span><span class="nx">cachePosition</span> <span class="o">/</span> <span class="mf">100</span><span class="p">)</span> <span class="o">*</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="p">(</span><span class="nx">woh</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+    <span class="nx">down</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="p">});</span>
+
+  <span class="kd">function</span> <span class="nx">updateDragger</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">e</span> <span class="o">=</span> <span class="nx">e</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="nx">e</span><span class="p">.</span><span class="nx">pageX</span> <span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">pageY</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">pos</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">pos</span> <span class="o">=</span> <span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollLeft</span> <span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollTop</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">scrollTop</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">down</span> <span class="o">&amp;&amp;</span> <span class="nx">pos</span> <span class="o">&gt;=</span> <span class="nx">rangeOffset</span> <span class="o">&amp;&amp;</span> <span class="nx">pos</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="nx">rangeOffset</span> <span class="o">+</span> <span class="nx">rangeWidth</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">pos</span> <span class="o">-</span> <span class="nx">rangeOffset</span> <span class="o">-</span> <span class="p">(</span><span class="nx">draggerWidth</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+      <span class="nx">cachePosition</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(((</span><span class="nx">pos</span> <span class="o">-</span> <span class="nx">rangeOffset</span><span class="p">)</span> <span class="o">/</span> <span class="nx">rangeWidth</span><span class="p">)</span> <span class="o">*</span> <span class="mf">100</span><span class="p">);</span>
+      <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">(</span><span class="nx">cachePosition</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">initDragger</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">woh</span> <span class="o">=</span> <span class="nx">dragger</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">];</span>
+    <span class="nx">cachePosition</span> <span class="o">=</span> <span class="p">((</span><span class="nx">config</span><span class="p">.</span><span class="nx">value</span> <span class="o">/</span> <span class="mf">100</span><span class="p">)</span> <span class="o">*</span> <span class="nx">range</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;offsetWidth&#39;</span> <span class="o">:</span> <span class="s1">&#39;offsetHeight&#39;</span><span class="p">]);</span>
+    <span class="nx">dragger</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="o">!</span><span class="nx">isVertical</span> <span class="o">?</span> <span class="s1">&#39;left&#39;</span> <span class="o">:</span> <span class="s1">&#39;top&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nx">cachePosition</span> <span class="o">-</span> <span class="p">(</span><span class="nx">woh</span> <span class="o">/</span> <span class="mf">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+    <span class="nx">config</span><span class="p">.</span><span class="nx">drag</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">range</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">dragger</span><span class="p">);</span>
+  <span class="nx">elem</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">range</span><span class="p">);</span>
+
+  <span class="nx">initDragger</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</body>
+</html>

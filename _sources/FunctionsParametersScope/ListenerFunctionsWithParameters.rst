@@ -9,7 +9,14 @@
 Listener Functions with Parameters
 ----------------------------------
 
-Recall that in Chapter 6 we learned about adding interactivity to programs by adding **listener functions** that can respond to user events. The script below draws one random square, and then allows more squares to be drawn whenever the user presses the r key. The **key_r** function is a listener function that only gets called when the operating system detects that the r key is pressed by the user, while the turtle window is **listening** (note the statement on line X that tells the operating system to listen for events on this turtle graphics window).  
+Recall that in Chapter 6 we learned about adding interactivity to programs by 
+adding **listener functions** that can respond to user events. The script below 
+draws one random square, and then allows more squares to be drawn whenever the 
+user presses the r key. The **key_r** function is a listener function that only 
+gets called when the operating system detects that the r key is pressed by the 
+user, while the turtle window is **listening** (note the statement on line X 
+that tells the operating system to listen for events on this turtle graphics 
+window).  
 
 
 .. activecode:: ac8_12_1

@@ -1,0 +1,446 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>3.12. Instances: A Herd of Turtles &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.13. Object Oriented Concepts" href="ObjectInstances.html" />
+    <link rel="prev" title="3.11. 🐢 Exploring the Turtle Module" href="ExploringTurtleModule.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=InstancesAHerdofTurtles'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">3.11. </span>🐢 Exploring the Turtle Module" data-toggle="tooltip">
+    <a href="ExploringTurtleModule.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">3.13. </span>Object Oriented Concepts' data-toggle="tooltip" >              
+    <a href="ObjectInstances.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="instances-a-herd-of-turtles">
+<span id="index-0"></span><h1><span class="section-number">3.12. </span>Instances: A Herd of Turtles<a class="headerlink" href="#instances-a-herd-of-turtles" title="Permalink to this heading">¶</a></h1>
+<p>Just like we can have many different integers in a program, we can have many
+turtles. Each of them is an independent object and we call each one an <strong>instance</strong> of the
+Turtle type (class). Each instance has its own attributes and methods — so alex might
+draw with a thin pink pen and be at some position, while tess might be going in a different
+direction with a fat black pen. So here is what happens when alex completes a square and
+tess completes a triangle:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac3_12_1 data-question_label="3.12.1">
+<div id=ac3_12_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac3_12_1_editor" 
+      data-timelimit=25000     
+    data-audio='*doubleq*Overall Tour*doubleq*; 1-31: Example03_Tour01_Line01; 1-3: Example03_Tour01_Line02; 6-8: Example03_Tour01_Line03; 10: Example03_Tour01_Line04; 6,10: Example03_Tour01_Line05; 12-17: Example03_Tour01_Line06; 19-20: Example03_Tour01_Line07; 22-29: Example03_Tour01_Line08; 31: Example03_Tour01_Line09;*atype**doubleq*Line by Line Tour*doubleq*; 1: Example01_Tour02_Line01; 2: Example01_Tour02_Line02; 3: Example02_Tour02_Line03; 6: Example02_Tour02_Line04; 7: Example03_Tour02_Line05; 8: Example03_Tour02_Line06; 10: Example01_Tour02_Line03; 6,10: Example03_Tour01_Line05; 12-17: Example03_Tour02_Line09; 12-13: Example03_Tour02_Line10; 12: Example03_Tour02_Line11; 13: Example03_Tour02_Line12; 14-15: Example03_Tour02_Line13; 14: Example03_Tour02_Line14; 15: Example03_Tour02_Line15; 16-17: Example03_Tour02_Line16; 16: Example03_Tour02_Line17; 17: Example03_Tour02_Line18; 19-20: Example03_Tour01_Line07; 19: Example03_Tour02_Line20; 20: Example03_Tour02_Line21; 22-29: Example03_Tour01_Line08; 10: Example03_Tour02_Line23; 22-23: Example03_Tour02_Line24; 22: Example03_Tour02_Line25; 23: Example03_Tour02_Line26; 24-25: Example03_Tour02_Line27; 26-27: Example03_Tour02_Line28; 28-29: Example03_Tour02_Line29; 31: Example02_Tour02_Line10;*atype*'      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+wn = turtle.Screen()             # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+
+tess = turtle.Turtle()           # create tess and set their pen width
+tess.pensize(5)
+
+alex = turtle.Turtle()           # create alex
+alex.color("hotpink")            # set their color
+
+tess.forward(80)                 # Let tess draw an equilateral triangle
+tess.left(120)
+tess.forward(80)
+tess.left(120)
+tess.forward(80)
+tess.left(120)                   # complete the triangle
+
+tess.right(180)                  # turn tess around
+tess.forward(80)                 # move them away from the origin so we can see alex
+
+alex.forward(50)                 # make alex draw a square
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+alex.forward(50)
+alex.left(90)
+
+wn.exitonclick()
+</textarea>
+</div>
+</div>
+<p>Here are some <em>How to think like a computer scientist</em> observations:</p>
+<ul class="simple">
+<li><p>There are 360 degrees in a full circle. If you add up all the turns that a
+turtle makes, <em>no matter what steps occurred between the turns</em>, you can
+easily figure out if they add up to some multiple of 360. This should
+convince you that alex is facing in exactly the same direction as they were when
+they were first created. (Geometry conventions have 0 degrees facing East and
+that is the case here too!)</p></li>
+<li><p>We could have left out the last turn for alex, but that would not have been
+as satisfying. If you’re asked to draw a closed shape like a square or a
+rectangle, it is a good idea to complete all the turns and to leave the
+turtle back where it started, facing the same direction as it started in.
+This makes reasoning about the program and composing chunks of code into
+bigger programs easier for us humans!</p></li>
+<li><p>We did the same with tess: tess drew a triangle and turned through a full
+360 degress. Then we turned tess around and moved them aside.  Even the blank
+line 18 is a hint about how the programmer’s <em>mental chunking</em> is working: in
+big terms, tess’ movements were chunked as “draw the triangle” (lines 12-17)
+and then “move away from the origin” (lines 19 and 20).</p></li>
+<li><p>One of the key uses for comments is to record your mental chunking, and big
+ideas. They’re not always explicit in the code.</p></li>
+<li><p>And, uh-huh, two turtles may not be enough for a herd, but you get the idea! Feel
+free to add a third or fourth turtle.</p></li>
+</ul>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3.12.2" data-multipleanswers="false"  id="question3_12_1"  style="visibility: hidden;">
+    <p>True or False: You can only have one active turtle at a time. If you create a second one, you will no longer be able to access or use the first.</p>
+
+    <li data-component="answer"  id="question3_12_1_opt_a">True</li><li data-component="feedback">You can create and use as many turtles as you like. As long as they have different names, you can operate them independently, and make them move in any order you like. To convince yourself this is true, try interleaving the instructions for alex and tess in ActiveCode box 3.</li>
+    
+    <li data-component="answer" data-correct='yes' id="question3_12_1_opt_b">False</li><li data-component="feedback">You can create and use as many turtles as you like. As long as they have different names, you can operate them independently, and make them move in any order you like. If you are not totally convinced, try interleaving the instructions for alex and tess in ActiveCode box 3.</li>
+    
+
+    </ul>
+    </div>
+    <p><strong>Mixed up programs</strong></p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="pp3_12_1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program has one turtle, “jamal”, draw a capital L in blue and then another, “tina”, draw a line to the west in orange as shown to the left:</p>
+<a class="reference internal image-reference" href="../_images/TwoTurtles1.png"><img alt="image of a capital letter L in blue color drawn by one Turtle and a line to the west in orange color drawn by another Turtle. Both the Turtles have same starting point." class="align-left" src="../_images/TwoTurtles1.png" style="height: 100px;" /></a>
+<p>The program should do all set-up, have “jamal” draw the L, and then have “tina” draw the line. Finally, it should set the window to close when the user clicks in it.</p>
+<p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <em>Check Me</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.12.3"          style="visibility: hidden;">
+        import turtle
+wn = turtle.Screen()
+---
+jamal = turtle.Turtle()
+jamal.pensize(10)
+jamal.color("blue")
+jamal.right(90)
+jamal.forward(150)
+---
+jamal.left(90)
+jamal.forward(75)
+---
+tina = turtle.Turtle()
+tina.pensize(10)
+tina.color("orange")
+tina.left(180)
+tina.forward(75)
+---
+wn.exitonclick()
+        </pre>
+        </div>
+        </div>
+    
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="pp3_12_2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>The following program has one turtle, “jamal”, draw a line to the north in blue and then another, “tina”, draw a line to the east in orange as shown to the left,</p>
+<a class="reference internal image-reference" href="../_images/TwoTurtlesL.png"><img alt="Image of a line to the north in blue color drawn by one Turtle and a line to the east in orange drawn by another Turtle. Both the Turtles have a same starting point." class="align-left" src="../_images/TwoTurtlesL.png" style="width: 150px;" /></a>
+<p>The program should import the turtle module, get the window to draw on, create the turtle “jamal”, have it draw a line to the north, then create the turtle “tina”, and have it draw a line to the east. Finally, it should set the window to close when the user clicks in it.</p>
+<p>Drag the blocks of statements from the left column to the right column and put them in the right order. Then click on <em>Check Me</em> to see if you are right. You will be told if any of the lines are in the wrong order.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3.12.4"          style="visibility: hidden;">
+        import turtle
+---
+wn = turtle.Screen()
+---
+jamal = turtle.Turtle()
+jamal.color("blue")
+jamal.pensize(10)
+---
+jamal.left(90)
+jamal.forward(150)
+---
+tina = turtle.Turtle()
+tina.pensize(10)
+tina.color("orange")
+tina.forward(150)
+---
+wn.exitonclick()
+        </pre>
+        </div>
+        </div>
+    </section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 3.11. 🐢 Exploring the Turtle Module' data-toggle="tooltip">
+  <a href="ExploringTurtleModule.html" aria-label="Previous - 3.11. 🐢 Exploring the Turtle Module">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 3.13. Object Oriented Concepts' data-toggle="tooltip" >
+    <a href="ObjectInstances.html" aria-label="Next - 3.13. Object Oriented Concepts">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

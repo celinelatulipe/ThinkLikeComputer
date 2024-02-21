@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_concatenation-and-repetition-index-0">
+  <title>Concatenation and Repetition</title>
+  <subsection xml:id="sequences_concatenation">
+    <title>Concatenation</title>
+    <p>As with strings, the <c>+</c> operator concatenates lists and tuples.</p>
+    <program label="ac9_6_1" interactive="activecode" language="python">
+      <input>
+fruit1 = ["apple","orange","banana","cherry"]
+fruit2 = ["kiwi", "pineapple", "mango", "strawberry", "blueberry", "rhubarb"]
+veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+veggies2 = ("celery", "onion", "cauliflower", "bok choy", "tomato", "pepper")
+all_fruit = fruit1 + fruit2
+print(all_fruit)
+print(type(all_fruit))
+print(fruit1)
+all_veg = veggies1 + veggies2
+print(all_veg)
+print(type(all_veg))
+print(veggies2)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>It is important to see that these operators create new lists/tuples from the elements of the operand lists/tuples.
+                If you concatenate a list with 2 items and a list with 4 items, you will get a new list with 6 items
+                (not a list with two sublists).</p>
+    <p>One way for us to make this more clear is to run the following example in CodeLens.
+                As you step through the code, you will see the variables being created and the lists that they refer to.
+                Pay particular attention to the fact that when <c>new_list</c> is created by the statement
+                <c>new_list = fruit_list + num_list</c>, it refers to a completely new list formed by making copies of the items from <c>fruit_list</c> and <c>num_list</c>.  You can see this very clearly in the CodeLens object diagram.  The objects are different.</p>
+    <program label="ac9_6_2" interactive="codelens" language="python">
+      <input>
+fruit_list = ["apple","orange","banana","cherry"]
+num_list = [6,7]
+
+new_list = fruit_list + num_list
+    </input>
+    </program>
+    <note>
+      <p>WP: Adding types together</p>
+      <p>Beware when adding different types together! Python doesn't understand how to concatenate different
+                    types together. Thus, if we try to add a string to a list with <c>['first'] + "second"</c> then the
+                    interpreter will return an error. To do this you'll need to make the two objects the same type. In this
+                    case, it means putting the string into its own list and then adding the two together like so:
+                    <c>['first'] + ["second"]</c>. This process will look different for other types though. Remember that there
+                    are functions to convert types!</p>
+    </note>
+    <p>The following code won't run, because the third line attempts to add two different types (a list and a tuple). Run it to see the error.</p>
+    <program label="ac9_6_3" interactive="activecode" language="python">
+      <input>
+fruit1 = ["apple","orange","banana","cherry"]
+veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+produce_basket = fruit1 + veggies1
+print(produce_basket)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>Fix the error above by converting veggies1 to a list in the expression on line 3: <c>list(veggies1)</c></p>
+  </subsection>
+  <subsection xml:id="sequences_repetition">
+    <title>Repetition</title>
+    <p>The <c>*</c> operator repeats the items in a list or tuple a given number of times.  So, repetition of a list of 2 items 4 times will give a list
+                with 8 items.</p>
+    <program label="ac9_6_4" interactive="activecode" language="python">
+      <input>
+fruit1 = ["apple","orange","banana","cherry"]
+veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
+many_fruits = fruit1 * 3
+print("Many fruits: ", many_fruist)
+print(fruit1) # doesn't change original list!
+many_veggies = veggies1 * 4
+print("Many veggies:", many_veggies)
+print(veggies1) # doesn't change original tuple!
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>As with concatenation, these operations do not have any effect on the original lists/tuples, they create new lists. You can reassign the new list back to the same variable name though:</p>
+    <program label="ac9_6_5" interactive="activecode" language="python">
+      <input>
+fruit1 = ["apple","orange","banana","cherry"]
+print(fruit1)
+fruit1 = fruit1 * 3
+print(fruit1)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question5_7_1">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+alist = [1,3,5]
+blist = [2,4,6]
+print(alist + blist)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>6</p>
+          </statement>
+          <feedback>
+            <p>Concatenation does not add the lengths of the lists.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[1,2,3,4,5,6]</p>
+          </statement>
+          <feedback>
+            <p>Concatenation does not reorder the items.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[1,3,5,2,4,6]</p>
+          </statement>
+          <feedback>
+            <p>Yes, a new list with all the items of the first list followed by all those from the second.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[3,7,11]</p>
+          </statement>
+          <feedback>
+            <p>Concatenation does not add the individual items.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question5_7_2">
+      <statement>
+        <p>What is printed by the following statements?</p>
+        <program language="python">
+          <input>
+alist = [1,3,5]
+print(alist * 3)
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>9</p>
+          </statement>
+          <feedback>
+            <p>Repetition does not multiply the lengths of the lists.  It repeats the items.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[1,1,1,3,3,3,5,5,5]</p>
+          </statement>
+          <feedback>
+            <p>Repetition does not repeat each item individually.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>[1,3,5,1,3,5,1,3,5]</p>
+          </statement>
+          <feedback>
+            <p>Yes, the items of the list are repeated 3 times, one after another.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>[3,9,15]</p>
+          </statement>
+          <feedback>
+            <p>Repetition does not multiply the individual items.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

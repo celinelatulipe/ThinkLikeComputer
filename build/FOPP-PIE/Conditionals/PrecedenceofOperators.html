@@ -1,0 +1,398 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html  lang="en" class="runestone-sphinx">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>6.5. Precedence of Operators &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=E2DC0A34" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=4182B24D" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-347.f9add1ca35d5ad93.css?v=306CBB19" />
+    <link rel="stylesheet" type="text/css" href="../_static/prefix-runestone.f64dcc3632d7a0c3.css?v=F4F91F21" />
+
+
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/prefix-runtime.2438a8bdd6d43b5c.bundle.js?v=7D29D67B"></script>
+    <script defer="" src="../_static/prefix-347.8328b60515045466.bundle.js?v=2CF09D3E"></script>
+    <script defer="" src="../_static/prefix-runestone.aeac7cf9ad5c07ef.bundle.js?v=4FF65C30"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.6. Conditional Execution: Binary Selection" href="ConditionalExecutionBinarySelection.html" />
+    <link rel="prev" title="6.4. The in and not in operators" href="Theinandnotinoperators.html" />
+
+  
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'FOPP-PIE';
+    eBookConfig.basecourse = 'FOPP-PIE';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = true;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '7.2.11';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" id="rs-book-toc-link" href="../index.html" aria-label="index-page">
+          
+          FOPP-PIE
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="ad_warning"></span></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://guide.runestone.academy' target="_blank" rel="noopener noreferrer" >Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=FOPP-PIE&page=PrecedenceofOperators'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">6.4. </span>The <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> operators" data-toggle="tooltip">
+    <a href="Theinandnotinoperators.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">6.6. </span>Conditional Execution: Binary Selection' data-toggle="tooltip" >              
+    <a href="ConditionalExecutionBinarySelection.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <section id="precedence-of-operators">
+<span id="index-0"></span><h1><span class="section-number">6.5. </span>Precedence of Operators<a class="headerlink" href="#precedence-of-operators" title="Permalink to this heading">¶</a></h1>
+<p>Arithmetic operators take precedence over logical operators. Python will always evaluate the arithmetic operators first (** is highest, then multiplication/division, then addition/subtraction).  Next comes the relational operators.  Finally, the logical operators are done last.  This means that the expression <code class="docutils literal notranslate"><span class="pre">x*5</span> <span class="pre">&gt;=</span> <span class="pre">10</span> <span class="pre">and</span> <span class="pre">y-6</span> <span class="pre">&lt;=</span> <span class="pre">20</span></code> will be evaluated so as to first perform the arithmetic and then check the relationships.  The <code class="docutils literal notranslate"><span class="pre">and</span></code> will be done last.  Many programmers might place parentheses around the two relational expressions, <code class="docutils literal notranslate"><span class="pre">(x*5</span> <span class="pre">&gt;=</span> <span class="pre">10)</span> <span class="pre">and</span> <span class="pre">(y-6</span> <span class="pre">&lt;=</span> <span class="pre">20)</span></code>. This is not necessary, but if often makes it easier for people to read and understand the code.</p>
+<p>The following table summarizes the operator precedence from highest to lowest.  A complete table for the entire language can be found in the <a class="reference external" href="http://docs.python.org/py3k/reference/expressions.html#expression-lists">Python Documentation</a>.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Level</p></th>
+<th class="head"><p>Category</p></th>
+<th class="head"><p>Operators</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>7(high)</p></td>
+<td><p>exponent</p></td>
+<td><p>**</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>multiplication</p></td>
+<td><p>*,/,//,%</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>addition</p></td>
+<td><p>+,-</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>relational</p></td>
+<td><p>==,!=,&lt;=,&gt;=,&gt;,&lt;</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>logical</p></td>
+<td><p>not</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>logical</p></td>
+<td><p>and</p></td>
+</tr>
+<tr class="row-even"><td><p>1(low)</p></td>
+<td><p>logical</p></td>
+<td><p>or</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This workspace is provided for your convenience.  You can use this activecode window to try out anything you like.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac6_5_1 data-question_label="6.5.1">
+<div id=ac6_5_1_question class="ac_question">
+
+</div>
+<textarea data-lang="python" id="ac6_5_1_editor" 
+      data-timelimit=25000  data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+
+</textarea>
+</div>
+</div>
+</div>
+<div class="admonition-common-mistake admonition">
+<p class="admonition-title">Common Mistake!</p>
+<p>Students often incorrectly combine the in and or operators. For example, if they want to check
+that the letter x is inside of either of two variables then they tend to write it the following
+way: <code class="docutils literal notranslate"><span class="pre">'x'</span> <span class="pre">in</span> <span class="pre">y</span> <span class="pre">or</span> <span class="pre">z</span></code></p>
+<p>Written this way, the code would not always do what the programmer intended. This is because the
+<code class="docutils literal notranslate"><span class="pre">in</span></code> operator is only on the left side of the or statement. It doesn’t get implemented on both
+sides of the or statement. In order to properly check that x is inside of either variable, the in
+operator must be used on both sides which looks like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;x&#39;</span> <span class="ow">in</span> <span class="n">y</span> <span class="ow">or</span> <span class="s1">&#39;x&#39;</span> <span class="ow">in</span> <span class="n">z</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Check your understanding</strong></p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6.5.2" data-multipleanswers="false"  id="question6_5_1"  style="visibility: hidden;">
+    <p>Which of the following properly expresses the  precedence of operators (using parentheses) in the following expression: 5*3 &gt; 10 and 4+6==11</p>
+
+    <li data-component="answer" data-correct='yes' id="question6_5_1_opt_a">((5*3) &gt; 10) and ((4+6) == 11)</li><li data-component="feedback">Yes, * and + have higher precedence, followed by &gt; and ==, and then the keyword &quot;and&quot;</li>
+    
+    <li data-component="answer"  id="question6_5_1_opt_b">(5*(3 &gt; 10)) and (4 + (6 == 11))</li><li data-component="feedback">Arithmetic operators (*, +) have higher precedence than comparison operators (&gt;, ==)</li>
+    
+    <li data-component="answer"  id="question6_5_1_opt_c">((((5*3) &gt; 10) and 4)+6) == 11</li><li data-component="feedback">This grouping assumes Python simply evaluates from left to right, which is incorrect.  It follows the precedence listed in the table in this section.</li>
+    
+    <li data-component="answer"  id="question6_5_1_opt_d">((5*3) &gt; (10 and (4+6))) == 11</li><li data-component="feedback">This grouping assumes that &quot;and&quot; has a higher precedence than ==, which is not true.</li>
+    
+
+    </ul>
+    </div>
+    <p>Here is an animation for the above expression:</p>
+
+<div data-component="showeval" data-question_label="6.5.3" class="runestone explainer" id="se_ac6_5_1" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac6_5_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac6_5_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">5 * 3 > 10 and 4 + 6 == 11<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac6_5_1"] = ['{{5 * 3}}{{15}} > 10 and 4 + 6 == 11', '{{15 > 10}}{{True}} and 4 + 6 == 11', 'True and {{4 + 6}}{{10}} == 11', 'True and {{10 == 11}}{{False}}', '{{True and False}}{{False}}'];
+    </script>
+</div>
+</section>
+
+
+  
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 6.4. The  in  and not in  operators' data-toggle="tooltip">
+  <a href="Theinandnotinoperators.html" aria-label="Previous - 6.4. The  in  and not in  operators">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 6.6. Conditional Execution: Binary Selection' data-toggle="tooltip" >
+    <a href="ConditionalExecutionBinarySelection.html" aria-label="Next - 6.6. Conditional Execution: Binary Selection">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 7.2.11.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

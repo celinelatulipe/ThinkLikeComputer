@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_length-index-0">
+  <title>Length</title>
+  <p>The <c>len</c> function, when applied to a string, returns the number of characters in a string.</p>
+  <program label="ac9_4_1" interactive="activecode" language="python">
+    <input>
+fruit = "Banana"
+print(len(fruit))
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>To get the last letter of a string, you might be tempted to try something like
+            this:</p>
+  <program label="ac9_4_2" interactive="activecode" language="python">
+    <input>
+fruit = "Banana"
+sz = len(fruit)
+last = fruit[sz]       # ERROR!
+print(last)
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>That won't work. It causes the runtime error <c>IndexError: string index out of range</c>. The reason is
+            that there is no letter at index position 6 in <c>"Banana"</c>. Since we started counting at zero, the
+            six indexes are numbered 0 to 5. To get the last character, we have to subtract 1 from the length.
+            Give it a try in the example above.</p>
+  <program label="ac9_4_3" interactive="activecode" language="python">
+    <input>
+fruit = "Banana"
+sz = len(fruit)
+last_ch = fruit[sz-1]
+print(last_ch)
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>Alternatively, in Python we can use <term>negative indices</term>, which count backward from the end of the string. The expression <c>fruit[-1]</c> yields the last letter, <c>fruit[-2]</c> yields the second to last, and so on.  Try it!</p>
+  <p>Typically, a Python programmer would combine lines 2 and 3 from the above example into a single line:</p>
+  <program language="python">
+    <input>
+last_ch = fruit[len(fruit)-1]
+</input>
+  </program>
+  <p>You can use the <c>len</c> function to access other predictable indices, like the middle character of a string.:</p>
+  <program language="python">
+    <input>
+fruit = "grape"
+mid_char = fruit[len(fruit)//2]
+# the value of mid_char is "a"
+</input>
+  </program>
+  <p>As with strings, the function <c>len</c> returns the length of a list (the number of items in the list).
+            However, since lists can have items which are themselves sequences (e.g., strings),
+            it is important to note that <c>len</c> only returns the top-most length.</p>
+  <program label="ac9_4_4" interactive="activecode" language="python">
+    <input>
+alist =  ["hello", 2.0, 5]
+print(len(alist))
+print(len(alist[0]))
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>Note that <c>alist[0]</c> is the string <c>"hello"</c>, which has length 5.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question9_4_1">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+s = "python rocks"
+print(len(s))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>11</p>
+        </statement>
+        <feedback>
+          <p>The blank space counts as a character.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>12</p>
+        </statement>
+        <feedback>
+          <p>Yes, there are 12 characters in the string.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question9_4_2">
+    <statement>
+      <p>What is printed by the following statements?</p>
+      <program language="python">
+        <input>
+alist = [3, 67, "cat", 3.14, False]
+print(len(alist))
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>4</p>
+        </statement>
+        <feedback>
+          <p>len returns the actual number of items in the list, not the maximum index value.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>5</p>
+        </statement>
+        <feedback>
+          <p>Yes, there are 5 items in this list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="ac9_4_5">
+    <statement>
+      <p>Assign the number of elements in <c>lst</c> to the variable <c>output</c>.</p>
+    </statement>
+    <program label="ac9_4_5_editor" interactive="activecode" language="python">
+      <input>
+lst = ["hi", "morning", "dog", "506", "caterpillar", "balloons", 106, "yo-yo", "python", "moon", "water", "sleepy", "daffy", 45, "donald", "whiteboard", "glasses", "markers", "couches", "butterfly", "100", "magazine", "door", "picture", "window", ["Olympics", "handle"], "chair", "pages", "readings", "burger", "juggle", "craft", ["store", "poster", "board"], "laptop", "computer", "plates", "hotdog", "salad", "backpack", "zipper", "ring", "watch", "finger", "bags", "boxes", "pods", "peas", "apples", "horse", "guinea pig", "bowl", "EECS"]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(output, 52, "Testing that output value is assigned to correct value.")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+</section>

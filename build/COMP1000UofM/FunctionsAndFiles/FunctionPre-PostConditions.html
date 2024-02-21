@@ -1,0 +1,585 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.4. Ethics: Documenting Function Assumptions &#8212; COMP 1000: Think Like a Computer</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="../_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="../_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="../_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.cd688d1623c9932e.css?v=630908D8" />
+    <link rel="stylesheet" type="text/css" href="../_static/runestone.675cfab3e021b8f9.css?v=AC6C1FF6" />
+
+
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="" src="../_static/jquery.js"></script>
+    <script defer="" src="../_static/underscore.js"></script>
+    <script defer="" src="../_static/doctools.js"></script>
+    <script defer="" src="../_static/matrixeq.js?v=D64CFA5A"></script>
+    <script defer="" src="../_static/webglinteractive.js?v=2B768384"></script>
+    <script defer="" src="../_static/FileSaver.min.js?v=8408C997"></script>
+    <script defer="" src="../_static/html4css1.css?v=4533ACD3"></script>
+    <script defer="" src="../_static/animationbase.js?v=A043C3A7"></script>
+    <script defer="" src="../_static/runtime.15a489335c5c6109.bundle.js?v=8DB56D48"></script>
+    <script defer="" src="../_static/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_jquery-ui_jquery-ui_js-node_-72cd89.51d9dde4e5162190.bundle.js?v=9CAA2D33"></script>
+    <script defer="" src="../_static/runestone.a1906624d1effde5.bundle.js?v=919C0428"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.5. Listener Functions" href="ListenerFunctions.html" />
+    <link rel="prev" title="5.3. Function Invocation" href="FunctionInvocation.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    eBookConfig.useRunestoneServices = false;
+    eBookConfig.host = 'http://127.0.0.1:8000' || 'http://127.0.0.1:8000';
+    eBookConfig.app = eBookConfig.host+'/runestone';
+    eBookConfig.course = 'COMP1000UofM';
+    eBookConfig.basecourse = 'COMP1000UofM';
+    eBookConfig.isLoggedIn = false;
+    eBookConfig.enableCompareMe = eBookConfig.useRunestoneServices;
+    eBookConfig.new_server_prefix = '';
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "good";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.0.9';
+  eBookConfig.jobehost = '';
+  eBookConfig.proxyuri_runs = '';
+  eBookConfig.proxyuri_files = '';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="../_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="../index.html" aria-label="index-page">
+          
+          COMP1000UofM
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='../index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='../genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="../search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=COMP1000UofM&page=FunctionPre-PostConditions'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - <span class="section-number">5.3. </span>Function Invocation" data-toggle="tooltip">
+    <a href="FunctionInvocation.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - <span class="section-number">5.5. </span>Listener Functions' data-toggle="tooltip" >              
+    <a href="ListenerFunctions.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+
+  
+  <div class="section" id="ethics-documenting-function-assumptions">
+<h1><span class="section-number">5.4. </span>Ethics: Documenting Function Assumptions<a class="headerlink" href="#ethics-documenting-function-assumptions" title="Permalink to this headline">¶</a></h1>
+<p>You already saw earlier in this chapter that <strong>docstrings</strong> are used to provide information about the purpose of a function.
+But, that’s just the beginning. It’s often useful and important to document other information about functions: such as when
+the function is appropriate to use (and when it might not be appropriate), and how the state of a program is impacted by running the
+funtion. Let’s look at an example.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_4_1 data-question_label="5.4.1">
+<div id=ac5_4_1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac5_4_1_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+
+def square():
+  """Draws a square"""
+  for _ in range(4):
+    amy.forward(20)
+    amy.right(90)
+
+def flower():
+  """Draws squares in rotation around a point to form a flower"""
+  num_squares = 12
+  angle = 360/num_squares               # turn 30 degrees before drawing each square
+  for _ in range(num_squares):
+    amy.right(angle)
+    square()
+
+
+wn = turtle.Screen()      # Set up the window and its attributes
+amy = turtle.Turtle()    # create amy
+amy.speed(10)            # make turtle draw fast
+
+amy.color("red")      # draw first flower in red
+flower()
+
+amy.penup()           # pick up pen and move to new location
+amy.left(45)
+amy.forward(100)
+amy.pendown()         # put pen back down
+
+amy.color("purple")   # draw second flower in purple
+flower()
+
+amy.penup()           # pick up pen and move to new location
+amy.left(70)
+amy.forward(50)
+amy.pendown()         # put pen back down
+
+amy.color("pink")   # draw third flower in pink
+flower()
+</textarea>
+</div>
+</div>
+<p>This example uses function composition: one function calls another function. The flower() function calls the square() function repeatedl, each rotated slightly, to form a small flower. The two functions are defined at the top of the script. Also note the docstrings in each, saying what each function does. The rest of the code sets up the turtle and screen, and then there are a number of commands that move the turtle to different places, set the colour and call the flower() function.</p>
+<p>The purple and pink flowers are rotated slightly compared to the red flower. If you look at the code, after drawing the red flower the turtle turns right 45 degrees, moves to the new location and then starts drawing the flower. The turtle is facing north-east when it starts drawing the second flower; the rotation of the flower is defined by the heading of the turtle. There are a lot of aspects of program state that can come into play here, and it is appropriate for you as the developer of the code to communicate how this function will behave when it is called. Let’s look at a slightly modified version of the same code below:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_4_2 data-question_label="5.4.2">
+<div id=ac5_4_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac5_4_2_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+
+def square():
+  """Draws a square"""
+  for _ in range(4):
+    amy.forward(20)
+    amy.right(90)
+
+def flower():
+  """Draws squares in rotation around a point to form a flower"""
+  amy.color("orange")
+  num_squares = 12
+  angle = 360/num_squares               # turn 30 degrees before drawing each square
+  for _ in range(num_squares):
+    amy.right(angle)
+    square()
+  amy.penup()
+  amy.home()
+  amy.pendown()
+
+wn = turtle.Screen()      # Set up the window and its attributes
+amy = turtle.Turtle()    # create amy
+amy.speed(10)            # make turtle draw fast
+
+amy.color("red")
+flower()
+
+amy.penup()
+amy.left(45)
+amy.forward(100)
+amy.pendown()
+
+amy.color("purple")
+flower()
+
+amy.penup()           # pick up pen and move to new location
+amy.left(70)
+amy.forward(50)
+amy.pendown()         # put pen back down
+
+amy.color("pink")   # draw third flower in pink
+flower()
+</textarea>
+</div>
+</div>
+<p>In this version of the program, everything is the same, except for the flower() function. It still draws a flower, but it behaves differently in two ways. Run it and see if you can figure it out.</p>
+<p>First, the colour is different. This version of the flower function is setting the turtle draw color to orange inside the function. That means that the code on lines 25, 33, and 41 are useless - they are setting the turtle colour before calling the flower() function, but the flower() function is setting the colour to orange, and so it only draws orange flowers. The second difference is that in this version, the code at the end of the flower() function sends the turtle to the home location in the center of the screen, and that home() command also resets the turtle’s orientation to face east. That means any movements of the turtle between drawing flowers are movements from the center of the screen. This change to the way the flower function works impacts how the code in the rest of the program functions (and in this case changes the location of the pink flower).</p>
+<p>It is important to realize that when writing functions, you are making choices and making assumptions about how you expect the code to be used. Writing out the pre and post-conditions, as shown below, is a way of making your assumptions about how the function should be used, very explicit. This forces you to think about your design choices. Does it make sense for the flower to be only one colour? What’s so great about orange? Maybe the colour should be set prior to calling this function so that the flowers can be other colours. (In Chapter 9 we’ll show how to send in the colour to the function as a parameter.) Should the turtle end at the center of the flower, or should the turtle return to the center of the drawing canvas? Either might be the right choice, depending on what your program is meant to do, but writing out the pre- and post-conditions explicitly will help you think through the choices you are making.</p>
+<p>While the colour of flowers and the position of the turtle may not be life-changing in their ethical implications, other code that you write will have much more critical implications. In the next chapter you will learn about conditionals and how the Python interpreter can make decisions based on code statements you write. Then in Chapter 9 when we learn how to write functions that can accept information as parameters, we will put these things together and you will see how a function can return a decision about a piece of information, such as whether someone should be considered for a job, whether someone should be admitted into a college program, etc. If the assumptions about the information sent in are not documented or met, people’s lives could be impacted negatively. Writing the pre and post conditions for your functions will help ensure you and other programmers know in which conditions it’s appropriate to use your functions, and how running them may affect other code.</p>
+<div class="section" id="function-pre-conditions">
+<h2><span class="section-number">5.4.1. </span>Function Pre-Conditions<a class="headerlink" href="#function-pre-conditions" title="Permalink to this headline">¶</a></h2>
+<p>Pre-conditions define the assumptions that the programmer expects to be true in order for the function to work as expected. In this modification of the example above, you can see that pre-conditions have been added for both functions:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_4_3 data-question_label="5.4.1.1">
+<div id=ac5_4_3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac5_4_3_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+
+def square():
+  """Draws a square
+
+     Pre-conditions: turtle named Amy exists, and pen is down,
+       Amy's current orientation determines orientation of square.
+       Amy's current pen color determines color of square.
+  """
+
+  for _ in range(4):
+    amy.forward(20)
+    amy.right(90)
+
+def flower():
+  """Draws squares in rotation around a point to form a flower
+
+     Pre-conditions: turtle named Amy exists, pen is down.
+       Amy's current orientation determines orientation of flower.
+       Amy's current pen color determines colour of flower.
+  """
+  num_squares = 12
+  angle = 360/num_squares               # turn 30 degrees before drawing each square
+  for _ in range(num_squares):
+    amy.right(angle)
+    square()
+  amy.penup()
+  amy.home()
+  amy.pendown()
+
+wn = turtle.Screen()      # Set up the window and its attributes
+amy = turtle.Turtle()    # create amy
+amy.speed(10)            # make turtle draw fast
+
+amy.color("red")
+flower()
+
+amy.penup()
+amy.left(45)
+amy.forward(100)
+amy.pendown()
+
+amy.color("purple")
+flower()
+
+amy.penup()           # pick up pen and move to new location
+amy.left(70)
+amy.forward(50)
+amy.pendown()         # put pen back down
+
+amy.color("pink")  # draw third flower in pink
+flower()
+</textarea>
+</div>
+</div>
+<p>A few things to note: the pre-conditions outline what is expected to be true in order for these two functions to work. In this case, if there isn’t a turtle called Amy, the function will fail. If there is a turtle called Amy, but Amy’s pen is up, the function will run, but no flower will be visible. This may lead you to think that perhaps there should be an amy.pendown() command at the beginning of the flower function. That’s a possible design decision. (See how writing out the pre-conditions helps you to think through your design choices?). Another thing to note here is the style of the <strong>docstrings</strong> comment. Since it spans multiple lines, the three quotation marks at the beginning and end are at the left, with the comment text indented. There is a summary line first, then a blank line, then the rest of the information, including the preconditions. This helps for readability and is a convention you should follow.</p>
+</div>
+<div class="section" id="function-post-conditions">
+<h2><span class="section-number">5.4.2. </span>Function Post-Conditions<a class="headerlink" href="#function-post-conditions" title="Permalink to this headline">¶</a></h2>
+<p>Post-conditions identify how the state of your program will be different <em>after</em> running the function. The program from above is presented below with post-conditions added for both functions:</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=ac5_4_4 data-question_label="5.4.2.1">
+<div id=ac5_4_4_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="ac5_4_4_editor" 
+      data-timelimit=25000     
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+import turtle
+
+def square():
+  """Draws a square
+
+     Pre-conditions: turtle named Amy exists, and pen is down,
+       Amy's current orientation determines orientation of square.
+       Amy's current pen color determines color of square.
+     Post-conditions: A square is drawn on the canvas.
+  """
+
+  for _ in range(4):
+    amy.forward(20)
+    amy.right(90)
+
+def flower():
+  """Draws squares in rotation around a point to form a flower
+
+     Pre-conditions: turtle named Amy exists, pen is down.
+       Amy's current orientation determines orientation of flower.
+       Amy's current pen color determines colour of flower.
+     Post-conditions: A flower is drawn on the canvas. The turtle is
+       returned to home (0,0), with east orientation.
+  """
+  num_squares = 12
+  angle = 360/num_squares               # turn 30 degrees before drawing each square
+  for _ in range(num_squares):
+    amy.right(angle)
+    square()
+  amy.penup()
+  amy.home()
+  amy.pendown()
+
+wn = turtle.Screen()      # Set up the window and its attributes
+amy = turtle.Turtle()    # create amy
+amy.speed(10)            # make turtle draw fast
+
+amy.color("red")
+flower()
+
+amy.penup()
+amy.left(45)
+amy.forward(100)
+amy.pendown()
+
+amy.color("purple")
+flower()
+
+amy.penup()           # pick up pen and move to new location
+amy.left(70)
+amy.forward(50)
+amy.pendown()         # put pen back down
+
+amy.color("pink")  # draw third flower in pink
+flower()
+</textarea>
+</div>
+</div>
+<p>This code now shows what programmers need to know about changes to the state of the program, after the function has run. In the case of the square() function, the only change is that there is now a square on the canvas. The turtle’s colour, orientation, pen state, etc. is all the same as before the function was called. For the flower() function, there are two changes: the flower is drawn on canvas, and the turtle is returned to the home position and orientation. Reading this allows you and any other programmers to know what to expect if the function is called.</p>
+<p><strong>Check your understanding</strong>
+[TODO: Lauren will add some questions</p>
+</div>
+</div>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - 5.3. Function Invocation' data-toggle="tooltip">
+  <a href="FunctionInvocation.html" aria-label="Previous - 5.3. Function Invocation">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - 5.5. Listener Functions' data-toggle="tooltip" >
+    <a href="ListenerFunctions.html" aria-label="Next - 5.5. Listener Functions">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 clatulip.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.0.9.
+    </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
