@@ -71,8 +71,8 @@ the value that was 'passed into' the function.
    :trace_mode: true
 
    def hello2(s):
-    &nbsp;&nbsp;&nbsp;print("Hello " + s)
-    &nbsp;&nbsp;&nbsp;print("Glad to meet you")
+       print("Hello " + s)
+       print("Glad to meet you")
 
    hello2("Nick")
    ~~~~

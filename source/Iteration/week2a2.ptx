@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<section xml:id="iteration_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="assess_ch4_1">
+    <statement>
+      <p>Write one for loop to print out each character of the string <c>my_str</c> on a separate line.</p>
+    </statement>
+    <program label="assess_ch4_1_editor" interactive="activecode" language="python">
+      <input>
+my_str = "MANITOBA"
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+    self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+    self.assertIn("M\nA\nN\nI\nT\nO\nB\nA", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_2">
+    <statement>
+      <p>Write one for loop to print out each element of the list <c>several_things</c>. Then, write <em>another</em> for loop to print out the TYPE of each element of the list <c>several_things</c>. To complete this problem you should have written two different for loops, each of which iterates over the list <c>several_things</c>, but each of those 2 for loops should have a different result.</p>
+    </statement>
+    <program label="assess_ch4_2_editor" interactive="activecode" language="python">
+      <input>
+several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+  def test_output(self):
+      self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+      str1 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;\n&lt;class 'int'&gt;\n&lt;class 'float'&gt;\n&lt;class 'float'&gt;\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;"
+      str2 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;\n&lt;type 'int'&gt;\n&lt;type 'float'&gt;\n&lt;type 'float'&gt;\n&lt;type 'int'&gt;\n&lt;type 'str'&gt;\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;"
+      self.assertTrue(str1 in self.getOutput() or str2 in self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_3">
+    <statement>
+      <p>Write code that uses iteration to print out <term>the length</term> of each element of the list stored in <c>str_list</c>.</p>
+    </statement>
+    <program label="assess_ch4_3_editor" interactive="activecode" language="python">
+      <input>
+str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
+
+# Write your code here.
+=====
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+    def test_output(self):
+        self.assertIn("for", self.getEditorText(), "Testing whether you used a for loop (Don't worry about actual and expected values).")
+        self.assertIn("5\n0\n7\n9\n13", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_4">
+    <statement>
+      <p>Write a program that uses the turtle module <term>and</term> a for loop to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting <c>.speed(10)</c> for the turtle to draw fast, or <c>.speed(0)</c> for it to draw super fast with no animation.)</p>
+    </statement>
+    <program label="assess_ch4_4_editor" interactive="activecode" language="python">
+      <input>
+import turtle
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_5">
+    <statement>
+      <p>Write code to count the number of characters in <c>original_str</c> using the accumulation pattern and assign the answer to a variable <c>num_chars</c>. Do NOT use the <c>len</c> function to solve the problem (if you use it while you are working on this problem, comment it out afterward!)</p>
+    </statement>
+    <program label="assess_ch4_5_editor" interactive="activecode" language="python">
+      <input>
+original_str = "The quick brown rhino jumped over the extremely lazy fox."
+
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+       self.assertEqual(num_chars, len(original_str), "Testing whether num_chars_sent has the correct value")
+       self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_7">
+    <statement>
+      <p>Write code to create a list of numbers from 0 to 67 and assign that list to the variable <c>nums</c>. Do not hard code the list.</p>
+    </statement>
+    <program label="assess_ch4_7_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch4_8_lh">
+    <statement>
+      <blockquote>
+        <image source="Iteration/Figures/cdq4-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+        <p>Given the following output, frame, and arrow indicators, what happens in the next step?</p>
+      </blockquote>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>0 is printed</p>
+        </statement>
+        <feedback>
+          <p>Not quite, as shown, 0 has already printed</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>1 is printed</p>
+        </statement>
+        <feedback>
+          <p>Not quite, The next line to execute is at the top of the for loop, not the print</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The variable i checks for the end of the loop</p>
+        </statement>
+        <feedback>
+          <p>Correct! The code needs to check the list and see if there is anything left to do (line 1). Once it realizes it still has numbers to process, the loop continues.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>An error is thrown</p>
+        </statement>
+        <feedback>
+          <p>Not quite, this code runs properly, try it yourself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_ch4_9_lh">
+    <statement>
+      <p>:</p>
+      <image source="Iteration/Figures/cdq4-2.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+      <p>The red arrow is still pointing to line 6 but we can see in the global frame that j is &#x2018;o'. Why is the next line to execute line 6?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Because 'o' gets printed twice</p>
+        </statement>
+        <feedback>
+          <p>Not quite, there is no reason for 'o' to print again</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Because the loop starts again</p>
+        </statement>
+        <feedback>
+          <p>Not quite, once a loop finishes running in its entirety, it can't hop back up to run again</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Because the code is checking for another iteration</p>
+        </statement>
+        <feedback>
+          <p>Correct! The code needs to check in the list and see if there is anything left to do (line 6). Once it realizes there isn't, the code block completes</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Because there is an error in the code</p>
+        </statement>
+        <feedback>
+          <p>Not quite, this code runs properly, try it yourself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_ch4_10_lh">
+    <statement>
+      <p>: <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <image source="Iteration/Figures/cdq4-3.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+        <p>The next line to execute is shown with the red arrow (line 4). What line of code will execute next?
+<BlankNode/></p>
+      </var>
+    </setup>
+  </exercise>
+</section>

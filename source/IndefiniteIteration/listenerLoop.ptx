@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<section xml:id="indefinite-iteration_the-input-listener-loop-index-0">
+  <title>The Input Listener Loop</title>
+    <subsection xml:id="indefinite-iteration_turtle-example">
+      <title>Indefinite iteration built-in to the turtle module</title> 
+        <p>At the end of the previous section, we advised using a for loop whenever it will be known at the beginning of the
+                  iteration process how many times the block of code needs to be executed. Usually, in Python, you will use a for loop
+                  rather than a while loop. When is it <em>not</em> known at the beginning of the iteration how many times the code block needs
+                  to be executed? The answer is, when it depends on something that happens <term>during</term> the execution.</p>
+        <p>One very common pattern is called a <term>listener loop</term>. Inside the while loop there is a function call to get user input.
+                  The loop repeats indefinitely, until a particular input is received.</p>
+        <program label="ac10_3_1" interactive="activecode" language="python">
+          <input>
+theSum = 0
+x = -1
+while (x != 0):
+    x = int(input("next number to add up (enter 0 if no more numbers): "))
+    theSum = theSum + x
+
+print(theSum)
+                </input>
+            <tests>
+            </tests>
+          </program>
+          <p>This is just our old friend, the accumulation pattern, adding each additional output to the sum-so-far, which is stored
+                    in a variable called theSum and reassigned to that variable on each iteration. Notice that theSum is initialized to 0.
+                    Also notice that we had to initialize x, our variable that stores each input that the user types, before the while loop.
+                    This is typical with while loops, and makes them a little tricky to read and write. We had to initialize it because the
+                    condition <c>x != 0</c> is checked at the very beginning, before the code block is ever executed. In this case, we picked
+                    an initial value that we knew would make the condition true, to ensure that the while loop's code block would execute at
+                    least once.</p>
+          <p>If you're at all unsure about how that code works, try adding print statements inside the while loop that print out the
+                    values of x and theSum.</p>
+          <p>You've seen a related example to this with our interactive turtle programs that have listener functions:</p>
+          <program label="ac10_3_2" interactive="activecode" language="python">
+            <input>
+import turtle
+import random
+
+def random_square(tur):
+    """ Post-Condition: square with random small size
+        is drawn at turtle's current location """
+    side = random.randrange(10, 30) # get random size
+    for _ in range(4): #draw a square in location
+        tur.forward(side)
+        tur.left(90)
+    return tur
+
+def random_location(tur):
+    """ Post-Condition: turtle is moved to a random location on canvas
+        Pre-conditions: Assume canvas is 400 x 400 """
+    x = random.randrange(-200, 200) # get random x location
+    y = random.randrange(-200, 200) # get random y location
+    tur.penup()
+    tur.goto(x,y) # move to location without drawing
+    tur.pendown()
+    return tur
+
+def random_colour(tur):
+    """ Post-Condition: turtle is a random colour """
+    tur.color(random.random(), random.random(), random.random())
+    return tur
+
+def key_r():
+    """ draw randomly coloured and positioned square """
+    global alex
+    alex = random_colour(alex)
+    alex = random_location(alex)
+    alex = random_square(alex)
+
+def key_q():
+    """ close the canvas window """
+    wn.bye()
+
+def click(x, y):
+    """ go to clicked location, pick random color and draw square """
+    global alex
+    alex.penup()
+    alex.goto(x, y)
+    alex.pendown()
+    alex = random_colour(alex)
+    alex = random_square(alex)
+
+wn = turtle.Screen()      # Set up the window and its attributes
+alex = turtle.Turtle()    # create alex
+alex.speed(10)            # make alex draw fast
+alex = random_colour(alex)
+alex = random_location(alex)
+alex = random_square(alex)
+
+wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()' when the 'r' key is pressed on the keyboard
+wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
+wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
+wn.listen()             # tell the operating system to listen for events on the canvas window
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>In this turtle example, the last line of the code is wn.listen(). This allows us to rely on the built-in event loop that the turtle module provides. We don't have to write the listening loop ourselves, we just tell the turtle module what events we want to listen for (the three lines of code right before the last line). The turtle graphics module will just listen for these events, in a loop, until we quit, which causes the canvas to be destroyed and the main event loop ends.</p>
+  </subsection>
+  <subsection xml:id="indefinite-iteration_other-uses-of-while">
+    <title>Other uses of <c>while</c></title>
+    <subsubsection xml:id="indefinite-iteration_sentinel-values">
+      <title>Sentinel Values</title>
+      <p>Indefinite loops are much more common in the real world than definite loops.</p>
+      <p>
+        <ul>
+          <li>
+            <p>If you are selling tickets to an event, you don't know in advance how
+                            many tickets you will sell. You keep selling tickets as long as people come
+                            to the door and there's room in the hall.</p>
+          </li>
+          <li>
+            <p>When the baggage crew unloads a plane, they don't know in advance how many
+                            suitcases there are. They just keep unloading while there are bags left in the
+                            cargo hold. (Why <em>your</em> suitcase is always the last one is an entirely different problem.)</p>
+          </li>
+          <li>
+            <p>When you go through the checkout line at the grocery, the clerks don't
+                            know in advance how many items there are. They just keep ringing up items as
+                            long as there are more on the conveyor belt.</p>
+          </li>
+        </ul>
+      </p>
+      <p>Let's implement the last of these in Python, by asking the user for prices and
+                    keeping a running total and count of items. When the last item is entered,
+                    the program gives the grand total, number of items, and average price.
+                    We'll need these variables:</p>
+      <p>
+        <ul>
+          <li>
+            <p><c>total</c> - this will start at zero</p>
+          </li>
+          <li>
+            <p><c>count</c> - the number of items, which also starts at zero</p>
+          </li>
+          <li>
+            <p><c>moreItems</c> - a boolean that tells us whether more items are waiting; this starts as True</p>
+          </li>
+        </ul>
+      </p>
+      <p>The pseudocode (code written half in English, half in Python) for the body of the loop
+                    looks something like this:</p>
+      <pre>while moreItems
+    ask for price
+    add price to total
+    add one to count</pre>
+      <p>This pseudocode has no option to set <c>moreItems</c> to <c>False</c>, so it would run forever.
+                    In a grocery store, there's a little
+                    plastic bar that you put after your last item to separate your groceries from
+                    those of the person behind you; that's how the clerk knows you have no more items.
+                    We don't have a <q>little plastic bar</q> data type in Python, so we'll do the next best thing: we
+                    will use a <c>price</c> of zero to mean <q>this is my last item.</q> In this program,
+                    zero is a <term>sentinel value</term>, a value used to signal the end of the loop. Here's the code:</p>
+      <program label="ac10_3_3" interactive="activecode" language="python">
+        <input>
+def checkout():
+    total = 0
+    count = 0
+    moreItems = True
+    while moreItems:
+        price = float(input('Enter price of item (0 when done): '))
+        if price != 0:
+            count = count + 1
+            total = total + price
+            print('Subtotal: $', total)
+        else:
+            moreItems = False
+    average = total / count
+    print('Total items:', count)
+    print('Total $', total)
+    print('Average price per item: $', average)
+
+checkout()
+        </input>
+      <tests>
+    </tests>
+      </program>
+      <p>There are still a few problems with this program.</p>
+      <p>
+        <ul>
+          <li>
+            <p>If you enter a negative number, it will be added to the total and count. Modify the code
+                            so that negative numbers give an error message instead (but don't end the loop) Hint: <c>elif</c> is
+                            your friend.</p>
+          </li>
+          <li>
+            <p>If you enter zero the first time you are asked for a price, the loop will end, and the program
+                            will try to divide by zero. Use an <c>if</c>/<c>else</c> statement outside the loop to avoid the
+                            division by zero and tell the user that you can't compute an average without data.</p>
+          </li>
+        </ul>
+      </p>
+    </subsubsection>
+    <subsubsection xml:id="indefinite-iteration_validating-input">
+      <title>Validating Input</title>
+      <p>You can also use a <c>while</c> loop when you want to <term>validate</term> input;  when you want to make
+                    sure the user has entered valid input for a prompt. Let's say you want a function
+                    that asks a yes-or-no question. In this case, you want to make sure that the person using
+                    your program enters either a Y for yes or N for no (in either upper or lower case).
+                    Here is a program that uses a <c>while</c> loop to keep asking until it receives a valid answer.
+                    When you run the following code, try typing something other than Y or N to see how the code reacts:</p>
+      <program label="ac10_3_4" interactive="activecode" language="python">
+        <input>
+def get_yes_or_no(message):
+    valid_input = False
+    while not valid_input:
+        answer = input(message)
+        answer = answer.upper() # convert to upper case
+        if answer == 'Y' or answer == 'N':
+            valid_input = True
+        else:
+            print('Please enter Y for yes or N for no.')
+    return answer
+
+response = get_yes_or_no('Do you like lima beans? Y)es or N)o: ')
+if response == 'Y':
+    print('Great! They are very healthy.')
+else:
+    print('Too bad. If cooked right, they are quite tasty.')
+        </input>
+      <tests>
+    </tests>
+      </program>
+    </subsubsection>
+  </subsection>
+</section>

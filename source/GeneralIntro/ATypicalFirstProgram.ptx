@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<section xml:id="general-intro_a-typical-first-program">
+  <title>A Typical First Program</title>
+  <p>Traditionally, the first program written in a new language is called <em>Hello, World!</em> because all it does is display the words, Hello, World!  In Python, the source code
+            looks like this.</p>
+  <program language="python">
+    <input>
+print("Hello, World!")
+</input>
+  </program>
+  <p>This is an example of using the <term>print function</term>, which doesn't actually print anything on paper. It displays a value on the screen, in the programming console. Programmers do their work in development environments (software applications designed specifically for developing programs). In a development environment there is typically one part of the window where the programmer edits the program, and another part of the window, called the console, where output (such as from a print statement) is displayed. The ActiveCode panel is like our development environment. In this case, the result on the console is the phrase:</p>
+  <pre>Hello, World!</pre>
+  <p>Here is the example in an ActiveCode window, where you can run it and modify it. When you click the Save &amp; Run button, a grey console window appears below the ActiveCode window. That is where output from print() statements will always appear.</p>
+  <program label="ac_hello_world" interactive="activecode" language="python">
+    <input>
+print("Hello, World!")
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>The quotation marks in the program mark the beginning and end of the string value.
+            They don't appear in the result. You'll learn more about why in the next chapter.</p>
+  <p>Some people judge the quality of a programming language by the simplicity of the Hello, World! program. By this standard, Python does about as well as possible.</p>
+  <p>For comparison in another language, the Hello, World! program in Java looks like this:</p>
+  <pre>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</pre>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question_print_statement">
+    <statement>
+      <p>The print() statment:</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>sends information to the printer to be printed on paper.</p>
+        </statement>
+        <feedback>
+          <p>Within the Python programming language, the print statement has nothing to do with the printer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>displays a value in the console.</p>
+        </statement>
+        <feedback>
+          <p>Yes, the print statement is used to display the value of the thing being printed. This shows up in the console, which is typically only seen by the programmer, not the end user.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tells the computer to put the information in print, rather than cursive, format.</p>
+        </statement>
+        <feedback>
+          <p>The format of the information is called its font and has nothing to do with the print statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>tells the computer to speak the information.</p>
+        </statement>
+        <feedback>
+          <p>That would be nice! But no...</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

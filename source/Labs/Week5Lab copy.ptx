@@ -1,0 +1,188 @@
+<section xml:id="labs_week-5-lab">
+        <title>Week 5 Lab</title>
+        <note>
+            <title>Material Covered</title>
+            <p>Basic functions, listener functions and reading in files (Chapter 5)</p>
+        </note>
+        <subsection xml:id="labs_level-1">
+            <title>Level 1</title>
+            <p>The following function is missing a docstring with pre and post conditions. The objective of this level is to add the missing docstring.</p>
+            <p><ol>
+                <li>
+                    <p>Add the missing docstring. You are to find out what is needed for the function to run (aka pre-conditions) and what the output will be/how the program will be altered by running the function (aka post-conditions). You do not need to add or delete any code in this level, only add the docstring.</p>
+                </li>
+            </ol></p>
+            <note>
+                <p>There are 3 pre-conditions and 2 post conditions</p>
+            </note>
+            <system_message level="3" line="29" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/Labs/Week5Lab copy.rst" type="ERROR">
+                <p>Duplicate ID &#8211; see Labs/Week5Lab, line 36</p>
+                <pre>.. activecode:: lab5_level1
+    :nocodelens:
+
+    ################################################################
+    # Student name, ID &amp; lab section
+    # Date
+    # Lab 5, Level 1
+    ################################################################
+
+    import turtle
+
+    wn = turtle.Screen()
+    alexander = turtle.Turtle()
+    alexander.speed(10)
+
+    def axis():
+      """--ADD DOCSTRING AND CONDITIONS HERE--"""
+
+      alexander.forward(200)
+      alexander.backward(400)
+      home()
+      alexander.left(90)
+      alexander.forward(200)
+      alexander.backward(400)
+      home()
+
+    def home():
+
+      alexander.goto(0,0)
+
+    alexander.color("red")
+
+    alexander.pendown()
+
+    axis()
+
+</pre>
+            </system_message>
+        </subsection>
+        <subsection xml:id="labs_level-2">
+            <title>Level 2</title>
+            <p>In this level you will create a turtle function that will draw a random line in the window when a key is pressed.</p>
+            <p><ol>
+                <li>
+                    <p>The starter code below imports modules and creates a window and a turtle.</p>
+                </li>
+                <li>
+                    <p>Create a function called <c>goto_random()</c>. Inside this function, create two variables to store random x and y coordinates. Assign these variables random values that range from -200 to 200 (these are left/bottom and right/top window edges). Use the randrange() function to get random numbers.</p>
+                </li>
+                <li>
+                    <p>Add a goto() statement that will send the turtle kyra to a random spot in the window, using the variables from the previous step.</p>
+                </li>
+                <li>
+                    <p>Create another function called <c>reset()</c>. This function should return the turtle to the center of the window and clear all the pen lines that the turtle has drawn.</p>
+                </li>
+                <li>
+                    <p>At the bottom of the program, call the reset function. This ensures the turtle window pops up, since a turtle command is called.</p>
+                </li>
+                <li>
+                    <p>Under the reset function call, register the two functions so that they respond to the correct user key presses. The reset() function should be called when the r key is pressed and the goto_random() function should be called when the f key is pressed.</p>
+                </li>
+                <li>
+                    <p>Finally, add the wn.listen() command at the end. This must be the last line.</p>
+                </li>
+                <li>
+                    <p>Test to make sure this works. Click in the window, then hit the &#8216;f' key a few times to make sure the turtle moves around. Then hit the &#8216;r' key to ensure the turtle returns to the center and all the lines disappear.</p>
+                </li>
+            </ol></p>
+            <note>
+                <p>Reference the textbook, Section 5.5 on listener functions if you have difficulty with the syntax for setting up the key press listeners.</p>
+            </note>
+            <system_message level="3" line="84" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/Labs/Week5Lab copy.rst" type="ERROR">
+                <p>Duplicate ID &#8211; see Labs/Week5Lab, line 91</p>
+                <pre>.. activecode:: lab5_level2
+    :nocodelens:
+
+    ################################################################
+    # Student name, ID &amp; lab section
+    # Date
+    # Lab 5, Level 2
+    ################################################################
+
+    import turtle #imports the turtle library
+    import random #imports the random library
+
+    wn = turtle.Screen() #creates a graphic window
+
+    #-----Add your code below-----------
+
+    kyra = turtle.Turtle()
+</pre>
+            </system_message>
+            <p>Below is a clip of how your program should work.</p>
+        </subsection>
+        <subsection xml:id="labs_level-3">
+            <title>Level 3</title>
+            <p>This level is similar to Level 2, except instead of getting random coordinates in response to key presses, you will read a file containing turtle coordinates and then send a turtle around the window using those specific coordinates.</p>
+            <note>
+                <p>Take a look at how the file is formatted before you start to code. The coordinate file is shown at the bottom of this page.</p>
+            </note>
+            <p><ol>
+                <li>
+                    <p>The provided code sets up a world and a turtle, and opens the file with the coordinates for reading. Run the code to make sure it works. Nothing happens yet.</p>
+                </li>
+                <li>
+                    <p>Iterate through each line of the file. See Section 5.9 in the textbook for how to write a for loop that does this, in particular, look at activity 5.9.3 as an example. For each line, do the following:</p>
+                    <p><ol>
+                        <li>
+                            <p>Split up the coordinates (assign them to a variable called coords)</p>
+                        </li>
+                        <li>
+                            <p>Access the two elements of coords (using coords[0] and coords[1]), using them in a goto() function to send the turtle to those coordinates</p>
+                        </li>
+                        <li>
+                            <p>Print out the following message to the console: <q>Going to: &lt;xcoordinate&gt; &lt;ycoordinate&gt;</q>.</p>
+                        </li>
+                    </ol></p>
+                </li>
+                <li>
+                    <p>Once you have written this code, run it to make sure that the turtle does a walk through the coordinates and the coordinates print out to the console.</p>
+                </li>
+            </ol></p>
+            <system_message level="3" line="123" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/Labs/Week5Lab copy.rst" type="ERROR">
+                <p>Duplicate ID &#8211; see Labs/Week5Lab, line 139</p>
+                <pre>.. activecode:: lab5_level3
+    :nocodelens:
+    :available_files: turtle_coords.txt
+
+    ################################################################
+    # Student name, ID &amp; lab section
+    # Date
+    # Lab 5, Level 3
+    ################################################################
+
+    import turtle #iddmports the turtle library
+
+    wn = turtle.Screen() #creates a graphic window
+    asif = turtle.Turtle()
+
+
+    fileref = open("turtle_coords.txt", "r")
+
+    #-----Add your code below-----------
+
+
+    fileref.close()
+</pre>
+            </system_message>
+            <p>Your output should look like this:</p>
+            <image source="Labs/Figures/turtle_coords_output.png" width="60%"/>
+            <system_message level="3" line="152" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/Labs/Week5Lab copy.rst" type="ERROR">
+                <p>Duplicate ID &#8211; see Labs/Week5Lab, line 168</p>
+                <pre>.. datafile:: turtle_coords.txt
+
+   10 125
+   -45 67
+   67 42
+   -20 -180
+   173 -2
+   16 194
+   -87 91
+   0 -63
+
+
+</pre>
+            </system_message>
+        </subsection>
+    </section>
+

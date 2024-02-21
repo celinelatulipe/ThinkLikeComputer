@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<section xml:id="p3pt_post-survey">
+  <title>Post Survey</title>
+  <p>Please answer the following questions.</p>
+  <transition/>
+  <exercise label="p3-post-1-age">
+    <statement>
+      <p>What is your age in years?</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-2-major">
+    <statement>
+      <p>What is your major or intended major, or program of study?</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-3-gender">
+    <statement>
+      <p>What is your gender identity (woman, man, non-binary,  etc, prefer not to say)?</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-4-year">
+    <statement>
+      <p>What year are you in of your undergraduate education (1st, 2nd, 3rd, etc)?</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-5-dis">
+    <statement>
+      <p>Please list any learning issues we should be aware of like Dyslexia, Autism, ADHD, etc or enter none.</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-6-hours">
+    <statement>
+      <p>About how many total hours have you been programming in Python?</p>
+    </statement>
+  </exercise>
+  <exercise label="p3-post-7-langs">
+    <statement>
+      <p>What language(s) do you speak at home?</p>
+    </statement>
+  </exercise>
+  <exercise runestone="p3-post-8-read"/>
+  <exercise runestone="p3-post-9-understand-spoken"/>
+  <exercise runestone="p3-post-10-parsons"/>
+  <p>A mixed-up code (Parsons) problem.</p>
+  <image source="https://i.postimg.cc/wBFZ98zz/parsons.png" width="50%"/>
+  <subsection xml:id="p3pt_thank-you">
+    <title>Thank You</title>
+    <p>Thank you for finishing this assignment! We appreciate your time on this.</p>
+  </subsection>
+</section>

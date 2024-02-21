@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<section xml:id="general-intro_the-python-programming-language-index-0">
+  <title>The Python Programming Language</title>
+  <subsection xml:id="general-intro_about_python">
+  <p>The programming language you will be learning is Python. Python is an example
+            of a <term>high-level language</term>; other high-level languages you might have heard
+            of are C++, PHP, and Java.</p>
+  <p>As you might infer from the name high-level language, there are also
+            <term>low-level languages</term>, sometimes referred to as machine languages or assembly
+            languages. Loosely speaking, computers can only execute programs written in
+            low-level languages. Thus, programs written in a high-level language have to be
+            processed before they can run. This extra processing takes some time, which is
+            a small disadvantage of high-level languages.
+            However, the advantages to high-level languages are enormous.</p>
+  <p>First, it is much easier to program in a
+            high-level language. Programs written in a high-level language take less time
+            to write, they are shorter and easier to read, and they are more likely to be
+            correct. Second, high-level languages are <term>portable</term>, meaning that they can
+            run on different kinds of computers with few or no modifications. Low-level
+            programs can run on only one kind of computer and have to be rewritten to run
+            on another.</p>
+  <p>Due to these advantages, almost all programs are written in high-level
+            languages. Low-level languages are used only for a few specialized
+            applications.</p>
+  <p>Two kinds of programs process high-level languages into low-level languages:
+            <term>interpreters</term> and <term>compilers</term>. An interpreter reads a high-level program
+            and executes it, meaning that it does what the program says. It processes the
+            program a little at a time, alternately reading lines and performing
+            computations.</p>
+  <image source="GeneralIntro/Figures/interpret.png" width="50%">
+    <shortdescription>Interpret illustration, shows that source code 
+      goes through the interpreter, which runs the program.</shortdescription>
+  </image> <!-- this is what image descriptions should look like! No <p>, code or math in short descriptions-->
+  <p>A compiler reads the program and translates it completely before the program
+            starts running. In this case, the high-level program is called the <term>source
+                code</term>, and the translated program is called the <term>object code</term> or the
+            <term>executable</term>. Once a program is compiled, you can execute it repeatedly
+            without further translation. If you make changes to your source code, you need to compile your files into an executable again.</p>
+  <p>A compiler reads the program and translates it completely before the program
+            starts running. In this case, the high-level program is called the <term>source
+                code</term>, and the translated program is called the <term>object code</term> or the
+            <term>executable</term>. Once a program is compiled, you can execute it repeatedly
+            without further translation. If you make changes to your source code, you need to compile your files into an executable again.</p>
+  <image source="GeneralIntro/Figures/compile.png" width="50%" alt="Compile illustration, shows that source code goes through the compiler to become object code, and object code is executed to run the program."/>
+  <p>Many modern languages use both processes. They are first compiled into a lower
+            level language, called <term>byte code</term>, and then interpreted by a program called
+            a <term>virtual machine</term>. Python uses both processes, but because of the way
+            programmers interact with it, it is usually considered an interpreted language.</p>
+  <p>For the core material in this book, you will not need to install
+            or run python natively on your computer. Instead, you'll be writing simple
+            programs and executing them right in your browser.</p>
+  <p>At some point, you will find it useful to have a complete python environment, rather than the limited environment
+            available in this online textbook. To do that, you will either
+            install python on your computer so that it can run natively, or use a remote server that provides either a
+            command line shell or a jupyter notebook environment.</p>
+  </subsection>
+  <subsection xml:id="general-intro_activecode-in-runestone">
+    <title>ActiveCode in Runestone</title>
+    <p>This book provides two ways to execute Python programs.  Both techniques are designed to assist you as you
+                learn the Python programming language.  They will help you increase your understanding of how Python programs work.</p>
+    <p>First, you can write, modify, and execute programs using a unique <term>ActiveCode</term> interpreter that allows you to execute Python code right
+                in the text itself (right from the web browser).  Although this is certainly not the way real programs are written, it provides an excellent
+                environment for learning a programming language like Python since you can experiment with the language as you are reading.</p>
+    <p>Take a look at the ActiveCode interpreter in action. Try pressing the <em>Save &amp; Run</em> button below. (If you are not logged
+                in, it will just say <em>Run</em>.)</p>
+    <program label="activecode_first_ex" interactive="activecode" language="python">
+      <input>
+print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+        </input>
+    <tests>
+    </tests>
+    </program>
+    <p>Now try modifying the program shown above.  First, modify the string (the sentence in quotations) in the
+                first print statement by changing the word <em>adds</em> to the word <em>multiplies</em>.  Now press
+                <em>Save &amp; Run</em> again.  You can see that the result of the program has changed.  However, it still prints
+                <q>5</q> as the answer.  Modify the second print statement by changing the addition symbol, the
+                <c>+</c>, to the multiplication symbol, <c>*</c>.  Press <em>Save &amp; Run</em> again to see the new results.</p>
+    <p>As the name suggests, <em>Save &amp; Run</em> also <em>saves</em> your latest version of the code,
+                and you can recover it in later sessions when <em>logged in</em>. If <em>not</em> logged in,
+                <em>Run</em> saves versions <em>only until your browser leaves the current web page</em>, and then you lose all modifications.</p>
+    <p>If you are logged in, when a page first loads, each ActiveCode window will have a <em>Load History</em> button, to the
+                right of the <em>Save &amp; Run</em> button.
+                If you click on it, or if you run any code, that button turns into a slider.
+                If you click on the slider location box, you can use your left and right arrow
+                buttons to switch to other versions you ran.
+                Alternatively you can drag the box on the slider.
+                Now move the slider to see a previously saved version of your code. You can edit or run any version.</p>
+  </subsection>
+  <subsection xml:id="general-intro_codelens-in-runestone">
+    <title>CodeLens in Runestone</title>
+    <p>In addition to ActiveCode, you can also execute Python code with the assistance of a unique visualization tool. This tool, known as <term>CodeLens</term>, allows you to control the step by step execution of a program. It also lets you see the values of all variables as they are created and modified. In ActiveCode, the source code executes from beginning to end and you
+                can only see the final result. In CodeLens you can see and control the step by step progress.
+                Note that the red arrow always points to the next line of code that is going to be executed.
+                The light green arrow points to the line that was just executed. Click on the <q>Show in
+                CodeLens</q> button in the code example above to make the CodeLens window show up, and then click on the Forward button
+                a few times to step through the execution.</p>
+    <p>Sometimes, we will present code examples explicitly in a CodeLens window in the textbook, as below.
+                When we do, think of it as an encouragement to use the CodeLens features to step through the
+                execution of the program to understand how the code is executed. This is really important to do and it will help you learn to &#x2018;Think Like a Computer'.</p>
+    <program label="clens_first_example" interactive="codelens" language="python">
+      <input>
+print("My first program adds two numbers, 2 and 3:")
+print(2 + 3)
+    </input>
+    </program>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question_what_is_source_code">
+      <statement>
+        <p>Source code is another name for:</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>the instructions in a program, written in a high-level language.</p>
+          </statement>
+          <feedback>
+            <p>If the instructions are stored in a file, it is called the source code file.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the language that you are programming in (e.g. Python).</p>
+          </statement>
+          <feedback>
+            <p>This language is simply called the programming language, or simply the language. Programs are written in this language.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the environment/tool in which you are programming.</p>
+          </statement>
+          <feedback>
+            <p>The environment may be called the IDE, or Integrated Development Environment, though not always.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the number (or <q>code</q>) that you must input at the top of each program to tell the computer how to execute your program.</p>
+          </statement>
+          <feedback>
+            <p>There is no such number that you must type in at the start of your program.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question_high_vs_low_language">
+      <statement>
+        <p>What is the difference between a high-level programming language and a low-level programming language?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>It is high-level if you are standing and low-level if you are sitting.</p>
+          </statement>
+          <feedback>
+            <p>In this case high and low have nothing to do with altitude.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>It is high-level if you are programming for a computer and low-level if you are programming for a phone or mobile device.</p>
+          </statement>
+          <feedback>
+            <p>High and low have nothing to do with the type of device you are programming for.  Instead, look at what it takes to run the program written in the language.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>It is high-level if the program must be processed before it can run, and low-level if the computer can execute it without additional processing.</p>
+          </statement>
+          <feedback>
+            <p>Python is a high level language but must be interpreted into machine code (binary) before it can be executed.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>It is high-level if it easy to program in and is very short; it is low-level if it is really hard to program in and the programs are really long.</p>
+          </statement>
+          <feedback>
+            <p>While it is true that it is generally easier to program in a high-level language and programs written in a high-level language are usually shorter, this is not always the case.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question_compiler_vs_interpreter">
+      <statement>
+        <p>Pick the best replacements for <term>1</term> and <term>2</term> in the following sentence: When comparing compilers and interpreters, a compiler is like <term>1</term> while an interpreter is like <term>2</term>.</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>1 = a process, 2 = a function</p>
+          </statement>
+          <feedback>
+            <p>Compiling is a software process, and running the interpreter is invoking a function, but how is a process different than a function?</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>1 = translating an entire book, 2 = translating a line at a time</p>
+          </statement>
+          <feedback>
+            <p>Compilers take the entire source code and produce object code or the executable and interpreters execute the code line by line.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>1 = software, 2 = hardware</p>
+          </statement>
+          <feedback>
+            <p>Both compilers and interpreters are software.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>1 = object code, 2 = byte code</p>
+          </statement>
+          <feedback>
+            <p>Compilers can produce object code or byte code depending on the language.  An interpreter produces neither.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question_activecode_interpreter">
+      <statement>
+        <p>The ActiveCode interpreter allows you to (select all that apply):</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>save programs and reload saved programs.</p>
+          </statement>
+          <feedback>
+            <p>You can (and should) save the contents of the ActiveCode window.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>type in Python source code.</p>
+          </statement>
+          <feedback>
+            <p>You are not limited to running the examples that are already there.  Try adding to them and creating your own.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>execute Python code right in the text itself within the web ..</p>
+          </statement>
+          <feedback>
+            <p>The ActiveCode interpreter will allow you type Python code into the textbox and then you can see it execute as the interpreter interprets and executes the source code.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>receive a yes/no answer about whether your code is correct or not.</p>
+          </statement>
+          <feedback>
+            <p>Although you can (and should) verify that your code is correct by examining its output, ActiveCode will not directly tell you whether you have correctly implemented your program.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question_codelens">
+      <statement>
+        <p>CodeLens allows you to (select all that apply):</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>measure the speed of a program's execution.</p>
+          </statement>
+          <feedback>
+            <p>In fact, CodeLens steps through each line one by one as you click, which is MUCH slower than the Python interpreter.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>control the step by step execution of a program.</p>
+          </statement>
+          <feedback>
+            <p>By using CodeLens, you can control the execution of a program step by step. You can even go backwards!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>write and execute your own Python code.</p>
+          </statement>
+          <feedback>
+            <p>Codelens works only for the pre-programmed examples.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>execute the Python code that is in codelens.</p>
+          </statement>
+          <feedback>
+            <p>By stepping forward through the Python code in CodeLens, you are executing the Python program.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+  </subsection>
+</section>

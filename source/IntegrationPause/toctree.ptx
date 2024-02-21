@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <title>Integration Pause</title>
+        <xi:include href='./intro-IntegratingConcepts.ptx' />
+        <xi:include href='./CombiningIterationAndFunctions.ptx' />
+        <xi:include href='./CombiningIterationAndConditionals.ptx' />
+        <xi:include href='./CombiningConditionalsAndFunctions.ptx' />
+        <xi:include href='./CombiningIterationConditionalsAndFunctions.ptx' />
+        <!-- <xi:include href='./ChapterAssessment.ptx' /> -->
+        <!-- <xi:include href='./..   Glossary.ptx' />
+        <xi:include href='./..   Exercises.ptx' />
+        <xi:include href='./..   ChapterAssessment.ptx' /> -->
+    </chapter>

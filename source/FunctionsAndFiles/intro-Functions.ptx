@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<section xml:id="functions-and-files_introduction-to-functions-and-files">
+  <title>Introduction to Functions and Files</title>
+    <subsection xml:id="functions-and-files_functions_intro">
+    <title>Introduction to Functions</title>
+      <video xml:id="goog_function_intro" youtube="85WYZKKnaPQ" width="auto"/>
+      <p>In Python, a <term>function</term> is a chunk of code that performs some operation that is meaningful for a person to think about as a whole unit, for example calculating a student's GPA in a learning system or responding to the jump action in a video game. Once a function has been defined and you are satisfied that it does what it is supposed to do, you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of code that make it work.</p>
+      <p>This breaking down of a task or problem is crucial to the successful implementation of any program of more than 50 or so lines (and plenty of smaller ones too).  For example, the program that displays the Instagram landing page is made up of functions that:</p>
+      <p>
+        <ul>
+          <li>
+            <p>display the header bar</p>
+          </li>
+          <li>
+            <p>display your friends' posts</p>
+          </li>
+          <li>
+            <p>display your friends' stories</p>
+          </li>
+          <li>
+            <p>display the ad at the bottom of the screen recommending you use the app</p>
+          </li>
+        </ul>
+      </p>
+      <p>And each of those is made up of functions as well. For example, the function that displays your friends' posts is a for loop that calls a function to:</p>
+      <p>
+        <ul>
+          <li>
+            <p>display a single post which in turn calls functions to:</p>
+          </li>
+          <li>
+            <p>display the photo and name of the person posting the story</p>
+          </li>
+          <li>
+            <p>display the photo itself</p>
+          </li>
+          <li>
+            <p>display other users' <q>likes</q> to the story</p>
+          </li>
+          <li>
+            <p>display the comments on the story</p>
+          </li>
+          <li>
+            <p>etc.</p>
+          </li>
+        </ul>
+      </p>
+      <p>In this chapter you will learn about named functions, functions that can be referred to by name when you want to execute them.</p>
+  </subsection>
+  <subsection xml:id="functions-and-files_introduction-to-files">
+    <title>Introduction to Files</title>
+    <p>After exploring functions, we are also going to explore working with data outside of our program by reading and writing files. So far, the data we have used in this book have all been either coded right into the program, or have been entered by the user. In real life data ofetn resides in files. For example, the images we worked with in the image processing unit ultimately live in files on your hard drive. Web pages, and word processing documents, and music are other examples of data that live in files. In the second half of this chapter we will introduce the Python concepts necessary to use data from files in our programs.</p>
+    <p>For our purposes, we will assume that our data files are text files&#x2013;that is, files filled with characters. The Python programs that you write are stored as text files. We can create these files in any of a number of ways. For example, we could use a text editor to type in and save the data. We could also download the data from a website and then save it in a file. Regardless of how the file is created, Python will allow us to manipulate the contents.</p>
+  </subsection>
+  <subsection xml:id="functions-and-files_learning-goals">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>To understand functions as a means of abstraction</p>
+        </li>
+        <li>
+          <p>To understand the difference between defining functions and calling functions</p>
+        </li>
+        <li>
+          <p>To understand the structure of file systems</p>
+        </li>
+        <li>
+          <p>To understand opening files with different modes</p>
+        </li>
+        <li>
+          <p>To introduce files as another kind of sequence that one can iterate over</p>
+        </li>
+        <li>
+          <p>To introduce the read/transform/write pattern</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="functions-and-files_objectives">
+    <title>Objectives</title>
+    <p>At the end of this chapter, you should be able to:
+                * create and call simple functions (functions that don't take any parameters)
+                * read a single value from each line in a file
+                * convert the line to the appropriate value
+                * open files and read the contents line by line
+                * write out files, line by line</p>
+  </subsection>
+</section>

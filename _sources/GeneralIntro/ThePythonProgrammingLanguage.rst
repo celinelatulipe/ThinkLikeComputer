@@ -122,7 +122,7 @@ a few times to step through the execution.
 
 Sometimes, we will present code examples explicitly in a CodeLens window in the textbook, as below.
 When we do, think of it as an encouragement to use the CodeLens features to step through the 
-execution of the program to understand how the code is executed. This is really important to to and it will help you learn to 'Think Like a Computer'.
+execution of the program to understand how the code is executed. This is really important to do and it will help you learn to 'Think Like a Computer'.
 
 .. codelens:: clens_first_example
     :python: py3

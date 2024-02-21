@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <xi:include href="./bookinfo.ptx"/>
+        <book xml:id= "ThinkLikeComputer" permid="Thi">
+            <title>COMP 1000: Think Like a Computer</title>
+            <subtitle>The PreTeXt Interactive Edition</subtitle> 
+                <xi:include href="./GeneralIntro/toctree.ptx" />
+                <xi:include href="./DataAndInstructions/toctree.ptx" />
+                <xi:include href="./DebuggingAndModules/toctree.ptx" />
+                <xi:include href="./Iteration/toctree.ptx" />
+                <xi:include href="./FunctionsAndFiles/toctree.ptx" />
+                <xi:include href="./Conditionals/toctree.ptx" />
+                <xi:include href="./IntegrationPause/toctree.ptx" />
+                <xi:include href="./FunctionsParametersScope/toctree.ptx" />
+                <xi:include href="./Sequences/toctree.ptx" />
+                <xi:include href="./EventHandling/toctree.ptx" />
+                <xi:include href="./IndefiniteIteration/toctree.ptx" />
+                <xi:include href="./Labs/toctree.ptx" />
+                <xi:include href="./FrontBackMatter/contrib.ptx" />
+                <xi:include href="./FrontBackMatter/copyright.ptx" />  
+            <backmatter>
+                <index>
+                    <index-list/>
+                </index>
+            </backmatter>
+        </book>
+    </pretext>

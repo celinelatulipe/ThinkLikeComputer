@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<section xml:id="p3pt_pre-test">
+  <title>Pre Test</title>
+  <p>Please try to solve each of the following problems to the best of your ability.
+            It is <term>OK</term> to not know the correct answers!  If you don't know the answer just select
+            option E (I don't know).</p>
+  <subsection xml:id="p3pt_problems-3">
+    <title>Problems</title>
+    <exercises line="11" runestone_options="{'timelimit': 20, 'noresult': None, 'nofeedback': None, 'nopause': None, 'subchapter': 'p3', 'chapter': 'p3pt', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'timed1', 'qnumber': '', 'question_label': '1'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/_hidden/p3pt/p3.rst">
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-1 data-questionlist='pretest_cond_with_funcs' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest_cond_with_funcs&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-2 data-questionlist='pretest-type-compare' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest-type-compare&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-3-v2 data-questionlist='pretest-mult-if' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest-mult-if&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-4 data-questionlist='pretest_complex_list_string' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest_complex_list_string&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-5 data-questionlist='pretest_sum_with_range' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest_sum_with_range&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-6 data-questionlist='pretest_string_abbrev' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest_string_abbrev&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-7 data-questionlist='pretest_sum_with_mod' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest_sum_with_mod&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-8 data-questionlist='pretest-while-str-concat' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest-while-str-concat&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-9 data-questionlist='pretest-break-cont-str-cont' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest-break-cont-str-cont&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+      <raw format="html" xml:space="preserve">
+&lt;div class="runestone sqcontainer %(optclass)s"&gt;
+&lt;div data-component="selectquestion" id=p3pt-pre-10 data-questionlist='pretest-string-slice-neg' data-points=1          data-limit-basecourse=true&gt;
+    &lt;p&gt;Loading a dynamic question ...&lt;br/&gt;Selecting from: pretest-string-slice-neg&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</raw>
+    </exercises>
+  </subsection>
+  <subsection xml:id="p3pt_feedback-5">
+    <title>Feedback</title>
+    <exercise label="p3-pre-sa">
+      <statement>
+        <p>Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="p3pt_thank-you-1">
+    <title>Thank You &#x1F917;</title>
+    <p>&#x1F389; We appreciate your participation in our study.</p>
+  </subsection>
+</section>

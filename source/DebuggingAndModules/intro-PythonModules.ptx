@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<section xml:id="debugging-and-modules_introduction-to-python-modules">
+  <title>Introduction to Python Modules</title>
+  <introduction>
+  <p>One of the best things about the Python programming language is the ecosystem that surrounds it.  This chapter introduces you to how to import and use modules that other people have created. You'll learn about how to use the random module which comes in handy quite frequently in programming. This chapter also does a deeper dive into the Turtles module which isn't often used to solve real-world problems, but is a useful and fun module to use when learning how to program.</p>
+  <image source="https://imgs.xkcd.com/comics/python.png" width="50%"/>
+  <p>Python provides us the ability to use modules to do everything from sending emails to image processing to complex machine learning.  But, even though Python gives us a tremendous amount of power from these modules, you still need to know the python basics in order to glue everything together.  We will start by looking at a module used to generate random numbers to learn how to make use of other modules in your programs.</p>
+  </introduction>
+  <subsection xml:id="debugging-and-modules_learning-goals-1">
+    <title>Learning Goals</title>
+    <p>
+      <ul>
+        <li>
+          <p>Understand that Python is extensible through modules</p>
+        </li>
+        <li>
+          <p>Understand how to use modules</p>
+        </li>
+        <li>
+          <p>Understand the usefulness of random numbers in programming</p>
+        </li>
+        <li>
+          <p>Learn more about using the turtle module</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+  <subsection xml:id="debugging-and-modules_objectives-1">
+    <title>Objectives</title>
+    <p>
+      <ul>
+        <li>
+          <p>To import an entire module</p>
+        </li>
+        <li>
+          <p>To import a single function from a module</p>
+        </li>
+        <li>
+          <p>To import a module giving it an alias</p>
+        </li>
+        <li>
+          <p>To learn how to use random() and randrange() to get random floats and ints</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

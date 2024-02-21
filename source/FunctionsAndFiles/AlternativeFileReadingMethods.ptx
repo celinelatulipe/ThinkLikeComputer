@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<section xml:id="functions-and-files_alternative-file-reading-methods">
+  <title>Alternative File Reading Methods</title>
+  <p>Once you have a file <q>object</q>, the thing returned by the open function, Python provides three methods to read data
+            from that object. The <c>read()</c> method returns the entire contents of the file as a single string (or just the first <em>n</em>
+            characters if you provide a number as an input parameter). The <c>readlines</c> method returns the entire contents of
+            the file as a list of strings, where each item in the list is one line of the file. The <c>readline</c>
+            method reads one line from the file and returns it as a string. The strings returned by <c>readlines</c> or
+            <c>readline</c> will contain the newline character at the end.  <inline classes="xref std std-ref">Table 2</inline> summarizes these
+            methods and the following session shows them in action.</p>
+  <table>
+    <tabular>
+      <row header="yes">
+        <cell>
+          <term>Method Name</term>
+        </cell>
+        <cell>
+          <term>Use</term>
+        </cell>
+        <cell>
+          <term>Explanation</term>
+        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>read(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.read()</c>
+        </cell>
+        <cell>
+                            Read and return a string of <c>n</c>
+                                characters, or the entire file as a
+                                single string if  <c>n</c> is not provided.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>readline(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.readline()</c>
+        </cell>
+        <cell>
+                            Read and return the next line of the file with
+                                all text up to and including the
+                                newline character. If <c>n</c> is provided as
+                                a parameter, then only <c>n</c> characters
+                                will be returned if the line is longer
+                                than <c>n</c>. <term>Note:</term> the parameter <c>n</c> is
+                                not supported in the browser version of Python,
+                                and in fact is rarely used in practice, so
+                                you can safely ignore it.
+                        </cell>
+      </row>
+      <row>
+        <cell>
+          <c>readlines(n)</c>
+        </cell>
+        <cell>
+          <c>filevar.readlines()</c>
+        </cell>
+        <cell>
+                            Returns a list of strings, each
+                                representing a single line of the file.
+                                If <c>n</c> is not provided then all lines of
+                                the file are returned. If <c>n</c> is provided
+                                then <c>n</c> characters are read but <c>n</c> is
+                                rounded up so that an entire line is
+                                returned.  <term>Note:</term> Like <c>readline</c>,
+                                <c>readlines</c> ignores the parameter <c>n</c> in the browser.
+                        </cell>
+      </row>
+    </tabular>
+  </table>
+  <p>In this course, we will generally either iterate through the lines returned by <c>readlines()</c> with a for loop,
+            or use <c>read()</c> to get all of the contents as a single string.</p>
+  <p>In other programming languages, where they don't have the convenient for loop method of going through the lines
+            of the file one by one, they use a different pattern which requires a different kind of loop, the <c>while</c> loop.
+            Fortunately, you don't need to learn this other pattern, and we will put off consideration of <c>while</c> loops
+            until later in this course. We don't need them for handling data from files.</p>
+  <note>
+    <p>A common error that novice programmers make is not realizing that all these ways of reading the file contents,
+                <term>use up the file</term>. After you call readlines(), if you call it again you'll get an empty list.</p>
+  </note>
+  <p>The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly
+            gets a different line each time, as the file is <term>used up</term>.</p>
+  <program label="ac5_8_1" interactive="activecode" language="python">
+    <input>
+olympicsfile = open("olympics.txt", "r")
+
+firstline = olympicsfile.readline()
+print("the first line of the file is: ", firstline)
+secondline = olympicsfile.readline()
+print("the second line of the file is: ", secondline)
+
+olympicsfile.close()
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>
+    <term>Check your Understanding</term>
+  </p>
+  <raw format="html" xml:space="preserve">&lt;pre id="school_prompt.txt"&gt;
+Writing essays for school can be difficult but
+many students find that by researching their topic that they
+have more to say and are better informed. Here at the university
+we require many undergraduate students to take a first year writing requirement
+so that they can
+have a solid foundation for their writing skills. This comes
+in handy for many students.
+Different schools have different requirements, but everyone uses
+writing at some point in their academic career, be it essays, research papers,
+technical write ups, or scripts.
+&lt;/pre&gt;</raw>
+  <exercise label="ac5_8_2">
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>Using the file <c>school_prompt2.txt</c>, find the number of characters in the file and assign that value to the variable <c>num_char</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program label="ac5_8_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(num_char, 536, "Testing that num_char has the correct value.")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <raw format="html" xml:space="preserve">&lt;pre id="travel_plans.txt"&gt;
+This summer I will be travelling.
+I will go to...
+Italy: Rome
+Greece: Athens
+England: London, Manchester
+France: Paris, Nice, Lyon
+Spain: Madrid, Barcelona, Granada
+Austria: Vienna
+I will probably not even want to come back!
+However, I wonder how I will get by with all the different languages.
+I only know English!
+&lt;/pre&gt;</raw>
+  <exercise label="ac5_8_3">
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>Find the number of lines in the file, <c>travel_plans2.txt</c>, and assign it to the variable <c>num_lines</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program label="ac5_8_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(num_lines, 11, "Testing that num_lines is assigned to correct value.")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <raw format="html" xml:space="preserve">&lt;pre id="emotion_words.txt"&gt;
+Sad upset blue down melancholy somber bitter troubled
+Angry mad enraged irate irritable wrathful outraged infuriated
+Happy cheerful content elated joyous delighted lively glad
+Confused disoriented puzzled perplexed dazed befuddled
+Excited eager thrilled delighted
+Scared afraid fearful panicked terrified petrified startled
+Nervous anxious jittery jumpy tense uneasy apprehensive
+&lt;/pre&gt;</raw>
+  <exercise label="ac5_8_4">
+    <statement>
+      <p>
+        <ol>
+          <li>
+            <p>Create a string called <c>first_forty</c> that is comprised of the first 40 characters of <c>emotion_words2.txt</c>.</p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+    <program label="ac5_8_4_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(first_forty, 'Sad upset blue down melancholy somber bi', "Testing that first_forty was created correctly.")
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <DataFileNode line="188" runestone_options="{'fromfile': 'travel_plans.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'travel_plans2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'This summer I will be travelling.\nI will go to...\nItaly: Rome\nGreece: Athens\nEngland: London, Manchester\nFrance: Paris, Nice, Lyon\nSpain: Madrid, Barcelona, Granada\nAustria: Vienna\nI will probably not even want to come back!\nHowever, I wonder how I will get by with all the different languages.\nI only know English!\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.5'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+  <DataFileNode line="192" runestone_options="{'fromfile': 'school_prompt.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'school_prompt2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'Writing essays for school can be difficult but\nmany students find that by researching their topic that they\nhave more to say and are better informed. Here are the university\nwe require many undergraduate students to take a first year writing requirement\nso that they can\nhave a solid foundation for their writing skills. This comes\nin handy for many students.\nDifferent schools have different requirements, but everyone uses\nwriting at some point in their academic career, be it essays, research papers,\ntechnical write ups, or scripts.\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.6'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+  <DataFileNode line="196" runestone_options="{'fromfile': 'emotion_words.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'emotion_words2.txt', 'qnumber': '', 'cols': 62, 'rows': 20, 'filecontent': 'Sad upset blue down melancholy somber bitter troubled\nAngry mad enraged irate irritable wrathful outraged infuriated\nHappy cheerful content elated joyous delighted lively glad\nConfused disoriented puzzled perplexed dazed befuddled\nExcited eager thrilled delighted\nScared afraid fearful panicked terrified petrified startled\nNervous anxious jittery jumpy tense uneasy apprehensive\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.7'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
+        </DataFileNode>
+  <raw format="html" xml:space="preserve">&lt;pre hidden id="olympics.txt"&gt;
+Name,Sex,Age,Team,Event,Medal
+A Dijiang,M,24,China,Basketball,NA
+A Lamusi,M,23,China,Judo,NA
+Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
+Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
+Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
+Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
+Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
+John Aalberg,M,31,United States,Cross Country Skiing,NA
+John Aalberg,M,33,United States,Cross Country Skiing,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
+"Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
+Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
+Jyri Tapani Aalto,M,31,Finland,Badminton,NA
+Minna Maarit Aalto,F,30,Finland,Sailing,NA
+Minna Maarit Aalto,F,34,Finland,Sailing,NA
+Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
+Timo Antero Aaltonen,M,31,Finland,Athletics,NA
+Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
+&lt;/pre&gt;</raw>
+</section>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<section xml:id="integration-pause_integrating-concepts">
+  <title>Integrating Concepts</title>
+  <subsection xml:id="integration-pause_intro">
+  <p>By now you have learned about five of the basic building blocks of programming:</p>
+  <p>
+    <ul>
+      <li>
+        <p>how to store information in <term>variables</term></p>
+      </li>
+      <li>
+        <p>how to process information using math, logic and other <term>operators</term></p>
+      </li>
+      <li>
+        <p>how to modularize programs so that instructions for a specific task are separated into <term>functions</term></p>
+      </li>
+      <li>
+        <p>how to <term>iterate</term> over collections of data (strings of characters, lists of values) using <term>for loops</term></p>
+      </li>
+      <li>
+        <p>how to <term>control the path of execution</term> using <term>conditional statements</term></p>
+      </li>
+    </ul>
+  </p>
+  <p>That's a lot! Stop for a moment and congratulate yourself on getting this far! We are going to take a breather now, and not introduce any new concepts. In this chapter you will see examples of how to combine functions, iteration, and conditionals together to solve problems. You'll also get some hints on how to know which one of these concepts to apply in which circumstances.</p>
+  <p>We'll also try to visualize how these things combine using some color-coded diagrams. We'll represent functions as blue blocks, for loops as pink blocks and conditional statements as green blocks.</p>
+  </subsection>
+  <subsection xml:id="integration-pause_topics">
+    <title>Topics</title>
+    <p>
+      <ul>
+        <li>
+          <p>When to use iteration vs. functions for code re-use</p>
+        </li>
+        <li>
+          <p>How to combine iteration and functions</p>
+        </li>
+        <li>
+          <p>How to combine iteration and conditionals</p>
+        </li>
+        <li>
+          <p>How to combine functions and conditionals</p>
+        </li>
+        <li>
+          <p>How to combine all three!</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+</section>

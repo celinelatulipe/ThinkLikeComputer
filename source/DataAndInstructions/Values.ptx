@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<section xml:id="data-and-instructions_values-and-data-types">
+  <title>Values and Data Types</title>
+  <p>A <term>value</term> is one of the fundamental things &#x2014; like a word or a number &#x2014; that a program manipulates.
+            Some values are <c>5</c> (the result when we add <c>2 + 3</c>), and <c>"Hello, World!"</c>. These objects are classified into
+            different classes, or data types: 5 is an integer, and <q>Hello, World!</q> is a string, so-called because it contains a
+            string or sequence of letters. You (and the Python interpreter) can identify strings because they are enclosed in quotation
+            marks.</p>
+  <p>We can specify values directly in the programs we write. For example we can specify a number as a <term>literal</term> just by (literally) typing it directly into the program (e.g., <c>5</c> or <c>4.32</c>). In a program, we specify a word, or more generally a string of characters, by enclosing the characters inside quotation marks (e.g., <c>"Hello, World!"</c>).</p>
+  <p>During execution of a program, the Python interpreter creates an internal representation of any literals that have been specified in that program. It can then manipulate them, for example by multiplying two numbers. We call the internal representations <term>objects</term> or just <term>values</term>.</p>
+  <p>You can't directly see the internal representations of values. You can, however, use the <c>print</c> function to see a printed representation in the console.</p>
+  <p>The printed representation of a number uses the familiar decimal representation (reading <url href="http://en.wikipedia.org/wiki/Roman_numerals" visual="http://en.wikipedia.org/wiki/Roman_numerals">Roman Numerals</url> is a fun challenge in museums, but thank goodness the Python interpreter doesn't present the number 2014 as MMXIV in the output window). Thus, the printed representation of a number shown in the console is the same as the literal that you specify in a program.</p>
+  <p>The printed representation of a character string, however, is not exactly the same as the literal used to specify the string in a program. For the literal in a program, you enclose the string in quotation marks. The printed representation, in the console, omits the quotation marks.</p>
+  <program label="ac_print_literal_values" interactive="activecode" language="python">
+    <input>
+print(3.2)
+print("Hello, World!")
+        </input>
+    <tests>
+    </tests>
+  </program>
+  <p>Numbers with a decimal point belong to a class
+            called <term>float</term>, because these numbers are represented in a format called
+            <em>floating-point</em>.  At this stage, you can treat the words <em>class</em> and <em>type</em>
+            interchangeably.  You will gain a deeper understanding of what a class
+            is in later Computer Science courses.</p>
+  <p>You will soon encounter other types of objects as well, such as lists. Each of these has its own special representation for specifying an object as a literal in a program, and for displaying an object when you print it to the console. For example, list contents are enclosed in square brackets <c>[ ]</c>.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question2_2_1">
+    <statement>
+      <p>What appears in the console when the following statement executes?</p>
+      <program language="python">
+        <input>
+print("Hello World!")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Nothing is printed. It generates a runtime error.</p>
+        </statement>
+        <feedback>
+          <p>"Hello World!" has a printed representation, so there will not be an error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>"Hello World!"</p>
+        </statement>
+        <feedback>
+          <p>The literal in the program includes the quote marks, but the printed representation omits them.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Hello World!</p>
+        </statement>
+        <feedback>
+          <p>The printed representation omits the quote marks that are included in the string literal.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question2_2_2">
+    <statement>
+      <p>What is the data type of the literal in the program below?</p>
+      <program language="python">
+        <input>
+print("Twenty")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>String</p>
+        </statement>
+        <feedback>
+          <p>Yes, because it is enclosed in quotation marks, it is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Integer</p>
+        </statement>
+        <feedback>
+          <p>No, it is enclosed in quotation marks</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number</p>
+        </statement>
+        <feedback>
+          <p>No, even though these letters spell out a number word, Python will not see this as a number</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question2_2_3">
+    <statement>
+      <p>What is the data type of the literal in the program below?</p>
+      <program language="python">
+        <input>
+print("17")
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>String</p>
+        </statement>
+        <feedback>
+          <p>Yes, because it is enclosed in quotation marks, it is a string.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Integer</p>
+        </statement>
+        <feedback>
+          <p>No, it is enclosed in quotation marks</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number</p>
+        </statement>
+        <feedback>
+          <p>No, even though this is numerals, Python will not see this as a number because it is enclosed in quotation marks</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question2_2_4">
+    <statement>
+      <p>What is the data type of the literal in the program below?</p>
+      <program language="python">
+        <input>
+print(341)
+</input>
+      </program>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>String</p>
+        </statement>
+        <feedback>
+          <p>No, this is not a String because it is not enclosed in quotation marks.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Integer</p>
+        </statement>
+        <feedback>
+          <p>Yes, this is an integer (or whole number)</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Number</p>
+        </statement>
+        <feedback>
+          <p>No, number is not a specific data type. This is an integer (a type of number that is whole, without a decimal portion)</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>

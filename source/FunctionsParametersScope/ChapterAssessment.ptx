@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<section xml:id="functions-parameters-scope_chapter-assessment">
+  <title>Chapter Assessment</title>
+  <exercise label="ac11_15_1">
+    <statement>
+      <p>Write a function called <c>int_return</c> that takes an integer as input and returns the same integer.</p>
+    </statement>
+    <program label="ac11_15_1_editor" interactive="activecode" language="python">
+      <input>
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testOne(self):
+      self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_2">
+    <statement>
+      <p>Write a function called <c>add</c> that takes any number as its input and returns that sum with 2 added.</p>
+    </statement>
+    <program label="ac11_15_2_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testTwo(self):
+      self.assertEqual(add(-2), 0, "Testing that add(-2) returns 0")
+      self.assertEqual(add(6), 8, "Testing that add(6) returns 8")
+      self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_3">
+    <statement>
+      <p>Write a function called <c>change</c> that takes any string, adds <q>Nice to meet you!</q> to the end of the argument given, and returns that new string.</p>
+    </statement>
+    <program label="ac11_15_3_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testThree(self):
+      self.assertEqual(change("I'm Bob. "), "I'm Bob. Nice to meet you!", "Tests that change('I'm Bob. '') returns 'I'm Bob. Nice to meet you!'")
+      self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="ac11_15_6">
+    <statement>
+      <p>You will need to write two functions for this problem. The first function, <c>divide</c> that takes in any number and returns that same number divided by 2. The second function called <c>sum</c> should take any number, divide it by 2, and add 6. It should return this new number. You should call the <c>divide</c> function within the <c>sum</c> function. Do not worry about decimals.</p>
+    </statement>
+    <program label="ac11_15_6_editor" interactive="activecode" language="python">
+      <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+   def testSixA(self):
+      self.assertEqual(divide(4), 2, "Tests that divide(4) returns 2")
+   def testSixB(self):
+      self.assertEqual(sum(4), 8, "Tests that sum(4) returns 8")
+      self.assertEqual(sum(2), 7, "Tests that sum(2) returns 7")
+      self.assertEqual(sum(-6), 3, "Tests that sum(-6) returns 3")
+      self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
+
+myTests().main()
+        </input>
+    <tests>
+    </tests>
+    </program>
+  </exercise>
+  <exercise label="assess_ch8_1_lh">
+    <statement>
+      <p>: <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <image source="FunctionsParametersScope/Figures/Chapter_8_1.PNG" width="100%" alt="Finding the maximum number"/>
+        <p>The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution. The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? <BlankNode/></p>
+      </var>
+    </setup>
+  </exercise>
+  <exercise label="assess_ch8_2_lh">
+    <statement>
+      <p>:</p>
+      <image source="FunctionsParametersScope/Figures/Chapter_8_2.PNG" width="100%" alt="local vs global variables"/>
+      <p>Using the Codelens diagram screenshot, select all the variables that are local to the function generate_coords</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>NUM_COORDS</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, NUM_COORDS is under the global frame in the Codelens screenshot. Look at the generate_coords frame</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>MAX</p>
+        </statement>
+        <feedback>
+          <p>Correct, we are using the local version of MAX declared inside the function</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>MIN</p>
+        </statement>
+        <feedback>
+          <p>Correct, we are using the local version of MIN declared inside the function</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x_coord</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the x_coord append line is using a reference of the global frame list x_coord</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>coord</p>
+        </statement>
+        <feedback>
+          <p>Correct, the iterator variable is still a variable and in this case it is created locally inside the function</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="assess_ch8_3_lh">
+    <statement>
+      <p>: <var/>  </p>
+    </statement>
+    <setup>
+      <var>
+        <image source="FunctionsParametersScope/Figures/Chapter_8_4.PNG" width="100%" alt="average function"/>
+        <p>Consider the above program. Which Codelens screenshot shows the correct program output? (The options are labelled 1,2,3 in the top right corner of each screenshot) <BlankNode/></p>
+      </var>
+    </setup>
+  </exercise>
+</section>

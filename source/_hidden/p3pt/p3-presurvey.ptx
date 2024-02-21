@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<section xml:id="p3pt_pre-survey">
+  <title>Pre Survey</title>
+  <p>Please answer the following questions.</p>
+  <transition/>
+  <exercise runestone="p3-CS-self-efficacy-1"/>
+  <exercise runestone="p3-CS-self-efficacy-2"/>
+  <exercise runestone="p3-CS-self-efficacy-3"/>
+  <exercise runestone="p3-CS-self-efficacy-4"/>
+  <exercise runestone="p3-CS-self-efficacy-5"/>
+  <exercise runestone="p3-CS-self-efficacy-6"/>
+  <p>For the next questions please select the answer that best
+            matches your familiarity and confidence
+            about the specified concept(s).</p>
+  <exercise runestone="p3-prog-se-loop-7"/>
+  <exercise runestone="p3-prog-se-cond-8"/>
+  <exercise runestone="p3-prog-se-func-9"/>
+  <exercise runestone="p3-prog-se-list-dic-10"/>
+  <subsection xml:id="p3pt_feedback-3">
+    <title>Feedback</title>
+    <exercise label="p3-presurvey-sa">
+      <statement>
+        <p>Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="p3pt_what-to-do-next-3">
+    <title>What to do next</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to learn how to solve different types of problems in this ebook : &lt;b&gt;&lt;a id="p3-intro"&gt;&lt;font size="+2"&gt;Introduction to Problem Types&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("p3-intro")
+    a.href = "p3-intro.html"
+
+  };
+
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

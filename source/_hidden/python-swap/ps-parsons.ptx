@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<section xml:id="python-swap_practice-problems">
+  <title>Practice Problems</title>
+  <p>Please answer
+            the following problems to the best of your ability without any
+            outside help. You can stop working on a problem after you have worked
+            on it for about five minutes without solving it.</p>
+  <subsection xml:id="python-swap_problems-1">
+    <title>Problems</title>
+    <exercise label="ps_swap_comments_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>The following has the correct code to &#x2018;swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
+      </statement>
+      <blocks>
+        <block order="2">
+          <cline># initialize the variables</cline>
+        </block>
+        <block order="5">
+          <cline># set temp to the value of x</cline>
+        </block>
+        <block order="1">
+          <cline># set x to the value of y</cline>
+        </block>
+        <block order="4">
+          <cline># set y to the value of temp</cline>
+        </block>
+        <block order="3" correct="no">
+          <cline># set y to the value of x : if x already has the value of y you should set y to the value of temp</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="ps_swap_code_and_comments_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>The following has the correct code to &#x2018;swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <cline># initialize the variables</cline>
+          <cline>x = 3</cline>
+          <cline>y = 5</cline>
+          <cline>temp = 0</cline>
+        </block>
+        <block order="2">
+          <cline># set temp to the value of x</cline>
+          <cline>temp = x</cline>
+        </block>
+        <block order="4">
+          <cline># set x to the value of y</cline>
+          <cline>x = y</cline>
+        </block>
+        <block order="5">
+          <cline># set y to the value of temp</cline>
+          <cline>y = temp</cline>
+        </block>
+        <block order="3" correct="no">
+          <cline># set y to the value of x</cline>
+          <cline>y = x : the value of x is set to y so you should set it to the value of temp</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="ps_swap_code_only_pp" numbered="yes" adaptive="yes" indentation="show" language="python">
+      <statement>
+        <p>The following has the correct code to &#x2018;swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
+      </statement>
+      <blocks>
+        <block order="3">
+          <cline>x = 3</cline>
+          <cline>y = 5</cline>
+          <cline>temp = 0</cline>
+        </block>
+        <block order="4">
+          <cline>temp = x</cline>
+        </block>
+        <block order="1">
+          <cline>x = y</cline>
+        </block>
+        <block order="5">
+          <cline>y = temp</cline>
+        </block>
+        <block order="2" correct="no">
+          <cline>y = x : the value of x is set to y so you should set it to the value of temp</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+  <subsection xml:id="python-swap_feedback-3">
+    <title>Feedback</title>
+    <exercise label="ps-parsons-sa">
+      <statement>
+        <p>Please provide feedback here. Please share any comments, problems, or suggestions.</p>
+      </statement>
+    </exercise>
+  </subsection>
+  <subsection xml:id="python-swap_what-to-do-next-3">
+    <title>What to do next:</title>
+    <raw format="html" xml:space="preserve">&lt;p&gt;Click on the following link to go to the post test: &lt;b&gt;&lt;a id="ps-post"&gt;&lt;font size="+2"&gt;Post Test&lt;/font&gt;&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;</raw>
+    <raw format="html" xml:space="preserve">&lt;script type="text/javascript" &gt;
+
+  window.onload = function() {
+
+    a = document.getElementById("ps-post")
+    a.href = "ps-post.html"
+  };
+
+&lt;/script&gt;</raw>
+  </subsection>
+</section>

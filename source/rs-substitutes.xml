@@ -1,0 +1,459 @@
+<substitutes><substitute xml:id='se_ac6_5_1'>
+<div data-component="showeval" data-question_label="6.5.3" class="runestone explainer" id="se_ac6_5_1" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac6_5_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac6_5_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">5 * 3 &gt; 10 and 4 + 6 == 11<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac6_5_1"] = ['{{5 * 3}}{{15}} &gt; 10 and 4 + 6 == 11', '{{15 &gt; 10}}{{True}} and 4 + 6 == 11', 'True and {{4 + 6}}{{10}} == 11', 'True and {{10 == 11}}{{False}}', '{{True and False}}{{False}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='se_ac2_4_1a'>
+<div data-component="showeval" data-question_label="2.4.1.2" class="runestone explainer" id="se_ac2_4_1a" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac2_4_1a_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac2_4_1a_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">Notice that we always have to resolve the expression inside the innermost parentheses first, in order to determine what input to provide when calling the functions.<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac2_4_1a"] = ['print(sub({{square(3)}}{{9}}, square(1+1)))', 'print(sub(9, square({{1+1}}{{2}})))', 'print(sub(9, {{square(2)}}{{4}}))', 'print({{sub(9, 4)}}{{5}})'];
+    </script>
+</div>
+</substitute><substitute xml:id='se_ac2_11_1'>
+<div data-component="showeval" data-question_label="2.11.4" class="runestone explainer" id="se_ac2_11_1" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac2_11_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac2_11_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">16 - 2 * 5 // 3 + 1<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac2_11_1"] = ['16 - {{2 * 5}}{{10}} // 3 + 1', '16 - {{10 // 3}}{{3}} + 1', '{{16 - 3}}{{13}} + 1', '{{13 + 1}}{{14}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='se_ac2_12_1'>
+<div data-component="showeval" data-question_label="2.12.1.1" class="runestone explainer" id="se_ac2_12_1" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac2_12_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac2_12_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">a = 5<br />
+b = a<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac2_12_1"] = ['a = {{5}}{{5}}', 'b = {{a}}{{5}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='eval2_10_1'>
+<div data-component="showeval" data-question_label="2.10.7" class="runestone explainer" id="eval2_10_1" data-tracemode="true" >
+    <button class="btn btn-success" id="eval2_10_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="eval2_10_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">x = 5<br />
+y = 7<br />
+add(square(y), square(x))<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["eval2_10_1"] = ['{{add}}{{-add-}}(square(y), square(x)) ## add is a function so eval its arguments', '-add-({{square}}{{-square-}}(y), square(x)) ## square is a function so eval its arguments', '-add-(-square-({{y}}{{7}}), square(x))', '-add-({{-square-(7)}}{{49}}, square(x))', '-add-(49, {{square}}{{-square-}}(x)) ## square is a function so eval its arguments', '-add-(49, -square-({{x}}{{5}}))', '-add-(49, {{-square-(5)}}{{25}})', '{{-add-(49, 25)}}{{74}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='se_ac2_13_1'>
+<div data-component="showeval" data-question_label="2.13.2" class="runestone explainer" id="se_ac2_13_1" data-tracemode="true" >
+    <button class="btn btn-success" id="se_ac2_13_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="se_ac2_13_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">x = 6<br />
+x = x + 1<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["se_ac2_13_1"] = ['x = {{x}}{{6}} + 1', 'x = {{6 + 1}}{{7}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='eval8_2_1'>
+<div data-component="showeval" data-question_label="8.2.3" class="runestone explainer" id="eval8_2_1" data-tracemode="true" >
+    <button class="btn btn-success" id="eval8_2_1_nextStep">Next Step</button>
+    <button class="btn btn-default" id ="eval8_2_1_reset">Reset</button>
+    <div class="evalCont" style="background-color: #FDFDFD;">def hello2(s):<br />
+   print("Hello " + s)<br />
+   print("Glad to meet you")<br />
+<br />
+hello2("Nick")<br />
+</div>
+    <div class="evalCont"></div>
+    <script>
+    if (typeof window.raw_steps === "undefined") {
+    window.raw_steps = {};
+    }
+    raw_steps["eval8_2_1"] = ['{{hello2("Nick")}}{{lookup hello2 name and find it is a function}}', '{{hello2("Nick")}}{{s = "Nick"}} # bind actual parameter to formal parameter', 'print("Hello " + {{s}}{{"Nick"}})', '{{print("Hello " + "Nick")     #prints out "hello Nick"}}{{print("Glad to meet you")   #prints out "Glad to meet you"}}', '{{print("Glad to meet you")   #prints out "Glad to meet you"}}{{ # the function is finished}}'];
+    </script>
+</div>
+</substitute><substitute xml:id='p3-ashesi-parsons-consent'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-ashesi-parsons-consent"  class='' data-results='instructor' data-question_label="1" >
+Yes, I consent to use my data in the data analysis for this study.
+
+<li>1. Yes</li>
+
+<li>2. No</li>
+</ul></div></substitute><substitute xml:id='p3-ashesi-parsons-observation'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-ashesi-parsons-observation"  class='' data-results='instructor' data-question_label="2" >
+Are you willing to do a 30-minute observation where you solve problems and talk aloud about what you are doing and why?
+
+<li>1. Yes</li>
+
+<li>2. No</li>
+</ul></div></substitute><substitute xml:id='p3-post-8-read'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-post-8-read"  class='' data-results='instructor' data-question_label="8" >
+Rate your ability to read English
+
+<li>1. Poor</li>
+
+<li>2. Below Average</li>
+
+<li>3. Average</li>
+
+<li>4. Above Average</li>
+
+<li>5. Excellent</li>
+</ul></div></substitute><substitute xml:id='p3-post-9-understand-spoken'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-post-9-understand-spoken"  class='' data-results='instructor' data-question_label="9" >
+Rate your ability to understand spoken English
+
+<li>1. Poor</li>
+
+<li>2. Below Average</li>
+
+<li>3. Average</li>
+
+<li>4. Above Average</li>
+
+<li>5. Excellent</li>
+</ul></div></substitute><substitute xml:id='p3-post-10-parsons'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-post-10-parsons"  class='' data-results='instructor' data-question_label="10" >
+Had you solved any mixed-up code (Parsons) problems like the one below before you took part in this assignment?
+
+<li>1. No</li>
+
+<li>2. Yes</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-1'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-1"  class='' data-results='instructor' data-question_label="1" >
+Generally I have felt secure about attempting computer programming problems.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-2'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-2"  class='' data-results='instructor' data-question_label="2" >
+I am sure I could do advanced work in computer science.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-3'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-3"  class='' data-results='instructor' data-question_label="3" >
+I am sure that I can learn programming.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-4'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-4"  class='' data-results='instructor' data-question_label="4" >
+I think I could handle more difficult programming problems.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-5'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-5"  class='' data-results='instructor' data-question_label="5" >
+I can get good grades in computer science.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-CS-self-efficacy-6'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-CS-self-efficacy-6"  class='' data-results='instructor' data-question_label="6" >
+I have a lot of self-confidence when it comes to programming.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='p3-prog-se-loop-7'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-prog-se-loop-7"  class='' data-results='instructor' data-question_label="7" >
+Loops/Iteration like <code>for n in nums:</code> and <code>for i in range(4):</code>
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in simple programs</li>
+
+<li>5. I am confident in my ability to use this concept in complex programs</li>
+</ul></div></substitute><substitute xml:id='p3-prog-se-cond-8'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-prog-se-cond-8"  class='' data-results='instructor' data-question_label="8" >
+Conditionals/Selection Statements like <code>if x &lt; 3:</code>
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in simple programs</li>
+
+<li>5. I am confident in my ability to use this concept in complex programs</li>
+</ul></div></substitute><substitute xml:id='p3-prog-se-func-9'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-prog-se-func-9"  class='' data-results='instructor' data-question_label="9" >
+Functions like <code>def get_odd(nums):</code>
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in simple programs</li>
+
+<li>5. I am confident in my ability to use this concept in complex programs</li>
+</ul></div></substitute><substitute xml:id='p3-prog-se-list-dic-10'>
+<div class="runestone ">
+<ul data-component="poll" id="p3-prog-se-list-dic-10"  class='' data-results='instructor' data-question_label="10" >
+Lists like <code>a = ["red", "green"]</code>
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in simple programs</li>
+
+<li>5. I am confident in my ability to use this concept in complex programs</li>
+</ul></div></substitute><substitute xml:id='ps-ashesi-parsons-consent'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-ashesi-parsons-consent"  class='' data-results='instructor' data-question_label="1" >
+Yes, I consent to use my data in the data analysis for this study.
+
+<li>1. Yes</li>
+
+<li>2. No</li>
+</ul></div></substitute><substitute xml:id='ps-ashesi-parsons-observation'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-ashesi-parsons-observation"  class='' data-results='instructor' data-question_label="2" >
+Are you willing to do a 30-minute observation where you solve problems and talk aloud about what you are doing and why?
+
+<li>1. Yes</li>
+
+<li>2. No</li>
+</ul></div></substitute><substitute xml:id='ps-post-8-read'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-post-8-read"  class='' data-results='instructor' data-question_label="8" >
+Rate your ability to read English
+
+<li>1. Poor</li>
+
+<li>2. Below Average</li>
+
+<li>3. Average</li>
+
+<li>4. Above Average</li>
+
+<li>5. Excellent</li>
+</ul></div></substitute><substitute xml:id='ps-post-9-understand-spoken'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-post-9-understand-spoken"  class='' data-results='instructor' data-question_label="9" >
+Rate your ability to understand spoken English
+
+<li>1. Poor</li>
+
+<li>2. Below Average</li>
+
+<li>3. Average</li>
+
+<li>4. Above Average</li>
+
+<li>5. Excellent</li>
+</ul></div></substitute><substitute xml:id='ps-post-10-parsons'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-post-10-parsons"  class='' data-results='instructor' data-question_label="10" >
+Had you solved any mixed-up code (Parsons) problems like the one below before you took part in this assignment?
+
+<li>1. No</li>
+
+<li>2. Yes</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-1'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-1"  class='' data-results='instructor' data-question_label="1" >
+Generally I have felt secure about attempting computer programming problems.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-2'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-2"  class='' data-results='instructor' data-question_label="2" >
+I am sure I could do advanced work in computer science.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-3'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-3"  class='' data-results='instructor' data-question_label="3" >
+I am sure that I can learn programming.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-4'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-4"  class='' data-results='instructor' data-question_label="4" >
+I think I could handle more difficult programming problems.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-5'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-5"  class='' data-results='instructor' data-question_label="5" >
+I can get good grades in computer science.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-CS-self-efficacy-6'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-CS-self-efficacy-6"  class='' data-results='instructor' data-question_label="6" >
+I have a lot of self-confidence when it comes to programming.
+
+<li>1. Strongly disagree</li>
+
+<li>2. Disagree</li>
+
+<li>3. Neither agree nor disagree</li>
+
+<li>4. Agree</li>
+
+<li>5. Strongly agree</li>
+</ul></div></substitute><substitute xml:id='ps-prog-se-vars-7'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-prog-se-vars-7"  class='' data-results='instructor' data-question_label="7" >
+Setting the value of a variable like: x = 4
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in a program</li>
+</ul></div></substitute><substitute xml:id='ps-prog-se-swap-8'>
+<div class="runestone ">
+<ul data-component="poll" id="ps-prog-se-swap-8"  class='' data-results='instructor' data-question_label="8" >
+Swapping the values of two variables so that var1 has the original value of var2 and var2 has the original value of var1
+
+<li>1. I am unfamiliar with this concept</li>
+
+<li>2. I know what it means, but have not used it in a program</li>
+
+<li>3. I have used this concept in a program, but am not confident about my ability to use it</li>
+
+<li>4. I am confident in my ability to use this concept in a program</li>
+</ul></div></substitute></substitutes>
