@@ -5,8 +5,16 @@
 # ensure this file is tracked
 !.gitignore
 
-# don't track unpublished builds or stage
+# don't track python caches
+/__pycache__/
+
+# don't track unpublished builds or stage for:
+# RST
+/build/*
+build_info
+# PreTeXt
 output
+source/build
 
 # don't track assets generated from source
 generated-assets
@@ -46,6 +54,7 @@ ehthumbs_vista.db
 *.msix
 *.msm
 *.msp
+*.swp
 [Dd]esktop.ini
 .directory
 .fuse_hidden*
