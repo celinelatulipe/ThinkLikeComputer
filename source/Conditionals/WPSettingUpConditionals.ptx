@@ -52,7 +52,7 @@
         </choice>
         <choice>
           <statement>
-            <p>If statement - Elif statemenet - Else statement</p>
+            <p>If statement - Elif statement - Else statement</p>
           </statement>
           <feedback>
             <p>Using if/elif/else here will provide an unnecessary else statement and improperly update one of the accumulator variables in the case where a word has both a "t" and a "z".</p>
@@ -67,7 +67,7 @@
       <choices>
         <choice>
           <statement>
-            <p>If statement - Elif statemenet - Else statement</p>
+            <p>If statement - Elif statement - Else statement</p>
           </statement>
           <feedback>
             <p>The elif and else statements are both unnecessary.</p>

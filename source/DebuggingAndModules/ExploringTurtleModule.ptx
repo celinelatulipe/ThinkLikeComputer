@@ -37,7 +37,7 @@ maya.forward(50)          # move forward by 50 units
             type <c>Turtle</c> because of the uppercase <c>T</c>. The variable <c>maya</c> is made to refer to this
             turtle.</p>
         <p>These first three lines set us up so that we are ready to do some drawing.</p>
-        <p>In lines 4-8, we instruct the turtle ‘maya’ to draw part of a dashed line. Run the program and trace through lines 5-9 to understand what is happening. The turtle only leaves a trace when the tail (pen) is down. When you create a tutrle, their tail is down by default.</p>
+        <p>In lines 4-8, we instruct the turtle ‘maya’ to draw part of a dashed line. Run the program and trace through lines 5-9 to understand what is happening. The turtle only leaves a trace when the tail (pen) is down. When you create a turtle, their tail is down by default.</p>
         <note>
             <title>Complete the line …</title>
             <p>Modify the program by adding the commands necessary to have <em>maya</em> make a dashed line that goes to the right edge of the canvas. The code will be repetitive. In the next chapter we will learn how to write this code so that it is more efficient!</p>
