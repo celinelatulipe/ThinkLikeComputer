@@ -8,7 +8,7 @@
   <p>
     <ul>
       <li>
-        <p>Displaying a list of friends on SnapChat</p>
+        <p>Displaying a list of friends on Snapchat</p>
       </li>
       <li>
         <p>Updating the position of every character on the screen of a video game</p>
@@ -18,5 +18,5 @@
       </li>
     </ul>
   </p>
-  <p>You'll also see examples in this chapter of how iteration simplifies the code needed to make turtles draw shapes. Iteration takes advantage of a fundamental difference between humans and computers: computers can repeat a set of instructions hundreds or thousands of times very quickly, and they don't get bored doing the same thing over and over again, the way that humans would. This makes computers powerful and that has ethical implications that we will also discuss in this chatper.</p>
+  <p>You'll also see examples in this chapter of how iteration simplifies the code needed to make turtles draw shapes. Iteration takes advantage of a fundamental difference between humans and computers: computers can repeat a set of instructions hundreds or thousands of times very quickly, and they don't get bored doing the same thing over and over again, the way that humans would. This makes computers powerful and that has ethical implications that we will also discuss in this chapter.</p>
 </section>
