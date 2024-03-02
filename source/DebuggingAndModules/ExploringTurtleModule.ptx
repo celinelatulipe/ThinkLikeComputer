@@ -90,7 +90,7 @@ maya.forward(50)          # move forward by 50 units
 </choices>
 
     </exercise>
-        <p>Maya the turtle is an <term>object</term> and once we have created a turtle object, we can make it perform actions. Objects have <term>methods</term>, things that they can do. We can make use of this by <term>invoking</term> or activating turtle <term>methods</term>. A method is a set of program instructions that are for a specific type of object. Turtle methods are sets of instrutcions that all turtles know how to respond to. Because maya is an object, we use dot notation to call or invoke the turtle methods; <c>maya.forward(50)</c> says to call the forward() method, for the turtle object maya, with the specific distance of 50 units.</p>
+        <p>Maya the turtle is an <term>object</term> and once we have created a turtle object, we can make it perform actions. Objects have <term>methods</term>, things that they can do. We can make use of this by <term>invoking</term> or activating turtle <term>methods</term>. A method is a set of program instructions that are for a specific type of object. Turtle methods are sets of instructions that all turtles know how to respond to. Because maya is an object, we use dot notation to call or invoke the turtle methods; <c>maya.forward(50)</c> says to call the forward() method, for the turtle object maya, with the specific distance of 50 units.</p>
         <p>In addition to methods — the things an object can do — an object can also
             have <term>attributes</term> — (sometimes called <em>properties</em>) which store information about the current state of an object. For example, each
             turtle has a <em>color</em> attribute. The method invocation  <c>maya.color("red")</c>
