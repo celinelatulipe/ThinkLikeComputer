@@ -22,7 +22,7 @@
     </gi>
     <gi>
       <title>codelens</title>
-      <p>An interactive environment that allows the user to control the step by step execution of a Python program</p>
+      <p>An interactive environment that allows the user to control the step by step execution of a Python program.</p>
     </gi>
     <gi>
       <title>comment</title>
@@ -38,7 +38,7 @@
     <gi>
       <title>console</title>
       <p>A window in a development environment that shows program output in text format, usually only seen
-                            by the programmmer, and not seen by the end user.</p>
+                            by the programmer, and not seen by the end user.</p>
     </gi>
     <gi>
       <title>debugging</title>
@@ -127,7 +127,7 @@
       <p>An interactive user interface to the Python interpreter, and the user of a
                             Python shell types commands at the prompt (&gt;&gt;&gt;), and presses the return
                             key to send these commands immediately to the interpreter for
-                            processing. To initiate the Python Shell, the user should open theterminal and type <q>python</q>. Once the user presses           enter, the Python Shell appears and the user can interact with it.</p>
+                            processing. To initiate the Python Shell, the user should open the terminal and type <q>python</q>. Once the user presses           enter, the Python Shell appears and the user can interact with it.</p>
     </gi>
     <gi>
       <title>runtime error</title>
