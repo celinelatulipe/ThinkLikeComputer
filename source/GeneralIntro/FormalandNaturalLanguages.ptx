@@ -17,13 +17,12 @@
   </blockquote>
   <p>Formal languages tend to have strict rules about syntax. For example, <c>3+3=6</c>
             is a syntactically correct mathematical statement, but <c>3=+6$</c> is not.
-            H<subscript>2</subscript>O is a syntactically correct chemical name, but <subscript>2</subscript>Zz is
-            not.</p>
+            H₂O is a syntactically correct chemical name, but ₂Zz is not.</p>
   <p>Syntax rules come in two flavors, pertaining to <term>tokens</term> and <term>structure</term>.
             Tokens are the basic elements of the language, such as words, numbers, and
             chemical elements. One of the problems with <c>3=+6$</c> is that <c>$</c> is not a
             legal token in mathematics (at least as far as we know). Similarly,
-            <subscript>2</subscript>Zz is not legal because there is no element with the abbreviation
+            ₂Zz is not legal because there is no element with the abbreviation
             <c>Zz</c>.</p>
   <p>The second type of syntax rule pertains to the <term>structure</term> of a statement&#x2014;
             that is, the way the tokens are arranged. The statement <c>3=+6$</c> is

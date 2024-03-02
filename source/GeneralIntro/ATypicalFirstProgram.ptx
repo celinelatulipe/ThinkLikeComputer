@@ -32,7 +32,7 @@ print("Hello, World!")
   </p>
   <exercise label="question_print_statement">
     <statement>
-      <p>The print() statment:</p>
+      <p>The print() statement:</p>
     </statement>
     <choices>
       <choice>

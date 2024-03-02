@@ -6,7 +6,7 @@
     <p>The Programming, Interactivity and Ethics (PIE) Edition of the FOPP textbook builds on the
               fantastic content in the FOPP text, but adds in two very strong threads focused on interactive,
               event-based programming, and on ethical issues in programming. The PIE additions and edits were created by
-              Dr. Celine Latulipe at the University of Manitoba. The PIE version incldues the following
+              Dr. Celine Latulipe at the University of Manitoba. The PIE version includes the following
               changes and additions from the original FOPP textbook:</p>
     <p>
       <ul>
@@ -21,11 +21,11 @@
                       to make room for interactivity and ethics threads</p>
         </li>
         <li>
-          <p>Much more extensive use of Turtles module to focus on interactivity, including using mouse
+          <p>Much more extensive use of the Turtle module to focus on interactivity, including using mouse
                       and keyboard callbacks</p>
         </li>
         <li>
-          <p>Use of CodeSkulptr/SimpleGUI for more interactive, event-based programming</p>
+          <p>Use of CodeSkulptor/SimpleGUI for more interactive, event-based programming</p>
         </li>
         <li>
           <p>Split functions into two separate chapters (first chapter on functions is about modularity,
@@ -113,7 +113,7 @@
   </subsection>
   <subsection xml:id="general-intro_preface">
     <title>Preface</title>
-    <p>Today, it is hard to imagine life without computers.  We carry them in our pockets, read with them on the couch, and use them on our desk at work.  Computing is the Swiss Army knife of the 21st century: a convenient tool that can be used to solve a wide array of problems. The original computers were large and limited in function: nothing more than very basic calculators. The military was the first to find some of the many applications of this technology: made small, computers could be used to improve the precision of bombing; made large and (relatively) powerful, they could be used to break military codes. As computers continued to grow in power and drop in price, many more peaceful applications were found:</p>
+    <p>Today, it is hard to imagine life without computers.  We carry them in our pockets, read with them on the couch, and use them on our desk at work.  Computing is the Swiss Army knife of the 21st century: a convenient tool that can be used to solve a wide array of problems. The original computers were large and limited in function: nothing more than very basic calculators. The military was the first to find some of the many applications of this technology: made small computers that could be used to improve the precision of bombing; made large and (relatively) powerful computers that could be used to break military codes. As computers continued to grow in power and drop in price, many more peaceful applications were found:</p>
     <p>
       <ul>
         <li>
@@ -133,7 +133,7 @@
         </li>
       </ul>
     </p>
-    <p>Today, the amount of computing power and the volume of data available to us is staggering.  The field of machine learning is just beginning to harness this power and data and is transforming the field of computer science.  At one level, machine learning, allows programs to do for themselves what programmers have had to do for years, which is to recognize complex patterns in the data. Machine learning algorithms are now routinely doing better than humans in tasks like reading X-rays, or recommending a restaurant to try.</p>
+    <p>Today, the amount of computing power and the volume of data available to us is staggering.  The field of machine learning is just beginning to harness this power and is transforming the field of computer science.  At one level, machine learning, allows programs to do for themselves what programmers have had to do for years, which is to recognize complex patterns in the data. Machine learning algorithms are now routinely doing better than humans in tasks like reading X-rays, or recommending a restaurant to try.</p>
     <p>This course is about exploring the use of computer programs to solve these kinds of problems, whatever your area of interest and major might be.</p>
     <p>To do so, this book will teach you how to understand and create computer programs in Python.
                 Python is a programming language that is in wide use both for professional software development and in education. In the professional world, it is used for anything from creating small scripts that rename files in a folder, to developing full web applications such as YouTube, SnapChat and DropBox. In the world of education, Python is a popular language because of its relatively simple syntax, its robust set of built-in functionality and its beginner-friendly error messages. For all these reasons and more, Python has become widespread in the world of data science and machine learning as well; in fact, it is the principal language of <url href="https://www.tensorflow.org/" visual="https://www.tensorflow.org/">TensorFlow</url>, Google's open-source machine learning library.</p>

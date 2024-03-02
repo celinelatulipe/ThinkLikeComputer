@@ -36,23 +36,19 @@
                 code</term>, and the translated program is called the <term>object code</term> or the
             <term>executable</term>. Once a program is compiled, you can execute it repeatedly
             without further translation. If you make changes to your source code, you need to compile your files into an executable again.</p>
-  <p>A compiler reads the program and translates it completely before the program
-            starts running. In this case, the high-level program is called the <term>source
-                code</term>, and the translated program is called the <term>object code</term> or the
-            <term>executable</term>. Once a program is compiled, you can execute it repeatedly
-            without further translation. If you make changes to your source code, you need to compile your files into an executable again.</p>
+ 
   <image source="GeneralIntro/Figures/compile.png" width="50%" alt="Compile illustration, shows that source code goes through the compiler to become object code, and object code is executed to run the program."/>
   <p>Many modern languages use both processes. They are first compiled into a lower
             level language, called <term>byte code</term>, and then interpreted by a program called
             a <term>virtual machine</term>. Python uses both processes, but because of the way
             programmers interact with it, it is usually considered an interpreted language.</p>
   <p>For the core material in this book, you will not need to install
-            or run python natively on your computer. Instead, you'll be writing simple
+            or run Python natively on your computer. Instead, you'll be writing simple
             programs and executing them right in your browser.</p>
-  <p>At some point, you will find it useful to have a complete python environment, rather than the limited environment
+  <p>At some point, you will find it useful to have a complete Python environment, rather than the limited environment
             available in this online textbook. To do that, you will either
             install python on your computer so that it can run natively, or use a remote server that provides either a
-            command line shell or a jupyter notebook environment.</p>
+            command line shell or a Jupyter notebook environment.</p>
   </subsection>
   <subsection xml:id="general-intro_activecode-in-runestone">
     <title>ActiveCode in Runestone</title>
@@ -93,7 +89,7 @@ print(2 + 3)
                 can only see the final result. In CodeLens you can see and control the step by step progress.
                 Note that the red arrow always points to the next line of code that is going to be executed.
                 The light green arrow points to the line that was just executed. Click on the <q>Show in
-                CodeLens</q> button in the code example above to make the CodeLens window show up, and then click on the Forward button
+                CodeLens</q> button in the code example above to make the CodeLens window show up, and then click on the Next button
                 a few times to step through the execution.</p>
     <p>Sometimes, we will present code examples explicitly in a CodeLens window in the textbook, as below.
                 When we do, think of it as an encouragement to use the CodeLens features to step through the
