@@ -113,8 +113,8 @@ print(count)
     <tests>
     </tests>
   </program>
-  <p>In this example we don't make use of <c>w</c> even though the iterator variable (loop variable) is a necessary part of
-            constructing a for loop. Instead of adding the value of <c>w</c> to <c>count</c> we add a 1 to it,
+  <p>In this example, we don't make use of <c>w</c> even though the iterator variable (loop variable) is a necessary part of
+            constructing a for loop. Instead of adding the value of <c>w</c> to <c>count</c> we add a 1 to it
             because we're incrementing the value of count when we iterate each time through the loop. Though in
             this scenario we could have used the <c>len</c> function, there are other cases later on where len
             won't be useful but we will still need to count.</p>
