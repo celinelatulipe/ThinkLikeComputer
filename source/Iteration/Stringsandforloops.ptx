@@ -11,7 +11,7 @@ for achar in "Go Spot Go":
     <tests>
     </tests>
   </program>
-  <p>The loop variable <c>achar</c> is automatically assigned each character in the string <q>Go Spot Go</q> one at a time.
+  <p>The loop variable <c>achar</c> is automatically assigned to each character in the string <q>Go Spot Go</q> one at a time.
             We will refer to this type of sequence iteration as <term>iteration by item</term>. Note that the for loop
             processes the characters in a string or items in a sequence one at a time <term>from left to right</term>.</p>
   <p>

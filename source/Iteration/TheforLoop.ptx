@@ -34,7 +34,7 @@ for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
                     one time for each name in the list.</p>
       </li>
       <li>
-        <p>On each <em>iteration</em> or <em>pass</em> of the loop, first a check is done to see if
+        <p>On each <em>iteration</em> or <em>pass</em> of the loop, first, a check is done to see if
                     there are still more items to be processed.  If there are none left (this is
                     called the <term>terminating condition</term> of the loop), the loop has finished.
                     Program execution continues at the next statement <term>after</term> the loop body.</p>
@@ -61,7 +61,7 @@ for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
         <p>A colon is required at the end of the line</p>
       </li>
       <li>
-        <p>After the word <term>in</term> and before the colon is an expression that must evaluate to a sequence (e.g., a string or a list). It could be a literal, or a variable name, or a more complex expression. In the example on this page, there is a literal list. You will see examples throughout this chapter that show other ways that a sequence can be specified in a for loop.</p>
+        <p>After the word <term>in</term> and before the colon is an expression that must evaluate to a sequence (e.g., a string or a list). It could be a literal, a variable name, or a more complex expression. In the example on this page, there is a literal list. You will see examples throughout this chapter that show other ways that a sequence can be specified in a for loop.</p>
       </li>
       <li>
         <p>Although in this example there is only one instruction in the loop body, there are

@@ -19,18 +19,18 @@ print("Now we are outside of the for loop!")
     <tests>
     </tests>
   </program>
-  <p>There are a few things to notice here for when you use this later on. First, is that the two print statements on line 4 and 5 are executed three times, but we don't print line 4
+  <p>There are a few things to notice here for when you use this later on. First, is that the two print statements on lines 4 and 5 are executed three times, but we don't print line 4
             three times and then print line 5 three times. Instead, we print line 4, then line 5. Once
             that is done the for loop <term>iterates</term>, the Python interpreter jumps back to the beginning of the for
             loop, and continues to print out lines 4 and 5 again until it has printed them both a total
             of three times.</p>
-  <p>Second, these lines were printed the same number of times as is inside the <c>range</c> function. If we
+  <p>Second, these lines were printed the same number of times as inside the <c>range</c> function. If we
             wanted to print them more or fewer times, then we would just need to change the number
             inside of the parentheses on line 3.</p>
   <p>Finally, the indentation is important here. All of the statements that were printed out
             multiple times were indented under the for loop. When the Python interpreter finished the for loop (after executing the two indented lines three times),
             the interpreter jumped down to line 5 to continue executing the code after the loop. If
-            you'd like to watch the execution, checkout the code above in codelens!</p>
+            you'd like to watch the execution, check out the code above in codelens!</p>
   <p>Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.</p>
   <program label="ac4_3_2" interactive="activecode" language="python">
     <input>
