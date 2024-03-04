@@ -78,6 +78,6 @@ print(square(3))
     <tests>
     </tests>
     </program>
-    <p>In the second line of the example above, the square function is called with the input <c>3</c>. The square function evaluates the input and retunrs the value <c>9</c>. The value <c>9</c> is then passed as the input to the print function. The print function displays <c>9</c> on the console.</p>
+    <p>In the second line of the example above, the square function is called with the input <c>3</c>. The square function evaluates the input and returns the value <c>9</c>. The value <c>9</c> is then passed as the input to the print function. The print function displays <c>9</c> on the console.</p>
   </subsection>
 </section>
