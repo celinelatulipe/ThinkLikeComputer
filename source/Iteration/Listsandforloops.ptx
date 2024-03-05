@@ -3,7 +3,7 @@
   <title>Lists and <c>for</c> loops</title>
   <subsection xml:id="iteration_simple-for-loop-example">
     <title>A simple for loop example</title>
-    <p>A list is a sequence of items, and in a later chapter you will learn all about various ways to create, build and edit lists. For now, let's focus on using lists. A <term>list traversal</term> uses a <c>for</c> loop to iterate over each item in the list automatically. Consider this example:</p>
+    <p>A list is a sequence of items, and in a later chapter, you will learn all about various ways to create, build and edit lists. For now, let's focus on using lists. A <term>list traversal</term> uses a <c>for</c> loop to iterate over each item in the list automatically. Consider this example:</p>
     <program label="ac4_7_1" interactive="activecode" language="python">
       <input>
 fruits = ["apple", "orange", "banana", "cherry"]
