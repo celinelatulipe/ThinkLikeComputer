@@ -11,7 +11,7 @@
   <p>That sounds simple enough, until you remember that one function can call another. While in the middle of one function,
             the program might have to execute the statements in another function. But while executing that new function, the
             program might have to execute yet another function!</p>
-  <p>Fortunately, the Python interperter is adept at keeping track of where it is, so each time a function completes, the
+  <p>Fortunately, the Python interpreter is adept at keeping track of where it is, so each time a function completes, the
             program picks up where it left off in the function that called it. When it gets to the end of the program, it terminates.</p>
   <p>What does all that mean for us when we try to understand a program? Don't read from top to bottom. Instead, follow the
             flow of execution.  This means that you will read the def statements as you are scanning from top to bottom, but you
