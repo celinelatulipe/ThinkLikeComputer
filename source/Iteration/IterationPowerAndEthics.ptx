@@ -3,8 +3,8 @@
   <title>The Power of Iteration</title>
   <introduction>
     <p>The examples you have seen so far in this chapter show iteration over small data: strings and lists that are hard-coded into the program. In the next
-              chapter you are going to learn how to read from files. Reading from files gives a programmer access to much larger data sets that can be iterated over.
-              In addition to reading from static files, there are also ways to read from live data streams, such as wind sensor data from a weather station or all the twitter posts with a given hashtag. With the ability to iterate, programmers have the ability to make computers do massive amounts of computation and this enables things that were not really possible before because it takes people much longer to do things than computers.</p>
+              chapter, you are going to learn how to read from files. Reading from files gives a programmer access to much larger data sets that can be iterated over.
+              In addition to reading from static files, there are also ways to read from live data streams, such as wind sensor data from a weather station or all the Twitter posts with a given hashtag. With the ability to iterate, programmers have the ability to make computers do massive amounts of computation and this enables things that were not really possible before because it takes people much longer to do things than computers.</p>
     <p>One of the early ways iteration was used became powerful was for &#x2018;mail merge'. This allowed a computer to take a list of names and addresses, and print out letters addressed to everyone on the list. This meant that a company could send letters to huge lists of people (such as to every address in a city's phonebook), something that would have been nearly impossible for an administrative clerk to do prior to computers being standard office equipment. The introduction of iteration by computer changed things. Iteration and mail merge made it possible for people to reach a wider audience by mailing out letters. You can think of this as the original email spam! Like any tool, iteration can be used for good (sending out information about a blood donation clinic) or evil (spreading disinformation about a political candidate).</p>
   </introduction>
   <subsection xml:id="iteration_large-sets-of-data">
@@ -31,7 +31,7 @@
           <p>The photos of every person who has passed through airport security in Vancouver in 2021</p>
         </li>
         <li>
-          <p>All photos and posts that somebody &#x2018;liked' on instagram</p>
+          <p>All photos and posts that somebody &#x2018;liked' on Instagram</p>
         </li>
         <li>
           <p>Health card number of every person who has had a sex change operation at a hospital in Ontario</p>
@@ -41,7 +41,7 @@
         </li>
       </ul>
     </p>
-    <p>For each list above, can you think of a good reason to iterate through the list? What might you do with that information that would be good for humanity? What might someone do with that list that would cause harm? One thing to keep in mind is that almost all of these data are incomplete and have inaccuracies - it is inevitable that in a large set of data there are errors. What would be the consequences to someone if the data about them in a list was erroneous? It's also often unclear who <term>owns</term> the information stored in such lists, and there is increasingly a price tag and market associated with this data.</p>
+    <p>For each list above, can you think of a good reason to iterate through the list? What might you do with that information that would be good for humanity? What might someone do with that list that would cause harm? One thing to keep in mind is that almost all of these data are incomplete and have inaccuracies - it is inevitable that in a large set of data, there are errors. What would be the consequences to someone if the data about them in a list was erroneous? It's also often unclear who <term>owns</term> the information stored in such lists, and there is increasingly a price tag and market associated with this data.</p>
     <p>What would you do if the company you worked for asked you to write code that would iterate over a list and do something with the data that you thought was unethical? Who owns the data in the list? Is it data that you should even have access to? Is the data <term>about</term> someone? If so, do they know your company has that data and do you have permission to use it? As a programmer, you have an ethical responsibility to think about the impacts your code will have on people and to refuse to engage in developing software that will cause harm.</p>
     <p>
       <term>Check your understanding</term>
