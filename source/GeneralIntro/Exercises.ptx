@@ -1,5 +1,153 @@
 <?xml version="1.0"?>
-<section xml:id="General-Intro_Exercises">
-    <title>Exercises</title>
-    <p></p>
-</section>
+    <section xml:id="Chapter1_chapter-assessment">
+        <title>Chapter Assessment</title>
+        <p><term>Check your understanding</term></p>
+
+    <exercise xml:id="assess_question1_1_1">
+        <statement>
+
+        <p>Why create an algorithm?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>Because computers are better at solving problems.</p>
+                </statement>
+                <feedback>
+                    <p>Computers aren't necessarily better at solving problems, though often they can be quicker than humans. Additionally, algorithms can be used to solve non-computer related problems.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>So that you don't have to solve the problem yourself.</p>
+                </statement>
+                <feedback>
+                    <p>While it is beneficial to have a set of instructions that others can follow, this isn't the best answer. By creating the algorithm, you solve a problem for yourself and others.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>So that you have a general solution to a problem.</p>
+                </statement>
+                <feedback>
+                    <p>Yes, by creating a general solution you can then express it as a program if you choose, and then use a computer to automate the execution.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Because you need a set of instructions to follow.</p>
+                </statement>
+                <feedback>
+                    <p>While it is beneficial to have a set of instructions as that is what an algorithm **is**, it is not **why** we would want to create one.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+<exercise xml:id="assess_question1_1_2">
+    <statement>
+        <p>Write code to print out the phrase “Hello World”.</p>
+
+    </statement>
+    <program xml:id="assess_question1_1_2_editor" interactive="activecode" language="python">
+
+        <input>
+
+=====
+
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+    def testOne(self):
+        self.assertIn("Hello World", self.getOutput(), "Your output should contain a phrase Hello World")
+
+myTests().main()
+        </input>
+<tests>
+
+
+</tests>
+
+    </program>
+</exercise>
+
+    <exercise xml:id="assess_question1_1_3">
+        <statement>
+
+        <p>What will be output to the console when the following program is run?</p>
+        <program language="python"><input>
+# print("Catch you later!")
+print("Good-bye!")
+print("Hope you are well.")
+print("Hello!")
+</input></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>nothing, there is an error</p>
+                </statement>
+                <feedback>
+                    <p>There is no error in this program.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Catch you later!</p>
+                </statement>
+                <feedback>
+                    <p>Catch you later! is a comment, as indicated by the # sign, so it won't be printed</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>Good-bye!
+Hope you are well.
+Hello!</p>
+                </statement>
+                <feedback>
+                    <p>Yes, the lines are printed in the order the Python interpreter gets to them, top to bottom.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Hello!
+Hope you are well.
+Good-bye!</p>
+                </statement>
+                <feedback>
+                    <p>While it might make sense to say hello before good-bye, the Python interpreter just follows instructions in order as given</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>Hello!
+Hope you are well.
+Good-bye!
+Catch you later!</p>
+                </statement>
+                <feedback>
+                    <p>No, that is not the order in which Python sees the instructions.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+        
+        
+        
+    </section>
+

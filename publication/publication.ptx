@@ -26,6 +26,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </source>
     <html>
         <platform host="web"/> <!-- when moving up to Runestone academy platform, will need a different pub file (ask Brad!)-->
+        <knowl exercise-inline="no" />
     </html>
 
 </publication>

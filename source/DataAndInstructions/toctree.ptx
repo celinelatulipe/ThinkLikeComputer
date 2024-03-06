@@ -18,5 +18,5 @@
         <xi:include href='./Input.ptx' />
         <xi:include href='./Glossary.ptx' />
         <xi:include href='./Exercises.ptx' /> 
-<!--        <xi:include href='./week1a2.ptx' /> -->
+        <xi:include href='./Assessment.ptx' />
     </chapter>
