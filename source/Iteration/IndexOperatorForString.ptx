@@ -6,7 +6,7 @@
     <p>The <term>indexing operator</term> (Python uses square brackets to enclose the index)
               selects a single character from a string.  The characters are accessed by their position or
               index value.  For example, in the string shown below, the 14 characters are indexed left to right
-              from postion 0 to position 13.</p>
+              from position 0 to position 13.</p>
     <image source="Iteration/Figures/indexvalues.png" width="50%" alt="index values"/>
     <p>It is also the case that the positions are named from right to left using negative numbers where -1 is
               the rightmost index and so on. Note that the character at index 6 (or -8) is the blank character.</p>
@@ -285,7 +285,7 @@ myTests().main()
     <note>
       <p>Why does counting start at 0 going from left to right, but at -1 going from right to left? Well, indexing starting at 0
                     has a long history in computer science having to do with some low-level implementation details that we won't
-                    go into. For indexing from right to left, it might seem natural to do the analgous thing
+                    go into. For indexing from right to left, it might seem natural to do the analogous thing
                     and start at -0. Unfortunately, -0 is the same as 0, so s[-0] can't be the last item. Remember we
                     said that programming languages are formal languages where details matter and
                     everything is taken literally?</p>
