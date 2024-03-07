@@ -38,7 +38,7 @@ print("The result of {} squared is {}.".format(toSquare, result))
     <p>Notice something important here. The name of the variable we pass as an argument &#x2014; <c>toSquare</c> &#x2014; has nothing to
               do with the name of the formal parameter &#x2014; <c>x</c>.  It is as if  <c>x = toSquare</c> is executed when <c>square</c> is
               called. It doesn't matter what the value was named in the caller (the place where the function was invoked). Inside
-              <c>square</c>, it's name is <c>x</c>.  You can see this very clearly in CodeLens, where the global variables and the local
+              <c>square</c>, its name is <c>x</c>.  You can see this very clearly in CodeLens, where the global variables and the local
               variables for the square function are in separate boxes.</p>
     <program label="clens8_3_1" interactive="codelens" language="python">
       <input>
@@ -585,7 +585,7 @@ myTests().main()
     </exercise>
     <exercise label="ac8_3_8">
       <statement>
-        <p><term>12.</term> Write a function named <c>intro</c> that takes a string as input. This string ist intended to be a person's name and the output is a standardized greeting. For example, given the string <q>Becky</q> as input, the function should return: <q>Hello, my name is Becky and I love SI 106.</q></p>
+        <p><term>12.</term> Write a function named <c>intro</c> that takes a string as input. This string is intended to be a person's name and the output is a standardized greeting. For example, given the string <q>Becky</q> as input, the function should return: <q>Hello, my name is Becky and I love SI 106.</q></p>
       </statement>
       <program label="ac8_3_8_editor" interactive="activecode" language="python">
         <input>
