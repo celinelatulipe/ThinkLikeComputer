@@ -51,7 +51,7 @@ print("That's it. All done.")
     <p>
       <ul>
         <li>
-          <p>giving functions meaninful names - the function gets input and cubes it</p>
+          <p>giving functions meaningful names - the function gets input and cubes it</p>
         </li>
         <li>
           <p>not repeating code - the function is called five times from inside a loop. The function is only four lines of code, but if it was repeated five times, it would be 20 lines of code. The code inside the function doesn't know the round number. It doesn't need to.</p>

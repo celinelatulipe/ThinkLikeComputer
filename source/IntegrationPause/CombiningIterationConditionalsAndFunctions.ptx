@@ -10,7 +10,7 @@
 # at least one lower-case character, at least one upper-case character
 
 def check_number():
-    """sets globbal pwd_good false if no number is found """
+    """sets global pwd_good false if no number is found """
     global pwd_good
     for c in current_pwd:
         if c.isdigit():
@@ -20,7 +20,7 @@ def check_number():
     print(current_pwd + " has no numbers")
 
 def check_lower():
-    """sets globbal pwd_good false if no lowercase letter is found """
+    """sets global pwd_good false if no lowercase letter is found """
     global pwd_good
     for c in current_pwd:
         if c.islower():
@@ -30,7 +30,7 @@ def check_lower():
     print(current_pwd + " has no lowercase letters")
 
 def check_upper():
-    """sets globbal pwd_good false if no uppercase letter is found """
+    """sets global pwd_good false if no uppercase letter is found """
     global pwd_good
     for c in current_pwd:
         if c.isupper():
@@ -65,7 +65,7 @@ def main():
 
         print("*****")
 
-#global variabbles
+#global variables
 pwd_list = ["letmein", "456liteS", "5goodbye", "major7Hug", "334_*2211", "fountain", "2289999", "FUNTIMES4"]
 current_pwd = ""
 pwd_good = True
@@ -75,7 +75,7 @@ main()
     <tests>
     </tests>
   </program>
-  <p>After you have run the program above, look at the code image below, which highlights with the functions, conditionals and loops with the same color-coding we've been using. We've also added arrows from the function calls to the function blocks.</p>
+  <p>After you have run the program above, look at the code image below, which highlights the functions, conditionals and loops with the same color-coding we've been using. We've also added arrows from the function calls to the function blocks.</p>
   <image source="IntegrationPause/Figures/password_checker_blocks.png" width="100%"/>
   <p>Here are some things to pay attention to in the image above:</p>
   <p>

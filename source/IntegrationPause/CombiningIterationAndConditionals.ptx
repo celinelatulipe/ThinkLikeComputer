@@ -58,7 +58,7 @@ print("Word greetings include:", word_greetings)
     <tests>
     </tests>
     </program>
-    <p>Things to note abbout this code:</p>
+    <p>Things to note about this code:</p>
     <p>
       <ul>
         <li>
