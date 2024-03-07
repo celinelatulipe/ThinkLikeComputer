@@ -15,7 +15,7 @@ for n in range(5):
   </program>
   <p>In order to make the iteration more general, we can use the <c>len</c> function to provide the bound for <c>range</c>. This is
             a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves
-            correctly when using <c>len</c> of the string as its parameter value.</p>
+            correctly when using <c>len</c> of the list as its parameter value.</p>
   <program label="ac4_11_2" interactive="activecode" language="python">
     <input>
 fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
