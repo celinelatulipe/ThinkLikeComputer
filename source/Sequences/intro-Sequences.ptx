@@ -2,7 +2,7 @@
 <section xml:id="sequences_introduction-sequences">
   <title>Introduction: Sequences</title>
   <introduction>
-    <p>In the real world most of the data we care about doesn't exist on its own.  Usually data is in the form of some kind of collection or sequence.  For example, a grocery list helps us keep track of the individual food items we need to buy, and our todo list organizes the things we need to do each day.  Notice that both the grocery list and the todo list are not even concerned with numbers as much as they are concerned with words.  This is true of much of our daily life, and so Python provides us with many features to work with lists of all kinds of objects (numbers, words, etc.) as well as a special kind of sequence, the character <em>string</em>, which you can think of as a sequence of individual letters.</p>
+    <p>In the real world, most of the data we care about doesn't exist on its own.  Usually, data is in the form of some kind of collection or sequence.  For example, a grocery list helps us keep track of the individual food items we need to buy, and our todo list organizes the things we need to do each day.  Notice that both the grocery list and the todo list are not even concerned with numbers as much as they are concerned with words.  This is true of much of our daily life, and so Python provides us with many features to work with lists of all kinds of objects (numbers, words, etc.) as well as a special kind of sequence, the character <em>string</em>, which you can think of as a sequence of individual letters.</p>
     <p>So far we have seen built-in types like: <c>int</c>, <c>float</c>, and <c>str</c>.
               <c>int</c> and <c>float</c> are considered to be simple or primitive or atomic data types because their
               values are not composed of any smaller parts.  They cannot be broken down.</p>
@@ -12,7 +12,7 @@
     <p>Types that are comprised of smaller pieces are called <term>collection data types</term> and are sometimes referred to informally as sequences.
               Depending on what we are doing, we may want to treat a collection data type as a
               single entity (the whole), or we may want to access its parts. This ambiguity is useful.</p>
-    <p>In this chapter we will examine operations that can be performed on sequences, such as picking
+    <p>In this chapter, we will examine operations that can be performed on sequences, such as picking
               out individual elements or subsequences (called slices) or computing their length. In addition, we'll
               examine some special functions that are defined only for strings, and we'll find out one important
               difference between strings and lists: that lists can be changed (or mutated) while strings are
@@ -29,7 +29,7 @@
           <p>To distinguish between different uses of [] in Python</p>
         </li>
         <li>
-          <p>To understand what it means for strings and tuples to be <term>immuatable</term></p>
+          <p>To understand what it means for strings and tuples to be <term>immutable</term></p>
         </li>
         <li>
           <p>To understand why passing mutable objects to functions is different than passing immutable objects</p>
