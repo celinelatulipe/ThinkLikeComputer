@@ -2,8 +2,8 @@
 <section xml:id="integration-pause_combining-conditionals-and-functions">
   <title>Combining Conditionals and Functions</title>
   <introduction>  
-    <p>In this section, we will look at examples where we use conditional branching inside of a function and where we call functions from inside a conditional branch</p>
-    <p>Remember that we use functions to help break our code up into smaller, meaningful sub-tasks, and to enable easy code re-use. We use conditionals when we need to decide what code to execute based on some information (such as the state of certain variables, the contents in a list, or input we get from a user). So we will often make a decision and than call a function to perform different tasks depending on the decision outcome (calling functions from within conditional branches). It also makes sense that quite often within a function that performs a task, we need to make decisions as part of that task (having donditional statements inside of functions). And sometimes, we want to do both of those things.</p>
+    <p>In this section, we will look at examples where we use conditional branching inside of a function and where we call functions from inside a conditional branch.</p>
+    <p>Remember that we use functions to help break our code up into smaller, meaningful sub-tasks, and to enable easy code re-use. We use conditionals when we need to decide what code to execute based on some information (such as the state of certain variables, the contents in a list, or input we get from a user). So we will often make a decision and then call a function to perform different tasks depending on the decision outcome (calling functions from within conditional branches). It also makes sense that quite often within a function that performs a task, we need to make decisions as part of that task (having conditional statements inside of functions). And sometimes, we want to do both of those things.</p>
   </introduction>
   <subsection xml:id="integration-pause_conditional-branching-inside-functions">
     <title>Conditional Branching inside Functions</title>
@@ -153,7 +153,7 @@ wn.listen()
           <p>The code inside the three drawing functions is repetitive. All of these functions could be improved with for loops, but we wanted this example to only have functions and conditionals.</p>
         </li>
         <li>
-          <p>This example uses function composition. The three drawing functions (square(), triangle() and tri_stamp() all call the random_move() function to get the turtle to a random position on campus first)</p>
+          <p>This example uses function composition. The three drawing functions (square(), triangle() and tri_stamp() all call the random_move() function to get the turtle to a random position on the canvas first)</p>
         </li>
       </ul>
     </p>
