@@ -2,7 +2,7 @@
 <section xml:id="functions-parameters-scope_introduction-functions-part-ii">
   <title>Introduction: Functions Part II</title>
   <subsection xml:id="functions-parameters-scope_motivation"> 
-  <p>You already learned how to create basic functions in an earlier. Functions are nice because we can call them repeatedly to execute the same set of code over and over again. In this chapter we learn how to make functions more powerful, by passing information in and out of them. Paramters allow us to pass information to functions, and return values allow us to get information from functions.</p>
+  <p>You already learned how to create basic functions in an earlier chapter. Functions are nice because we can call them repeatedly to execute the same set of code over and over again. In this chapter we learn how to make functions more powerful, by passing information in and out of them. Parameters allow us to pass information to functions, and return values allow us to get information from functions.</p>
   <p>We've played a lot with turtles, and in Chapter 6 we created two different turtle functions to have a turtle draw a small square and a big square repeatedly to make a flower image:</p>
   <program label="ac8_1_1" interactive="activecode" language="python">
     <input>
