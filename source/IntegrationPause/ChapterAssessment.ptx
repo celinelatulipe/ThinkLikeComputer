@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+
+    
+    
+    <section xml:id="_integration-practice">
+        <title>Integration Practice</title>
+
+    <exercise label="assess_ch7_1_lh">
+        <statement>
+
+        <blockquote>
+            <image source="IntegrationPause/Figures/cdq7-1.png" width="400%" alt="if statement code"/>
+            <p>The CodeLens screenshot above shows a piece of code mid execution. Which of the following images shows the correct global frame state?
+                Pay special attention to where the arrows are in the screenshot.</p>
+            <image source="IntegrationPause/Figures/cdq7-1-mc.png" width="400%" alt="if statement code"/>
+        </blockquote>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>i</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, walk through the code line by line</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>ii</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>iii</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, walk through the code line by line</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+    <exercise label="assess_ch7_2_lh">
+        <statement>
+
+        <blockquote>
+            <image source="IntegrationPause/Figures/cdq7-2.png" width="400%" alt="if statement code"/>
+            <p>Which code snippet would result in the given CodeLens screenshot of the Global frame?</p>
+            <image source="IntegrationPause/Figures/cdq7-2-mc.png" width="400%" alt="if statement code"/>
+        </blockquote>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>i</p>
+                </statement>
+                <feedback>
+                    <p>Correct!</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>ii</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, walk through the code line by line and see what it would produce</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>iii</p>
+                </statement>
+                <feedback>
+                    <p>Not quite, walk through the code line by line</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+
+        <exercise label="assess_ch7_3_lh">
+            <statement>
+    <blockquote>
+        <image source="IntegrationPause/Figures/cdq7-3.png" width="900%" alt="code to run"/>
+    </blockquote>  
+</statement>
+<setup>
+    <var>
+        <p>Using the image of the CodeLens program above, what will the program output to the console?</p>
+        <condition number="[21, 21]">
+            <feedback>
+                <p>Correct! Great job understanding the code</p>
+            </feedback>
+        </condition>
+    </var>
+</setup>
+</exercise>   
+ </section>
+
