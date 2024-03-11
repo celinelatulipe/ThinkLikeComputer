@@ -2,7 +2,7 @@
 <section xml:id="sequences_disambiguating-creation-vs-indexing">
   <title>Disambiguating []: creation vs indexing</title>
   <p>Square brackets <c>[]</c> are used in quite a few ways in Python. When you're first learning how to use them it may be
-            confusing, but with practice and repetition they'll be easy to incorporate!</p>
+            confusing, but with practice and repetition, they'll be easy to incorporate!</p>
   <p>You have currently encountered two instances where we have used square brackets. The first is creating lists and the second
             is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing
             an already created list while simply creating a list does not.</p>

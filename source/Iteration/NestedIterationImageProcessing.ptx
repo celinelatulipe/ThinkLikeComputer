@@ -2,8 +2,8 @@
 <section xml:id="iteration_nested-iteration-image-processing">
   <title>Nested Iteration: Image Processing</title>
   <introduction>
-    <p>Two dimensional tables have both rows and columns. You have probably seen many tables like this if you have used a
-              spreadsheet program. Another object that is organized in rows and columns is a digital image. In this section we will
+    <p>Two-dimensional tables have both rows and columns. You have probably seen many tables like this if you have used a
+              spreadsheet program. Another object that is organized in rows and columns is a digital image. In this section, we will
               explore how iteration allows us to manipulate these images.</p>
     <p>A <term>digital image</term> is a finite collection of small, discrete picture elements called <term>pixels</term>. These pixels are
               organized in a two-dimensional grid. Each pixel represents the smallest amount of picture information that is
@@ -581,7 +581,7 @@ win.exitonclick()
       <title>Other pixel manipulation</title>
       <p>There are a number of different image processing algorithms that follow the same pattern as shown above. Namely, take the original pixel, extract the red, green, and blue intensities, and then create a new pixel from them. The new pixel is inserted into an empty image at the same location as the original.</p>
       <p>For example, you can create a <term>gray scale</term> pixel by averaging the red, green and blue intensities and then using that value for all intensities.</p>
-      <p>From the gray scale you can create <term>black white</term> by setting a threshold and selecting to either insert a white pixel for a black pixel into the empty image.</p>
+      <p>From the gray scale you can create <term>black white</term> by setting a threshold and selecting to either insert a white pixel or a black pixel into the empty image.</p>
       <p>You can also do some complex arithmetic and create interesting effects, such as
                     <url href="http://en.wikipedia.org/wiki/Sepia_tone#Sepia_toning" visual="http://en.wikipedia.org/wiki/Sepia_tone#Sepia_toning">Sepia Tone</url></p>
     </note>

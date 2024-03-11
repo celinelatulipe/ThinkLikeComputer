@@ -68,7 +68,7 @@ print(produce_basket)
 fruit1 = ["apple","orange","banana","cherry"]
 veggies1 = ("carrot", "potato", "bean", "pea", "spinach", "broccoli")
 many_fruits = fruit1 * 3
-print("Many fruits: ", many_fruist)
+print("Many fruits: ", many_fruits)
 print(fruit1) # doesn't change original list!
 many_veggies = veggies1 * 4
 print("Many veggies:", many_veggies)

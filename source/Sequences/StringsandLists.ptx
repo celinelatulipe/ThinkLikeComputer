@@ -2,7 +2,7 @@
 <section xml:id="sequences_strings-lists-and-tuples">
   <title>Strings, Lists and Tuples</title>
   <introduction>
-    <p>Throughout the first chapters of this book we have used strings to represent words or phrases that we
+    <p>Throughout the first chapters of this book, we have used strings to represent words or phrases that we
             wanted to print out. Our definition was simple: a string is simply some characters inside quotes. A string is like a list, but it can't hold different types of objects like a list can - a string can only hold some number of characters.
             In Chapter 5, when we introduced for loops, we introduced the index operator to access individual characters of a string while iterating over a string and we introduced lists of items that we can iterate over as well.
             In this chapter, we explore strings and lists in much more detail.</p>
@@ -73,7 +73,7 @@ print(type(x))
     <tests>
     </tests>
     </program>
-    <p>You might wonder why anyone would create a tuple - what's the point of data that can't be changed? Tuples are often used for exactly that purpose - to create data that can't be accidentally tampered with. For really important information, it may be criticial to be able to verify that data was not edited after it was entered/created.</p>
+    <p>You might wonder why anyone would create a tuple - what's the point of data that can't be changed? Tuples are often used for exactly that purpose - to create data that can't be accidentally tampered with. For really important information, it may be critical to be able to verify that data was not edited after it was entered/created.</p>
   </subsection>
   <subsection xml:id="sequences_index-operator-accessing-elements-of-a-string-list-or-tuple">
     <title>Index Operator: Accessing Elements of a String, List or Tuple</title>
@@ -117,7 +117,7 @@ print(my_list)
     <tests>
     </tests>
     </program>
-    <p>You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise you will get an error:</p>
+    <p>You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise, you will get an error:</p>
     <program label="ac9_2_5_3" interactive="activecode" language="python">
       <input>
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
