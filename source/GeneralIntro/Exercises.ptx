@@ -58,21 +58,16 @@
     <program xml:id="assess_question1_1_2_editor" interactive="activecode" language="python">
 
         <input>
-
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-        self.assertIn("Hello World", self.getOutput(), "Your output should contain a phrase Hello World")
-
-myTests().main()
         </input>
 <tests>
+    from unittest.gui import TestCaseGui
 
+    class myTests(TestCaseGui):
 
+        def testOne(self):
+            self.assertIn("Hello World", self.getOutput(), "Your output should contain a phrase Hello World")
+
+    myTests().main()
 </tests>
 
     </program>
