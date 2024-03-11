@@ -19,7 +19,7 @@ print(str1)
       <tests>
       </tests>
     </program>
-    <p>In the above example, you see that it is possible to edit a list and replace one of the items with another item. But it isn't possible to edit a string that has already been created, and change one of the letters. If you want to do that, you need to create a new string.</p>
+    <p>In the above example, you see that it is possible to edit a list and replace one of the items with another item. But it isn't possible to edit a string that has already been created and change one of the letters. If you want to do that, you need to create a new string.</p>
   </subsection>  
   <subsection xml:id="sequences_string-methods-return-a-new-string">
     <title>String methods return a new string</title>
@@ -50,7 +50,7 @@ print(name)
     <program label="ac9_2i_4" interactive="activecode" language="python">
       <input>
 title = input("Please enter the title of the book you are looking for: ")
-# convert title to all lower case for searching through catalog
+# convert title to all lowercase for searching through catalog
 title.lower()
 print("Your book title, converted to all lowercase, is: ", title)
         </input>

@@ -117,7 +117,7 @@ print(my_list)
     <tests>
     </tests>
     </program>
-    <p>You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise you will get an error:</p>
+    <p>You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise, you will get an error:</p>
     <program label="ac9_2_5_3" interactive="activecode" language="python">
       <input>
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
