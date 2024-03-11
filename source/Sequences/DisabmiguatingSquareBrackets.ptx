@@ -2,7 +2,7 @@
 <section xml:id="sequences_disambiguating-creation-vs-indexing">
   <title>Disambiguating []: creation vs indexing</title>
   <p>Square brackets <c>[]</c> are used in quite a few ways in Python. When you're first learning how to use them it may be
-            confusing, but with practice and repetition they'll be easy to incorporate!</p>
+            confusing, but with practice and repetition, they'll be easy to incorporate!</p>
   <p>You have currently encountered two instances where we have used square brackets. The first is creating lists and the second
             is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing
             an already created list while simply creating a list does not.</p>
@@ -22,7 +22,7 @@ part_of_new_lst = new_lst[0]
     <tests>
     </tests>
   </program>
-  <p>In the code above, both lines use square brackets, but one uses them for list creation and one uses them for indexing. You can differentiate them because with list creation there is nothing between the equal sign and the opening square bracket. On the left side of the equal sign is the variable that the list is being assigned to, and on the right side of the equal sign is the two square brackets with items in the list in between them. On the second line, the square brackets come immediately after a variable name, which tells you that they are indexing into that list variable. Because we have elements inside of <c>new_lst</c>, we can index into it.
+  <p>In the code above, both lines use square brackets, but one uses them for list creation and one uses them for indexing. You can differentiate them because with list creation there is nothing between the equal sign and the opening square bracket. On the left side of the equal sign are the variable that the list is being assigned to, and on the right side of the equal sign is the two square brackets with items in the list in between them. On the second line, the square brackets come immediately after a variable name, which tells you that they are indexing into that list variable. Because we have elements inside of <c>new_lst</c>, we can index into it.
             In order to extract an element of the list, we use <c>[]</c>, but we first have to specify which list we are indexing. Additionally, we have to specify what element we want to extract. This index belongs inside of the brackets.</p>
   <p>The code below shows that naming a variable as a list doesn't make it a list.</p>
   <program label="ac9_3_3" interactive="activecode" language="python">
