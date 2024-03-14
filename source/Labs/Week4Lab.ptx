@@ -157,7 +157,7 @@ t1 = turtle.Turtle()
                     <p>Inside this second loop, create a nested for loop that will iterate through the list of turtles. Add a different print statement inside this loop.</p>
                 </li>
                 <li>
-                    <p>In the inner for loop you just created add a command that moves the current turtle forward a random amount of pixels between 0 and 60.</p>
+                    <p>In the inner for loop you just created add a command that moves the current turtle forward a random amount of pixels between 0 and 60. At this point, you can remove your print statements if you have not already.</p>
                 </li>
             </ol></p>
             <note>
