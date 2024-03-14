@@ -23,7 +23,7 @@ print(y)
     </program>
     <p>In this example, the statement on line 2 says that we want to be able to access and edit the global variable y. On line 3, we change the value of that
               variable. While this works, it is considered bad form - it is harder to debug becuase it is less clear, when we print out the value of y on line 7, where the value of y was changed. It's actually easy to figure it out in this very short code snippet, but it would be much more difficult if the double() function was 300 lines of code away from the print(y) statement.</p>
-    <p>The way to avoid using side effects to change global variables is to use return values instead: Pass the global variable's value in as a parameter,
+    <p>The way to avoid using side effects to change global variables is to use return values instead: Pass the global variable's value in as a parameter
               and set that global variable to be equal to a value returned from the function. For example, the following is a better version
               of the code above.</p>
     <program label="clens8_11_2" interactive="codelens" language="python">

@@ -31,7 +31,7 @@ print("The result of " + str(toSquare) + " squared is " + str(result) + ".")
       </tests>
     </program>
     <p>The <term>return</term> statement is followed by an expression which is evaluated. Its result is returned to the caller as the
-              <q>fruit</q> of calling this function. Because the return statement can contain any Python expression we could have
+              <q>fruit</q> of calling this function. Because the return statement can contain any Python expression, we could have
               avoided creating the <term>temporary variable</term> <c>y</c> and simply used <c>return x*x</c>. Try modifying the square function
               above to see that this works just the same. On the other hand, using <term>temporary variables</term> like <c>y</c> in the program
               above makes debugging easier. These temporary variables are referred to as <term>local variables</term>.</p>
@@ -90,7 +90,7 @@ print(x)
     </program>
     <p>The fact that a return statement immediately ends execution of the code block inside a function is important to
               understand for writing complex programs, and it can also be very useful. The following example is a situation where
-              you can use this to your advantage &#x2013; and understanding this will help you understand other people's code better, and
+              you can use this to your advantage &#x2013; and understanding this will help you understand other people's code better and
               be able to walk through code more confidently.</p>
     <p>Consider a situation where you want to write a function to find out, from a class attendance list, whether anyone's
               first name is longer than five letters, called <c>longer_than_five</c>. If there is anyone in class whose first name is
