@@ -14,10 +14,23 @@
             <title>Level 1</title>
             <p>Your objective in this level is to complete the code below so that a turtle draws an octagon on the canvas, like this:</p>
             <image source="Labs/Figures/octagon.png" width="40%"/>
+        <p><ol>
+            <li>
+                <p>Create a turtle variable</p>
+            </li>
+            <li>
+                <p>Create a variable for the side length of an octagon, and ask the user to input a length (don’t forget the conversion)</p>
+            </li>
+            <li>
+                <p>Calculate a turn angle and store this in a variable. An octagon has eight sides, meaning you will have to turn your turtle eight times. Do some basic division to figure out by how many degrees your turtle will have to turn after each side.</p>
+            </li>
+            <li>
+                <p>Make the turtle draw the octagon using the side length variable and the angle variable.  Note: This part will be very repetitive, but we will learn a way to avoid retyping the same commands in a few weeks</p>
+            </li>
+        </ol></p>
             <note>
-                <p>You are given some code to start with, do not edit these lines!</p>
+                <p>From this lab onward you will complete labs using the code windows built into the textbook, <term>not in Idle</term>. You are given some code to start with, do not edit these lines!</p>
             </note>
-
     <program label="lab2_level1" interactive="activecode" language="python">
     
         <input>
@@ -38,20 +51,7 @@ wn = turtle.Screen()   #creates a graphics window
 </tests>
 
     </program>
-            <p><ol>
-                <li>
-                    <p>Create a turtle variable</p>
-                </li>
-                <li>
-                    <p>Create a variable for the side length of an octagon, and ask the user to input a length (don’t forget the conversion)</p>
-                </li>
-                <li>
-                    <p>Calculate a turn angle and store this in a variable. An octagon has eight sides, meaning you will have to turn your turtle eight times. Do some basic division to figure out by how many degrees your turtle will have to turn after each side.</p>
-                </li>
-                <li>
-                    <p>Make the turtle draw the octagon using the side length variable and the angle variable.  Note: This part will be very repetitive, but we will learn a way to avoid retyping the same commands in a few weeks</p>
-                </li>
-            </ol></p>
+
         </subsection>
         <subsection xml:id="week2lab_level-2">
             <title>Level 2</title>
@@ -62,6 +62,24 @@ wn = turtle.Screen()   #creates a graphics window
             <note>
                 <p>The function to get a square root is: math.sqrt()</p>
             </note>
+            <p><ol>
+                <li>
+                    <p>Copy your code from Level 1 into the active code window above.</p>
+                </li>
+                <li>
+                    <p>Create a variable and assign to it the area of the octagon, using the formula in the tip above for the calculation</p>
+                </li>
+                <li>
+                    <p>Print out the value to the console, using the following format:</p>
+                </li>
+            </ol></p>
+            <image source="Labs/Figures/output_format.png" width="75%"/>
+            <note>
+                <li>
+                    <p>Make sure your formula is correct by cross referencing your answer with the answer you get using a calculator</p>
+                </li>
+            </note>
+                
 
     <program label="lab2_level2" interactive="activecode" language="python">
     
@@ -78,23 +96,7 @@ wn = turtle.Screen()   #creates a graphics window
 </tests>
 
     </program>
-            <p><ol>
-                <li>
-                    <p>Copy your code from Level 1 into the active code window above.</p>
-                </li>
-                <li>
-                    <p>Create a variable and assign to it the area of the octagon, using the formula in the tip above for the calculation</p>
-                </li>
-                <li>
-                    <p>Print out the value to the console, using the following format:</p>
-                </li>
-            </ol></p>
-            <image source="Labs/Figures/output_format.png" width="75%"/>
-            <p><ol>
-                <li>
-                    <p>Make sure your formula is correct by cross referencing your answer with the answer you get using a calculator</p>
-                </li>
-            </ol></p>
+
         </subsection>
         <subsection xml:id="week2lab_level-3">
             <title>Level 3</title>
