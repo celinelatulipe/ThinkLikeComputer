@@ -29,7 +29,7 @@
             </li>
         </ol></p>
             <note>
-                <p>From this lab onward you will complete labs using the code windows built into the textbook, <term>not idle</term>. You are given some code to start with, do not edit these lines!</p>
+                <p>From this lab onward you will complete labs using the code windows built into the textbook, <term>not in Idle</term>. You are given some code to start with, do not edit these lines!</p>
             </note>
     <program label="lab2_level1" interactive="activecode" language="python">
     
