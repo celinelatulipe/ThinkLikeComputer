@@ -60,12 +60,12 @@ def display_msg(msg: str):
     </tests>
   </program>
   <p>It's important to understand that adding type annotations to a function definition does not cause the Python interpreter
-            to check that the values passed to a function are the expected types, or cause the returned value to be converted to the
+            to check that the values passed to a function are the expected types or cause the returned value to be converted to the
             expected type. For example, if the function <c>add</c> in the example above is called like this:</p>
   <pre>result = add('5', '15')</pre>
   <p>the function will receive two string values, concatenate them, and return the resulting string &#x2018;515'. The <c>int</c>
             annotations are completely ignored by the Python interpreter. Think of type annotations as a kind of function
-            documentation, and remember that they have no effect on the program's behavior.</p>
+            documentation and remember that they have no effect on the program's behavior.</p>
   <p>Type annotations are an optional aspect of documenting functions. Still, type annotations are an important tool to increase
             the readability of your code, and you should use them in your programs.</p>
   <note>
