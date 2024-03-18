@@ -2,6 +2,7 @@
     <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Labs</title>
         <xi:include href='./intro-Labs.ptx' />
+        <xi:include href='./Week1Lab.ptx' />
         <xi:include href='./Week2Lab.ptx' />
         <xi:include href='./Week3Lab.ptx' />
         <xi:include href='./Week4Lab.ptx' />
