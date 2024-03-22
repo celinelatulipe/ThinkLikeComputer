@@ -499,19 +499,18 @@ show_me_numbers([4,2,3])
       <program label="ac8_3_4_editor" interactive="activecode" language="python">
         <input>
 
-=====
 
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
-
-myTests().main()
         </input>
-      <tests>
-    </tests>
+<tests>
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
+
+    myTests().main()
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_5">
