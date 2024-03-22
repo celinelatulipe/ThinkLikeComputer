@@ -540,8 +540,8 @@ myTests().main()
       <program label="ac8_3_6_editor" interactive="activecode" language="python">
         <input>
 
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -551,9 +551,7 @@ class myTests(TestCaseGui):
       self.assertEqual(subtract_three(-5), -8, "Testing the subtract_three function on input -5.")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_7">
@@ -563,8 +561,8 @@ myTests().main()
       <program label="ac8_3_7_editor" interactive="activecode" language="python">
         <input>
 
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -574,8 +572,6 @@ class myTests(TestCaseGui):
       self.assertEqual(change(-10), -3, "Testing the function change with input -10")
 
 myTests().main()
-        </input>
-      <tests>
     </tests>
       </program>
     </exercise>
