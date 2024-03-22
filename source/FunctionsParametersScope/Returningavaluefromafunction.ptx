@@ -581,9 +581,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_8_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -592,9 +591,7 @@ class myTests(TestCaseGui):
       self.assertEqual(intro("Mike"), "Hello, my name is Mike and I love SI 106.", "Testing the intro function on input 'Mike'.")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_9">
