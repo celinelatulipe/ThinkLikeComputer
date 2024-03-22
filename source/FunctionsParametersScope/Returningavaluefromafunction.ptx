@@ -519,9 +519,8 @@ show_me_numbers([4,2,3])
       </statement>
       <program label="ac8_3_5_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -531,9 +530,7 @@ class myTests(TestCaseGui):
       self.assertEqual(same_thing("Welcome"), "Welcome", "Testing the function same_thing with input 'Welcome'")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_6">
