@@ -600,9 +600,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_9_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -612,9 +611,7 @@ class myTests(TestCaseGui):
       self.assertEqual(s_change("We go to the beach"), "We go to the beach for fun." , "Testing the function s_change with input We go to the beach")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_10">
@@ -623,9 +620,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_10_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -636,9 +632,7 @@ class myTests(TestCaseGui):
       self.assertEqual(decision("how do you do sir"), "This is a short string", "Testing the function decision with input 'how do you do sir'")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
   </subsection>
