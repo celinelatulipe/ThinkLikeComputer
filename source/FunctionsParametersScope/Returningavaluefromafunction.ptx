@@ -572,7 +572,7 @@ class myTests(TestCaseGui):
       self.assertEqual(change(-10), -3, "Testing the function change with input -10")
 
 myTests().main()
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_8">
