@@ -107,9 +107,8 @@ for _ in range(5):
     </statement>
     <program label="ac8_8_2_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -125,9 +124,7 @@ class myTests(TestCaseGui):
       self.assertEqual(addit(0), 5, "Testing the function addit with input 0 (should be 5)")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
 </section>
