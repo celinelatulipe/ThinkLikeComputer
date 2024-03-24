@@ -57,9 +57,8 @@ print(mylen([1, 2, 7]))
     </statement>
     <program label="ac8_6_2_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -71,9 +70,7 @@ class myTests(TestCaseGui):
       self.assertEqual(total([2]), 2, "Testing the total function on input [2].")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac8_6_3">
@@ -81,10 +78,9 @@ myTests().main()
       <p><term>2.</term> Write a function called <c>count</c> that takes a list of numbers as input and returns a count of the number of elements in the list.</p>
     </statement>
     <program label="ac8_6_3_editor" interactive="activecode" language="python">
-      <input>
-
-=====
-
+<input>
+  </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -94,9 +90,7 @@ class myTests(TestCaseGui):
       self.assertEqual(count([1, 5, 9, -2, 9, 23]), 6, "Testing the function count with input [1, 5, 9, -2, 9, 23]")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
 </section>

@@ -499,19 +499,18 @@ show_me_numbers([4,2,3])
       <program label="ac8_3_4_editor" interactive="activecode" language="python">
         <input>
 
-=====
 
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
-
-myTests().main()
         </input>
-      <tests>
-    </tests>
+<tests>
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+      def testOne(self):
+          self.assertEqual(same('hello'), 'hello', "Testing the same function on input 'hello'.")
+
+    myTests().main()
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_5">
@@ -520,9 +519,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_5_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -532,9 +530,7 @@ class myTests(TestCaseGui):
       self.assertEqual(same_thing("Welcome"), "Welcome", "Testing the function same_thing with input 'Welcome'")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_6">
@@ -544,8 +540,8 @@ myTests().main()
       <program label="ac8_3_6_editor" interactive="activecode" language="python">
         <input>
 
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -555,9 +551,7 @@ class myTests(TestCaseGui):
       self.assertEqual(subtract_three(-5), -8, "Testing the subtract_three function on input -5.")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_7">
@@ -567,8 +561,8 @@ myTests().main()
       <program label="ac8_3_7_editor" interactive="activecode" language="python">
         <input>
 
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -578,9 +572,7 @@ class myTests(TestCaseGui):
       self.assertEqual(change(-10), -3, "Testing the function change with input -10")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_8">
@@ -589,9 +581,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_8_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -600,9 +591,7 @@ class myTests(TestCaseGui):
       self.assertEqual(intro("Mike"), "Hello, my name is Mike and I love SI 106.", "Testing the intro function on input 'Mike'.")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_9">
@@ -611,9 +600,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_9_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -623,9 +611,7 @@ class myTests(TestCaseGui):
       self.assertEqual(s_change("We go to the beach"), "We go to the beach for fun." , "Testing the function s_change with input We go to the beach")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
     <exercise label="ac8_3_10">
@@ -634,9 +620,8 @@ myTests().main()
       </statement>
       <program label="ac8_3_10_editor" interactive="activecode" language="python">
         <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -647,9 +632,7 @@ class myTests(TestCaseGui):
       self.assertEqual(decision("how do you do sir"), "This is a short string", "Testing the function decision with input 'how do you do sir'")
 
 myTests().main()
-        </input>
-      <tests>
-    </tests>
+</tests>
       </program>
     </exercise>
   </subsection>
