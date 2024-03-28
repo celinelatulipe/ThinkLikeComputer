@@ -25,12 +25,8 @@ n = n + 1
       <p><c>=</c> is Python's assignment token, which should not be confused
                             with the mathematical comparison operator using the same symbol.</p>
     </gi>
-    <gi>
-      <title>class</title>
-      <p>see <term>data type</term> below</p>
-    </gi>
-    <gi>
-      <title>data type</title>
+    <gi>    
+      <title>class/data type</title>
       <p>A set of values. The type of a value determines how it can be used in
                             expressions. So far, the types you have seen are integers (<c>int</c>),
                             floating-point numbers (<c>float</c>), and strings (<c>str</c>).</p>
@@ -40,8 +36,12 @@ n = n + 1
       <p>Decrease by 1.</p>
     </gi>
     <gi>
+      <title>increment</title>
+      <p>Increase by 1.</p>
+    </gi>
+    <gi>
       <title>evaluate</title>
-      <p>To simplify an expression by performing the operations in order to
+      <p>To simplify an expression by performing operations in order to
                             yield a single value.</p>
     </gi>
     <gi>
@@ -56,10 +56,6 @@ n = n + 1
                             an <em>exponent</em>. When printed in the standard format, they look like
                             decimal numbers. Beware of rounding errors when you use <c>float</c>s,
                             and remember that they are only approximate values.</p>
-    </gi>
-    <gi>
-      <title>increment</title>
-      <p>Both as a noun and as a verb, increment means to increase by 1.</p>
     </gi>
     <gi>
       <title>initialization (of a variable)</title>
