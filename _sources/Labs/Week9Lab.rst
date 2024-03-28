@@ -44,7 +44,7 @@ Your output should look like this:
     
     def main():
         norms_list = ["gas", "toothbrush", "apples", "juice", "chocolate"]
-        anitas_list = ["apples", "grapes", "dog food", "gas", "mustard"]
+        anitas_list = ["apples", "grapes", "dogfood", "gas", "mustard"]
 
 
     main()
