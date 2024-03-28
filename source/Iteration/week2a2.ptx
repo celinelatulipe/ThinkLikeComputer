@@ -12,19 +12,19 @@
       <input>
 my_str = "MANITOBA"
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-  def test_output(self):
-    self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-    self.assertIn("M\nA\nN\nI\nT\nO\nB\nA", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def test_output(self):
+          self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+          self.assertIn("M\nA\nN\nI\nT\nO\nB\nA", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -35,22 +35,21 @@ myTests().main()
     <program label="assess_ch4_2_editor" interactive="activecode" language="python">
       <input>
 several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
-
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-  def test_output(self):
-      self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-      str1 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;\n&lt;class 'int'&gt;\n&lt;class 'float'&gt;\n&lt;class 'float'&gt;\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;"
-      str2 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;\n&lt;type 'int'&gt;\n&lt;type 'float'&gt;\n&lt;type 'float'&gt;\n&lt;type 'int'&gt;\n&lt;type 'str'&gt;\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;"
-      self.assertTrue(str1 in self.getOutput() or str2 in self.getOutput(), "Testing output (Don't worry about actual and expected values).")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def test_output(self):
+            self.assertIn('for', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+            str1 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;\n&lt;class 'int'&gt;\n&lt;class 'float'&gt;\n&lt;class 'float'&gt;\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;\n&lt;class 'str'&gt;\n&lt;class 'int'&gt;"
+            str2 = "hello\n2\n4\n6.0\n7.5\n234352354\nthe end\n\n99\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;\n&lt;type 'int'&gt;\n&lt;type 'float'&gt;\n&lt;type 'float'&gt;\n&lt;type 'int'&gt;\n&lt;type 'str'&gt;\n&lt;type 'str'&gt;\n&lt;type 'int'&gt;"
+            self.assertTrue(str1 in self.getOutput() or str2 in self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -63,17 +62,18 @@ myTests().main()
 str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
 
 # Write your code here.
-=====
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-    def test_output(self):
-        self.assertIn("for", self.getEditorText(), "Testing whether you used a for loop (Don't worry about actual and expected values).")
-        self.assertIn("5\n0\n7\n9\n13", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+          def test_output(self):
+              self.assertIn("for", self.getEditorText(), "Testing whether you used a for loop (Don't worry about actual and expected values).")
+              self.assertIn("5\n0\n7\n9\n13", self.getOutput(), "Testing output (Don't worry about actual and expected values).")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -97,20 +97,19 @@ import turtle
       <input>
 original_str = "The quick brown rhino jumped over the extremely lazy fox."
 
-
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-    def testOne(self):
-       self.assertEqual(num_chars, len(original_str), "Testing whether num_chars_sent has the correct value")
-       self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+      
+          def testOne(self):
+             self.assertEqual(num_chars, len(original_str), "Testing whether num_chars_sent has the correct value")
+             self.assertNotIn('len', self.getEditorText(), "Testing that you are not including the len function in your code. (Don't worry about Actual and Expected Values.)")
+      
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -121,18 +120,18 @@ myTests().main()
     <program label="assess_ch4_7_editor" interactive="activecode" language="python">
       <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(nums, list(range(68)), "Testing that nums is a list that contains the correct elements.")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
