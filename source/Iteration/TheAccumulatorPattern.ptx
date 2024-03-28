@@ -193,18 +193,18 @@ print(accum)
     <program label="ac4_9_5_editor" interactive="activecode" language="python">
       <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(numbers, range(53), "Testing that numbers is a list that contains the correct elements.")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testOne(self):
+            self.assertEqual(numbers, range(53), "Testing that numbers is a list that contains the correct elements.")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -216,19 +216,19 @@ myTests().main()
       <input>
 str1 = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living."
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testEight(self):
-      self.assertEqual(numbs, 90, "Testing that numbs is assigned to correct values.")
-      self.assertNotIn("len(", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testEight(self):
+            self.assertEqual(numbs, 90, "Testing that numbs is assigned to correct values.")
+            self.assertNotIn("len(", self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -239,21 +239,21 @@ myTests().main()
     <program label="ac4_9_7_editor" interactive="activecode" language="python">
       <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testNineA(self):
-      self.assertEqual(numbers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], "Testing that numbers is assigned to correct values.")
-
-   def testNineB(self):
-      self.assertEqual(sum1, 820, "Testing that sum1 has the correct value.")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testNineA(self):
+            self.assertEqual(numbers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], "Testing that numbers is assigned to correct values.")
+
+        def testNineB(self):
+            self.assertEqual(sum1, 820, "Testing that sum1 has the correct value.")
+
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
