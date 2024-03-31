@@ -40,8 +40,8 @@ hello2("Jackie")
         <p>First, notice that hello2 has one formal parameter, s. You can tell that because
             there is exactly one variable name inside the parentheses on line 1.</p>
         <p>Next, notice what happened during Step 2. Control was passed to the function, just like we saw before. But in
-            addition, the variable s was bound to a value, the string “Iman”. When it got to Step 7, for the second invocation of
-            the function, s was bound to “Jackie”.</p>
+            addition, the variable 's' was bound to a value, the string “Iman”. When it got to Step 7, for the second invocation of
+            the function, 's' was bound to “Jackie”.</p>
         <p>Function invocations always work that way. The expression inside the parentheses on the line that invokes the function
             is evaluated before control is passed to the function. The value is assigned to the corresponding formal parameter.
             Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value,
