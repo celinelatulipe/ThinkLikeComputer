@@ -221,18 +221,18 @@ print(len(L[1:-1]))
         <input>
 new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(sub_lst, new_lst[8:12], "Testing that sub_lst has the correct elements assigned.")
-
-myTests().main()
         </input>
       <tests>
+
+        from unittest.gui import TestCaseGui
+
+        class myTests(TestCaseGui):
+        
+           def testOne(self):
+              self.assertEqual(sub_lst, new_lst[8:12], "Testing that sub_lst has the correct elements assigned.")
+        
+        myTests().main()
+
     </tests>
       </program>
     </exercise>
