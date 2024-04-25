@@ -57,18 +57,18 @@ print("".join(wd_lst))
       <input>
 lst = ["swimming", 2, "water bottle", 44, "lollipop", "shine", "marsh", "winter", "donkey", "rain", ["Rio", "Beijing", "London"], [1,2,3], "gold", "bronze", "silver", "mathematician", "scientist", "actor", "actress", "win", "cell phone", "leg", "running", "horse", "socket", "plug", ["Phelps", "le Clos", "Lochte"], "drink", 22, "happyfeet", "penguins"]
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testFour(self):
-      self.assertEqual(output, lst[5:13], "Testing that output value is assigned to correct value.")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+      
+         def testFour(self):
+            self.assertEqual(output, lst[5:13], "Testing that output value is assigned to correct value.")
+      
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
@@ -80,18 +80,18 @@ myTests().main()
       <input>
 str1 = "OH THE PLACES YOU'LL GO"
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testSix(self):
-      self.assertEqual(output, ["OH", "THE", "PLACES", "YOU'LL", "GO"], "Testing that output value is assigned to correct value.")
-
-myTests().main()
         </input>
     <tests>
+
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+      
+         def testSix(self):
+            self.assertEqual(output, ["OH", "THE", "PLACES", "YOU'LL", "GO"], "Testing that output value is assigned to correct value.")
+      
+      myTests().main()
+
     </tests>
     </program>
   </exercise>
