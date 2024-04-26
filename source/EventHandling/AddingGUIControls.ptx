@@ -2,11 +2,15 @@
 <section xml:id="event-handling_adding-gui-controls">
   <title>Adding GUI Controls</title>
   <introduction>
-    <p>Graphical user interfaces commonly have lots of different controls, often referred to as &#x2018;user interface widgets'. These include buttons, drop-down menus, checkboxes, text input fields, sliders, radio buttons, menus, etc. For any GUI toolkit you use, you will need to look at the library of widgets available to you and browse the documentation to find out how to write the code to add these to your program screen. In most toolkits, there are a lot of configuration options for each widget, such as the size and colour, but there is also often a way to specify the look and feel of the whole set of interface controls at a global level. Similarly, you often need to think about placement - how do you decide where to put each control? Most sophisticated GUI toolkits have something called a &#x2018;layout manager' and you can use that to help with the layout. You might be thinking &#x2018;this sounds a lot harder than I first thought it would be' and you're right. User interface design is somewhat of an art form. It takes practice and skill to design a good user interface. In this course though, we are keeping things simple by using the SimpleGUI module. The SimpleGUI module doesn't provide options for customizing the look of the widgets or the layout. The user interface controls in SimpleGUI are very limited (just labels, buttons, and text input boxes), and they are only placed in the left hand control area, in the order you specify, from top to bottom. Let's work through adding a few user interface widgets, continuting to use the starter code example on CodeSkulptr 3.</p>
+    <p>Graphical user interfaces commonly have lots of different controls, often referred to as &#x2018;user interface widgets'. These include buttons, drop-down menus, checkboxes, text input fields, sliders, radio buttons, menus, etc. For any GUI toolkit you use, you will need to look at the library of widgets available to you and browse the documentation to find out how to write the code to add these to your program screen. In most toolkits, there are a lot of configuration options for each widget, such as the size and colour, but there is also often a way to specify the look and feel of the whole set of interface controls at a global level. Similarly, you often need to think about placement - how do you decide where to put each control? Most sophisticated GUI toolkits have something called a &#x2018;layout manager' and you can use that to help with the layout.</p>
+    <p></p>
+    <p>You might be thinking &#x2018;this sounds a lot harder than I first thought it would be' and you're right. User interface design is somewhat of an art form. It takes practice and skill to design a good user interface. In this course though, we are keeping things simple by using the SimpleGUI module. The SimpleGUI module doesn't provide options for customizing the look of the widgets or the layout. The user interface controls in SimpleGUI are very limited (just labels, buttons, and text input boxes), and they are only placed in the left hand control area, in the order you specify, from top to bottom.</p>
+    <p></p>
+    <p>Let's work through adding a few user interface widgets, continuing to use the starter code example on CodeSkulptor 3.</p>
   </introduction>
   <subsection xml:id="event-handling_adding-labels">
     <title>Adding Labels</title>
-    <p>Labels are considered static interface elements: they aren't clickable and they don't allow the user to do anything, they simply provide information. So, there is no event handler that needs to be attached to a label. Try adding a label to the SimpleGUI starter code. Flip back to the browser tab where the codeskulptr starter example is, and add a label, like this:</p>
+    <p>Labels are considered static interface elements: they aren't clickable and they don't allow the user to do anything, they simply provide information. So, there is no event handler that needs to be attached to a label. Try adding a label to the SimpleGUI starter code. Flip back to the browser tab where the Codeskulptor starter example is, and add a label, like this:</p>
     <program language="python">
       <input>
 label1 = frame.add_label("This is a label")
@@ -38,8 +42,8 @@ def bkg_button_click():
     frame.set_canvas_background("White")
 </input>
     </program>
-    <p>Run the simpleGUI starter script and make sure your button appears. Note that the SimpleGUI module places controls in the order you add them to the script. If you want the background button to be at the top, you have to specify it before the other button and the label. Try clicking the new button and make sure that the canvas background changes color.</p>
-    <p>Now, to make this button better, we can turn it into a toggle button. To do this, we want to find out what the button says, change the color, then change the button to say the other color. So, if the button says <q>White Background</q>, we want to set the background to white, then change the button text to say <q>Black Background</q>. If the buttons says <q>Black Background</q>, we want to do the opposite. The new version of the bkg_button_click() function below does this. Make this change in your CodeSkulptr script and test it to make sure it works properly.</p>
+    <p>Run the SimpleGUI starter script and make sure your button appears. Note that the SimpleGUI module places controls in the order you add them to the script. If you want the background button to be at the top, you have to specify it before the other button and the label. Try clicking the new button and make sure that the canvas background changes color.</p>
+    <p>Now, to make this button better, we can turn it into a toggle button. To do this, we want to find out what the button says, change the color, then change the button to say the other color. So, if the button says <q>White Background</q>, we want to set the background to white, then change the button text to say <q>Black Background</q>. If the buttons says <q>Black Background</q>, we want to do the opposite. The new version of the bkg_button_click() function below does this. Make this change in your CodeSkulptor script and test it to make sure it works properly.</p>
     <image source="EventHandling/Figures/bkg_button_code_snippet.png" width="60%"/>
   </subsection>
   <subsection xml:id="event-handling_adding-text-input-boxes">
@@ -52,4 +56,173 @@ def bkg_button_click():
     <image source="EventHandling/Figures/code_with_input_text.png" width="60%"/>
     <p>On line 39 we add the input text box to the frame, and then on lines 25-27, we add code to change the canvas display message. Note that on line 25, the function definition for the text input handler has a parameter. When this code is run and the user types text in the box and hits enter, the operating system notifies the Python interpreter that a text input event happened and passes the typed text on. Python gives it to this handler code as the text_input parameter. Then our code uses it by assigning it to our global message variable. Every few milliseconds, the Python interpreter will automatically call the draw method to refresh the canvas in this window, so we don't need to do anything specific to get the new message displayed, it will just happen automatically the next time the draw method is called. Since that happens so frequently, it will feel like the text change happens instantaneously when the user hits the Enter key.</p>
   </subsection>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question1">
+    <statement>
+      <p>Using the default code on CodeSkulptor, Sam wants to change the “Click me” button to work as a toggle button. However, he gets the following error message after clicking the button.</p>
+      <image source="EventHandling/Figures/ch10_section5_question1.png" width="75%"/>
+      <p>Which of the following would correct the error on line 6?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Remove the () parentheses from the if statement.</p>
+        </statement>
+        <feedback>
+          <p>The if statement requires the evaluated expression to be enclosed by () parentheses.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Replace the equality token (==) with the assignment token (=).</p>
+        </statement>
+        <feedback>
+          <p>The equality token is needed for the expression to evaluate to a boolean value.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Realign the if statement indentation.</p>
+        </statement>
+        <feedback>
+          <p>The alignment shown is actually correct.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>“global message” needs to be inserted above the if statement.</p>
+        </statement>
+        <feedback>
+          <p>Yes, because the variable, message, is not recognized locally by the function.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question2">
+    <statement>
+      <p>A classmate asks if the following code will run without any errors. What do you say?</p>
+      <image source="EventHandling/Figures/ch10_section5_question2.png" width="75%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>Everything looks great and this code should run without errors.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, there is at least one error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Add code to define and register an event handler function for the label.</p>
+        </statement>
+        <feedback>
+          <p>Labels are static and do not respond to events.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Line 9, there is a name error with “labe1” not defined.</p>
+        </statement>
+        <feedback>
+          <p>You have found one error but there is at least one more.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Line 9, get_text() should be replaced with the set_text() to change text when button is clicked.</p>
+        </statement>
+        <feedback>
+          <p>Try again, there is at least one more error.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Line 17, there is a name error with “Frame” not defined.</p>
+        </statement>
+        <feedback>
+          <p>This is an error but not the only one.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Line 17, the add_label() function requires one argument.</p>
+        </statement>
+        <feedback>
+          <p>Yes but you have not found all the errors.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>All of the following: B, C and D</p>
+        </statement>
+        <feedback>
+          <p>Labels do not need event handler functions since they are static.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>All of the following: C, D, E and F</p>
+        </statement>
+        <feedback>
+          <p>Correct, you found all the errors!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question3">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          def input_handler(text_input):
+              global message
+              message = text_input
+              
+          frame = simplegui.create_frame('Testing', 150, 150)
+          inp = frame.add_input('My label', input_handler, 50)
+          frame.start()
+        </input>
+      </program>
+      <p>               </p>
+      <p> You are given the above starter code for an assignment. Which of the following changes do you make to increase the width of the input box?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>There is a default width to the input box so this change is not possible.</p>
+        </statement>
+        <feedback>
+          <p>The width of the input box can be modified.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Decreasing the width of the canvas dimension will automatically increase the input box width.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, copy and paste this code into CodeSkulptor and modify the canvas width to verify.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Add a fourth argument to indicate the input box width for the function, frame. add_input().</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, adding a fourth argument will cause a runtime error. Consult the documentation to find out more.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Increase the value of the third argument for the function, frame. add_input().</p>
+        </statement>
+        <feedback>
+          <p>Correct! However if you increase the amount too much, a portion will overlap with the canvas. Copy and paste this code into CodeSkulptor to test it.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
 </section>
