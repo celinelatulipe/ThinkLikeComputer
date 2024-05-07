@@ -76,4 +76,382 @@
     <p>In addition to writing an event handler function, you also need to <em>register</em> the event handler, so that the Python interpreter knows that you want to receive such events. In some toolkits, you register the event on a separate line of code That is the case in the turtle examples seen in earlier chapters. In the SimpleGUI module, you register handlers in the same line of code that you use to create the user interface widget (for buttons and textboxes), but you have separate instructions to register the more general event handlers that respond to key presses and mouse clicks.</p>
     <p>In all cases, once you have added GUI elements to the window, written the event handlers, and registered the event handlers, you need something to tell the Python interpreter to start listening for events (in the Turtle module it's <c>wn.listen()</c>; in the SimpleGUI module it's <c>frame.start()</c>).</p>
   </subsection>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="event-handling_event_handlers_chapter10_section6_question1">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          CANVAS_WIDTH = 400
+          CANVAS_HEIGHT = 400
+          circle_list = []
+          canvas_col = "White"
+          # GUI Control Handlers
+          def draw(canvas):
+              for index in range(len(circle_list)):
+                  canvas.draw_circle(circle_list[index], 10, 3, "Black", "Red")
+
+          def clear_handler():
+              clear_canvas()
+              
+          def drag(pos):
+              add_circle(pos)
+
+          def add_circle(pos):
+              circle_list.append(pos) 
+              
+          def clear_canvas():
+              circle_list.clear()
+          # Frame
+          frame = simplegui.create_frame("COMP 1000 Demo", CANVAS_WIDTH, CANVAS_HEIGHT)
+          frame.set_canvas_background(canvas_col)
+          # Register Keyboard and Mouse Event Handlers
+          frame.set_draw_handler(draw)
+          frame.set_mousedrag_handler(drag)
+          frame.add_button('Clear', clear_handler)
+          # Show the frame and start listening
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>What would happen if a user was running this code in CodeSkulptor3 and clicked on the canvas <term>once?</term></p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>A circle will be drawn where the user clicked.</p>
+        </statement>
+        <feedback>
+          <p>It's reasonable to expect this, but CodeSkulptor3 has unique handlers for both individual mouse clicks and for dragging the mouse click.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A circle is drawn where the user initially clicked, and continues to draw circles on the position of the mouse around the canvas.</p>
+        </statement>
+        <feedback>
+          <p>Mouse drag handlers only register continuous dragging inputs and not individual clicks. Even if the mouse drag handler recognized the initial click, without dragging the mouse on the canvas there are no more inputs to keep drawing circles.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>This code does not run, it contains an error.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Try running this code in CodeSkulptor3 to test what happens yourself.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Nothing happens.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Mouse drag handlers do not recieve inputs from individual clicks and so nothing is drawn on the canvas.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_event_handlers_chapter10_section6_question2">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          CANVAS_WIDTH = 400
+          CANVAS_HEIGHT = 400
+          circle_list = []
+          canvas_col = "White"
+          # GUI Control Handlers
+          def draw(canvas):
+              for index in range(len(circle_list)):
+                  canvas.draw_circle(circle_list[index], 10, 3, "Black", "Red")
+
+          def clear_handler():
+              clear_canvas()
+              
+          def drag(pos):
+              add_circle(pos)
+
+          def add_circle(pos):
+              circle_list.append(pos) 
+              
+          def clear_canvas():
+              circle_list.clear()
+          # Frame
+          frame = simplegui.create_frame("COMP 1000 Demo", CANVAS_WIDTH, CANVAS_HEIGHT)
+          frame.set_canvas_background(canvas_col)
+          # Register Keyboard and Mouse Event Handlers
+          frame.set_draw_handler(draw)
+          frame.set_mousedrag_handler(drag)
+          frame.add_button('Clear', clear_handler)
+          # Show the frame and start listening
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>What would happen if a user running this code in CodeSkulptor3 held their mouse click and <term>dragged</term> on the canvas?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Circles are drawn continously wherever the user drags their mouse on the canvas.</p>
+        </statement>
+        <feedback>
+          <p>Correct! The Input Event handler adds the current position of the mouse to 'circle_list' which is repeatedly drawn on the canvas.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A circle is drawn only where the user initially clicked.</p>
+        </statement>
+        <feedback>
+          <p>Close! A circle will be drawn there, but not only there! Try running this example in CodeSkulptor3 to test it for yourself.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing happens, this code contains an error.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Try running this example in CodeSkulptor3 to test what happens yourself.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>Nothing happens.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Try running this example in CodeSkulptor3 to test what happens yourself.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_event_handlers_chapter10_section6_question3">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          CANVAS_WIDTH = 400
+          CANVAS_HEIGHT = 400
+          circle_list = []
+          canvas_col = "White"
+          # GUI Control Handlers
+          def draw(canvas):
+              for index in range(len(circle_list)):
+                  canvas.draw_circle(circle_list[index], 10, 3, "Black", "Red")
+
+          def clear_handler():
+              clear_canvas()
+              
+          def drag(pos):
+              add_circle(pos)
+
+          def add_circle(pos):
+              circle_list.append(pos) 
+              
+          def clear_canvas():
+              circle_list.clear()
+          # Frame
+          frame = simplegui.create_frame("COMP 1000 Demo", CANVAS_WIDTH, CANVAS_HEIGHT)
+          frame.set_canvas_background(canvas_col)
+          # Register Keyboard and Mouse Event Handlers
+          frame.set_draw_handler(draw)
+          frame.set_mousedrag_handler(drag)
+          frame.add_button('Clear', clear_handler)
+          # Show the frame and start listening
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>Which line of code defines a Widget Event handler function?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>add_circle(pos).</p>
+        </statement>
+        <feedback>
+          <p>This function is called by an Input Event handler.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>clear_handler().</p>
+        </statement>
+        <feedback>
+          <p>This is correct! When a user presses the 'Clear' button this handler calls on the 'clear_canvas' function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>drag(pos).</p>
+        </statement>
+        <feedback>
+          <p>So close! But this line defines an Input Handler function instead of a Widget Handler function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>There is a Widget Event handler defined in the code above. Try running this code in Codeskulptor3 and think about what line of code gets called when a user presses on the button widget.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_event_handlers_chapter10_section6_question4">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          CANVAS_WIDTH = 400
+          CANVAS_HEIGHT = 400
+          circle_list = []
+          canvas_col = "White"
+          # GUI Control Handlers
+          def draw(canvas):
+              for index in range(len(circle_list)):
+                  canvas.draw_circle(circle_list[index], 10, 3, "Black", "Red")
+
+          def clear_handler():
+              clear_canvas()
+              
+          def drag(pos):
+              add_circle(pos)
+
+          def add_circle(pos):
+              circle_list.append(pos) 
+              
+          def clear_canvas():
+              circle_list.clear()
+          # Frame
+          frame = simplegui.create_frame("COMP 1000 Demo", CANVAS_WIDTH, CANVAS_HEIGHT)
+          frame.set_canvas_background(canvas_col)
+          # Register Keyboard and Mouse Event Handlers
+          frame.set_draw_handler(draw)
+          frame.set_mousedrag_handler(drag)
+          frame.add_button('Clear', clear_handler)
+          # Show the frame and start listening
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>Which line of code defines an Input Event handler function?</p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>drag(pos).</p>
+        </statement>
+        <feedback>
+          <p>Correct! This function is called when the user holds down mouseclick and drags on the canvas.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>clear_handler().</p>
+        </statement>
+        <feedback>
+          <p>Close! This line defines a Widget Event handler.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>add_circle(pos).</p>
+        </statement>
+        <feedback>
+          <p>So close! This function does not define an Input Event handler, but is instead called by one when the user holds mouseclick and drags.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>There is an Input Event handler defined in the code above. Try running this code in Codeskulptor3 and think about what line of code gets called when a user holds mouseclick and drags along the canvas.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="event-handling_event_handlers_chapter10_section6_question5">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          CANVAS_WIDTH = 400
+          CANVAS_HEIGHT = 400
+          circle_list = []
+          canvas_col = "White"
+          # GUI Control Handlers
+          def draw(canvas):
+              for index in range(len(circle_list)):
+                  canvas.draw_circle(circle_list[index], 10, 3, "Black", "Red")
+
+          def clear_handler():
+              clear_canvas()
+              
+          def drag(pos):
+              add_circle(pos)
+
+          def add_circle(pos):
+              circle_list.append(pos) 
+              
+          def clear_canvas():
+              circle_list.clear()
+          # Frame
+          frame = simplegui.create_frame("COMP 1000 Demo", CANVAS_WIDTH, CANVAS_HEIGHT)
+          frame.set_canvas_background(canvas_col)
+          # Register Keyboard and Mouse Event Handlers
+          frame.set_draw_handler(draw)
+          frame.set_mousedrag_handler(drag)
+          frame.add_button('Clear', clear_handler)
+          # Show the frame and start listening
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>Two functions in this example use the same input data from the argument labeled (pos). Which data type does the argument (pos) require?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>An X coordinate in the form of an integer.</p>
+        </statement>
+        <feedback>
+          <p>The 'draw(canvas)' function cannot draw anything if it only knows where to draw on one axis.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>A Y coordinate in the form of an integer.</p>
+        </statement>
+        <feedback>
+          <p>The 'draw(canvas)' function cannot draw anything if it only knows where to draw on one axis.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>An X coordinate and a Y coordinate in the form of a list.</p>
+        </statement>
+        <feedback>
+          <p>So close! Because the value is provided by the location of the mouse on the canvas and cannot be altered it is not contained as a list.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>An X and a Y coordinate in the form of a tuple.</p>
+        </statement>
+        <feedback>
+          <p>Correct! Because the input comes from the location of the mouse the data cannot be altered by the code and must be a tuple instead of a list.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
 </section>
