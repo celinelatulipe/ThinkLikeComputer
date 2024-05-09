@@ -220,20 +220,20 @@
   </exercise>
   <exercise label="assess_ch3_6">
     <statement>
-      <p>What is the name of jane's attribute (not method) that is referred to in the following code? <var/>  </p>
+      <p>What is the name of jane's attribute (not method) that is referred to in the following code? </p>
+      <program language="python">
+        <input>
+        import turtle
+
+        jane = turtle.Turtle()
+        jane.forward(20)
+        print(jane.x)
+      </input>
+      </program>
+      <p>The attribute is <var/> </p>
     </statement>
     <setup>
-      <var>
-        <program language="python">
-          <input>
-import turtle
-
-jane = turtle.Turtle()
-jane.forward(20)
-print(jane.x)
-</input>
-        </program>
-        <p>The attribute is</p>
+      <var width="5">
         <condition string="^\s*x\s*$">
           <feedback>
             <p>Good work!</p>
@@ -259,23 +259,26 @@ print(jane.x)
   </exercise>
   <exercise label="assess_question1_3_1_1_8">
     <statement>
-      <p>What are the names of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them. <var/>  <var/>  <var/>  </p>
+      <p>What are the names of the instances in the following code? Please put one instance per blank space and enter them in the order that the computer would read them.</p> 
+      <program language="python">
+        <input>
+        import turtle
+        wn = turtle.Screen()
+  
+        jazz = turtle.Turtle()
+        jazz.forward(50)
+        jazz.right(90)
+        pop = turtle.Turtle()
+        pop.left(180)
+        pop.forward(76)
+      </input>
+      </program>
+      <p> <var/> </p>
+      <p> <var/> </p>
+      <p> <var/> </p>
     </statement>
     <setup>
       <var>
-        <program language="python">
-          <input>
-import turtle
-wn = turtle.Screen()
-
-jazz = turtle.Turtle()
-jazz.forward(50)
-jazz.right(90)
-pop = turtle.Turtle()
-pop.left(180)
-pop.forward(76)
-</input>
-        </program>
         <condition string="^\s*wn\s*$">
           <feedback>
             <p>Good work!</p>
@@ -293,11 +296,6 @@ pop.forward(76)
         </condition>
       </var>
       <var>
-        <condition string="^\s*.*\s*$">
-          <feedback>
-            <p>Incorrect, try again.</p>
-          </feedback>
-        </condition>
         <condition string="^\s*jazz\s*$">
           <feedback>
             <p>Good work!</p>
@@ -311,15 +309,15 @@ pop.forward(76)
         <condition string="^\s*pop\s*$">
           <feedback>
             <p>Try a different location</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
           </feedback>
         </condition>
       </var>
       <var>
-        <condition string="^\s*.*\s*$">
-          <feedback>
-            <p>Incorrect, try again.</p>
-          </feedback>
-        </condition>
         <condition string="^\s*pop\s*$">
           <feedback>
             <p>Good work!</p>
@@ -333,6 +331,11 @@ pop.forward(76)
         <condition string="^\s*jazz\s*$">
           <feedback>
             <p>Try a different location</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
           </feedback>
         </condition>
       </var>
@@ -370,7 +373,6 @@ import turtle
     <title>Debugging &amp; Modules</title>
     <exercise label="assess_ch3_9_lh">
       <statement>
-        <p>:</p>
         <image source="DebuggingAndModules/Figures/cdq3-1.png" width="100%" alt="module random being imported"/>
         <p>Given the above screenshot of the CodeLens animation, we can say that modules (e.g random) are which of the following?</p>
       </statement>
@@ -411,25 +413,39 @@ import turtle
     </exercise>
     <exercise label="assess_ch3_10_lh">
       <statement>
-        <p>: <var/>  </p>
+        <image source="DebuggingAndModules/Figures/cdq3-2.png" width="100%" alt="calculating the mean of 3 numbers"/>
+        <p> Consider the above screenshot of the CodeLens animation. This code is supposed to calculate the mean (average) of the 3 numbers but there is a semantic error on which line number? <var/> </p>
       </statement>
       <setup>
         <var>
-          <image source="DebuggingAndModules/Figures/cdq3-2.png" width="100%" alt="calculating the mean of 3 numbers"/>
-          <p>Consider the above screenshot of the CodeLens animation. This code is supposed to calculate the mean (average) of the 3 numbers but there is a semantic error on which line number?</p>
-          <condition number="[4, 4]">
+          <condition string="^\s*4\s*$">
             <feedback>
               <p>Correct! Order of operations comes into play here and we need some brackets. Try writing this code for yourself with the right brackets and see if you can get the correct mean (should be 4).</p>
             </feedback>
           </condition>
-          <condition number="[1, 1]">
+          <condition string="^\s*1\s*$">
             <feedback>
-              <p>Semantic errors have to do with logic. This is assigning max a value. There is no logic happening here.</p>
+              <p>Semantic errors have to do with logic. This statement assigns a value to the variable num1.</p>
             </feedback>
           </condition>
-          <condition number="[2, 2]">
+          <condition string="^\s*2\s*$">
             <feedback>
-              <p>Semantic errors have to do with logic. This is assigning min a value. There is no logic happening here.</p>
+              <p>Semantic errors have to do with logic. This statement assigns a value to the variable num2.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s*3\s*$">
+            <feedback>
+              <p>Semantic errors have to do with logic. This statement assigns a value to the variable num3.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s*5\s*$">
+            <feedback>
+              <p>Semantic errors have to do with logic. This statement does not involve any calculations.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s*\s*$">
+            <feedback>
+              <p>Invalid response.</p>
             </feedback>
           </condition>
         </var>
@@ -437,18 +453,32 @@ import turtle
     </exercise>
     <exercise label="assess_ch3_11_lh">
       <statement>
-        <p>: <var/>  <var/>  </p>
+        <image source="DebuggingAndModules/Figures/cdq3-3.png" width="100%" alt="code with type error in it"/>
+        <p>Fill in the blanks to describe how you would fix the error seen above.</p>
+        <p>This type error can be solved by <var/>  one of the variables to a(n) <var/>.</p>
       </statement>
       <setup>
-        <var>
-          <image source="DebuggingAndModules/Figures/cdq3-3.png" width="100%" alt="code with type error in it"/>
-          <p>Fill in the blanks to describe how you would fix the error seen above.</p>
-        </var>
-        <var>
-          <p>This type error can be solved by <BlankNode/> one of the variables to a(n) <BlankNode/>.</p>
-          <condition string="^\s*casting|converting\s*$">
+        <var>        
+          <condition string="^\s*casting|converting|changing|type converting\s*$">
             <feedback>
               <p>Correct.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s\s*$">
+            <feedback>
+              <p>Try again</p>
+            </feedback>
+          </condition>
+        </var>
+        <var>        
+          <condition string="^\s*integer|int\s*$">
+            <feedback>
+              <p>Correct.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s\s*$">
+            <feedback>
+              <p>Try again</p>
             </feedback>
           </condition>
         </var>
