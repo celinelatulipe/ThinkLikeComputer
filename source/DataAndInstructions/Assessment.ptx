@@ -315,10 +315,15 @@ def square(num):
 			<p>
 				:
 			</p>
-
-			<image source="DataAndInstructions/Figures/cdq2-5.png" width="50%"/>
+			<program language="python"><input>
+				name = "sara"
+				age = 11
+				info = name + " " + str(age)
+				print(info)
+				</input>
+			</program>
 				<p>
-					Here is that same image of code again.
+					Here is that same code again, but the error has been fixed.
 					Which line number shows a line of code we would define as an expression?
 				</p>
 			</statement>
