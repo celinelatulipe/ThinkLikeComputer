@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="sequences_passing-mutable-vs-immuatable-objects">
+<section xml:id="sequences_passing-mutable-vs-immutable-objects">
   <title>Passing Mutable vs Immuatable Objects</title>
   <subsection xml:id="sequences_local-editing">
     <title>Editing local values</title>
