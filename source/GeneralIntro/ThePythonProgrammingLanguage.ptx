@@ -74,14 +74,8 @@ print(2 + 3)
                 <c>+</c>, to the multiplication symbol, <c>*</c>.  Press <em>Save &amp; Run</em> again to see the new results.</p>
     <p>As the name suggests, <em>Save &amp; Run</em> also <em>saves</em> your latest version of the code,
                 and you can recover it in later sessions when <em>logged in</em>. If <em>not</em> logged in,
-                <em>Run</em> saves versions <em>only until your browser leaves the current web page</em>, and then you lose all modifications.</p>
-    <p>If you are logged in, when a page first loads, each ActiveCode window will have a <em>Load History</em> button, to the
-                right of the <em>Save &amp; Run</em> button.
-                If you click on it, or if you run any code, that button turns into a slider.
-                If you click on the slider location box, you can use your left and right arrow
-                buttons to switch to other versions you ran.
-                Alternatively you can drag the box on the slider.
-                Now move the slider to see a previously saved version of your code. You can edit or run any version.</p>
+                <em>Run</em> saves versions <em>only until your browser leaves the current web page</em>, and then you lose all modifications.
+                You can drag the box on the slider to see a previously saved version of your code. You can also edit or run any version.</p>
   </subsection>
   <subsection xml:id="general-intro_codelens-in-runestone">
     <title>CodeLens in Runestone</title>
