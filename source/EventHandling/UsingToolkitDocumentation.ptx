@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<section xml:id="event-handling_using-toolkit-documentation">
+  <title>Using Toolkit Documentation</title>
+  <p>There are many different toolkits that you can use for building GUIs (and for other things, too). Every toolkit handles input events slightly differently and offers slightly different sets of interface controls. So, one of the most important skills you can develop is learning how to read the documentation for a toolkit to figure out how to use it. No-one memorizes all the events and controls that a toolkit handles, unless they happen to use that toolkit every day. So, when seasoned programmers need to use a toolkit, they typically have the documentation window for that toolkit open in a browser, so they can refer to it as they build their program. Click the Docs button in the CodeSkulptor 3 interface to automatically open the documentation for you in a new browser tab: <url href="https://py3.codeskulptor.org/docs.html#tabs-Python" visual="https://py3.codeskulptor.org/docs.html#tabs-Python"></url>. Switch to this tab and then click on Graphics Modules. You should see this:</p>
+  <image source="EventHandling/Figures/code_skulptr_doc_basic.png" width="75%"/>
+  <p>The CodeSkulptor system has 3 different modules for graphical applications: SimpleGUI, SimpleMap and SimplePlot. We are only going to look at SimpleGUI (but you should feel free to explore the other two modules on your own). There are a number of different documentation sections for the SimpleGUI module. In order to build a GUI interface, what we are most interested in is the Control Objects, so click on that section to open it.</p>
+  <image source="EventHandling/Figures/simpleGUI_controls_doc.png" width="75%"/>
+  <p>When you open this you will see that you can add various controls and user input handlers to a frame: labels, buttons, text input boxes, and keyboard and mouse event handlers. We'll talk about the event handlers in the next section. For now let's look at adding text labels. Click on the Add Text Label section and you will see the following:</p>
+  <image source="EventHandling/Figures/simpleGUI_textlabel_doc.png" width="75%"/>
+  <p>There are three sections to the documentation for this function: <term>Syntax</term>, <term>Example</term>, and <term>See also</term>. The <term>Syntax</term> information shows how to use the command, including what parameters you need to specify. This particular documentation shows you that you can use the <c>add_label()</c> method on a window frame object. Assuming you have called your window &#x2018;frame', you simply type either &#x2018;frame.add_label(<q>Label Text</q>) or you can add a width for the size of the label, like this: &#x2018;frame.add_label(<q>Label Text</q>, 100)'. When you look at the <term>Example</term> information, it shows how to use this method in a complete code sample. Here you see that it is customary to assign a label to a variable called something like &#x2018;label1' or &#x2018;label2'. Assigning a label (or other user interface widget) to a variable means you can access that widget to do things with it. The <term>See also</term> section tells you that there are some related methods you might want to know about. In this case, the related methods allow you to get the current text that a label is showing, and also change the text that a label is showing.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question10_5_1">
+    <statement>
+      <p>What is the correct order of required parameters (arguments) for the function, canvas.draw_text()?</p>
+      <p> The following image shows part of the documentation associated with this function. Review the complete documentation to find the answer: <url href="https://py3.codeskulptor.org/docs.html#draw_text" visual="https://py3.codeskulptor.org/docs.html#draw_text"></url></p>
+      <image source="EventHandling/Figures/ch10_section4_question6.png" width="75%"/>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>font color; font size; x,y coordinate; text</p>
+        </statement>
+        <feedback>
+          <p>Incorrect. Consult the syntax part of the documentation for the answer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>x,y coordinate; font size; font color; text</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, check the documentation.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>font size; text; x,y coordinate; font color</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the documentation can help you find the answer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>text; x,y coordinate; font size; font color</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_5_2">
+    <statement>
+      <program language="python">
+        <input> 
+      import simplegui
+       
+      frame = simplegui.create_frame('Testing', 100, 100)
+      label1 = frame.add_label('My first label')
+      label2 = frame.add_label('My second label', 200)
+      label3 = frame.add_label('My third label', 20)
+        </input>
+      </program>
+      <p></p>
+      <p> Copy and paste the above code into CodeSkulptor: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+      <p></p>
+      <p>What happens when you run this code?</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>An error prints to the console because the statement, frame.start(), is required.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the code still runs without this statement.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The first, second and third label are evenly spaced above the key and mouse indicators.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, copy and paste this code into CodeSkulptor to find the correct answer.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The text for the third label overlaps with the key and mouse indicators.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice >
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Actually, one of the above answers is correct. Run the code to see the output.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_5_3">
+    <statement>
+      <p>What does the argument, 20, indicate in this line of code:</p>
+      <p>label3 = frame.add_label('My third label', 20)</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>The font size for the text displayed on the label.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the documentation will quickly give you the answer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The width size in pixels for the control panel area.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, this argument has no effect on the control panel area.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The width of the label.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice >
+        <statement>
+          <p>The width of the text displayed on the label.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, consult the documentation for the answer.</p>
+        </feedback>
+      </choice>
+      <choice >
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Actually, one of the above answers is correct. Consult the documentation for help.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_5_4">
+    <statement>
+      <program language="python">
+        <input> 
+      import simplegui
+       
+      frame = simplegui.create_frame('Testing', 100, 100)
+      label1 = frame.add_label('My first label')
+      label2 = frame.add_label('My second label', 200)
+      label3 = frame.add_label('My third label', 20)
+        </input>
+      </program>
+      <p></p>
+      <p> Copy and paste the above code into CodeSkulptor: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+      <p></p>
+      <p>What effect would removing the argument, 20, have on this line of code:</p>
+      <p>label3 = frame.add_label('My third label', 20)</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>An error prints to the console because this function requires two arguments.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the code still runs because the removed argument is optional.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The width of the label defaults to fit the width of the given text.</p>
+        </statement>
+        <feedback>
+          <p>Yes, correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The text “My third label” is displayed on three separate lines.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, run the code to see the actual result.</p>
+        </feedback>
+      </choice>
+      <choice >
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Actually, one of the above choices is correct. Run the code to find out the answer.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+</section>
