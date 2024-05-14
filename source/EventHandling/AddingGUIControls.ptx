@@ -119,55 +119,39 @@ def bkg_button_click():
           <p>Add code to define and register an event handler function for the label.</p>
         </statement>
         <feedback>
-          <p>Labels are static and do not respond to events.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Line 9, there is a name error with “labe1” not defined.</p>
-        </statement>
-        <feedback>
-          <p>You have found one error but there is at least one more.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Line 9, get_text() should be replaced with the set_text() to change text when button is clicked.</p>
-        </statement>
-        <feedback>
-          <p>Try again, there is at least one more error.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Line 17, there is a name error with “Frame” not defined.</p>
-        </statement>
-        <feedback>
-          <p>This is an error but not the only one.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>Line 17, the add_label() function requires one argument.</p>
-        </statement>
-        <feedback>
-          <p>Yes but you have not found all the errors.</p>
-        </feedback>
-      </choice>
-      <choice>
-        <statement>
-          <p>All of the following: B, C and D</p>
-        </statement>
-        <feedback>
-          <p>Labels do not need event handler functions since they are static.</p>
+          <p>Labels do not directly respond to events and thus do not require an event handler function.</p>
         </feedback>
       </choice>
       <choice correct="yes">
         <statement>
-          <p>All of the following: C, D, E and F</p>
+          <p>Line 9, there is a name error with “labe1” not defined.</p>
         </statement>
         <feedback>
-          <p>Correct, you found all the errors!</p>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Line 9, get_text() should be replaced with set_text() to change the text on the label when button is clicked.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Line 17, there is a name error with “Frame” not defined.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>Line 17, the add_label() function requires one argument.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
         </feedback>
       </choice>
     </choices>
