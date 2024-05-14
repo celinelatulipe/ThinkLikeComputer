@@ -5,7 +5,7 @@
         <title>Week 1 Lab</title>
         <note>
             <title>Material Covered</title>
-            <p>Today’s lab focuses on getting Python and IDLE installed and working on your computer</p>
+            <p>Today’s lab focuses on getting Python and IDLE installed and working on your computer.</p>
         </note>
         <subsection xml:id="week1lab_level-1">
             <title>Level 1 - Show IDLE is working on your computer </title>
@@ -19,13 +19,13 @@
                 <p>On Windows, type IDLE in the Windows search bar.</p>
             </li>
             <li>
-                <p>When IDLE opens, you are in the IDLE console. To make sure it is working, type the following: print(“Hello World”)</p>
+                <p>When IDLE opens, you are in the IDLE console. To make sure it is working, type the following: <c>print(“Hello World”)</c></p>
             </li>
             <li>
                 <p>Then in the upper left hand corner, click ‘File’, then ‘New File’ to open an empty file that you can then type, run, and save code. </p>
             </li>
             <li>
-                <p>Now type the same code from Step 3 and then save this file with the name:  test.py</p>
+                <p>Now type the same code from Step 3 and then save this file with the name:  <c>test.py</c></p>
                 <p> <term> Pick a directory to save your .py files so in the future you can easily find them. </term> </p>
             </li>
             <li>
@@ -46,13 +46,13 @@
                         </li>
                         <li>
                             <p>Typing code in IDLE is NOT the same thing as typing code in a file but it does offer the ability to create,        
-                                edit and save Python programs as .py files.</p>
+                                edit and save Python programs as <c>.py</c> files.</p>
                         </li>
                         <li>
-                            <p>When you create a Python program and save it as a .py file, you should run it to test it.</p>
+                            <p>When you create a Python program and save it as a <c>.py</c> file, you should run it to test it.</p>
                         </li>
                         <li>
-                            <p>The main assignments for this course require the submission of .py files on UMLearn.</p>
+                            <p>The main assignments for this course require the submission of <c>.py</c> files on UMLearn.</p>
                         </li>
                     </ol></p>                    
                     </p>
@@ -67,15 +67,19 @@
                 <li>
                     <p>Open a new file in IDLE, then type in the following: </p>
                     <p></p>
-                    <p>import turtle</p>
-                    <p>wn = turtle.Screen()</p>
-                    <p>niki = turtle.Turtle()</p>
+                    <program language="python">
+                        <input>  
+                        import turtle
+                        wn = turtle.Screen()
+                        niki = turtle.Turtle()
+                        </input>
+                    </program>
                 </li>
                 <li>
                     <p>Notice that the color of “import” is orange. This is called syntax highlighting which IDLE does to show that it recognizes certain Python commands. </p>
                 </li>
                 <li>
-                    <p>Add a few turtle movements to the above code and then save this program as lab_test.py</p>
+                    <p>Add a few turtle movements to the above code and then save this program as <c>lab_test.py</c></p>
                 </li>
                 <li>
                     <p>Now click Run -> Run Module (or type F5) to run your program. This will open a new window with title of Python Turtle Graphics.</p>
@@ -84,32 +88,40 @@
                     <p>Notice the three dark red >>> in IDLE which indicates that the program ran and is finished with IDLE ready to run another program.</p>
                 </li>
                 <li>
-                    <p>Edit your program so that your turtle draws a simple picture of a house ⌂ and save this file as house.py</p>
+                    <p>Edit your program so that your turtle draws a simple picture of a house ⌂ and save this file as <c>house.py</c></p>
                     <p>If you get stuck, add the following code (with comments to describe what the code does):</p>
-                    <p># draws bottom of house</p>
-                    <p>niki.right(90)</p>
-                    <p>niki.forward(128)</p>
-                    <p>niki.left(90)</p>
-                    <p>niki.forward(128)</p>
-                    <p>niki.left(90)</p>
-                    <p>niki.forward(128)</p>
-                    <p>niki.left(90)</p>
-                    <p>niki.forward(128)</p>
-                    <p></p>
-                    <p># draws roof of house</p>
-                    <p>niki.right(135)</p>
-                    <p>niki.forward(90)</p>
-                    <p>niki.right(90)</p>
-                    <p>niki.forward(90)</p>
+                    <program language="python">
+                        <input> 
+                    # draws bottom of house
+                    niki.right(90)
+                    niki.forward(128)
+                    niki.left(90)   
+                    niki.forward(128)
+                    niki.left(90)
+                    niki.forward(128)
+                    niki.left(90)
+                    niki.forward(128)
+                    
+                    # draws roof of house
+                    niki.right(135)
+                    niki.forward(90)
+                    niki.right(90)
+                    niki.forward(90)
+                        </input>
+                    </program>
                 </li>
                 <li>
                     <p>Add a comment block at the top of your file.</p>
-                    <p>################################</p>
-                    <p># First name  Last name</p>
-                    <p># COMP 1000</p>
-                    <p># Week 1 Lab, Part 2</p>
-                    <p># Turtle house drawing </p>
-                    <p>################################</p>
+                    <program language="python">
+                        <input> 
+                    ################################
+                    # First name  Last name
+                    # COMP 1000
+                    # Week 1 Lab, Part 2
+                    # Turtle house drawing 
+                    ################################
+                        </input>
+                    </program>
                 </li>
                 <li>
                     <p>Show your instructor that your turtle program draws a house to get credit for Part 2.</p>
@@ -117,7 +129,7 @@
             </ol></p>
             <note>
                 <li>
-                    <p>For windows operating system users: to associate .py files with IDLE, right click on the file and select “Properties” from the context menu and then the “Change” button where it says “Open with..”</p>
+                    <p>For windows operating system users: to associate <c>.py</c> files with IDLE, right click on the file and select “Properties” from the context menu and then the “Change” button where it says “Open with..”</p>
                 </li>
             </note>
         </subsection>
@@ -127,22 +139,22 @@
             This is a very different experience because IDLE interprets and executes each line after you hit ‘return’.</p>
                 <p><ol>
                     <li>
-                        <p>In the IDLE console, type “import turtle” then press enter. Python imported the turtle module and is now ready to accept the next command (see the >>>).</p>
+                        <p>In the IDLE console, type <c>import turtle</c> then press 'return'. Python imported the turtle module and is now ready to accept the next command (see the >>>).</p>
                     </li>
                     <li>
-                        <p>Next type “wn = turtle.Screen() then press enter. Python creates and displays an empty turtle canvas and again the prompt >>> indicates that IDLE is ready for the next command. </p>
+                        <p>Next type <c>wn = turtle.Screen()</c> then press 'return'. Python creates and displays an empty turtle canvas and again the prompt >>> indicates that IDLE is ready for the next command. </p>
                     </li>
                     <li>
-                        <p>Now type “niki = turtle.Turtle() and press enter. Python creates a turtle and displays it at the x,y coordinate (0,0) which is the center of the canvas. Again the >>> prompt appears.</p>
+                        <p>Now type <c>niki = turtle.Turtle()</c> and press 'return'. Python creates a turtle and displays it at the x,y coordinate (0,0) which is the center of the canvas. Again the >>> prompt appears.</p>
                     </li>
                     <li>
-                        <p>Now make the turtle move with “niki.forward(100)”.</p>
+                        <p>Now make the turtle move with <c>niki.forward(100)</c>.</p>
                     </li>
                     <li>
-                        <p>Notice that text entered into IDLE can’t be edited after the line of code has been executed when you press “enter”. Test this out by trying to change a line of code that you entered. </p>
+                        <p>Notice that text entered into IDLE can’t be edited after the line of code has been executed when you press 'return'. Test this out by trying to change a line of code that you entered. </p>
                     </li>
                     <li>
-                        <p>Let’s say you were writing a program and you didn’t remember how Python handles mathematical order of operations (for example,  “4 + 8/2”). How is IDLE useful in this situation as compared to just typing the statement directly into you program file?</p>
+                        <p>Let’s say you were writing a program and you didn’t remember how Python handles mathematical order of operations (for example,  “4 + 8/2”). How is IDLE useful in this situation as compared to just typing the statement directly into your program file?</p>
                     </li>
                     <li>
                         <p>Show your instructor your IDLE console to demonstrate that you have tried the above commands for Steps 1 to 4 to get credit for Part 3.</p>

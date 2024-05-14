@@ -220,13 +220,52 @@ original_str = "The quick brown rhino jumped over the extremely lazy fox."
   </exercise>
   <exercise label="assess_ch4_10_lh">
     <statement>
-      <p>: <var/>  </p>
+      <image source="Iteration/Figures/cdq4-3.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+      <p>The next line that the interpreter evaluates first before considering execution is shown with the red arrow (line 4).</p>
+      <p>Give the number (integer value only) for the line of code that will fully execute next?<var/></p>
     </statement>
     <setup>
       <var>
-        <image source="Iteration/Figures/cdq4-3.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
-        <p>The next line to execute is shown with the red arrow (line 4). What line of code will execute next?
-<BlankNode/></p>
+        <condition string="^\s*6\s*$">
+          <feedback>
+            <p>Correct! The interpreter goes to line 4 but checks and realizes it's done looping over var_x so it then jumps down to the next line (6).</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*1\s*$">
+          <feedback>
+            <p>Incorrect, assigning a value to this variable has already been executed.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*2|7\s*$">
+          <feedback>
+            <p>Incorrect, whitespace is ignored by the interpreter.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*3\s*$">
+          <feedback>
+            <p>Incorrect, the loop body needs to be completed first.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*4\s*$">
+          <feedback>
+            <p>Incorrect, the interpreter checks first and finds that the interator variable, j, has completed the "hello" sequence.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*5\s*$">
+          <feedback>
+            <p>Incorrect, the innermost for loop has just completed iterating over the string sequence "hello".</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*8\s*$">
+          <feedback>
+            <p>Incorrect, the body of the outermost for loop needs to be completed first.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Invalid response.</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
