@@ -1,25 +1,341 @@
 <?xml version="1.0"?>
-<section xml:id="event-handling_simplegui-events">
-  <title>SimpleGUI Events</title>
+<section xml:id="event-handling_Events-Mouse-and-Keyboard">
+  <title>Events - Mouse and Keyboard</title>
   <introduction>
-    <p>The SimpleGUI module has three user interface widgets/controls that respond to user events: buttons, text input boxes and the window frame. As we saw in the previous section, the button handler does not take any parameters. It is simply called when the button is clicked. And the text input handler takes one parameter, which is how it receives the string of text the user entered. The window frame can respond to mouse clicks and keypress events that happen on the canvas area. The four events that the system can listen for while the frame is active are: key up, key down, mouse click and mouse drag. The mouse events (and their handler functions) are only triggered if the clicks or drags are on the canvas. This section shows examples of how to register and write these event handlers.</p>
+    <p>The SimpleGUI module has three interface widgets/controls that respond to user events:</p>
+       <p><ul><li>buttons</li> 
+       <li>text input boxes</li>
+       <li>the window frame (mouse/keyboard events)</li></ul></p>
+    <p>As demonstrated in the default code on the main page of CodeSkulptor, the button event handler function, <c>def click()</c>, does not take any parameters. It is simply called 
+      when the button is clicked. The documentation shows that the text input event handler function,<c>def input_handler(text_input)</c>, requires one parameter, 
+      which is how it receives the string of text the user enters.</p>
+      <p>Unlike buttons and text input boxes, which can only respond to one type of event, the window frame can recognize any of the following four types of events:
+      <ul><li>mouse click</li>
+      <li>mouse drag </li>
+      <li>key up</li>
+      <li>key down</li></ul></p>
+    <p>The mouse events are triggered if the clicks or drags are on the canvas and the key events are recognized when the location of the mouse pointer is within the canvas area. 
+      This section shows examples of how to register and write these event handler functions.</p>
   </introduction>
   <subsection xml:id="event-handling_mouse-events">
     <title>Mouse Events</title>
-    <p>Let's look at the documentation for the mouse events:</p>
+    <p>Below is the documentation for mouse events:</p>
+    <p><url href="https://py3.codeskulptor.org/docs.html#mouse-input" visual="https://py3.codeskulptor.org/docs.html#mouse-input"></url></p>
     <image source="EventHandling/Figures/mouse_event_handlers_doc.png" width="90%"/>
-    <p>This documentation shows us that to set up a mouse event handler, we need to call the set_mouseclick_handler() function or the set_mousedrag_handler() function on a frame object. For each of these, we just pass the name of the function we have defined to handle those events. If you look at the example shown, the function defined takes one parameter. You might be thinking that is weird because a mouse click happens in a two-dimensional window and so you need to specify an x and a y coordinate. But in SimpleGUI these coordinates are passed as a two-item <em>tuple</em> (remember tuples? the lists that can't be modified?). So, if the mouse was clicked at 25 pixels to the right of the top-left corner and 100 pixels down from the top-left corner, the tuple [25,100] will be passed to the mouse click event handler.</p>
+    <p>This documentation shows us that in order to register a mouse click handler function, we need to call set_mouseclick_handler()
+      on a frame object with the name, <c>mouse_handler</c>, being passed as an argument:</p> 
+      <p><c>frame.set_mouseclick_handler(mouse_handler)</c></p>
+    <p>Notice that this event handler function, 
+      <c>def mouse_handler(position)</c>, requires one parameter. You might be thinking that is weird because a mouse click happens in a two-dimensional window and so you need to 
+      specify an x and a y coordinate. But in SimpleGUI these coordinates are passed as a two-item <em>tuple</em> (remember tuples? the lists that can't be modified?). 
+      So, if the mouse was clicked at 25 pixels to the right of the top-left corner and 100 pixels down from the top-left corner, the tuple (25,100) will be passed 
+      to the mouse click event handler.</p>
     <p>Here is a code example:</p>
     <image source="EventHandling/Figures/mouse_click_handler.png" width="75%"/>
-    <p>The code above is similar to the examples we have seen already - a message is displayed on screen and can be changed if a user types a new message in the input box. But, it also draws a blue circle (outline only) on the canvas wherever the user last clicked. Note that there is one parameter in the mouse_click() function, called &#x2018;pos' and we print this out to the output console, but also assign it to the global variable &#x2018;circ_pos'. That global variable is used in the draw() function to draw a circle.</p>
+    <p>The code above is similar to the examples we have seen already - a message is displayed on screen and can be changed if a user types a new message in the input box. 
+      But, it also draws a blue circle (outline only) on the canvas wherever the user last clicked. Note that there is one parameter in the mouse_click() function, called &#x2018;pos' and 
+      we print this out to the output console, but also assign it to the global variable &#x2018;circ_pos'. That global variable is used in the draw() function to draw a circle.</p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question10_8_1">
+      <statement>
+        <p>Review and run the code example located below.</p>
+        <p>Notice that when you click the mouse within the canvas, data is displayed within the mouse indicator box on the control panel.</p>
+        <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py"></url></p>
+        <program language="python">
+          <input> 
+            import simplegui
+            import math
+
+            WIDTH = 450
+            HEIGHT = 300
+            ball_pos = [WIDTH / 2, HEIGHT / 2]
+
+            BALL_RADIUS = 15
+            ball_color = "Red"
+
+            def distance(pt1, pt2):
+                return math.sqrt( (pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
+
+            def click(pos):
+                global ball_pos, ball_color
+                if distance(pos, ball_pos) &lt; BALL_RADIUS:
+                    ball_color = "Green"
+                else:
+                    ball_pos = list(pos)
+                    ball_color = "Red"
+
+            def draw(canvas):
+                canvas.draw_circle(ball_pos, BALL_RADIUS, 1, "Black", ball_color)
+
+            frame = simplegui.create_frame("Mouse selection", WIDTH, HEIGHT)
+            frame.set_canvas_background("White")
+            frame.set_mouseclick_handler(click)
+            frame.set_draw_handler(draw)
+            frame.start()
+          </input>
+        </program>
+        <p>What is the required parameter/argument for the mouse click event handler function?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>a tuple with one x and one y coordinate</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>x coordinate</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, a two-dimensional space requires two integers for a position.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>y coordinate</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, two integer values are required.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>a list of two integers</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, the values for the x,y coordinates are sent by the system as a tuple based on where the user clicks the mouse within the canvas.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question10_8_2">
+      <statement>
+        <p>Evaluate this code example and add <c>print(pos)</c> as a statement within the def click() event handler function:</p>
+        <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py"></url></p>
+        <program language="python">
+          <input> 
+            import simplegui
+            import math
+
+            WIDTH = 450
+            HEIGHT = 300
+            ball_pos = [WIDTH / 2, HEIGHT / 2]
+
+            BALL_RADIUS = 15
+            ball_color = "Red"
+
+            def distance(pt1, pt2):
+                return math.sqrt( (pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
+
+            def click(pos):
+                global ball_pos, ball_color
+                if distance(pos, ball_pos) &lt; BALL_RADIUS:
+                    ball_color = "Green"
+                else:
+                    ball_pos = list(pos)
+                    ball_color = "Red"
+
+            def draw(canvas):
+                canvas.draw_circle(ball_pos, BALL_RADIUS, 1, "Black", ball_color)
+
+            frame = simplegui.create_frame("Mouse selection", WIDTH, HEIGHT)
+            frame.set_canvas_background("White")
+            frame.set_mouseclick_handler(click)
+            frame.set_draw_handler(draw)
+            frame.start()
+          </input>
+        </program>
+        <p>What occurs when you run this modified code and click the mouse within the canvas?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>a name error occurs: name 'pos' is not defined.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, after a mouse click, a tuple is passed as argument to the handler function and assigned to the default variable 'pos'.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>one number is printed to the console.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, a position in a two-dimensional space requires two integer values to specify the x,y coordinates.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>two numbers print as a tuple to the console which match the numbers that appear within the mouse indicator box.</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>two numbers print to the console which represent the x and y coordinate of the mouse click location within the canvas.</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+    <exercise label="question10_8_3">
+      <statement>
+        <p>Review and run the following code:</p>
+        <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_drag.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_drag.py"></url></p>
+        <program language="python">
+          <input> 
+            import simplegui
+
+            WIDTH = 300
+            HEIGHT = 300
+            point = [WIDTH / 2, HEIGHT / 2]
+
+            def draw(canvas):
+                canvas.draw_circle(point, 20, 5, "White", "Red")
+            
+            def drag(pos):
+                global point
+                point = pos
+
+            frame = simplegui.create_frame("Ball Drag", WIDTH, HEIGHT)
+            frame.set_draw_handler(draw)
+            frame.set_mousedrag_handler(drag)
+            frame.start()
+          </input>
+        </program>
+        <p>Now remove the statement: <c>global point</c></p>
+        <p>What occurs when you run this modified code and <term>drag</term> the mouse within the canvas?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>the circle is dragged across the canvas.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, run the modified code to see what happens.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>the circle remains stationary and the mouse pointer locations continously update in the mouse indicator box.</p>
+          </statement>
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>an error message prints to the console when trying to drag the mouse within the canvas.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, the code still runs but not as intended.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>an error message prints to the console after running the code but before dragging the mouse within the canvas.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, however the removal of this global statement does lead to an error in the program.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
   </subsection>
   <subsection xml:id="event-handling_keyboard-events">
     <title>Keyboard Events</title>
-    <p>Let's now look at how SimpleGUI handles keyboard events, because it is also different than the way the Turtle module handled keyboard events. Here is the key event handler documentation:</p>
+    <p>Let's now look at how SimpleGUI handles keyboard events, because it is also different than the way the Turtle module handled keyboard events. 
+      Review the key event handler documentation which is located below:</p>
+      <p><url href="https://py3.codeskulptor.org/docs.html#keyboard-input" visual="https://py3.codeskulptor.org/docs.html#keyboard-input"></url></p>
     <image source="EventHandling/Figures/key_handler_doc.png" width="90%"/>
-    <p>We see here that there are two different key handlers that can be registered on a frame object: set_keydown_handler() and set_keyup_handler(). For both of these you must specify the name of the function that will handle the event, and the function needs to take a single parameter, the key that is pressed down (or released).</p>
-    <p>If you click on the key echo example, it will show you the following code in CodeSkulptr, although we have added one extra statement:</p>
+    <p>We see here that there are two different key functions that can access the frame object: 
+      <ul><li>frame.set_keydown_handler()</li> 
+          <li>frame.set_keyup_handler()</li></ul></p> 
+    <p>For both of these you must specify the name of the function that will handle the event, and this event handler function, <c>def key_handler(key)</c>, requires a single parameter to be passed which is the key
+      that is pressed down (or released).</p>
+    <p>Click on the following link to review the key echo code example: <url href="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py"></url>.
+      It is also pictured below with one extra print statement added on line 16.
+      <term>Add this print statement on line 16 in the keydown() handler function and run the code.</term></p>
     <image source="EventHandling/Figures/key_echo.png" width="75%"/>
-    <p>On line 16, which is in the keydown handler, we added a print statement that prints the value of the key out to the output console. Run this code to see what it does. When you press down on a key on the keyboard, that key is displayed on the small canvas. This is because the key parameter is converted to a character and stored in the global variable current_key. That variable is used in the draw() function to display the letter. When you lift your finger off that key, the keyup() handler is called and the global variable is reset to the space key, and so the letter disappears from the canvas. If you add the same print statement on line 16 to print out the value of the key parameter and then look at the output frame on the right of your browser window, you will see various numbers appear as you type different letters. These numbers are the ASCII values of the letters. ASCII is a standard way of representing characters across many computer systems. Because the ASCII value is passed, we need to convert that to a character type using chr() so that we see the actual letter on the canvas.</p>
+    <p><note><term>ASCII (American Standard Code for Information Interchange) is a standard way of using integer values to represent characters across many computer systems. For example, the letter 'A' has the ASCII value of 65.</term></note></p>
+      <p>When you press down on a key, that key parameter is passed as an ASCII numeric value to the keydown() handler function. However, if you also want the letter to be displayed on the canvas, 
+      this ASCII numeric value needs to be converted to a character type using chr() and then stored in the global variable current_key. That variable, current_key, is then used in the draw() function 
+      to display the letter on the canvas.</p> 
+      <p>When you lift your finger off that same key, the keyup() handler is called and the global variable is then reset to the space key, 
+      resulting in the letter disappearing from the canvas. The print statement (added on line 16) allows the numeric value of the key parameter (ASCII value) to be displayed in the console.
+      Notice how these values change as you type different letters. </p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question10_8_4">
+       <statement>
+        <p>Review and make the following changes to the code below.</p>
+        <p>Change <c>current_key = chr(key)</c> to <c>current_key = key</c></p>
+        <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py"></url></p>
+        <program language="python">
+          <input>    
+      import simplegui
+      
+      current_key = ' '
+            
+      def keydown(key):
+          global current_key
+          current_key = chr(key)
+
+      def draw(canvas):
+          canvas.draw_text(current_key, [10, 25], 20, "Yellow")
+
+      frame = simplegui.create_frame("Echo", 100, 100)
+      frame.set_keydown_handler(keydown)
+      frame.set_draw_handler(draw)
+      frame.start()
+          </input>
+        </program>
+      <p>What occurs when you remove chr() and then click the mouse within the canvas?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>an error message appears since the canvas.draw_text() function requires the first argument to be a string.</p>
+          </statement>
+          <feedback>
+            <p>Correct! Note that char type variables are also recognized as string type variables in Python.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>letters are displayed on the canvas when keys are pressed and the mouse pointer is within the canvas dimensions.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, make the above change and run the code to find out what happens.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>the program runs but letters do not appear on the canvas when keys are pressed.</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, run the code to find out the answer.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>none of the above</p>
+          </statement>
+          <feedback>
+            <p>Incorrect, one of the above choices is correct.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
   </subsection>
 </section>
