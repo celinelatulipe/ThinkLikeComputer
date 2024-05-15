@@ -9,14 +9,14 @@
       <input>
 =====
 
-from unittest.gui import TestCaseGui
+      from unittest.gui import TestCaseGui
 
-class myTests(TestCaseGui):
+       class myTests(TestCaseGui):
 
-   def testOne(self):
-      self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+        def testOne(self):
+            self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
 
-myTests().main()
+      myTests().main()
         </input>
     <tests>
     </tests>
@@ -28,21 +28,18 @@ myTests().main()
     </statement>
     <program label="ac11_15_2_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testTwo(self):
-      self.assertEqual(add(-2), 0, "Testing that add(-2) returns 0")
-      self.assertEqual(add(6), 8, "Testing that add(6) returns 8")
-      self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
-
-myTests().main()
         </input>
     <tests>
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testTwo(self):
+            self.assertEqual(add(-2), 0, "Testing that add(-2) returns 0")
+            self.assertEqual(add(6), 8, "Testing that add(6) returns 8")
+            self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
+
+      myTests().main()
     </tests>
     </program>
   </exercise>
@@ -53,19 +50,17 @@ myTests().main()
     <program label="ac11_15_3_editor" interactive="activecode" language="python">
       <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testThree(self):
-      self.assertEqual(change("I'm Bob. "), "I'm Bob. Nice to meet you!", "Tests that change('I'm Bob. '') returns 'I'm Bob. Nice to meet you!'")
-      self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
-
-myTests().main()
         </input>
     <tests>
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testThree(self):
+            self.assertEqual(change("I'm Bob. "), "I'm Bob. Nice to meet you!", "Tests that change('I'm Bob. '') returns 'I'm Bob. Nice to meet you!'")
+            self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
+
+      myTests().main()
     </tests>
     </program>
   </exercise>
@@ -76,24 +71,22 @@ myTests().main()
     <program label="ac11_15_6_editor" interactive="activecode" language="python">
       <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testSixA(self):
-      self.assertEqual(divide(4), 2, "Tests that divide(4) returns 2")
-   def testSixB(self):
-      self.assertEqual(sum(4), 8, "Tests that sum(4) returns 8")
-      self.assertEqual(sum(2), 7, "Tests that sum(2) returns 7")
-      self.assertEqual(sum(-6), 3, "Tests that sum(-6) returns 3")
-      self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
-
-myTests().main()
         </input>
     <tests>
-    </tests>
+      from unittest.gui import TestCaseGui
+
+      class myTests(TestCaseGui):
+
+        def testSixA(self):
+            self.assertEqual(divide(4), 2, "Tests that divide(4) returns 2")
+        def testSixB(self):
+            self.assertEqual(sum(4), 8, "Tests that sum(4) returns 8")
+            self.assertEqual(sum(2), 7, "Tests that sum(2) returns 7")
+            self.assertEqual(sum(-6), 3, "Tests that sum(-6) returns 3")
+            self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
+
+      myTests().main()
+          </tests>
     </program>
   </exercise>
   <exercise label="assess_ch8_1_lh">
