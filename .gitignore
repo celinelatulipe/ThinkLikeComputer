@@ -97,3 +97,9 @@ GitHub.sublime-settings
 
 # Don't track codechat config (will be generated automatically)
 codechat_config.yaml
+.gitignore.bak
+project.ptx.bak
+requirements.txt
+.github/workflows/deploy.yml
+.github/workflows/test-build.yml
+requirements.txt
