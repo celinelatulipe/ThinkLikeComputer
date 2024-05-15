@@ -537,8 +537,18 @@ for row in range(img.getHeight()):
     <p>The program below implements this algorithm using the previous image (luther.jpg). Run it to see the resulting negative
                 image. Note that there is a lot of processing taking place and this may take a few seconds to complete. In addition, here
                 are two other images that you can use (cy.png and goldygopher.png).</p>
-    <image source="Iteration/Figures/cy.png" width="75%"/>
-    <image source="Iteration/Figures/goldygopher.png" width="75%"/>
+    <datafile xml:id="cy_image" label="cy_pic" filename="cy.png">
+      <image source="Iteration/Figures/cy.png" width="75%">
+        <shortdescription>Picture of cy mascot</shortdescription>
+      </image>
+    </datafile>
+    <datafile xml:id="gopher_image" label="gopher_pic" filename="goldygopher.png">
+      <image source="Iteration/Figures/goldygopher.png" width="75%">
+        <shortdescription>Picture of goldie gopher mascot</shortdescription>
+      </image>
+    </datafile>
+    <!--<image source="Iteration/Figures/cy.png" width="75%"/>
+    <image source="Iteration/Figures/goldygopher.png" width="75%"/>-->
     <p>Change the name of the file in the <c>image.Image()</c> call to see how these images look as negatives. Also, note that
                 there is an <c>exitonclick</c> method call at the very end which will close the window when you click on it. This will allow
                 you to <q>clear the screen</q> before drawing the next negative.</p>
