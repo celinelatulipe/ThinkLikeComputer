@@ -9,22 +9,16 @@
     </statement><program interactive="activecode" language="python">
 
         <input>
-
-
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(numbers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], "Testing that numbers is assigned to correct values")
-
-myTests().main()
         </input>
 <tests>
-
-
+    from unittest.gui import TestCaseGui
+    
+    class myTests(TestCaseGui):
+    
+       def testOne(self):
+          self.assertEqual(numbers, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35], "Testing that numbers is assigned to correct values")
+    
+    myTests().main()
 </tests>
 
     </program></exercise>
@@ -40,20 +34,16 @@ myTests().main()
 
         <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(L, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Testing that L was created correctly.")
-
-myTests().main()
         </input>
 <tests>
-
-
+from unittest.gui import TestCaseGui
+    
+class myTests(TestCaseGui):
+    
+    def testOne(self):
+        self.assertEqual(L, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "Testing that L was created correctly.")
+    
+myTests().main()
 </tests>
 
     </program>
@@ -219,20 +209,16 @@ wn.exitonclick()
 
         <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testTwo(self):
-      self.assertEqual(tens, [0, 10, 20, 30, 40, 50], "Testing that tens is assigned to correct values.")
-
-myTests().main()
         </input>
 <tests>
-
-
+from unittest.gui import TestCaseGui
+    
+class myTests(TestCaseGui):
+    
+    def testTwo(self):
+        self.assertEqual(tens, [0, 10, 20, 30, 40, 50], "Testing that tens is assigned to correct values.")
+    
+myTests().main()
 </tests>
 
     </program>
@@ -249,20 +235,16 @@ myTests().main()
 
         <input>
 
-=====
-
-from unittest.gui import TestCaseGui
-
-class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(three_nums, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33], "Testing that three_nums was created correctly.")
-
-myTests().main()
         </input>
 <tests>
-
-
+from unittest.gui import TestCaseGui
+    
+class myTests(TestCaseGui):
+    
+    def testOne(self):
+        self.assertEqual(three_nums, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33], "Testing that three_nums was created correctly.")
+    
+myTests().main()
 </tests>
 
     </program>

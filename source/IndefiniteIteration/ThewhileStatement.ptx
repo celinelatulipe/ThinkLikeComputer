@@ -233,9 +233,8 @@ print(answer)
     </statement>
     <program label="ac10_2_3_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -244,9 +243,7 @@ class myTests(TestCaseGui):
      self.assertEqual(eve_nums, [0,2,4,6,8,10,12,14], "Testing that eve_nums has been assigned the correct elements")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac10_2_4">
@@ -261,9 +258,9 @@ list1 = [8, 3, 4, 5, 6, 7, 9]
 tot = 0
 for elem in list1:
     tot = tot + elem
+        </input>
 
-=====
-
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -274,9 +271,7 @@ class myTests(TestCaseGui):
 
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac10_2_5">
@@ -288,10 +283,8 @@ myTests().main()
 
 def stop_at_four():
 
-
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -303,9 +296,7 @@ class myTests(TestCaseGui):
       self.assertEqual(stop_at_four([1, 6, 2, 3, 9]), [1, 6, 2, 3, 9], "Testing that stop_at_four([1, 6, 2, 3, 9]) returns ([1, 6, 2, 3, 9])")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
 </section>
