@@ -39,16 +39,18 @@
 def numDigits(n):
     # your code here
 				</input>
-				<tests>
-				from unittest.gui import TestCaseGui
-				class myTests(TestCaseGui):
-				def testOne(self):
-				self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
-				self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
-				self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
-				self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
-				myTests().main()
-				</tests>
+	<tests>
+	from unittest.gui import TestCaseGui
+
+	class myTests(TestCaseGui):
+
+		def testOne(self):
+			self.assertEqual(numDigits(2),1,"Tested numDigits on input of 2")
+			self.assertEqual(numDigits(55),2,"Tested numDigits on input of 55")
+			self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
+			self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
+	myTests().main()
+	</tests>
 			</program>
             <solution>
 			<program language="python">
@@ -77,15 +79,18 @@ print(numDigits(1))
 def reverse(astring):
     # your code here
 		</input>
-		<tests>
-		from unittest.gui import TestCaseGui
-		class myTests(TestCaseGui):
-		def testOne(self):
+<tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+	def testOne(self):
 		self.assertEqual(reverse("happy"),"yppah","Tested reverse on input of 'happy'")
 		self.assertEqual(reverse("Python"),"nohtyP","Tested reverse on input of 'Python'")
 		self.assertEqual(reverse(""),"","Tested reverse on input of ''")
-		myTests().main()
-		</tests>
+
+myTests().main()
+</tests>
 	</program>
 </exercise>
 
@@ -101,16 +106,19 @@ def reverse(astring):
 def mirror(mystr):
     # your code here
 		</input>
-		<tests>
-		from unittest.gui import TestCaseGui
-		class myTests(TestCaseGui):
-		def testOne(self):
+<tests>
+from unittest.gui import TestCaseGui
+
+class myTests(TestCaseGui):
+
+	def testOne(self):
 		self.assertEqual(mirror("good"),"gooddoog","Tested mirror on input of 'good'")
 		self.assertEqual(mirror("Python"),"PythonnohtyP","Tested mirror on input of 'Python'")
 		self.assertEqual(mirror(""),"","Tested mirror on input of ''")
 		self.assertEqual(mirror("a"),"aa","Tested mirror on input of 'a'")
-		myTests().main()
-		</tests>
+		
+myTests().main()
+</tests>
 	</program>
     <solution>
 	<program language="python">
