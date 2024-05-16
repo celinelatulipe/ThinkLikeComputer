@@ -9,7 +9,7 @@
 
 ## PreTeXt Files
 *   `assets/`: Assets for the PreTeXt version of the textbook
-*   `output/`: The output from the PreTeXt version of the textbook (will only appear locally) (will only appear locally)
+*   `output/`: The output from the PreTeXt version of the textbook (will only appear locally)
 *   `publication/`: A file indicating how to deploy the textbook to Runestone
 *   `source/`: **_The PreTeXt source code._**
 *   `project.ptx`: The project definition file for the PreTeXt version of the textbook
