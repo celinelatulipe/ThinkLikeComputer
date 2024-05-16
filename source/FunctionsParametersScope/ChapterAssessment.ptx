@@ -96,14 +96,24 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <exercise label="assess_ch8_1_lh">
+  <exercise label="assess_ch8_15_5_lh">
     <statement>
-      <p>: <var/>  </p>
+        <image source="FunctionsParametersScope/Figures/Chapter_8_1.PNG" width="100%" alt="Finding the maximum number"/>
+        <p>The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution.</p>
+        <p>The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? <var/> </p>
     </statement>
     <setup>
       <var>
-        <image source="FunctionsParametersScope/Figures/Chapter_8_1.PNG" width="100%" alt="Finding the maximum number"/>
-        <p>The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution. The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? <BlankNode/></p>
+        <condition string="^\s*97\s*$">
+          <feedback>
+            <p>Correct!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Incorrect.</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
@@ -156,14 +166,35 @@ myTests().main()
       </choice>
     </choices>
   </exercise>
-  <exercise label="assess_ch8_3_lh">
+  <exercise label="assess_ch8_15_7_lh">
     <statement>
-      <p>: <var/>  </p>
+      <image source="FunctionsParametersScope/Figures/Chapter_8_4.PNG" width="70%" alt="average function"/>
+      <p>Consider the above program. Which Codelens screenshot shows the correct program output? </p>
+      <p>(The options are labelled 1,2,3 in the top right corner of each screenshot) <var/>  </p>
+      <image source="FunctionsParametersScope/Figures/Chapter_8_4_A.PNG" width="70%" alt="average function"/>
     </statement>
     <setup>
       <var>
-        <image source="FunctionsParametersScope/Figures/Chapter_8_4.PNG" width="100%" alt="average function"/>
-        <p>Consider the above program. Which Codelens screenshot shows the correct program output? (The options are labelled 1,2,3 in the top right corner of each screenshot) <BlankNode/></p>
+        <condition string="^\s*1\s*$">
+          <feedback>
+            <p>Correct! Tracing the code line by line helps to figure out the answer.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*2\s*$">
+          <feedback>
+            <p>Incorrect, the grades list is not the same for this choice.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*3\s*$">
+          <feedback>
+            <p>Incorrect, the number of students is 10 based on the length of the grades list.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Invalid response.</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
