@@ -26,9 +26,8 @@ myTests().main()
     </statement>
     <program label="ac11_15_2_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -39,9 +38,7 @@ class myTests(TestCaseGui):
       self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_3">
@@ -49,10 +46,10 @@ myTests().main()
       <p>Write a function called <c>change</c> that takes any string, adds <q>Nice to meet you!</q> to the end of the argument given, and returns that new string.</p>
     </statement>
     <program label="ac11_15_3_editor" interactive="activecode" language="python">
-      <input>
+  <input>
+    </input>
 
-=====
-
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -62,9 +59,7 @@ class myTests(TestCaseGui):
       self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_6">
@@ -73,9 +68,9 @@ myTests().main()
     </statement>
     <program label="ac11_15_6_editor" interactive="activecode" language="python">
       <input>
+        </input>
 
-=====
-
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -89,9 +84,7 @@ class myTests(TestCaseGui):
       self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="assess_ch8_1_lh">
