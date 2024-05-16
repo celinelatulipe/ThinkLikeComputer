@@ -7,8 +7,8 @@
     </statement>
     <program label="ac11_15_1_editor" interactive="activecode" language="python">
       <input>
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -17,9 +17,7 @@ class myTests(TestCaseGui):
       self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_2">
