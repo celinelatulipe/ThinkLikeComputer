@@ -169,7 +169,7 @@ wn.exitonclick()
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question10_4_1">
+  <exercise label="question11_4_1">
     <statement>
       <p>In the random walk program in this section, what does the isInScreen function do?</p>
     </statement>

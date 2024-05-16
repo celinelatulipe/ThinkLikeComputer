@@ -1,65 +1,421 @@
 <?xml version="1.0"?>
 <section xml:id="event-handling_the-simplegui-module">
   <title>The SimpleGUI Module</title>
-  <subsection xml:id="event-handling_module-code-skulptr-intro">
-    <title>An introduction to the simplegui module in Code Skultpr 3</title>
-    <p>The SimpleGUI module was created specifically to help students learn and experiment with event-based interactions. It was designed to work in a web version of Python called CodeSkulptr 3. Unfortunately, simpleGUI is not a module that works inside the Runestone textbook, it only works in CodeSkulptr. Here is a screenshot of what CodeSkulptr 3 looks like when you first open it, and press the Run button at the top-left:</p>
+    <p>The SimpleGUI module in CodeSkulptor 3 was created specifically to help students learn and experiment with event-based interactions. It was designed to work in a web version of Python called CodeSkulptor 3. Unfortunately, SimpleGUI is not a module that works inside the Runestone textbook, it only works in CodeSkulptor. Here is a screenshot of what CodeSkulptor 3 looks like when you first open it, and press the Run button at the top-left: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/">https://py3.codeskulptor.org/</url></p>
     <image source="EventHandling/Figures/CodeSkulptrBasic.png" width="75%"/>
-    <p>This screenshot shows that CodeSkulptr 3 provides a window for entering text and a sample script to get you started. On the left are buttons for you to control the CodeSkultpr web page interface, including running, saving and loading scripts, accessing documentation, and a &#x2018;join' button that allows you to share access to your script with a classmate, so that you can work on it together.</p>
+    <p>This screenshot shows that CodeSkulptor 3 provides a window for entering text and a sample script to get you started. On the left are buttons for you to control the CodeSkulptor web page interface, including running, saving and loading scripts, accessing documentation, and a &#x2018;join' button that allows you to share access to your script with a classmate, so that you can work on it together.</p>
     <p>On the right there is an Output window, which is basically just a console. Any print() output will show up there.</p>
     <p>When you run the starter script that is provided, you will also see that a window pops up. This window has a canvas and a button. When this window first appears, it displays the message <q>Welcome!</q>. When you click the &#x2018;Click me' button, the message in the canvas changes to <q>Good job!</q>.</p>
     <p>Let's examine the lines of code in this script to understand what is happening.</p>
     <p>
       <ul>
         <li>
-          <p>Line 7 has the import statement that gives us access to the simpleGUI module</p>
+          <p>The import statement gives us access to the SimpleGUI module.</p>
+          <program language="python">
+            <input>
+              import simplegui  # line 7
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Lines 12-14 define a handler function that defines what happens when the user clicks the button.</p>
+          <p>The string "Welcome!" is assigned to variable message.</p>
+          <program language="python">
+            <input>
+              message = "Welcome!"  # line 9
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Line 13 gives us access to the global variable message, and Line 14 changes the value of that variable</p>
+          <p>An event handler function defines what happens when the user clicks the button with 
+            line 13 giving access to the global variable message, and then line 14 changes the value of that variable to "Good job!"</p>
+          <program language="python">
+            <input>
+              def click():  # line 12 
+                      global message  
+                      message = "Good job!"  
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Lines 17 and 18 have a draw() function that defines what should be drawn on the canvas The simpleGUI module calls this function automatically, many times per second, to redraw the canvas and keep it up to date as the user interacts with the program.</p>
+          <p>A draw() event handler function includes a function canvas.draw_text() to specify what should be drawn on the canvas. The SimpleGUI module calls this draw() function automatically, many times per second, to redraw the canvas and keep it up to date as the user interacts with the program.</p>
+          <program language="python">
+            <input>
+              def draw(canvas): # line 17
+                     canvas.draw_text(message, [50,112], 48, "Red")  
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Line 21 creates the window, using the create_frame method of the simplegui module. It gives the window a title (<q>Home</q>) and a size in pixels for a canvas that will be drawn on the right side of the window (the canvas in this default example is 300 pixels wide by 200 pixels tall). The window that is created is assigned to a variable called &#x2018;frame'. When you create a frame in simpleGUI, you get an area on the left for placing interface controls and an area on the right for the canvas.</p>
+          <p>A window is created using the create_frame method of the SimpleGUI module. It gives the window a title (<q>Home</q>) and a size in pixels for a canvas that will be drawn on the right side of the window (the canvas in this default example is 300 pixels wide by 200 pixels tall). The window that is created is assigned to a variable called &#x2018;frame'. When you create a frame in SimpleGUI, you get an area on the left for placing interface controls and an area on the right for the canvas.</p>
+          <program language="python">
+            <input>
+              frame = simplegui.create_frame("Home", 300, 200)  # line 21
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Line 22 adds a button to &#x2018;frame', with the label <q>Click me</q>, and it also registers that when the button is clicked by the user, the function &#x2018;click()' should be called</p>
+          <p>Then a button is added to &#x2018;frame', with the label <q>Click me</q>, and it also registers that when the button is clicked by the user, the function &#x2018;click()' should be called.</p>
+          <program language="python">
+            <input>
+              frame.add_button("Click me", click)  # line 22
+            </input>   
+          </program>
         </li>
         <li>
-          <p>Line 23 defines what function should be called to redraw the window. This starter script follows a standard programming convention for this and calls the function &#x2018;draw()'</p>
+          <p>A function calls on the frame object to allow the event handler function draw() to be registered.</p>
+          <program language="python">
+            <input>
+              frame.set_draw_handler(draw)  # line 23
+            </input>   
+          </program>
+        </li>
+        <li>
+          <p>The following statement allows the frame/window object to recognize event-based interactions.</p>
+          <program language="python">
+            <input>
+              frame.start()  # line 26
+            </input>   
+          </program>
         </li>
       </ul>
     </p>
-    <p>Go to CodeSkulptr 3 and play with this code: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/">https://py3.codeskulptor.org/</url>. Run the script and then do a few simple edits, testing the program after each:</p>
+    <p>Go to CodeSkulptor 3 and play with this code: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/">https://py3.codeskulptor.org/</url>. Run the script and then do a few simple edits, testing the program after each:</p>
     <p>
       <ul>
         <li>
           <p>Change the text on the button so that it says <q>Update</q> instead of <q>Click me</q>.</p>
         </li>
         <li>
-          <p>Rename the button handler to button_click instead of click. Make sure you update this in the function definition <term>and</term> in the line of code that creates the button</p>
+          <p>Rename the button handler to button_click instead of click. Make sure you update this in the function definition <term>and</term> in the line of code that creates the button.</p>
         </li>
         <li>
           <p>Change the button handler function so that it sets the message to be <q>Hello!</q></p>
         </li>
       </ul>
     </p>
-    <p>The window that pops up when you run a CodeSkulptr script with the SimpleGUI module has two labels at the bottom left. These are provided by SimpleGUI as an aid to help novice programmers understand what mouse and keyboard events the SimpleGUI module is recieving.</p>
+    <p>Notice that the window that pops up when you run a CodeSkulptor script with the SimpleGUI module has a key and mouse indicator box at the bottom left of the control panel. These are provided by SimpleGUI as an aid to help novice programmers understand what mouse and keyboard events the SimpleGUI module is receiving.</p>
     <image source="EventHandling/Figures/CodeSkulptr_event_indicators.png" width="50%"/>
-    <p>Play around with clicking the mouse in the canvas and typing keys on the keyboard to see these indicators change. Note that just because the SimpleGUI module sees the events doesn't mean something will happen in the canvas window in response to clicks and keypresses. It is up to you to write code to tell the SimpleGUI module and the Python interpreter that you want something to happen in response to such events.</p>
-  </subsection>
-  <subsection xml:id="event-handling_using-toolkit-documentation">
-    <title>Using Toolkit Documentation</title>
-    <p>There are many different toolkits that you can use for building GUIs (and for other things, too). Every toolkit handles input events slightly differently and offers slightly different sets of interface controls. So, one of the most important skills you can develop is learning how to read the documentation for a toolkit to figure out how to use it. No-one memorizes all the events and controls that a toolkit handles, unless they happen to use that toolkit every day. So, when seasoned programmers need to use a toolkit, they typically have the documentation window for that toolkit open in a browser, so they can refer to it as they build their program. Clicking the Docs button in the CodeSkulptr 3 interface will automatically open the documentation for you in a new browser tab. Switch to this tab and then click on Graphics Modules. You should see this:</p>
-    <image source="EventHandling/Figures/code_skulptr_doc_basic.png" width="75%"/>
-    <p>The CodeSkulptr system has 3 different modules for graphical applications: SimpleGUI, SimpleMap and SimplePlot. We are only going to look at SimpleGUI (but you should feel free to explore the other two modules on your own). There are a number of different documentation sections for the SimpleGUI module. In order to build a GUI interface, what we are most interested in is the Control Objects, so click on that section to open it.</p>
-    <image source="EventHandling/Figures/simpleGUI_controls_doc.png" width="75%"/>
-    <p>When you open this you will see that you can add various controls and user input handlers to a frame: lables, buttons, text input boxes, and keyboard and mouse event handlers. We'll talk about the event handlers in the next section. For now let's look at adding text labels. Click on the Add Text Label section and you will see the following:</p>
-    <image source="EventHandling/Figures/simpleGUI_textlabel_doc.png" width="75%"/>
-    <p>There are three sections to the documentation for this function: <term>Syntax</term>, <term>Example</term>, and <term>See also</term>. The <term>Syntax</term> information shows how to use the command, including what parameters you need to specify. This particular documentation shows you that you can use the <c>add_label()</c> method on a window frame object. Assuming you have called your window &#x2018;frame', you simply type either &#x2018;frame.add_label(<q>Label Text</q>) or you can add a width for the size of the label, like this: &#x2018;frame.add_label(<q>Label Text</q>, 100)'. When you look at the <term>Example</term> information, it shows how to use this method in a complete code sample. Here you see that it is customary to assign a label to a variable called something like &#x2018;label1' or &#x2018;label2'. Assigning a label (or other user interface widget) to a variable means you can access that widget to do things with it. The <term>See also</term> section tells you that there are some related methods you might want to know about. In this case, the related methods allow you to get the current text that a label is showing, and also change the text that a label is showing.</p>
-  </subsection>
+    <p>Later in this chapter, we will define and register event handler functions for mouse and keyboard events. You will then be able to observe how values displayed within these indicators change based on mouse clicks/keypresses.</p>
+  <p>
+    <term>Check your understanding</term>
+  </p>
+  <exercise label="question10_4_1">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          message = "Welcome!"
+
+          def click():
+              global message
+              message = "Good job!"
+
+          def draw(canvas):
+              canvas.draw_text(message, [50,112], 48, "Red")
+
+          frame = simplegui.create_frame("Home", 300, 200)
+          frame.add_button("Click me", click)
+          frame.set_draw_handler(draw)
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p>What happens if you remove the line, frame.start(), and then run the program? Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>An error message prints in the console.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, try running the modified code to see the effect.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>The canvas is blank and does not change when button is clicked.</p>
+        </statement>
+        <feedback>
+          <p>This is correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The button disappears from the control panel.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the button is still there. Run the code to verify.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, try running the modified code to see which of the other options is true.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_4_2">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          message = "Welcome!"
+
+          def click():
+              global message
+              message = "Good job!"
+
+          def draw(canvas):
+              canvas.draw_text(message, [50,112], 48, "Red")
+
+          frame = simplegui.create_frame("Home", 300, 200)
+          frame.add_button("Click me", click)
+          frame.set_draw_handler(draw)
+          frame.start()
+        </input>
+      </program>
+      <p>What happens if you remove the statement, global message, and then run the program?</p>
+      <p>Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+    </statement>
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Clicking the button does not change text on the canvas.</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>The canvas is blank.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, try running the modified code to find the answer.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>An error message prints to the console.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, run the modified program to verify.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, one of the above options is true.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_4_3">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          message = "Welcome!"
+
+          def click():
+              global message
+              message = "Good job!"
+
+          def draw(canvas):
+              canvas.draw_text(message, [50,112], 48, "Red")
+
+          frame = simplegui.create_frame("Home", 300, 200)
+          frame.add_button("Click me", click)
+          frame.set_draw_handler(draw)
+          frame.start()
+        </input>
+      </program>
+      <p></p>
+      <p> Review the above code to decide which line of code includes text displayed on the button.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>message = "Good job!"</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the value for message is the text displayed on the canvas by clicking the button.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>canvas.draw_text(message, [50,112], 48, "Red")</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the arguments for this function specify the details for text displayed on the canvas.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>frame = simplegui.create_frame("Home", 300, 200)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, the arguments pertain to the details of the window.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>frame.add_button("Click me", click)</p>
+        </statement>
+        <feedback>
+          <p>You have clicked the correct answer!</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>None of the above.</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, review the code and its output to find the answer.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_4_4">
+    <statement>
+      <program language="python">
+        <input> 
+          import simplegui
+
+          message = "Welcome!"
+
+          def click():
+              global message
+              message = "Good job!"
+
+          def draw(canvas):
+              canvas.draw_text(message, [50,112], 48, "Red")
+
+          frame = simplegui.create_frame("Home", 300, 200)
+          frame.add_button("Click me", click)
+          frame.set_draw_handler(draw)
+          frame.start()
+        </input>
+      </program>
+      <p>               </p>
+      <p>Review the above code to decide which line(s) of code register(s) functions.</p>
+    </statement>
+    <choices>
+      <choice>
+        <statement>
+          <p>def click():</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, this line of code defines an event handler function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>def draw(canvas):</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, this statement defines an event handler function.</p>
+        </feedback>
+      </choice>
+      <choice>
+        <statement>
+          <p>frame = simplegui.create_frame("Home", 300, 200)</p>
+        </statement>
+        <feedback>
+          <p>Incorrect, this line of code creates the window for event-based interactions.</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>frame.add_button("Click me", click)</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+      <choice correct="yes">
+        <statement>
+          <p>frame.set_draw_handler(draw)</p>
+        </statement>
+        <feedback>
+          <p>Correct!</p>
+        </feedback>
+      </choice>
+    </choices>
+  </exercise>
+  <exercise label="question10_4_5">
+  <statement>
+    <program language="python">
+      <input> 
+        import simplegui
+
+        message = "Welcome!"
+
+        def click():
+            global message
+            message = "Good job!"
+
+        def draw(canvas):
+            canvas.draw_text(message, [50,112], 48, "Red")
+
+        frame = simplegui.create_frame("Home", 300, 200)
+        frame.add_button("Click me", click)
+        frame.set_draw_handler(draw)
+        frame.start()
+      </input>
+    </program>
+    <p></p>
+    <p>Review the above code to decide which line(s) of code define(s) event handler functions.</p>
+  </statement>
+  <choices>
+    <choice correct="yes">
+      <statement>
+        <p>def click():</p>
+      </statement>
+      <feedback>
+        <p>Correct!</p>
+      </feedback>
+    </choice>
+    <choice correct="yes">
+      <statement>
+        <p>def draw(canvas):</p>
+      </statement>
+      <feedback>
+        <p>Correct!</p>
+      </feedback>
+    </choice>
+    <choice>
+      <statement>
+        <p>frame = simplegui.create_frame("Home", 300, 200)</p>
+      </statement>
+      <feedback>
+        <p>Incorrect, this line of code creates the window for event-based interactions.</p>
+      </feedback>
+    </choice>
+    <choice>
+      <statement>
+        <p>frame.add_button("Click me", click)</p>
+      </statement>
+      <feedback>
+        <p>Incorrect, this line of code registers the function for clicking a button.</p>
+      </feedback>
+    </choice>
+    <choice>
+      <statement>
+        <p>frame.set_draw_handler(draw)</p>
+      </statement>
+      <feedback>
+        <p>Incorrect, this line of code registers the function for drawing on the canvas.</p>
+      </feedback>
+    </choice>
+  </choices>
+  </exercise>
 </section>
