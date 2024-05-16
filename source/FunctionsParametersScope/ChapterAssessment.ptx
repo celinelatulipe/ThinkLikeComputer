@@ -88,11 +88,10 @@ myTests().main()
     </program>
   </exercise>
   <exercise label="assess_ch8_1_lh">
-    </statement>
+    <statement>
         <image source="FunctionsParametersScope/Figures/Chapter_8_1.PNG" width="100%" alt="Finding the maximum number"/>
         <p>The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution. The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? <BlankNode/></p>
-      </var>
-    </setup>
+    </statement>
   </exercise>
   <exercise label="assess_ch8_2_lh">
     <statement>
