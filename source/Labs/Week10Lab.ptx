@@ -6,7 +6,7 @@
         <note>
             <title>Material Covered - CodeSkulptor</title>
             <p>GUI control objects, Event handling </p>
-        </note>
+
         <p><ul>
             <li>
                 <p>This lab requires the use of CodeSkulptor.</p>
@@ -24,7 +24,7 @@
                 <p>If your program runs but does not work as intended, consider if a global variable has been properly referenced within the local scope of a function.</p>
             </li>
         </ul></p>
-        <p></p>
+        </note>
         <subsection xml:id="week10lab_level-1">
             <title>Level 1 - Create a stopwatch</title>
             <p>In this level you will be creating a stopwatch using CodeSkulptor 3.</p>

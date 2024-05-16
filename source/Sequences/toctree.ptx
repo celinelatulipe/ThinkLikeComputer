@@ -13,5 +13,5 @@
         <xi:include href='./PassingMutableObjects.ptx' />
         <xi:include href='./MutableObjectSideEffects.ptx' />
         <xi:include href='./Exercises.ptx' />
-        <!-- <xi:include href='./week2a1.ptx' /> -->
+        <xi:include href='./ChapterAssessment.ptx' /> 
     </chapter>
