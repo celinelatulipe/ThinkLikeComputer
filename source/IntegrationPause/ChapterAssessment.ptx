@@ -9,10 +9,10 @@
         <statement>
 
         <blockquote>
-            <image source="IntegrationPause/Figures/cdq7-1.png" width="400%" alt="if statement code"/>
+            <image source="IntegrationPause/Figures/cdq7-1.png" width="100%" alt="if statement code"/>
             <p>The CodeLens screenshot above shows a piece of code mid execution. Which of the following images shows the correct global frame state?
                 Pay special attention to where the arrows are in the screenshot.</p>
-            <image source="IntegrationPause/Figures/cdq7-1-mc.png" width="400%" alt="if statement code"/>
+            <image source="IntegrationPause/Figures/cdq7-1-mc.png" width="100%" alt="if statement code"/>
         </blockquote>
 
         </statement>
@@ -52,9 +52,9 @@
         <statement>
 
         <blockquote>
-            <image source="IntegrationPause/Figures/cdq7-2.png" width="400%" alt="if statement code"/>
+            <image source="IntegrationPause/Figures/cdq7-2.png" width="100%" alt="if statement code"/>
             <p>Which code snippet would result in the given CodeLens screenshot of the Global frame?</p>
-            <image source="IntegrationPause/Figures/cdq7-2-mc.png" width="400%" alt="if statement code"/>
+            <image source="IntegrationPause/Figures/cdq7-2-mc.png" width="100%" alt="if statement code"/>
         </blockquote>
 
         </statement>
@@ -93,7 +93,7 @@
         <exercise label="assess_ch7_3_lh">
             <statement>
     <blockquote>
-        <image source="IntegrationPause/Figures/cdq7-3.png" width="900%" alt="code to run"/>
+        <image source="IntegrationPause/Figures/cdq7-3.png" width="100%" alt="code to run"/>
     </blockquote>  
 </statement>
 <setup>
