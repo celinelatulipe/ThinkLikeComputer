@@ -407,11 +407,13 @@ print(p.getGreen(), p.getBlue())
                 uses the contents to create an image object that is referred to by <c>img</c>. Once we have an image object, we can use the
                 methods described above to access information about the image or to get a specific pixel and check on its basic color
                 intensities.</p>
+
     <datafile xml:id="lutherbell_image" label="luther_bell_pic" filename="luther.jpg">
       <image source="Iteration/Figures/LutherBellPic.jpg">
         <shortdescription>Picture of the Luther Bell</shortdescription>
       </image>
     </datafile>
+
     <program label="ac4_14_2" interactive="activecode" language="python">
       <input>
 import image

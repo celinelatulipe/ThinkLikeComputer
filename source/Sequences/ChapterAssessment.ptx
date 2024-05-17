@@ -607,10 +607,11 @@ a = "".join(y)
         <exercise label="assess_ch9_14_lh">
             <statement>
 
-                
+
                 <image source="Sequences/Figures/Chapter_9_5.PNG" width="100%" alt="get the last letter of a string"/>
                 <p>The output above is created by 3 print() statements (one for each
                     variable in ascendenging order ie. greeting1, greeting2, etc). Which print
+
                     statements would we use to acquire this output?</p>
 
             </statement>
@@ -667,7 +668,9 @@ a = "".join(y)
         <exercise label="assess_ch9_15_lh">
             <statement>
                 <blockquote>
+
                     <image source="Sequences/Figures/Chapter_9_2.PNG" width="100%" alt="adding elements to a list"/>
+
                 </blockquote>
             </statement>
             <setup>
@@ -676,7 +679,9 @@ a = "".join(y)
                         char by char. We want to change this program so our output matches the below
                         Codelens screenshot. What function would we use to do this? <BlankNode/>
                         What line should we use this function on? <BlankNode/></p>
+
                     <image source="Sequences/Figures/Chapter_9_2B.PNG" width="100%" alt="adding elements to a list output"/>
+
                 </var>
                 <var>
                     <condition string="^\s*append\(\)\s*$">
@@ -697,7 +702,9 @@ a = "".join(y)
         <exercise label="assess_ch9_16_lh">
             <statement>
                 <blockquote>
+
                     <image source="Sequences/Figures/Chapter_9_4.PNG" width="100%" alt="splitting strings"/>
+
                 </blockquote>
             </statement>
             <setup>
