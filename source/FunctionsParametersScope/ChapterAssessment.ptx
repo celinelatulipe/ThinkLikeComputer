@@ -11,11 +11,10 @@
 <tests>
 from unittest.gui import TestCaseGui
 
-       class myTests(TestCaseGui):
-
-        def testOne(self):
-            self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
-
+class myTests(TestCaseGui):
+  def testOne(self):
+    self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+    
 myTests().main()
 </tests>
     </program>
