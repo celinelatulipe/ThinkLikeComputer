@@ -7,19 +7,16 @@
     </statement>
     <program label="ac11_15_1_editor" interactive="activecode" language="python">
       <input>
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
-
-   def testOne(self):
-      self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
-
+  def testOne(self):
+    self.assertEqual(int_return(10), 10, "Testing that function int_return(10) returns 10")
+    
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_2">
@@ -28,9 +25,8 @@ myTests().main()
     </statement>
     <program label="ac11_15_2_editor" interactive="activecode" language="python">
       <input>
-
-=====
-
+        </input>
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -41,9 +37,7 @@ class myTests(TestCaseGui):
       self.assertEqual(add(4), 6, "Testing that add(4) returns 6")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_3">
@@ -51,10 +45,10 @@ myTests().main()
       <p>Write a function called <c>change</c> that takes any string, adds <q>Nice to meet you!</q> to the end of the argument given, and returns that new string.</p>
     </statement>
     <program label="ac11_15_3_editor" interactive="activecode" language="python">
-      <input>
+  <input>
+    </input>
 
-=====
-
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -64,9 +58,7 @@ class myTests(TestCaseGui):
       self.assertEqual(change(""), "Nice to meet you!", "Tests that change() returns 'Nice to meet you!'")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="ac11_15_6">
@@ -75,9 +67,9 @@ myTests().main()
     </statement>
     <program label="ac11_15_6_editor" interactive="activecode" language="python">
       <input>
+        </input>
 
-=====
-
+<tests>
 from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
@@ -91,14 +83,13 @@ class myTests(TestCaseGui):
       self.assertEqual(sum(0), 6, "Tests that sum(0) returns 6")
 
 myTests().main()
-        </input>
-    <tests>
-    </tests>
+</tests>
     </program>
   </exercise>
   <exercise label="assess_ch8_15_5_lh">
     <statement>
         <image source="FunctionsParametersScope/Figures/Chapter_8_1.PNG" width="100%" alt="Finding the maximum number"/>
+
         <p>The screenshot above depicts a CodeLens program mid-execution. We have a function called maximum() that is in the middle of its execution.</p>
         <p>The purpose of the function is to find the highest value in the list and then return it. Looking at the diagram, What should be the return value? <var/> </p>
     </statement>
@@ -116,6 +107,7 @@ myTests().main()
         </condition>
       </var>
     </setup>
+
   </exercise>
   <exercise label="assess_ch8_2_lh">
     <statement>
