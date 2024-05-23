@@ -79,7 +79,7 @@
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="event-handling_event_handlers_chapter10_section6_question1">
+  <exercise label="event-handling_event_handlers_chapter10_section7_question1">
     <statement>
       <program language="python">
         <input> 
@@ -154,7 +154,7 @@
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_event_handlers_chapter10_section6_question2">
+  <exercise label="event-handling_event_handlers_chapter10_section7_question2">
     <statement>
       <program language="python">
         <input> 
@@ -229,7 +229,7 @@
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_event_handlers_chapter10_section6_question3">
+  <exercise label="event-handling_event_handlers_chapter10_section7_question3">
     <statement>
       <program language="python">
         <input> 
@@ -304,7 +304,7 @@
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_event_handlers_chapter10_section6_question4">
+  <exercise label="event-handling_event_handlers_chapter10_section7_question4">
     <statement>
       <program language="python">
         <input> 
@@ -379,7 +379,7 @@
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_event_handlers_chapter10_section6_question5">
+  <exercise label="event-handling_event_handlers_chapter10_section7_question5">
     <statement>
       <program language="python">
         <input> 
