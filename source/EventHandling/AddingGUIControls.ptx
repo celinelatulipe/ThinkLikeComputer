@@ -59,7 +59,7 @@ def bkg_button_click():
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question1">
+  <exercise label="event-handling_adding-gui-controls_chapter10_section6_question1">
     <statement>
       <p>Using the default code on CodeSkulptor, Sam wants to change the “Click me” button to work as a toggle button. However, he gets the following error message after clicking the button.</p>
       <image source="EventHandling/Figures/ch10_section5_question1.png" width="75%"/>
@@ -100,7 +100,7 @@ def bkg_button_click():
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question2">
+  <exercise label="event-handling_adding-gui-controls_chapter10_section6_question2">
     <statement>
       <p>A classmate asks if the following code will run without any errors. What do you say?</p>
       <image source="EventHandling/Figures/ch10_section5_question2.png" width="75%"/>
@@ -156,7 +156,7 @@ def bkg_button_click():
       </choice>
     </choices>
   </exercise>
-  <exercise label="event-handling_adding-gui-controls_chapter10_section5_question3">
+  <exercise label="event-handling_adding-gui-controls_chapter10_section6_question3">
     <statement>
       <program language="python">
         <input> 
