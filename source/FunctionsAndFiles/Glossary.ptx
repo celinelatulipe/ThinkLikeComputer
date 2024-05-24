@@ -3,6 +3,18 @@
   <title>Glossary</title>
   <glossary sorted="False">
     <gi>
+      <title>functions</title>
+      <p>A chunk of code that performs some operation that is meaningful for a person to think about as a whole unit. i.e. making a character jump in a game or displaying a social media home page.</p>
+    </gi>
+    <gi>
+      <title>docstrings</title>
+      <p>Similar to comments, docstrings are messages from the programmer to help another person understand what that function is doing. Indicated by three quotation marks.</p>
+    </gi>
+    <gi>
+      <title>function invocation</title>
+      <p>The act of calling a defined function, by referring to it's name followed by parentheses.</p>
+    </gi>
+    <gi>
       <title>open</title>
       <p>You must open a file before you can read its contents.</p>
     </gi>
