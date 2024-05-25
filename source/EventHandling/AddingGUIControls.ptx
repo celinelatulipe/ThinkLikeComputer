@@ -71,7 +71,7 @@ def bkg_button_click():
           <p>Remove the () parentheses from the if statement.</p>
         </statement>
         <feedback>
-          <p>The if statement requires the evaluated expression to be enclosed by () parentheses.</p>
+          <p>The if statement works when the evaluated expression is enclosed by () parentheses or is not enclosed by () parentheses.</p>
         </feedback>
       </choice>
       <choice>
@@ -95,14 +95,14 @@ def bkg_button_click():
           <p>“global message” needs to be inserted above the if statement.</p>
         </statement>
         <feedback>
-          <p>Yes, because the variable, message, is not recognized locally by the function.</p>
+          <p>Yes, because the global variable, message, needs to be properly accessed within the local scope of a function in order to modify its value.</p>
         </feedback>
       </choice>
     </choices>
   </exercise>
   <exercise label="event-handling_adding-gui-controls_chapter10_section6_question2">
     <statement>
-      <p>A classmate asks if the following code will run without any errors. What do you say?</p>
+      <p>A classmate asks if the following code will run without any errors. What do you say? Select all that apply.</p>
       <image source="EventHandling/Figures/ch10_section5_question2.png" width="75%"/>
     </statement>
     <choices>
@@ -111,7 +111,7 @@ def bkg_button_click():
           <p>Everything looks great and this code should run without errors.</p>
         </statement>
         <feedback>
-          <p>Incorrect, there is at least one error.</p>
+          <p>Incorrect, there are a few errors.</p>
         </feedback>
       </choice>
       <choice>

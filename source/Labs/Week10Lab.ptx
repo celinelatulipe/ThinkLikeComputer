@@ -21,16 +21,28 @@
                 <p>Use CodeSkulptor's documentation when you are stuck or having troubles with syntax!</p>
             </li>
             <li>
-                <p>If your program runs but does not work as intended, consider if a global variable has been properly referenced within the local scope of a function.</p>
+                <p>Remember that if you modify the value of a global variable within the local scope of a function, you need to include <c>global variable_name</c> within that function.
+                    <term>Otherwise, your program might run but not work as intended.</term></p>
+            </li>
+            <li>
+                <p>
+                    Make sure to save your work frequently in a .py file in case your web browser closes or gets refreshed. 
+                    To do this, press the 'Save' button then the 'Download' button on the Codeskulptor 3 main web page.
+                </p>
             </li>
         </ul></p>
+        <image source="Labs/Figures/SaveWorkThenDownloadCodeSkulptorWebPage.png" width="70%"/>
         </note>
         <subsection xml:id="week10lab_level-1">
             <title>Level 1 - Create a stopwatch</title>
             <p>In this level you will be creating a stopwatch using CodeSkulptor 3.</p>
         <p><ol>
             <li>
-                <p>Start with the default CodeSkulptor 3 script. Remove the message variable and add two <term>global</term> variables; 
+                <p>Start with the default CodeSkulptor 3 script.</p> 
+                <p>Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+            </li>
+            <li>
+                <p>Remove the message variable and add two <term>global</term> variables; 
                     one to hold the time and one to hold the increment value (how fast the timer changes). Set both of these to 0 initially.</p>
             </li>
             <li>
@@ -64,7 +76,11 @@
             <p>In this level, you will be creating part one of a target shooting game using CodeSkulptor 3.</p>
             <p><ol>
                 <li>
-                    <p>Start with the default CodeSkulptor 3 script and import random and math.</p>
+                    <p>Start with the default CodeSkulptor 3 script.</p>
+                    <p>Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+                </li>
+                <li>
+                    <p>Import the random and math modules.</p>
                 </li>
                 <li>
                     <p>Create 3 global variables:</p>
@@ -156,7 +172,7 @@
                                 </ul></p>
                     </li>
                     <li>
-                        <p>Create a mouseclick() handler and define its function (see Docs->Graphics Modules->Control Objects ->Mouse input handler</p>
+                        <p>Create a mouseclick() handler and define its function (see Docs->Graphics Modules->Control Objects ->Mouse input handler).</p>
                     </li>
                     <li>
                         <p>We want to check if the mouse has clicked on the target. To do this, you need to check if the x click location is between 
@@ -169,7 +185,7 @@
                         <p>Show your instructor to get credit for Level 2 and Level 3.</p>
                     </li>
                 </ol></p>
-                <p>Below is a video of a similar program that prints a message to the console to indicate if a mouse click hits the moving target.</p>
+                <p>Below is a video of a similar program that prints a message to the console based on the position of a mouse click. You are NOT required to include these changes.</p>
                 <video source="Labs/Figures/CodeSkulptorLabLevel3.mp4"/>
         </subsection>
     </section>
