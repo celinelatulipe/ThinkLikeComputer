@@ -7,7 +7,7 @@
             in English, a sentence must begin with a capital letter and end with a period.
             this sentence contains a <term>syntax error</term>. So does this one</p>
   <p>In Python, rules of syntax include requirements like these: strings must be enclosed in quotes; statements must
-            generally be written one per line; the print statement must enclose the value to be displayed in parenthesis;
+            generally be written one per line; the print statement must enclose the value to be displayed in parentheses;
             expressions must be correctly formed. The following lines contain syntax errors:</p>
   <pre>print(Hello, world!)
 print "Hello, world!"

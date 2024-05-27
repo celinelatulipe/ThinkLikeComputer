@@ -7,7 +7,7 @@
        <li>text input boxes</li>
        <li>the window frame (mouse/keyboard events)</li></ul></p>
     <p>As demonstrated in the default code on the main page of CodeSkulptor, the button event handler function, <c>def click()</c>, does not take any parameters. It is simply called 
-      when the button is clicked. The documentation shows that the text input event handler function,<c>def input_handler(text_input)</c>, requires one parameter, 
+      when the button is clicked. The documentation shows that the text input event handler function, <c>def input_handler(text_input)</c>, requires one parameter, 
       which is how it receives the string of text the user enters.</p>
       <p>Unlike buttons and text input boxes, which can only respond to one type of event, the window frame can recognize any of the following four types of events:
       <ul><li>mouse click</li>
@@ -226,7 +226,7 @@
         </choice>
         <choice correct="yes">
           <statement>
-            <p>the circle remains stationary and the mouse pointer locations continously update in the mouse indicator box.</p>
+            <p>the circle remains stationary and the mouse pointer location continuously updates in the mouse indicator box.</p>
           </statement>
           <feedback>
             <p>Correct!</p>
