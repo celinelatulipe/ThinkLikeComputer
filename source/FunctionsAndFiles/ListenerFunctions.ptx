@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="functions-and-files_listener-functions">
   <title>Listener Functions</title>
-  <p>We have talked about interactivity: you have gotten input from the end user and you have shown the end user output by having turtles make fun animated drawings in a canvas window. Let's take that interactivity a step further, now that we know about functions, and add a listener function to our turtle scripts.</p>
+  <p>We have talked about interactivity: you have obtained input from the end user and you have shown the end user output by having turtles make fun animated drawings in a canvas window. Let's take that interactivity a step further, now that we know about functions, and add a listener function to our turtle scripts.</p>
   <p>First, let's consider this turtle drawing example.</p>
   <program label="ac5_5_1" interactive="activecode" language="python">
     <input>
@@ -41,7 +41,7 @@ random_square()
     <tests>
     </tests>
   </program>
-  <p>This example contains three different functions. First note how nicely modularized this code is, with each funtion doing one small thing: moving the turtle, giving the turtle a random colour, and drawing a random sized square. We call the three functions at the bottom of the script on lines 30-32. Not also that line 25 creates a random colour by generating 3 random values. Don't worry about this for now - you will learn more about digital colours in a later section of this chapter.</p>
+  <p>This example contains three different functions. First note how nicely modularized this code is, with each funtion doing one small thing: moving the turtle, giving the turtle a random colour, and drawing a random sized square. We call the three functions at the bottom of the script on lines 30-32. Note also that line 25 creates a random colour by generating 3 random values. Don't worry about this for now - you will learn more about digital colours in a later section of this chapter.</p>
   <p>If we wanted to draw more than one square, we could put a loop around lines 30-32, but that isn't very interactive - it doesn't involve the end user in any way. What if we want the user to decide when they have enough squares on the canvas? By adding a <term>listener function</term>, we can draw squares randomly in response to end user key presses. The version below does this, by adding a key_r function, and adding two lines of code at the bottom of the script to <term>register</term> the listener function and to start <term>listening</term> for window events such as keypresses.</p>
   <p>Run the code below, click your cursor inside the canvas and then type the &#x2018;r' key a few times to see it in action. Now the end user is in control!</p>
   <note>
