@@ -124,6 +124,11 @@
                     </program>
                 </li>
                 <li>
+                    <p>Lastly, select 'Show Line Numbers' under 'Options' in the toolbar.
+                    </p>
+                    <image source="Labs/Figures/ShowLineNumbersMenuBarIDLE.png" width="70%"/>
+                </li>
+                <li>
                     <p>Show your instructor that your turtle program draws a house to get credit for Part 2.</p>
                 </li>
             </ol></p>

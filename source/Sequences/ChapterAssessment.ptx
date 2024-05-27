@@ -481,53 +481,59 @@
                 </tests>
             </program>
         </exercise>
-        <exercise label="assess_ch9_14_lh">
+        <exercise label="assess_ch9_14_mh">
             <statement>
-                <image source="Sequences/Figures/Chapter_9_5.PNG" width="100%" alt="get the last letter of a string"/>
-                <p>The output above is created by 3 print() statements (one for each variable in ascending order ie. greeting1, greeting2, etc).
-                </p>
-                <p>Which print statements would we use to acquire this output?
+                <image source="Sequences/Figures/indexOperatorPrintChars.png" width="100%" alt="index operator to display message"/>
+                <p>Which one of the following print statements would display the above output in Codelens?
                 </p>
             </statement>
             <choices>
-                <choice correct="yes">
+                <choice>
                     <statement>
-                        <p>print(greeting1[3])</p>
+                        <p>print(str1[0], str2[4], str3[9], str1[11])</p>
                     </statement>
                     <feedback>
-                        <p>Correct</p>
+                        <p>Incorrect, this print statement gives the following output: G s y g</p>
                     </feedback>
                 </choice>
                 <choice>
                     <statement>
-                        <p>print(greeting2[0])</p>
+                        <p>print(str3[0], str1[6], str2[1], str1[11])</p>
                     </statement>
                     <feedback>
-                        <p>Incorrect, this prints out the character 'B'</p>
-                    </feedback>
-                </choice>
-                <choice correct="yes">
-                    <statement>
-                        <p>print(greeting3[5])</p>
-                    </statement>
-                    <feedback>
-                        <p>Correct</p>
+                        <p>Incorrect, this print statement gives the following output: H o t g</p>
                     </feedback>
                 </choice>
                 <choice>
                     <statement>
-                        <p>print(greeting3[2])</p>
+                        <p>print(str2[1], str3[3], str1[1], str2[12])</p>
                     </statement>
                     <feedback>
-                        <p>Incorrect, this prints out the character 'i'</p>
+                        <p>Incorrect, this print statement gives the following output: t e o t</p>
                     </feedback>
                 </choice>
                 <choice correct="yes">
                     <statement>
-                        <p>print(greeting2[1])</p>
+                        <p>print(str3[0], str2[9], str3[9], str1[12])</p>
                     </statement>
                     <feedback>
-                        <p>Correct</p>
+                        <p>Yes, this print statement gives the output displayed in Codelens: H e y !</p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>print(str1[0], str2[4], str1[1], str2[11])</p>
+                    </statement>
+                    <feedback>
+                        <p>Incorrect, this print statement gives the following output: G s o u</p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>print(str3[1], str3[5], str2[1], str1[12])</p>
+                    </statement>
+                    <feedback>
+                        <p>Incorrect, this print statement gives the following output: o e t !</p>
                     </feedback>
                 </choice>
             </choices>
@@ -542,7 +548,7 @@
                     </p>
                     <p>What line should we use this function on?<var/>
                     </p>
-                    <image source="Sequences/Figures/Chapter_9_2B.PNG" width="100%" alt="adding elements to a list output"/>
+                    <image source="Sequences/Figures/Chapter_9_2B.PNG" width="80%" alt="adding elements to a list output"/>
             </statement>
             <setup>
                 <var>
@@ -577,7 +583,7 @@
         <exercise label="assess_ch9_16_lh">
             <statement>
                     <image source="Sequences/Figures/Chapter_9_4.PNG" width="100%" alt="splitting strings"/>
-                    <p>Consider the above Condelens screenshot. The program that created this output split the string into a list of tokens.
+                    <p>Consider the above Codelens screenshot. The program that created this output split the string into a list of tokens.
                     </p>
                     <p>The function split() used <var/> as the delimiter to separate the elements and it resulted
                         in <var/> elements.

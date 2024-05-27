@@ -306,7 +306,7 @@
         </input>
       </program>
       <p>               </p>
-      <p>Review the above code to decide which line(s) of code register(s) functions.</p>
+      <p>Review the above code to decide which line(s) of code register(s) functions. Select all that apply.</p>
     </statement>
     <choices>
       <choice>
@@ -373,7 +373,7 @@
       </input>
     </program>
     <p></p>
-    <p>Review the above code to decide which line(s) of code define(s) event handler functions.</p>
+    <p>Review the above code to decide which line(s) of code define(s) event handler functions. Select all that apply.</p>
   </statement>
   <choices>
     <choice correct="yes">

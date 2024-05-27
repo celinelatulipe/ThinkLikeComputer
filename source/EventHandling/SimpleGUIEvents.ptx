@@ -22,7 +22,7 @@
     <p>Below is the documentation for mouse events:</p>
     <p><url href="https://py3.codeskulptor.org/docs.html#mouse-input" visual="https://py3.codeskulptor.org/docs.html#mouse-input"></url></p>
     <image source="EventHandling/Figures/mouse_event_handlers_doc.png" width="90%"/>
-    <p>This documentation shows us that in order to register a mouse click handler function, we need to call set_mouseclick_handler()
+    <p>This documentation shows us that in order to register a mouse click handler function, we need to access the set_mouseclick_handler() function
       on a frame object with the name, <c>mouse_handler</c>, being passed as an argument:</p> 
       <p><c>frame.set_mouseclick_handler(mouse_handler)</c></p>
     <p>Notice that this event handler function, 
@@ -150,7 +150,7 @@
             frame.start()
           </input>
         </program>
-        <p>What occurs when you run this modified code and click the mouse within the canvas?</p>
+        <p>What occurs when you run this modified code and click the mouse within the canvas? Select all that apply.</p>
       </statement>
       <choices>
         <choice>
@@ -171,7 +171,7 @@
         </choice>
         <choice correct="yes">
           <statement>
-            <p>two numbers print as a tuple to the console which match the numbers that appear within the mouse indicator box.</p>
+            <p>two numbers print as a tuple to the console which match the numbers that appear within the mouse indicator box on the control panel.</p>
           </statement>
           <feedback>
             <p>Correct!</p>
@@ -179,7 +179,7 @@
         </choice>
         <choice correct="yes">
           <statement>
-            <p>two numbers print to the console which represent the x and y coordinate of the mouse click location within the canvas.</p>
+            <p>two numbers print as a tuple to the console which represent the x and y coordinates of the mouse click location within the canvas.</p>
           </statement>
           <feedback>
             <p>Correct!</p>
