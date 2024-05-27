@@ -31,12 +31,12 @@
                 lead to some confusion, so it's best to follow the convention.</p>
     <p>Where do these other files that you can import come from? They may be standard library modules that are available when you install Python, or they may be code files that you wrote yourself, or they could
                 be code that someone else wrote and you downloaded on to your computer.</p>
-    <p>For example, if you have a file <c>myprog.py</c> in directory <c>~/Desktop/mycode/</c>, and myprog.py contains a line of
-                code <c>import morecode</c>, then the python interpreter will look for a file called <c>morecode.py</c>, excecute its code,
-                and make its variables, objects and functions available for reference in the rest of the code in myprog.py.</p>
+    <p>For example, if you have a file <c>myprog.py</c> in directory <c>~/Desktop/mycode/</c>, and <c>myprog.py</c> contains a line of
+                code <c>import morecode</c>, then the python interpreter will look for a file called <c>morecode.py</c>, execute its code,
+                and make its variables, objects and functions available for reference in the rest of the code in <c>myprog.py</c>.</p>
     <p>Note that it is <c>import morecode</c>, not <c>import morecode.py</c>, but the other file has to be called <c>morecode.py</c>.</p>
     <p>In some sense, you can think of importing as being similar to including the code from a module into the code you are writing, as depicted in this diagram:</p>
-    <image source="DebuggingAndModules/Figures/modules_diagram.png" width="50%"/>
+    <image source="DebuggingAndModules/Figures/modules_diagram.png" width="80%"/>
     <p>As shown in the diagram, you need to remember that the two sets of code have different namespaces, which typically means that you access the variables and objects in the imported module by using something like <c>module_name.variable_name</c>.</p>
     <p>The tests you see in your problem sets make use of a Python module that is in the standard library, called
                 <c>unittest</c>. Right now, you can't see the code that causes those tests to run, because we have hidden it from you,
@@ -46,7 +46,7 @@
     <note>
       <title>Don't overwrite standard library modules!</title>
       <p>It is possible to overwrite a standard library. For example, if you create a file <c>random.py</c> in the same directory where
-                    <c>myprog.py</c> lives, and then myprog.py invokes <c>import random</c>, it will import <em>your</em> file rather than the
+                    <c>myprog.py</c> lives, and then <c>myprog.py</c> invokes <c>import random</c>, it will import <em>your</em> file rather than the
                     standard library module. That's not usually what you want, so be careful about how you name your python files!</p>
     </note>
   </subsection>
@@ -74,8 +74,8 @@
                     activecode used here was strictly to help us learn.  It is not the way we write production programs.</p>
       <p>To that end, it is necessary to mention that many of the  modules available in standard Python
                     will <term>not</term> work in the activecode environment.  In fact, only <c>turtle</c>, <c>math</c>, <c>random</c>, and a couple others have been
-                    ported at this point.  If you wish to explore any
-                    additional modules, you will need to run from the native python interpreter on your computer.</p>
+                    ported at this point. If you wish to explore any
+                    additional modules, you will need to run them from the native python interpreter on your computer.</p>
     </note>
     <p>
       <term>Check your understanding</term>

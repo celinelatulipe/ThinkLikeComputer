@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
 <section xml:id="debugging-and-modules_ethics-code-ownership">
   <title>Ethics &amp; Code Ownership</title>
-  <p>We have all heard about movie and brand copyrights but what about code? If you write a piece of code, do you own it? In Canada and the US, an original work (including code) is automatically protected by copyright, from the moment you create it. This doesn't make your <term>idea</term> protected, just your specific piece of work. If you want to protect the idea from being copied you need a patent. For example, you might remember the viral game, <em>Flappy Bird</em>. In fact, in 2014, there were 864 Flappy Bird clones in the Google Play store and none of them broke copyright. Copyright protects the author from someone replicating their code <term>exactly</term> but it does not protect the idea itself from being copied. However, imagine you work for a company and use Microsoft Word for your work. You want to finish from home but your own home computer doesn't have Microsoft Word, so you make an extra copy of the software and install it at home so that you can finish. This is software copyright infringment.</p>
-  <p>Now imagine, since, you know that it is copyright infringment to duplicate Microsoft Word, you instead install LibreOffice. LibreOffice is an alternative to Microsoft Word software and this is copyright legal. How is this possible? Enter the idea of <term>open-source software</term>.</p>
-  <p>Open-source software is computer software that is released under a license in which the copyright holder gives permission to users to use the software and to alter and distribute the software code. It's not that a copyright doesn't exist for the code but the copyright holder has specified an open-source license to allow for everyone to benefit from code.</p>
+  <p>We have all heard about movie and brand copyrights but what about code? If you write a piece of code, do you own it? In Canada and the US, an original work (including code) 
+    is automatically protected by copyright, from the moment you create it. This doesn't make your <term>idea</term> protected, just your specific piece of work. 
+    If you want to protect the idea from being copied you need a patent. For example, you might remember the viral game, <em>Flappy Bird</em>. In fact, in 2014, there were 864 Flappy Bird clones 
+    in the Google Play store and none of them broke copyright. Copyright protects the author from someone replicating their code <term>exactly</term> but it does not protect the idea itself 
+    from being copied. However, imagine you work for a company and use Microsoft Word for your work. You want to finish from home but your own home computer doesn't have Microsoft Word, 
+    so you make an extra copy of the software and install it at home so that you can finish. This is software copyright infringement.</p>
+  <p>Now imagine, since, you know that it is copyright infringement to duplicate Microsoft Word, you instead install LibreOffice. LibreOffice is an alternative to Microsoft Word software and 
+    this is copyright legal. How is this possible? Enter the idea of <term>open-source software</term>.</p>
+  <p>Open-source software is computer software that is released under a license in which the copyright holder gives permission to users to use the software and to alter and distribute the software code. 
+    It's not that a copyright doesn't exist for the code but the copyright holder has specified an open-source license to allow for everyone to benefit from code.</p>
   <p>There are many benefits to sharing code publicly and creating open-source work. These include:</p>
   <p>
     <ul>
@@ -21,7 +28,10 @@
       </li>
     </ul>
   </p>
-  <p>Open-source is often used to designate code and software being shared publically, but there exist similar licenses for other resources, such as Creative Commons (CC) licenses. There are different types of CC licenses or General Public Licences (GPL) that developers can designate for code they release, depending on how strictly they want to control how the code can be adapted/copied and used. Copyright and Intellectual Property rights can be a complex and intimidating topic, but it is important to understand. As developers, we are constantly building on other people's code through the use of modules and creating new code that others may want to use.</p>
+  <p>Open-source is often used to designate code and software being shared publicly, but there exist similar licenses for other resources, such as Creative Commons (CC) licenses. 
+    There are different types of CC licenses or General Public Licenses (GPL) that developers can designate for code they release, depending on how strictly they want to control 
+    how the code can be adapted/copied and used. Copyright and Intellectual Property rights can be a complex and intimidating topic, but it is important to understand. 
+    As developers, we are constantly building on other people's code through the use of modules and creating new code that others may want to use.</p>
   <p>
     <term>Check your understanding</term>
   </p>

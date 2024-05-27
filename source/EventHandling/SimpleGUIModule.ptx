@@ -121,7 +121,7 @@
         </input>
       </program>
       <p></p>
-      <p>What happens if you remove the line, frame.start(), and then run the program? Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
+      <p>What happens if you remove the line, <c>frame.start()</c>, and then run the program? Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
     </statement>
     <choices>
       <choice>
@@ -179,7 +179,7 @@
           frame.start()
         </input>
       </program>
-      <p>What happens if you remove the statement, global message, and then run the program?</p>
+      <p>What happens if you remove the statement, <c>global message</c>, and then run the program?</p>
       <p>Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
     </statement>
     <choices>

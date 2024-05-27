@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="debugging-and-modules_the-random-module">
-  <title>The <c>random</c> module</title>
+  <title>The <c>random module</c></title>
   <subsection xml:id="debugging-and-modules_random-intro">
   <title>Motivation for Randomness</title>
     <p>We often want to use <term>random numbers</term> in programs.  Here are a few typical uses:</p>
@@ -60,8 +60,6 @@ result = prob * 5
 print(result)
         </input>
     <tests>
-
-
   </tests>
     </program>
     <p xml:id="debugging-and-modules_index-0">It is important to note that random number generators are based on a <term>deterministic</term> algorithm &#x2014; repeatable and
@@ -70,6 +68,24 @@ print(result)
               of the seed (which is one of the attributes of the generator) will be updated.  The good news is that each time you run
               your program, the seed value is likely to be different meaning that even though the random numbers are being created
               algorithmically, you will likely get random behavior each time you execute.</p>
+    <p></p>
+    <note><p>Another useful function is <c>random.choice()</c> which requires a sequence type variable as a parameter. Run the activecode below to randomly choose a colour from the list and a character from a string. 
+      You will see this function again in class assignments!</p>
+    <program label="ac3_10_3" interactive="activecode" language="python">
+      <input>
+import random
+
+colours = ['red', 'orange', 'yellow', 'green', 'blue']
+colour = random.choice(colours)
+print(colour)
+
+alphabet= "abcdefghijklmnopqrstuvwxyz"
+letter = random.choice(alphabet)
+print(letter)
+        </input>
+    <tests>
+  </tests>
+    </program></note>
   </subsection>
   <subsection xml:id="debugging-and-modules_randomness-and-ethics">
     <title>Randomness and Ethics</title>
@@ -178,7 +194,7 @@ print(result)
         </choice>
         <choice>
           <statement>
-            <p>Run it 1000 times and make sure the deck is shuffled differenly 90% of the time. 90% is close enough.</p>
+            <p>Run it 1000 times and make sure the deck is shuffled differently 90% of the time. 90% is close enough.</p>
           </statement>
           <feedback>
             <p>Sometimes a 90% confidence might be ok but 90% does not guarantee fairness ALL the time.</p>
@@ -189,7 +205,9 @@ print(result)
             <p>It's not possible to guarantee 100% of the time.</p>
           </statement>
           <feedback>
-            <p>Correct. We can't 100% of the time guarantee the fairness using pseudo-random generation. What we can do is be aware of our code's limitations, run some statistics on likelihood of fairness (like answer c would suggest) and continiously look for ways to pursue fairness in random numbers and algorithms.</p>
+            <p>Correct. We can't 100% of the time guarantee the fairness using pseudo-random generation. 
+              What we can do is be aware of our code's limitations, run some statistics on likelihood of fairness (like answer c would suggest) and 
+              continuously look for ways to pursue fairness in random numbers and algorithms.</p>
           </feedback>
         </choice>
       </choices>
