@@ -171,6 +171,7 @@ wn.exitonclick()
   </p>
   <exercise label="question11_4_1">
     <statement>
+      <image source="IndefiniteIteration/Figures/11.4.1.png" width="100%" alt="code to run"/>
       <p>In the random walk program in this section, what does the isInScreen function do?</p>
     </statement>
     <choices>
