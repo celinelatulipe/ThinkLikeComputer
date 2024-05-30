@@ -58,7 +58,7 @@
         </blockquote>
 
         </statement>
-<choices>
+        <choices>
 
             <choice correct="yes">
                 <statement>
@@ -90,15 +90,15 @@
 
     </exercise>
 
-        <exercise label="assess_ch7_3_lh">
-            <statement>
-    <blockquote>
+    <exercise label="assess_ch7_3_lh">
+    <statement>
         <image source="IntegrationPause/Figures/cdq7-3.png" width="100%" alt="code to run"/>
-    </blockquote>  
-</statement>
+        <p>Using the image of the CodeLens program above, what will the program output to the console?</p>
+    </statement>
+    <!-- </exercise> -->
 <setup>
     <var>
-        <p>Using the image of the CodeLens program above, what will the program output to the console?</p>
+        
         <condition number="[21, 21]">
             <feedback>
                 <p>Correct! Great job understanding the code</p>
