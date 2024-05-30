@@ -100,7 +100,7 @@
     <choices>
       <choice>
         <statement>
-          <p>natural languages can be parsed while formal languages cannot.</p>
+          <p>Natural languages can be parsed while formal languages cannot.</p>
         </statement>
         <feedback>
           <p>Actually both languages can be parsed (determining the structure of the sentence), but formal languages can be parsed more easily in software.</p>
@@ -108,7 +108,7 @@
       </choice>
       <choice correct="yes">
         <statement>
-          <p>ambiguity, redundancy, and literalness.</p>
+          <p>Elements such as ambiguity, redundancy, and literalness.</p>
         </statement>
         <feedback>
           <p>All of these can be present in natural languages, but cannot exist in formal languages.</p>
@@ -116,7 +116,7 @@
       </choice>
       <choice>
         <statement>
-          <p>there are no differences between natural and formal languages.</p>
+          <p>There are no differences between natural and formal languages.</p>
         </statement>
         <feedback>
           <p>There are several differences between the two but they are also similar.</p>
@@ -124,7 +124,7 @@
       </choice>
       <choice>
         <statement>
-          <p>tokens, structure, syntax, and semantics.</p>
+          <p>Elements such as tokens, structure, syntax, and semantics.</p>
         </statement>
         <feedback>
           <p>These are the similarities between the two.</p>
