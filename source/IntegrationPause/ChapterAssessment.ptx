@@ -93,19 +93,55 @@
     <exercise label="assess_ch7_3_lh">
     <statement>
         <image source="IntegrationPause/Figures/cdq7-3.png" width="100%" alt="code to run"/>
-        <p>Using the image of the CodeLens program above, what will the program output to the console?</p>
+        <p>
+            Using the image of the CodeLens program above, what will the program output to the console?
+            <var/>
+        </p> 
     </statement>
     <!-- </exercise> -->
 <setup>
     <var>
         
-        <condition number="[21, 21]">
+        <condition string="^\s*21\s*$">
             <feedback>
                 <p>Correct! Great job understanding the code</p>
+            </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+            <feedback>
+                <p>Incorrect.</p>
             </feedback>
         </condition>
     </var>
 </setup>
 </exercise>   
+
+<exercise xml:id="assess_ch7_4_lh">
+    <statement>
+        <p>
+            3.	Write a Python program that asks the user to enter a temperature in Celsius three times (accomplish this using a loop). 
+            For each input, calculate and display the equivalent temperature in Fahrenheit (accomplish this using a function called <term>temperature_convertor</term>). 
+            Your function should return the temperature in Fahrenheit for each iteration. Print this temperature to the user.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_4_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+    
+       def testTwo(self):
+          self.assertEqual(temperature_convertor(0), 32, "Testing that temperature_convertor(0) returns 32")
+          self.assertEqual(temperature_convertor(56), 132.8, "Testing that temperature_convertor(56) returns 132.8")
+    
+    myTests().main()
+</tests>
+
+    </program>
+</exercise>
  </section>
 
