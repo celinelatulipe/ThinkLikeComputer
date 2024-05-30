@@ -165,7 +165,10 @@ How many more times will the exit condition be checked? <BlankNode/><var/></p>
   <exercise label="assess_ch10_8_lh">
     <statement>
       <image source="IndefiniteIteration/Figures/Chapter_10_2.PNG" width="100%" alt="While loop incrementing a score"/>
-      <p>The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? <var/></p>
+      <p>
+        The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? 
+        <var/>
+      </p>
     </statement>
     <setup>
       <var>
