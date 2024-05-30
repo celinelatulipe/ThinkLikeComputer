@@ -140,13 +140,13 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch10_7_lh">
     <statement>
-      <p>: <var/>  <var/>  </p>
+      <image source="IndefiniteIteration/Figures/Chapter_10_1.PNG" width="100%" alt="Adding to a list of odd number from 1 to 19"/>
+        <p>Consider the above screenshot of CodeLens animation. What line number has the exit condition for the while loop? <BlankNode/><var/>
+How many more times will the exit condition be checked? <BlankNode/><var/></p>
     </statement>
     <setup>
       <var>
-        <image source="IndefiniteIteration/Figures/Chapter_10_1.PNG" width="100%" alt="Adding to a list of odd number from 1 to 19"/>
-        <p>Consider the above screenshot of CodeLens animation. What line number has the exit condition for the while loop? <BlankNode/>
-How many more times will the exit condition be checked? <BlankNode/></p>
+        
       </var>
       <var>
         <condition number="[3, 3]">
@@ -164,12 +164,22 @@ How many more times will the exit condition be checked? <BlankNode/></p>
   </exercise>
   <exercise label="assess_ch10_8_lh">
     <statement>
-      <p>: <var/>  </p>
+      <image source="IndefiniteIteration/Figures/Chapter_10_2.PNG" width="100%" alt="While loop incrementing a score"/>
+      <p>The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? <var/></p>
     </statement>
     <setup>
       <var>
-        <image source="IndefiniteIteration/Figures/Chapter_10_2.PNG" width="100%" alt="While loop incrementing a score"/>
-        <p>The above screenshot shows a program in mid execution. What will the variable score be equal to after the current iteration of the loop completes? <BlankNode/></p>
+        <condition string="^\s*55\s*$">
+          <feedback>
+            <p>Good work!</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Incorrect. score currently equals 50. Pay close attention to the red arrow (the line
+              that will execute next), and the line directly after.</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
