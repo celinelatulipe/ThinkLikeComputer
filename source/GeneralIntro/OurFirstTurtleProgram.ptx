@@ -29,12 +29,13 @@ antara.forward(75)          # complete the second side of a rectangle
   <p>These first three lines set us up so that we are ready to do some drawing.</p>
   <p>In lines 4-6, we instruct the turtle &#x2018;antara' to move and to turn. antara the turtle is an <term>object</term> and has things it can do.
             The antara.&lt;action&gt;(&lt;info&gt;) notation, tells Python that the turtle antara should do certain things (move forward, turn left) and
-            the information in the brackets gives details on how to do those things (how far to move, how much to turn).</p>
-  <note>
-    <title>Complete the rectangle &#x2026;</title>
+            the information in the brackets gives details on how to do those things (how far to move, how much to turn).
+          </p>
+          <p></p>
+    <term>Complete the rectangle &#x2026;</term>
     <p>Modify the program by adding the commands necessary to have <em>antara</em> complete the
                 rectangle.</p>
-  </note>
+  
   <p>
     <term>Check your understanding</term>
   </p>
