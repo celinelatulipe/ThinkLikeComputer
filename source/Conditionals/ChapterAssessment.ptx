@@ -386,12 +386,27 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch6_14_lh">
     <statement>
-      <p>: <var/>  </p>
+      <image source="Conditionals/Figures/cdq6-3.png" width="90%"/>
+      <p>Given num = 49 on line 3, what value of i will cause line 14 to run? 
+        <var/> 
+      </p>
+      <note> <p> Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. 
+        Notice that in order to reach line 14, line 12 must evaluate to true. 
+        Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.
+      </p>  </note>
     </statement>
     <setup>
       <var>
-        <image source="Conditionals/Figures/cdq6-3.png" width="50%"/>
-        <p>Given num = 49 on line 3, what value of i will cause line 14 to run? Hint: Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. Notice that in order to reach line 14, line 12 must evaluate to true. Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.</p>
+        <condition string="^\s*7\s*$">
+          <feedback>
+            <p>Correct! When i = 7, (num % i) will equal 0.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Hmmm try again, what causes the conditional on line 12 to be true?</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
