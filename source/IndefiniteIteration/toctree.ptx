@@ -7,6 +7,7 @@
         <xi:include href='./RandomlyWalkingTurtles.ptx' />
         <xi:include href='./BreakandContinue.ptx' />
         <xi:include href='./WPInfiniteLoops.ptx' />
+        <xi:include href='./Glossary.ptx' />
         <xi:include href='./Exercises.ptx' />
         <xi:include href='./ChapterAssessment.ptx' />
     </chapter>
