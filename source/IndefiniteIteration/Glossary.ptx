@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<section xml:id="indefinite-iteration_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>break</title>
+      <p>A keyword that allows an immediate <em>break out</em> of a loop when executed within the loop body.</p>
+    </gi>
+    <gi>
+      <title>continue</title>
+      <p>A keyword that (when executed within a loop body) allows an immediate <em>continue</em> with the next iteration by skipping the rest of the code in the current iteration.</p>
+    </gi>
+    <gi>
+      <title>definite iteration</title>
+      <p>The number of loop iterations is known at the beginning of the iteration process.</p>
+    </gi>
+    <gi>
+      <title>indefinite iteration</title>
+      <p>The number of loop iterations is unknown at the beginning of the iteration process and is dependent on a condition that needs to evaluate to <c>False</c> during the iteration process. </p>
+    </gi>
+    <gi>
+      <title>infinite loop</title>
+      <p>A loop with a condition variable (used to determine if iterations of a while loop should continue) that is never reset (with no <c>break</c> keyword within the loop body).</p>
+    </gi>
+    <gi>
+      <title>iteration</title>
+      <p>Repeated execution of a sequence of statements.</p>
+    </gi>
+    <gi>
+      <title>listener loop</title>
+      <p>A while loop in which the number of iterations is dependent on user input.</p>
+    </gi>
+    <gi>
+      <title>sentinel value</title>
+      <p>A value within a loop body that terminates a while loop by causing the condition of the  while loop to be set to <c>False</c>.</p>
+    </gi>
+    <gi>
+      <title>while loop</title>
+      <p>A loop that consists of a header and a body with continued iteration if the controlling boolean expression evaluates to <c>True</c>.</p>
+    </gi>
+  </glossary>
+</section>
