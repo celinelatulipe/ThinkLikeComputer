@@ -106,7 +106,7 @@ print(final_time_int)
                 be followed or else Python can't figure out what you are trying to say.</p>
     <p>Usually SyntaxErrors can be traced back to missing punctuation characters, such as
                 parentheses, quotation marks, or commas. Remember that in Python commas are used to
-                separate parameters to functions. Paretheses must be balanced, or else Python thinks
+                separate parameters to functions. Parentheses must be balanced, or else Python thinks
                 that you are trying to include everything that follows as a parameter to some function.</p>
     <p>Here are a couple examples of Syntax errors in the example program we have been using.
                 See if you can figure out what caused them.</p>
@@ -140,17 +140,17 @@ print(final_time_int)
       </input>
       </program>
       <p>Since the error message points us to line 4 this might be a bit confusing. If
-         you look at line four carefully you will see that there is no problem with the
+         you look at line 4 carefully you will see that there is no problem with the
         syntax. So, in this case the next step should be to back up and look at the
         previous line. In this case if you look at line 2 carefully you will see that
-        there is a missing right parenthesis at the end of the line. Remember that
-        parentheses must be balanced. Since Python allows statements to continue over
-        multiple lines inside parentheses python will continue to scan subsequent
+        there is a missing right parenthesis at the end of the line.</p>
+        <p>Remember that parentheses must be balanced. Since Python allows statements to continue over
+        multiple lines inside parentheses, Python will continue to scan subsequent
         lines looking for the balancing right parenthesis. However in this case it
         finds the name <c>current_time_int</c> and it will want to interpret that as
-        another parameter to the input function. But, there is not a comma to
+        another parameter to the input function. But, there is no comma to
         separate the previous string from the variable so as far as Python is
-        concerned the error here is a missing comma. From your perspective its a
+        concerned the error here is a missing comma. From your perspective, its a
         missing parenthesis.</p>
     </solution>
     </exercise>
@@ -264,10 +264,10 @@ print ('godzina teraz', a)
                         and in particular they do not help you think about the types of your
                         variables, which as the error message implies is the root of the problem here.
                         The rest of the lessons we will get back to in a minute.</p>
-        <p>The error message provided to you gives you a pretty big hint.
-                        <c>TypeError: unsupported operand type(s) for FloorDiv: 'str' and 'number' on line: 5</c>
-                        On line five we are trying to use integer division on x and 24. The error
-                        message tells you that you are tyring to divide a string by a number. In this
+        <p>The error message provided to you gives you a pretty big hint: </p>
+                        <p><c>TypeError:unsupported operand types for //:'str' and 'int' on line 5</c></p>
+                        <p>On line 5, we are trying to use integer division on x and 24. The error
+                        message tells you that you are trying to divide a string by a number. In this
                         case you know that 24 is a number so x must be a string. But how? You can
                         see the function call on line 3 where you are converting x to an integer.
                         <c>int(x)</c> or so you think. This is lesson three and is one of the most
@@ -289,16 +289,17 @@ print ('godzina teraz', a)
     </hint>
     <p><term>Finding Clues</term>  One thing that can help you in this situation is to print out the
                 values and the types of the variables involved in the statement that is causing the
-                error. You might try adding a print statement after line 4 <c>print(x, type(x))</c> You
-                will see that at least we have confirmed that x is of type string. Now you need to
+                error. You might try adding this print statement after line 4:</p>
+                <p><c>print(x, type(x))</c></p>
+                <p>You will see that at least we have confirmed that x is of type string. Now you need to
                 start to work backward through the program. You need to ask yourself, where is x used
                 in the program? x is used on lines 2, 3, and of course 5 and 6 (where we are getting
                 an error). So maybe you move the print statement to be after line 2 and again after 3.
                 Line 3 is where you expect the value of x to be changed to an integer. Could line 4
                 be mysteriously changing x back to a string? Not very likely. So the value and type
                 of x is just what you would expect it to be after line 2, but not after line 3. This
-                helps you isolate the problem to line 3. In fact if you employ one of our earlier
-                techniques of commenting out line 3 you will see that this has no impact on the error,
+                helps you isolate the problem to line 3. In fact, if you employ one of our earlier
+                techniques of commenting out line 3, you will see that this has no impact on the error,
                 and is a big clue that line 3 as it is currently written is useless.</p>
   </subsection>
   <subsection xml:id="debugging-and-modules_nameerror">
@@ -376,7 +377,7 @@ print("The time is now", time_of_day)
     <p>And one last bit of code to fix.</p>
     <program label="ac3_6_7" interactive="activecode" language="python">
       <input>
-present_time = input("Enter the present timein hours:")
+present_time = input("Enter the present time in hours:")
 set_alarm = input("Set the hours for alarm:")
 int (present_time, set_time, alarm_time)
 alarm_time = present_time + set_alarm
@@ -439,7 +440,7 @@ print(final_time_int)
     </program>
     <p>Run the program but instead of typing in anything to the dialog box just click OK. You
                 should see the following error message:</p>
-    <p><c>ValueError: invalid literal for int() with base 10: '' on line: 4</c></p>
+    <p><c>ValueError: invalid literal for int() with base 10: '' on line: 2</c></p>
     <p>This error is not because you have made a mistake in your
                 program. Although sometimes we do want to check the user input to make sure its valid,
                 but we don't have all the tools we need for that yet. The error happens because the

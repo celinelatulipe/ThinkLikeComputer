@@ -7,7 +7,7 @@
             draw with a thin pink pen and be at some position, while tess might be going in a different
             direction with a fat black pen. So here is what happens when alex completes a square and
             tess completes a triangle:</p>
-  <program label="ac3_12_1" interactive="activecode" language="python">
+  <program label="ac3_12_1" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()             # Set up the window and its attributes
@@ -65,7 +65,7 @@ wn.exitonclick()
       </li>
       <li>
         <p>We did the same with tess: tess drew a triangle and turned through a full
-                    360 degress. Then we turned tess around and moved them aside.  Even the blank
+                    360 degrees. Then we turned tess around and moved them aside.  Even the blank
                     line 18 is a hint about how the programmer's <em>mental chunking</em> is working: in
                     big terms, tess' movements were chunked as <q>draw the triangle</q> (lines 12-17)
                     and then <q>move away from the origin</q> (lines 19 and 20).</p>

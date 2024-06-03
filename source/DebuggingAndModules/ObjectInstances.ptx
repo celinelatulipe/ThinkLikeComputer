@@ -3,9 +3,13 @@
   <title>Object Oriented Concepts</title>
   <subsection xml:id="debugging-and-modules_user-defined-classes">
     <title>User-defined Classes</title>
-      <p>It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully. We mentioned previously, and we'll mention it again here - the turtle module is object-oriented (as are many other modules in Python). Object-oriented programming is not the focus of this course at all. If you continue in computer science, you will learn a lot more about object-oriented programming, which is a really powerful way of thinking about the world and how to solve problems.</p>
+      <p>It's been fun drawing things with the turtles. In the process, we've slipped in some new concepts and terms. Let's pull them out and examine them a little more carefully. 
+        We mentioned previously, and we'll mention it again here - the turtle module is object-oriented (as are many other modules in Python). Object-oriented programming is not 
+        the focus of this course at all. If you continue in computer science, you will learn a lot more about object-oriented programming, which is a really powerful way of thinking 
+        about the world and how to solve problems.</p>
 
-      <p>First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn how to define functions, and in later computing courses you will learn how to define your own object classess. For now, you just need to understand how to use them.</p>
+      <p>First, just as Python provides a way to define new functions in your programs, it also provides a way to define new classes of objects. Later in the book you will learn 
+        how to define functions, and in later computing courses you will learn how to define your own object classes. For now, you just need to understand how to use them.</p>
   </subsection>
   <subsection xml:id="debugging-and-modules_instances">
     <title>Instances</title>
