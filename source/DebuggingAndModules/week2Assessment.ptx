@@ -64,7 +64,7 @@
           <p>turtle(Turtle)</p>
         </statement>
         <feedback>
-          <p>When making a new instace of the turtle class, you need to use dot notation.</p>
+          <p>When making a new instance of the turtle class, you need to use dot notation.</p>
         </feedback>
       </choice>
       <choice correct="yes">
@@ -88,7 +88,7 @@
           <p>Turtle(turtle)</p>
         </statement>
         <feedback>
-          <p>When making a new instace of the turtle class, you need to use dot notation.</p>
+          <p>When making a new instance of the turtle class, you need to use dot notation.</p>
         </feedback>
       </choice>
     </choices>
@@ -254,6 +254,11 @@
             <p>turtle is the class, not an attribute.</p>
           </feedback>
         </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>
@@ -294,6 +299,11 @@
             <p>Try a different location</p>
           </feedback>
         </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Incorrect, try again.</p>
+          </feedback>
+        </condition>
       </var>
       <var>
         <condition string="^\s*jazz\s*$">
@@ -311,7 +321,7 @@
             <p>Try a different location</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string="^\s*\s*$">
           <feedback>
             <p>Incorrect, try again.</p>
           </feedback>
@@ -333,7 +343,7 @@
             <p>Try a different location</p>
           </feedback>
         </condition>
-        <condition string="^\s*.*\s*$">
+        <condition string="^\s*\s*$">
           <feedback>
             <p>Incorrect, try again.</p>
           </feedback>
@@ -348,7 +358,7 @@
       <statement>
         <p>Write code to draw a regular pentagon (a five-sided figure with all sides the same length).</p>
       </statement>
-      <program label="assess_ch3_7_editor" interactive="activecode" language="python">
+      <program label="assess_ch3_7_editor" interactive="activecode" language="python" codelens="no">
         <input>
 import turtle
         </input>
@@ -360,7 +370,7 @@ import turtle
       <statement>
         <p>Write a program that uses the turtle module to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting <c>.speed(10)</c> for the turtle to draw fast, or <c>.speed(0)</c> for it to draw super fast with no animation.)</p>
       </statement>
-      <program label="assess_ch3_8_editor" interactive="activecode" language="python">
+      <program label="assess_ch3_8_editor" interactive="activecode" language="python" codelens="no">
         <input>
 import turtle
         </input>
@@ -445,7 +455,7 @@ import turtle
           </condition>
           <condition string="^\s*\s*$">
             <feedback>
-              <p>Invalid response.</p>
+              <p>Invalid response. Enter only an integer value (1 to 5 inclusive).</p>
             </feedback>
           </condition>
         </var>
@@ -459,14 +469,14 @@ import turtle
       </statement>
       <setup>
         <var>        
-          <condition string="^\s*casting|converting|changing|type converting\s*$">
+          <condition string="^\s*casting|cast|converting|changing|type converting\s*$">
             <feedback>
               <p>Correct.</p>
             </feedback>
           </condition>
           <condition string="^\s\s*$">
             <feedback>
-              <p>Try again</p>
+              <p>Try again.</p>
             </feedback>
           </condition>
         </var>
@@ -478,7 +488,7 @@ import turtle
           </condition>
           <condition string="^\s\s*$">
             <feedback>
-              <p>Try again</p>
+              <p>Try again.</p>
             </feedback>
           </condition>
         </var>
