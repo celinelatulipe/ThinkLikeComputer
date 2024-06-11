@@ -7,7 +7,7 @@
               But, that's just the beginning. It's often useful and important to document other information about functions: such as when
               the function is appropriate to use (and when it might not be appropriate), and how the state of a program is impacted by running the
               funtion. Let's look at an example.</p>
-    <program label="ac5_4_1" interactive="activecode" language="python">
+    <program label="ac5_4_1" interactive="activecode" language="python" codelens="no">
       <input>
 import turtle
 
@@ -54,7 +54,7 @@ flower()
     </program>
     <p>This example uses function composition: one function calls another function. The flower() function calls the square() function repeatedly, each rotated slightly, to form a small flower. The two functions are defined at the top of the script. Also note the docstrings in each, saying what each function does. The rest of the code sets up the turtle and screen, and then there are a number of commands that move the turtle to different places, set the colour and call the flower() function.</p>
     <p>The purple and pink flowers are rotated slightly compared to the red flower. If you look at the code, after drawing the red flower the turtle turns right 45 degrees, moves to the new location and then starts drawing the flower. The turtle is facing north-east when it starts drawing the second flower; the rotation of the flower is defined by the heading of the turtle. There are a lot of aspects of program state that can come into play here, and it is appropriate for you as the developer of the code to communicate how this function will behave when it is called. Let's look at a slightly modified version of the same code below:</p>
-    <program label="ac5_4_2" interactive="activecode" language="python">
+    <program label="ac5_4_2" interactive="activecode" language="python" codelens="no">
       <input>
 import turtle
 
@@ -110,7 +110,7 @@ flower()
   <subsection xml:id="functions-and-files_function-pre-conditions">
     <title>Function Pre-Conditions</title>
     <p>Pre-conditions define the assumptions that the programmer expects to be true in order for the function to work as expected. In this modification of the example above, you can see that pre-conditions have been added for both functions:</p>
-    <program label="ac5_4_3" interactive="activecode" language="python">
+    <program label="ac5_4_3" interactive="activecode" language="python" codelens="no">
       <input>
 import turtle
 
@@ -173,7 +173,7 @@ flower()
   <subsection xml:id="functions-and-files_function-post-conditions">
     <title>Function Post-Conditions</title>
     <p>Post-conditions identify how the state of your program will be different <em>after</em> running the function. The program from above is presented below with post-conditions added for both functions:</p>
-    <program label="ac5_4_4" interactive="activecode" language="python">
+    <program label="ac5_4_4" interactive="activecode" language="python" codelens="no">
       <input>
 import turtle
 
