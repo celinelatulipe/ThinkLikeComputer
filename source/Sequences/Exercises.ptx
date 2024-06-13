@@ -265,11 +265,11 @@ print(countOdd(lst))
 				</program>
 			</solution>
 		</exercise>
-		>
+		
 		<exercise xml:id="ch9_ex_5">
 			<statement>
 				<p>
-					Sum up all the even numbers in a list.
+					Create a list of 100 random numbers between <c>-1000 and 1000</c>, and write code for the function called <c>sumEven(lst)</c> to sum up all the <c>even</c> numbers in the list
 				</p>
 			</statement>
 
@@ -290,12 +290,33 @@ def sumEven(lst):
 				myTests().main()
 				</tests>
 			</program>
+
+			<solution>
+				<program language="python">
+					<input>
+import random
+def sumEven(lst):
+    sum = 0
+    for e in lst:
+        if e % 2 == 0:
+            sum += e
+    return sum
+# make a random list to test the function
+lst = []
+for i in range(100):
+    lst.append(random.randrange(-1000, 1000))
+print(sumEven(lst))
+					</input>
+					<tests>
+					</tests>
+				</program>
+			</solution>
 		</exercise>
 
 		<exercise xml:id="ch9_ex_6">
 			<statement>
 				<p>
-					Sum up all the negative numbers in a list.
+					Create a list of 100 random numbers between <c>-1000 and 1000</c>, and write code for the function called <c>sumNegatives(lst)</c> to sum up all the <c>negative</c> numbers in the list
 				</p>
 			</statement>
 
@@ -321,16 +342,16 @@ def sumNegatives(lst):
 				<program language="python">
 					<input>
 import random
-def sumNegative(lst):
+def sumNegatives(lst):
     sum = 0
     for e in lst:
         if e &lt; 0:
-            sum = sum + e
+            sum += e
     return sum
 lst = []
 for i in range(100):
     lst.append(random.randrange(-1000, 1000))
-print(sumNegative(lst))
+print(sumNegatives(lst))
 					</input>
 					<tests>
 					</tests>
