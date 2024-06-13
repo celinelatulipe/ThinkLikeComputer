@@ -81,7 +81,7 @@ str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
     <statement>
       <p>Write a program that uses the turtle module <term>and</term> a for loop to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting <c>.speed(10)</c> for the turtle to draw fast, or <c>.speed(0)</c> for it to draw super fast with no animation.)</p>
     </statement>
-    <program label="ac_turtle_rectangle_tour" interactive="activecode" language="python" codelens="no">
+    <program label="assess_ch4_4_editor" interactive="activecode" language="python">
       <input>
 import turtle
         </input>

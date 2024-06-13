@@ -32,7 +32,7 @@ print("Now we are outside of the for loop!")
             the interpreter jumped down to line 5 to continue executing the code after the loop. If
             you'd like to watch the execution, check out the code above in codelens!</p>
   <p>Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.</p>
-  <program label="ac_turtle_rectangle_tour" interactive="activecode" language="python" codelens="no">
+  <program label="ac4_3_2" interactive="activecode" language="python">
     <input>
 import turtle
 wn = turtle.Screen()
@@ -49,7 +49,7 @@ for _ in range(10):
     </tests>
   </program>
   <p>Try it out yourself in the space below. What can you make?</p>
-  <program label="ac_turtle_rectangle_tour" interactive="activecode" language="python" codelens="no">
+  <program label="ac4_3_3" interactive="activecode" language="python">
     <input>
 import turtle
 wn = turtle.Screen()
