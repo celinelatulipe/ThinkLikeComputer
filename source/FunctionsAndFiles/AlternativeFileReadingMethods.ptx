@@ -183,7 +183,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve"><pre id="emotion_words.txt">
+  <raw format="html" xml:space="preserve"><pre id="emotion_words.txt" hide="yes">
 Sad upset blue down melancholy somber bitter troubled
 Angry mad enraged irate irritable wrathful outraged infuriated
 Happy cheerful content elated joyous delighted lively glad
@@ -225,7 +225,7 @@ myTests().main()
         </DataFileNode>
   <DataFileNode line="196" runestone_options="{'fromfile': 'emotion_words.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'emotion_words2.txt', 'qnumber': '', 'cols': 62, 'rows': 20, 'filecontent': 'Sad upset blue down melancholy somber bitter troubled\nAngry mad enraged irate irritable wrathful outraged infuriated\nHappy cheerful content elated joyous delighted lively glad\nConfused disoriented puzzled perplexed dazed befuddled\nExcited eager thrilled delighted\nScared afraid fearful panicked terrified petrified startled\nNervous anxious jittery jumpy tense uneasy apprehensive\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.7'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
         </DataFileNode>
-  <raw format="html" xml:space="preserve"><pre hidden id="olympics.txt">
+  <raw format="html" xml:space="preserve"><pre "hidden" id="olympics.txt">
 Name,Sex,Age,Team,Event,Medal
 A Dijiang,M,24,China,Basketball,NA
 A Lamusi,M,23,China,Judo,NA
