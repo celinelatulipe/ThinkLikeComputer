@@ -168,34 +168,31 @@ print(z)
     </exercise>
     <exercise label="question8_7_2">
       <statement>
-        <p>Which of the following are local variables? Write them in the order that they appear in the code. <var/>  <var/>  </p>
-      </statement>
-      <setup>
-        <var>
           <program language="python">
             <input>
-numbers = [1, 12, 13, 4]
-def foo(bar):
-    aug = str(bar) + "street"
-    return aug
+          numbers = [1, 12, 13, 4]
+          def foo(bar):
+              aug = str(bar) + "street"
+              return aug
 
-for item in numbers:
-    print(foo(item))
-</input>
-          </program>
-          <p>The local variables are</p>
-          <condition string="^\s*bar\s*$">
-            <feedback>
-              <p>Good work!</p>
-            </feedback>
+          for item in numbers:
+              print(foo(item))
+             </input>
+           </program>
+           <p>Which of the following are local variables? Write them in the order that they appear in the code. <var/>  <var/>  </p>
+         </statement>
+          <setup>
+            <var>
+              <condition string="^\s*bar\s*$">
+               <feedback>
+                <p>Good work!</p>
+             </feedback>
           </condition>
           <condition string="^\s*aug\s*$">
             <feedback>
               <p>While aug is a local variable, it is not the first one in the code.</p>
             </feedback>
           </condition>
-        </var>
-        <var>
           <condition string="^\s*item\s*$">
             <feedback>
               <p>item is not a local variable.</p>
@@ -206,9 +203,21 @@ for item in numbers:
               <p>Incorrect, try again.</p>
             </feedback>
           </condition>
-          <condition string="^\s*aug\s*$">
+        </var>
+        <var>
+         <condition string="^\s*aug\s*$">
             <feedback>
-              <p>Good work!</p>
+             <p>Good work!</p>
+            </feedback>
+          </condition>
+          <condition string="^\s*item\s*$">
+            <feedback>
+              <p>item is not a local variable.</p>
+            </feedback>
+          </condition>
+          <condition string="^\s*.*\s*$">
+            <feedback>
+              <p>Incorrect, try again.</p>
             </feedback>
           </condition>
           <condition string="^\s*bar\s*$">
