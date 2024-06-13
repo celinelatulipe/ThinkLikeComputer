@@ -3,9 +3,83 @@
   <title>Glossary</title>
   <glossary sorted="False">
     <gi>
+      <title>compound statement</title>
+      <p>A statement that consists of two parts:</p>
+      <p>
+        <ol>
+          <li>
+            <p>header - which begins with a keyword determining the statement
+                                    type, and ends with a colon.</p>
+          </li>
+          <li>
+            <p>body - containing one or more statements indented the same amount
+                                    from the header.</p>
+          </li>
+        </ol>
+      </p>
+      <p>The syntax of a compound statement looks like this:</p>
+      <program language="python">
+        <input>
+keyword expression:
+    statement
+    statement
+    ...
+</input>
+      </program>
+    </gi>
+    <gi>
+      <title>header line</title>
+      <p>The first part of a compound statement. A header line begins with a keyword and
+                            ends with a colon (:)</p>
+    </gi>
+    <gi>
+      <title>body</title>
+      <p>The second part of a compound statement. The body consists of a
+                            sequence of statements all indented the same amount from the beginning
+                            of the header. The standard amount of indentation used within the
+                            Python community is 4 spaces.</p>
+    </gi>
+    <gi>
+      <title>function</title>
+      <p>A named sequence of statements that performs some useful operation.
+                            Functions may or may not take parameters and may or may not produce a
+                            result.</p>
+    </gi>
+    <gi>
+      <title>function definition</title>
+      <p>A statement that creates a new function, specifying its name,
+                            parameters, and the statements it executes.</p>
+    </gi>
+    <gi>
+      <title>global variable</title>
+      <p>A variable defined at the top level, not inside any function.</p>
+    </gi>
+    <gi>
+      <title>docstring</title>
+      <p>If the first thing in a function body is a string (or, we'll see later, in other situations
+                            too) that is attached to the function as its <c>__doc__</c> attribute.</p>
+    </gi>
+    
+      <gi>
+        <title>local variable</title>
+        <p>A variable defined inside a function. A local variable can only be used
+                              inside its function. Parameters of a function are also a special kind
+                              of local variable.</p>
+      </gi>
+      <gi>
+        <title>lifetime</title>
+        <p>Variables and objects have lifetimes &#x2014; they are created at some point during
+                              program execution, and will be destroyed at some time. In python, objects
+                              live as long as there is some variable pointing to it, or it is part of some
+                              other compound object, like a list or a dictionary. In python, local variables
+                              live only until the function finishes execution.</p>
+      </gi>
+    
+    <gi>
       <title>open</title>
       <p>You must open a file before you can read its contents.</p>
     </gi>
+    
     <gi>
       <title>close</title>
       <p>When you are done with a file, you should close it.</p>

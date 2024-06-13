@@ -210,7 +210,7 @@
         <p>
             Ask the user to input an integer. Define a function that checks if the integer is positive and prints 
             all the odd numbers up to that integer. If it is negative, the program should print “Invalid input, 
-            please enter a positive integer. The function should run thrice.
+            please enter a positive integer". The function should run thrice.
         </p>
 
     </statement>
@@ -353,10 +353,10 @@
             Write a method that uses nested for loops to print the following pattern, where the number of rows 
             is provided by the user. If the number provided by the user is above 10 or negative, ask for another 
             input and run the program again.
-            1 
-            2 2 
-            3 3 3
-            4 4 4 4
+            1 <br/>
+            2 2 <br/>
+            3 3 3 <br/>
+            4 4 4 4 <br/>
 
         </p>
 
@@ -399,7 +399,7 @@
             Write a method that asks the user for the principal, rate of interest, and number of years. Use 
             a for loop to calculate the amount of simple interest each year and print it out for each year. Ask 
             the user for another input if the rate of interest is above 10 percent. Use the formula Simple 
-            Interest = (principal x rate x year)/100.
+            Interest = (principal * rate * year)/100.
         </p>
 
     </statement>
