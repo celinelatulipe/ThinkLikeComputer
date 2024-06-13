@@ -119,7 +119,7 @@
 <exercise xml:id="assess_ch7_4_lh">
     <statement>
         <p>
-            3.	Write a Python program that asks the user to enter a temperature in Celsius three times (accomplish this using a loop). 
+            Write a Python program that asks the user to enter a temperature in Celsius three times (accomplish this using a loop). 
             For each input, calculate and display the equivalent temperature in Fahrenheit (accomplish this using a function called <term>temperature_convertor</term>). 
             Your function should return the temperature in Fahrenheit for each iteration. Print this temperature to the user.
         </p>
@@ -143,5 +143,361 @@
 
     </program>
 </exercise>
+
+<exercise xml:id="assess_ch7_5_lh">
+    <statement>
+        <p>
+            Define a function called <term>palindrome_checker</term>. The program should prompt the user to input a string
+            of text and then the function should determine whether the inputted text is a palindrome. A palindrome
+            is defined as a word, phrase or a number that reads the same forward and backward disregarding spaces. 
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_5_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_6_lh">
+    <statement>
+        <p>
+            Define a function that counts the number of vowels and consonants in a string by iterating over 
+            the string and using conditionals to check if the alphabet is a vowel. Ask the user for an input 
+            string.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_6_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_7_lh">
+    <statement>
+        <p>
+            Define 3 separate functions to draw a triangle, circle and square in the turtle module. Ask the 
+            user for input and draw the shape based on that input using conditionals. (Example. S for square, 
+            T for triangle and C for circle). Ask for input 10 times using a for loop. Each time the shape 
+            should be drawn at a random location. 
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_7_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_8_lh">
+    <statement>
+        <p>
+            Ask the user to input an integer. Define a function that checks if the integer is positive and prints 
+            all the odd numbers up to that integer. If it is negative, the program should print “Invalid input, 
+            please enter a positive integer. The function should run thrice.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_8_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_9_lh">
+    <statement>
+        <p>
+            Ask the user to input an integer. Define a function to check if the input is a prime number. For this 
+            exercise, consider anything that does not get divided by the first 10 numbers a prime number. 
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_9_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_10_lh">
+    <statement>
+        <p>
+            Ask the user for an integer input. Define a Boolean <term>myInteger</term> and set it to False. If the integer 
+            is below 50 run the function to ask for the input again. Once, an integer above 50 is found, the 
+            Boolean should switch to True, end the program and print “My integer found”. 
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_10_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_11_lh">
+    <statement>
+        <p>
+            Develop a program for a bookstore. Write a function called <term>calculate_discount</term>. If the customer is 
+            regular, discount should be 10 percent. If a premium customer, 15 percent discount and no discount 
+            for a guest. Also, the discount should be applied only when the bill total is above 50 dollars. 
+            Your function should take in the initial bill amount and the status of the customer as input. 
+            Print out the final amount to be charged.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_11_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_12_lh">
+    <statement>
+        <p>
+            Define a Boolean called <term>isTeenager</term> and set it to false. Define a function to check if a user 
+            is a teenager. If the age is less than 13 or more than 19, the Boolean should not change, and it should 
+            print “Not a teenager”. If it's between 13 and 19, changes Boolean to true and prints "Teenager”. 
+            Ask the user to input the age.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_12_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_13_lh">
+    <statement>
+        <p>
+            Write a method called <term>spiral</term> that uses turtle to create a spiral square illusion. In each iteration 
+            of the loop, the turtle should turn slightly more than 90 degrees (e.g., 92 degrees), and the side 
+            length should gradually increase. Use a conditional to stop the loop after a certain number of iterations.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_13_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_14_lh">
+    <statement>
+        <p>
+            Write a method called <term>password_validator</term> that checks if a given string is a valid password with 
+            the following criteria: at least 8 characters long, contains at least one uppercase letter, one 
+            lowercase letter, and one digit. Use loops and conditionals to verify these conditions.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_14_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+<exercise xml:id="assess_ch7_15_lh">
+    <statement>
+        <p>
+            Write a method that uses nested for loops to print the following pattern, where the number of rows 
+            is provided by the user. If the number provided by the user is above 10 or negative, ask for another 
+            input and run the program again.
+            1 
+            2 2 
+            3 3 3
+            4 4 4 4
+
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_15_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_16_lh">
+    <statement>
+        <p>
+            Write a method that asks the user for a sentence and then uses a for loop to count the frequency of 
+            the letter “a” in the sentence and print it.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_16_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_17_lh">
+    <statement>
+        <p>
+            Write a method that asks the user for the principal, rate of interest, and number of years. Use 
+            a for loop to calculate the amount of simple interest each year and print it out for each year. Ask 
+            the user for another input if the rate of interest is above 10 percent. Use the formula Simple 
+            Interest = (principal x rate x year)/100.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_17_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_18_lh">
+    <statement>
+        <p>
+            Write a method that asks the user for a number, then prints the square and cube of every number 
+            from 1 to that number using a for loop. Ask the user for another input if the number given is above 15.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_18_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_19_lh">
+    <statement>
+        <p>
+            Nina lives in Winnipeg and wants to be prepared for any extreme temperatures this week. Write her a 
+            method called <term>temperature_warning_system</term> which runs seven times and uses a for loop and conditionals 
+            to print "Warning: Very Hot!" on days when the temperature is above 90 degrees Fahrenheit, and 
+            "Warning: Very Cold!" when below 30 degrees Fahrenheit. If the temperature is between 30 and 90, 
+            print “All good”.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_19_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_20_lh">
+    <statement>
+        <p>
+            Write a method called <term>factorial_calculator</term> that asks the user for a non-negative integer and then 
+            uses a for loop to calculate the factorial of that number. Print the factorial result. If a negative 
+            integer has been entered, run the program again.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_20_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
+
+<exercise xml:id="assess_ch7_21_lh">
+    <statement>
+        <p>
+            Ask the user for a string. Write a method called <term>vowel_replacement</term> that asks the user for a string 
+            and uses a for loop and conditionals to replace every vowel in the string with the letter <term>z</term> and 
+            print the new string.
+        </p>
+
+    </statement>
+    <program xml:id="assess_ch7_21_lh_editor" interactive="activecode" language="python">
+
+        <input>
+        </input>
+<tests>
+    
+</tests>
+
+    </program>
+</exercise>
+
  </section>
 
