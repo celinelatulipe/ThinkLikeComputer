@@ -247,10 +247,10 @@ flower()
         </choice>
         <choice>
           <statement>
-            <p>Directly below both function definition statements</p>
+            <p>Commented directly below both function doctrings</p>
           </statement>
           <feedback>
-            <p>Docstrings go directly below function definition statements.</p>
+            <p>Function assumptions should be a part of the function docstrings.</p>
           </feedback>
         </choice>
         <choice>
@@ -258,7 +258,7 @@ flower()
             <p>Assumptions are not needed in this code</p>
           </statement>
           <feedback>
-            <p>While assumptions and docstrings are technically not needed to run code, It is very helpful to help you understand why the code was written they way it was.</p>
+            <p>While assumptions and docstrings are technically not needed to run code, It is very helpful to help you understand why the code was written the way it was.</p>
           </feedback>
         </choice>
         <choice correct="yes">
