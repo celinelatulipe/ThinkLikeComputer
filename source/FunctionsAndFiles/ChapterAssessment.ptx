@@ -164,7 +164,7 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch5_8">
     <statement>
-      <p><term>Challenge:</term> Using the file <c>school_prompt.txt</c>, if the character &#x2018;p' is in a word, then add the word to a list called <c>p_words</c>.</p>
+      <p><term>Challenge:</term> Using the file <c>school_prompt.txt</c>, if the character 'p' is in a word, then add the word to a list called <c>p_words</c>.</p>
     </statement>
     <program label="assess_ch5_8_editor" interactive="activecode" language="python">
       <input>
