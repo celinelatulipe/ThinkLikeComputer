@@ -175,7 +175,61 @@ flower()
     <p>Post-conditions identify how the state of your program will be different <em>after</em> running the function. The program from above is presented below with post-conditions added for both functions:</p>
     <program label="ac5_4_4" interactive="activecode" language="python" codelens="no">
       <input>
+        import turtle
 
+        def square():
+          """Draws a square
+        
+             Pre-conditions: turtle named Amy exists, and pen is down,
+               Amy's current orientation determines orientation of square.
+               Amy's current pen color determines color of square.
+             Post-conditions: A square is drawn on the canvas.
+          """
+        
+          for _ in range(4):
+            amy.forward(20)
+            amy.right(90)
+        
+        def flower():
+          """Draws squares in rotation around a point to form a flower
+        
+             Pre-conditions: turtle named Amy exists, pen is down.
+               Amy's current orientation determines orientation of flower.
+               Amy's current pen color determines colour of flower.
+             Post-conditions: A flower is drawn on the canvas. The turtle is
+               returned to home (0,0), with east orientation.
+          """
+          num_squares = 12
+          angle = 360/num_squares               # turn 30 degrees before drawing each square
+          for _ in range(num_squares):
+            amy.right(angle)
+            square()
+          amy.penup()
+          amy.home()
+          amy.pendown()
+        
+        wn = turtle.Screen()      # Set up the window and its attributes
+        amy = turtle.Turtle()    # create amy
+        amy.speed(10)            # make turtle draw fast
+        
+        amy.color("red")
+        flower()
+        
+        amy.penup()
+        amy.left(45)
+        amy.forward(100)
+        amy.pendown()
+        
+        amy.color("purple")
+        flower()
+        
+        amy.penup()           # pick up pen and move to new location
+        amy.left(70)
+        amy.forward(50)
+        amy.pendown()         # put pen back down
+        
+        amy.color("pink")  # draw third flower in pink
+        flower()
         </input>
     <tests>
     </tests>
