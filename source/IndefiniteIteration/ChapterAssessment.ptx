@@ -149,7 +149,7 @@ How many more times will the exit condition be checked? <BlankNode/><var/></p>
         
       </var>
       <var>
-        <condition number="[3, 3]">
+        <condition string="^\s*3\s*$">
           <feedback>
             <p>Correct.</p>
           </feedback>
