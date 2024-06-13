@@ -175,67 +175,109 @@ flower()
     <p>Post-conditions identify how the state of your program will be different <em>after</em> running the function. The program from above is presented below with post-conditions added for both functions:</p>
     <program label="ac5_4_4" interactive="activecode" language="python" codelens="no">
       <input>
-import turtle
 
-def square():
-  """Draws a square
-
-     Pre-conditions: turtle named Amy exists, and pen is down,
-       Amy's current orientation determines orientation of square.
-       Amy's current pen color determines color of square.
-     Post-conditions: A square is drawn on the canvas.
-  """
-
-  for _ in range(4):
-    amy.forward(20)
-    amy.right(90)
-
-def flower():
-  """Draws squares in rotation around a point to form a flower
-
-     Pre-conditions: turtle named Amy exists, pen is down.
-       Amy's current orientation determines orientation of flower.
-       Amy's current pen color determines colour of flower.
-     Post-conditions: A flower is drawn on the canvas. The turtle is
-       returned to home (0,0), with east orientation.
-  """
-  num_squares = 12
-  angle = 360/num_squares               # turn 30 degrees before drawing each square
-  for _ in range(num_squares):
-    amy.right(angle)
-    square()
-  amy.penup()
-  amy.home()
-  amy.pendown()
-
-wn = turtle.Screen()      # Set up the window and its attributes
-amy = turtle.Turtle()    # create amy
-amy.speed(10)            # make turtle draw fast
-
-amy.color("red")
-flower()
-
-amy.penup()
-amy.left(45)
-amy.forward(100)
-amy.pendown()
-
-amy.color("purple")
-flower()
-
-amy.penup()           # pick up pen and move to new location
-amy.left(70)
-amy.forward(50)
-amy.pendown()         # put pen back down
-
-amy.color("pink")  # draw third flower in pink
-flower()
         </input>
     <tests>
     </tests>
     </program>
     <p>This code now shows what programmers need to know about changes to the state of the program, after the function has run. In the case of the square() function, the only change is that there is now a square on the canvas. The turtle's colour, orientation, pen state, etc. is all the same as before the function was called. For the flower() function, there are two changes: the flower is drawn on canvas, and the turtle is returned to the home position and orientation. Reading this allows you and any other programmers to know what to expect if the function is called.</p>
-    <p><term>Check your understanding</term>
-                [todo: We need to add some questions here</p>
+    <p>
+      <term>Check your understanding</term>
+    </p>
+    <exercise label="question5_4_4">
+      <statement>
+        <p>Where in this code should you place function assumptions?</p>
+        <program language="python">
+          <input>
+            import turtle
+
+            def square():
+              """Draws a square"""
+              for _ in range(4):
+                amy.forward(30)
+                amy.right(90)
+            
+            def star():
+              """Draws squares in rotation around a point to form a window"""
+              num_squares = 5
+              angle = 360/num_squares               # turn 90 degrees before drawing each square
+              for _ in range(num_squares):
+                amy.right(angle)
+                square()
+            
+            
+            wn = turtle.Screen()      # Set up the window and its attributes
+            amy = turtle.Turtle()    # create amy
+            amy.speed(10)            # make turtle draw fast
+            
+            amy.color("red")      # draw first flower in red
+            star()
+            
+            # move to new location and draw window
+            amy.penup()
+            amy.goto(50,50)
+            amy.pendown()
+            amy.color("blue")
+            star()
+            
+            # move to new location and draw window
+            amy.penup()
+            amy.goto(-50,-50)
+            amy.pendown()
+            amy.color("orange")
+            star()
+            
+            # move to new location and draw window
+            amy.penup()
+            amy.goto(50,-50)
+            amy.pendown()
+            amy.color("green")
+            star()
+  </input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>Above the function definitions</p>
+          </statement>
+          <feedback>
+            <p>Putting assumptions outside of the function we want to make it for does not make sense.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Directly below both function definition statements</p>
+          </statement>
+          <feedback>
+            <p>Docstrings go directly below function definition statements.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>Assumptions are not needed in this code</p>
+          </statement>
+          <feedback>
+            <p>While assumptions and docstrings are technically not needed to run code, It is very helpful to help you understand why the code was written they way it was.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>Within the docstrings of both functions</p>
+          </statement>
+          <feedback>
+            <p>Yes, assumptions should be made inside of their function's respective docstrings.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>At the end of the function code</p>
+          </statement>
+          <feedback>
+            <p>While it may be inside the right function this way, it makes more sense if assumptions are placed before the function's code.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
   </subsection>
 </section>
