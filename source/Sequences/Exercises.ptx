@@ -222,7 +222,7 @@ def sum_of_squares(xs):
 		<exercise xml:id="ch9_ex_4">
 			<statement>
 				<p>
-					Write a function to count how many odd numbers are in a list.
+					Create a list of 100 random integers between <c>0 and 1000</c>, and write code for the function called <c>countOdd(lst)</c> to count every <c>odd</c> number in the list
 				</p>
 			</statement>
 
@@ -269,7 +269,7 @@ print(countOdd(lst))
 		<exercise xml:id="ch9_ex_5">
 			<statement>
 				<p>
-					Create a list of 100 random numbers between <c>-1000 and 1000</c>, and write code for the function called <c>sumEven(lst)</c> to sum up all the <c>even</c> numbers in the list
+					Create a list of 100 random integers between <c>-1000 and 1000</c>, and write code for the function called <c>sumEven(lst)</c> to sum up all the <c>even</c> numbers in the list
 				</p>
 			</statement>
 
@@ -316,7 +316,7 @@ print(sumEven(lst))
 		<exercise xml:id="ch9_ex_6">
 			<statement>
 				<p>
-					Create a list of 100 random numbers between <c>-1000 and 1000</c>, and write code for the function called <c>sumNegatives(lst)</c> to sum up all the <c>negative</c> numbers in the list
+					Create a list of 100 random integers between <c>-1000 and 1000</c>, and write code for the function called <c>sumNegatives(lst)</c> to sum up all the <c>negative</c> numbers in the list
 				</p>
 			</statement>
 
