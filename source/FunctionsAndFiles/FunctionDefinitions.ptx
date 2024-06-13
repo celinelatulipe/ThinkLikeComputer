@@ -70,9 +70,9 @@ def goodbye():
     <tests>
     </tests>
   </program>
-  <p>Note that when you run the code above, the error you get is a NameError. The Python Interpreter has no idea what &#x2018;goodbye' is, because it hasn't seen anything with that name yet. Fix the code above so that it works.</p>
+  <p>Note that when you run the code above, the error you get is a NameError. The Python Interpreter has no idea what 'goodbye' is, because it hasn't seen anything with that name yet. Fix the code above so that it works.</p>
   <p>We can apply functions to make more interesting and complex turtle drawings.</p>
-  <program label="ac5_2_3" interactive="activecode" language="python">
+  <program label="ac5_2_3" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 
@@ -120,7 +120,7 @@ wn.exitonclick()
     <statement>
       <p>Write a turtle program that includes a function to draw a triangle (hint: to draw a triangle, turn the turtle 120 degrees three times). Then use a for loop to have a turtle draw five triangles to make a pattern like the one shown above. Turn the turtle each time in the for loop before calling the triangle function. How much to turn the turtle? Divide the number of degrees in a circle by the number of times you want to turn.</p>
     </statement>
-    <program label="ac_5_2_4_editor" interactive="activecode" language="python">
+    <program label="ac_5_2_4_editor" interactive="activecode" language="python" codelens="no">
       <input>
 import turtle
         </input>

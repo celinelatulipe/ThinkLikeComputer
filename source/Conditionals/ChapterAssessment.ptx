@@ -271,66 +271,41 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch6_11_lh">
     <statement>
-      <p>The truth table below is supposed to represent <q>A and B</q>, but it has some incorrect values in the third column. Look at the code in CodeLens above to see how Python evaluates <q>and</q> operators. Click on the INCORRECT "A and B" values.</p>
+      <image source="Conditionals/Figures/cdq6-1.png" width="100%"/>
+        <p>The CodeLens image (above) shows how the <c>and</c> operator is evaluated by Python.</p>
+        <p>The truth table (below) is suppose to evaluate <q>A and B</q>, but it has some incorrect values in the third column.</p>
+        <p>Click on the <term>INCORRECT</term> "A and B" values in the table below.</p>
+        <p></p>
+        <p></p>
     </statement>
     <areas>
-      <image source="Conditionals/Figures/cdq6-1.png" width="50%"/>
       <table>
-        <tabular>
+        <title>Truth Table</title>
+        <tabular halign="center">
           <row>
-            <cell>
-                            A
-                        </cell>
-            <cell>
-                            B
-                        </cell>
-            <cell>
-                            A and B
-                        </cell>
+            <cell bottom="major"> A </cell>
+            <cell bottom="major"> B </cell>
+            <cell bottom="major"> A and B </cell>
           </row>
           <row>
-            <cell>
-                            True
-                        </cell>
-            <cell>
-                            False
-                        </cell>
-            <cell>
-                            True
-                        </cell>
+            <cell> True </cell>
+            <cell> False </cell>
+            <cell> <area correct="yes"> True </area> </cell> 
           </row>
           <row>
-            <cell>
-                            False
-                        </cell>
-            <cell>
-                            False
-                        </cell>
-            <cell>
-                            True
-                        </cell>
+            <cell> False </cell>
+            <cell> False </cell>
+            <cell> <area correct="yes"> True </area> </cell> 
           </row>
           <row>
-            <cell>
-                            True
-                        </cell>
-            <cell>
-                            True
-                        </cell>
-            <cell>
-                            True
-                        </cell>
+            <cell> True </cell>
+            <cell> True </cell>
+            <cell> <area correct="no"> True </area> </cell>
           </row>
           <row>
-            <cell>
-                            False
-                        </cell>
-            <cell>
-                            True
-                        </cell>
-            <cell>
-                            False
-                        </cell>
+            <cell> False </cell>
+            <cell> True </cell>
+            <cell> <area correct="no"> False </area> </cell>
           </row>
         </tabular>
       </table>
@@ -386,12 +361,27 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch6_14_lh">
     <statement>
-      <p>: <var/>  </p>
+      <image source="Conditionals/Figures/cdq6-3.png" width="90%"/>
+      <p>Given num = 49 on line 3, what value of i will cause line 14 to run? 
+        <var/> 
+      </p>
+      <note> <p> Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. 
+        Notice that in order to reach line 14, line 12 must evaluate to true. 
+        Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.
+      </p>  </note>
     </statement>
     <setup>
       <var>
-        <image source="Conditionals/Figures/cdq6-3.png" width="50%"/>
-        <p>Given num = 49 on line 3, what value of i will cause line 14 to run? Hint: Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. Notice that in order to reach line 14, line 12 must evaluate to true. Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.</p>
+        <condition string="^\s*7\s*$">
+          <feedback>
+            <p>Correct! When i = 7, (num % i) will equal 0.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*\s*$">
+          <feedback>
+            <p>Hmmm try again, what causes the conditional on line 12 to be true?</p>
+          </feedback>
+        </condition>
       </var>
     </setup>
   </exercise>

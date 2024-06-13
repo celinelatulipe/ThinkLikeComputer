@@ -50,14 +50,13 @@ keyword expression:
       <p>A statement that creates a new function, specifying its name,
                             parameters, and the statements it executes.</p>
     </gi>
+      <gi>
+      <title>function invocation</title>
+      <p>The act of calling a defined function, by referring to it's name followed by parentheses.</p>
+    </gi>
     <gi>
       <title>global variable</title>
       <p>A variable defined at the top level, not inside any function.</p>
-    </gi>
-    <gi>
-      <title>docstring</title>
-      <p>If the first thing in a function body is a string (or, we'll see later, in other situations
-                            too) that is attached to the function as its <c>__doc__</c> attribute.</p>
     </gi>
     
       <gi>
@@ -75,7 +74,14 @@ keyword expression:
                               live only until the function finishes execution.</p>
       </gi>
     
+
     <gi>
+      <title>docstrings</title>
+      <p>Similar to comments, docstrings are messages from the programmer to help another person understand what that function is doing. Indicated by three quotation marks.</p>
+    </gi>
+
+    <gi>
+
       <title>open</title>
       <p>You must open a file before you can read its contents.</p>
     </gi>

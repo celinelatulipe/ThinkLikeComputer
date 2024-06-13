@@ -2,10 +2,11 @@
 <section xml:id="debugging-and-modules_introduction-to-debugging">
   <title>Introduction to Debugging</title>
   <introduction>
-  <p classes="blockquote"><q>The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.</q> &#x200A;&#x2014;&#x200A;Andrew Singer</p>
+  <blockquote><p><q>The art of debugging is figuring out what you really told your program to do rather than what you thought you told it to do.</q></p><attribution>Andrew Singer</attribution>
+    </blockquote>
   <p>This chapter will spend some time talking about what happens when errors occur as well as how to fix
             the errors that you will inevitably come across.</p>
-  <p>Before computers became digital, debugging could mean looking for insects impeding the functioning of physical relays as in this somewhat <url href="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html" visual="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html">apocryphal tale</url> about <url href="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper" visual="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper">Admiral Grace Hopper</url>, a pioneer of computer programming.</p>
+  <p>Before computers became digital, debugging could mean looking for insects impeding the functioning of physical relays as in the somewhat <url href="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html" visual="https://www.computerworld.com/article/2515435/app-development/moth-in-the-machine--debugging-the-origins-of--bug-.html">apocryphal tale</url> about <url href="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper" visual="https://en.wikipedia.org/wiki/Admiral_Grace_Hopper">Admiral Grace Hopper</url>, a pioneer of computer programming.</p>
   <p>Nowadays, debugging doesn't involve bug guts all over your computer but it can still be just as frustrating. To cope with this frustration, this chapter will present some strategies to help you understand why the program you wrote does not behave as intended.</p>
   <p>Many people think debugging is some kind of punishment for not being smart enough to write code correctly the first time.  But nobody does that, failure in programming is part of the deal.  Here's a fun video to keep in mind as you learn to program.</p>
   <video xml:id="c0bsKc4tiuY" youtube="c0bsKc4tiuY" width="auto"/>

@@ -10,7 +10,7 @@
       </li>
     </ol>
   </p>
-  <program label="ac3_15_1" interactive="activecode" language="python">
+  <program label="ac3_15_1" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()
@@ -24,7 +24,7 @@ alex.right(90)
   </program>
   <p>When you run the example above you'll see how an error occurs. This is because we accidentally left off the <q>)</q> when we
             tell alex to move forward. This is a common error for programmers of any skill level - it's easy to miss one and not
-            notice! If you get a syntax error like this or - expecially in this textbook - one that says there was bad syntax on a
+            notice! If you get a syntax error like this or - especially in this textbook - one that says there was bad syntax on a
             line that isn't visible to you, then likely you're missing a parenthesis, quotation, or bracket.</p>
   <p>
     <ol>
@@ -33,9 +33,9 @@ alex.right(90)
       </li>
     </ol>
   </p>
-  <p>Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or swiching
+  <p>Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or switching
             letters around. Other times we accidentally refer to the wrong variable name. Checkout the code below for some examples.</p>
-  <program label="ac3_15_2" interactive="activecode" language="python">
+  <program label="ac3_15_2" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()
@@ -47,7 +47,7 @@ alex.right(90)
     <tests>
     </tests>
   </program>
-  <program label="ac3_15_3" interactive="activecode" language="python">
+  <program label="ac3_15_3" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()
@@ -59,7 +59,7 @@ right.june(90)             #switched the variable for jane with the direction to
     <tests>
     </tests>
   </program>
-  <program label="ac3_15_4" interactive="activecode" language="python">
+  <program label="ac3_15_4" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()
@@ -80,7 +80,7 @@ June.right(90)            #capitalized the variable June even though all others 
   </p>
   <p>We can also incorrectly provide arguments to a method or function. When that happens, you'll see an error message like the
             one below.</p>
-  <program label="ac3_15_5" interactive="activecode" language="python">
+  <program label="ac3_15_5" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()

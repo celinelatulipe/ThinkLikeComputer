@@ -21,7 +21,7 @@
               trying to get our program to execute correctly. Then when we do get it going we celebrate, hand
               it in, and move on to the next homework assignment or programming task. But here is the secret,
               when you are successful, you are happy, your brain releases a bit of chemical that makes you
-              feel good. You need to organize your programming so that you have lots of little successess. It
+              feel good. You need to organize your programming so that you have lots of little successes. It
               turns out your brain doesn't care all that much if you have successfully written hello world,
               or a fast fourier transform (trust me its hard) you still get that little release that makes
               you happy. When you are happy you want to go on and solve the next little problem. Essentially
@@ -117,7 +117,7 @@ print(final_time)
             <p>Python is stupid and does not know how to add properly.</p>
           </statement>
           <feedback>
-            <p>No, Python is probabaly not broken.</p>
+            <p>No, Python is probably not broken.</p>
           </feedback>
         </choice>
         <choice>
@@ -218,8 +218,8 @@ print("The time after waiting is: ", final_answer)
   <subsection xml:id="debugging-and-modules_types-of-errors">
     <title>Types of Errors</title>
     <p>Three kinds of errors can occur in a program: <url href="http://en.wikipedia.org/wiki/Syntax_error" visual="http://en.wikipedia.org/wiki/Syntax_error">syntax errors</url>, <url href="http://en.wikipedia.org/wiki/Runtime_error" visual="http://en.wikipedia.org/wiki/Runtime_error">runtime errors</url>, and <url href="http://en.wikipedia.org/wiki/Logic_error" visual="http://en.wikipedia.org/wiki/Logic_error">semantic errors</url>.  It is useful to distinguish
-                between them in order to track them down more quickly. We will explore these three different types of errors in the next sections of this chapter.
-                <term>Check your understanding</term></p>
+                between them in order to track them down more quickly. We will explore these three different types of errors in the next sections of this chapter.</p>
+    <p><term>Check your understanding</term></p>
     <exercise label="mc3_2_2">
       <statement>
         <p>Debugging is:</p>

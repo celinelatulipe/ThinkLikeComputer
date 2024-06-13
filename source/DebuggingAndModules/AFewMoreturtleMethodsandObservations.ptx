@@ -5,213 +5,99 @@
   <table>
     <tabular>
       <row header="yes">
-        <cell>
-                            Method
-                        </cell>
-        <cell>
-                            Parameters
-                        </cell>
-        <cell>
-                            Description
-                        </cell>
+        <cell>Method</cell>
+        <cell>Parameters</cell>
+        <cell>Description</cell>
       </row>
       <row>
-        <cell>
-                            Turtle
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Creates and returns a new turtle object
-                        </cell>
+        <cell>Turtle</cell>
+        <cell>None</cell>
+        <cell>Creates and returns a new turtle object</cell>
       </row>
       <row>
-        <cell>
-                            forward
-                        </cell>
-        <cell>
-                            distance
-                        </cell>
-        <cell>
-                            Moves the turtle forward
-                        </cell>
+        <cell>forward</cell>
+        <cell>distance</cell>
+        <cell>Moves the turtle forward</cell>
       </row>
       <row>
-        <cell>
-                            backward
-                        </cell>
-        <cell>
-                            distance
-                        </cell>
-        <cell>
-                            Moves the turle backward
-                        </cell>
+        <cell>backward</cell>
+        <cell>distance</cell>
+        <cell>Moves the turtle backward</cell>
       </row>
       <row>
-        <cell>
-                            right
-                        </cell>
-        <cell>
-                            angle
-                        </cell>
-        <cell>
-                            Turns the turtle clockwise
-                        </cell>
+        <cell>right</cell>
+        <cell>angle</cell>
+        <cell>Turns the turtle clockwise</cell>
       </row>
       <row>
-        <cell>
-                            left
-                        </cell>
-        <cell>
-                            angle
-                        </cell>
-        <cell>
-                            Turns the turtle counter clockwise
-                        </cell>
+        <cell>left</cell>
+        <cell>angle</cell>
+        <cell>Turns the turtle counter clockwise</cell>
       </row>
       <row>
-        <cell>
-                            up
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Picks up the turtle's tail (pen)
-                        </cell>
+        <cell>up</cell>
+        <cell>None</cell>
+        <cell>Picks up the turtle's tail (pen)</cell>
       </row>
       <row>
-        <cell>
-                            down
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Puts down the turtle's tail (pen)
-                        </cell>
+        <cell>down</cell>
+        <cell>None</cell>
+        <cell>Puts down the turtle's tail (pen)</cell>
       </row>
       <row>
-        <cell>
-                            color
-                        </cell>
-        <cell>
-                            color name
-                        </cell>
-        <cell>
-                            Changes the color of the turtle and pen
-                        </cell>
+        <cell>color</cell>
+        <cell>color name</cell>
+        <cell>Changes the color of the turtle and pen</cell>
       </row>
       <row>
-        <cell>
-                            fillcolor
-                        </cell>
-        <cell>
-                            color name
-                        </cell>
-        <cell>
-                            Changes the color the turtle will use to fill a polygon
-                        </cell>
+        <cell>fillcolor</cell>
+        <cell>color name</cell>
+        <cell>Changes the color the turtle will use to fill a polygon</cell>
       </row>
       <row>
-        <cell>
-                            heading
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Returns the current heading
-                        </cell>
+        <cell>heading</cell>
+        <cell>None</cell>
+        <cell>Returns the current heading</cell>
       </row>
       <row>
-        <cell>
-                            position
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Returns the current position
-                        </cell>
+        <cell>position</cell>
+        <cell>None</cell>
+        <cell>Returns the current position</cell>
       </row>
       <row>
-        <cell>
-                            goto
-                        </cell>
-        <cell>
-                            x,y
-                        </cell>
-        <cell>
-                            Move the turtle to position x,y
-                        </cell>
+        <cell>goto</cell>
+        <cell>x,y</cell>
+        <cell>Move the turtle to position x,y</cell>
       </row>
       <row>
-        <cell>
-                            begin_fill
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Remember the starting point for a filled polygon
-                        </cell>
+        <cell>begin_fill</cell>
+        <cell>None</cell>
+        <cell>Remember the starting point for a filled polygon</cell>
       </row>
       <row>
-        <cell>
-                            end_fill
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Close the polygon and fill with the current fill color
-                        </cell>
+        <cell>end_fill</cell>
+        <cell>None</cell>
+        <cell>Close the polygon and fill with the current fill color</cell>
       </row>
       <row>
-        <cell>
-                            dot
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Leave a dot at the current position
-                        </cell>
+        <cell>dot</cell>
+        <cell>None</cell>
+        <cell>Leave a dot at the current position</cell>
       </row>
       <row>
-        <cell>
-                            stamp
-                        </cell>
-        <cell>
-                            None
-                        </cell>
-        <cell>
-                            Leaves an impression of a turtle shape at the current location
-                        </cell>
+        <cell>stamp</cell>
+        <cell>None</cell>
+        <cell>Leaves an impression of a turtle shape at the current location</cell>
       </row>
       <row>
-        <cell>
-                            shape
-                        </cell>
-        <cell>
-                            shapename
-                        </cell>
-        <cell>
-                            Can be set to &#x2018;arrow', &#x2018;triangle', &#x2018;classic', &#x2018;turtle', &#x2018;circle', or &#x2018;square'
-                        </cell>
+        <cell>shape</cell>
+        <cell>shapename</cell>
+        <cell>Can be set to &#x2018;arrow', &#x2018;triangle', &#x2018;classic', &#x2018;turtle', &#x2018;circle', or &#x2018;square'</cell>
       </row>
       <row>
-        <cell>
-                            speed
-                        </cell>
-        <cell>
-                            integer
-                        </cell>
-        <cell>
-                            0 = no animation, fastest; 1 = slowest; 10 = very fast
-                        </cell>
+        <cell>speed</cell>
+        <cell>integer</cell>
+        <cell>0 = no animation, fastest; 1 = slowest; 10 = very fast</cell>
       </row>
     </tabular>
   </table>
@@ -272,7 +158,7 @@ alex.speed(10)
   </p>
   <p>Let's do an example that shows off some of these new features. Note that the code below uses a for loop
             to make the turtle move repeatedly 30 times. We'll cover for loops in the next chapter.</p>
-  <program label="ac3_14_1" interactive="activecode" language="python">
+  <program label="ac3_14_1" interactive="activecode" language="python" codelens="no">
     <input>
 import turtle
 wn = turtle.Screen()
