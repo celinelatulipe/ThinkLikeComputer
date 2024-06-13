@@ -200,7 +200,7 @@ flower()
             def star():
               """Draws squares in rotation around a point to form a window"""
               num_squares = 5
-              angle = 360/num_squares               # turn 90 degrees before drawing each square
+              angle = 360/num_squares               # turn 72 degrees before drawing each square
               for _ in range(num_squares):
                 amy.right(angle)
                 square()
@@ -258,7 +258,7 @@ flower()
             <p>Assumptions are not needed in this code</p>
           </statement>
           <feedback>
-            <p>While assumptions and docstrings are technically not needed to run code, It is very helpful to help you understand why the code was written the way it was.</p>
+            <p>While assumptions and docstrings are technically not needed to run code, They are needed to help you understand what the programmer was trying to achieve.</p>
           </feedback>
         </choice>
         <choice correct="yes">
