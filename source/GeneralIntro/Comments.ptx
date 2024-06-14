@@ -28,7 +28,7 @@ print("Hello, World!")     # Isn't this easy!
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question_comment_purpose">
+  <exercise xml:id="question1_10_1" label="question1_10_1">
     <statement>
       <p>What are comments for?</p>
     </statement>

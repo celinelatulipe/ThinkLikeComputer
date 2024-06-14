@@ -58,10 +58,8 @@
       <p>Formal languages mean exactly what they say.  On the other hand,
                             natural languages are full of idiom and metaphor. If someone says, <q>The
                             other shoe fell</q>, there is probably no shoe and nothing falling.</p>
-      <note>
-        <p>You'll need to find the original joke to understand the idiomatic
-                                meaning of the other shoe falling.</p>
-      </note>
+        <p><em>Note: You'll need to find the original joke to understand the idiomatic
+                                meaning of the other shoe falling.</em></p>
     </gi>
   </glossary>
   <p>People who grow up speaking a natural language&#x2014;that is, everyone&#x2014;often have a hard
@@ -93,7 +91,7 @@
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question_natural_vs_formal">
+  <exercise xml:id="question1_6_1" label="question1_6_1">
     <statement>
       <p>The differences between natural and formal languages include:</p>
     </statement>
@@ -132,7 +130,7 @@
       </choice>
     </choices>
   </exercise>
-  <exercise label="question_readingTF">
+  <exercise xml:id="question1_6_2" label="question1_6_2">
     <statement>
       <p>True or False:  Reading a program is like reading other kinds of text.</p>
     </statement>

@@ -30,7 +30,7 @@ print("Hello, World!")
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question_print_statement">
+  <exercise xml:id="question1_7_1" label="question1_7_1">
     <statement>
       <p>The print() statement:</p>
     </statement>

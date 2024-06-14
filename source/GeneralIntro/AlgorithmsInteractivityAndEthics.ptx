@@ -11,8 +11,7 @@
                 the problem solving process are also important.  In computer science, we refer to these solutions
                 as <term>algorithms</term>.  An algorithm is a step by step list of instructions that if followed exactly will solve the problem under consideration.</p>
     <p>For example, an algorithm to compute the area of a circle given its radius might look like this:</p>
-    <note>
-      <title>Algorithm Example 1 (English)</title>
+    <p><term>Algorithm Example 1 (English)</term></p>
       <p>
         <ol>
           <li>
@@ -26,14 +25,12 @@
           </li>
         </ol>
       </p>
-    </note>
     <p>Notice that this algorithm consists of a set of numbered steps. It is written in English, for ease of
                 understanding. Although simple algorithms are easily understood when written in English, more complicated
                 algorithms need more precise notation. For improved precision, algorithms are often written in pseudocode. <term>Pseudocode</term> is
                 a notation that is more precise than English but generally not as precise as a programming language.
                 The same algorithm expressed in pseudocode might look something like this:</p>
-    <note>
-      <title>Algorithm Example 2 (Pseudocode)</title>
+      <p><term>Algorithm Example 2 (Pseudocode)</term></p>
       <p>
         <ol>
           <li>
@@ -47,7 +44,6 @@
           </li>
         </ol>
       </p>
-    </note>
     <p>Note how the pseudocode example expresses step 2 more precisely, specifying the formula in mathematical
                 terms.</p>
     <p>Our goal in computer science is to take a problem and develop an algorithm that can serve as a general solution.
@@ -130,7 +126,7 @@ print("The area of a circle with radius", radius, "is:", area)
     <p>
       <term>Check your understanding</term>
     </p>
-    <exercise label="question_what_is_alg">
+    <exercise xml:id="question1_3_1" label="question1_3_1">
       <statement>
         <p>An algorithm is:</p>
       </statement>
@@ -169,7 +165,7 @@ print("The area of a circle with radius", radius, "is:", area)
         </choice>
       </choices>
     </exercise>
-    <exercise label="question_program_output">
+    <exercise xml:id="question1_3_2" label="question1_3_2">
       <statement>
         <p>The output of a program that an end user typically sees is:</p>
       </statement>
@@ -208,7 +204,7 @@ print("The area of a circle with radius", radius, "is:", area)
         </choice>
       </choices>
     </exercise>
-    <exercise label="ethics_try">
+    <exercise xml:id="question1_3_3" label="question1_3_3">
       <statement>
         <p>Which of the following scenarios would the programmer's decision affect the ethics of the product/result?</p>
       </statement>
