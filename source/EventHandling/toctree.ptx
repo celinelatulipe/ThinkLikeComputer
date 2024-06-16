@@ -12,6 +12,7 @@
         <xi:include href='./Event-BasedCompleteExample.ptx' />
         <xi:include href='./Event-BasedExample-OO.ptx' />
         <xi:include href='./EthicalDesignChoices.ptx' />
+        <xi:include href='./Glossary_10.ptx' />
         <!-- <xi:include href='./..   Exercises.ptx' />
         <xi:include href='./..   ChapterAssessment.ptx' /> -->
     </chapter>
