@@ -97,7 +97,7 @@ print(2 + 3)
     <p>
       <term>Check your understanding</term>
     </p>
-    <exercise label="question_what_is_source_code">
+    <exercise xml:id="question1_4_1" label="question1_4_1">
       <statement>
         <p>Source code is another name for:</p>
       </statement>
@@ -136,7 +136,7 @@ print(2 + 3)
         </choice>
       </choices>
     </exercise>
-    <exercise label="question_high_vs_low_language">
+    <exercise xml:id="question1_4_2" label="question1_4_2">
       <statement>
         <p>What is the difference between a high-level programming language and a low-level programming language?</p>
       </statement>
@@ -175,7 +175,7 @@ print(2 + 3)
         </choice>
       </choices>
     </exercise>
-    <exercise label="question_compiler_vs_interpreter">
+    <exercise xml:id="question1_4_3" label="question1_4_3">
       <statement>
         <p>Pick the best replacements for <term>1</term> and <term>2</term> in the following sentence: When comparing compilers and interpreters, a compiler is like <term>1</term> while an interpreter is like <term>2</term>.</p>
       </statement>
@@ -214,7 +214,7 @@ print(2 + 3)
         </choice>
       </choices>
     </exercise>
-    <exercise label="question_activecode_interpreter">
+    <exercise xml:id="question1_4_4" label="question1_4_4">
       <statement>
         <p>The ActiveCode interpreter allows you to (select all that apply):</p>
       </statement>
@@ -253,7 +253,7 @@ print(2 + 3)
         </choice>
       </choices>
     </exercise>
-    <exercise label="question_codelens">
+    <exercise xml:id="question1_4_5" label="question1_4_5">
       <statement>
         <p>CodeLens allows you to (select all that apply):</p>
       </statement>

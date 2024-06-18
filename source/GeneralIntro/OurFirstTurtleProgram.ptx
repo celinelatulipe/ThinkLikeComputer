@@ -39,7 +39,7 @@ antara.forward(75)          # complete the second side of a rectangle
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question_turtle_direction">
+  <exercise xml:id="question1_12_1" label="question1_12_1">
     <statement>
       <p>Which direction does the Turtle face when it is created?</p>
     </statement>
@@ -80,7 +80,7 @@ antara.forward(75)          # complete the second side of a rectangle
   </exercise>
   <p><term>Mixed up programs</term>
             Throughout this textbook, you'll see many examples of &#x2018;Mixed up programs' like the one below. These are also known as Parsons' Problems. These are really helpful exercises for new programmers, because they allow you to focus just on the sequencing of the program, and not worry about the syntax (i.e. you don't have to worry about making typos or remembering exactly how a program instruction is supposed to be written). Drag the blocks from the grey box on the left to the yellow box on the right, putting them in the correct order. Click the &#x2018;Check' button to test your solution.</p>
-  <exercise label="pp_turtle_capital_L" indentation="hide" language="python">
+  <exercise xml:id="pp_1_12_2" label="pp_1_12_2" indentation="hide" language="python">
     <statement>
       <p>The following program uses a turtle to draw a capital L as shown in the picture to the left of this text:</p>
       <image source="GeneralIntro/Figures/TurtleL4.png" width="75%" alt="image of a navigational compass and a letter L which is drawn by Turtle"/>
@@ -103,7 +103,7 @@ antara.forward(75)          # complete the second side of a rectangle
       </block>
     </blocks>
   </exercise>
-  <exercise label="pp_turtle_checkmark" indentation="hide" language="python">
+  <exercise xml:id="pp_1_12_3" label="pp_1_12_3" indentation="hide" language="python">
     <statement>
       <p>The following program uses a turtle to draw a checkmark as shown to the left,</p>
       <image source="GeneralIntro/Figures/TurtleCheckmark4.png" width="75%" alt="image of a navigational compass and a checkmark which is drawn by Turtle."/>
@@ -130,7 +130,7 @@ antara.forward(75)          # complete the second side of a rectangle
       </block>
     </blocks>
   </exercise>
-  <exercise label="pp_turtle_line_to_west" indentation="hide" language="python">
+  <exercise xml:id="pp_1_12_4" label="pp_1_12_4" indentation="hide" language="python">
     <statement>
       <p>The following program uses a turtle to draw a single line to the west as shown to the left:</p>
       <image source="GeneralIntro/Figures/TurtleLineToWest.png" width="75%" alt="image of a line moving in west direction drawn by Turtle. Turtle uses following steps: left turn of 180 degrees, and 75 pixels long line"/>

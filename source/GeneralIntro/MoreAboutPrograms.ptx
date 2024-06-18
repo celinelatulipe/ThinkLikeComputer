@@ -89,7 +89,7 @@ print(grocery_list)
     <p>
       <term>Check your understanding</term>
     </p>
-    <exercise label="question_what_is_program">
+    <exercise xml:id="question1_5_1" label="question1_5_1">
       <statement>
         <p>A program is:</p>
       </statement>

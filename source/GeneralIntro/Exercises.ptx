@@ -2,12 +2,9 @@
     <section xml:id="Chapter1_chapter-assessment">
         <title>Chapter Assessment</title>
         <p><term>Check your understanding</term></p>
-
-    <exercise xml:id="assess_question1_1_1">
+    <exercise xml:id="assess_question1_14_1" label="assess_question1_14_1">
         <statement>
-
         <p>Why create an algorithm?</p>
-
         </statement>
 <choices>
 
@@ -49,13 +46,12 @@
 </choices>
 
     </exercise>
-
-<exercise xml:id="assess_question1_1_2">
+<exercise xml:id="assess_question1_14_2" label="assess_question1_14_2">
     <statement>
         <p>Write code to print out the phrase “Hello World”.</p>
 
     </statement>
-    <program xml:id="assess_question1_1_2_editor" interactive="activecode" language="python">
+    <program xml:id="assess_question1_14_2_editor" label="assess_question1_14_2_editor" interactive="activecode" language="python">
 
         <input>
         </input>
@@ -72,8 +68,7 @@
 
     </program>
 </exercise>
-
-    <exercise xml:id="assess_question1_1_3">
+<exercise xml:id="assess_question1_14_3" label="assess_question1_14_3">
         <statement>
 
         <p>What will be output to the console when the following program is run?</p>
