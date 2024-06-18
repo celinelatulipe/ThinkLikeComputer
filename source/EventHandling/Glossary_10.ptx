@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<section xml:id="debugging-and-modules_glossary">
+  <title>Glossary</title>
+  <glossary sorted="False">
+    <gi>
+      <title>Batch Program</title>
+      <p>A program with simple architecture that starts, runs through its code instructions (which can include calling functions) before reaching the end of its instructions and closing itself. Batch programs never wait for an input from the user, besides hitting the start button to run the program. </p>
+    </gi>
+    <gi>
+      <title>Event Based Program</title>
+      <p>An interactive program that begins by opening a graphical interface for the user to interact with and then waits for an input from the user before returning a response. These types of programs are usually much more complicated than Batch programs and require user input while the code is running as well as to terminate the code. 
+       </p>
+    </gi>
+    <gi>
+      <title>Event Handler Function</title>
+      <p>Event handlers are functions that only run in response to an input from a user. The two types of inputs event handlers can accept are user interactions via widgets and user interactions within a window. Event handlers must be registered on separate lines of code from the functions they run to allow them to receive inputs from the user. </p>
+    </gi>
+    <gi>
+      <title>Graphical Interface</title>
+      <p>Any type of visual representation of the interactions between a user and a computer or program (ex: windows, icons, menus, etc...).</p>
+    </gi>
+    <gi>
+      <title>Labels</title>
+      <p>Static elements of a graphical interface that cannot be interacted with but can be changed by other elements of the interface (widgets). Their purpose is simply to provide information by displaying text or images. </p>
+    </gi>
+    <gi>
+      <title>Simple Graphical User Interface (SimpleGUI)</title>
+      <p>A python-based code module designed by CodeSkulptor3 to create a graphical user interface in your web browser.</p>
+    </gi>
+    <gi>
+      <title>Toolkits</title>
+      <p>Importable code modules that allow the programmer to make use of simplified documentation to run complex functions. The Turtle module from earlier in this textbook and the Simple GUI module are both examples of toolkits.</p>
+    </gi>
+    <gi>
+      <title>UI Widget Handlers</title>
+      <p>Event handlers that only run in response to a user input from their corresponding widget or interface control. Types of widgets include: text boxes, sliders, buttons, scrollbars, etc...</p>
+    </gi>
+    <gi>
+      <title>Window Based Input Event Handlers</title>
+      <p>Event handlers that only run in response to specific user inputs within a window, these inputs include: keypresses, mouse clicks, mouse drags, releasing a pressed down key, etc...</p>
+    </gi>
+  </glossary>
+</section>

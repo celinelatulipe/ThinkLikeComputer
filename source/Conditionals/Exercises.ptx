@@ -5,7 +5,7 @@
 
                 <exercise xml:id="ch6_ex_1"><statement>
                         <p>Write code that iterates through the given list "scores" and checks which letter grade each score has earned. In response, it should add the corresponding letter grade to the empty list "grades", according to the table below.</p>
-                        <table><tabular>
+                        <tabular>
                                     <row header="yes">
                                         <cell>
                                             Score
@@ -58,7 +58,7 @@
                                     </row>
                                 
                             
-                        </tabular></table>
+                        </tabular>
                         <p>The square and round brackets denote closed and open intervals.
                             A closed interval includes the number, and open interval excludes it. So 79.99999 gets grade C , but 80 gets grade B.</p>
 
@@ -147,7 +147,7 @@ myTests().main()
 
                 <exercise xml:id="ch6_ex_2"><statement>
                         <p>A year is a <term>leap year</term> if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is <term>also</term> evenly divisible by 400 then it is a leap year. Write code that iterates through the given list of years and adds leap years to a list called "is_leap_year". Use if statements.</p>
-                        <table><tabular>
+                        <tabular>
                             
                                 
                                 
@@ -220,7 +220,7 @@ myTests().main()
                                     </row>
                                 
                             
-                        </tabular></table>
+                        </tabular>
                         <p>Above are some examples of what the output should be for various inputs.</p>
 
     </statement><program interactive="activecode" language="python">
@@ -407,8 +407,8 @@ myTests().main()
                 <input>
                     a &lt; b
                     a &lt; b
-                    a &lt; b and day != 3
-                    a &lt; b or day == 3
+                    a &lt; 18 or day != 3
+                    a &lt; 18 and day == 3
                 </input>
             
             </program></solution></exercise>
