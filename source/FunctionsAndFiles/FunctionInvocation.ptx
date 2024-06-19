@@ -27,7 +27,7 @@ hello()  # do it again, just because we can...
             diagram that object is labeled hello() with a notation above it that it is a function.</p>
   <p>At Step 2, the next line of code to execute is line 5. Just to emphasize that hello is a variable like any other, and
             that functions are python objects like any other, just of a particular type, line 5 prints out the type of the object
-            referred to by the variable hello. It's type is officially &#x2018;function'.</p>
+            referred to by the variable hello. It's type is officially 'function'.</p>
   <p>Line 6 is just there to remind you of the difference between referring to the
             variable name (function name) hello and referring to the string <q>hello</q>.</p>
   <p>At Step 4 we get to line 8, which has an invocation of the function. The way function invocation works is that the

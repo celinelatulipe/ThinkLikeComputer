@@ -99,21 +99,37 @@ olympicsfile.close()
     <tests>
     </tests>
   </program>
+
+  <raw format="html" xml:space="preserve"><pre id="olympics.txt">
+    Name,Sex,Age,Team,Event,Medal
+    A Dijiang,M,24,China,Basketball,NA
+    A Lamusi,M,23,China,Judo,NA
+    Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
+    Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
+    Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
+    Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
+    Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
+    Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
+    John Aalberg,M,31,United States,Cross Country Skiing,NA
+    John Aalberg,M,33,United States,Cross Country Skiing,NA
+    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
+    Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
+    "Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
+    Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
+    Jyri Tapani Aalto,M,31,Finland,Badminton,NA
+    Minna Maarit Aalto,F,30,Finland,Sailing,NA
+    Minna Maarit Aalto,F,34,Finland,Sailing,NA
+    Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
+    Timo Antero Aaltonen,M,31,Finland,Athletics,NA
+    Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
+      </pre></raw>
+
   <p>
     <term>Check your Understanding</term>
   </p>
-  <raw format="html" xml:space="preserve">&lt;pre id="school_prompt.txt"&gt;
-Writing essays for school can be difficult but
-many students find that by researching their topic that they
-have more to say and are better informed. Here at the university
-we require many undergraduate students to take a first year writing requirement
-so that they can
-have a solid foundation for their writing skills. This comes
-in handy for many students.
-Different schools have different requirements, but everyone uses
-writing at some point in their academic career, be it essays, research papers,
-technical write ups, or scripts.
-&lt;/pre&gt;</raw>
   <exercise label="ac5_8_2">
     <statement>
       <p>
@@ -142,19 +158,18 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve">&lt;pre id="travel_plans.txt"&gt;
-This summer I will be travelling.
-I will go to...
-Italy: Rome
-Greece: Athens
-England: London, Manchester
-France: Paris, Nice, Lyon
-Spain: Madrid, Barcelona, Granada
-Austria: Vienna
-I will probably not even want to come back!
-However, I wonder how I will get by with all the different languages.
-I only know English!
-&lt;/pre&gt;</raw>
+  <raw format="html" xml:space="preserve"><pre id="school_prompt.txt">
+    Writing essays for school can be difficult but
+    many students find that by researching their topic that they
+    have more to say and are better informed. Here at the university
+    we require many undergraduate students to take a first year writing requirement
+    so that they can
+    have a solid foundation for their writing skills. This comes
+    in handy for many students.
+    Different schools have different requirements, but everyone uses
+    writing at some point in their academic career, be it essays, research papers,
+    technical write ups, or scripts.
+      </pre></raw>
   <exercise label="ac5_8_3">
     <statement>
       <p>
@@ -183,15 +198,19 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve">&lt;pre id="emotion_words.txt"&gt;
-Sad upset blue down melancholy somber bitter troubled
-Angry mad enraged irate irritable wrathful outraged infuriated
-Happy cheerful content elated joyous delighted lively glad
-Confused disoriented puzzled perplexed dazed befuddled
-Excited eager thrilled delighted
-Scared afraid fearful panicked terrified petrified startled
-Nervous anxious jittery jumpy tense uneasy apprehensive
-&lt;/pre&gt;</raw>
+  <raw format="html" xml:space="preserve"><pre id="travel_plans.txt">
+    This summer I will be travelling.
+    I will go to...
+    Italy: Rome
+    Greece: Athens
+    England: London, Manchester
+    France: Paris, Nice, Lyon
+    Spain: Madrid, Barcelona, Granada
+    Austria: Vienna
+    I will probably not even want to come back!
+    However, I wonder how I will get by with all the different languages.
+    I only know English!
+      </pre></raw>
   <exercise label="ac5_8_4">
     <statement>
       <p>
@@ -219,36 +238,20 @@ myTests().main()
     </tests>
     </program>
   </exercise>
+  <raw format="html" xml:space="preserve"><pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+      </pre></raw>
   <DataFileNode line="188" runestone_options="{'fromfile': 'travel_plans.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'travel_plans2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'This summer I will be travelling.\nI will go to...\nItaly: Rome\nGreece: Athens\nEngland: London, Manchester\nFrance: Paris, Nice, Lyon\nSpain: Madrid, Barcelona, Granada\nAustria: Vienna\nI will probably not even want to come back!\nHowever, I wonder how I will get by with all the different languages.\nI only know English!\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.5'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
         </DataFileNode>
   <DataFileNode line="192" runestone_options="{'fromfile': 'school_prompt.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'school_prompt2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'Writing essays for school can be difficult but\nmany students find that by researching their topic that they\nhave more to say and are better informed. Here are the university\nwe require many undergraduate students to take a first year writing requirement\nso that they can\nhave a solid foundation for their writing skills. This comes\nin handy for many students.\nDifferent schools have different requirements, but everyone uses\nwriting at some point in their academic career, be it essays, research papers,\ntechnical write ups, or scripts.\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.6'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
         </DataFileNode>
   <DataFileNode line="196" runestone_options="{'fromfile': 'emotion_words.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'emotion_words2.txt', 'qnumber': '', 'cols': 62, 'rows': 20, 'filecontent': 'Sad upset blue down melancholy somber bitter troubled\nAngry mad enraged irate irritable wrathful outraged infuriated\nHappy cheerful content elated joyous delighted lively glad\nConfused disoriented puzzled perplexed dazed befuddled\nExcited eager thrilled delighted\nScared afraid fearful panicked terrified petrified startled\nNervous anxious jittery jumpy tense uneasy apprehensive\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.7'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
         </DataFileNode>
-  <raw format="html" xml:space="preserve">&lt;pre hidden id="olympics.txt"&gt;
-Name,Sex,Age,Team,Event,Medal
-A Dijiang,M,24,China,Basketball,NA
-A Lamusi,M,23,China,Judo,NA
-Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
-Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
-Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
-Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
-Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
-Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
-Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
-Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
-John Aalberg,M,31,United States,Cross Country Skiing,NA
-John Aalberg,M,33,United States,Cross Country Skiing,NA
-"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
-"Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
-Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
-"Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
-Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
-Jyri Tapani Aalto,M,31,Finland,Badminton,NA
-Minna Maarit Aalto,F,30,Finland,Sailing,NA
-Minna Maarit Aalto,F,34,Finland,Sailing,NA
-Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
-Timo Antero Aaltonen,M,31,Finland,Athletics,NA
-Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
-&lt;/pre&gt;</raw>
+
 </section>

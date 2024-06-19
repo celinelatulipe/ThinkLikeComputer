@@ -16,7 +16,7 @@ print(sentences)
     <tests>
     </tests>
   </program>
-  <p>The <c>\n</c> uses the backslash character as an &#x2018;escape' character. The backslash tells the Python interpreter that the
+  <p>The <c>\n</c> uses the backslash character as an 'escape' character. The backslash tells the Python interpreter that the
             next character is not a normal part of the string, but means something special. In this case, the <em>n</em> after the \ tells
             the Python interpreter that a new line is needed. When you open a .txt file and there are separate lines of text, there is
             essentially an invisible <c>\n</c> at the end of each line.</p>
@@ -65,7 +65,7 @@ olympicsfile.close()
     <tests>
     </tests>
   </program>
-  <raw format="html" xml:space="preserve">&lt;pre hidden id="olympics.txt"&gt;
+  <raw format="html" xml:space="preserve"><pre id="olympics.txt">
 Name,Sex,Age,Team,Event,Medal
 A Dijiang,M,24,China,Basketball,NA
 A Lamusi,M,23,China,Judo,NA
@@ -90,19 +90,10 @@ Minna Maarit Aalto,F,34,Finland,Sailing,NA
 Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
 Timo Antero Aaltonen,M,31,Finland,Athletics,NA
 Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
-&lt;/pre&gt;</raw>
+  </pre></raw>
   <p>
     <term>Check your Understanding</term>
   </p>
-  <raw format="html" xml:space="preserve">&lt;pre id="emotion_words.txt"&gt;
-Sad upset blue down melancholy somber bitter troubled
-Angry mad enraged irate irritable wrathful outraged infuriated
-Happy cheerful content elated joyous delighted lively glad
-Confused disoriented puzzled perplexed dazed befuddled
-Excited eager thrilled delighted
-Scared afraid fearful panicked terrified petrified startled
-Nervous anxious jittery jumpy tense uneasy apprehensive
-&lt;/pre&gt;</raw>
   <exercise label="ac5_9_4">
     <statement>
       <p>
@@ -132,4 +123,13 @@ myTests().main()
     </tests>
     </program>
   </exercise>
+  <raw format="html" xml:space="preserve"><pre id="emotion_words.txt">
+    Sad upset blue down melancholy somber bitter troubled
+    Angry mad enraged irate irritable wrathful outraged infuriated
+    Happy cheerful content elated joyous delighted lively glad
+    Confused disoriented puzzled perplexed dazed befuddled
+    Excited eager thrilled delighted
+    Scared afraid fearful panicked terrified petrified startled
+    Nervous anxious jittery jumpy tense uneasy apprehensive
+      </pre></raw>
 </section>
