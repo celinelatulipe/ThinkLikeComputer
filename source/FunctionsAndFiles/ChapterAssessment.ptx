@@ -228,11 +228,12 @@ myTests().main()
 
   <exercise label="assess_ch5_10_lh">
     <statement>
-     <p>The hello function is in the <BlankNode/> scope, while var_x is in the <BlankNode/> scope.</p>
+      <p>:</p>
+      <image source="FunctionsAndFiles/Figures/cdq5-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+      <p>The hello function is in the <BlankNode/> scope, while var_x is in the <BlankNode/> scope.</p>
     </statement>
     <setup>
       <var>
-        <image source="FunctionsAndFiles/Figures/cdq5-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
       </var>
       <var>
         <condition string="^\s*global\s*$">
