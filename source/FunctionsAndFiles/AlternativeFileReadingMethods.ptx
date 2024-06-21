@@ -100,7 +100,7 @@ olympicsfile.close()
     </tests>
   </program>
 
-  <datafile xml:id="olympics_textfile2" label="olympics.txt" filename="olympics.txt">
+  <datafile xml:id="olympics_textfile2" filename="olympics.txt">
     <pre source="FunctionsAndFiles/olympics.txt"></pre>
   </datafile>
 
@@ -137,7 +137,7 @@ myTests().main()
   </exercise>
 
   <datafile xml:id="school_prompt_txtfile" label="school_prompt2.txt" filename="school_prompt2.txt">
-    <pre source="FunctionsAndFiles/school_prompt"></pre>
+    <pre source="FunctionsAndFiles/school_prompt/TextFiles"></pre>
   </datafile>
 
   <exercise label="ac5_8_3">
