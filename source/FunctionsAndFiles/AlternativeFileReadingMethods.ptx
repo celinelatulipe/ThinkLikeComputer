@@ -85,7 +85,7 @@
   </note>
   <p>The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly
             gets a different line each time, as the file is <term>used up</term>.</p>
-  <program label="ac5_8_1" interactive="activecode" language="python">
+  <program label="ac5_8_1" interactive="activecode" language="python" codelens="no">
     <input>
 olympicsfile = open("olympics.txt", "r")
 
@@ -116,7 +116,7 @@ olympicsfile.close()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_2_editor" interactive="activecode" language="python">
+    <program label="ac5_8_2_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====
@@ -149,7 +149,7 @@ myTests().main()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_3_editor" interactive="activecode" language="python">
+    <program label="ac5_8_3_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====
@@ -182,7 +182,7 @@ myTests().main()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_4_editor" interactive="activecode" language="python">
+    <program label="ac5_8_4_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====

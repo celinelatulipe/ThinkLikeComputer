@@ -8,7 +8,7 @@
             <c>open</c>. When we are finished with the file, we can close it by using
             the <c>close</c> method. After the file is closed any further attempts to
             use <c>fileref</c> will result in an error.</p>
-  <program label="ac5_7_1" interactive="activecode" language="python">
+  <program label="ac5_7_1" interactive="activecode" language="python" codelens="no">
     <input>
 fileref = open("olympics.txt", "r")
 ## other code here that refers to variable fileref
