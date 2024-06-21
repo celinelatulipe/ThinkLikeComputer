@@ -103,6 +103,7 @@ olympicsfile.close()
   <datafile xml:id="olympics_textfile2" label="olympics.txt" filename="olympics.txt">
     <pre source="FunctionsAndFiles/olympics.txt"></pre>
   </datafile>
+
   <p>
     <term>Check your Understanding</term>
   </p>
@@ -134,7 +135,11 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-<!-- file here-->
+
+  <datafile xml:id="school_prompt_txtfile" label="school_prompt2.txt" filename="school_prompt2.txt">
+    <pre source="FunctionsAndFiles/school_prompt"></pre>
+  </datafile>
+
   <exercise label="ac5_8_3">
     <statement>
       <p>
