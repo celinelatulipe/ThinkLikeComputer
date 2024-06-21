@@ -196,6 +196,6 @@ myTests().main()
     </program>
   </exercise>
   <datafile xml:id="emotion_words_textfile" label="emotion_words2.txt" filename="emotion_words2.txt">
-    <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
+    <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
   </datafile>
 </section>
