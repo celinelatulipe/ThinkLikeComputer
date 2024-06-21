@@ -17,7 +17,7 @@ fileref.close()
     <tests>
     </tests>
   </program>
-    <datafile xml:id="olympics.txt" label="olympics.txt" filename="olympics.txt" hide="yes">
+    <datafile xml:id="olympics_textfile" label="olympics.txt" filename="olympics.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
     </datafile>
   <note>
