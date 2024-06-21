@@ -9,7 +9,7 @@
             the <c>close</c> method. After the file is closed any further attempts to
             use <c>fileref</c> will result in an error.</p>
 <datafile xml:id="olympics.txt" label="olympics.txt" filename="olympics.txt"> <!-- filename is what you call from activecode window -->
-    <pre source="_sources/FunctionsAndFiles/olympics.txt"></pre> <!-- must match filename in Assets/chapter folder -->
+    <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre> <!-- must match filename in Assets/chapter folder -->
     </datafile>
   <program label="ac5_7_1" interactive="activecode" language="python">
     <input>
