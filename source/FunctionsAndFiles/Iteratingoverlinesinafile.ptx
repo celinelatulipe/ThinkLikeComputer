@@ -34,7 +34,7 @@ print(sentences)
             breaks the string into a series of smaller strings, and stores the smaller strings in a list. The code on line 6 gets
             specific items out of the list and prints them out to the console. We'll cover the split() method in detail in Chapter 10.
             The important thing to see here is that the instructions inside the for loop execute, operating on each line of the file in turn.</p>
-  <program label="ac5_9_2" interactive="activecode" language="python" codeles="no">
+  <program label="ac5_9_2" interactive="activecode" language="python" codelens="no">
     <input>
 olympicsfile = open("olympics.txt", "r")
 
@@ -52,7 +52,7 @@ olympicsfile.close()
             iterate through the contents of a file one line at a time, without first reading them all into a list. Some students find this confusing initially, so we don't recommend doing it this way, until you get a
             little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared
             to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.</p>
-  <program label="ac5_9_3" interactive="activecode" language="python">
+  <program label="ac5_9_3" interactive="activecode" language="python" codelens="no">
     <input>
 olympicsfile = open("olympics.txt", "r")
 
@@ -66,7 +66,7 @@ olympicsfile.close()
     </tests>
   </program>
 
-  <datafile xml:id="olympics_textfile3" label="olympics.txt" filename="olympics.txt">
+  <datafile xml:id="olympics_textfile3" label="olympics.txt" filename="olympics.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
   </datafile>
 
@@ -103,7 +103,7 @@ myTests().main()
     </program>
   </exercise>
 
-  <datafile xml:id="emotion_words3_txt" label="emotion_words.txt" filename="emotion_words.txt">
+  <datafile xml:id="emotion_words3_txt" label="emotion_words.txt" filename="emotion_words.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 
