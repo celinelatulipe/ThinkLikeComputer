@@ -18,9 +18,7 @@
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 
-  <datafile xml:id="SP500_txt" label="SP500.txt" filename="SP500.txt" hide="yes">
-    <pre source="FunctionsAndFiles/TextFiles/SP500.txt"></pre>
-  </datafile>
+
 
   <exercise label="assess_ch5_1">
     <statement>
@@ -222,8 +220,12 @@ myTests().main()
     <tests>
     </tests>
     </program>
-
   </exercise>
+
+  <datafile xml:id="SP500_txt" label="SP500.txt" filename="SP500.txt">
+    <pre source="FunctionsAndFiles/TextFiles/SP500.txt"></pre>
+  </datafile>
+
   <exercise label="assess_ch5_10_lh">
     <statement>
       <p>: <var/>  <var/>  </p>
