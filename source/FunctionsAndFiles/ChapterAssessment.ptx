@@ -2,6 +2,10 @@
 <section xml:id="functions-and-files_chapter-assessment">
   <title>Chapter Assessment</title>
 
+  <datafile xml:id="school_prompt_txt" label="school_prompt.txt" filename="school_prompt.txt" hide="yes">
+    <pre source="FunctionsAndFiles/TextFiles/school_prompt.txt"></pre>
+  </datafile>
+
   <datafile xml:id="student_data_txt" label="studentdata.txt" filename="studentdata.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
   </datafile>
@@ -218,7 +222,7 @@ myTests().main()
     <tests>
     </tests>
     </program>
-    
+
   </exercise>
   <exercise label="assess_ch5_10_lh">
     <statement>
