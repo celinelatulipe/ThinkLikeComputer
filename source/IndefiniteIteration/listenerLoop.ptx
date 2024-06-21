@@ -32,7 +32,7 @@ print(theSum)
           <p>If you're at all unsure about how that code works, try adding print statements inside the while loop that print out the
                     values of x and theSum.</p>
           <p>You've seen a related example to this with our interactive turtle programs that have listener functions:</p>
-          <program label="ac10_3_2" interactive="activecode" language="python">
+          <program label="ac10_3_2" interactive="activecode" language="python" codelens="no">
             <input>
 import turtle
 import random
