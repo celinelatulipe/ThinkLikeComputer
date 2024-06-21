@@ -79,7 +79,7 @@
 					students that have more than six quiz scores.
 				</p>
 			</statement>
-            <program interactive="activecode" language="python">
+            <program interactive="activecode" language="python" codelens="no">
 			<input>
 # Hint: first see if you can write a program that just prints out the number of scores on each line
 # Then, make it print the number only if the number is at least six
@@ -134,7 +134,7 @@ f.close()
 				Hint: each line that has this information also has a colon <c>:</c> in it.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
+        <program interactive="activecode" language="python" codelens="no">
 		<input>
 =====
 from unittest.gui import TestCaseGui
@@ -154,7 +154,7 @@ myTests().main()
 				Create a list called <c>j_emotions</c> that contains every word in <c>emotion_words.txt</c> that begins with the letter “j”.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
+        <program interactive="activecode" language="python" codelens="no">
 		<input>
 =====
 from unittest.gui import TestCaseGui
@@ -167,5 +167,17 @@ myTests().main()
 		</tests>
 	</program>
 </exercise>
+
+<datafile xml:id="student_data_txt" label="studentdata.txt" filename="studentdata.txt" hide="yes">
+    <pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
+  </datafile>
+
+  <datafile xml:id="travel_plans3_txt" label="travel_plans.txt" filename="travel_plans.txt" hide="yes">
+    <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
+  </datafile>
+
+  <datafile xml:id="emotion_words4_txt" label="emotion_words.txt" filename="emotion_words.txt" hide="yes">
+    <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
+  </datafile>
 
 </section>
