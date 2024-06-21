@@ -20,7 +20,7 @@ fileref.close()
   <note>
     <p>A common mistake is to get confused about whether you are providing a variable name or a string literal as an input to the open function. In the code above, <q>olympics.txt</q> is a string literal that should correspond to the name of a file on your computer. If you put something without quotes, like <c>open(x, "r")</c>, it will be treated as a variable name. In this example, x should be a variable that's already been bound to a string value like <q>olympics.txt</q>.</p>
   </note>
-  <datafile xml:id="olympics.txt" label="olympics.txt" filename="olympics.txt" hidden="yes"> <!-- filename is what you call from activecode window -->
+  <datafile xml:id="olympics.txt" label="olympics.txt" filename="olympics.txt" hide="yes"> <!-- filename is what you call from activecode window -->
     <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre> <!-- must match filename in Assets/chapter folder -->
     </datafile>
 </section>
