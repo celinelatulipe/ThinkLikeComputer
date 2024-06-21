@@ -198,7 +198,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 				Your solution should work for any sequence of experimental data.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python">
+        <program interactive="activecode" language="python" codelens="no">
 		<prefix>
 		</prefix>
 		<input>
