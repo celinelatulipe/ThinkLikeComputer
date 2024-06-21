@@ -134,7 +134,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <datafile xml:id="school_prompt2.txt" label="school_prompt2.txt" filename="school_prompt2.txt">
+  <datafile xml:id="school_prompt.txt" label="school_prompt2.txt" filename="school_prompt2.txt">
     <pre source="FunctionsAndFiles/TextFiles/school_prompt.txt"></pre>
   </datafile>
   <exercise label="ac5_8_3">
@@ -165,7 +165,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <datafile xml:id="travel_plans2.txt" label="travel_plans2.txt" filename="travel_plans2.txt">
+  <datafile xml:id="travel_plans.txt" label="travel_plans2.txt" filename="travel_plans2.txt">
     <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
   </datafile>
   <exercise label="ac5_8_4">
@@ -195,7 +195,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <datafile xml:id="emotion_words2.txt" label="emotion_words2.txt" filename="emotion_words2.txt">
+  <datafile xml:id="emotion_words.txt" label="emotion_words2.txt" filename="emotion_words2.txt">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 </section>
