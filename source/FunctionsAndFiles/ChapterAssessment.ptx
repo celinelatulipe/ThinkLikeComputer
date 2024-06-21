@@ -227,25 +227,26 @@ myTests().main()
   </datafile>
 
   <exercise label="assess_ch5_10_lh">
-    <setup>
+
       <statement>
         <p>:</p>
         <image source="FunctionsAndFiles/Figures/cdq5-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
         <p>The hello function is in the <var/> scope, while var_x is in the <var/> scope.</p>
       </statement>
-      <var>
-        <condition string="^\s*global\s*$">
-          <feedback>
+        <setup>
+          <var>
+            <condition string="^\s*global\s*$">
+            <feedback>
             <p>Correct! This function is in the global scope and avalaible for use everywhere.</p>
-          </feedback>
-        </condition>
-        <condition string="^\s*.*\s*$">
-          <feedback>
+            </feedback>
+            </condition>
+            <condition string="^\s*.*\s*$">
+            <feedback>
             <p>Hmmm try again, look at the image to see the different frames</p>
-          </feedback>
-        </condition>
-      </var>
-    </setup>
+            </feedback>
+            </condition>
+          </var>
+        </setup>
   </exercise>
   <exercise label="assess_ch5_11_lh">
     <statement>
