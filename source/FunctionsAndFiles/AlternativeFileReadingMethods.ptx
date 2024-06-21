@@ -135,6 +135,10 @@ myTests().main()
     </program>
   </exercise>
 
+<datafile xml:id="school_prompt_txt" label="school_prompt2.txt" filename="school_prompt2.txt">
+  <pre source="FilesAndFunctions/TextFiles/school_prompt.txt"></pre>
+</datafile>
+
   <exercise label="ac5_8_3">
     <statement>
       <p>
