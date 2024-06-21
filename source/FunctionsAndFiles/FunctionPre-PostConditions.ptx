@@ -252,7 +252,7 @@ flower()
                 amy.right(90)
             
             def star():
-              """Draws squares in rotation around a point to form a window"""
+              """Draws squares in rotation around a point to form a star"""
               num_squares = 5
               angle = 360/num_squares               # turn 72 degrees before drawing each square
               for _ in range(num_squares):

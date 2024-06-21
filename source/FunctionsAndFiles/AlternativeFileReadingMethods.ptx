@@ -85,7 +85,7 @@
   </note>
   <p>The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly
             gets a different line each time, as the file is <term>used up</term>.</p>
-  <program label="ac5_8_1" interactive="activecode" language="python">
+  <program label="ac5_8_1" interactive="activecode" language="python" codelens="no">
     <input>
 olympicsfile = open("olympics.txt", "r")
 
@@ -99,33 +99,9 @@ olympicsfile.close()
     <tests>
     </tests>
   </program>
-
-  <raw format="html" xml:space="preserve"><pre id="olympics.txt">
-    Name,Sex,Age,Team,Event,Medal
-    A Dijiang,M,24,China,Basketball,NA
-    A Lamusi,M,23,China,Judo,NA
-    Gunnar Nielsen Aaby,M,24,Denmark,Football,NA
-    Edgar Lindenau Aabye,M,34,Denmark/Sweden,Tug-Of-War,Gold
-    Christine Jacoba Aaftink,F,21,Netherlands,Speed Skating,NA
-    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
-    Christine Jacoba Aaftink,F,25,Netherlands,Speed Skating,NA
-    Christine Jacoba Aaftink,F,27,Netherlands,Speed Skating,NA
-    Per Knut Aaland,M,31,United States,Cross Country Skiing,NA
-    Per Knut Aaland,M,33,United States,Cross Country Skiing,NA
-    John Aalberg,M,31,United States,Cross Country Skiing,NA
-    John Aalberg,M,33,United States,Cross Country Skiing,NA
-    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
-    "Cornelia ""Cor"" Aalten (-Strannood)",F,18,Netherlands,Athletics,NA
-    Antti Sami Aalto,M,26,Finland,Ice Hockey,NA
-    "Einar Ferdinand ""Einari"" Aalto",M,26,Finland,Swimming,NA
-    Jorma Ilmari Aalto,M,22,Finland,Cross Country Skiing,NA
-    Jyri Tapani Aalto,M,31,Finland,Badminton,NA
-    Minna Maarit Aalto,F,30,Finland,Sailing,NA
-    Minna Maarit Aalto,F,34,Finland,Sailing,NA
-    Pirjo Hannele Aalto (Mattila-),F,32,Finland,Biathlon,NA
-    Timo Antero Aaltonen,M,31,Finland,Athletics,NA
-    Win Valdemar Aaltonen,M,54,Finland,Art Competitions,NA
-      </pre></raw>
+  <datafile xml:id="olympics_textfile2" label="olympics.txt" filename="olympics.txt">
+    <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
+  </datafile>
 
   <p>
     <term>Check your Understanding</term>
@@ -140,7 +116,7 @@ olympicsfile.close()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_2_editor" interactive="activecode" language="python">
+    <program label="ac5_8_2_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====
@@ -158,18 +134,11 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve"><pre id="school_prompt.txt">
-    Writing essays for school can be difficult but
-    many students find that by researching their topic that they
-    have more to say and are better informed. Here at the university
-    we require many undergraduate students to take a first year writing requirement
-    so that they can
-    have a solid foundation for their writing skills. This comes
-    in handy for many students.
-    Different schools have different requirements, but everyone uses
-    writing at some point in their academic career, be it essays, research papers,
-    technical write ups, or scripts.
-      </pre></raw>
+
+<datafile xml:id="school_prompt_txt" label="school_prompt2.txt" filename="school_prompt2.txt">
+  <pre source="FunctionsAndFiles/TextFiles/school_prompt.txt"></pre>
+</datafile>
+
   <exercise label="ac5_8_3">
     <statement>
       <p>
@@ -180,7 +149,7 @@ myTests().main()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_3_editor" interactive="activecode" language="python">
+    <program label="ac5_8_3_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====
@@ -198,19 +167,11 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve"><pre id="travel_plans.txt">
-    This summer I will be travelling.
-    I will go to...
-    Italy: Rome
-    Greece: Athens
-    England: London, Manchester
-    France: Paris, Nice, Lyon
-    Spain: Madrid, Barcelona, Granada
-    Austria: Vienna
-    I will probably not even want to come back!
-    However, I wonder how I will get by with all the different languages.
-    I only know English!
-      </pre></raw>
+
+  <datafile xml:id="travel_plans2_txt" label="travel_plans2.txt" filename="travel_plans2.txt">
+    <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
+  </datafile>
+
   <exercise label="ac5_8_4">
     <statement>
       <p>
@@ -221,7 +182,7 @@ myTests().main()
         </ol>
       </p>
     </statement>
-    <program label="ac5_8_4_editor" interactive="activecode" language="python">
+    <program label="ac5_8_4_editor" interactive="activecode" language="python" codelens="no">
       <input>
 
 =====
@@ -238,20 +199,9 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <raw format="html" xml:space="preserve"><pre id="emotion_words.txt">
-    Sad upset blue down melancholy somber bitter troubled
-    Angry mad enraged irate irritable wrathful outraged infuriated
-    Happy cheerful content elated joyous delighted lively glad
-    Confused disoriented puzzled perplexed dazed befuddled
-    Excited eager thrilled delighted
-    Scared afraid fearful panicked terrified petrified startled
-    Nervous anxious jittery jumpy tense uneasy apprehensive
-      </pre></raw>
-  <DataFileNode line="188" runestone_options="{'fromfile': 'travel_plans.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'travel_plans2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'This summer I will be travelling.\nI will go to...\nItaly: Rome\nGreece: Athens\nEngland: London, Manchester\nFrance: Paris, Nice, Lyon\nSpain: Madrid, Barcelona, Granada\nAustria: Vienna\nI will probably not even want to come back!\nHowever, I wonder how I will get by with all the different languages.\nI only know English!\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.5'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
-        </DataFileNode>
-  <DataFileNode line="192" runestone_options="{'fromfile': 'school_prompt.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'school_prompt2.txt', 'qnumber': '', 'cols': 65, 'rows': 20, 'filecontent': 'Writing essays for school can be difficult but\nmany students find that by researching their topic that they\nhave more to say and are better informed. Here are the university\nwe require many undergraduate students to take a first year writing requirement\nso that they can\nhave a solid foundation for their writing skills. This comes\nin handy for many students.\nDifferent schools have different requirements, but everyone uses\nwriting at some point in their academic career, be it essays, research papers,\ntechnical write ups, or scripts.\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.6'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
-        </DataFileNode>
-  <DataFileNode line="196" runestone_options="{'fromfile': 'emotion_words.txt', 'hide': None, 'subchapter': 'AlternativeFileReadingMethods', 'chapter': 'FunctionsAndFiles', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'emotion_words2.txt', 'qnumber': '', 'cols': 62, 'rows': 20, 'filecontent': 'Sad upset blue down melancholy somber bitter troubled\nAngry mad enraged irate irritable wrathful outraged infuriated\nHappy cheerful content elated joyous delighted lively glad\nConfused disoriented puzzled perplexed dazed befuddled\nExcited eager thrilled delighted\nScared afraid fearful panicked terrified petrified startled\nNervous anxious jittery jumpy tense uneasy apprehensive\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.8.7'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/AlternativeFileReadingMethods.rst">
-        </DataFileNode>
+
+  <datafile xml:id="emotion_words2_txt" label="emotion_words2.txt" filename="emotion_words2.txt">
+    <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
+  </datafile>
 
 </section>
