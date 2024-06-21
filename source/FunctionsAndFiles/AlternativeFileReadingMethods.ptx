@@ -99,8 +99,7 @@ olympicsfile.close()
     <tests>
     </tests>
   </program>
-
-  <datafile xml:id="olympics_textfile2" filename="olympics.txt">
+  <datafile xml:id="olympics_textfile2" label="olympics.txt" filename="olympics.txt">
     <pre source="FunctionsAndFiles/olympics.txt"></pre>
   </datafile>
 
