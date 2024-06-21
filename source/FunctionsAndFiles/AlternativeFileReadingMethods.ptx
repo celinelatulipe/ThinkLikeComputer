@@ -163,9 +163,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <datafile xml:id="travel_plans.txt" label="travel_plans2.txt" filename="travel_plans2.txt">
-    <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
-  </datafile>
+<!-- file here-->>
   <exercise label="ac5_8_4">
     <statement>
       <p>
