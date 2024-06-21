@@ -102,7 +102,7 @@ olympicsfile.close()
 
   <datafile xml:id="olympics.txt" label="olympics.txt" filename="olympics.txt">
     <pre source="FunctionsAndFiles/olympics.txt"></pre>
-
+  </datafile>
   <p>
     <term>Check your Understanding</term>
   </p>
