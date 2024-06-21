@@ -49,7 +49,7 @@ while the turtle is still in the window:
             we already know how to do well and get them working. Since having it always return True would not
             be a good idea we will write our version to decide randomly. Let's say that there is a 90% chance
             the turtle is still in the window and 10% that the turtle has escaped.</p>
-  <program label="ac10_4_1" interactive="activecode" language="python">
+  <program label="ac10_4_1" interactive="activecode" language="python" codelens="no">
     <input>
 import random
 import turtle
@@ -118,7 +118,7 @@ def isInScreen(wn,t):
             the value to <c>False</c>.  You could rewrite this to use nested conditionals or <c>elif</c>
             statements and set <c>stillIn</c> to <c>True</c> in an else clause.</p>
   <p>Here is the full version of our random walk program.</p>
-  <program label="ac10_4_2" interactive="activecode" language="python">
+  <program label="ac10_4_2" interactive="activecode" language="python" codelens="no">
     <input>
 import random
 import turtle
