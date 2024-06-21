@@ -227,14 +227,12 @@ myTests().main()
   </datafile>
 
   <exercise label="assess_ch5_10_lh">
-    <statement>
-      <p>:</p>
-      <image source="FunctionsAndFiles/Figures/cdq5-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
-      <p>The hello function is in the <BlankNode/> scope, while var_x is in the <BlankNode/> scope.</p>
-    </statement>
     <setup>
-      <var>
-      </var>
+      <statement>
+        <p>:</p>
+        <image source="FunctionsAndFiles/Figures/cdq5-1.png" width="100%" alt="image of numerous variables being declared and assigned values"/>
+        <p>The hello function is in the <var/> scope, while var_x is in the <var/> scope.</p>
+      </statement>
       <var>
         <condition string="^\s*global\s*$">
           <feedback>
