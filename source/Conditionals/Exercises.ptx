@@ -405,7 +405,7 @@ myTests().main()
         <solution>
             <program language="python">
                 <input>
-                    a &lt; b
+                    a &lt;= b
                     a &lt; b
                     a &lt; 18 or day != 3
                     a &lt; 18 and day == 3
