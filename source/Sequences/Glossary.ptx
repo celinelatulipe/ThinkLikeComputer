@@ -3,9 +3,36 @@
     <title>Glossary</title>
     <glossary sorted="False">
       <gi>
-        <title>Batch Program</title>
-        <p>A program with simple architecture that starts, runs through its code instructions (which can include calling functions) before reaching the end of its instructions and closing itself. Batch programs never wait for an input from the user, besides hitting the start button to run the program. </p>
+        <title>simple/primitive/atomic data types</title>
+        <p>Type of data which values are not composed of any smaller parts, meaning they cannot be broken down. <c>int</c> and <c>str</c> are examples of this data type.</p>
       </gi>
-
+      <gi>
+        <title>collection data types</title>
+        <p>Type of data which values are composed of smaller pieces, meaning it can be broken down. Informally referred to as sequences. <c>str</c> and <c>list</c> are examples of this data type.</p>
+      </gi>
+      <gi>
+        <title>string</title>
+        <p>A sequential collection of characters.</p>
+      </gi>
+      <gi>
+        <title>list</title>
+        <p>A sequential collection of python values. The values/elements of a list can be identified by an index </p>
+      </gi>
+      <gi>
+        <title>tuple</title>
+        <p>definition</p>
+      </gi>
+      <gi>
+        <title>wordorconcept</title>
+        <p>definition</p>
+      </gi>
+      <gi>
+        <title>wordorconcept</title>
+        <p>definition</p>
+      </gi>
+      <gi>
+        <title>wordorconcept</title>
+        <p>definition</p>
+      </gi>
     </glossary>
   </section>
