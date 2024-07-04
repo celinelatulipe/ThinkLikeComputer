@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<section xml:id="sequences_glossary">
+    <title>Glossary</title>
+    <glossary sorted="False">
+      <gi>
+        <title>Batch Program</title>
+        <p>A program with simple architecture that starts, runs through its code instructions (which can include calling functions) before reaching the end of its instructions and closing itself. Batch programs never wait for an input from the user, besides hitting the start button to run the program. </p>
+      </gi>
+
+    </glossary>
+  </section>
