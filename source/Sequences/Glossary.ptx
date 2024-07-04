@@ -16,11 +16,58 @@
       </gi>
       <gi>
         <title>list</title>
-        <p>A sequential collection of python values. The values/elements of a list can be identified by an index </p>
+        <p>A sequential collection of Python data values, where each value can be identified using an index.</p>
+      </gi>
+      <gi>
+        <title>elements</title>
+        <p>The python data values that make up a list.</p>
       </gi>
       <gi>
         <title>tuple</title>
-        <p>definition</p>
+        <p>A list that can not be changed once created.</p>
+      </gi>
+      <gi>
+        <title>immutable</title>
+        <p>meaning unchangeable, unable to be edited</p>
+      </gi>
+      <title>mutable</title>
+      <p>meaning unchangeable, unable to be edited</p>
+      </gi>
+      <gi>
+        <title>index</title>
+        <p>A variable or value used to select a part of an ordered collection, such as a character from a string, or an element from a list.</p>
+      </gi>
+      <gi>
+        <title>index method</title>
+        <p>A method that finds the index of a specified part of a sequential collection.</p>
+      </gi>
+      <gi>
+        <title>count</title>
+        <p>a method that counts the amount of times a given argument appears.</p>
+      </gi>
+      <gi>
+        <title>append</title>
+        <p>A method that adds elements to a list.</p>
+      </gi>
+      <gi>
+        <title>remove</title>
+        <p>A method that removes an existing element from a list.</p>
+      </gi>
+      <gi>
+        <title>pop</title>
+        <p>A method that removes the last element of a list.</p> 
+      </gi>
+      <gi>
+        <title>upper</title>
+        <p>A method that capitalizes the characters of a string, and returns is as a new string.</p>
+      </gi>
+      <gi>
+        <title>slice</title>
+        <p>An operator that returns a specified part of a sequential collection. i.e. Slicing a string: <c>[n:m]</c> starting with the character at index n and going up to but not including the character at index m.</p>
+      </gi>
+      <gi>
+        <title>repitition operator (*)</title>
+        <p>An operator that repeats the given sequential collection as many times as specified</p>
       </gi>
       <gi>
         <title>wordorconcept</title>
@@ -31,8 +78,24 @@
         <p>definition</p>
       </gi>
       <gi>
-        <title>wordorconcept</title>
-        <p>definition</p>
+        <title>split</title>
+        <p>A method that breaks a string into a list of words.</p>
+      </gi>
+      <gi>
+        <title>delimiter</title>
+        <p>An optional argument for the split method, which can be used to specify which characters to use as boundaries.</p>
+      </gi>
+      <gi>
+        <title>join</title>
+        <p>A method that joins the elements of a list together.</p>
+      </gi>
+      <gi>
+        <title>separator string/glue</title>
+        <p>A string that used and required to connect elements of a list together.</p>
+      </gi>
+      <gi>
+        <title>listener function</title>
+        <p>A function that acts on end user input, such as key presses or clicks.</p>
       </gi>
     </glossary>
   </section>

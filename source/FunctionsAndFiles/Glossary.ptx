@@ -81,6 +81,11 @@ keyword expression:
     </gi>
 
     <gi>
+      <title>listener function</title>
+      <p>A function that acts on end user input, such as key presses or clicks.</p>
+    </gi>
+
+    <gi>
 
       <title>open</title>
       <p>You must open a file before you can read its contents.</p>
