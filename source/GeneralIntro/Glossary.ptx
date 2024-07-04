@@ -124,11 +124,7 @@
     </gi>
     <gi>
       <title>Python shell</title>
-      <p>An interactive user interface to the Python interpreter, and the user of a
-                            Python shell types commands at the prompt (&gt;&gt;&gt;), and presses the return
-                            key to send these commands immediately to the interpreter for
-                            processing. To initiate the Python Shell, the user should open the terminal and type <q>python</q>. Once the user presses           enter, the Python Shell appears and the user can interact with it.</p>
-    </gi>
+      <p>The interpreter that executes your Python programs, or other pieces of Python code.</p>
     <gi>
       <title>runtime error</title>
       <p>An error that does not occur until the program has started to execute
@@ -146,7 +142,7 @@
     <gi>
       <title>shell mode</title>
       <p>A mode of using Python where expressions can be typed and executed in the command
-                            prompt, and the results are shown immediately in the command terminal window. This is in contrast to <term>source code</term>. Also see the entry under <term>Python shell</term>.</p>
+                            prompt, and the results are shown immediately in the command terminal window. This is in contrast to <term>source code</term>.</p>
     </gi>
     <gi>
       <title>source code</title>
