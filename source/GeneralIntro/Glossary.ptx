@@ -47,7 +47,7 @@
     </gi>
     <gi>
       <title>end user</title>
-      <p>A person who makes use of a program, as distinct from a programmer, who writes the program.</p>
+      <p>A person who makes use of a program.</p>
     </gi>
     <gi>
       <title>exception</title>
@@ -146,11 +146,11 @@
     <gi>
       <title>shell mode</title>
       <p>A mode of using Python where expressions can be typed and executed in the command
-                            prompt, and the results are shown immediately in the command terminal window. Shell mode is initiated by opening the           terminal of your operating system and typing <q>python</q>. Press enter and the Python Shell will appear. This is in               contrast to <term>source code</term>. Also see the entry under <term>Python shell</term>.</p>
+                            prompt, and the results are shown immediately in the command terminal window. This is in contrast to <term>source code</term>. Also see the entry under <term>Python shell</term>.</p>
     </gi>
     <gi>
       <title>source code</title>
-      <p>The instructions in a program, stored in a file, in a high-level language before being compiled or interpreted.</p>
+      <p>The instructions in a program stored in a file, in a high-level language before being compiled or interpreted.</p>
     </gi>
     <gi>
       <title>syntax</title>
