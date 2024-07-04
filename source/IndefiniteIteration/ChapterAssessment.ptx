@@ -142,12 +142,11 @@ myTests().main()
     <statement>
       <image source="IndefiniteIteration/Figures/Chapter_10_1.PNG" width="100%" alt="Adding to a list of odd number from 1 to 19"/>
         <p>Consider the above screenshot of CodeLens animation. What line number has the exit condition for the while loop? <BlankNode/><var/>
-How many more times will the exit condition be checked? <BlankNode/><var/></p>
+        </p>
+        <p>How many more times will the exit condition be checked? <BlankNode/><var/>
+        </p>
     </statement>
     <setup>
-      <var>
-        
-      </var>
       <var>
         <condition string="^\s*3\s*$">
           <feedback>
@@ -160,6 +159,29 @@ How many more times will the exit condition be checked? <BlankNode/><var/></p>
           </feedback>
         </condition>
       </var>
+      <var>
+        <condition string="^\s*8\s*$">
+          <feedback>
+            <p>Correct.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*13\s*$">
+          <feedback>
+            <p>Incorrect. Look at how much odd_num is increasing by</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*7\s*$">
+          <feedback>
+            <p>Incorrect. The code has to check if there are any more values to iterate over.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Incorrect.</p>
+          </feedback>
+        </condition>
+      </var>
+      
     </setup>
   </exercise>
   <exercise label="assess_ch10_8_lh">
