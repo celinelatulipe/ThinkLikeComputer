@@ -12,6 +12,8 @@ build_info
 # PreTeXt
 output
 source/build
+# Runestone
+published
 
 # don't track assets generated from source
 generated-assets
