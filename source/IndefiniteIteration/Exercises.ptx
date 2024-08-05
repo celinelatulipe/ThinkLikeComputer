@@ -79,7 +79,7 @@ myTests().main()
                 angle of the turn is determined randomly at each step.</p>
 
     </statement>
-    <program label="ac10_7_4_editor" interactive="activecode" language="python">
+    <program label="ac10_7_4_editor" interactive="activecode" language="python" codelens="no">
 <prefix>
 
 
@@ -102,7 +102,7 @@ myTests().main()
                     <p>Modify the turtle walk program so that you have two turtles each with a
                         random starting location. Keep the turtles moving until one of them leaves the screen.</p>
 
-    </statement><program interactive="activecode" language="python" >
+    </statement><program interactive="activecode" language="python" codelens="no">
 <prefix>
 
 
