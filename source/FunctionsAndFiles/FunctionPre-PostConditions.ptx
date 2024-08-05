@@ -301,10 +301,10 @@ flower()
         </choice>
         <choice>
           <statement>
-            <p>Commented directly below both function doctrings</p>
+            <p>Commented directly below both function docstrings</p>
           </statement>
           <feedback>
-            <p>Function assumptions should be a part of the function docstrings.</p>
+            <p>Function assumptions are technically comments, but this chapter shows how they should be implemented.</p>
           </feedback>
         </choice>
         <choice>
