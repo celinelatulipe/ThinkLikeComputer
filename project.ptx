@@ -4,5 +4,9 @@
   <targets>
     <target name="web" format="html" />
     <target name="print" format="pdf" />
+    <target name="runestone" format="html" publication="runestone.ptx" output-dir="../published/ThinkLikeComputer">
+      <stringparams author.tools ="yes" html.css.extra ="external/custom-styles.css"/>
+      <!-- <source>   <directories external="Figures" generated="generated"/>    </source> -->
+    </target>
   </targets>
 </project>
