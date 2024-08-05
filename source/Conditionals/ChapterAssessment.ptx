@@ -279,7 +279,7 @@ myTests().main()
         <p></p>
     </statement>
     <areas>
-      <table>
+    
         <title>Truth Table</title>
         <tabular halign="center">
           <row>
@@ -308,7 +308,7 @@ myTests().main()
             <cell> <area correct="no"> False </area> </cell>
           </row>
         </tabular>
-      </table>
+      
     </areas>
   </exercise>
   <image source="Conditionals/Figures/cdq6-2.png" width="50%"/>
@@ -342,8 +342,20 @@ myTests().main()
   </exercise>
   <exercise label="assess_ch6_13">
     <statement>
-      <p>Given that same code/image from the previous question, what operator should be used so the code works as intended? <var/>  </p>
-    </statement>
+      <p>Given the following code, what operator should be used so the code works as intended? (Currently states the user is not of legal age) <var/>  </p>
+    </statement>  
+      
+    <statement>  <input>
+      <li><p>MANITOBA_LEGAL_AGE = 18</p></li>
+      <li><p>my_age = 18</p></li>
+      
+             <li><p>if my_age &gt; MANITOBA_LEGAL_AGE:</p></li>
+               <li><p>print("You are of legal age in Manitoba")</p></li>      
+              
+             <li><p>else:</p></li>                  
+               <li><p>print("You are underage in Manitoba")</p></li> 
+  
+      </input> </statement> 
     <setup>
       <var>
         <condition string="^\s*&gt;=\s*$">
