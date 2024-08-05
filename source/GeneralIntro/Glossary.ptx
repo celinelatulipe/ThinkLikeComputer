@@ -125,6 +125,7 @@
     <gi>
       <title>Python shell</title>
       <p>The interpreter that executes your Python programs, or other pieces of Python code.</p>
+    </gi>
     <gi>
       <title>runtime error</title>
       <p>An error that does not occur until the program has started to execute
