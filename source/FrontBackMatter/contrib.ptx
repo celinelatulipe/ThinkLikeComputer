@@ -31,6 +31,11 @@
                 Some of the ethics content was added by Lauren Himbeault, an MSc student advised by Celine Latulipe. Some
                 questions and exercises were suggested by Carter Lupkowski, an undergraduate CS student working with
                 Celine and Lauren.</p>
+    <p> During the Spring and Summer of 2024, the RST version of the FOPP-PIE book was converted to PreTeXt,
+                with the help of 5 undergraduate students in Computer Science and technical support from MSc student
+                Zach Havens. The five undergraduates who contributed were: Madeleine Haddican, Ethan Ansale, Eron Lacdao, 
+                Ekamjit Singh, and Eamon Prokopowich. Madeleine made substantial edits for clarity and all of these 
+                students contributed new exercises, glossary entries and corrected typos. </p>
   </subsection>
   <subsection xml:id="front-back-matter_second-edition">
     <title>Second Edition</title>
