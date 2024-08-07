@@ -11,7 +11,7 @@ print("Hello, World!")
   <p>This is an example of using the <term>print function</term>, which doesn't actually print anything on paper. It displays a value on the screen, in the programming console. Programmers do their work in development environments (software applications designed specifically for developing programs). In a development environment there is typically one part of the window where the programmer edits the program, and another part of the window, called the console, where output (such as from a print statement) is displayed. The ActiveCode panel is like our development environment. In this case, the result on the console is the phrase:</p>
   <pre>Hello, World!</pre>
   <p>Here is the example in an ActiveCode window, where you can run it and modify it. When you click the Save &amp; Run button, a grey console window appears below the ActiveCode window. That is where output from print() statements will always appear.</p>
-  <program label="ac_hello_world" interactive="activecode" language="python">
+  <program xml:id="ac_hello_world" label="ac_hello_world" interactive="activecode" language="python">
     <input>
 print("Hello, World!")
         </input>
