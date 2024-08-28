@@ -83,19 +83,16 @@ main()
                 </li>
                 <li>
                     <p>Call the <em>star()</em> function from main, passing in the turtle and the size.  Make sure you’re getting the correct output (see below).</p>
+                    <image source="Labs/Figures/Lab10_single_star.png" width="40%"/>
                 </li>
-            </ol></p>
-            <image source="Labs/Figures/Lab10_single_star.png" width="40%"/>
-            <p><ol>
+
                 <li>
                     <p>In <em>main()</em>, create a variable called <em>smallest</em> and set it to 50. This is the smallest size of star that you want to draw.</p>
                 </li>
                 <li>
                     <p>Create a while loop that will run while <em>size</em> is bigger than <em>smallest</em>. Inside the loop, call the <em>star()</em> function. Then decrement <em>size</em> by 10. Run this code, and you should see the output below.</p>
+                    <image source="Labs/Figures/Lab10_stars_wrong_position.png" width="40%"/>
                 </li>
-            </ol></p>
-            <image source="Labs/Figures/Lab10_stars_wrong_position.png" width="40%"/>
-            <p><ol>
                 <li>
                     <p>To keep the star in the center, you also need to decrement <em>top</em> by 5 and move the turtle to (0,top) again during each loop iteration. Be sure to lift the pen up and down to prevent added lines! Also, after all of the drawing is done, you should hide the turtle.</p>
                 </li>
@@ -104,7 +101,7 @@ main()
                 <p>The benefit of using a while loop here is that we don’t have to try to figure out how many times to run the loop. The while loop’s <em>repeat until some thing is false</em> logic takes care of that for us. You can play around with different values of <em>smallest</em> to control when the turtle stops drawing, which will generate different star effects.</p>
             </note>
 
-    <program label="lab10_level2" interactive="activecode" language="python">
+    <program label="lab10_level2" interactive="activecode" language="python" codelens="no">
     
         <input>
 ################################################################
@@ -161,7 +158,7 @@ main()
                 </li>
             </ol></p>
 
-    <program label="ac_lab10_level3" interactive="activecode" language="python">
+    <program label="ac_lab10_level3" interactive="activecode" language="python" codelens="no">
     
         <input>
 ################################################################
