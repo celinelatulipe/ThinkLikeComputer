@@ -59,10 +59,8 @@ main()
             <p><ol>
                 <li>
                     <p>Define a decoder function that accepts a string input and returns a string output. Make sure you add type annotation for this function. The steps below tell you what to put inside this function. For now just print out and then return the string that is passed in. Call this function from main. Your main function and output should look like this:</p>
+                    <image source="Labs/Figures/Lab9_Level2_first.jpg" width="50%"/>
                 </li>
-            </ol></p>
-            <image source="Labs/Figures/Lab9_Level2_first.jpg" width="50%"/>
-            <p><ol>
                 <li>
                     <p>Inside your decoder function, start by reversing the string so that the last character of the string becomes the first, the second last character becomes the second and so on. Reversing a string can be done using the slice operator with [::-1] as the slicing information. Inside your function, print the resulting string after reversing to ensure the reversal has worked.</p>
                 </li>
@@ -71,21 +69,18 @@ main()
                 </li>
                 <li>
                     <p>Create a new variable called space and set it equal to a blank space. Now, join the list back together into a string using the newly created space variable. Save the result of this join to a new variable. Print out this joined message to make sure that you have a single string that looks like this:</p>
+                    <image source="Labs/Figures/Lab9_Level2_partway.jpg" width="40%"/>
                 </li>
-            </ol></p>
-            <image source="Labs/Figures/Lab9_Level2_partway.jpg" width="40%"/>
-            <p><ol>
                 <li>
                     <p>Using a for loop, iterate through each character in the joined message. If the character is a ‘b’ swap it out with an ‘s’. The image below demonstrates how to swap out a character in a string using the index() operator, slices and concatenation.</p>
+                    <image source="Labs/Figures/Lab9_char_swap.jpg" width="60%"/>
                 </li>
-            </ol></p>
-            <image source="Labs/Figures/Lab9_char_swap.jpg" width="60%"/>
-            <p><ol>
                 <li>
                     <p>Return the final decoded message. Your output, including all the temporary decodings, should look like this:</p>
+                    <image source="Labs/Figures/Lab9_Level2_final.jpg" width="60%"/>
                 </li>
             </ol></p>
-            <image source="Labs/Figures/Lab9_Level2_final.jpg" width="60%"/>
+            
 
     <program label="lab9_level2" interactive="activecode" language="python">
     
@@ -116,7 +111,7 @@ main()
             <p>You can look at the two poem text files at the bottom of this page.</p>
             <p>Your job is to add functions and uncomment the code in main() that calls those functions. Follow the instructions below the code window.</p>
 
-    <program label="ac_lab9_level3" interactive="activecode" language="python">
+    <program label="ac_lab9_level3" interactive="activecode" language="python" codelens="no">
     
         <input>
 ################################################################
