@@ -15,7 +15,7 @@
       <p>You have already used a function: <c>print</c>. The <c>print</c> function causes things to appear in the console.</p>
     </note>
     <p>It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.</p>
-    <program label="ac2_4_1" interactive="activecode" language="python">
+    <program xml:id="ac2_4_1" label="ac2_4_1" interactive="activecode" language="python">
       <input>
 def square(x):
   return x * x
@@ -32,7 +32,7 @@ def sub(x, y):
               particularly useful, since we have the operators <c>*</c> and <c>-</c> available. But they illustrate how functions work.
               The visual below illustrates how the <c>square</c> function works.</p>
     <image source="DataAndInstructions/Figures/square_function.gif" width="50%" alt="a visual of the square function. Four is provided as the input, the function object shakes, and then sixteen comes out from the bottom of the function object."/>
-    <program label="ac2_4_2" interactive="activecode" language="python">
+    <program label="ac2_4_2" interactive="activecode" language="python" include="ac2_4_1">
       <input>
 print(square(3))
 square(5)
