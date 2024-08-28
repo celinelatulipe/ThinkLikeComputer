@@ -15,7 +15,7 @@
       <p>You have already used a function: <c>print</c>. The <c>print</c> function causes things to appear in the console.</p>
     </note>
     <p>It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.</p>
-    <program xml:id="ac2_4_1" label="ac2_4_1" interactive="activecode" language="python">
+    <program xml:id="ac2_4_1" label="ac2_4_1" interactive="activecode" language="python" hide="yes">
       <input>
 def square(x):
   return x * x
@@ -54,7 +54,7 @@ print(sub(5, 9))
     <p>Anywhere in an expression that you can write a literal like a number, you can also write a function call that
                 produces a number.</p>
     <p>For example:</p>
-    <program label="ac2_4_3" interactive="activecode" language="python">
+    <program label="ac2_4_3" interactive="activecode" language="python" include="ac2_4_1">
       <input>
 print(square(3) + 2)
 print(sub(square(3), square(1+1)))
@@ -70,7 +70,7 @@ print(sub(square(3), square(1+1)))
     <title>Parentheses invoke functions</title>
     <p>Just typing the name of the function refers to the function as an object, as in the first line in the example below. Typing the name of the function followed by
                 parentheses <c>()</c> invokes (calls) the function. Of course, you have to put any input values that the function needs inside the parentheses.</p>
-    <program label="ac2_4_4" interactive="activecode" language="python">
+    <program label="ac2_4_4" interactive="activecode" language="python" include="ac2_4_1">
       <input>
 print(square)
 print(square(3))
