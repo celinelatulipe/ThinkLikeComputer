@@ -78,11 +78,11 @@ print(type(x))
   <subsection xml:id="sequences_index-operator-accessing-elements-of-a-string-list-or-tuple">
     <title>Index Operator: Accessing Elements of a String, List or Tuple</title>
     <p>In Chapter 5, we introduced the index operator and how it is used to access elements of a string or list. We review this briefly here - the index operator applies to tuples in the same way.</p>
-    <p>We use the index operator ( <c>[]</c>) to access an individual element of a string, list, or tuple.  The expression inside the brackets specifies
+    <p>We use the index operator <c>[]</c> to access an individual element of a string, list, or tuple.  The expression inside the square brackets specifies
                 the index and must evaluate to an integer (the 3.75th element of a list doesn't make any sense!). Remember that indices start at 0. Any integer expression can be used
                 as an index and a negative index value will locate items from the right instead
                 of from the left.</p>
-    <p>While we are taught as children to count from 1, in most programming languages we count/index from zero. This means that when we talk about the first item, we need to remember that is at index 0, and when we talk about the second item, it is at index 1. The nth character and the character AT INDEX n are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean! If you find indexing from zero weird, it might help to think about the index as <term>the offset from the first position</term> in the list, tuple, or string. So if we declare a string variable like this: <c>greeting = "hello"</c>, the letter &#x2018;e' is offset by 1 from the first character and we access the &#x2018;e' by using <c>greeting[1]</c>.</p>
+    <p>While we are taught as children to count from 1, in most programming languages we count/index from zero. This means that when we talk about the first item, we need to remember that is at index 0, and when we talk about the second item, it is at index 1. The nth character and the character AT INDEX <c>n</c> are different then:  The nth character is at index n-1.  Make sure you are clear on what you mean! If you find indexing from zero weird, it might help to think about the index as <term>the offset from the first position</term> in the list, tuple, or string. So if we declare a string variable like this: <c>greeting = "hello"</c>, the letter &#x2018;e' is offset by 1 from the first character and we access the &#x2018;e' by using <c>greeting[1]</c>.</p>
   </subsection>
   <subsection xml:id="sequences_adding-and-removing-items-from-lists">
     <title>Adding and Removing Items from Lists</title>

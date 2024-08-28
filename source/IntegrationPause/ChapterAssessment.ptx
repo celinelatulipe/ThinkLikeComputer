@@ -189,7 +189,7 @@
         <p>
             Define 3 separate functions to draw a triangle, circle and square in the turtle module. Ask the 
             user for input and draw the shape based on that input using conditionals. (Example. S for square, 
-            T for triangle and C for circle). Ask for input 10 times using a for loop. Each time the shape 
+            T for triangle and C for circle). Ask for input 5 times using a for loop. Each time the shape 
             should be drawn at a random location. 
         </p>
 
