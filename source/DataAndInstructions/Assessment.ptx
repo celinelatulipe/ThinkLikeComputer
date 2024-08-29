@@ -18,7 +18,7 @@
 		</statement>
 
 
-		<program label="assess_ch2_1_editor" interactive="activecode" language="python">
+		<program label="assess_ch2_1_editor" interactive="activecode" language="python" include="ac2_4_1">
 			<input>
 xyz = ""
 =====
@@ -152,7 +152,7 @@ myTests().main()
 		</choices>
 	</exercise>
 
-	<exercise label="assess_ch2_4">
+	<!-- <exercise label="assess_ch2_4">
 		<statement>
 			<p>
 				(This is not an assessment question) The code below defines functions used by one of the questions above.
@@ -169,7 +169,7 @@ def square(num):
 			<tests>
 			</tests>
 		</program>
-	</exercise>
+	</exercise> -->
 
 	<!--  <exercise label="assess_ch2_5_lh">
 	<statement>
@@ -234,9 +234,9 @@ def square(num):
 			:
 		</p>
 
-		<image source="DataAndInstructions/Figures/cdq2-4.png" width="50%"/>
+		<image source="DataAndInstructions/Figures/cdq2-4.png" width="80%"/>
 			<p>
-				What does the following code shown in the codelens image print when it finishes executing?
+				What does the code shown in the codelens image print when it finishes executing?
 			</p>
 		</statement>
 		<choices>
