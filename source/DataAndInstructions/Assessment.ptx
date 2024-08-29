@@ -7,7 +7,7 @@
 		<term>Check your understanding</term>
 	</p>
 
-	<exercise label="assess_ch2_1">
+	<exercise xml:id="ch2_assess_1" label="ch2_assess_1">
 		<statement>
 			<p>
 				There is a function we are providing in for you in this problem called <c>square</c>.
@@ -18,10 +18,11 @@
 		</statement>
 
 
-		<program label="assess_ch2_1_editor" interactive="activecode" language="python" include="ac2_4_1">
+		<program xml:id="ch2_assess_1_program" label="ch2_assess_1_program" interactive="activecode" language="python" include="ac2_4_1">
 			<input>
-xyz = ""
-=====
+xyz = ??
+			</input>
+			<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
     def testOne(self):
@@ -29,13 +30,11 @@ class myTests(TestCaseGui):
         self.assertEqual(xyz, 25, "Checking if xyz is 25")
         self.assertIn('square', self.getEditorText(), "Testing that 'square' is in your code. (Don't worry about Actual and Expected Values.)")
 myTests().main()
-			</input>
-			<tests>
 			</tests>
 		</program>
 	</exercise>
 
-	<exercise label="assess_ch2_2">
+	<exercise xml:id="ch2_assess_2" label="ch2_assess_2">
 		<statement>
 			<p>
 				Write code to assign the number of <em>characters</em> in the string <c>rv</c> to a variable <c>num_chars</c>.
@@ -43,7 +42,7 @@ myTests().main()
 		</statement>
 
 
-		<program label="assess_ch2_2_editor" interactive="activecode" language="python">
+		<program xml:id="ch2_assess_2_program" label="ch2_assess_2_program" interactive="activecode" language="python">
 			<input>
 rv = """Once upon a midnight dreary, while I pondered, weak and weary,
     Over many a quaint and curious volume of forgotten lore,
@@ -64,7 +63,7 @@ myTests().main()
 		</program>
 	</exercise>
 
-	<exercise label="assess_ch2_3">
+	<exercise xml:id="ch2_assess_3" label="ch2_assess_3">
 		<statement>
 			<p>
 				The code below initializes two variables, <c>z</c> and <c>y</c>.
@@ -152,7 +151,7 @@ myTests().main()
 		</choices>
 	</exercise>
 
-	<!-- <exercise label="assess_ch2_4">
+	<!-- <exercise label="ch2_assess_4">
 		<statement>
 			<p>
 				(This is not an assessment question) The code below defines functions used by one of the questions above.
@@ -161,7 +160,7 @@ myTests().main()
 		</statement>
 
 
-		<program label="assess_ch2_4_editor" interactive="activecode" language="python">
+		<program label="ch2_assess_4_program" interactive="activecode" language="python">
 			<input>
 def square(num):
     return num**2
@@ -171,7 +170,7 @@ def square(num):
 		</program>
 	</exercise> -->
 
-	<!--  <exercise label="assess_ch2_5_lh">
+	<!--  <exercise label="ch2_assess_5_lh">
 	<statement>
 		<block_quote><image align="center" alt="image of numerous variables being declared and assigned values" candidates="{'*': 'DataAndInstructions/Figures/cdq2-1.png'}" uri="DataAndInstructions/Figures/cdq2-1.png" width="900"/></block_quote>
 		<var />  </paragraph>
@@ -185,7 +184,7 @@ def square(num):
 	/condition></var></setup>
 </exercise>
 
-<exercise label="assess_ch2_6_lh">
+<exercise label="ch2_assess_6_lh">
 	<statement>
 		<block_quote><image align="center" alt="image of numerous variables being declared and assigned values" candidates="{'*': 'DataAndInstructions/Figures/cdq2-2.png'}" uri="DataAndInstructions/Figures/cdq2-2.png" width="900"/></block_quote>
 		<var />  </paragraph>
@@ -198,7 +197,7 @@ def square(num):
 	/condition></var></setup>
 </exercise>
 
-<exercise label="assess_ch2_7_lh">
+<exercise label="ch2_assess_7_lh">
 	<statement>
 		<block_quote><image align="center" alt="image of numerous variables being declared and assigned values" candidates="{'*': 'DataAndInstructions/Figures/cdq2-3.png'}" uri="DataAndInstructions/Figures/cdq2-3.png" width="900"/></block_quote>
 		<var />  </paragraph>
@@ -228,7 +227,7 @@ def square(num):
 	/condition></var></setup>
 </exercise>
 -->
-<exercise label="assess_ch2_8_lh">
+<exercise xml:id="ch2_assess_4" label="ch2_assess_4">
 	<statement>
 		<p>
 			:
@@ -310,7 +309,7 @@ def square(num):
 		</choices>
 	</exercise>
 
-	<exercise label="assess_ch2_9_lh">
+	<exercise xml:id="ch2_assess_5" label="ch2_assess_5">
 		<statement>
 			<p>
 				:
