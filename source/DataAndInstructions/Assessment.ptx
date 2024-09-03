@@ -54,14 +54,15 @@ rv = """Once upon a midnight dreary, while I pondered, weak and weary,
     'Tis some visitor, I muttered, tapping at my chamber door;
     Only this and nothing more."""
 # Write your code here!
-=====
+
+
+			</input>
+			<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
     def testOne(self):
        self.assertEqual(num_chars, len(rv), "Testing that num_chars has been set to the length of rv")
 myTests().main()
-			</input>
-			<tests>
 			</tests>
 		</program>
 	</exercise>

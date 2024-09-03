@@ -14,7 +14,7 @@
 
 			<p>
 				Of course, that's not quite right because Ouack and Quack are misspelled.
-				Can you fix it?
+				Can you fix it? Hint: sometimes lists of characters are more useful than a string of characters.
 			</p>
 		</statement>
 
@@ -107,7 +107,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 <exercise label="ex_3_4">
 	<statement>
 		<p>
-			Assume you have a list of numbers <c>12, 10, 32, 3, 66, 17, 42, 99, 20</c>
+			For the list of numbers below:
 		</p>
 
 		<p>
@@ -120,7 +120,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 
 				<li>
 					<p>
-						Write a loop that prints each number and its square on a new line.
+						Write a loop that prints each number and its square on a new line. Make sure you use the exponent operator.
 					</p>
 				</li>
 			</ol>
@@ -130,6 +130,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 
 		<program label="ex_3_4_editor" interactive="activecode" language="python">
 			<input>
+nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 			</input>
 			<tests>
 			from unittest.gui import TestCaseGui

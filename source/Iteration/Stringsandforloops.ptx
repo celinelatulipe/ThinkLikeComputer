@@ -3,7 +3,7 @@
   <title>Strings and <c>for</c> loops</title>
   <p>Since a string is simply a sequence of characters, the <c>for</c> loop iterates over each character
             automatically. (As always, try to predict what the output will be from this code before you run it.)</p>
-  <program label="ac4_6_1" interactive="activecode" language="python">
+  <program xml:id"ac4_6_1_program" label="ac4_6_1" interactive="activecode" language="python">
     <input>
 for achar in "Go Spot Go":
     print(achar)
@@ -17,10 +17,10 @@ for achar in "Go Spot Go":
   <p>
     <term>Check your understanding</term>
   </p>
-  <exercise label="question4_6_1">
+  <exercise xml:id="ac4_6_1" label="question4_6_1">
     <statement>
       <p>How many times is the word HELLO printed by the following statements?</p>
-      <program language="python">
+      <program xml:id="ac4_6_1_program" language="python">
         <input>
 s = "python rocks"
 for ch in s:
@@ -63,7 +63,7 @@ for ch in s:
       </choice>
     </choices>
   </exercise>
-  <exercise label="question4_6_2">
+  <exercise xml:id="question4_6_2" label="question4_6_2">
     <statement>
       <p>How many times does the turtle in this code move to a random location?</p>
       <program language="python">
