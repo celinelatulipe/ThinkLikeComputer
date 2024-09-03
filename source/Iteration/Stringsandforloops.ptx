@@ -20,7 +20,7 @@ for achar in "Go Spot Go":
   <exercise xml:id="ac4_6_1" label="question4_6_1">
     <statement>
       <p>How many times is the word HELLO printed by the following statements?</p>
-      <program xml:id="ac4_6_1_program" language="python">
+      <program language="python">
         <input>
 s = "python rocks"
 for ch in s:
