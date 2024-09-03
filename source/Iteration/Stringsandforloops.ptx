@@ -3,7 +3,7 @@
   <title>Strings and <c>for</c> loops</title>
   <p>Since a string is simply a sequence of characters, the <c>for</c> loop iterates over each character
             automatically. (As always, try to predict what the output will be from this code before you run it.)</p>
-  <program xml:id"ac4_6_1_program" label="ac4_6_1" interactive="activecode" language="python">
+  <program xml:id="ac4_6_1_program" label="ac4_6_1" interactive="activecode" language="python">
     <input>
 for achar in "Go Spot Go":
     print(achar)
