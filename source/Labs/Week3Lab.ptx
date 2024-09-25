@@ -111,10 +111,8 @@ print("Do not exceed the daily maximimum dosage of:", total_daily dosage, "milli
                 <p>84.7 milligrams one to 2 times per day.</p>
                 <p>Do not exceed the daily maximimum dosage of: 169.4 milligrams</p>
             </blockquote>
-            <p>The program should print:</p>
-            <blockquote>
-                <p>&gt; Your tax rate for 2020 and 2021 was 24.0 percent</p>
-            </blockquote>
+            
+
         </subsection>
         <subsection xml:id="week3lab_level-3">
             <title>Level 3</title>
