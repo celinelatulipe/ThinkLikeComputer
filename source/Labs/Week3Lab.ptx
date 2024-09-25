@@ -68,7 +68,7 @@ print("Your annual compound interest is: ", math.trunc(compound_interest))
     
         <input>
 ################################################################
-# Student name, ID & lab section
+# Student name, ID &amp; lab section
 # Date
 # Lab 3, Part 2
 ################################################################
