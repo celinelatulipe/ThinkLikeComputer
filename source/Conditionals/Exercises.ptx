@@ -80,13 +80,13 @@ class myTests(TestCaseGui):
         _grades=[]
         for score in scores:
             _score = float(score)
-            if _score &lt;= 90:
+            if _score &gt;= 90:
                 _grades.append('A')
-            elif _score &lt;= 80:
+            elif _score &gt;= 80:
                 _grades.append('B')
-            elif _score &lt;= 70:
+            elif _score &gt;= 70:
                 _grades.append('C')
-            elif _score &lt;= 60:
+            elif _score &gt;= 60:
                 _grades.append('D')
             else:
                 _grades.append('F')
@@ -146,7 +146,7 @@ myTests().main()
                     </solution></exercise>
 
                 <exercise xml:id="ch6_ex_2"><statement>
-                        <p>A year is a <term>leap year</term> if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is <term>also</term> evenly divisible by 400 then it is a leap year. Write code that iterates through the given list of years and adds leap years to a list called "is_leap_year". Use if statements.</p>
+                        <p>A year is a <term>leap year</term> if it is divisible by 4; however, if the year can be evenly divided by 100, it is NOT a leap year, unless the year is <term>also</term> evenly divisible by 400 then it is a leap year. Write code that iterates through the given list of years and adds leap years to a list of booleans called "is_leap_year". Use if statements.</p>
                         <tabular>
                             
                                 
