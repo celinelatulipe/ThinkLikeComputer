@@ -38,7 +38,7 @@ print("Now we are outside of the for loop!")
                 Thus, instead of <c>range(3)</c>, we could have written <c>[0, 1, 2]</c>.</p>
     <p>The loop variable <c>_</c> is bound to 0 the first time lines 4 and 5 execute. The next time, <c>_</c> is bound to 1. Third time, it is bound to 2.
                 <c>_</c> is a strange name for a variable but  if you look carefully at the rules about variable names, it is a legal name. By convention, we use the <c>_</c> as our loop variable when we don't intend to ever refer to the loop variable. That is, we are just trying to repeat the code block some number of times (once for each item in a sequence), but we are not going to do anything with the particular items. <c>_</c> will be bound to a different item each time, but we won't ever refer to those particular items in the code.</p>
-    <p>By contrast, notice that in the previous activecode window, the loop variable is <c>afruit</c>. In that for loop, we <em>do</em> refer to each item, with <c>print(afruit)</c>. When we are going to refer to the items and do something with them, it is important to use a loop variable name that is descriptive, such as <c>afruit</c>.</p>
+    <p>By contrast, notice that in the previous activecode window, the loop variable is <c>fruit</c>. In that for loop, we <em>do</em> refer to each item, with <c>print(fruit)</c>. When we are going to refer to the items and do something with them, it is important to use a loop variable name that is descriptive, such as <c>fruit</c>.</p>
   </subsection>
   <subsection xml:id="iteration_iteration-simplifies-our-turtle-program">
     <title>Iteration Simplifies our Turtle Program</title>

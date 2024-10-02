@@ -120,7 +120,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 
 				<li>
 					<p>
-						Write a loop that prints each number and its square on a new line. Make sure you use the exponent operator.
+						Write a second loop that prints each number and its square on a new line (just using one print() statement). Make sure you use the exponent operator.
 					</p>
 				</li>
 			</ol>
