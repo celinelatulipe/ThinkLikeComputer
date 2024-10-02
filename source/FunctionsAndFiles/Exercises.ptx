@@ -86,26 +86,30 @@
 # Then, switch it to printing the name instead of the number
 			</input>
 			<tests>
-			from unittest.gui import TestCaseGui
-			import re
-			class myTests(TestCaseGui):
-			def testOne(self):
-			names = []
-			with open('studentdata.txt', 'r') as fh:
+from unittest.gui import TestCaseGui
+import re
+class myTests(TestCaseGui):
+	def testOne(self):
+		names = []
+		with open('studentdata.txt', 'r') as fh:
 			for line in fh:
-			values = line.split()
-			name = values[0]
-			scores = values[1:]
-			if len(scores) &gt; 6:
-			names.append(name)
-			self.assertEqual(self.getOutput().rstrip(), '\n'.join(names), 'Checking names')
-			for name in names:
+				values = line.split()
+				name = values[0]
+				scores = values[1:]
+				if len(scores) &gt; 6:
+					names.append(name)
+
+		self.assertEqual(self.getOutput().rstrip(), '\n'.join(names), 'Checking names')
+
+		for name in names:
 			self.assertFalse(re.search(name, self.getEditorText()), 'Checking for hardcoding')
-			if re.search(r'[^#]+= *open', self.getEditorText(), re.M):
+		
+		if re.search(r'[^#]+= *open', self.getEditorText(), re.M):
 			self.assertTrue(re.search(r'[^#]+\.close\(', self.getEditorText(), re.M), 'Checking for matching open and close statements')
-			else:
+		else:
 			self.assertTrue(re.search(r'with[ (] *open', self.getEditorText(), re.M), 'Checking open statement')
-			myTests().main()
+
+myTests().main()
 			</tests>
 		</program>
         <solution>
