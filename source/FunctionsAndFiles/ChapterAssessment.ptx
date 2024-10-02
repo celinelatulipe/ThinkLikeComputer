@@ -197,7 +197,7 @@ myTests().main()
     </tests>
     </program>
   </exercise>
-  <exercise label="assess_ch5_9">
+  <!-- <exercise label="assess_ch5_9">
     <statement>
       <p>Read in the contents of the file <c>SP500.txt</c> which has monthly data for 2016 and 2017 about the S&amp;P 500 closing prices as well as some other financial indicators, including the <q>Long Term Interest Rate</q>, which is interest rate paid on 10-year U.S. government bonds.</p>
       <p>Write a program that computes the average closing price (the second column, labeled SP500) and the highest long-term interest rate. Both should be computed only for the period from June 2016 through May 2017. Save the results in the variables <c>mean_SP</c> and <c>max_interest</c>.</p>
@@ -224,7 +224,7 @@ myTests().main()
 
   <datafile xml:id="SP500_txt" label="SP500.txt" filename="SP500.txt">
     <pre source="FunctionsAndFiles/TextFiles/SP500.txt"></pre>
-  </datafile>
+  </datafile> -->
 
   <exercise label="assess_ch5_10_lh">
     <statement>
@@ -236,7 +236,7 @@ myTests().main()
       <var>
         <condition string="^\s*global\s*$">
           <feedback>
-            <p>Correct! This function is in the global scope and avalaible for use everywhere.</p>
+            <p>Correct! The hello function is in the global scope and avalaible for use everywhere.</p>
           </feedback>
         </condition>
         <condition string="^\s*.*\s*$">
@@ -245,8 +245,21 @@ myTests().main()
           </feedback>
         </condition>
       </var>
+      <var>
+        <condition string="^\s*local\s*$">
+          <feedback>
+            <p>Correct! The var_x variable is in the local scope in the hello function.</p>
+          </feedback>
+        </condition>
+        <condition string="^\s*.*\s*$">
+          <feedback>
+            <p>Hmmm try again, scope is either global or local.</p>
+          </feedback>
+        </condition>
+      </var>
     </setup>
   </exercise>
+
   <exercise label="assess_ch5_11_lh">
     <statement>
       <p>:</p>

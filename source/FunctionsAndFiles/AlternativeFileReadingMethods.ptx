@@ -126,7 +126,7 @@ from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
 
    def testOne(self):
-      self.assertEqual(num_char, 536, "Testing that num_char has the correct value.")
+      self.assertEqual(num_char, 537, "Testing that num_char has the correct value.")
 
 myTests().main()
         </input>
