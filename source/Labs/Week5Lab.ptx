@@ -166,7 +166,7 @@ kyra = turtle.Turtle()
  # Lab 5, Level 3
  ################################################################
 
- import turtle #iddmports the turtle library
+ import turtle #imports the turtle library
 
  wn = turtle.Screen() #creates a graphic window
  asif = turtle.Turtle()
@@ -189,6 +189,18 @@ kyra = turtle.Turtle()
             <image source="Labs/Figures/turtle_coords_output.png" width="60%"/>
             <DataFileNode line="163" runestone_options="{'subchapter': 'Week5Lab', 'chapter': 'Labs', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'turtle_coords.txt', 'qnumber': '', 'cols': 8, 'rows': 20, 'filecontent': '10 125\n-45 67\n67 42\n-20 -180\n173 -2\n16 194\n-87 91\n0 -63\n', 'hidden': '', 'edit': 'false', 'question_label': '12.5.3.2'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/Labs/Week5Lab.rst">
             </DataFileNode>
+
+            <p>turtle_coords.txt:</p>
+            <pre>
+10 125
+-45 67
+67 42
+-20 -180
+173 -2
+16 194
+-87 91
+0 -63
+            </pre>
         </subsection>
     </section>
 
