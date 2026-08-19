@@ -28,7 +28,7 @@
   <subsection xml:id="p3pt_practice-timed-exam">
     <title>Practice Timed Exam</title>
     <p>Click the start button to take the practice timed exam.</p>
-    <exercises line="27" runestone_options="{'timelimit': 5, 'noresult': None, 'nofeedback': None, 'nopause': None, 'subchapter': 'p3-timed-intro', 'chapter': 'p3pt', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'timed_intro_p3pt', 'qnumber': '', 'question_label': '2'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/_hidden/p3pt/p3-timed-intro.rst">
+    <exercises line="27" runestone_options="{'timelimit': 5, 'noresult': None, 'nofeedback': None, 'nopause': None, 'subchapter': 'p3-timed-intro', 'chapter': 'p3pt', 'basecourse': 'PPIE', 'optional': '', 'optclass': '', 'divid': 'timed_intro_p3pt', 'qnumber': '', 'question_label': '2'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/_hidden/p3pt/p3-timed-intro.rst">
       <exercise label="timed_intro_q1_add_p3tog_foff-pie">
         <statement>
           <p>What will the following code print?</p>

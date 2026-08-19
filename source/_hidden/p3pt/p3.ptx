@@ -6,7 +6,7 @@
             option E (I don't know).</p>
   <subsection xml:id="p3pt_problems-3">
     <title>Problems</title>
-    <exercises line="11" runestone_options="{'timelimit': 20, 'noresult': None, 'nofeedback': None, 'nopause': None, 'subchapter': 'p3', 'chapter': 'p3pt', 'basecourse': 'FOPP-PIE', 'optional': '', 'optclass': '', 'divid': 'timed1', 'qnumber': '', 'question_label': '1'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/_hidden/p3pt/p3.rst">
+    <exercises line="11" runestone_options="{'timelimit': 20, 'noresult': None, 'nofeedback': None, 'nopause': None, 'subchapter': 'p3', 'chapter': 'p3pt', 'basecourse': 'PPIE', 'optional': '', 'optclass': '', 'divid': 'timed1', 'qnumber': '', 'question_label': '1'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/_hidden/p3pt/p3.rst">
       <raw format="html" xml:space="preserve">
 &lt;div class="runestone sqcontainer %(optclass)s"&gt;
 &lt;div data-component="selectquestion" id=p3pt-pre-1 data-questionlist='pretest_cond_with_funcs' data-points=1          data-limit-basecourse=true&gt;
