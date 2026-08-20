@@ -2,19 +2,19 @@
 <section xml:id="functions-and-files_chapter-assessment">
   <title>Chapter Assessment</title>
 
-  <datafile xml:id="school_prompt_txt" label="school_prompt.txt" filename="school_prompt.txt" hide="yes">
+  <datafile xml:id="school_prompt_txt" label="school_prompt_txt" filename="school_prompt.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/school_prompt.txt"></pre>
   </datafile>
 
-  <datafile xml:id="student_data_txt" label="studentdata.txt" filename="studentdata.txt" hide="yes">
+  <datafile xml:id="student_data_txt" label="student_data_txt" filename="studentdata.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
   </datafile>
 
-  <datafile xml:id="travel_plans3_txt" label="travel_plans3.txt" filename="travel_plans.txt" hide="yes">
+  <datafile xml:id="travel_plans3_txt" label="travel_plans3_txt" filename="travel_plans.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
   </datafile>
 
-  <datafile xml:id="emotion_words4_txt" label="emotion_words4.txt" filename="emotion_words.txt" hide="yes">
+  <datafile xml:id="emotion_words4_txt" label="emotion_words4_txt" filename="emotion_words.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 
