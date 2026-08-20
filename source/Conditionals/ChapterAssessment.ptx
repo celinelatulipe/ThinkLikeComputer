@@ -346,14 +346,14 @@ myTests().main()
     </statement>  
       
     <statement>  <input>
-      <li><p>MANITOBA_LEGAL_AGE = 18</p></li>
-      <li><p>my_age = 18</p></li>
+      MANITOBA_LEGAL_AGE = 18
+      my_age = 18
       
-             <li><p>if my_age &gt; MANITOBA_LEGAL_AGE:</p></li>
-               <li><p>print("You are of legal age in Manitoba")</p></li>      
+      if my_age &gt; MANITOBA_LEGAL_AGE:
+          print("You are of legal age in Manitoba")      
               
-             <li><p>else:</p></li>                  
-               <li><p>print("You are underage in Manitoba")</p></li> 
+      else:                  
+          print("You are underage in Manitoba") 
   
       </input> </statement> 
     <setup>

@@ -66,7 +66,7 @@ olympicsfile.close()
     </tests>
   </program>
 
-  <datafile xml:id="olympics_textfile3" label="olympics3.txt" filename="olympics.txt" hide="yes">
+  <datafile xml:id="olympics_textfile3" label="olympics_textfile3" filename="olympics.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
   </datafile>
 
@@ -103,7 +103,7 @@ myTests().main()
     </program>
   </exercise>
 
-  <datafile xml:id="emotion_words3_txt" label="emotion_words3.txt" filename="emotion_words.txt" hide="yes">
+  <datafile xml:id="emotion_words3_txt" label="emotion_words3_txt" filename="emotion_words.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 

@@ -349,16 +349,18 @@
 
 <exercise xml:id="assess_ch7_15_lh">
     <statement>
-        <p>
+        <pre>
             Write a method that uses nested for loops to print the following pattern, where the number of rows 
             is provided by the user. If the number provided by the user is above 10 or negative, ask for another 
             input and run the program again.
-            1 <br/>
-            2 2 <br/>
-            3 3 3 <br/>
-            4 4 4 4 <br/>
+            
+            1 
+            2 2 
+            3 3 3 
+            4 4 4 4 
+            
 
-        </p>
+        </pre>
 
     </statement>
     <program xml:id="assess_ch7_15_lh_editor" interactive="activecode" language="python">
