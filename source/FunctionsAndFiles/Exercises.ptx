@@ -168,15 +168,15 @@ myTests().main()
 	</program>
 </exercise>
 
-<datafile xml:id="student_data_txt" label="studentdata.txt" filename="studentdata.txt" hide="yes">
+<datafile xml:id="student_data2_txt" label="studentdata2.txt" filename="studentdata.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
   </datafile>
 
-  <datafile xml:id="travel_plans3_txt" label="travel_plans.txt" filename="travel_plans.txt" hide="yes">
+  <datafile xml:id="travel_plans4_txt" label="travel_plans4.txt" filename="travel_plans.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
   </datafile>
 
-  <datafile xml:id="emotion_words4_txt" label="emotion_words.txt" filename="emotion_words.txt" hide="yes">
+  <datafile xml:id="emotion_words5_txt" label="emotion_words5.txt" filename="emotion_words.txt" hide="yes">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 
