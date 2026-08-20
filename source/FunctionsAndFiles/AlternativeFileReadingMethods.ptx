@@ -99,7 +99,7 @@ olympicsfile.close()
     <tests>
     </tests>
   </program>
-  <datafile xml:id="olympics_textfile2" label="olympics2.txt" filename="olympics.txt">
+  <datafile xml:id="olympics_textfile2" label="olympics2_textfile" filename="olympics.txt">
     <pre source="FunctionsAndFiles/TextFiles/olympics.txt"></pre>
   </datafile>
 
@@ -135,7 +135,7 @@ myTests().main()
     </program>
   </exercise>
 
-<datafile xml:id="school_prompt2_txt" label="school_prompt2.txt" filename="school_prompt2.txt">
+<datafile xml:id="school_prompt2_txt" label="school_prompt2_txt" filename="school_prompt2.txt">
   <pre source="FunctionsAndFiles/TextFiles/school_prompt.txt"></pre>
 </datafile>
 
@@ -168,7 +168,7 @@ myTests().main()
     </program>
   </exercise>
 
-  <datafile xml:id="travel_plans2_txt" label="travel_plans2.txt" filename="travel_plans2.txt">
+  <datafile xml:id="travel_plans2_txt" label="travel_plans2_txt" filename="travel_plans2.txt">
     <pre source="FunctionsAndFiles/TextFiles/travel_plans.txt"></pre>
   </datafile>
 
@@ -200,7 +200,7 @@ myTests().main()
     </program>
   </exercise>
 
-  <datafile xml:id="emotion_words2_txt" label="emotion_words2.txt" filename="emotion_words2.txt">
+  <datafile xml:id="emotion_words2_txt" label="emotion_words2_txt" filename="emotion_words2.txt">
     <pre source="FunctionsAndFiles/TextFiles/emotion_words.txt"></pre>
   </datafile>
 
