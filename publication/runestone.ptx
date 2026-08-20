@@ -106,7 +106,7 @@
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
 
     <!--<css style="oscarlevin" colors="blue_red" toc="crc" banner="default" navbar="crc" shell="crc"/> -->
-     <css theme="salem" palette="bold" color-main="#3f4519" color-do="#569099" color-meta="#ebbf0c"/>
+     <css theme="default-modern" palette="bold" color-main="#3f4519" color-do="#569099" color-meta="#ebbf0c"/>
 
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->

@@ -350,9 +350,10 @@
 <exercise xml:id="assess_ch7_15_lh">
     <statement>
         <pre>
-            Write a method that uses nested for loops to print the following pattern, where the number of rows 
-            is provided by the user. If the number provided by the user is above 10 or negative, ask for another 
-            input and run the program again.
+            Write a method that uses nested for loops to print the following pattern, 
+            where the number of rows is provided by the user. If the number provided 
+            by the user is above 10 or negative, ask for another input and run the 
+            program again.
             
             1 
             2 2 
