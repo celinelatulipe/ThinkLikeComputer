@@ -128,7 +128,7 @@ f.close()
 	</solution>
 </exercise>
 
-<datafile xml:id="studentdata.txt" label="studentdata.txt" filename="studentdata.txt">
+<datafile xml:id="studentdata_textfile" label="studentdata_textfile" filename="studentdata.txt">
 	<pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
   </datafile>
 
