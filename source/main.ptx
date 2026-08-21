@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <xi:include href="./bookinfo.ptx"/>
-        <book xml:id= "ThinkLikeComputer" permid="Thi">
-            <title>COMP 1000: Think Like a Computer</title>
+        <book xml:id= "Python_Programming_Interactivity_Ethics" permid="Thi">
+            <title>Python Programming, Interactivity and Ethics</title>
             <subtitle>The PreTeXt Interactive Edition</subtitle> 
                 <xi:include href="./GeneralIntro/toctree.ptx" />
                 <xi:include href="./DataAndInstructions/toctree.ptx" />
