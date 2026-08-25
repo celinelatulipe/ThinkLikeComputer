@@ -28,11 +28,11 @@
   <p>The following program contains various runtime errors. Can you spot any of them?
             After locating the error, run the program to see the error message.</p>
   <program label="debug_rterr" interactive="activecode" language="python">
-    <input>
+    <code>
 subtotal = input("Enter total before tax:")
 tax = .08 * subTotal
 print("tax on", subtotal, "is:", tax)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

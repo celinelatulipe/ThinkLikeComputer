@@ -6,7 +6,7 @@
     <p>When we pass mutable objects, like lists, to functions, the contents of those objects can be changed within the function. This is a side effect, if the
               object is not returned from the function. Consider the following example, which we have seen before:</p>
     <program label="clens9_10_1" interactive="codelens" language="python">
-      <input>
+      <code>
 def bison(lst):
    lst[0] = "Manitoba"
    lst[1] = "Bisons"
@@ -14,12 +14,12 @@ def bison(lst):
 mylst = ['COMP 1000', 'students', 'are', 'awesome']
 bison(mylst)
 print(mylst)
-    </input>
+    </code>
     </program>
     <p>When this code runs and we print out mylst, it looks different from what's in mylst on line 5. Again, in this example, the bison function is right there, so it isn't hard to figure out why the list changed, but if there were 100 lines of code between the function definition and the function being called, it would be harder to understand and debug.</p>
     <p>We can avoid confusing side effects when passing around mutable objects by passing in a copy of the object and then returning the modified copy and reassigning it to the variable. This makes it much more obvious that the function is altering the mutable object. Here is the code above rewritten to do this:</p>
     <program label="clens9_10_2" interactive="codelens" language="python">
-      <input>
+      <code>
 def bison(lst):
    lst[0] = "Manitoba"
    lst[1] = "Bisons"
@@ -29,7 +29,7 @@ mylst = ['COMP 1000', 'students', 'are', 'awesome']
 newlist = bison(list(mylst))
 print(mylst)
 print(newlist)
-      </input>
+      </code>
     </program>
     <p>On line 7 in the code above, we use the built-in <c>list()</c> function, which takes a sequence as a
               parameter and returns a copy of that sequence as a list. Note also that we had to modify the function to return the list. Once these changes are made, the alterations to the list are no longer considered a side effect, as they are made transparent by returning a changed value.</p>
@@ -38,7 +38,7 @@ print(newlist)
     <title>Side Effects in Interactive Programs</title>
     <p>When we program interactively and use listener functions, we end up modifying global variables and objects and creating side effects. This is because the listener functions that you can register must only have the parameters relevant to the interaction event. Let's revisit an earlier example:</p>
     <program label="ac9_10_1_1" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -94,13 +94,13 @@ wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()
 wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
 wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>In this interactive programming example, it isn't possible to pass the turtle object (alex) to the listener functions key_r() or click() because these functions' parameters are confined to the parameters needed for responding to specific events. The key_r function is registered to execute when the user presses the r key and as a key listener function it takes no parameters. The click function is registered to execute when the user clicks the mouse and as a mouse-click listener function it must take two parameters so the operating system can pass in the information about where the user clicked the mouse (x and y). We can make this code have fewer side-effects by modifying it as shown below.</p>
     <program label="ac9_10_1_2" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -159,7 +159,7 @@ wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()
 wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
 wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -171,7 +171,7 @@ wn.listen()             # tell the operating system to listen for events on the 
       <statement>
         <p>How many turtles are created in this script?</p>
         <program language="python">
-          <input>
+          <code>
 import turtle
 import random
 
@@ -191,7 +191,7 @@ alex = turtle.Turtle()    # create alex
 alex = write_msg(alex, "Hello!", 0, 0)
 wn.onclick(here)
 wn.listen()
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -233,7 +233,7 @@ wn.listen()
       <statement>
         <p>What is a side effect of the write_msg function?</p>
         <program language="python">
-          <input>
+          <code>
 import turtle
 import random
 
@@ -253,7 +253,7 @@ alex = turtle.Turtle()    # create alex
 alex = write_msg(alex, "Hello!", 0, 0)
 wn.onclick(here)
 wn.listen()
-</input>
+</code>
         </program>
       </statement>
       <choices>

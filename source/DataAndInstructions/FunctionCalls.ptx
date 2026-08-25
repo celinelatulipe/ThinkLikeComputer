@@ -16,13 +16,13 @@
     </note>
     <p>It is also possible for programmers to define new functions in their programs. You will learn how to do that later in the course. For now, you just need to learn how to invoke, or call, a function, and understand that the execution of the function returns a computed value.</p>
     <program xml:id="ac2_4_1" label="ac2_4_1" interactive="activecode" language="python" hide="yes">
-      <input>
+      <code>
 def square(x):
   return x * x
 
 def sub(x, y):
   return x - y
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -33,12 +33,12 @@ def sub(x, y):
               The visual below illustrates how the <c>square</c> function works.</p>
     <image source="DataAndInstructions/Figures/square_function.gif" width="50%" alt="a visual of the square function. Four is provided as the input, the function object shakes, and then sixteen comes out from the bottom of the function object."/>
     <program label="ac2_4_2" interactive="activecode" language="python" include="ac2_4_1">
-      <input>
+      <code>
 print(square(3))
 square(5)
 print(sub(6, 4))
 print(sub(5, 9))
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -55,10 +55,10 @@ print(sub(5, 9))
                 produces a number.</p>
     <p>For example:</p>
     <program label="ac2_4_3" interactive="activecode" language="python" include="ac2_4_1">
-      <input>
+      <code>
 print(square(3) + 2)
 print(sub(square(3), square(1+1)))
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -71,10 +71,10 @@ print(sub(square(3), square(1+1)))
     <p>Just typing the name of the function refers to the function as an object, as in the first line in the example below. Typing the name of the function followed by
                 parentheses <c>()</c> invokes (calls) the function. Of course, you have to put any input values that the function needs inside the parentheses.</p>
     <program label="ac2_4_4" interactive="activecode" language="python" include="ac2_4_1">
-      <input>
+      <code>
 print(square)
 print(square(3))
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

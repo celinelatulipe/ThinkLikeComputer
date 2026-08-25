@@ -18,7 +18,7 @@
               number. Here is the black-box diagram with the Python code following.</p>
     <image source="FunctionsParametersScope/Figures/squarefun.png" width="50%"/>
     <program label="ac8_3_1" interactive="activecode" language="python">
-      <input>
+      <code>
 def square(x):
     y = x * x
     return y
@@ -26,7 +26,7 @@ def square(x):
 toSquare = 10
 result = square(toSquare)
 print("The result of " + str(toSquare) + " squared is " + str(result) + ".")
-          </input>
+          </code>
       <tests>
       </tests>
     </program>
@@ -41,21 +41,21 @@ print("The result of " + str(toSquare) + " squared is " + str(result) + ".")
               <c>square</c>, its name is <c>x</c>.  You can see this very clearly in CodeLens, where the global variables and the local
               variables for the square function are in separate boxes.</p>
     <program label="clens8_3_1" interactive="codelens" language="python">
-      <input>
+      <code>
 def square(x):
     y = x * x
     return y
 
 toSquare = 10
 squareResult = square(toSquare)
-      </input>
+      </code>
     </program>
     <p>There is one more aspect of function return values that should be noted. All Python functions return the special value
               <c>None</c> unless there is an explicit return statement with a value other than <c>None</c>. Consider the following common
               mistake made by beginning Python programmers. As you step through this example, pay very close attention to the return
               value in the local variables listing. Then look at what is printed when the function is over.</p>
     <program label="clens8_3_2" interactive="codelens" language="python">
-      <input>
+      <code>
 def square(x):
     y = x * x
     print(y)   # Bad! This is confusing! Should use return instead!
@@ -63,7 +63,7 @@ def square(x):
 toSquare = 10
 squareResult = square(toSquare)
 print("The result of {} squared is {}.".format(toSquare, squareResult))
-      </input>
+      </code>
     </program>
     <p>The problem with this function is that even though it prints the value of the squared input, that value will not be
               returned to the place where the call was done. Instead, the value <c>None</c> will be returned. Since line 6 uses the
@@ -75,7 +75,7 @@ print("The result of {} squared is {}.".format(toSquare, squareResult))
               variable x, then printed. Lines 4 and 5 never execute. Run the following code and try making some modifications to
               it to make sure you understand why <q>there</q> and 10 never print out.</p>
     <program label="ac8_3_2" interactive="activecode" language="python">
-      <input>
+      <code>
 def weird():
     print("here")
     return 5
@@ -84,7 +84,7 @@ def weird():
 
 x = weird()
 print(x)
-          </input>
+          </code>
       <tests>
       </tests>
     </program>
@@ -121,7 +121,7 @@ print(x)
     </p>
     <p>Now, the code:</p>
     <program label="ac8_3_3" interactive="activecode" language="python">
-      <input>
+      <code>
 def longer_than_five(list_of_names):
     for name in list_of_names: # iterate over the list to look at each name
         if len(name) &gt; 5: # as soon as you see a name longer than 5 letters,
@@ -138,7 +138,7 @@ list2 = ["Rey","Ayo","Lauren","Natalie"]
 
 print(longer_than_five(list1))
 print(longer_than_five(list2))
-          </input>
+          </code>
       <tests>
       </tests>
     </program>
@@ -183,11 +183,11 @@ print(longer_than_five(list2))
       <statement>
         <p>What is wrong with the following function definition:</p>
         <program language="python">
-          <input>
+          <code>
 def addEm(x, y, z):
     return x+y+z
     print('the answer is', x+y+z)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -229,10 +229,10 @@ def addEm(x, y, z):
       <statement>
         <p>What will the following function return?</p>
         <program language="python">
-          <input>
+          <code>
 def addEm(x, y, z):
     print(x+y+z)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -266,13 +266,13 @@ def addEm(x, y, z):
       <statement>
         <p>What will the following code output?</p>
         <program language="python">
-          <input>
+          <code>
 def square(x):
     y = x * x
     return y
 
 print(square(5) + square(5))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -306,13 +306,13 @@ print(square(5) + square(5))
       <statement>
         <p>What will the following code output?</p>
         <program language="python">
-          <input>
+          <code>
 def square(x):
     y = x * x
     return y
 
 print(square(square(2)))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -346,7 +346,7 @@ print(square(square(2)))
       <statement>
         <p>What will the following code output?</p>
         <program language="python">
-          <input>
+          <code>
 def cyu2(s1, s2):
     x = len(s1)
     y = len(s2)
@@ -357,7 +357,7 @@ if z &gt; 0:
     print("First one was longer")
 else:
     print("Second one was at least as long")
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -407,7 +407,7 @@ else:
       <statement>
         <p>Which will print out first, square, g, or a number?</p>
         <program language="python">
-          <input>
+          <code>
 def square(x):
     print("square")
     return x*x
@@ -417,7 +417,7 @@ def g(y):
     return y + 3
 
 print(square(g(2)))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -451,7 +451,7 @@ print(square(g(2)))
       <statement>
         <p>How many lines will the following code print?</p>
         <program language="python">
-          <input>
+          <code>
 def show_me_numbers(list_of_ints):
     print(10)
     print("Next we'll accumulate the sum")
@@ -462,7 +462,7 @@ def show_me_numbers(list_of_ints):
     print("All done with accumulation!")
 
 show_me_numbers([4,2,3])
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -497,10 +497,10 @@ show_me_numbers([4,2,3])
         <p><term>8.</term> Write a function named <c>same</c> that takes a string as input, and simply returns that string.</p>
       </statement>
       <program label="ac8_3_4_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 
 
-        </input>
+        </code>
 <tests>
     from unittest.gui import TestCaseGui
 
@@ -518,8 +518,8 @@ show_me_numbers([4,2,3])
         <p><term>9.</term> Write a function called <c>same_thing</c> that returns the parameter, unchanged.</p>
       </statement>
       <program label="ac8_3_5_editor" interactive="activecode" language="python">
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -538,9 +538,9 @@ myTests().main()
         <p><term>10.</term> Write a function called <c>subtract_three</c> that takes an integer or any number as input, and returns that number minus three.</p>
       </statement>
       <program label="ac8_3_6_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -559,9 +559,9 @@ myTests().main()
         <p><term>11.</term> Write a function called <c>change</c> that takes one number as its input and returns that number, plus 7.</p>
       </statement>
       <program label="ac8_3_7_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -580,8 +580,8 @@ myTests().main()
         <p><term>12.</term> Write a function named <c>intro</c> that takes a string as input. This string is intended to be a person's name and the output is a standardized greeting. For example, given the string <q>Becky</q> as input, the function should return: <q>Hello, my name is Becky and I love SI 106.</q></p>
       </statement>
       <program label="ac8_3_8_editor" interactive="activecode" language="python">
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -599,8 +599,8 @@ myTests().main()
         <p><term>13.</term> Write a function called <c>s_change</c> that takes one string as input and returns that string, concatenated with the string <q> for fun.</q>.</p>
       </statement>
       <program label="ac8_3_9_editor" interactive="activecode" language="python">
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -619,8 +619,8 @@ myTests().main()
         <p><term>14.</term> Write a function called <c>decision</c> that takes a string as input, and then checks the number of characters. If it has over 17 characters, return <q>This is a long string</q>, if it is shorter or has 17 characters, return <q>This is a short string</q>.</p>
       </statement>
       <program label="ac8_3_10_editor" interactive="activecode" language="python">
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 

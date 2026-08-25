@@ -4,7 +4,7 @@
   <p>In this section, we will look at examples where we combine all three of these building blocks together in various ways. The purpose of looking at these examples, along with the flow charts that are color-coded (blue to show function blocks, green to show conditional blocks, and pink to show iteration blocks) is the ways that these things can all work together. Every program you write will make use of these blocks of code, nested in each other in lots of different ways.</p>
   <p>Let's look at an example of a program that uses all of these components, combined and nested together. This program is designed to check through a list of potential passwords and determine whether each password meets a set of four requirements. Run the program. This program is not interactive, so the output is only in the console. But note the use of functions, loops, conditionals and how they are combined.</p>
   <program label="ac7_5_1" interactive="activecode" language="python">
-    <input>
+    <code>
 # Password Checking Program
 # check whether each password has at least 8 characters, at least 1 number,
 # at least one lower-case character, at least one upper-case character
@@ -71,7 +71,7 @@ current_pwd = ""
 pwd_good = True
 
 main()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

@@ -19,11 +19,11 @@ print(5 + )</pre>
   <p>To see a syntax error in action, look at the following program. Can you spot the error?
             After locating the error, run the program to see the error message.</p>
   <program label="debug_syntaxerr" interactive="activecode" language="python">
-    <input>
+    <code>
 print("Hello, World!")
 print(5 + )
 print("All finished!")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

@@ -6,14 +6,14 @@
     <p>Sometimes when we're accumulating, we don't want to add to our accumulator every time we iterate.
               Consider, for example, the following program which counts the number of letters in a phrase.</p>
     <program label="ac6_10_1" interactive="activecode" language="python">
-      <input>
+      <code>
 phrase = "What a wonderful day to program"
 tot = 0
 for char in phrase:
     if char != " ":
         tot = tot + 1
 print(tot)
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -28,14 +28,14 @@ print(tot)
               differentiate between spaces and non-spaces.</p>
     <p>We can use conditionals to also count if particular items are in a string or list. The following code finds all occurrences of vowels in the following string.</p>
     <program label="ac6_10_2" interactive="activecode" language="python">
-      <input>
+      <code>
 s = "what if we went to the zoo"
 x = 0
 for i in s:
     if i in ['a', 'e', 'i', 'o', 'u']:
         x += 1
 print(x)
-            </input>
+            </code>
     <tests>
     </tests>
     </program>
@@ -50,14 +50,14 @@ print(x)
                 accumulator variable to a different value.</p>
     <p>The following example shows how we can get the maximum value from a list of integers.</p>
     <program label="ac6_10_3" interactive="activecode" language="python">
-      <input>
+      <code>
 nums = [9, 3, 8, 11, 5, 29, 2]
 best_num = 0
 for n in nums:
     if n &gt; best_num:
         best_num = n
 print(best_num)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -70,14 +70,14 @@ print(best_num)
                 zero? To get around this issue, we can initialize the accumulator variable using one of the numbers in the
                 list.</p>
     <program label="ac6_10_4" interactive="activecode" language="python">
-      <input>
+      <code>
 nums = [9, 3, 8, 11, 5, 29, 2]
 best_num = nums[0]
 for n in nums:
     if n &gt; best_num:
         best_num = n
 print(best_num)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -90,14 +90,14 @@ print(best_num)
       <statement>
         <p>What is printed by the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 s = "We are learning!"
 x = 0
 for i in s:
     if i in ['a', 'b', 'c', 'd', 'e']:
         x += 1
 print(x)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -139,14 +139,14 @@ print(x)
       <statement>
         <p>What is printed by the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 list= [5, 2, 1, 4, 9, 10]
 min_value = 0
 for item in list:
    if item &lt; min_value:
        min_value = item
 print(min_value)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -189,7 +189,7 @@ print(min_value)
         <p>For each string in the list <c>words</c>, find the number of characters in the string. If the number of characters in the string is greater than 3, add 1 to the variable <c>num_words</c> so that <c>num_words</c> should end up with the total number of words with more than 3 characters.</p>
       </statement>
       <program label="ac6_10_5_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 words = ["water", "chair", "pen", "basket", "hi", "car"]
 
 =====
@@ -202,7 +202,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num_words, 3, "Testing that num_words has the correct value.")
 
 myTests().main()
-        </input>
+        </code>
       <tests>
     </tests>
       </program>
@@ -212,7 +212,7 @@ myTests().main()
         <p><term>Challenge</term> For each word in <c>words</c>, add &#x2018;d' to the end of the word if the word ends in <q>e</q> to make it past tense. Otherwise, add &#x2018;ed' to make it past tense. Save these past tense words to a list called <c>past_tense</c>.</p>
       </statement>
       <program label="ac6_10_7_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "wish"]
 
 =====
@@ -227,7 +227,7 @@ class myTests(TestCaseGui):
       self.assertIn("for", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
 
 myTests().main()
-        </input>
+        </code>
       <tests>
     </tests>
       </program>

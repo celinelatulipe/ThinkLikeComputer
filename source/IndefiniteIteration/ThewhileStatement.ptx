@@ -12,7 +12,7 @@
   <p>We can use the <c>while</c> loop to create any type of iteration we wish, including anything that we have previously
             done with a <c>for</c> loop. For example, we have seen programs that look like this when we learned about for loops:</p>
   <program label="ac10_2_1" interactive="activecode" language="python">
-    <input>
+    <code>
 def sumTo(aBound):
    """ Return the sum of 1+2+3 ... n """
 
@@ -24,7 +24,7 @@ def sumTo(aBound):
 
 print(sumTo(10))
 print(sumTo(15))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -36,7 +36,7 @@ print(sumTo(15))
             should keep going.</p>
   <p>Here is a new version of the summation program that uses a while statement:</p>
   <program label="ac10_2_2" interactive="activecode" language="python">
-    <input>
+    <code>
 def sumTo(aBound):
     """ Return the sum of 1+2+3 ... n """
 
@@ -50,7 +50,7 @@ def sumTo(aBound):
 print(sumTo(4))
 
 print(sumTo(1000))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -61,7 +61,7 @@ print(sumTo(1000))
             of control continues to the <c>return</c> statement.</p>
   <p>The same program in codelens will allow you to observe the flow of execution.</p>
   <program label="clens10_2_1" interactive="codelens" language="python">
-    <input>
+    <code>
 def sumTo(aBound):
     """ Return the sum of 1+2+3 ... n """
 
@@ -73,7 +73,7 @@ def sumTo(aBound):
     return theSum
 
 print(sumTo(4))
-    </input>
+    </code>
   </program>
   <note>
     <p>The names of the variables have been chosen to help readability.</p>
@@ -151,14 +151,14 @@ print(sumTo(4))
     <statement>
       <p>The following code contains an infinite loop. Which is the best explanation for why the loop does not terminate?</p>
       <program language="python">
-        <input>
+        <code>
 n = 10
 answer = 1
 while ( n &gt; 0 ):
   answer = answer + n
   n = n + 1
 print(answer)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -232,8 +232,8 @@ print(answer)
       <p>Write a while loop that is initialized at 0 and stops at 15. If the counter is an even number, append the counter to a list called <c>eve_nums</c>.</p>
     </statement>
     <program label="ac10_2_3_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -251,14 +251,14 @@ myTests().main()
       <p>Below, we've provided a for loop that sums all the elements of <c>list1</c>. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name <c>accum</c>.</p>
     </statement>
     <program label="ac10_2_4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 list1 = [8, 3, 4, 5, 6, 7, 9]
 
 tot = 0
 for elem in list1:
     tot = tot + elem
-        </input>
+        </code>
 
 <tests>
 from unittest.gui import TestCaseGui
@@ -279,11 +279,11 @@ myTests().main()
       <p>Write a function called <c>stop_at_four</c> that iterates through a list of numbers. Using a while loop, append each number to a new list until the number 4 appears. The function should return the new list.</p>
     </statement>
     <program label="ac10_2_5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
 def stop_at_four():
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 

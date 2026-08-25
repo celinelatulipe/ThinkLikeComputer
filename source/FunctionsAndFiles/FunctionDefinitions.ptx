@@ -3,10 +3,10 @@
   <title>Function Definition</title>
   <p>The syntax for creating a named function, a <term>function definition</term>, is:</p>
   <program language="python">
-    <input>
+    <code>
 def name( parameters ):
     statements
-</input>
+</code>
   </program>
   <p>You can make up any names you want for the functions you create, except that you can't use a name that is a Python
             keyword, and the names must follow the rules for legal identifiers that were given previously. The parameters specify
@@ -35,12 +35,12 @@ def name( parameters ):
   <p>We will come back to parameters in Chapter 9. In this chapter we will focus on creating very simple functions that don't take any parameters. This way you can focus on understanding how to define and invoke (call) functions, and what happens when a function is executed.</p>
   <p>Here's the definition of a simple function, hello.</p>
   <program label="ac5_2_1" interactive="activecode" language="python">
-    <input>
+    <code>
 def hello():
     """This function says hello and greets you"""
     print("Hello")
     print("Glad to meet you")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -59,21 +59,21 @@ def hello():
   </note>
   <p>By convention, function definitions go at the top of a file, after the import statements, but before any other code. You should always put your functions at the top like that. What is critical is that the Python interpreter needs to see the function definition before it sees any calls to that function. The example below doesn't work, because the function definition is <term>after</term> the function invocation.</p>
   <program label="ac5_2_2" interactive="activecode" language="python">
-    <input>
+    <code>
 goodbye()   # this won't work because the goodbye function isn't defined yet
 
 def goodbye():
     """This function says goodbye and wishes you well"""
     print("Goodbye")
     print("We wish you all the best!")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Note that when you run the code above, the error you get is a NameError. The Python Interpreter has no idea what 'goodbye' is, because it hasn't seen anything with that name yet. Fix the code above so that it works.</p>
   <p>We can apply functions to make more interesting and complex turtle drawings.</p>
   <program label="ac5_2_3" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 
 def draw_small_square():
@@ -106,7 +106,7 @@ for _ in range(12):       # loop 12 times to go around in a circle
   draw_small_square()      # Call the function to draw the small square
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -121,9 +121,9 @@ wn.exitonclick()
       <p>Write a turtle program that includes a function to draw a triangle (hint: to draw a triangle, turn the turtle 120 degrees three times). Then use a for loop to have a turtle draw five triangles to make a pattern like the one shown above. Turn the turtle each time in the for loop before calling the triangle function. How much to turn the turtle? Divide the number of degrees in a circle by the number of times you want to turn.</p>
     </statement>
     <program label="ac_5_2_4_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 import turtle
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

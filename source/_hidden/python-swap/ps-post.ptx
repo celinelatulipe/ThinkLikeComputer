@@ -12,7 +12,7 @@
         <p>Finish writing the code to swap the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value).</p>
       </statement>
       <program label="ps-swap1-ac-v2_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 
 x = 6
 y = 2
@@ -28,7 +28,7 @@ print(y)
 # print the values
 print(x)
 print(y)
-        </input>
+        </code>
         <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -46,7 +46,7 @@ myTests().main()
         <p>Finish writing the code to swap the values in a and b (so that a ends up with b's initial value and b ends up with a's initial value).</p>
       </statement>
       <program label="ps-swap2-ac_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 
 a = -3
 b = 5
@@ -62,7 +62,7 @@ print(b)
 # print the values
 print(a)
 print(b)
-        </input>
+        </code>
         <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):

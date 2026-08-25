@@ -33,7 +33,7 @@
             </note>
     <program label="lab2_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -44,7 +44,7 @@ import math              #imports the math library
 import turtle              #imports the turtle library
 
 wn = turtle.Screen()   #creates a graphics window
-        </input>
+        </code>
 <tests>
 
 
@@ -83,13 +83,13 @@ wn = turtle.Screen()   #creates a graphics window
 
     <program label="lab2_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
 # Lab 2, Part 2
 ################################################################
-        </input>
+        </code>
 <tests>
 
 
@@ -105,7 +105,7 @@ wn = turtle.Screen()   #creates a graphics window
 
     <program label="lab2_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -128,7 +128,7 @@ level.forward(50)
 area = 50 ** 2
 
 print("The area of a square with a side length of 50 is ", area)
-        </input>
+        </code>
 <tests>
 
 

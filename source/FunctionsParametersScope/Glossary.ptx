@@ -39,12 +39,12 @@
       </p>
       <p>The syntax of a compound statement looks like this:</p>
       <program language="python">
-        <input>
+        <code>
 keyword expression:
     statement
     statement
     ...
-</input>
+</code>
       </program>
     </gi>
     <gi>

@@ -2,7 +2,7 @@
 <section xml:id="general-intro_introduction-the-way-of-the-program-index-0">
   <title>Introduction: The Way of the Program</title>
   <introduction>
-    <video xml:id="goog_course_intro" youtube="xuEtNpVzFYA" width="80%"/>
+    <video xml:id="goog_course_intro" label="goog_course_intro" youtube="xuEtNpVzFYA" width="80%"/>
     <p>The goal of this book is to teach you to understand and create computer programs in Python.
             At the beginning of each chapter, we will outline the learning goals and objectives
             that should be accomplished once you have gone through the chapter.</p>

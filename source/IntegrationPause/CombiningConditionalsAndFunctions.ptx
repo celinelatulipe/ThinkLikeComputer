@@ -11,7 +11,7 @@
     <image source="IntegrationPause/Figures/conditionals_inside_functions.png" width="75%"/>
     <p>A toggle function is a really good example of a function with a conditional inside of it. Let's imagine that we want a turtle to switch between drawing in red and black whenever the user presses the &#x2018;t' key on the keyboard. The following code accomplishes this through the toggle_color() function, which contains an if-else conditional statement.</p>
     <program label="ac7_4_1" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -44,7 +44,7 @@ wn.onkey(key_t, "t")
 wn.onkey(key_c, "c")
 wn.onkey(key_m, "m")
 wn.listen()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -70,7 +70,7 @@ wn.listen()
     <title>Calling Functions from Conditional Blocks</title>
     <p>It's quite typical to have different functions for different tasks and then to call those functions depending on what happens at runtime. This is particularly true in event-based programming. The example above has the turtle moving and changing color in response to key presses. We can also imagine a program in which different things happen depending on the value of some variable, so we use a conditional to test that value, and then call various functions in response. In the turtle example below, everything happens in response to key presses. Some key presses change the current drawing color. Pressing the &#x2018;d' key causes shapes to be drawn, but the shape is dependent on the pen color. So a conditional tests the pen color, and then calls different shape drawing functions.</p>
     <program label="ac7_4_2" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -142,7 +142,7 @@ wn.onkey(key_r, "r")
 wn.onkey(key_g, "g")
 wn.onkey(key_b, "b")
 wn.listen()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

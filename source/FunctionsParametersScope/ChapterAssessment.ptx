@@ -6,8 +6,8 @@
       <p>Write a function called <c>int_return</c> that takes an integer as input and returns the same integer.</p>
     </statement>
     <program label="ac11_15_1_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -24,8 +24,8 @@ myTests().main()
       <p>Write a function called <c>add</c> that takes any number as its input and returns that sum with 2 added.</p>
     </statement>
     <program label="ac11_15_2_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -45,8 +45,8 @@ myTests().main()
       <p>Write a function called <c>change</c> that takes any string, adds <q>Nice to meet you!</q> to the end of the argument given, and returns that new string.</p>
     </statement>
     <program label="ac11_15_3_editor" interactive="activecode" language="python">
-  <input>
-    </input>
+  <code>
+    </code>
 
 <tests>
 from unittest.gui import TestCaseGui
@@ -66,8 +66,8 @@ myTests().main()
       <p>You will need to write two functions for this problem. The first function, <c>divide</c> that takes in any number and returns that same number divided by 2. The second function called <c>sum</c> should take any number, divide it by 2, and add 6. It should return this new number. You should call the <c>divide</c> function within the <c>sum</c> function. Do not worry about decimals.</p>
     </statement>
     <program label="ac11_15_6_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 
 <tests>
 from unittest.gui import TestCaseGui

@@ -10,7 +10,7 @@
 3,36
 ...</pre>
   <program label="ac9_14_1" interactive="activecode" language="python">
-    <input>
+    <code>
 n = [0] * 12
 for i in range(1,13):
     n[i-1] = i *12
@@ -20,13 +20,13 @@ for j in range(0, len(n)):
     # +1 to j since the array starts at 0 and we start counting at 1
     outfile.write('\n')
 outfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Here is a more complex example, where we a have a list of tuples, each representing one Olympian, a subset of the rows and columns from the file we have been reading from.</p>
   <program label="ac9_14_3" interactive="activecode" language="python">
-    <input>
+    <code>
 olympians = [("John Aalberg", 31, "Cross Country Skiing"),
              ("Minna Maarit Aalto", 30, "Sailing"),
              ("Win Valdemar Aaltonen", 54, "Art Competitions"),
@@ -42,7 +42,7 @@ for olympian in olympians:
     outfile.write(row_string)
     outfile.write('\n')
 outfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -57,7 +57,7 @@ outfile.close()
             reason Python allows strings to be delimited with either single quotes or double quotes is so
             that one can be used to delimit the string and the other can be a character in the string. If you get to the point where you need to quote all of the values, we recommend learning to use python's csv module.</p>
   <program label="ac9_14_2" interactive="activecode" language="python">
-    <input>
+    <code>
 olympians = [("John Aalberg", 31, "Cross Country Skiing, 15KM"),
              ("Minna Maarit Aalto", 30, "Sailing"),
              ("Win Valdemar Aaltonen", 54, "Art Competitions"),
@@ -73,7 +73,7 @@ for olympian in olympians:
     outfile.write(row_string)
     outfile.write('\n')
 outfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

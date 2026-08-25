@@ -11,14 +11,14 @@
     </ol>
   </p>
   <program label="ac3_15_1" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 alex = turtle.Turtle()
 
 alex.forward(50
 alex.right(90)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -36,38 +36,38 @@ alex.right(90)
   <p>Sometimes we misspell a variable name, either by making it capitalized when it wasn't previously capitalized or switching
             letters around. Other times we accidentally refer to the wrong variable name. Checkout the code below for some examples.</p>
   <program label="ac3_15_2" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 alex = Turtle.turtle()      #switched turtle and Turtle
 
 alex.forward(50)
 alex.right(90)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <program label="ac3_15_3" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 june = turtle.Turtle()
 
 june.forward(50)
 right.june(90)             #switched the variable for jane with the direction to turn in
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <program label="ac3_15_4" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 june = turtle.Turtle()
 
 june.forward(50)
 June.right(90)            #capitalized the variable June even though all others were lowercase
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -81,7 +81,7 @@ June.right(90)            #capitalized the variable June even though all others 
   <p>We can also incorrectly provide arguments to a method or function. When that happens, you'll see an error message like the
             one below.</p>
   <program label="ac3_15_5" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 june = turtle.Turtle()
@@ -90,7 +90,7 @@ for _ in range():
     june.color("green", "yellow")
     june.forward("50")
     june.right(90)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

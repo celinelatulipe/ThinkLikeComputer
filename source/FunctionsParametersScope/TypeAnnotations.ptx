@@ -6,12 +6,12 @@
             reduce the amount of sleuthing that is needed.</p>
   <p>Consider the following function definition:</p>
   <program language="python">
-    <input>
+    <code>
 def duplicate(msg):
     """Returns a string containing two copies of `msg`"""
 
     return msg + msg
-</input>
+</code>
   </program>
   <p>This function is intended to duplicate a message; if called with the value &#x2018;Hello', it returns the value
             &#x2018;HelloHello'. If called with other types of data, however, it will not work properly. (What will the
@@ -19,7 +19,7 @@ def duplicate(msg):
   <p>Python allows you to indicate the intended type of the function parameters and the type of the function return value
             in a function definition using a special notation demonstrated in this example:</p>
   <program label="ac_annotate1" interactive="activecode" language="python">
-    <input>
+    <code>
 def duplicate(msg: str) -&gt; str:
     """Returns a string containing two copies of `msg`"""
 
@@ -27,7 +27,7 @@ def duplicate(msg: str) -&gt; str:
 
 result = duplicate('Hello')
 print(result)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -39,7 +39,7 @@ print(result)
             The annotation  <c>-&gt; str</c> indicates that the function will produce a <c>str</c> result.</p>
   <p>Here are some more examples of functions with type annotations:</p>
   <program label="ac_annotate2" interactive="activecode" language="python">
-    <input>
+    <code>
 def add(x: int, y: int) -&gt; int:
     """Returns the sum of `x` and `y`"""
 
@@ -55,7 +55,7 @@ def display_msg(msg: str):
 
     print(msg)
     print('-------------------------------------')
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -79,13 +79,13 @@ def display_msg(msg: str):
     <statement>
       <p>What happens when the following is executed?</p>
       <program language="python">
-        <input>
+        <code>
 def display(msg: str):
     """Displays `msg` on the screen"""
     print(msg + 2)
 
 display(2.5)
-</input>
+</code>
       </program>
     </statement>
     <choices>

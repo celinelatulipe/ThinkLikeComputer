@@ -80,13 +80,13 @@
     <statement>
       <p>How many parameters does function cyu3 take?</p>
       <program language="python">
-        <input>
+        <code>
 def cyu3(x, y, z):
    if x - y &gt; 0:
       return y -2
    else:
       return len(z) + 3
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -136,13 +136,13 @@ def cyu3(x, y, z):
     <statement>
       <p>What are the possible types of variables x and y?</p>
       <program language="python">
-        <input>
+        <code>
 def cyu3(x, y, z):
    if x - y &gt; 0:
       return y -2
    else:
       return len(z) + 3
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -192,13 +192,13 @@ def cyu3(x, y, z):
     <statement>
       <p>What are the possible types of variable z?</p>
       <program language="python">
-        <input>
+        <code>
 def cyu3(x, y, z):
    if x - y &gt; 0:
       return len(z) -2
    else:
       return len(z) + 3
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -248,13 +248,13 @@ def cyu3(x, y, z):
     <statement>
       <p>What are the possible types of the return value from cyu3?</p>
       <program language="python">
-        <input>
+        <code>
 def cyu3(x, y, z):
    if x - y &gt; 0:
       return len(z) - 2
    else:
       return len(z) + 3
-</input>
+</code>
       </program>
     </statement>
     <choices>

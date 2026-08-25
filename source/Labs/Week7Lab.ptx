@@ -23,7 +23,7 @@
 
     <program label="la7_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -45,7 +45,7 @@ def time_clock():
 elif name[0] == 'W':
 
 print(name[2:], 'is clocked in for Weddings')
-        </input>
+        </code>
 <tests>
 
 
@@ -93,7 +93,7 @@ print(name[2:], 'is clocked in for Weddings')
 
     <program label="lab7_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -108,7 +108,7 @@ num_str = input("Please enter a number between 0 and 1000")
 num = int(num_str)
 square = num*num
 print("You entered:", num_str, "which is", square, "squared")
-        </input>
+        </code>
 <tests>
 
 
@@ -125,7 +125,7 @@ print("You entered:", num_str, "which is", square, "squared")
 
     <program label="lab7_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -155,7 +155,7 @@ for suit in suits: # go through each suit
 
 for card in deck:
     print(card)
-        </input>
+        </code>
 <tests>
 
 

@@ -24,13 +24,13 @@
   </dl>
   <p>For example, consider the following code, which computes the sum of the numbers in a list.</p>
   <program label="ac4_9_1" interactive="activecode" language="python">
-    <input>
+    <code>
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 accum = 0
 for w in nums:
     accum = accum + w
 print(accum)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -46,13 +46,13 @@ print(accum)
   <p>Here is the same program in CodeLens.  Step through the function and watch the <q>running total</q>
             accumulate the result.</p>
   <program label="clens4_9_1" interactive="codelens" language="python">
-    <input>
+    <code>
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 accum = 0
 for w in nums:
    accum = accum + w
 print(accum)
-    </input>
+    </code>
   </program>
   <note>
     <p>What would happen if we indented the print accum statement? Not sure? Make a prediction, then try it and find out.</p>
@@ -62,7 +62,7 @@ print(accum)
             two inputs, we will focus on using range with just one input. With one input, range will start at zero and go up to - but
             not include - the input. Here are some examples:</p>
   <program label="ac4_9_2" interactive="activecode" language="python">
-    <input>
+    <code>
 print("range(5): ")
 for i in range(5):
   print(i)
@@ -74,7 +74,7 @@ for i in range(0, 5):
 # We can also print this out by casting `range` to a `list`:
 print(list(range(5)))
 print(list(range(0,5)))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -82,7 +82,7 @@ print(list(range(0,5)))
             have to cast it to a list using <c>list()</c>.</p>
   <p>Here's how you could use the range function in the previous problem.</p>
   <program label="ac4_9_3" interactive="activecode" language="python">
-    <input>
+    <code>
 accum = 0
 for w in range(11):
     accum = accum + w
@@ -94,7 +94,7 @@ sec_accum = 0
 for w in range(1,11):
     sec_accum = sec_accum + w
 print(sec_accum)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -103,13 +103,13 @@ print(sec_accum)
             above examples only covered how to get the sum for a list, but we can also count how many items are
             in the list if we wanted to.</p>
   <program label="ac4_9_4" interactive="activecode" language="python">
-    <input>
+    <code>
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 count = 0
 for w in nums:
     count = count + 1
 print(count)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -125,13 +125,13 @@ print(count)
     <statement>
       <p>Consider the following code:</p>
       <program language="python">
-        <input>
+        <code>
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for w in nums:
    accum = 0
    accum = accum + w
 print(accum)
-</input>
+</code>
       </program>
       <p>What happens if you put the initialization of accum inside the for loop as the first
             instruction in the loop?</p>
@@ -191,9 +191,9 @@ print(accum)
       <p>Write code to create a list of integers from 0 through 52 and assign that list to the variable <c>numbers</c>. You should use a special Python function &#x2013; do not type out the whole list yourself. HINT: You can do this in one line of code!</p>
     </statement>
     <program label="ac4_9_5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -213,10 +213,10 @@ print(accum)
       <p>Count the number of characters in string <c>str1</c>. Do not use <c>len()</c>. Save the number in variable <c>numbs</c>.</p>
     </statement>
     <program label="ac4_9_6_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 str1 = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living."
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -237,9 +237,9 @@ str1 = "I like nonsense, it wakes up the brain cells. Fantasy is a necessary ing
       <p>Create a list of numbers 0 through 40 and assign this list to the variable <c>numbers</c>. Then, accumulate the total of the list's values and assign that sum to the variable <c>sum1</c>.</p>
     </statement>
     <program label="ac4_9_7_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui

@@ -7,25 +7,25 @@
             also referred to as <term>conditional statements</term>, give us this ability. The simplest form of selection is the <term>if statement</term>.
             This is sometimes referred to as <term>binary selection</term> since there are two possible paths of execution.</p>
   <program label="ac6_6_1" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 15
 
 if x % 2 == 0:
     print(x, "is even")
 else:
     print(x, "is odd")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>The syntax for an <c>if</c> statement looks like this:</p>
   <program language="python">
-    <input>
+    <code>
 if BOOLEAN EXPRESSION:
     STATEMENTS_1        # executed if condition evaluates to True
 else:
     STATEMENTS_2        # executed if condition evaluates to False
-</input>
+</code>
   </program>
   <p>The boolean expression after the <c>if</c> statement is called the <term>condition</term>.
             If it is true, then the indented statements get executed. If not, then the statements
@@ -90,12 +90,12 @@ else:
     <statement>
       <p>What does the following code print? (choose from output a, b, c or nothing)</p>
       <program language="python">
-        <input>
+        <code>
 if (4 + 5 == 10):
     print("TRUE")
 else:
     print("FALSE")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -137,13 +137,13 @@ else:
     <statement>
       <p>What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 if (4 + 5 == 10):
     print("TRUE")
 else:
     print("FALSE")
 print("TRUE")
-</input>
+</code>
       </program>
       <pre>a. TRUE
 
@@ -199,7 +199,7 @@ d.
       <p>Write code to assign the string <c>"You can apply to SI!"</c> to <c>output</c> <em>if</em> the string <c>"SI 106"</c> is in the list <c>courses</c>. If it is not in <c>courses</c>, assign the value <c>"Take SI 106!"</c> to the variable <c>output</c>.</p>
     </statement>
     <program label="ac6_6_2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 courses = ["ENGR 101", "SI 110", "ENG 125", "SI 106", "CHEM 130"]
 
 =====
@@ -213,7 +213,7 @@ class myTests(TestCaseGui):
       self.assertIn("if", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -223,7 +223,7 @@ myTests().main()
       <p>Create a variable, <c>b</c>, and assign it the value of <c>15</c>. Then, write code to see if the value <c>b</c> is greater than that of <c>a</c>. If it is, <c>a</c>'s value should be multiplied by 2. If the value of <c>b</c> is less than or equal to <c>a</c>, nothing should happen. Finally, create variable <c>c</c> and assign it the value of the sum of <c>a</c> and <c>b</c>.</p>
     </statement>
     <program label="ac6_6_3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 a = 20
 
 =====
@@ -239,7 +239,7 @@ class myTests(TestCaseGui):
       self.assertEqual(c, 35, "Testing that c has the correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

@@ -6,12 +6,12 @@
     <p>A substring of a string is called a <term>slice</term>. Selecting a slice is similar to
               selecting a character:</p>
     <program label="ac9_5_1" interactive="activecode" language="python">
-      <input>
+      <code>
 singers = "Peter, Paul, and Mary"
 print(singers[0:5])
 print(singers[7:11])
 print(singers[17:21])
-        </input>
+        </code>
       <tests>
       </tests>
     </program>
@@ -22,24 +22,24 @@ print(singers[17:21])
               beginning of the string. If you omit the second index, the slice goes to the
               end of the string. What do you think <c>fruit[:]</c> means?.</p>
     <program label="ac9_5_2" interactive="activecode" language="python">
-      <input>
+      <code>
 fruit = "banana"
 print(fruit[:3])
 print(fruit[3:])
-        </input>
+        </code>
       <tests>
       </tests>
     </program>
     <p>It's important to note that slicing a string does not change the original string (remember - strings are immutable, you can make a copy but once a string is created, it never changes). So if you want to do something with a slice of a string, you can either embed it in an expression, or you can save it to a variable, as in the example below, where we take slices of two strings, concatenate them with a hyphen in between and assign that to a new variable. Note that the original strings have not been changed.</p>
     <program label="ac9_5_3" interactive="activecode" language="python">
-      <input>
+      <code>
 parent1_name = "Janus Franklin"
 parent2_name = "Raj Singh"
 kids_last_name = parent1_name[6:] + "-" + parent2_name[4:]
 print("First parent's name: ", parent1_name)
 print("Second parent's name: ", parent2_name)
 print("Kid's last name: ", kids_last_name)
-        </input>
+        </code>
       <tests>
       </tests>
     </program>
@@ -51,13 +51,13 @@ print("Kid's last name: ", kids_last_name)
                 beginning of the sequence. If you omit the second index, the slice goes to the
                 end of the sequence. Before running the code below, complete the comments on lines 2-5 by adding your predictions about what will be printed.</p>
     <program label="ac9_5_4" interactive="activecode" language="python">
-      <input>
+      <code>
 a_list = ['a', 'b', 'c', 'd', 'e', 'f']
 print(a_list[1:3])  # Predicted output:
 print(a_list[:4])   # Predicted output:
 print(a_list[3:])   # Predicted output:
 print(a_list[:])    # Predicted output:
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -69,7 +69,7 @@ print(a_list[:])    # Predicted output:
                 slice parts of the old tuple and join up the bits to make a new tuple. So <c>julia</c> has a new recent film, and we might
                 want to change her tuple. We can easily slice off the parts we want and concatenate them with a new tuple.</p>
     <program label="ac9_5_5" interactive="activecode" language="python">
-      <input>
+      <code>
 julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
 print(julia[2])
 print(julia[2:6])
@@ -78,7 +78,7 @@ print(len(julia))
 
 julia = julia[:3] + ("Eat Pray Love", 2010) + julia[5:]
 print(julia)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -90,10 +90,10 @@ print(julia)
       <statement>
         <p>What is printed by the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 s = "python rocks"
 print(s[3:8])
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -135,10 +135,10 @@ print(s[3:8])
       <statement>
         <p>What is printed by the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 alist = [3, 67, "cat", [56, 57, "dog"], [ ], 3.14, False]
 print(alist[4:])
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -172,10 +172,10 @@ print(alist[4:])
       <statement>
         <p>What is printed by the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 L = [0.34, '6', 'SI106', 'Python', -2]
 print(len(L[1:-1]))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -218,10 +218,10 @@ print(len(L[1:-1]))
         <p>Create a new list using the 9th through 12th elements (four items in all) of <c>new_lst</c> and assign it to the variable <c>sub_lst</c>.</p>
       </statement>
       <program label="ac9_5_6_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 new_lst = ["computer", "luxurious", "basket", "crime", 0, 2.49, "institution", "slice", "sun", ["water", "air", "fire", "earth"], "games", 2.7, "code", "java", ["birthday", "celebration", 1817, "party", "cake", 5], "rain", "thunderstorm", "top down"]
 
-        </input>
+        </code>
       <tests>
 
         from unittest.gui import TestCaseGui

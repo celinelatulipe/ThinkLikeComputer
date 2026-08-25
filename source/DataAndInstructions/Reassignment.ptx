@@ -8,12 +8,12 @@
               same variable. A new assignment makes an existing variable refer to a new value
               (and stop referring to the old value).</p>
     <program label="ac2_12_1" interactive="activecode" language="python">
-      <input>
+      <code>
 bruce = 5
 print(bruce)
 bruce = 7
 print(bruce)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -27,13 +27,13 @@ print(bruce)
             two variables refer to the same object and therefore have the same value.  They appear to be equal.  However, because of the possibility of reassignment,
             they don't have to stay that way:</p>
     <program label="ac2_12_2" interactive="activecode" language="python">
-      <input>
+      <code>
 a = 5
 b = a    # after executing this line, a and b are now equal
 print(a,b)
 a = 3    # after executing this line, a and b are no longer equal
 print(a,b)
-      </input>
+      </code>
         <tests>
         </tests>
     </program>
@@ -48,13 +48,13 @@ print(a,b)
     <p>In the first statement <c>a = 5</c> the literal number 5 evaluates to 5, and is given the name <c>a</c>.  In the second statement, the variable <c>a</c> evaluates to 5 and so 5 now ends up with a second name <c>b</c>.</p>
     <p>You can step through the code and see how the variable assignments change below.</p>
     <program label="clens2_12_1" interactive="codelens" language="python">
-      <input>
+      <code>
 a = 5
 b = a    # after executing this line, a and b are now equal
 print(a,b)
 a = 3    # after executing this line, a and b are no longer equal
 print(a,b)
-      </input>
+      </code>
     </program>
     <note>
       <p>In some programming languages, a different
@@ -65,7 +65,7 @@ print(a,b)
     </note>
     <p>The following turtle example shows some variables used for drawing, but between each use, the variables have their values changed.</p>
     <program label="ac2_12_3" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 wn = turtle.Screen()
 manuel = turtle.Turtle()
@@ -84,7 +84,7 @@ manuel.home()             # go back to center
 x = -200
 manuel.goto(x, y)       # draw from center to x, y
 manuel.home()             # go back to center
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -97,11 +97,11 @@ manuel.home()             # go back to center
       <statement>
         <p>After the following statements, what are the values of x and y?</p>
         <program language="python">
-          <input>
+          <code>
 x = 15
 y = x
 x = 22
-</input>
+</code>
         </program>
       </statement>
       <choices>

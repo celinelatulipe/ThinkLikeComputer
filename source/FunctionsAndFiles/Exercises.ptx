@@ -80,11 +80,11 @@
 				</p>
 			</statement>
             <program interactive="activecode" language="python" codelens="no">
-			<input>
+			<code>
 # Hint: first see if you can write a program that just prints out the number of scores on each line
 # Then, make it print the number only if the number is at least six
 # Then, switch it to printing the name instead of the number
-			</input>
+			</code>
 			<tests>
 from unittest.gui import TestCaseGui
 import re
@@ -114,14 +114,14 @@ myTests().main()
 		</program>
         <solution>
 		<program language="python">
-			<input>
+			<code>
 f = open("studentdata.txt", "r")
 for aline in f:
     items = aline.split()
     if len(items[1:]) &gt; 6:
         print(items[0])
 f.close()
-			</input>
+			</code>
 			<tests>
 			</tests>
 		</program>
@@ -141,14 +141,14 @@ f.close()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" codelens="no">
-		<input>
+		<code>
 =====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
    def testFour(self):
       self.assertEqual(destination, ['Italy: Rome\n', 'Greece: Athens\n', 'England: London, Manchester\n', 'France: Paris, Nice, Lyon\n', 'Spain: Madrid, Barcelona, Granada\n', 'Austria: Vienna\n'], "Testing that destination is assigned to correct values.")
 myTests().main()
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>
@@ -161,14 +161,14 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" codelens="no">
-		<input>
+		<code>
 =====
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
    def testOne(self):
       self.assertEqual(j_emotions, ['joyous', 'jittery', 'jumpy'], "Testing that j_emotions was created correctly.")
 myTests().main()
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>

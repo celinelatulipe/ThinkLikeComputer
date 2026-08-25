@@ -54,11 +54,11 @@
     <p>To help you understand the difference between an algorithm and a program, consider this program which computes
                 the area of a circle (hit the &#x2018;Save &amp; Run' button to see it execute):</p>
     <program label="alg_impl" interactive="activecode" language="python">
-      <input>
+      <code>
 radius = int(input("Enter the radius:"))
 area = (radius * radius) * 3.1415
 print("The area of a circle with radius", radius, "is:", area)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -82,11 +82,11 @@ print("The area of a circle with radius", radius, "is:", area)
     <p>Consider the code we introduced in the previous section. The program is <term>interactive</term> because it asks for input from an <term>end user</term>. The end user is a person who might <term>use</term> your program, but will likely never see the code or programming instructions that you write. They just interact with the program. While you work through this book, you get to wear two hats: you get to act as both the programmer and the end user. The input() command on line 1 of the program above causes Python to show a dialog box to the end user, and the end user can type in a number. When you edit the code in the activecode window, you are wearing your <term>programmer</term> hat. When you type a number into the dialog box that comes up, you are wearing your <term>end user</term> hat.</p>
     <p>Let's take a look at a version of this program that is <em>not</em> interactive:</p>
     <program label="alg_impl_int_v2" interactive="activecode" language="python">
-      <input>
+      <code>
 radius = 15
 area = (radius * radius) * 3.1415
 print("The area of a circle with radius", radius, "is:", area)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -102,11 +102,11 @@ print("The area of a circle with radius", radius, "is:", area)
     <title>Ethics - Programming Responsibly</title>
     <p>You may be wondering why there is a section on ethics in your programming book. You might be thinking that this is where we tell you it is wrong to cheat on your programming assignments. That is true, but that is not what this section is about. Ethics is critically important in computer science. People who are trained in computer science go on to develop technologies that change the world. Technologies impact almost every aspect of our day to day life, and so it is critical that as you learn how to design, develop and deploy technology, you make decisions so that the technology you put out in the world does not cause harm. That may seem obvious, but it's not as easy as you think to predict how the technology you develop might be used and abused. Throughout this book we will ask you to pause and consider the ethical implications of your choices as a programmer. By the end of this course, we hope you will recognize the importance of ethics in computer code.</p>
     <program label="alg_impl_ethics" interactive="activecode" language="python">
-      <input>
+      <code>
 radius = int(input("Enter the radius:"))
 area = (radius * radius) * 3.1415
 print("The area of a circle with radius", radius, "is:", area)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -114,11 +114,11 @@ print("The area of a circle with radius", radius, "is:", area)
                 are no ethics involved in calculating the area of a circle!</q>. But consider this version of the same
                 program:</p>
     <program label="alg_ethics_v3" interactive="activecode" language="python">
-      <input>
+      <code>
 radius = int(input("Enter the radius:"))
 area = (radius * radius) * 3
 print("The area of a circle with radius", radius, "is:", area)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

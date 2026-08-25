@@ -10,7 +10,7 @@
         <p>One very common pattern is called a <term>listener loop</term>. Inside the while loop there is a function call to get user input.
                   The loop repeats indefinitely, until a particular input is received.</p>
         <program label="ac10_3_1" interactive="activecode" language="python">
-          <input>
+          <code>
 theSum = 0
 x = -1
 while (x != 0):
@@ -18,7 +18,7 @@ while (x != 0):
     theSum = theSum + x
 
 print(theSum)
-                </input>
+                </code>
             <tests>
             </tests>
           </program>
@@ -33,7 +33,7 @@ print(theSum)
                     values of x and theSum.</p>
           <p>You've seen a related example to this with our interactive turtle programs that have listener functions:</p>
           <program label="ac10_3_2" interactive="activecode" language="python" codelens="no">
-            <input>
+            <code>
 import turtle
 import random
 
@@ -92,7 +92,7 @@ wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()
 wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
 wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -153,7 +153,7 @@ wn.listen()             # tell the operating system to listen for events on the 
                     will use a <c>price</c> of zero to mean <q>this is my last item.</q> In this program,
                     zero is a <term>sentinel value</term>, a value used to signal the end of the loop. Here's the code:</p>
       <program label="ac10_3_3" interactive="activecode" language="python">
-        <input>
+        <code>
 def checkout():
     total = 0
     count = 0
@@ -172,7 +172,7 @@ def checkout():
     print('Average price per item: $', average)
 
 checkout()
-        </input>
+        </code>
       <tests>
     </tests>
       </program>
@@ -201,7 +201,7 @@ checkout()
                     Here is a program that uses a <c>while</c> loop to keep asking until it receives a valid answer.
                     When you run the following code, try typing something other than Y or N to see how the code reacts:</p>
       <program label="ac10_3_4" interactive="activecode" language="python">
-        <input>
+        <code>
 def get_yes_or_no(message):
     valid_input = False
     while not valid_input:
@@ -218,7 +218,7 @@ if response == 'Y':
     print('Great! They are very healthy.')
 else:
     print('Too bad. If cooked right, they are quite tasty.')
-        </input>
+        </code>
       <tests>
     </tests>
       </program>

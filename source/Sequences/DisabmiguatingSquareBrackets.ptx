@@ -7,18 +7,18 @@
             is indexing. At first glance, creating and indexing are difficult to distinguish. However, indexing requires referencing
             an already created list while simply creating a list does not.</p>
   <program label="ac9_3_1" interactive="activecode" language="python">
-    <input>
+    <code>
 my_lst = []
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>In the code above, a new list is created using the empty brackets. Since there's nothing in it though, we can't index into it.</p>
   <program label="ac9_3_2" interactive="activecode" language="python">
-    <input>
+    <code>
 new_lst = ["NFLX", "AMZN", "GOOGL", "DIS", "XOM"]
 part_of_new_lst = new_lst[0]
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -26,7 +26,7 @@ part_of_new_lst = new_lst[0]
             In order to extract an element of the list, we use <c>[]</c>, but we first have to specify which list we are indexing. Additionally, we have to specify what element we want to extract. This index belongs inside of the brackets.</p>
   <p>The code below shows that naming a variable as a list doesn't make it a list.</p>
   <program label="ac9_3_3" interactive="activecode" language="python">
-    <input>
+    <code>
 lst = [0]            # using [] to create a new list
 n_lst = lst[0]       # using [] to index into a list to retrieve an element
 
@@ -35,7 +35,7 @@ print(type(n_lst))
 
 print(lst)
 print(n_lst)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

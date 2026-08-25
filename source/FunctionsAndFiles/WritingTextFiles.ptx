@@ -24,11 +24,11 @@
   <p>The program below solves part of the problem. We first want to make sure that we've written the
             correct code to calculate the square of each number.</p>
   <program label="ac5_11_1" interactive="activecode" language="python">
-    <input>
+    <code>
 for number in range(1, 13):
     square = number * number
     print(square)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -53,7 +53,7 @@ for number in range(1, 13):
     <p>As with file reading, for security reasons the runestone interactive textbook environment does not write files to the file system on your local computer. In an activecode window, we simulate writing to a file. The contents of the written file are shown and you can do a subsequent read of the contents of that filename.  If you try to overwrite a file that's built in to the page, it may not let you; don't try to get too fancy with our file system simulator!</p>
   </note>
   <program label="ac5_11_2" interactive="activecode" language="python">
-    <input>
+    <code>
 filename = "squared_numbers.txt"
 outfile = open(filename, "w")
 
@@ -67,7 +67,7 @@ infile = open(filename, "r")
 first10 = infile.read(10)
 print(first10)
 infile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

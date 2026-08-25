@@ -22,7 +22,7 @@
 
     <program label="lab3_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -38,7 +38,7 @@ rate = 6.25
 amount = loan * (math.pow((1 + rate / 100), time)
 compound_interest = amount-loan
 print("Your annual compound interest is: ", math.trunc(compound_interest))
-        </input>
+        </code>
 <tests>
 
 
@@ -66,7 +66,7 @@ print("Your annual compound interest is: ", math.trunc(compound_interest))
 
     <program label="lab3_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -97,7 +97,7 @@ print("For a dog weighing", dog_wt_kg, "pounds,")
 print("your vet will likely prescribe an amount of aspirin as follows:")
 print(dosage, "milligrams one to", MAX_TIMES_PER_DAY, "times per day.")
 print("Do not exceed the daily maximimum dosage of:", total_daily dosage, "milligrams");
-        </input>
+        </code>
 <tests>
 
 
@@ -136,7 +136,7 @@ print("Do not exceed the daily maximimum dosage of:", total_daily dosage, "milli
 
     <program label="lab3_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
  ################################################################
  # Student name, ID &amp; lab section
  # Date
@@ -145,7 +145,7 @@ print("Do not exceed the daily maximimum dosage of:", total_daily dosage, "milli
 
  import turtle
  wn = turtle.Screen()
-        </input>
+        </code>
 <tests>
 
 

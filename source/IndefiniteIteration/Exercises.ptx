@@ -8,8 +8,8 @@
 
     </statement><program interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     from unittest.gui import TestCaseGui
     
@@ -32,9 +32,9 @@
     </statement>
     <program label="ac10_7_2_editor" interactive="activecode" language="python">
 
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
     
@@ -55,9 +55,9 @@ myTests().main()
 
     </statement><program interactive="activecode" language="python" >
 
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -85,10 +85,10 @@ myTests().main()
 
 </prefix>
 
-        <input>
+        <code>
 
 
-        </input>
+        </code>
 <tests>
 
 
@@ -108,10 +108,10 @@ myTests().main()
 
 </prefix>
 
-        <input>
+        <code>
 
 
-        </input>
+        </code>
 <tests>
 
 
@@ -121,7 +121,7 @@ myTests().main()
 
     <program language="python">
     
-        <input>
+        <code>
 import random
 import turtle
 
@@ -186,7 +186,7 @@ while isInScreen(wn, t1) and isInScreen(wn, t2):
     moveRandom(wn, t2)
 
 wn.exitonclick()
-        </input>
+        </code>
 <tests>
 
 
@@ -207,9 +207,9 @@ wn.exitonclick()
     </statement>
     <program label="ac10_7_6_editor" interactive="activecode" language="python">
 
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
     
@@ -233,9 +233,9 @@ myTests().main()
     </statement>
     <program label="ac10_7_7_editor" interactive="activecode" language="python">
 
-        <input>
+        <code>
 
-        </input>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
     

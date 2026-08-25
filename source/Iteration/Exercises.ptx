@@ -20,12 +20,12 @@
 
 
 		<program label="ex4_16_1_editor" interactive="activecode" language="python">
-			<input>
+			<code>
 prefixes = "JKLMNOPQ"
 suffix = "ack"
 for p in prefixes:
     print(p + suffix)
-			</input>
+			</code>
 			<tests>
 			from unittest.gui import TestCaseGui
 			import re
@@ -57,8 +57,8 @@ for p in prefixes:
 
 
 		<program label="ex4_16_2_editor" interactive="activecode" language="python">
-			<input>
-			</input>
+			<code>
+			</code>
 			<tests>
 			from unittest.gui import TestCaseGui
 			import re
@@ -87,17 +87,17 @@ for p in prefixes:
         <program interactive="activecode" language="python">
 		<prefix>
 		</prefix>
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 		</tests>
 	</program>
     <solution>
 	<program language="python">
-		<input>
+		<code>
 for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December']:
     print("One of the months of the year is", amonth)
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>
@@ -129,9 +129,9 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 
 
 		<program label="ex_3_4_editor" interactive="activecode" language="python">
-			<input>
+			<code>
 nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
-			</input>
+			</code>
 			<tests>
 			from unittest.gui import TestCaseGui
 			import re
@@ -202,14 +202,14 @@ nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
         <program interactive="activecode" language="python" codelens="no">
 		<prefix>
 		</prefix>
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 		</tests>
 	</program>
     <solution>
 	<program language="python">
-		<input>
+		<code>
 import turtle
 wn = turtle.Screen()
 lovelace = turtle.Turtle()
@@ -228,7 +228,7 @@ for angle in [160, -43, 270, -97, -43, 200, -940, 17, -86]:
 # the .heading() method gives us the turtle's current heading in degrees
 print("The pirate's final heading was", current_heading)
 wn.exitonclick()
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>

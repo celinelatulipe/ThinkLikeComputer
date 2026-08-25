@@ -10,7 +10,7 @@
 
     <program label="ac8_12_1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 import random
 
@@ -57,7 +57,7 @@ random_square()
 wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()' when the 'r' key is pressed on the keyboard
 wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
 <tests>
 
 
@@ -68,7 +68,7 @@ wn.listen()             # tell the operating system to listen for events on the 
 
     <program label="ac8_12_2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 import random
 
@@ -124,7 +124,7 @@ wn.onkey(key_r, 'r')    # tell the operating system to execute function 'key_r()
 wn.onkey(key_q, 'q')    # tell the operating system to execute function 'key_q()' when the 'q' key is pressed on the keyboard
 wn.onclick(click)       # tell the operating system to execute function 'click' when the user clicks the mouse
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
 <tests>
 
 
@@ -135,7 +135,7 @@ wn.listen()             # tell the operating system to listen for events on the 
 
     <program label="ac8_12_3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 import random
 
@@ -163,7 +163,7 @@ wn.onkey(quit, 'q')    # tell the operating system to execute function 'quit()' 
 wn.onkey(toggle_pen, 'p')    # tell the operating system to execute function 'toggle_pen' when the 'p' key is pressed on the keyboard
 wn.onclick(move)       # tell the operating system to execute function 'move' when the user clicks the mouse
 wn.listen()             # tell the operating system to listen for events on the canvas window
-        </input>
+        </code>
 <tests>
 
 
@@ -176,7 +176,7 @@ wn.listen()             # tell the operating system to listen for events on the 
         <statement>
 
         <p>Where does the message get written on canvas?</p>
-        <program language="python"><input>
+        <program language="python"><code>
 import turtle
 import random
 
@@ -193,7 +193,7 @@ alex.goto(100, 100)
 
 wn.onclick(here)
 wn.listen()
-</input></program>
+</code></program>
 
         </statement>
 <choices>

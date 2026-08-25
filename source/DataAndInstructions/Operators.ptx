@@ -15,32 +15,32 @@
             expect.</p>
   <p>Remember that if we want to see the results of the computation, the program needs to specify that with the word <c>print</c>. The first three computations occur, but their results are not printed out to the console.</p>
   <program label="ac_operators_example_not_printing" interactive="activecode" language="python">
-    <input>
+    <code>
 20 + 32
 5 ** 2
 (5 + 9) * (15 - 7)
 print(7 + 5)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>In Python 3, which we will be using, the division operator <c>/</c> produces a floating point result (even if the result is an integer): <c>4/2</c> is <c>2.0</c>. If you want truncated division, which ignores the remainder, you can use the <c>//</c> operator (for example, <c>5//2</c> is <c>2</c>).</p>
   <program label="ac_integer_floating_division" interactive="activecode" language="python">
-    <input>
+    <code>
 print(9 / 5)
 print(5 / 9)
 print(9 // 5)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Pay particular attention to the examples above. Note that <c>9//5</c> truncates rather than rounding, so it produces the value 1 rather than 2.</p>
   <p>The truncated division operator, <c>//</c>, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus <c>7.0 // 3.0</c> is <c>2.0</c>.</p>
   <program label="ac_integer_floating_division2" interactive="activecode" language="python">
-    <input>
+    <code>
 print(7.0 / 3.0)
 print(7.0 // 3.0)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -49,10 +49,10 @@ print(7.0 // 3.0)
             modulus operator is a percent sign (<c>%</c>). The syntax is the same as for other
             operators.</p>
   <program label="ac_modulus_example" interactive="activecode" language="python">
-    <input>
+    <code>
 print(7 // 3)    # This is the integer division operator
 print(7 % 3)     # This is the remainder or modulus operator
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -70,9 +70,9 @@ print(7 % 3)     # This is the remainder or modulus operator
     <statement>
       <p>What value is printed when the following statement executes?</p>
       <program language="python">
-        <input>
+        <code>
 print(18 / 4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -122,9 +122,9 @@ print(18 / 4)
     <statement>
       <p>What value is printed when the following statement executes?</p>
       <program language="python">
-        <input>
+        <code>
 print(18.0 // 4)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -174,9 +174,9 @@ print(18.0 // 4)
     <statement>
       <p>What value is printed when the following statement executes?</p>
       <program language="python">
-        <input>
+        <code>
 print(18 % 4)
-</input>
+</code>
       </program>
     </statement>
     <choices>

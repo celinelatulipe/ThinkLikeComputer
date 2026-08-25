@@ -9,12 +9,12 @@
   <image source="Conditionals/Figures/flowchart_if_only.png" width="50%"/>
   <p>Predict the output for the code below and then run it.</p>
   <program label="ac6_7_1" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
 print("This is always printed")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -26,12 +26,12 @@ print("This is always printed")
     <statement>
       <p>What does the following code print?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
 print("This is always printed")
-</input>
+</code>
       </program>
       <pre>a.
 This is always printed
@@ -82,7 +82,7 @@ The negative number -10 is not valid here</pre>
     <statement>
       <p>Will the following code cause an error?</p>
       <program language="python">
-        <input>
+        <code>
 x = -10
 if x &lt; 0:
     print("The negative number ",  x, " is not valid here.")
@@ -90,7 +90,7 @@ else:
     print(x, " is a positive number")
 else:
     print("This is always printed")
-</input>
+</code>
       </program>
     </statement>
     <choices>

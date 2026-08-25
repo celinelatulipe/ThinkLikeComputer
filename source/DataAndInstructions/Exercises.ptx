@@ -87,9 +87,9 @@
             </p>
 			</statement>
 			<program interactive="activecode" language="python" xml:id="chapter2_ex1_program">
-			<input>
+			<code>
 print(5**2)
-			</input>
+			</code>
 			<tests>
 			</tests>
 		</program>
@@ -195,11 +195,11 @@ print(5**2)
 
 
 		<program label="chapter2_ex2_program" interactive="activecode" language="python">
-			<input>
+			<code>
 x = 2 + (3 - 1) * 10 / 5 * (2 + 3)
 print("The output should be: PUT YOUR HAND CALCULATED RESULT HERE ")
 #print(x) #uncomment this line after you've put in your hand calculated result
-			</input>
+			</code>
 			<tests>
 			</tests>
 		</program>
@@ -216,14 +216,14 @@ print("The output should be: PUT YOUR HAND CALCULATED RESULT HERE ")
 			</p>
 		</statement>
         <program interactive="activecode" language="python" xml:id="chapter2_ex3_program">
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 		</tests>
 	</program>
     <solution>
 	<program language="python">
-		<input>
+		<code>
 ## solution ##
 current_time_string = input("What is the current time (in hours)? ")
 waiting_time_string = input("How many hours do you have to wait? ")
@@ -232,7 +232,7 @@ waiting_time_int = int(waiting_time_string)
 hours = current_time_int + waiting_time_int
 timeofday = hours % 24
 print(timeofday)
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>
@@ -255,8 +255,8 @@ print(timeofday)
 	<program label="chapter2_ex4_program" interactive="activecode" language="python">
 		<prefix>
 		</prefix>
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 		</tests>
 	</program>
@@ -272,9 +272,9 @@ print(timeofday)
 
 
 	<program label="chapter2_ex5_program" interactive="activecode" language="python">
-		<input>
+		<code>
 print(6 * 1 -2)
-		</input>
+		</code>
 		<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -304,12 +304,12 @@ myTests().main()
 		</p>
 	</statement>
     <program interactive="activecode" language="python" xml:id="chapter2_ex6_program">
-		<input>
+		<code>
 P = 10000
 n = 12
 r = 0.08
 t = ??
-		</input>
+		</code>
 		<tests>
 from unittest.gui import TestCaseGui
 import re
@@ -324,7 +324,7 @@ myTests().main()
 	</program>
     <solution>
 	<program language="python">
-		<input>
+		<code>
 ## question 9 solution ##
 P = 10000
 n = 12
@@ -332,7 +332,7 @@ r = 0.08
 t = int(input("Compound for how many years? "))
 final = P * ( ((1 + (r/n)) ** (n * t)) )
 print("The final amount after", t, "years is", final)
-		</input>
+		</code>
 		<tests>
 		</tests>
 	</program>
@@ -350,9 +350,9 @@ print("The final amount after", t, "years is", final)
 
 
 	<program label="chapter2_ex7_program" interactive="activecode" language="python">
-		<input>
+		<code>
 pi = 3.14
-		</input>
+		</code>
 		<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -364,7 +364,7 @@ myTests().main()
 	</program>
 </exercise>
 
-<exercise xml:id="chapter2_ex8">
+<exercise xml:id="chapter2_ex8" label="chapter2_ex8">
 	<statement>
 		<p>
 			Challenge: Write a program that will compute the area of a rectangle.
@@ -374,8 +374,8 @@ myTests().main()
 		</p>
 	</statement>
     <program interactive="activecode" language="python" xml:id="chapter2_ex8_program">
-	<input>
-	</input>
+	<code>
+	</code>
 	<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -388,13 +388,13 @@ myTests().main()
 </program>
 <solution>
 <program language="python">
-	<input>
+	<code>
 ## question 11 solution
 width = int(input("Width? "))
 height = int(input("Height? "))
 area = width * height
 print("The area of the rectangle is", area)
-	</input>
+	</code>
 	<tests>
 	</tests>
 </program>
@@ -413,8 +413,8 @@ print("The area of the rectangle is", area)
 
 
 	<program label="chapter2_ex9_program" interactive="activecode" language="python">
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 from unittest.gui import TestCaseGui
 import re
@@ -435,20 +435,20 @@ myTests().main()
     <program interactive="activecode" language="python" xml:id="chapter2_ex10_program">
 	<prefix>
 	</prefix>
-	<input>
-	</input>
+	<code>
+	</code>
 	<tests>
 	</tests>
 </program>
 <solution>
 <program language="python">
-	<input>
+	<code>
 ## solution ##
 deg_c = int(input("What is the temperature in Celsius? "))
 # formula to convert C to F is: (degrees Celcius) times (9/5) plus (32)
 deg_f = deg_c * (9 / 5) + 32
 print(deg_c, " degrees Celsius is", deg_f, " degrees Farenheit.")
-	</input>
+	</code>
 	<tests>
 	</tests>
 </program>
@@ -466,8 +466,8 @@ print(deg_c, " degrees Celsius is", deg_f, " degrees Farenheit.")
 
 
 	<program label="chapter2_ex11_program" interactive="activecode" language="python">
-		<input>
-		</input>
+		<code>
+		</code>
 		<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):

@@ -37,7 +37,7 @@
 
     <program label="lab6_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -47,7 +47,7 @@
 paragraph = 'computer science can be a rewarding career opportunity. In a world of growing technology, the demand for individuals who have experience with code and artificial intelligence is on the rise'
 
 key_words = ['computer', 'science', 'variables', 'technology', 'security', 'A.I', 'artificial intelligence']
-        </input>
+        </code>
 <tests>
 
 
@@ -77,7 +77,7 @@ key_words = ['computer', 'science', 'variables', 'technology', 'security', 'A.I'
 
     <program label="lab6_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -85,7 +85,7 @@ key_words = ['computer', 'science', 'variables', 'technology', 'security', 'A.I'
 ################################################################
 
 import random
-        </input>
+        </code>
 <tests>
 
 
@@ -121,7 +121,7 @@ import random
 
     <program label="lab6_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -130,7 +130,7 @@ import random
 import random
 
 ROUNDS = 26
-        </input>
+        </code>
 <tests>
 
 

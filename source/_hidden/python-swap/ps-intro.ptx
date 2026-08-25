@@ -96,14 +96,14 @@
                 from the test cases.  Be sure to <c>return</c> the result.</p>
       </statement>
       <program label="intro-sample-write-code-triple-ps_editor" interactive="activecode" language="python">
-        <input>
+        <code>
 def triple(num):
     # write code here
 
 print(triple(2))
 print(triple(-1))
 
-        </input>
+        </code>
         <tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):

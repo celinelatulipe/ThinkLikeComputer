@@ -19,12 +19,12 @@
 
 
 		<program xml:id="ch2_assess_1_program" label="ch2_assess_1_program" interactive="activecode" language="python">
-			<input>
+			<code>
 def square(num):
 	return num**2
 
 xyz = ??
-			</input>
+			</code>
 			<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -46,7 +46,7 @@ myTests().main()
 
 
 		<program xml:id="ch2_assess_2_program" label="ch2_assess_2_program" interactive="activecode" language="python">
-			<input>
+			<code>
 rv = """Once upon a midnight dreary, while I pondered, weak and weary,
     Over many a quaint and curious volume of forgotten lore,
     While I nodded, nearly napping, suddenly there came a tapping,
@@ -56,7 +56,7 @@ rv = """Once upon a midnight dreary, while I pondered, weak and weary,
 # Write your code here!
 
 
-			</input>
+			</code>
 			<tests>
 from unittest.gui import TestCaseGui
 class myTests(TestCaseGui):
@@ -76,10 +76,10 @@ myTests().main()
 			</p>
 
 
-			<program language="python"><input>
+			<program language="python"><code>
 				z = "hello world"
 				y = "welcome!"
-				</input>
+				</code>
 			</program>
 		</statement>
 		<choices>
@@ -165,10 +165,10 @@ myTests().main()
 
 
 		<program label="ch2_assess_4_program" interactive="activecode" language="python">
-			<input>
+			<code>
 def square(num):
     return num**2
-			</input>
+			</code>
 			<tests>
 			</tests>
 		</program>
@@ -318,12 +318,12 @@ def square(num):
 			<p>
 				:
 			</p>
-			<program language="python"><input>
+			<program language="python"><code>
 				name = "sara"
 				age = 11
 				info = name + " " + str(age)
 				print(info)
-				</input>
+				</code>
 			</program>
 				<p>
 					Here is that same code again, but the error has been fixed.

@@ -12,10 +12,10 @@
   <p>The printed representation of a number uses the familiar decimal representation (reading <url href="http://en.wikipedia.org/wiki/Roman_numerals" visual="http://en.wikipedia.org/wiki/Roman_numerals">Roman Numerals</url> is a fun challenge in museums, but thank goodness the Python interpreter doesn't present the number 2014 as MMXIV in the output window). Thus, the printed representation of a number shown in the console is the same as the literal that you specify in a program.</p>
   <p>The printed representation of a character string, however, is not exactly the same as the literal used to specify the string in a program. For the literal in a program, you enclose the string in quotation marks. The printed representation, in the console, omits the quotation marks.</p>
   <program label="ac_print_literal_values" interactive="activecode" language="python">
-    <input>
+    <code>
 print(3.2)
 print("Hello, World!")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -32,9 +32,9 @@ print("Hello, World!")
     <statement>
       <p>What appears in the console when the following statement executes?</p>
       <program language="python">
-        <input>
+        <code>
 print("Hello World!")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -68,9 +68,9 @@ print("Hello World!")
     <statement>
       <p>What is the data type of the literal in the program below?</p>
       <program language="python">
-        <input>
+        <code>
 print("Twenty")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -104,9 +104,9 @@ print("Twenty")
     <statement>
       <p>What is the data type of the literal in the program below?</p>
       <program language="python">
-        <input>
+        <code>
 print("17")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -140,9 +140,9 @@ print("17")
     <statement>
       <p>What is the data type of the literal in the program below?</p>
       <program language="python">
-        <input>
+        <code>
 print(341)
-</input>
+</code>
       </program>
     </statement>
     <choices>

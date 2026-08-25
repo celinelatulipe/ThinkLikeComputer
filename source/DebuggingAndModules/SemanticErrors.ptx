@@ -8,13 +8,13 @@
               something else. Specifically, it will do what you <term>told</term> it to do, not what you <term>wanted</term> it to do.</p>
     <p>The following program has a semantic error. Execute it to see what goes wrong:</p>
     <program label="logicerr_sum" interactive="activecode" language="python">
-      <input>
+      <code>
 num1 = input('Enter a number:')
 num2 = input('Enter another number:')
 sum = num1 + num2
 
 print('The sum of', num1, 'and', num2, 'is', sum)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

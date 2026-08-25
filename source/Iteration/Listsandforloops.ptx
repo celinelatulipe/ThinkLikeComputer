@@ -5,12 +5,12 @@
     <title>A simple for loop example</title>
     <p>A list is a sequence of items, and in a later chapter, you will learn all about various ways to create, build and edit lists. For now, let's focus on using lists. A <term>list traversal</term> uses a <c>for</c> loop to iterate over each item in the list automatically. Consider this example:</p>
     <program label="ac4_7_1" interactive="activecode" language="python">
-      <input>
+      <code>
 fruits = ["apple", "orange", "banana", "cherry"]
 
 for fruit in fruits:     # by item
     print(fruit)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -22,7 +22,7 @@ for fruit in fruits:     # by item
     <p>We are now in a position to understand the inner workings we glossed over previously when we first introduced repeated execution with a for loop.
                 Here was the example:</p>
     <program label="ac4_7_2" interactive="activecode" language="python">
-      <input>
+      <code>
 print("This will execute first")
 
 for _ in range(3):
@@ -30,7 +30,7 @@ for _ in range(3):
     print("This line will also execute three times")
 
 print("Now we are outside of the for loop!")
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -49,7 +49,7 @@ print("Now we are outside of the for loop!")
                 statement, it uses just three lines (not including the setup code).  Remember that the for statement
                 will repeat the <c>forward</c> and <c>left</c> four times, one time for each value in the list.</p>
     <program label="ac4_7_3" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 import turtle            # set up alex
 wn = turtle.Screen()
 alex = turtle.Turtle()
@@ -59,7 +59,7 @@ for i in [0, 1, 2, 3]:      # repeat four times
     alex.left(90)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -69,7 +69,7 @@ wn.exitonclick()
     <p>The values [0,1,2,3] were provided to make the loop body execute 4 times.
                 We could have used any four values.  For example, consider the following program.</p>
     <program label="ac4_7_4" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 import turtle            # set up alex
 wn = turtle.Screen()
 alex = turtle.Turtle()
@@ -79,7 +79,7 @@ for aColor in ["yellow", "red", "purple", "blue"]:      # repeat four times
     alex.left(90)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -88,7 +88,7 @@ wn.exitonclick()
                 take on each color in the list.  We can even take this one step further and use the value of
                 <c>aColor</c> as part of the computation.</p>
     <program label="ac4_7_5" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 import turtle            # set up alex
 wn = turtle.Screen()
 alex = turtle.Turtle()
@@ -99,7 +99,7 @@ for aColor in ["yellow", "red", "purple", "blue"]:
     alex.left(90)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -118,11 +118,11 @@ wn.exitonclick()
       <statement>
         <p>How many times will the for loop iterate in the following statements?</p>
         <program language="python">
-          <input>
+          <code>
 p = [3, 4, "Me", 3, [], "Why", 0, "Tell", 9.3]
 for ch in p:
    print(ch)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -195,11 +195,11 @@ for ch in p:
       <statement>
         <p>Consider the following code:</p>
         <program language="python">
-          <input>
+          <code>
 for color in ["yellow", "red", "green", "blue"]:
    alex.forward(50)
    alex.left(90)
-</input>
+</code>
         </program>
         <p>What does each iteration through the loop do?</p>
       </statement>

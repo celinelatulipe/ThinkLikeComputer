@@ -25,7 +25,7 @@
       <p>The textfile, <c>travel_plans.txt</c>, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable <c>num</c>.</p>
     </statement>
     <program label="assess_ch5_1_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -37,7 +37,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num, 316, "Testing that num value is assigned to correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -47,7 +47,7 @@ myTests().main()
       <p>We have provided a file called <c>emotion_words.txt</c> that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable <c>num_words</c>.</p>
     </statement>
     <program label="assess_ch5_2_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -59,7 +59,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num_words, 48, "Testing that num_words was assigned to the correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -69,7 +69,7 @@ myTests().main()
       <p>Assign to the variable <c>num_lines</c> the number of lines in the file <c>school_prompt.txt</c>.</p>
     </statement>
     <program label="assess_ch5_3_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -81,7 +81,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num_lines, 10, "Testing that num_lines has the correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -91,7 +91,7 @@ myTests().main()
       <p>Assign the first 30 characters of <c>school_prompt.txt</c> as a string to the variable <c>beginning_chars</c>.</p>
     </statement>
     <program label="assess_ch5_4_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -104,7 +104,7 @@ class myTests(TestCaseGui):
       self.assertEqual(beginning_chars, "Writing essays for school can ", "Testing that beginning_chars has the correct string.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -114,7 +114,7 @@ myTests().main()
       <p><term>Challenge:</term> Using the file <c>school_prompt.txt</c>, assign the third word of every line to a list called <c>three</c>.</p>
     </statement>
     <program label="assess_ch5_5_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -126,7 +126,7 @@ class myTests(TestCaseGui):
       self.assertEqual(three, ['for', 'find', 'to', 'many', 'they', 'solid', 'for', 'have', 'some', 'ups,'], "Testing that three has the correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -136,7 +136,7 @@ myTests().main()
       <p><term>Challenge:</term> Create a list called <c>emotions</c> that contains the first word of every line in <c>emotion_words.txt</c>.</p>
     </statement>
     <program label="assess_ch5_6_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -148,7 +148,7 @@ class myTests(TestCaseGui):
       self.assertEqual(emotions, ['Sad', 'Angry', 'Happy', 'Confused', 'Excited', 'Scared', 'Nervous'], "Testing that emotions was created correctly.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -158,7 +158,7 @@ myTests().main()
       <p>Assign the first 33 characters from the textfile, <c>travel_plans.txt</c> to the variable <c>first_chars</c>.</p>
     </statement>
     <program label="assess_ch5_7_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -170,7 +170,7 @@ class myTests(TestCaseGui):
       self.assertEqual(first_chars, "This summer I will be travelling.", "Testing that first_chars is assigned to correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -180,7 +180,7 @@ myTests().main()
       <p><term>Challenge:</term> Using the file <c>school_prompt.txt</c>, if the character 'p' is in a word, then add the word to a list called <c>p_words</c>.</p>
     </statement>
     <program label="assess_ch5_8_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -192,7 +192,7 @@ class myTests(TestCaseGui):
       self.assertEqual(p_words, ['topic', 'point', 'papers,', 'ups,', 'scripts.'], "Testing that p_words has the correct list.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -203,7 +203,7 @@ myTests().main()
       <p>Write a program that computes the average closing price (the second column, labeled SP500) and the highest long-term interest rate. Both should be computed only for the period from June 2016 through May 2017. Save the results in the variables <c>mean_SP</c> and <c>max_interest</c>.</p>
     </statement>
     <program label="assess_ch5_9_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -216,7 +216,7 @@ class myTests(TestCaseGui):
       self.assertEqual(max_interest, 2.49, "Testing the max_interest is correct. Make sure to use only the correct 12 month period.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

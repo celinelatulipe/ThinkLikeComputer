@@ -27,7 +27,7 @@
             that is why we call this indefinite iteration.</p>
   <p>So based on the problem description above, we can outline a program as follows:</p>
   <program language="python">
-    <input>
+    <code>
 create a window and a turtle
 
 while the turtle is still in the window:
@@ -37,7 +37,7 @@ while the turtle is still in the window:
     else:
         turn right
     move the turtle forward 50
-</input>
+</code>
   </program>
   <p>Now, probably the only thing that seems a bit confusing to you is the part about whether or
             not the turtle is still in the screen.  But this is the nice thing about programming, we can
@@ -50,7 +50,7 @@ while the turtle is still in the window:
             be a good idea we will write our version to decide randomly. Let's say that there is a 90% chance
             the turtle is still in the window and 10% that the turtle has escaped.</p>
   <program label="ac10_4_1" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import random
 import turtle
 
@@ -76,7 +76,7 @@ while isInScreen(wn, t):
     t.forward(50)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -94,7 +94,7 @@ wn.exitonclick()
   <p>Once we have computed our boundaries we can get the current position of the
             turtle and then use conditionals to decide. Here is one implementation:</p>
   <program language="python">
-    <input>
+    <code>
 def isInScreen(wn,t):
     leftBound = -(wn.window_width() / 2)
     rightBound = wn.window_width() / 2
@@ -111,7 +111,7 @@ def isInScreen(wn,t):
         stillIn = False
 
     return stillIn
-</input>
+</code>
   </program>
   <p>There are lots of ways that the conditional could be written. In this case we have given
             <c>stillIn</c> the default value of <c>True</c> and use two <c>if</c> statements to possibly set
@@ -119,7 +119,7 @@ def isInScreen(wn,t):
             statements and set <c>stillIn</c> to <c>True</c> in an else clause.</p>
   <p>Here is the full version of our random walk program.</p>
   <program label="ac10_4_2" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import random
 import turtle
 
@@ -154,7 +154,7 @@ while isInScreen(wn,t):
     t.forward(50)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

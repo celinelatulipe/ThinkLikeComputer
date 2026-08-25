@@ -46,22 +46,22 @@
                 However, we don't expect you to understand these yet - understanding will come later.</p>
     <p>First we have structures that allow us to iterate over something. We can look at strings character-by-character or lists item-by-item until we've reached the end of them by using something called a <c>for</c> loop. This is a type of repetition instruction. Run the program below to see what the output to the console is:</p>
     <program label="ac_for_loop_preview" interactive="activecode" language="python">
-      <input>
+      <code>
 for character in "Cool string":
     print(character)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>We can also iterate without a definite stopping point with <c>while</c> loops (another type of repetition instruction).
                 You might use this if you want to receive input from the user in your program but you don't know how long it'll take for them to be done entering new input. Run the program below and add some items to a grocery list:</p>
     <program label="ac_while_loop_preview" interactive="activecode" language="python">
-      <input>
+      <code>
 grocery_item = ""
 while grocery_item != "done":
     grocery_item = input("Please write down an item to add to your grocery list. When you are done writing the list simply type: done")
     print(grocery_item)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -70,7 +70,7 @@ while grocery_item != "done":
                 Conditionals, as they're called, allow us to do that.
                 Check out how adding conditionals to our code can change what we can write about regarding grocery shopping.</p>
     <program label="ac_conditional_preview" interactive="activecode" language="python">
-      <input>
+      <code>
 grocery_item = ""
 grocery_list = []
 while grocery_item != "done":
@@ -82,7 +82,7 @@ while grocery_item != "done":
         grocery_list.append(grocery_item)
 print("Here is our grocery list:")
 print(grocery_list)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

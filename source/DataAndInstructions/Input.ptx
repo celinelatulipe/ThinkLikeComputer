@@ -4,9 +4,9 @@
         <p>Our programs get more interesting if they don't do exactly the same thing every time they run.
             One way to make them more interesting is to get <term>input</term> from the user.  Luckily, in Python
             there is a built-in function to accomplish this task.  It is called <c>input</c>.</p>
-        <program language="python"><input>
+        <program language="python"><code>
 n = input("Please enter your name: ")
-</input></program>
+</code></program>
         <p>The input function allows the programmer to provide a <term>prompt string</term>. In the example above,
             it is <q>Please enter your name: </q>.  When the function is evaluated, the prompt is
             shown (in the browser, look for a popup window).
@@ -17,10 +17,10 @@ n = input("Please enter your name: ")
 
     <program label="ac2_16_1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 n = input("Please enter your name: ")
 print("Hello", n)
-        </input>
+        </code>
 <tests>
 
 
@@ -42,7 +42,7 @@ print("Hello", n)
 
     <program label="ac2_16_2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 str_seconds = input("Please enter the number of seconds you wish to convert")
 total_secs = int(str_seconds)
 
@@ -52,7 +52,7 @@ minutes =  secs_still_remaining // 60
 secs_finally_remaining = secs_still_remaining  % 60
 
 print("Hrs=", hours, "mins=", minutes, "secs=", secs_finally_remaining)
-        </input>
+        </code>
 <tests>
 
 
@@ -65,7 +65,7 @@ print("Hrs=", hours, "mins=", minutes, "secs=", secs_finally_remaining)
 
     <program label="ac2_16_3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 wn = turtle.Screen()
 zhang = turtle.Turtle()
@@ -77,7 +77,7 @@ x = int(user_x)
 y = int(user_y)
 
 zhang.goto(x, y)
-        </input>
+        </code>
 <tests>
 
 
@@ -91,11 +91,11 @@ zhang.goto(x, y)
         <statement>
 
         <p>What is printed when the following statements execute?</p>
-        <program language="python"><input>
+        <program language="python"><code>
 n = input("Please enter your age: ")
 # user types in 18
 print(type(n))
-</input></program>
+</code></program>
 
         </statement>
 <choices>

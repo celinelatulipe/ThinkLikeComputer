@@ -86,15 +86,15 @@
 			<program interactive="activecode" language="python" xml:id="ch9_ex_1_code">
 				<prefix>
 				</prefix>
-				<input>
-				</input>
+				<code>
+				</code>
 				<tests>
 				</tests>
 			</program>
 
 			<solution>
 				<program language="python">
-					<input>
+					<code>
 def count(obj, lst):
     count = 0
     for e in lst:
@@ -129,7 +129,7 @@ print(is_in(4, lst))
 print(reverse(lst))
 print(index(2, lst))
 print(insert('cat', 4, lst))
-					</input>
+					</code>
 					<tests>
 					</tests>
 				</program>
@@ -146,7 +146,7 @@ print(insert('cat', 4, lst))
 
 
 			<program interactive="activecode" language="python">
-				<input>
+				<code>
 import random as r
 lst = []
 for i in range(100):
@@ -154,7 +154,7 @@ for i in range(100):
     lst.append(num)
 def largest(lst):
     #your code here
-				</input>
+				</code>
 				<tests>
 				from unittest.gui import TestCaseGui
 				import re
@@ -172,7 +172,7 @@ def largest(lst):
 
 			<solution>
 				<program language="python">
-					<input>
+					<code>
 import random
 def max(lst):
     max = 0
@@ -184,7 +184,7 @@ lst = []
 for i in range(100):
     lst.append(random.randint(0, 1000))
 print(max(lst))
-					</input>
+					</code>
 					<tests>
 					</tests>
 				</program>
@@ -203,10 +203,10 @@ print(max(lst))
 
 
 			<program interactive="activecode" language="python">
-				<input>
+				<code>
 def sum_of_squares(xs):
     # your code here
-				</input>
+				</code>
 				<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
@@ -228,10 +228,10 @@ def sum_of_squares(xs):
 
 
 			<program interactive="activecode" language="python">
-				<input>
+				<code>
 def countOdd(lst):
     # your code here
-				</input>
+				</code>
 				<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
@@ -246,7 +246,7 @@ def countOdd(lst):
 
 			<solution>
 				<program language="python">
-					<input>
+					<code>
 import random
 def countOdd(lst):
     odd = 0
@@ -259,7 +259,7 @@ lst = []
 for i in range(100):
     lst.append(random.randint(0, 1000))
 print(countOdd(lst))
-					</input>
+					</code>
 					<tests>
 					</tests>
 				</program>
@@ -275,10 +275,10 @@ print(countOdd(lst))
 
 
 			<program interactive="activecode" language="python">
-				<input>
+				<code>
 def sumEven(lst):
     # your code here
-				</input>
+				</code>
 				<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
@@ -293,7 +293,7 @@ def sumEven(lst):
 
 			<solution>
 				<program language="python">
-					<input>
+					<code>
 import random
 def sumEven(lst):
     sum = 0
@@ -306,7 +306,7 @@ lst = []
 for i in range(100):
     lst.append(random.randrange(-1000, 1000))
 print(sumEven(lst))
-					</input>
+					</code>
 					<tests>
 					</tests>
 				</program>
@@ -322,10 +322,10 @@ print(sumEven(lst))
 
 
 			<program interactive="activecode" language="python">
-				<input>
+				<code>
 def sumNegatives(lst):
     # your code here
-				</input>
+				</code>
 				<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
@@ -340,7 +340,7 @@ def sumNegatives(lst):
 
 			<solution>
 				<program language="python">
-					<input>
+					<code>
 import random
 def sumNegatives(lst):
     sum = 0
@@ -352,7 +352,7 @@ lst = []
 for i in range(100):
     lst.append(random.randrange(-1000, 1000))
 print(sumNegatives(lst))
-					</input>
+					</code>
 					<tests>
 					</tests>
 				</program>

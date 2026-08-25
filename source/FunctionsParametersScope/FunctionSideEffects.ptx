@@ -11,7 +11,7 @@
               output is a side effect of calling the function. Both of these are good examples of positive and purposeful use of side effects.</p>
     <p>Directly editing a global variable is another side effect, but it is one we typically want to avoid. For example, consider the code below:</p>
     <program label="clens8_11_1" interactive="codelens" language="python">
-      <input>
+      <code>
 def double(n):
    global y
    y = 2 * n
@@ -19,7 +19,7 @@ def double(n):
 y = 5
 double(y)
 print(y)
-      </input>
+      </code>
     </program>
     <p>In this example, the statement on line 2 says that we want to be able to access and edit the global variable y. On line 3, we change the value of that
               variable. While this works, it is considered bad form - it is harder to debug becuase it is less clear, when we print out the value of y on line 7, where the value of y was changed. It's actually easy to figure it out in this very short code snippet, but it would be much more difficult if the double() function was 300 lines of code away from the print(y) statement.</p>
@@ -27,14 +27,14 @@ print(y)
               and set that global variable to be equal to a value returned from the function. For example, the following is a better version
               of the code above.</p>
     <program label="clens8_11_2" interactive="codelens" language="python">
-      <input>
+      <code>
 def double(n):
    return 2 * n
 
 y = 5
 y = double(y)
 print(y)
-      </input>
+      </code>
     </program>
     <p>In this example, it is obvious on line 6 that the value of y is being modified by calling the double() function.</p>
     <p>To summarize, any lasting effect that occurs as a result of executing a function, that isn't represented through its return value, is called a side effect. There
@@ -57,7 +57,7 @@ print(y)
     <title>Documenting Side Effects</title>
     <p>When you create functions that have side effects, it is particularly important to document these as post-conditions. This may not be necessary when you are using print() statements inside a function to help debug things while you are in the middle of programming, as those are likely temporary statements that will be removed before you submit/share your code. But other side effects are really critical to document. Here is an example:</p>
     <program label="ac_8_11_1" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -86,7 +86,7 @@ t1.speed(20)
 
 for _ in range(10):
    random_square(t1)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
