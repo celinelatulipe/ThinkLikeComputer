@@ -11,7 +11,7 @@
     <p>Functions that return values are sometimes called <term>fruitful functions</term>. In many other languages, a function that
               doesn't return a value is called a <term>procedure</term>, but we will stick here with the Python way of also calling it a
               function, or if we want to stress it, a <em>non-fruitful</em> function.</p>
-    <video xml:id="goog_return_values" youtube="LGOZyrRCJ1o" width="auto"/>
+    <video xml:id="goog_return_values" label="goog_return_values" youtube="LGOZyrRCJ1o" width="auto"/>
     <image source="FunctionsParametersScope/Figures/blackboxfun.png" width="50%"/>
     <p>How do we write our own fruitful function? Let's start by creating a very simple mathematical function that we will
               call <c>square</c>. The square function will take one number as a parameter and return the result of squaring that

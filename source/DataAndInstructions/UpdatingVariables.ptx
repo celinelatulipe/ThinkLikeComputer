@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="data-and-instructions_updating-variables">
   <title>Updating Variables</title>
-  <video xml:id="updatevid" youtube="Px1c-3GP-5o" width="auto"/>
+  <video xml:id="updatevid" label="updatevid" youtube="Px1c-3GP-5o" width="auto"/>
   <p>One of the most common forms of reassignment is an <term>update</term> where the new
             value of the variable depends on the old.  For example,</p>
   <program language="python">
@@ -14,8 +14,9 @@ x = x + 1
             look a bit strange, remember that executing assignment statements is a two-step process.  First, evaluate the
             right-hand side expression.  Second, let the variable name on the left-hand side refer to this new
             resulting object.  The fact that <c>x</c> appears on both sides does not matter.  The semantics of the assignment
-            statement ensures that there is no confusion as to the result. The visualizer makes this very clear.</p>
-  <exercise runestone="se_ac2_13_1"/> 
+            statement ensures that there is no confusion as to the result. </p>
+            <!-- The visualizer makes this very clear.
+  <exercise runestone="se_ac2_13_1"/>  -->
 
   <program label="ac2_13_1" interactive="activecode" language="python">
     <code>

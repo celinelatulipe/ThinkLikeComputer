@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="data-and-instructions_order-of-operations">
   <title>Order of Operations</title>
-  <video xml:id="precedencevid" youtube="Ezve3QJv6Aw" width="auto"/>
+  <video xml:id="precedencevid" label="precedencevid" youtube="Ezve3QJv6Aw" width="auto"/>
   <p>When more than one operator appears in an expression, the order of evaluation
             depends on the <term>rules of precedence</term>. Python follows the same precedence
             rules for its mathematical operators that mathematics does.</p>
@@ -99,6 +99,6 @@ print((2 ** 3) ** 2)   # use parentheses to force the order you want!
       </choice>
     </choices>
   </exercise>
-  <p>Here is an animation for the above expression:</p>
-  <exercise runestone="se_ac2_11_1"/> 
+  <!-- <p>Here is an animation for the above expression:</p>
+  <exercise runestone="se_ac2_11_1"/>  -->
 </section>

@@ -1,23 +1,27 @@
 <?xml version="1.0"?>
+
 <section xml:id="Chapter8_exercises">
 	<title>Exercises</title>
 
-				<exercise xml:id="ch8_ex_1">
-					<statement>
-						<p>
-							Write a function named <c>num_test</c> that takes a number as input.
-							If the number is greater than 10, the function should return “Greater than 10.” If the number is less than 10, the function should return “Less than 10.” If the number is equal to 10, the function should return “Equal to 10.”
-						</p>
-					</statement>
-                    <program interactive="activecode" language="python">
-					<code>
+	<exercise label="ch8_ex_1">
+		<statement>
+			<p>
+				Write a function named <c>num_test</c> that takes a number as input.
+				If the number is greater than 10, the function should return “Greater than
+				10.” If the number is less than 10, the function should return “Less than
+				10.” If the number is equal to 10, the function should return “Equal to 10.”
+			</p>
+		</statement>
+
+		<program interactive="activecode" language="python">
+			<code>
 def num_test(n):
 	# your code here
 
 
-					</code>
-	<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
@@ -28,24 +32,24 @@ class myTests(TestCaseGui):
 		self.assertEqual(num_test(10.00), "Equal to 10.", "Testing the num_test function on input 10.00.")
 
 myTests().main()
+			</tests>
+		</program>
+	</exercise>
 
-	</tests>
-				</program>
-			</exercise>
+	<exercise label="ch8_ex_2">
+		<statement>
+			<p>
+				Write a function that will return the number of digits in an integer.
+			</p>
+		</statement>
 
-			<exercise xml:id="ch8_ex_2">
-				<statement>
-					<p>
-						Write a function that will return the number of digits in an integer.
-					</p>
-				</statement>
-                <program interactive="activecode" language="python" >
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 def numDigits(n):
     # your code here
-				</code>
-	<tests>
-	from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 	class myTests(TestCaseGui):
 
@@ -55,9 +59,10 @@ def numDigits(n):
 			self.assertEqual(numDigits(1352),4,"Tested numDigits on input of 1352")
 			self.assertEqual(numDigits(444),3,"Tested numDigits on input of 444")
 	myTests().main()
-	</tests>
-			</program>
-            <solution>
+			</tests>
+		</program>
+
+		<solution>
 			<program language="python">
 				<code>
 def numDigits(n):
@@ -67,25 +72,25 @@ print(numDigits(50))
 print(numDigits(20000))
 print(numDigits(1))
 				</code>
-				<tests>
-				</tests>
+				<tests/>
 			</program>
 		</solution>
 	</exercise>
 
-	<exercise xml:id="ch8_ex_3">
+	<exercise label="ch8_ex_3">
 		<statement>
 			<p>
 				Write a function that reverses its string argument.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def reverse(astring):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
@@ -95,24 +100,25 @@ class myTests(TestCaseGui):
 		self.assertEqual(reverse(""),"","Tested reverse on input of ''")
 
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_4">
+	<exercise label="ch8_ex_4">
 		<statement>
 			<p>
-				Write a function that mirrors its string argument,
-				generating a string containing the original string and the string backwards.
+				Write a function that mirrors its string argument, generating a string
+				containing the original string and the string backwards.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def mirror(mystr):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
@@ -123,11 +129,12 @@ class myTests(TestCaseGui):
 		self.assertEqual(mirror("a"),"aa","Tested mirror on input of 'a'")
 
 myTests().main()
-</tests>
-	</program>
-    <solution>
-	<program language="python">
-		<code>
+			</tests>
+		</program>
+
+		<solution>
+			<program language="python">
+				<code>
 def reverse(mystr):
     reversed = ''
     for char in mystr:
@@ -139,24 +146,26 @@ assert mirror('good') == 'gooddoog'
 assert mirror('Python') == 'PythonnohtyP'
 assert mirror('') == ''
 assert mirror('a') == 'aa'
-		</code>
-	</program>
-</solution>
-</exercise>
+				</code>
+			</program>
+		</solution>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_5">
+	<exercise label="ch8_ex_5">
 		<statement>
 			<p>
-				Write a function that removes all occurrences of a given letter from a string.
+				Write a function that removes all occurrences of a given letter from a
+				string.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def remove_letter(theLetter, theString):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 	def testOne(self):
@@ -165,17 +174,16 @@ class myTests(TestCaseGui):
 		self.assertEqual(remove_letter("z","banana"),"banana","Tested remove_letter on inputs of 'z' and 'banana'")
 
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_6">
+	<exercise label="ch8_ex_6">
 		<statement>
 			<p>
 				Write a function <c>replace(s, old, new)</c> that replaces all occurences of
 				<c>old</c> with <c>new</c> in a string <c>s</c>:
 			</p>
-
 			<pre>test(replace('Mississippi', 'i', 'I'), 'MIssIssIppI')
 			s = 'I love spom!  Spom is my favorite food.
 			Spom, spom, spom, yum!'
@@ -189,13 +197,14 @@ myTests().main()
 				<em>Hint</em>: use the <c>split</c> and <c>join</c> methods.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def replace(s, old, new):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
@@ -205,25 +214,28 @@ class myTests(TestCaseGui):
 		self.assertEqual(replace('Deeded','e','q'),'Dqqdqd',"Tested failed on input 'Deeded','e','q'")
 		
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_7">
+	<exercise label="ch8_ex_7">
 		<statement>
 			<p>
 				Write a function <c>findHypot</c>.
-				The function will be given the length of two sides of a right-angled triangle and it should return the length of the hypotenuse.
-				(Hint:  <c>x ** 0.5</c> will return the square root, or use <c>sqrt</c> from the math module)
+				The function will be given the length of two sides of a right-angled
+				triangle and it should return the length of the hypotenuse.
+				(Hint: <c>x ** 0.5</c> will return the square root, or use <c>sqrt</c> from
+				the math module)
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def findHypot(a,b):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 
@@ -233,23 +245,26 @@ class myTests(TestCaseGui):
 		self.assertEqual(findHypot(21.0,72.0),75.0,"Tested findHypot on inputs of 21.0 and 72.0")
 		self.assertAlmostEqual(findHypot(1,1.73205),1.999999,2,"Tested findHypot on inputs of 1 and 1.73205")
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_8">
+	<exercise label="ch8_ex_8">
 		<statement>
 			<p>
-				Write a function called <c>is_even(n)</c> that takes an integer as an argument and returns <c>True</c> if the argument is an <term>even number</term> and <c>False</c> if it is <term>odd</term>.
+				Write a function called <c>is_even(n)</c> that takes an integer as an
+				argument and returns <c>True</c> if the argument is an
+				<term>even number</term> and <c>False</c> if it is <term>odd</term>.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def is_even(n):
     #your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 	def testOne(self):
@@ -259,23 +274,25 @@ class myTests(TestCaseGui):
 		self.assertEqual(is_even(0),True,"Tested is_even on input of 0")
 
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_9">
+	<exercise label="ch8_ex_9">
 		<statement>
 			<p>
-				Now write the function <c>is_odd(n)</c> that returns <c>True</c> when <c>n</c> is odd and <c>False</c> otherwise.
+				Now write the function <c>is_odd(n)</c> that returns <c>True</c> when
+				<c>n</c> is odd and <c>False</c> otherwise.
 			</p>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def is_odd(n):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 	def testOne(self):
@@ -285,39 +302,42 @@ class myTests(TestCaseGui):
 		self.assertEqual(is_odd(0),False,"Tested is_odd on input of 0")
 
 myTests().main()
-</tests>
-	</program>
-</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-	<exercise xml:id="ch8_ex_10">
+	<exercise label="ch8_ex_10">
 		<statement>
 			<p>
-				Write a function <c>is_rightangled</c> which, given the length of three sides of a triangle, will determine whether the triangle is right-angled.
+				Write a function <c>is_rightangled</c> which, given the length of three
+				sides of a triangle, will determine whether the triangle is right-angled.
 				Assume that the third argument to the function is always the longest side.
-				It will return <c>True</c> if the triangle is right-angled, or <c>False</c> otherwise.
+				It will return <c>True</c> if the triangle is right-angled, or <c>False</c>
+				otherwise.
 			</p>
 
 			<p>
-				Hint: floating point arithmetic is not always exactly accurate,
-				so it is not safe to test floating point numbers for equality.
-				If a good programmer wants to know whether
-				<c>x</c> is equal or close enough to <c>y</c>, they would probably code it up as
+				Hint: floating point arithmetic is not always exactly accurate, so it is not
+				safe to test floating point numbers for equality.
+				If a good programmer wants to know whether <c>x</c> is equal or close enough
+				to <c>y</c>, they would probably code it up as
 			</p>
 
-
-			<program language="python"><code>
+			<program language="python">
+				<code>
 				if  abs(x - y) &lt; 0.001:      # if x is approximately equal to y
 				...
 				</code>
 			</program>
 		</statement>
-        <program interactive="activecode" language="python" >
-		<code>
+
+		<program interactive="activecode" language="python">
+			<code>
 def is_rightangled(a, b, c):
     # your code here
-		</code>
-<tests>
-from unittest.gui import TestCaseGui
+			</code>
+			<tests>
+				from unittest.gui import TestCaseGui
 
 class myTests(TestCaseGui):
 	def testOne(self):
@@ -329,8 +349,7 @@ class myTests(TestCaseGui):
 		self.assertEqual(is_rightangled(0.5,0.4,0.64031),True,"Tested is_rightangled on inputs of 0.5, 0.4 and 0.64031")
 		
 myTests().main()
-</tests>
-	</program>
-</exercise>
-
+			</tests>
+		</program>
+	</exercise>
 </section>

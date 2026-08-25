@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="conditionals_conditional-execution-binary-selection-index-0">
   <title>Conditional Execution: Binary Selection</title>
-  <video xml:id="binaryselection" youtube="OQ8uakCJ6yE" width="auto"/>
+  <video xml:id="binaryselection" label="binaryselection" youtube="OQ8uakCJ6yE" width="auto"/>
   <p>In order to write useful programs, we almost always need the ability to check
             conditions and change the behavior of the program accordingly. <term>Selection statements</term>, sometimes
             also referred to as <term>conditional statements</term>, give us this ability. The simplest form of selection is the <term>if statement</term>.

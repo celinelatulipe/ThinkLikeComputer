@@ -38,9 +38,9 @@
       <p>What language(s) do you speak at home?</p>
     </statement>
   </exercise>
-  <exercise runestone="ps-post-8-read"/>
+  <!-- <exercise runestone="ps-post-8-read"/>
   <exercise runestone="ps-post-9-understand-spoken"/>
-  <exercise runestone="ps-post-10-parsons"/>
+  <exercise runestone="ps-post-10-parsons"/> -->
   <p>A mixed-up code (Parsons) problem.</p>
   <image source="https://i.postimg.cc/wBFZ98zz/parsons.png" width="50%"/>
   <subsection xml:id="python-swap_thank-you">

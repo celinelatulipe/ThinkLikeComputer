@@ -9,7 +9,7 @@
   </introduction>
   <subsection xml:id="functions-parameters-scope_variable-and-parameters-are-local">
     <title>Variable and parameters are local</title>
-    <video xml:id="goog_local_vars" youtube="HdFujZpLFVg" width="auto"/>
+    <video xml:id="goog_local_vars" label="goog_local_vars" youtube="HdFujZpLFVg" width="auto"/>
     <p>An assignment statement in a function creates a <term>local variable</term> for the variable on the left hand side of the
                 assignment operator. It is called local because this variable only exists inside the function and you cannot use it
                 outside. For example, consider again the <c>square</c> function:</p>

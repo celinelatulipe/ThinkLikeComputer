@@ -3,19 +3,19 @@
   <title>Pre Survey</title>
   <p>Please answer the following questions.</p>
   <transition/>
-  <exercise runestone="p3-CS-self-efficacy-1"/>
+  <!-- <exercise runestone="p3-CS-self-efficacy-1"/>
   <exercise runestone="p3-CS-self-efficacy-2"/>
   <exercise runestone="p3-CS-self-efficacy-3"/>
   <exercise runestone="p3-CS-self-efficacy-4"/>
   <exercise runestone="p3-CS-self-efficacy-5"/>
-  <exercise runestone="p3-CS-self-efficacy-6"/>
+  <exercise runestone="p3-CS-self-efficacy-6"/> -->
   <p>For the next questions please select the answer that best
             matches your familiarity and confidence
             about the specified concept(s).</p>
-  <exercise runestone="p3-prog-se-loop-7"/>
+  <!-- <exercise runestone="p3-prog-se-loop-7"/>
   <exercise runestone="p3-prog-se-cond-8"/>
   <exercise runestone="p3-prog-se-func-9"/>
-  <exercise runestone="p3-prog-se-list-dic-10"/>
+  <exercise runestone="p3-prog-se-list-dic-10"/> -->
   <subsection xml:id="p3pt_feedback-3">
     <title>Feedback</title>
     <exercise label="p3-presurvey-sa">

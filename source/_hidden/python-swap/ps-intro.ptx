@@ -10,7 +10,7 @@
                 needed in a correct solution that you can leave on the left side. Click the <q>Check</q> button
                 to check your solution.</p>
     <p>See the video below for an example.</p>
-    <video xml:id="iwgex1-parsons1-ps" youtube="Rf7oWHlo-e0" width="650"/>
+    <video xml:id="iwgex1-parsons1-ps" label="iwgex1-parsons1-ps" youtube="Rf7oWHlo-e0" width="650"/>
     <p>Try to solve the following mixed-up code problem.  This problem doesn't require any indentation.</p>
     <exercise label="intro-simple-parsons-no-indent-ps" numbered="yes" adaptive="yes" indentation="hide" language="python">
       <statement>
@@ -76,7 +76,7 @@
                 one in your solution, or combine two blocks into one if there are more
                 than three blocks left.</p>
     <p>See the video below for an example.</p>
-    <video xml:id="iwgex1-parsons2-ps" youtube="QejZ7u642IU" width="650"/>
+    <video xml:id="iwgex1-parsons2-ps" label="iwgex1-parsons2-ps" youtube="QejZ7u642IU" width="650"/>
   </subsection>
   <subsection xml:id="python-swap_solving-write-code-problems">
     <title>Solving Write Code Problems</title>
@@ -85,7 +85,7 @@
                 correctly.  Click on the <q>Run</q> button to compile and run your code.  Look after
                 the code area for compiler errors and/or unit test results.</p>
     <p>See the video below for an example.</p>
-    <video xml:id="js-write-code-video-ex" youtube="w9hTOJ7iJpE" width="1020"/>
+    <video xml:id="js-write-code-video-ex" label="js-write-code-video-ex" youtube="w9hTOJ7iJpE" width="1020"/>
     <p>Finish writing the code for the following problem.</p>
     <exercise label="intro-sample-write-code-triple-ps">
       <statement>

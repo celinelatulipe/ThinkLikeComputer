@@ -62,8 +62,8 @@ print(sub(square(3), square(1+1)))
     <tests>
     </tests>
     </program>
-    <p>Let's take a look at how that last execution unfolds. Press the <term>Next Step</term> button below a few times to watch how these two lines of code get evaluated.</p>
-    <exercise runestone="se_ac2_4_1a"/> 
+    <!-- <p>Let's take a look at how that last execution unfolds. Press the <term>Next Step</term> button below a few times to watch how these two lines of code get evaluated.</p>
+    <exercise runestone="se_ac2_4_1a"/>  -->
      
   </subsection>
   <subsection xml:id="data-and-instructions_parentheses-invoke-functions">

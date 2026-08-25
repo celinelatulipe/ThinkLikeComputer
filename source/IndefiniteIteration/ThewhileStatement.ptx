@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="indefinite-iteration_the-while-statement">
   <title>The <c>while</c> Statement</title>
-  <video xml:id="whileloop" youtube="iUbToOoAykE" width="auto"/>
+  <video xml:id="whileloop" label="whileloop" youtube="iUbToOoAykE" width="auto"/>
   <p>The <c>while</c> statement in Python provides a more general mechanism for iterating. Similar to the <c>if</c> statement, it uses
             a boolean expression to control the flow of execution. The body of the while loop will be repeated as long as the controlling
             boolean expression evaluates to <c>True</c>.</p>

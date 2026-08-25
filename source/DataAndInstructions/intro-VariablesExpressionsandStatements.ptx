@@ -3,7 +3,7 @@
   <title>Introduction</title>
   <subsection xml:id="data-and-instructions_intro_section">
     <title>Python Building Blocks</title>
-    <video xml:id="typesnconvert" youtube="vNfCfowr-pQ" width="auto"/>
+    <video xml:id="typesnconvert" label="typesnconvert" youtube="vNfCfowr-pQ" width="auto"/>
     <p>This chapter introduces several basic building blocks of Python programs:</p>
     <p>
       <ul>
