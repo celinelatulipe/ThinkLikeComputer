@@ -10,7 +10,7 @@
   <blurb shelf="Python Programming Interactivity and Ethics">An extension of the Foundations of Python Programming book to include ethics and interactivity, and with a focus on helping students think about how the computer would execute each line of code.  </blurb>
   <!-- <blurb>An extension of the Foundations of Python Programming book to include ethics and interactivity, and with a focus on helping students think about how the computer would execute each line of code.  </blurb>-->
 <!-- The next three lines are likely for mature projects only: -->
-  <!-- <directories external="../assets" /> -->
+  <directories external="../assets" />
   <!-- <brandlogo url="" source="images/cover.png"/> -->
   <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
   <!-- <document-id>unique-book-id</document-id> -->

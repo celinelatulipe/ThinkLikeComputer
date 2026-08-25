@@ -5,7 +5,7 @@
         <subsection xml:id="functions-parameters-black-box-diagram">
             <title>A Black Box Diagram</title>
 
-    <video xml:id="goog_function_parms" youtube="Ndw_EgFO_tw" width="90%"/>
+    <video xml:id="goog_function_parms" label="goog_function_parms" youtube="Ndw_EgFO_tw" width="90%"/>
             <p>Parameters make functions more powerful because they enable the function to operate with slight variation by passing in pieces of information that the function needs in order to do its work. These values, often
             called <term>arguments</term> or <term>actual parameters</term> or <term>parameter values</term>, are passed to the function by the programmer. It is important to note that the programmer who wrote the function may be a different person than the programmer who uses the function. Here is a representation of a function that takes in information through parameters:</p>
         <image source="FunctionsParametersScope/Figures/blackboxproc.png" width="50%"/>
@@ -46,7 +46,8 @@ hello2("Jackie")
             is evaluated before control is passed to the function. The value is assigned to the corresponding formal parameter.
             Then, when the code block inside the function is executing, it can refer to that formal parameter and get its value,
             the value that was ‘passed into’ the function.</p>
-<exercise runestone="eval8_2_1"/>        <p>To get a feel for that, let’s invoke hello2 using some more complicated expressions. Try some of your own, too.</p>
+<!-- <exercise runestone="eval8_2_1"/>       -->
+  <p>To get a feel for that, let’s invoke hello2 using some more complicated expressions. Try some of your own, too.</p>
 
     <program label="ac8_2_1" interactive="activecode" language="python">
     

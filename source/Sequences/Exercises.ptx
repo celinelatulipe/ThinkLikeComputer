@@ -1,100 +1,111 @@
 <?xml version="1.0"?>
+
 <section xml:id="chapter9_exercises">
 	<title>Exercises</title>
-	<exercise xml:id="pp9_11_1" indentation="hide" language="python">
+
+	<exercise label="pp9_11_1" indentation="hide" language="python">
 		<statement>
 			<p>
-				Write a program that will print out the length of each item in the list as well as the first and last characters of the item.
+				Write a program that will print out the length of each item in the list as
+				well as the first and last characters of the item.
 			</p>
 		</statement>
-		<blocks><block order="2">
-		<cline>weather = ["sunny", "cloudy", "partially sunny",</cline>
-		<cline>           "rainy", "storming", "windy", "foggy",</cline>
-		<cline>           "snowy", "hailing"]</cline>
-		</block><block order="1">
-		<cline>for condition in weather:</cline>
-		</block><block order="4">
-		<cline>    print("The word is", len(condition), "characters")</cline>
-		</block><block order="5">
-		<cline>    first_char = condition[0]</cline>
-		<cline>    last_char = condition[-1]</cline>
-		</block><block order="3">
-		<cline>    print("The first character is: " + first_char)</cline>
-		<cline>    print("The last character is: " + last_char)</cline>
-		</block></blocks>
+		<blocks>
+			<block order="2">
+				<cline>weather = ["sunny", "cloudy", "partially sunny",</cline>
+				<cline>           "rainy", "storming", "windy", "foggy",</cline>
+				<cline>           "snowy", "hailing"]</cline>
+			</block>
+			<block order="1">
+				<cline>for condition in weather:</cline>
+			</block>
+			<block order="4">
+				<cline>    print("The word is", len(condition), "characters")</cline>
+			</block>
+			<block order="5">
+				<cline>    first_char = condition[0]</cline>
+				<cline>    last_char = condition[-1]</cline>
+			</block>
+			<block order="3">
+				<cline>    print("The first character is: " + first_char)</cline>
+				<cline>    print("The last character is: " + last_char)</cline>
+			</block>
+		</blocks>
 	</exercise>
-    <exercise xml:id="pp9_11_2" indentation="hide" language="python">
+
+	<exercise label="pp9_11_2" indentation="hide" language="python">
 		<statement>
 			<p>
 				Write code to determine how many 't's are in the following sentences.
 			</p>
 		</statement>
-		<blocks><block order="3">
-		<cline>phrases = ["My, what a lovely day today is!",</cline>
-		<cline>"Have you mastered cooking yet? A tasty treat could be in your future.",</cline>
-		<cline>"Have you ever seen the leaves change color?"]</cline>
-		</block><block order="2">
-		<cline>for sentence in phrases:</cline>
-		</block><block order="1">
-		<cline>    print(sentence.count("t"))</cline>
-		</block></blocks>
-    </exercise>
+		<blocks>
+			<block order="3">
+				<cline>phrases = ["My, what a lovely day today is!",</cline>
+				<cline>"Have you mastered cooking yet? A tasty treat could be in your future.",</cline>
+				<cline>"Have you ever seen the leaves change color?"]</cline>
+			</block>
+			<block order="2">
+				<cline>for sentence in phrases:</cline>
+			</block>
+			<block order="1">
+				<cline>    print(sentence.count("t"))</cline>
+			</block>
+		</blocks>
+	</exercise>
 
-		<exercise xml:id="ch9_ex_1">
-			<statement>
-				<p>
-					Although Python provides us with many list methods, it is good practice and very instructive to think about how they are implemented.
-					Implement a Python function that works like the following:
-				</p>
+	<exercise label="ch9_ex_1">
+		<statement>
+			<p>
+				Although Python provides us with many list methods, it is good practice and
+				very instructive to think about how they are implemented.
+				Implement a Python function that works like the following:
+			</p>
 
-				<p>
-					<ol>
-						<li>
-							<p>
-								count
-							</p>
-						</li>
+			<p>
+				<ol>
+					<li>
+						<p>
+							count
+						</p>
+					</li>
 
-						<li>
-							<p>
-								in
-							</p>
-						</li>
+					<li>
+						<p>
+							in
+						</p>
+					</li>
 
-						<li>
-							<p>
-								reverse
-							</p>
-						</li>
+					<li>
+						<p>
+							reverse
+						</p>
+					</li>
 
-						<li>
-							<p>
-								index
-							</p>
-						</li>
+					<li>
+						<p>
+							index
+						</p>
+					</li>
 
-						<li>
-							<p>
-								insert
-							</p>
-						</li>
-					</ol>
-				</p>
-			</statement>
+					<li>
+						<p>
+							insert
+						</p>
+					</li>
+				</ol>
+			</p>
+		</statement>
 
+		<program interactive="activecode" language="python" xml:id="ch9_ex_1_code">
+			<prefix/>
+			<code/>
+			<tests/>
+		</program>
 
-			<program interactive="activecode" language="python" xml:id="ch9_ex_1_code">
-				<prefix>
-				</prefix>
+		<solution>
+			<program language="python">
 				<code>
-				</code>
-				<tests>
-				</tests>
-			</program>
-
-			<solution>
-				<program language="python">
-					<code>
 def count(obj, lst):
     count = 0
     for e in lst:
@@ -129,24 +140,24 @@ print(is_in(4, lst))
 print(reverse(lst))
 print(index(2, lst))
 print(insert('cat', 4, lst))
-					</code>
-					<tests>
-					</tests>
-				</program>
-			</solution>
-		</exercise>
+				</code>
+				<tests/>
+			</program>
+		</solution>
+	</exercise>
 
-		<exercise xml:id="ch9_ex_2">
-			<statement>
-				<p>
-					Write a Python function that will take a list of 100 random integers between 0 and 1000 and return the maximum value.
-					(Note: there is a builtin function named <c>max</c> but pretend you cannot use it.)
-				</p>
-			</statement>
+	<exercise label="ch9_ex_2">
+		<statement>
+			<p>
+				Write a Python function that will take a list of 100 random integers between
+				0 and 1000 and return the maximum value.
+				(Note: there is a builtin function named <c>max</c> but pretend you cannot
+				use it.)
+			</p>
+		</statement>
 
-
-			<program interactive="activecode" language="python">
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 import random as r
 lst = []
 for i in range(100):
@@ -154,8 +165,8 @@ for i in range(100):
     lst.append(num)
 def largest(lst):
     #your code here
-				</code>
-				<tests>
+			</code>
+			<tests>
 				from unittest.gui import TestCaseGui
 				import re
 				class myTests(TestCaseGui):
@@ -167,12 +178,12 @@ def largest(lst):
 						# hardcode check
 						self.assertFalse(re.search(r'max', self.getEditorText()), 'Checking for max')
 				myTests().main()
-				</tests>
-			</program>
+			</tests>
+		</program>
 
-			<solution>
-				<program language="python">
-					<code>
+		<solution>
+			<program language="python">
+				<code>
 import random
 def max(lst):
     max = 0
@@ -184,30 +195,28 @@ lst = []
 for i in range(100):
     lst.append(random.randint(0, 1000))
 print(max(lst))
-					</code>
-					<tests>
-					</tests>
-				</program>
-			</solution>
-		</exercise>
+				</code>
+				<tests/>
+			</program>
+		</solution>
+	</exercise>
 
-		<exercise xml:id="ch9_ex_3">
-			<statement>
-				<p>
-					Write a function <c>sum_of_squares(xs)</c> that computes the sum
-					of the squares of the numbers in the list <c>xs</c>.
-					For example,
-					<c>sum_of_squares([2, 3, 4])</c> should return 4+9+16 which is 29:
-				</p>
-			</statement>
+	<exercise label="ch9_ex_3">
+		<statement>
+			<p>
+				Write a function <c>sum_of_squares(xs)</c> that computes the sum of the
+				squares of the numbers in the list <c>xs</c>.
+				For example, <c>sum_of_squares([2, 3, 4])</c> should return 4+9+16 which is
+				29:
+			</p>
+		</statement>
 
-
-			<program interactive="activecode" language="python">
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 def sum_of_squares(xs):
     # your code here
-				</code>
-				<tests>
+			</code>
+			<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
 					def testOne(self):
@@ -215,24 +224,25 @@ def sum_of_squares(xs):
 						self.assertEqual(sum_of_squares([0,1,-1]),2,"Tested sum_of_squares on input [0,1,-1]")
 						self.assertEqual(sum_of_squares([5,12,14]),365,"Tested sum_of_squares on input [5,12,14]")
 				myTests().main()
-				</tests>
-			</program>
-		</exercise>
+			</tests>
+		</program>
+	</exercise>
 
-		<exercise xml:id="ch9_ex_4">
-			<statement>
-				<p>
-					Create a list of 100 random integers between <c>0 and 1000</c>, and write code for the function called <c>countOdd(lst)</c> to count every <c>odd</c> number in the list
-				</p>
-			</statement>
+	<exercise label="ch9_ex_4">
+		<statement>
+			<p>
+				Create a list of 100 random integers between <c>0 and 1000</c>, and write
+				code for the function called <c>countOdd(lst)</c> to count every <c>odd</c>
+				number in the list
+			</p>
+		</statement>
 
-
-			<program interactive="activecode" language="python">
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 def countOdd(lst):
     # your code here
-				</code>
-				<tests>
+			</code>
+			<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
 					def testOne(self):
@@ -241,12 +251,12 @@ def countOdd(lst):
 						self.assertEqual(countOdd([2,4,6,8,10]),0,"Tested countOdd on input [2,4,6,8,10]")
 						self.assertEqual(countOdd([0,-1,12,-33]),2,"Tested countOdd on input [0,-1,12,-33]")
 				myTests().main()
-				</tests>
-			</program>
+			</tests>
+		</program>
 
-			<solution>
-				<program language="python">
-					<code>
+		<solution>
+			<program language="python">
+				<code>
 import random
 def countOdd(lst):
     odd = 0
@@ -259,27 +269,27 @@ lst = []
 for i in range(100):
     lst.append(random.randint(0, 1000))
 print(countOdd(lst))
-					</code>
-					<tests>
-					</tests>
-				</program>
-			</solution>
-		</exercise>
-		
-		<exercise xml:id="ch9_ex_5">
-			<statement>
-				<p>
-					Create a list of 100 random integers between <c>-1000 and 1000</c>, and write code for the function called <c>sumEven(lst)</c> to sum up all the <c>even</c> numbers in the list
-				</p>
-			</statement>
+				</code>
+				<tests/>
+			</program>
+		</solution>
+	</exercise>
 
+	<exercise label="ch9_ex_5">
+		<statement>
+			<p>
+				Create a list of 100 random integers between <c>-1000 and 1000</c>, and
+				write code for the function called <c>sumEven(lst)</c> to sum up all the
+				<c>even</c> numbers in the list
+			</p>
+		</statement>
 
-			<program interactive="activecode" language="python">
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 def sumEven(lst):
     # your code here
-				</code>
-				<tests>
+			</code>
+			<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
 					def testOne(self):
@@ -288,12 +298,12 @@ def sumEven(lst):
 						self.assertEqual(sumEven([2,4,6,7,9]),12,"Tested sumEven on input [2,4,6,7,9]")
 						self.assertEqual(sumEven([0,1,12,33]),12,"Tested sumEven on input [0,1,12,33]")
 				myTests().main()
-				</tests>
-			</program>
+			</tests>
+		</program>
 
-			<solution>
-				<program language="python">
-					<code>
+		<solution>
+			<program language="python">
+				<code>
 import random
 def sumEven(lst):
     sum = 0
@@ -306,27 +316,27 @@ lst = []
 for i in range(100):
     lst.append(random.randrange(-1000, 1000))
 print(sumEven(lst))
-					</code>
-					<tests>
-					</tests>
-				</program>
-			</solution>
-		</exercise>
+				</code>
+				<tests/>
+			</program>
+		</solution>
+	</exercise>
 
-		<exercise xml:id="ch9_ex_6">
-			<statement>
-				<p>
-					Create a list of 100 random integers between <c>-1000 and 1000</c>, and write code for the function called <c>sumNegatives(lst)</c> to sum up all the <c>negative</c> numbers in the list
-				</p>
-			</statement>
+	<exercise label="ch9_ex_6">
+		<statement>
+			<p>
+				Create a list of 100 random integers between <c>-1000 and 1000</c>, and
+				write code for the function called <c>sumNegatives(lst)</c> to sum up all
+				the <c>negative</c> numbers in the list
+			</p>
+		</statement>
 
-
-			<program interactive="activecode" language="python">
-				<code>
+		<program interactive="activecode" language="python">
+			<code>
 def sumNegatives(lst):
     # your code here
-				</code>
-				<tests>
+			</code>
+			<tests>
 				from unittest.gui import TestCaseGui
 				class myTests(TestCaseGui):
 					def testOne(self):
@@ -335,12 +345,12 @@ def sumNegatives(lst):
 						self.assertEqual(sumNegatives([-2,-4,6,-7,9]),-13,"Tested sumNegatives on input [-2,-4,6,-7,9]")
 						self.assertEqual(sumNegatives([0,1,2,3,4]),0,"Tested sumNegatives on input [0,1,2,3,4]")
 				myTests().main()
-				</tests>
-			</program> 
+			</tests>
+		</program>
 
-			<solution>
-				<program language="python">
-					<code>
+		<solution>
+			<program language="python">
+				<code>
 import random
 def sumNegatives(lst):
     sum = 0
@@ -352,10 +362,9 @@ lst = []
 for i in range(100):
     lst.append(random.randrange(-1000, 1000))
 print(sumNegatives(lst))
-					</code>
-					<tests>
-					</tests>
-				</program>
-			</solution>
-		</exercise>
-	</section>
+				</code>
+				<tests/>
+			</program>
+		</solution>
+	</exercise>
+</section>

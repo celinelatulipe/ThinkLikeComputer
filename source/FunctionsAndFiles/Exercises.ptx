@@ -57,7 +57,7 @@
 	</pre></raw>
 
 
-		<exercise xml:id="ch5_ex_1">
+		<exercise label="ch5_ex_1">
 			<statement>
 				<p>
 					The following sample file called <c>studentdata.txt</c> contains one line for each student in an imaginary class.
@@ -132,7 +132,7 @@ f.close()
 	<pre source="FunctionsAndFiles/TextFiles/studentdata.txt"></pre>
   </datafile>
 
-	<exercise xml:id="ch5_ex_2">
+	<exercise label="ch5_ex_2">
 		<statement>
 			<p>
 				Create a list called <c>destination</c> using the data stored in <c>travel_plans.txt</c>.
@@ -154,7 +154,7 @@ myTests().main()
 	</program>
 </exercise>
 
-	<exercise xml:id="ch5_ex_3">
+	<exercise label="ch5_ex_3">
 		<statement>
 			<p>
 				Create a list called <c>j_emotions</c> that contains every word in <c>emotion_words.txt</c> that begins with the letter “j”.

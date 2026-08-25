@@ -24,7 +24,7 @@
   <p>See the video below for detailed instructions on how to start a timed exam,
             move to different questions, flag a question to remind yourself to review it later,
             and finish the exam.</p>
-  <video xml:id="intro-timed-exam-p3pt" youtube="CrydSpPplUQ" width="650"/>
+  <video xml:id="intro-timed-exam-p3pt" label="intro-timed-exam-p3pt" youtube="CrydSpPplUQ" width="650"/>
   <subsection xml:id="p3pt_practice-timed-exam">
     <title>Practice Timed Exam</title>
     <p>Click the start button to take the practice timed exam.</p>

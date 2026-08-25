@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="iteration_the-for-loop-index-0">
   <title>The <term>for</term> Loop</title>
-  <video xml:id="forloopvid" youtube="X1-UNHUajfk" width="auto"/>
+  <video xml:id="forloopvid" label="forloopvid" youtube="X1-UNHUajfk" width="auto"/>
   <p>Back when we drew the images with turtles it could be quite tedious. If we wanted to draw a square
             then we had to move then turn, move then turn, etc. etc. four times. If we were drawing a hexagon, 
             an octagon, or a polygon with 42 sides, it would have been a nightmare to duplicate all that code.</p>

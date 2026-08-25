@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="data-and-instructions_statements-and-expressions-index-0">
   <title>Statements and Expressions</title>
-  <video xml:id="expression_vid" youtube="3WgmLIsXFkI" width="auto"/>
+  <video xml:id="expression_vid" label="expression_vid" youtube="3WgmLIsXFkI" width="auto"/>
   <p>A <term>statement</term> is an instruction that the Python interpreter can execute. You have mostly only seen the assignment
 statement so far. Some other kinds of statements that you'll see in future chapters are <c>while</c> statements,
 <c>for</c> statements, <c>if</c> statements,  and <c>import</c> statements. (There are other kinds, too!)</p>
@@ -83,7 +83,7 @@ print(sub(square(y), square(x)))
   <p>It is important to start learning to read code that contains complex expressions. The Python interpreter examines any line of code and <em>parses</em> it into components. For example, if it sees an <c>=</c> symbol, it will try to treat the whole line as an assignment statement. It will expect to see a valid variable name to the left of the =, and will parse everything to the right of the = as an expression. It will try to figure out whether the right side is a literal, a variable name, an operator expression, or a function call expression. If it's an operator expression, it will further try to parse the sub-expressions before and after the operator. And so on. You should learn to parse lines of code in the same way.</p>
   <p>In order to evaluate an operator expression, the Python interpreter first completely evaluates the expression before the operator, then the one after, then combines the two resulting values using the operator. In order to evaluate a function call expression, the interpreter evaluates the expression before the parentheses (i.e., it looks up the name of the function). Then it tries to evaluate each of the expressions inside the parentheses. There may be more than one, separated by commas. The values of those expressions are passed as inputs to the function when the function is called.</p>
   <p>If a function call expression is a sub-expression of some more complicated expression, as <c>square(x)</c> is in <c>sub(square(y), square(x))</c>, then the return value from <c>square(x)</c> is passed as an input to the <c>sub</c> function. This is one of the tricky things that you will have to get used to working out when you read (or write) code. In this example, the <c>square</c> function is called (twice) before the <c>sub</c> function is called, even though the <c>sub</c> function comes first when reading the code from left to right.  In the following example we will use the notation of -add- to indicate that Python has looked up the name <title_reference>add</title_reference> and determined that it is a function object.</p>
-  <exercise runestone="eval2_10_1"/> 
+  <!-- <exercise runestone="eval2_10_1"/>  -->
   <p>To start giving you some practice in reading and understanding complicated expressions, try doing the Parsons problem below. Be careful not to indent any of the lines of code; that's something that will come later in the course.</p>
   <exercise label="pp2_10_0" indentation="hide" language="python">
     <statement>

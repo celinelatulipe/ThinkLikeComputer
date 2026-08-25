@@ -70,7 +70,7 @@ for p in prefixes:
 		</program>
 	</exercise>
 
-	<exercise xml:id="ex4_16_3">
+	<exercise label="ex4_16_3">
 		<statement>
 			<dl>
 			<li>
@@ -104,7 +104,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 </solution>
 </exercise>
 
-<exercise label="ex_3_4">
+<exercise label="ex_4_16_4">
 	<statement>
 		<p>
 			For the list of numbers below:
@@ -128,7 +128,7 @@ for amonth in ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 	</statement>
 
 
-		<program label="ex_3_4_editor" interactive="activecode" language="python">
+		<program label="ex_4_16_4_editor" interactive="activecode" language="python">
 			<code>
 nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 			</code>
@@ -151,7 +151,7 @@ nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 		</program>
 	</exercise>
 
-	<exercise label="pp_4_16_1" indentation="hide" language="python">
+	<exercise label="ex_4_16_5" indentation="hide" language="python">
 		<statement>
 			<p>
 				Write a program that will go through a list of temperatures and print them out to the user.
@@ -166,7 +166,7 @@ nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 		</block></blocks>
 	</exercise>
 
-	<exercise label="pp_4_16_2" indentation="hide" language="python">
+	<exercise label="ex_4_16_6" indentation="hide" language="python">
 		<statement>
 			<p>
 				Write a program that will print out a greeting to each student in the list.
@@ -187,7 +187,7 @@ nums = [12, 10, 32, 3, 66, 17, 42, 99, 20]
 		</block></blocks>
 	</exercise>
 
-	<exercise xml:id="ex_4_16_4">
+	<exercise label="ex_4_16_7">
 		<statement>
 			<p>
 				A drunk pirate makes a random turn and then takes 100 steps forward, makes another random turn, takes another 100 steps, turns another random amount, etc.

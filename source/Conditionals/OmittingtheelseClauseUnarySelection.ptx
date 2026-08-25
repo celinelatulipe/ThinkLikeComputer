@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <section xml:id="conditionals_omitting-the-else-clause-unary-selection-index-0">
   <title>Omitting the <c>else</c> Clause: Unary Selection</title>
-  <video xml:id="unaryselection" youtube="Fd4a8ktQURc" width="auto"/>
+  <video xml:id="unaryselection" label="unaryselection" youtube="Fd4a8ktQURc" width="auto"/>
   <p>Another form of the <c>if</c> statement is one in which the <c>else</c> clause is omitted entirely. This creates what
             is sometimes called <term>unary selection</term>. In this case, when the condition evaluates to <c>True</c>, the statements
             are executed. Otherwise the flow of execution continues to the statement after the body of the <c>if</c>.</p>

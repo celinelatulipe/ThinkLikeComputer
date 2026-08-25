@@ -3,17 +3,17 @@
   <title>Pre Survey</title>
   <p>Please answer the following questions.</p>
   <transition/>
-  <exercise runestone="ps-CS-self-efficacy-1"/>
+  <!-- <exercise runestone="ps-CS-self-efficacy-1"/>
   <exercise runestone="ps-CS-self-efficacy-2"/>
   <exercise runestone="ps-CS-self-efficacy-3"/>
   <exercise runestone="ps-CS-self-efficacy-4"/>
   <exercise runestone="ps-CS-self-efficacy-5"/>
-  <exercise runestone="ps-CS-self-efficacy-6"/>
+  <exercise runestone="ps-CS-self-efficacy-6"/> -->
   <p>For the next questions please select the answer that best
             matches your familiarity and confidence
             about the specified concept(s).</p>
-  <exercise runestone="ps-prog-se-vars-7"/>
-  <exercise runestone="ps-prog-se-swap-8"/>
+  <!-- <exercise runestone="ps-prog-se-vars-7"/>
+  <exercise runestone="ps-prog-se-swap-8"/> -->
   <subsection xml:id="python-swap_feedback-1">
     <title>Feedback</title>
     <exercise label="ps-presurvey-sa">

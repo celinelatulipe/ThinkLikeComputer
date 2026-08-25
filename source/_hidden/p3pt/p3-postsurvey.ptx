@@ -38,9 +38,9 @@
       <p>What language(s) do you speak at home?</p>
     </statement>
   </exercise>
-  <exercise runestone="p3-post-8-read"/>
+  <!-- <exercise runestone="p3-post-8-read"/>
   <exercise runestone="p3-post-9-understand-spoken"/>
-  <exercise runestone="p3-post-10-parsons"/>
+  <exercise runestone="p3-post-10-parsons"/> -->
   <p>A mixed-up code (Parsons) problem.</p>
   <image source="https://i.postimg.cc/wBFZ98zz/parsons.png" width="50%"/>
   <subsection xml:id="p3pt_thank-you">

@@ -3,7 +3,7 @@
   <title>Introduction to Functions and Files</title>
     <subsection xml:id="functions-and-files_functions_intro">
     <title>Introduction to Functions</title>
-      <video xml:id="goog_function_intro" youtube="85WYZKKnaPQ" width="auto"/>
+      <video xml:id="goog_function_intro" label="goog_function_intro" youtube="85WYZKKnaPQ" width="auto"/>
       <p>In Python, a <term>function</term> is a chunk of code that performs some operation that is meaningful for a person to think about as a whole unit, for example calculating a student's GPA in a learning system or responding to the jump action in a video game. Once a function has been defined and you are satisfied that it does what it is supposed to do, you will start thinking about it in terms of the larger operation that it performs rather than the specific lines of code that make it work.</p>
       <p>This breaking down of a task or problem is crucial to the successful implementation of any program of more than 50 or so lines (and plenty of smaller ones too).  For example, the program that displays the Instagram landing page is made up of functions that:</p>
       <p>

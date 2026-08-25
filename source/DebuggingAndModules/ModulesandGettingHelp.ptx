@@ -2,7 +2,7 @@
 <section xml:id="debugging-and-modules_modules-index-0">
   <title>Modules</title>
   <introduction>
-    <video xml:id="vid_modules" youtube="GCLHuPBtLdQ" width="auto"/>
+    <video xml:id="vid_modules" label="vid_modeules" youtube="GCLHuPBtLdQ" width="auto"/>
     <p>A <term>module</term> is a file containing Python definitions and statements intended for
               use in other Python programs. There are many Python modules that come with
               Python as part of the <term>standard library</term>. Providing additional functionality through modules allows you to only use the functionality you need when you need it, and it keeps your code cleaner.</p>
