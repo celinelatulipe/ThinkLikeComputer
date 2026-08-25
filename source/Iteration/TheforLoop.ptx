@@ -10,10 +10,10 @@
             our party. We don't quite know how to send email yet, so for the moment we'll just print a message
             out to the console to imitate the idea of emailing each friend.</p>
   <program label="ac4_2_1" interactive="activecode" language="python">
-    <input>
+    <code>
 for name in ["Joe", "Amy", "Brad", "Angelina", "Zuki", "Thandi", "Paris"]:
     print("Hi", name, "Please come to my party on Saturday!")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

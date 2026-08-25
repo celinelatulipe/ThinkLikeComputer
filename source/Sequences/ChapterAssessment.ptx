@@ -10,13 +10,13 @@
                 <p>What will the output be for the following code?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                     let = "z"
                     let_two = "p"
                     c = let_two + let
                     m = c*5
                     print(m)
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -71,9 +71,9 @@
                 </p>
             </statement>
             <program label="assess_ac_9_12_2_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
-                </input>
+                </code>
                 <tests>
                 from unittest.gui import TestCaseGui
                 import re
@@ -95,12 +95,12 @@
                 </p>
             </statement>
             <program label="assess_ac_9_12_3_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     by = "You are"
                     az = "doing a great "
                     io = "job"
                     qy = "keep it up!"
-                </input>
+                </code>
                 <tests>
                 from unittest.gui import TestCaseGui
 
@@ -123,11 +123,11 @@
                 <p>What will the output be for the following code?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                         ls = ['run', 'world', 'travel', 'lights', 'moon', 'baseball', 'sea']
                         new = ls[2:4]
                         print(new)
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -174,10 +174,10 @@
                 <p>What is the type of <c>m</c>?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                         l = ['w', '7', 0, 9]
                         m = l[1:2]
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -220,10 +220,10 @@
                 <p>What is the type of <c>m</c>?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                         l = ['w', '7', 0, 9]
                         m = l[1]
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -266,10 +266,10 @@
                 <p>What is the type of <c>x</c>?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                         b = "My, what a lovely day"
                         x = b.split(',')
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -314,13 +314,13 @@
                 <p>What is the type of <c>a</c>?
                 </p>
                 <program language="python">
-                    <input>
+                    <code>
                         b = "My, what a lovely day"
                         x = b.split(',')
                         z = "".join(x)
                         y = z.split()
                         a = "".join(y)
-                    </input>
+                    </code>
                 </program>
             </statement>
             <choices>
@@ -369,9 +369,9 @@
                 </p>
             </statement>
             <program label="assess_ac9_12_9_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     nums = [4, 2, 23.4, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]                    
-                </input>
+                </code>
                 <tests>
                     from unittest.gui import TestCaseGui
                     import re
@@ -394,9 +394,9 @@
                 </p>
             </statement>
             <program label="assess_ac9_12_10_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     nums = [4, 2, 8, 23.4, 8, 9, 545, 9, 1, 234.001, 5, 49, 8, 9 , 34, 52, 1, -2, 9.1, 4]
-                </input>
+                </code>
                 <tests>
                     from unittest.gui import TestCaseGui
                     import re
@@ -417,9 +417,9 @@
                 </p>
             </statement>
             <program label="access_ac_9_12_11_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
-                </input>
+                </code>
                 <tests>
                     from unittest.gui import TestCaseGui
                     import re
@@ -440,9 +440,9 @@
                 </p>
             </statement>
             <program label="access_ac_9_12_12_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     lst = ["hi", "goodbye", "python", "106", "506", 91, ['all', 'Paul', 'Jackie', "UMSI", 1, "Stephen", 4.5], 109, "chair", "pizza", "wolverine", 2017, 3.92, 1817, "account", "readings", "papers", 12, "facebook", "twitter", 193.2, "snapchat", "leaders and the best", "social", "1986", 9, 29, "holiday", ["women", "olympics", "gold", "rio", 21, "2016", "men"], "26trombones"]
-                </input>
+                </code>
                 <tests>
                     from unittest.gui import TestCaseGui
                     import re
@@ -464,9 +464,9 @@
                 </p>
             </statement>
             <program label="assess_ac_9_12_13_editor" interactive="activecode" language="python">
-                <input>
+                <code>
                     sent = "The bicentennial for our university was in 2017"
-                </input>
+                </code>
                 <tests>
                     from unittest.gui import TestCaseGui
                     import re

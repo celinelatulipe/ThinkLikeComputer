@@ -10,21 +10,21 @@
             is actually happening. Consider the following example, which only prints out the value of
             the accumulator after the for loop.</p>
   <program label="ac4_10_1" interactive="activecode" language="python">
-    <input>
+    <code>
 w = range(10)
 
 tot = 0
 for num in w:
     tot += num
 print(tot)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Say we weren't sure what <c>num</c> was being assigned each time we iterated. One way to find out
             would be to add a print statement inside of the for loop.</p>
   <program label="ac4_10_2" interactive="activecode" language="python">
-    <input>
+    <code>
 w = range(10)
 
 tot = 0
@@ -32,13 +32,13 @@ for num in w:
     print(num)
     tot += num
 print(tot)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>If we wanted to see what was happening to <c>tot</c> as well, we could print that out in the for loop too!</p>
   <program label="ac4_10_3" interactive="activecode" language="python">
-    <input>
+    <code>
 w = range(10)
 
 
@@ -48,7 +48,7 @@ for num in w:
     tot += num
     print(tot)
 print(tot)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -56,7 +56,7 @@ print(tot)
             to make them easier to read! This is especially important when you have a loop that is complex or will iterate many times. If your console is full of information from print statements, it can be hard to decipher. But adding informative print
             statements, as in the example below, makes it much easier to see what is happening.</p>
   <program label="ac4_10_4" interactive="activecode" language="python">
-    <input>
+    <code>
 w = range(10)
 
 tot = 0
@@ -68,7 +68,7 @@ for num in w:
     print("Value of tot:", tot)
 print("***** End of For Loop *****")
 print("Final total:", tot)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

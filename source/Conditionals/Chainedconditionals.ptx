@@ -4,14 +4,14 @@
   <p>Python provides an alternative way to write nested selection such as the one shown in the previous section.
             This is sometimes referred to as a <term>chained conditional</term>.</p>
   <program language="python">
-    <input>
+    <code>
 if x &lt; y:
     print("x is less than y")
 elif x &gt; y:
     print("x is greater than y")
 else:
     print("x and y must be equal")
-</input>
+</code>
   </program>
   <p>The flow of control can be drawn in a different orientation but the resulting pattern is identical to the one shown above.</p>
   <image source="Conditionals/Figures/flowchart_chained_conditional.png" width="50%"/>
@@ -26,7 +26,7 @@ else:
             branch executes.</p>
   <p>Here is the same program using <c>elif</c>.</p>
   <program label="ac6_9_1" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 10
 y = 10
 
@@ -36,7 +36,7 @@ elif x &gt; y:
     print("x is greater than y")
 else:
     print("x and y must be equal")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -46,7 +46,7 @@ else:
   <image source="Conditionals/Figures/valid_conditionals.png" width="50%" alt="shows a unary conditiona, a binary conditional, a conditional with if, elif, else, and a conditional with if, elif, and elif."/>
   <p>Here is a turtle example that uses chained conditionals.</p>
   <program label="ac6_9_2" interactive="activecode" language="python">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 
@@ -75,7 +75,7 @@ for color in colors:
         print("Uh-oh! I don't know the color: ", color)
 
 amy.hideturtle()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -96,7 +96,7 @@ amy.hideturtle()
     <statement>
       <p>Which of I, II, and III below gives the same result as the following nested if?</p>
       <program language="python">
-        <input>
+        <code>
 # nested if-else statement
 x = -10
 if x &lt; 0:
@@ -106,10 +106,10 @@ else:
         print(x, " is a positive number")
     else:
         print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 I.
 
 if x &lt; 0:
@@ -118,10 +118,10 @@ else (x &gt; 0):
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 II.
 
 if x &lt; 0:
@@ -130,10 +130,10 @@ elif (x &gt; 0):
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
       <program language="python">
-        <input>
+        <code>
 III.
 
 if x &lt; 0:
@@ -142,7 +142,7 @@ if (x &gt; 0):
     print(x, " is a positive number")
 else:
     print(x, " is 0")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -192,14 +192,14 @@ else:
     <statement>
       <p>What will the following code print if x = 3, y = 5, and z = 2?</p>
       <program language="python">
-        <input>
+        <code>
 if x &lt; y and x &lt; z:
     print("a")
 elif y &lt; x and y &lt; z:
     print("b")
 else:
     print("c")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -234,7 +234,7 @@ else:
       <p>Create one conditional to find whether <q>false</q> is in string <c>str1</c>. If so, assign variable <c>output</c> the string <q>False. You aren't you?</q>. Check to see if <q>true</q> is in string <c>str1</c> and if it is then assign <q>True! You are you!</q> to the variable <c>output</c>. If neither are in <c>str1</c>, assign <q>Neither true nor false!</q> to <c>output</c>.</p>
     </statement>
     <program label="ac6_9_3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 str1 = "Today you are you! That is truer than true! There is no one alive who is you-er than you!"
 
 =====
@@ -249,7 +249,7 @@ class myTests(TestCaseGui):
       self.assertIn("elif", self.getEditorText(), "Testing output (Don't worry about actual and expected values).")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -259,7 +259,7 @@ myTests().main()
       <p>Create an empty list called <c>resps</c>. Using the list <c>percent_rain</c>, for each percent, if it is above 90, add the string &#x2018;Bring an umbrella.' to <c>resps</c>, otherwise if it is above 80, add the string &#x2018;Good for the flowers?' to <c>resps</c>, otherwise if it is above 50, add the string &#x2018;Watch out for clouds!' to <c>resps</c>, otherwise, add the string &#x2018;Nice day!' to <c>resps</c>. Note: if you're sure you've got the problem right but it doesn't pass, then check that you've matched up the strings exactly.</p>
     </statement>
     <program label="ac6_9_4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 percent_rain = [94.3, 45, 100, 78, 16, 5.3, 79, 86]
 
 =====
@@ -272,7 +272,7 @@ class myTests(TestCaseGui):
       self.assertEqual(resps, ['Bring an umbrella.','Nice day!','Bring an umbrella.','Watch out for clouds!',"Nice day!",'Nice day!','Watch out for clouds!',"Good for the flowers?"], "Testing the value of resps")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -282,7 +282,7 @@ myTests().main()
       <p>We have created conditionals for you to use. Do not change the provided conditional statements. Find an integer value for <c>x</c> that will cause <c>output</c> to hold the values <c>True</c> and <c>None</c>. (Drawing diagrams or flow charts for yourself may help!)</p>
     </statement>
     <program label="ac6_9_5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 x =
 output = []
 
@@ -311,7 +311,7 @@ class myTests(TestCaseGui):
       self.assertEqual(x in [64, 65, 66, 67], True, "Testing that value of x is reasonable for this problem")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

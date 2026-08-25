@@ -12,69 +12,69 @@
         <li>
           <p>The import statement gives us access to the SimpleGUI module.</p>
           <program language="python">
-            <input>
+            <code>
               import simplegui  # line 7
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>The string "Welcome!" is assigned to variable message.</p>
           <program language="python">
-            <input>
+            <code>
               message = "Welcome!"  # line 9
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>An event handler function defines what happens when the user clicks the button with 
             line 13 giving access to the global variable message, and then line 14 changes the value of that variable to "Good job!"</p>
           <program language="python">
-            <input>
+            <code>
               def click():  # line 12 
                       global message  
                       message = "Good job!"  
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>A draw() event handler function includes a function canvas.draw_text() to specify what should be drawn on the canvas. The SimpleGUI module calls this draw() function automatically, many times per second, to redraw the canvas and keep it up to date as the user interacts with the program.</p>
           <program language="python">
-            <input>
+            <code>
               def draw(canvas): # line 17
                      canvas.draw_text(message, [50,112], 48, "Red")  
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>A window is created using the create_frame method of the SimpleGUI module. It gives the window a title (<q>Home</q>) and a size in pixels for a canvas that will be drawn on the right side of the window (the canvas in this default example is 300 pixels wide by 200 pixels tall). The window that is created is assigned to a variable called &#x2018;frame'. When you create a frame in SimpleGUI, you get an area on the left for placing interface controls and an area on the right for the canvas.</p>
           <program language="python">
-            <input>
+            <code>
               frame = simplegui.create_frame("Home", 300, 200)  # line 21
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>Then a button is added to &#x2018;frame', with the label <q>Click me</q>, and it also registers that when the button is clicked by the user, the function &#x2018;click()' should be called.</p>
           <program language="python">
-            <input>
+            <code>
               frame.add_button("Click me", click)  # line 22
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>A function calls on the frame object to allow the event handler function draw() to be registered.</p>
           <program language="python">
-            <input>
+            <code>
               frame.set_draw_handler(draw)  # line 23
-            </input>   
+            </code>   
           </program>
         </li>
         <li>
           <p>The following statement allows the frame/window object to recognize event-based interactions.</p>
           <program language="python">
-            <input>
+            <code>
               frame.start()  # line 26
-            </input>   
+            </code>   
           </program>
         </li>
       </ul>
@@ -102,7 +102,7 @@
   <exercise label="question10_4_1">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           message = "Welcome!"
@@ -118,7 +118,7 @@
           frame.add_button("Click me", click)
           frame.set_draw_handler(draw)
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>What happens if you remove the line, <c>frame.start()</c>, and then run the program? Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
@@ -161,7 +161,7 @@
   <exercise label="question10_4_2">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           message = "Welcome!"
@@ -177,7 +177,7 @@
           frame.add_button("Click me", click)
           frame.set_draw_handler(draw)
           frame.start()
-        </input>
+        </code>
       </program>
       <p>What happens if you remove the statement, <c>global message</c>, and then run the program?</p>
       <p>Go to: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
@@ -220,7 +220,7 @@
   <exercise label="question10_4_3">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           message = "Welcome!"
@@ -236,7 +236,7 @@
           frame.add_button("Click me", click)
           frame.set_draw_handler(draw)
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p> Review the above code to decide which line of code includes text displayed on the button.</p>
@@ -287,7 +287,7 @@
   <exercise label="question10_4_4">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           message = "Welcome!"
@@ -303,7 +303,7 @@
           frame.add_button("Click me", click)
           frame.set_draw_handler(draw)
           frame.start()
-        </input>
+        </code>
       </program>
       <p>               </p>
       <p>Review the above code to decide which line(s) of code register(s) functions. Select all that apply.</p>
@@ -354,7 +354,7 @@
   <exercise label="question10_4_5">
   <statement>
     <program language="python">
-      <input> 
+      <code> 
         import simplegui
 
         message = "Welcome!"
@@ -370,7 +370,7 @@
         frame.add_button("Click me", click)
         frame.set_draw_handler(draw)
         frame.start()
-      </input>
+      </code>
     </program>
     <p></p>
     <p>Review the above code to decide which line(s) of code define(s) event handler functions. Select all that apply.</p>

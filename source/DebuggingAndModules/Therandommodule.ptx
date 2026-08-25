@@ -28,7 +28,7 @@
     <p>Python provides a module <c>random</c> that helps with tasks like this. You can take a look at it in the documentation.
               Here are the key things we can do with it.</p>
     <program label="ac3_10_1" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 prob = random.random()
@@ -36,7 +36,7 @@ print(prob)
 
 diceThrow = random.randrange(1,7)       # return an int, one of 1,2,3,4,5,6
 print(diceThrow)
-      </input>
+      </code>
     <tests>
     </tests>
     </program>
@@ -52,13 +52,13 @@ print(diceThrow)
               numbers close to 5. If you continue to press the run button you will see random values between 0.0 and up to but not
               including 5.0.</p>
     <program label="ac3_10_2" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 prob = random.random()
 result = prob * 5
 print(result)
-        </input>
+        </code>
     <tests>
   </tests>
     </program>
@@ -72,7 +72,7 @@ print(result)
     <note><p>Another useful function is <c>random.choice()</c> which requires a sequence type variable as a parameter. Run the activecode below to randomly choose a colour from the list and a character from a string. 
       You will see this function again in class assignments!</p>
     <program label="ac3_10_3" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 colours = ['red', 'orange', 'yellow', 'green', 'blue']
@@ -82,7 +82,7 @@ print(colour)
 alphabet= "abcdefghijklmnopqrstuvwxyz"
 letter = random.choice(alphabet)
 print(letter)
-        </input>
+        </code>
     <tests>
   </tests>
     </program></note>

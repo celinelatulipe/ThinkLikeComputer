@@ -10,12 +10,12 @@
 						</p>
 					</statement>
                     <program interactive="activecode" language="python">
-					<input>
+					<code>
 def num_test(n):
 	# your code here
 
 
-					</input>
+					</code>
 	<tests>
 from unittest.gui import TestCaseGui
 
@@ -40,10 +40,10 @@ myTests().main()
 					</p>
 				</statement>
                 <program interactive="activecode" language="python" >
-				<input>
+				<code>
 def numDigits(n):
     # your code here
-				</input>
+				</code>
 	<tests>
 	from unittest.gui import TestCaseGui
 
@@ -59,14 +59,14 @@ def numDigits(n):
 			</program>
             <solution>
 			<program language="python">
-				<input>
+				<code>
 def numDigits(n):
     n_str = str(n)
     return len(n_str)
 print(numDigits(50))
 print(numDigits(20000))
 print(numDigits(1))
-				</input>
+				</code>
 				<tests>
 				</tests>
 			</program>
@@ -80,10 +80,10 @@ print(numDigits(1))
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def reverse(astring):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -107,10 +107,10 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def mirror(mystr):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -127,7 +127,7 @@ myTests().main()
 	</program>
     <solution>
 	<program language="python">
-		<input>
+		<code>
 def reverse(mystr):
     reversed = ''
     for char in mystr:
@@ -139,7 +139,7 @@ assert mirror('good') == 'gooddoog'
 assert mirror('Python') == 'PythonnohtyP'
 assert mirror('') == ''
 assert mirror('a') == 'aa'
-		</input>
+		</code>
 	</program>
 </solution>
 </exercise>
@@ -151,10 +151,10 @@ assert mirror('a') == 'aa'
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def remove_letter(theLetter, theString):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -190,10 +190,10 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def replace(s, old, new):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -218,10 +218,10 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def findHypot(a,b):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -244,10 +244,10 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def is_even(n):
     #your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -270,10 +270,10 @@ myTests().main()
 			</p>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def is_odd(n):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -305,17 +305,17 @@ myTests().main()
 			</p>
 
 
-			<program language="python"><input>
+			<program language="python"><code>
 				if  abs(x - y) &lt; 0.001:      # if x is approximately equal to y
 				...
-				</input>
+				</code>
 			</program>
 		</statement>
         <program interactive="activecode" language="python" >
-		<input>
+		<code>
 def is_rightangled(a, b, c):
     # your code here
-		</input>
+		</code>
 <tests>
 from unittest.gui import TestCaseGui
 

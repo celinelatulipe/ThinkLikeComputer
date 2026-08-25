@@ -4,10 +4,10 @@
   <p>Since a string is simply a sequence of characters, the <c>for</c> loop iterates over each character
             automatically. (As always, try to predict what the output will be from this code before you run it.)</p>
   <program xml:id="ac4_6_1_program" label="ac4_6_1" interactive="activecode" language="python">
-    <input>
+    <code>
 for achar in "Go Spot Go":
     print(achar)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -21,11 +21,11 @@ for achar in "Go Spot Go":
     <statement>
       <p>How many times is the word HELLO printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python rocks"
 for ch in s:
    print("HELLO")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -67,7 +67,7 @@ for ch in s:
     <statement>
       <p>How many times does the turtle in this code move to a random location?</p>
       <program language="python">
-        <input>
+        <code>
 # Turtle name symbol drawing
 import turtle
 import random
@@ -78,7 +78,7 @@ for ch in s:
    x = random.randrange(-200, 200)
    y = random.randrange(-150, 150)
    annika.goto(x, y)
-</input>
+</code>
       </program>
     </statement>
     <choices>

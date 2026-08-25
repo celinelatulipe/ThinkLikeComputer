@@ -10,23 +10,23 @@
             break out of the loop.)</p>
   <p>Additionally, if the while condition is <c>while True:</c> and there is no break, then that is another case of an infinite loop!</p>
   <program language="python">
-    <input>
+    <code>
 while True:
     print("Will this stop?")
 
 print("We have escaped.")
-</input>
+</code>
   </program>
   <p>Another case where an infinite loop is likely to occur is when you have reassiged the value of the variable used in the while statement in a way that prevents the loop from completing. This is an example below (if it takes too long, try reloading the page and stepping through this example in codelens):</p>
   <program label="ac10_6_1" interactive="activecode" language="python">
-    <input>
+    <code>
 b = 15
 
 while b &lt; 60:
     b = 5
     print("Bugs")
     b = b + 7
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

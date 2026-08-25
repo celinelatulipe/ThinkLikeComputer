@@ -8,7 +8,7 @@
             computes the square of a given number. The second function called <c>sum_of_squares</c> makes use of square to compute
             the sum of three numbers that have been squared.</p>
   <program label="clens8_8_1" interactive="codelens" language="python">
-    <input>
+    <code>
 def square(x):
     y = x * x
     return y
@@ -25,7 +25,7 @@ b = 2
 c = 10
 result = sum_of_squares(a,b,c)
 print(result)
-    </input>
+    </code>
   </program>
   <p>Even though this is a pretty simple idea, in practice this example illustrates many very important Python concepts,
             including local and global variables along with parameter passing. Note that the body of <c>square</c> is not executed
@@ -39,7 +39,7 @@ print(result)
             <c>square</c> function. If it didn't find it there, it would go look in the global frame.</p>
   <p>In the example below, we create a turtle drawing program that uses function composition.</p>
   <program label="ac8_8_1" interactive="activecode" language="python">
-    <input>
+    <code>
 import turtle
 import random
 
@@ -93,7 +93,7 @@ yan.speed(10)
 for _ in range(5):
      side = random.randrange(30, 100)
      draw_design(yan, side)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -106,8 +106,8 @@ for _ in range(5):
       <p><term>1.</term> Write two functions, one called <c>addit</c> and one called <c>mult</c>. <c>addit</c> takes one number as an input and adds 5. <c>mult</c> takes one number as an input, and multiplies that input by whatever is returned by <c>addit</c>, and then returns the result.</p>
     </statement>
     <program label="ac8_8_2_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 

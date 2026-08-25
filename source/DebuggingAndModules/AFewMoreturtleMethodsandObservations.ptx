@@ -121,22 +121,22 @@
                     to a different place without drawing a line. The methods are <c>up</c> and <c>down</c>.
                     Note that the methods <c>penup</c> and <c>pendown</c> do the same thing.</p>
         <program language="python">
-          <input>
+          <code>
 alex.up()
 alex.forward(100)     # this moves alex, but no line is drawn
 alex.down()
-</input>
+</code>
         </program>
       </li>
       <li>
         <p>Every turtle can have its own shape. The ones available <q>out of the box</q> are <c>arrow</c>,
                     <c>blank</c>, <c>circle</c>, <c>classic</c>, <c>square</c>, <c>triangle</c>, <c>turtle</c>.</p>
         <program language="python">
-          <input>
+          <code>
 ...
 alex.shape("turtle")
 ...
-</input>
+</code>
         </program>
       </li>
       <li>
@@ -145,9 +145,9 @@ alex.shape("turtle")
                     be set between 1 (slowest) to 10 (fastest). But if you set the speed to 0,
                     it has a special meaning &#x2014; turn off animation and go as fast as possible.</p>
         <program language="python">
-          <input>
+          <code>
 alex.speed(10)
-</input>
+</code>
         </program>
       </li>
       <li>
@@ -159,7 +159,7 @@ alex.speed(10)
   <p>Let's do an example that shows off some of these new features. Note that the code below uses a for loop
             to make the turtle move repeatedly 30 times. We'll cover for loops in the next chapter.</p>
   <program label="ac3_14_1" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 wn.bgcolor("lightgreen")
@@ -177,7 +177,7 @@ for _ in range(30):    # start with size = 5 and grow by 2
 
 tess.color("red")
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

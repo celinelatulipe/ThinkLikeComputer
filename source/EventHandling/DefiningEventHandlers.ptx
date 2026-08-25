@@ -76,13 +76,14 @@
     <p>In addition to writing an event handler function, you also need to <em>register</em> the event handler, so that the Python interpreter knows that you want to receive such events. In some toolkits, you register the event on a separate line of code That is the case in the turtle examples seen in earlier chapters. In the SimpleGUI module, you register handlers in the same line of code that you use to create the user interface widget (for buttons and textboxes), but you have separate instructions to register the more general event handlers that respond to key presses and mouse clicks.</p>
     <p>In all cases, once you have added GUI elements to the window, written the event handlers, and registered the event handlers, you need something to tell the Python interpreter to start listening for events (in the Turtle module it's <c>wn.listen()</c>; in the SimpleGUI module it's <c>frame.start()</c>).</p>
   </subsection>
-  <p>
-    <term>Check your understanding</term>
-  </p>
+  <exercises xml:id="check_under_event_handlers" label="check_under_event_handlers">
+  <title>
+    Check your understanding
+  </title>
   <exercise label="event-handling_event_handlers_chapter10_section7_question1">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           CANVAS_WIDTH = 400
@@ -114,7 +115,7 @@
           frame.add_button('Clear', clear_handler)
           # Show the frame and start listening
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>What would happen if a user was running this code in CodeSkulptor3 and clicked on the canvas <term>once?</term></p>
@@ -157,7 +158,7 @@
   <exercise label="event-handling_event_handlers_chapter10_section7_question2">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           CANVAS_WIDTH = 400
@@ -189,7 +190,7 @@
           frame.add_button('Clear', clear_handler)
           # Show the frame and start listening
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>What would happen if a user running this code in CodeSkulptor3 held their mouse click and <term>dragged</term> on the canvas?</p>
@@ -232,7 +233,7 @@
   <exercise label="event-handling_event_handlers_chapter10_section7_question3">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           CANVAS_WIDTH = 400
@@ -264,7 +265,7 @@
           frame.add_button('Clear', clear_handler)
           # Show the frame and start listening
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>Which line of code defines a Widget Event handler function?</p>
@@ -307,7 +308,7 @@
   <exercise label="event-handling_event_handlers_chapter10_section7_question4">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           CANVAS_WIDTH = 400
@@ -339,7 +340,7 @@
           frame.add_button('Clear', clear_handler)
           # Show the frame and start listening
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>Which line of code defines an Input Event handler function?</p>
@@ -382,7 +383,7 @@
   <exercise label="event-handling_event_handlers_chapter10_section7_question5">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
           import simplegui
 
           CANVAS_WIDTH = 400
@@ -414,7 +415,7 @@
           frame.add_button('Clear', clear_handler)
           # Show the frame and start listening
           frame.start()
-        </input>
+        </code>
       </program>
       <p></p>
       <p>Two functions in this example use the same input data from the argument labeled (pos). Which data type does the argument (pos) require?</p>
@@ -454,4 +455,5 @@
       </choice>
     </choices>
   </exercise>
+  </exercises>
 </section>

@@ -34,7 +34,7 @@
   </p>
   <p>We've shown these steps in bits and pieces, and in this section, we want to show a more complex example that pulls all of this together in one program. The complete example is shown below. You should copy and paste this into a blank CodeSkulptr3 window to run it and see how it works. The code is fairly well commented, but in the text below the code we draw your attention to some important aspects of how this all works together.</p>
   <program language="python">
-    <input>
+    <code>
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""
 # Dr. Celine's COMP 1000 Event-based Programming Example
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -263,7 +263,7 @@ frame.set_mouseclick_handler(click)
 
 # Show the frame and start listening
 frame.start()
-</input>
+</code>
   </program>
   <p>The code uses big comments with lots of #### marks to section off different parts: the global variables at the top (lines 7-27), the function handlers for GUI controls (lines 29-75) and for input device events (lines 77-129), other functions (lines 132-198) and then the code at the bottom that sets up the GUI, registers the event handlers and tells Python to start listening (lines 201-228).</p>
   <p>The way this code works is that there is some drawing state that is saved in the collection of global variables. As the user interacts with the canvas, circles are drawn when the user drags and text is stamped when the user clicks. The color and size of the circles, the color and fontsize of the text, and the background color of the canvas are determined by the values of the global variables. By interacting with the GUI controls, the user can change some of these things (the fill color of the circles/text, the outline width for the circles). The user can also change the value of the text stamp by typing text into the text input box and hitting enter. Whenever such changes are made, they only impact subsequent drawing actions on the canvas.</p>

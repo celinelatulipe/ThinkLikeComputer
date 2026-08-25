@@ -4,25 +4,25 @@
   <p>If you are not sure what type a value is, Python has a function called
             <term>type</term> which can tell you.</p>
   <program label="ac2_5_1" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type("Hello, World!"))
 print(type(17))
 print("Hello, World")
 print(type(3.2))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>We can also use this to find out about types that we use from imported modules, like the turtle module.</p>
   <program label="ac2_5_2" interactive="activecode" language="python">
-    <input>
+    <code>
 import turtle
 win = turtle.Screen()
 tammy = turtle.Turtle()
 tammy.forward(100)
 print(type(tammy))
 print(type(win))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -30,10 +30,10 @@ print(type(win))
   <p>What about values like <c>"17"</c> and <c>"3.2"</c>? They look like numbers, but they
             are in quotation marks like strings.</p>
   <program label="ac2_5_3" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type("17"))
 print(type("3.2"))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -41,12 +41,12 @@ print(type("3.2"))
   <p>Strings in Python can be enclosed in either single quotes (<c>'</c>) or double
             quotes (<c>"</c>), or three of each (<c>'''</c> or <c>"""</c>)</p>
   <program label="ac2_5_4" interactive="activecode" language="python">
-    <input>
+    <code>
 print(type('This is a string.'))
 print(type("And so is this."))
 print(type("""and this."""))
 print(type('''and even this...'''))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -56,19 +56,19 @@ beard"</c>, and single quoted strings can have double quotes inside them, as in
             Strings enclosed with three occurrences of either quote symbol are called
             triple quoted strings.  They can contain either single or double quotes:</p>
   <program label="ac2_5_5" interactive="activecode" language="python">
-    <input>
+    <code>
 print('''"Oh no", she exclaimed, "Ben's bike is broken!"''')
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Triple quoted strings can even span multiple lines:</p>
   <program label="ac2_5_6" interactive="activecode" language="python">
-    <input>
+    <code>
 print("""This message will span
 several lines
 of the text.""")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -77,10 +77,10 @@ of the text.""")
             your program or command, the way it stores the value is identical in all cases,
             and the surrounding quotes are <term>not</term> part of the value that is stored.</p>
   <program label="ac2_5_7" interactive="activecode" language="python">
-    <input>
+    <code>
 print('This is a string.')
 print("""And so is this.""")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -91,10 +91,10 @@ print("""And so is this.""")
             groups of three digits, as in <c>42,000</c>. This is not a legal integer in
             Python, but it does mean something else, which is legal:</p>
   <program label="ac2_5_8" interactive="activecode" language="python">
-    <input>
+    <code>
 print(42500)
 print(42,500)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -102,10 +102,10 @@ print(42,500)
             treat this as a <em>pair</em> of values. In fact, a print statement can print any number of values as long
             as you separate them by commas. Notice that the values are separated by spaces when they are displayed.</p>
   <program label="ac2_5_9" interactive="activecode" language="python">
-    <input>
+    <code>
 print(42, 17, 56, 34, 11, 4.35, 32)
 print(3.4, "hello", 45)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

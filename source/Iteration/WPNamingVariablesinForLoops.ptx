@@ -22,12 +22,12 @@
             comes to choosing variable names. Below we have an example!</p>
             <!-- The include directive pulls in the python code from the third program -->
   <program xml:id="ac4_8_1" label="ac4_8_1" interactive="activecode" language="python" include="a46_8_3">
-    <input>
+    <code>
 # x is a list defined elsewhere
 
 for y in x:
     print(y)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -36,21 +36,21 @@ for y in x:
             compare this to a program that does the same thing, but uses better names.</p>
             <!-- The include directive pulls in the python code from the third program -->
   <program xml:id="ac4_8_2" label="ac4_8_2" interactive="activecode" language="python" include="a46_8_3">
-    <input>
+    <code>
 # genres is a list defined elsewhere
 
 for genre in genres:
     print(genre)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>The code below is used to initialize the two lists used above: x and genres. Click to open.</p>
   <program xml:id="a46_8_3" label="a46_8_3" interactive="activecode" language="python">
-<input>
+<code>
 x = ["jazz", "pop", "rock", "country", "punk", "folk", "hip-hop", "rap", "alternative"]
 genres = ["jazz", "pop", "rock", "country", "punk", "folk", "hip-hop", "rap", "alternative"]
-</input>
+</code>
 <tests>
 </tests>
 </program>

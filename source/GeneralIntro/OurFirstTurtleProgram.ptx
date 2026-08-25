@@ -10,14 +10,14 @@
             drawing canvas towards the right. After line 6, you will have a canvas with a
             turtle and a half drawn rectangle. Press the run button to try it and see.</p>
   <program label="ac_turtle_rectangle_tour" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle             # allows us to use the turtles library
 wn = turtle.Screen()      # creates a graphics window
 antara = turtle.Turtle()    # create a turtle named antara
 antara.forward(150)         # tell antara to move forward by 150 units
 antara.left(90)             # turn by 90 degrees
 antara.forward(75)          # complete the second side of a rectangle
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

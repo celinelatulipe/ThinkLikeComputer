@@ -41,10 +41,10 @@
                 exponentiation is involved:</p>
   </note>
   <program label="ac2_11_1" interactive="activecode" language="python">
-    <input>
+    <code>
 print(2 ** 3 ** 2)     # the right-most ** operator gets done first!
 print((2 ** 3) ** 2)   # use parentheses to force the order you want!
-    </input>
+    </code>
     <tests>
     </tests>
   </program>
@@ -59,9 +59,9 @@ print((2 ** 3) ** 2)   # use parentheses to force the order you want!
     <statement>
       <p>What is the value of the following expression:</p>
       <program language="python">
-        <input>
+        <code>
 16 - 2 * 5 // 3 + 1
-        </input>
+        </code>
       </program>
     </statement>
     <choices>

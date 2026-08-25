@@ -15,10 +15,10 @@
       <title>for loop traversal (<c>for</c>)</title>
       <p><em>Traversing</em> a string or a list means accessing each character in the string or item in the list, one at a time.  For example, the following for loop:</p>
       <program language="python">
-        <input>
+        <code>
 for ix in 'Example':
     ...
-</input>
+</code>
       </program>
       <p>executes the body of the loop 7 times with different values of <c>ix</c> each time.</p>
     </gi>

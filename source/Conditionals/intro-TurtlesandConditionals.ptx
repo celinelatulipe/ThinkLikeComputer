@@ -5,7 +5,7 @@
   <p>So far, our programs have either been a series of statements which always execute sequentially, operations that are applied to each item in an iterable, or calls to functions. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters, except the ones that are asleep. These situations represent choices (bold or not bold?, update or not update?) and in programming, this is done with something called a <term>selection</term> or a <term>conditional statement</term>.</p>
   <p>In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly. Run the program below a few times and examine the code.</p>
   <program label="ac6_1_1" interactive="activecode" language="python">
-    <input>
+    <code>
 # Nesting turtles beach scene
 import turtle
 import random
@@ -36,7 +36,7 @@ for _ in range(20): # repeat loop 20 times
 
   # stamp turtle
   amy.stamp()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

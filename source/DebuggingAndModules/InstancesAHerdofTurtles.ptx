@@ -8,7 +8,7 @@
             direction with a fat black pen. So here is what happens when alex completes a square and
             tess completes a triangle:</p>
   <program label="ac3_12_1" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()             # Set up the window and its attributes
 wn.bgcolor("lightgreen")
@@ -40,7 +40,7 @@ alex.forward(50)
 alex.left(90)
 
 wn.exitonclick()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

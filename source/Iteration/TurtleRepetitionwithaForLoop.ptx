@@ -7,7 +7,7 @@
             Instead of evaluating the code line by line until it reaches the bottom, once the Python interpreter reaches a for loop, the interpreter will execute the set of lines in the for loop repeatedly, a specific number of times. After doing that, the Python interpreter will then continue to evaluate and execute the instructions that are below the for loop.</p>
   <p>In the code below (which doesn't use turtles), we make use of the <c>range</c> function to specify how many times the code inside the for loop will execute. We'll see more about the range function throughout this chapter. For now, just try to understand what happens when the following code executes.</p>
   <program label="ac4_3_1" interactive="activecode" language="python">
-    <input>
+    <code>
 print("This will execute first")
 
 for _ in range(3):
@@ -15,7 +15,7 @@ for _ in range(3):
     print("This line will also execute three times")
 
 print("Now we are outside of the for loop!")
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -33,7 +33,7 @@ print("Now we are outside of the for loop!")
             you'd like to watch the execution, check out the code above in codelens!</p>
   <p>Now it's time to combine this with the Turtle module. We can do a lot of cool stuff if we combine these two things! Below is code to do just that. Try to predict what the program will do before running it.</p>
   <program label="ac4_3_2" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 
@@ -44,16 +44,16 @@ for _ in range(10):
     elan.forward(distance)
     elan.right(90)
     distance = distance + 10
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Try it out yourself in the space below. What can you make?</p>
   <program label="ac4_3_3" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

@@ -6,7 +6,7 @@
               writing and testing this chapter of the book I wrote the following version of the
               example program in the previous section.</p>
     <program language="python">
-      <input>
+      <code>
 current_time_str = input("What is the current time (in hours 0-23)?")
 wait_time_str = input("How many hours do you want to wait")
 
@@ -15,7 +15,7 @@ wait_time_int = int(wait_time_int)
 
 final_time_int = current_time_int + wait_time_int
 print(final_time_int)
-  </input>
+  </code>
     </program>
     <p>Can you see what is wrong, just by looking at the code? Maybe, maybe not. Our brain
               tends to see what we think is there, so sometimes it is very hard to find the problem
@@ -23,7 +23,7 @@ print(final_time_int)
               we have done everything right!</p>
     <p>Let's try the program again, but this time in an activecode:</p>
     <program label="ac3_6_1" interactive="activecode" language="python">
-      <input>
+      <code>
 current_time_str = input("What is the current time (in hours 0-23)?")
 wait_time_str = input("How many hours do you want to wait")
 
@@ -32,7 +32,7 @@ wait_time_int = int(wait_time_int)
 
 final_time_int = current_time_int + wait_time_int
 print(final_time_int)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -115,7 +115,7 @@ print(final_time_int)
         <p>Find and fix the error in the following code.</p>
       </statement>
       <program label="ac_FindandFixErrors_1" interactive="activecode" language="python">
-      <input>
+      <code>
       current_time_str = input("What is the current time (in hours 0-23)?")
       wait_time_str = input("How many hours do you want to wait"
 
@@ -124,11 +124,11 @@ print(final_time_int)
 
       final_time_int = current_time_int + wait_time_int
       print(final_time_int)
-      </input>
+      </code>
       </program>
       <solution>
       <program language="python">
-      <input>
+      <code>
       current_time_str = input("What is the current time (in hours 0-23)?")
       wait_time_str = input("How many hours do you want to wait")
 
@@ -137,7 +137,7 @@ print(final_time_int)
 
       final_time_int = current_time_int + wait_time_int
       print(final_time_int)
-      </input>
+      </code>
       </program>
       <p>Since the error message points us to line 4 this might be a bit confusing. If
          you look at line 4 carefully you will see that there is no problem with the
@@ -169,7 +169,7 @@ print(final_time_int)
        <p>Find and fix the error in the following code.</p>
       </statement>
       <program label="ac_FindandFixErrors_2" interactive="activecode" language="python">
-      <input>
+      <code>
     current_time_str = input("What is the "current time" (in hours 0-23)?")
     wait_time_str = input("How many hours do you want to wait")
 
@@ -178,11 +178,11 @@ print(final_time_int)
 
     final_time_int = current_time_int + wait_time_int
     print(final_time_int)
-    </input>
+    </code>
     </program>
     <solution>
     <program language="python">
-    <input>
+    <code>
     current_time_str = input("What is the 'current time' (in hours 0-23)?")
     wait_time_str = input("How many hours do you want to wait")
 
@@ -191,7 +191,7 @@ print(final_time_int)
 
     final_time_int = current_time_int + wait_time_int
     print(final_time_int)
-    </input>
+    </code>
     </program>
     <p>The error message points you to line 1 and in this case that is exactly where
       the error occurs. In this case your biggest clue is to notice the difference
@@ -238,7 +238,7 @@ print(final_time_int)
     <p>Here's an example of a type error created by a Polish learner.  See if you can find
                 and fix the error.</p>
     <program label="ac3_6_4" interactive="activecode" language="python">
-      <input>
+      <code>
 a = input('wpisz godzine')
 x = input('wpisz liczbe godzin')
 int(x)
@@ -248,7 +248,7 @@ s = x % 24
 print (h, s)
 a = a + s
 print ('godzina teraz', a)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -311,7 +311,7 @@ print ('godzina teraz', a)
                 seen one example of a NameError at the beginning of this section. Here is another one.
                 See if you can get this program to run successfully:</p>
     <program label="ac3_6_5" interactive="activecode" language="python">
-      <input>
+      <code>
 str_time = input("What time is it now?")
 str_wait_time = input("What is the number of hours to wait?")
 time = int(str_time)
@@ -319,7 +319,7 @@ wai_time = int(str_wait_time)
 
 time_when_alarm_go_off = time + wait_time
 print(time_when_alarm_go_off)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -351,7 +351,7 @@ print(time_when_alarm_go_off)
                 highlighted. Most often that will be the typo right there.</p>
     <p>Here is another one for you to try:</p>
     <program label="ac3_6_6" interactive="activecode" language="python">
-      <input>
+      <code>
 n = input("What time is it now (in hours)?")
 n = imt(n)
 m = input("How many hours do you want to wait?")
@@ -359,7 +359,7 @@ m = int(m)
 sum_time = n + m
 time_of_day = sum_time % 12
 print("The time is now", time_of_day)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -376,13 +376,13 @@ print("The time is now", time_of_day)
     </hint>
     <p>And one last bit of code to fix.</p>
     <program label="ac3_6_7" interactive="activecode" language="python">
-      <input>
+      <code>
 present_time = input("Enter the present time in hours:")
 set_alarm = input("Set the hours for alarm:")
 int (present_time, set_time, alarm_time)
 alarm_time = present_time + set_alarm
 print(alarm_time)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -425,7 +425,7 @@ print(alarm_time)
                 expecting a certain limitations on the values, and the value passed is not compatible.
                 We can illustrate that with this particular program in two different ways.</p>
     <program label="ac3_6_8" interactive="activecode" language="python">
-      <input>
+      <code>
 current_time_str = input("What is the current time (in hours 0-23)?")
 current_time_int = int(current_time_str)
 
@@ -434,7 +434,7 @@ wait_time_int = int(wait_time_str)
 
 final_time_int = current_time_int + wait_time_int
 print(final_time_int)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

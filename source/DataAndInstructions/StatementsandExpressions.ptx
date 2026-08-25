@@ -10,10 +10,10 @@ Expressions need to be evaluated. The result of evaluating an expression is a <e
   <image source="DataAndInstructions/Figures/expression_value_type.png" width="50%" alt="table that shows expressions and their value, and type."/>
   <p>If you ask Python to <c>print</c> an expression, the interpreter <term>evaluates</term> the expression and displays the result.</p>
   <program label="ac2_10_1" interactive="activecode" language="python">
-    <input>
+    <code>
 print(1 + 1 + (2 * 3))
 print(len("hello"))
-    </input>
+    </code>
     <tests>
     </tests>
   </program>
@@ -21,12 +21,12 @@ print(len("hello"))
   <p>The <em>evaluation of an expression</em> produces a value, which is why expressions can appear on the right hand
 side of assignment statements. A literal all by itself is a simple expression, and so is a variable.</p>
   <program label="ac2_10_2" interactive="activecode" language="python">
-    <input>
+    <code>
 y = 3.14          # this assignment statement assigns the expression 3.14 to y
 x = len("hello")  # this evaluates the expression len("hello") then assigns 5 to x
 print(x)
 print(y)
-    </input>
+    </code>
     <tests>
     </tests>
   </program>
@@ -51,32 +51,32 @@ print(y)
   </dl>
   <p>Notice that operator expressions (like <c>+</c> and <c>*</c>) have sub-expressions before and after the operator. Each of these can themselves be simple or complex expressions. In that way, you can build up to having pretty complicated expressions.</p>
   <program label="ac2_10_3" interactive="activecode" language="python">
-    <input>
+    <code>
 print(2 * len("hello") + len("goodbye"))
-    </input>
+    </code>
     <tests>
     </tests>
   </program>
   <p>Similarly, when calling a function, instead of putting a literal inside the parentheses, a complex expression can be placed inside the parentheses. (Again, we provide some hidden code that defines the functions <c>square</c> and <c>sub</c>).</p>
   <program label="ac2_10_4" interactive="activecode" language="python">
-    <input>
+    <code>
 def square(x):
   return x * x
 
 def sub(x, y):
   return x - y
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <program label="ac2_10_5" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 2
 y = 1
 print(square(y + 3))
 print(square(y + square(x)))
 print(sub(square(y), square(x)))
-    </input>
+    </code>
     <tests>
     </tests>
   </program>
@@ -161,7 +161,7 @@ print(sub(square(y), square(x)))
   </exercise>
   <p>The following turtle example uses assignment statements, where the result of calling turtle functions is stored in variables and then used later.</p>
   <program label="ac2_10_6" interactive="activecode" language="python">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 sukram = turtle.Turtle()
@@ -170,7 +170,7 @@ right_side = sukram.window_width()/2  # get window width and divide it by two
 top_side = sukram.window_height()/2  # get window height and divide it by two
 
 sukram.goto(right_side, top_side)     # have turtle draw line from center (0,0) to top-right corner
-    </input>
+    </code>
     <tests>
     </tests>
   </program>

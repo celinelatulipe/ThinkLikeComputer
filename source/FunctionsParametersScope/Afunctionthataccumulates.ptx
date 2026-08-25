@@ -9,7 +9,7 @@
             which already exists. We actually <em>could</em> call it len, but that wouldn't be a very good idea, because it would replace
             the original len function, and our implementation may not be a very good one.</p>
   <program label="ac8_6_1" interactive="activecode" language="python">
-    <input>
+    <code>
 def mylen(seq):
     c = 0 # initialize count variable to 0
     for _ in seq:
@@ -18,7 +18,7 @@ def mylen(seq):
 
 print(mylen("hello"))
 print(mylen([1, 2, 7]))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -56,8 +56,8 @@ print(mylen([1, 2, 7]))
       <p><term>1.</term> Write a function named <c>total</c> that takes a list of integers as input, and returns the total value of all those integers added together.</p>
     </statement>
     <program label="ac8_6_2_editor" interactive="activecode" language="python">
-      <input>
-        </input>
+      <code>
+        </code>
 <tests>
 from unittest.gui import TestCaseGui
 
@@ -78,8 +78,8 @@ myTests().main()
       <p><term>2.</term> Write a function called <c>count</c> that takes a list of numbers as input and returns a count of the number of elements in the list.</p>
     </statement>
     <program label="ac8_6_3_editor" interactive="activecode" language="python">
-<input>
-  </input>
+<code>
+  </code>
 <tests>
 from unittest.gui import TestCaseGui
 

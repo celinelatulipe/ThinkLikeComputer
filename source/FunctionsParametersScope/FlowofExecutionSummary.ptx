@@ -23,7 +23,7 @@
     <statement>
       <p>Consider the following Python code. Note that line numbers are included on the left.</p>
       <program language="python">
-        <input>
+        <code>
 def pow(b, p):
     y = b ** p
     return y
@@ -35,7 +35,7 @@ def square(x):
 n = 5
 result = square(n)
 print(result)
-</input>
+</code>
       </program>
       <p>Refering to the line numbers, in what order are the statements excuted?</p>
     </statement>
@@ -86,7 +86,7 @@ print(result)
     <statement>
       <p>Consider the same Python code.</p>
       <program language="python">
-        <input>
+        <code>
 def pow(b, p):
     y = b ** p
     return y
@@ -98,7 +98,7 @@ def square(x):
 n = 5
 result = square(n)
 print(result)
-</input>
+</code>
       </program>
       <p>What is printed out?</p>
     </statement>

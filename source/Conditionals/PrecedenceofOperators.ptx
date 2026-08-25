@@ -102,10 +102,10 @@
 
 
 </prefix>
-      <input>
+      <code>
 
 
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -120,9 +120,9 @@
                 sides of the or statement. In order to properly check that x is inside of either variable, the in
                 operator must be used on both sides which looks like this:</p>
     <program language="python">
-      <input>
+      <code>
 'x' in y or 'x' in z
-</input>
+</code>
     </program>
   </note>
   <p>

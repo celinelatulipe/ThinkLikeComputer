@@ -9,10 +9,10 @@
             represented as <c>\n</c>. If you print a string that contains a newline you will not see the <c>\n</c>, you will just
             see its effects (a carriage return). To see this in action run the following code:</p>
   <program label="ac5_9_1" interactive="activecode" language="python">
-    <input>
+    <code>
 sentences = "This is a string.\nThis part of the string is on a new line."
 print(sentences)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -35,7 +35,7 @@ print(sentences)
             specific items out of the list and prints them out to the console. We'll cover the split() method in detail in Chapter 10.
             The important thing to see here is that the instructions inside the for loop execute, operating on each line of the file in turn.</p>
   <program label="ac5_9_2" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 olympicsfile = open("olympics.txt", "r")
 
 for aline in olympicsfile.readlines():   # read in file contents, putting each line into a list element, before starting loop
@@ -44,7 +44,7 @@ for aline in olympicsfile.readlines():   # read in file contents, putting each l
     print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
 olympicsfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -53,7 +53,7 @@ olympicsfile.close()
             little more comfortable with Python. But this idiom is preferred by Python programmers, so you should be prepared
             to read it. And when you start dealing with big files, you may notice the efficiency gains of using it.</p>
   <program label="ac5_9_3" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 olympicsfile = open("olympics.txt", "r")
 
 for aline in olympicsfile:          # read in file, one line at a time
@@ -61,7 +61,7 @@ for aline in olympicsfile:          # read in file, one line at a time
     print(values[0], "is from", values[3], "and is on the roster for", values[4])
 
 olympicsfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -84,7 +84,7 @@ olympicsfile.close()
       </p>
     </statement>
     <program label="ac5_9_4_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -97,7 +97,7 @@ class myTests(TestCaseGui):
       self.assertNotIn('len', self.getEditorText(), "Testing your code (Don't worry about actual and expected values).")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

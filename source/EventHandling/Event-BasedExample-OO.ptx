@@ -12,7 +12,7 @@
         <p>Object-oriented code is often referred to as &#x2018;OO-code' for short. In OO programming, you create objects to represent things in your program. Instead of having a variable for student number, a variable for student name, and a variable for student grade, you can have a single student object that stores all of that related information together.</p>
         <p>Objects are things that have properties and methods. As an example, a dog has properties that describe the dog (fur color, breed, name, barking sound, name of human owner, age, etc.) and methods that define what it can do (bark, eat, sleep, fetch, etc.). Quite often, calling a method leads to the properties being updated. In object-oriented programming, we create <term>classes</term>, which you can think of as blueprints, and from any class you can create objects of that class. So, we could create a general class that can be used to make dog objects:</p>
         <program language="python">
-        <input>
+        <code>
  class Dog:
      name = ""
      breed = ""
@@ -35,19 +35,19 @@
      def bark(self):
          print(self.bark_sound)
          self.num_barks += 1
-        </input>
+        </code>
     </program>
     <p>And then, we can ask the class to give us a dog, specifying properties of the dog we want:</p>
     <program language="python">
-    <input>
+    <code>
 bingo = Dog("beagle", "Bingo", "Angie", "brown and white", "Hawoooooooooooo")
-</input>
+</code>
     </program>
     <p>The above line of code says create a Dog object, with the following information. It calls a special method inside the Dog class called a <term>constructor</term>. In Python a constructor is the method that has the special name __init__. The constructor constructs a new Dog object with the given information and returns a reference to the dog. In the line above the new Dog object is referenced by the bingo variable. Visually, this looks like this:</p>
     <image source="EventHandling/Figures/dog_class_diagram.png" width="100%"/>
     <p>Once we have a variable that refers to a Dog object, we can call that object's methods and read from or write to its properties:</p>
     <program language="python">
-      <input>
+      <code>
 bingo.fetch()
 bingo.bark()
 bingo.fetch()
@@ -61,12 +61,12 @@ CONSOLE OUTPUT:
 &gt; Bingo fetched a ball!
 &gt; 1
 &gt; 2
-</input>
+</code>
     </program>
     <p>Now, you may be looking at this and thinking <q>Why do we need a class? We could just set up a few variables to store information about Bingo the dog and it would be a lot simpler!</q></p>
     <p>But, what if you want to represent many different dogs in your program? Imagine you are programming a simulation to understand dog over-crowding in animal shelters. Let's look at how we can work with multiple dogs using the class above.</p>
     <program language="python">
-      <input>
+      <code>
 import random
 
 bingo = Dog("beagle", "Bingo", "Angie", "brown and white", "Hawoooooooooooo")
@@ -91,11 +91,11 @@ for _ in range(20):
 for dog in dogs:
     print(dog.name + " barked " + str(dog.num_barks) + " times and fetched "
           + str(dog.num_balls_fetched) + " balls")
-</input>
+</code>
     </program>
     <p>Now, using the Dog class, we have created five different dogs, with a bunch of different information about each, and we haven't had to create 25+ separate variables in our code to represent all of these dogs' features. Then, we add our dog objects to a list. Then we can start to simulate dog play by picking random dogs from the list and calling the bark() or fetch() methods for those dogs. On lines 22-24, we then iterate across the list of dogs and report how many times each dog barked and how many balls each dog fetched. If you look at the Dog class, you'll see that we have two property variables to keep track of the number of barks and the number of balls fetched. Every time we call the bark() method on a particular dog, that method increments that variable. What's critical to understand here is that each dog has their own variable to keep track of the number of barks. You can see that in the sample console output below. You see the print statement <q>Sparky fetched a ball!</q> five times. And then if you look at the print statements at the bottom, it says Sparky barked once and fetched 5 balls. This is the power of object oriented programming: grouping things together into classes, creating objects from those classes, and calling methods on those objects.</p>
     <program language="python">
-      <input>
+      <code>
 CONSOLE OUTPUT:
 &gt; Arf
 &gt; Sparky fetched a ball!
@@ -142,7 +142,7 @@ CONSOLE OUTPUT:
 &gt; Fido barked 3 times and fetched 6 balls
 &gt; Sparky barked 1 times and fetched 5 balls
 &gt; Queenie barked 4 times and fetched 7 balls
-</input>
+</code>
     </program>
   </subsection>
   <subsection xml:id="event-handling_the-event-based-gui-example-oo-style">
@@ -150,7 +150,7 @@ CONSOLE OUTPUT:
     <p>Now, you may be wondering, <q>Okay, but what does this have to do with event-based programming?</q>. In event-based programming, we can create a class that stores important information about the state of our program, and use methods to have things happen in the program in response to user interface events. In the example from the previous section, we created a program that allowed the user to draw with colored circles and stamp text. So, for that program, we can create a class to represent the circles, another class to represent text stamps, and a class to represent the overall drawing context.</p>
     <p>Below is the object-oriented version of the SimpleGUI example. Note that there are no global variables at the top. Other than variables for the window frame and buttons at the bottom of the code, the only other global variable in this code is <c>dc</c>, which is the reference variable to the drawing context object created on line 222. Look carefully at the object classes defined on lines 95-215. In object-oriented programming, the bulk of the code is in the definition of the objects: defining the properties and the methods that can be called on the objects.</p>
     <program language="python">
-      <input>
+      <code>
  # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  # Dr. Celine's COMP 1000 Event-based Programming Example OO Version
  # """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -397,7 +397,7 @@ CONSOLE OUTPUT:
 
  # Show the frame and start listening
  frame.start()
-</input>
+</code>
     </program>
     <p>Most of the functions that were in the previous version are now methods of the drawing context object. And most of the variables that were global variabbles before are now properties of the drawing context.</p>
     <p>The <c>Circle</c> and <c>Text_Stamp</c> classes collapse the information from the prior version. In the previous version if we had three text stamps, we would have three entries in three separate lists, and if we wanted to be able to store different font sizes for each text stamp, we would have had to add a fourth list. In this version, the information for each text stamp is stored as properties of that Text_Stamp object. You can see that the Text_Stamp class already has fontsize as a property, so in this new version, it would be very easy to change the program so that every text stamp could have a different font size: we would just add + and - buttons (similar to the line width buttons we already have) and added a font_change() method to the Drawing_Context class. Then, when we create a new text stamp, we would use the current font size.</p>

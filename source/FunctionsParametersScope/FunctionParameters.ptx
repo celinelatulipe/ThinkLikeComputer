@@ -28,14 +28,14 @@
             function personalizes the greeting: the person to greet is specified by the parameter.</p>
 
 <program label="clens8_2_1" interactive="codelens" language="python">
-    <input>
+    <code>
 def hello2(s):
    print("Hello " + s)
    print("Glad to meet you")
 
 hello2("Iman")
 hello2("Jackie")
-    </input>
+    </code>
 </program>
         <p>First, notice that hello2 has one formal parameter, s. You can tell that because
             there is exactly one variable name inside the parentheses on line 1.</p>
@@ -50,14 +50,14 @@ hello2("Jackie")
 
     <program label="ac8_2_1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 def hello2(s):
     print("Hello " + s)
     print("Glad to meet you")
 
 hello2("Iman" + " and Jackie")
 hello2("Class " * 3)
-        </input>
+        </code>
 <tests>
 
 
@@ -68,7 +68,7 @@ hello2("Class " * 3)
             a parameter that controls how many times the greeting will be printed.</p>
 
 <program label="clens8_2_2" interactive="codelens" language="python">
-    <input>
+    <code>
 def hello3(s, n):
    greeting = "Hello " + s
    print(greeting*n)
@@ -76,7 +76,7 @@ def hello3(s, n):
 hello3("Wei", 4)
 hello3("", 1)
 hello3("Kitty", 11)
-    </input>
+    </code>
 </program>
         <p>At Step 3 of the execution, in the first invocation of hello3, notice that the variable s is bound
             to the value “Wei” and the variable n is bound to the value 4.</p>
@@ -91,7 +91,7 @@ hello3("Kitty", 11)
 
     <program label="clens8_2_1_1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 
 def draw_square(tur, size, linewidth, linecolor):
@@ -118,7 +118,7 @@ for _ in range(12):       # loop 12 times to go around in a circle
     draw_square(alex, 50, 2, "blue")      # Call draw_square with small side length, thin pen &amp; blue color
 
 wn.exitonclick()
-        </input>
+        </code>
 <tests>
 
 
@@ -130,7 +130,7 @@ wn.exitonclick()
 
     <program label="clens8_2_1_2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 
 def draw_square(tur, size, linewidth, linecolor):
@@ -156,7 +156,7 @@ for _ in range(12):       # loop 12 times to go around in a circle
     alex.right(turn_angle) # turn by 15 degrees
     draw_square(alex, 50, 2)      # Type error caused by forgetting a required parameter
 wn.exitonclick()
-        </input>
+        </code>
 <tests>
 
 
@@ -167,7 +167,7 @@ wn.exitonclick()
 
     <program label="clens8_2_1_3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 import turtle
 
 def draw_square(tur, size, linewidth, linecolor):
@@ -193,7 +193,7 @@ for _ in range(12):       # loop 12 times to go around in a circle
     alex.right(turn_angle) # turn by 15 degrees
     draw_square(alex, 2, 50, "blue")      # Logic error caused by switching the middle two values
 wn.exitonclick()
-        </input>
+        </code>
 <tests>
 
 
@@ -254,12 +254,12 @@ wn.exitonclick()
         <statement>
 
             <p>What is the name of the following function?</p>
-            <program language="python"><input>
+            <program language="python"><code>
 def print_many(x, y):
     """Print out string x, y times."""
     for i in range(y):
         print(x)
-</input></program>
+</code></program>
 
         </statement>
 <choices>
@@ -307,12 +307,12 @@ def print_many(x, y):
         <statement>
 
             <p>What are the parameters of the following function?</p>
-            <program language="python"><input>
+            <program language="python"><code>
 def print_many(x, y):
     """Print out string x, y times."""
     for i in range(y):
         print(x)
-</input></program>
+</code></program>
 
         </statement>
 <choices>
@@ -360,14 +360,14 @@ def print_many(x, y):
         <statement>
 
             <p>Considering the function below, which of the following statements correctly invokes, or calls, this function (i.e., causes it to run)?</p>
-            <program language="python"><input>
+            <program language="python"><code>
 def print_many(x, y):
    """Print out string x, y times."""
    for i in range(y):
        print(x)
 
 z = 3
-</input></program>
+</code></program>
 
         </statement>
 <choices>
@@ -453,7 +453,7 @@ z = 3
         <statement>
 
             <p>What output will the following code produce?</p>
-            <program language="python"><input>
+            <program language="python"><code>
 def cyu(s1, s2):
    if len(s1) &gt; len(s2):
       print(s1)
@@ -461,7 +461,7 @@ def cyu(s1, s2):
       print(s2)
 
 cyu("Hello", "Goodbye")
-</input></program>
+</code></program>
 
         </statement>
 <choices>

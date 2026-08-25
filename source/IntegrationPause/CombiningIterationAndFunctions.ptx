@@ -29,7 +29,7 @@
     <p>Remember that to follow Python conventions, we want to declare functions at the top of the script. Then we can call the functions anywhere else in the program, including inside of loops.</p>
     <p>Here is an example of this:</p>
     <program label="ac7_2_1" interactive="activecode" language="python">
-      <input>
+      <code>
 def cube_input():
     input_string = input("Enter a number:")
     input_num = int(input_string)
@@ -43,7 +43,7 @@ for index in range(5):
 
 
 print("That's it. All done.")
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -66,7 +66,7 @@ print("That's it. All done.")
     </p>
     <p>Let's look at a turtle example, with a few different functions called from inside a loop.</p>
     <program label="ac7_2_2" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -113,7 +113,7 @@ for _ in range(input_num):
     stampy()
 
 abi.hideturtle()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -150,7 +150,7 @@ abi.hideturtle()
     <image source="IntegrationPause/Figures/loop_inside_function.png" width="50%"/>
     <p>Here is a modification of the turtle program from above that makes use of a loop inside a function, as well as a loop in the main code that calls the function:</p>
     <program label="ac7_2_3" interactive="activecode" language="python">
-      <input>
+      <code>
 import turtle
 import random
 
@@ -193,7 +193,7 @@ for _ in range(5):
     stampy()
 
 abi.hideturtle()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

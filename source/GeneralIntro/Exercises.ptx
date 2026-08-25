@@ -53,8 +53,8 @@
     </statement>
     <program xml:id="assess_question1_14_2_editor" label="assess_question1_14_2_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     from unittest.gui import TestCaseGui
 
@@ -72,12 +72,12 @@
         <statement>
 
         <p>What will be output to the console when the following program is run?</p>
-        <program language="python"><input>
+        <program language="python"><code>
 # print("Catch you later!")
 print("Good-bye!")
 print("Hope you are well.")
 print("Hello!")
-</input></program>
+</code></program>
 
         </statement>
 <choices>

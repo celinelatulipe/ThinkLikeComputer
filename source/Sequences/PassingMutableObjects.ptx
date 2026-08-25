@@ -6,14 +6,14 @@
     <p>Now that you have a deeper understanding of sequences, we need to revisit functions and parameters. In this section, we look at what happens when we pass mutable lists vs. unmutable tuples and strings to functions.</p>
     <p>Take a look at the following code example. Can you predict what is printed out?</p>
     <program label="ac9_9_1" interactive="activecode" language="python">
-      <input>
+      <code>
 def double(y):
     y = 2 * y
 
 num = 5
 double(num)
 print(num)
-        </input>
+        </code>
       <tests>
      </tests>
     </program>
@@ -27,7 +27,7 @@ print(num)
                 object's state, that state change will be visible globally when the function returns. Take a look at the following
                 example, where a list is passed in to a function.</p>
     <program label="ac9_9_2" interactive="activecode" language="python">
-      <input>
+      <code>
 def changeit(lst):
     lst[0] = "Manitoba"
     lst[1] = "Bisons"
@@ -35,7 +35,7 @@ def changeit(lst):
 mylst = ['our', 'students', 'are', 'awesome']
 changeit(mylst)
 print(mylst)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -66,7 +66,7 @@ print(mylst)
     <title>Passing Tuples</title>
     <p>Tuples are just like lists, except they are not mutable. If you pass a tuple into a function and that function tries to modify the contents of it, an error will be thrown. Consider this example:</p>
     <program label="ac9_9_3" interactive="activecode" language="python">
-      <input>
+      <code>
 def changeit(lst):
     lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
     lst[1] = "Bisons"
@@ -74,13 +74,13 @@ def changeit(lst):
 mytuple = ('our', 'students', 'are', 'awesome')
 changeit(mytuple)  # sending a tuple to this method is going to cause an error in the method
 print(mytuple)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>If you want this to work, you need to convert the tuple into a list, and then store a returned list:</p>
     <program label="ac9_9_4" interactive="activecode" language="python">
-      <input>
+      <code>
 def changeit(lst):
     lst[0] = "Manitoba"  #this will throw an error if lst points to a tuple!
     lst[1] = "Bisons"
@@ -90,7 +90,7 @@ mytuple = ('our', 'students', 'are', 'awesome')
 modified_list = changeit(list(mytuple))  # create a list from the tuple, and send that list to changeit
 print(mytuple)
 print(modified_list)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -99,7 +99,7 @@ print(modified_list)
     <title>Ethics &amp; Data Protection</title>
     <p>We most often use lists for storing data, because we often want the flexibility of being able to edit and change information. However, sometimes there is important data (private personal data, health data, salaries, etc.) that needs to be protected from tampering. As a programmer, if you need to share data but you want to ensure the data isn't tampered with, you can send the data as a tuple. This allows a function to make use of the data, but not change it. Consider this example, which makes use of the accumulator pattern, reading from a tuple, but not modifying it:</p>
     <program label="ac9_9_5" interactive="activecode" language="python">
-      <input>
+      <code>
 def avg_salaries(lst):
     sum = 0;
     count = 0;
@@ -112,7 +112,7 @@ def avg_salaries(lst):
 company_salaries = (45376, 27995, 102345, 160300, 86900, 49354, 68451)
 avg_sal = avg_salaries(company_salaries)
 print(avg_sal)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -124,14 +124,14 @@ print(avg_sal)
       <statement>
         <p>What is the output of the following code fragment?</p>
         <program language="python">
-          <input>
+          <code>
 def myfun(lst):
     lst = [1, 2, 3]
 
 mylist = ['a', 'b']
 myfun(mylist)
 print(mylist)
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -157,14 +157,14 @@ print(mylist)
       <statement>
         <p>What is the output of the following code fragment?</p>
         <program language="python">
-          <input>
+          <code>
 def myfun(lst):
     del lst[0]
 
 mylist = ['a', 'b']
 myfun(mylist)
 print(mylist)
-</input>
+</code>
         </program>
       </statement>
       <choices>

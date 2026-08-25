@@ -32,7 +32,7 @@
 
     <program label="lab9_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -45,7 +45,7 @@ def main():
 
 
 main()
-        </input>
+        </code>
 <tests>
 
 
@@ -84,7 +84,7 @@ main()
 
     <program label="lab9_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -96,7 +96,7 @@ def main():
     message = "tnedutbvbuoidutbvavekilvgniydutbvtratb"
 
 main()
-        </input>
+        </code>
 <tests>
 
 
@@ -113,7 +113,7 @@ main()
 
     <program label="ac_lab9_level3" interactive="activecode" language="python" codelens="no">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -156,7 +156,7 @@ def main():
     #print("The word ", search_word, "occurs ", num_occurences, "times in the poem")
 
 main()
-        </input>
+        </code>
 <tests>
 
 

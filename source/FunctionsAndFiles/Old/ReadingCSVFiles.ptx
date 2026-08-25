@@ -7,7 +7,7 @@
             each following row in the file will contain data that corresponds to the appropriate columns.</p>
   <p>All file methods that we have mentioned - <c>read</c>, <c>readline</c>, and <c>readlines</c>, and simply iterating over the file object itself - will work on CSV files. In our examples, we will iterate over the lines. Because the values on each line are separated with commas, we can use the <c>.split()</c> method to parse each line into a collection of separate value.</p>
   <program label="ac9_13_1" interactive="activecode" language="python">
-    <input>
+    <code>
 fileconnection = open("olympics.txt", 'r')
 lines = fileconnection.readlines()
 header = lines[0]
@@ -20,7 +20,7 @@ for row in lines[1:]:
                 vals[0],
                 vals[4],
                 vals[5]))
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

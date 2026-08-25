@@ -55,14 +55,14 @@
   <exercise label="question10_5_2">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
       import simplegui
        
       frame = simplegui.create_frame('Testing', 100, 100)
       label1 = frame.add_label('My first label')
       label2 = frame.add_label('My second label', 200)
       label3 = frame.add_label('My third label', 20)
-        </input>
+        </code>
       </program>
       <p></p>
       <p> Copy and paste the above code into CodeSkulptor: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>
@@ -155,14 +155,14 @@
   <exercise label="question10_5_4">
     <statement>
       <program language="python">
-        <input> 
+        <code> 
       import simplegui
        
       frame = simplegui.create_frame('Testing', 100, 100)
       label1 = frame.add_label('My first label')
       label2 = frame.add_label('My second label', 200)
       label3 = frame.add_label('My third label', 20)
-        </input>
+        </code>
       </program>
       <p></p>
       <p> Copy and paste the above code into CodeSkulptor: <url href="https://py3.codeskulptor.org/" visual="https://py3.codeskulptor.org/"></url></p>

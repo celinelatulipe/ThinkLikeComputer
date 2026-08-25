@@ -44,7 +44,7 @@
         <p>Notice that when you click the mouse within the canvas, data is displayed within the mouse indicator box on the control panel.</p>
         <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py"></url></p>
         <program language="python">
-          <input> 
+          <code> 
             import simplegui
             import math
 
@@ -74,7 +74,7 @@
             frame.set_mouseclick_handler(click)
             frame.set_draw_handler(draw)
             frame.start()
-          </input>
+          </code>
         </program>
         <p>What is the required parameter/argument for the mouse click event handler function?</p>
       </statement>
@@ -118,7 +118,7 @@
         <p>Evaluate this code example and add <c>print(pos)</c> as a statement within the def click() event handler function:</p>
         <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_click.py"></url></p>
         <program language="python">
-          <input> 
+          <code> 
             import simplegui
             import math
 
@@ -148,7 +148,7 @@
             frame.set_mouseclick_handler(click)
             frame.set_draw_handler(draw)
             frame.start()
-          </input>
+          </code>
         </program>
         <p>What occurs when you run this modified code and click the mouse within the canvas? Select all that apply.</p>
       </statement>
@@ -192,7 +192,7 @@
         <p>Review and run the following code:</p>
         <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_mouse_drag.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_mouse_drag.py"></url></p>
         <program language="python">
-          <input> 
+          <code> 
             import simplegui
 
             WIDTH = 300
@@ -210,7 +210,7 @@
             frame.set_draw_handler(draw)
             frame.set_mousedrag_handler(drag)
             frame.start()
-          </input>
+          </code>
         </program>
         <p>Now remove the statement: <c>global point</c></p>
         <p>What occurs when you run this modified code and <term>drag</term> the mouse within the canvas?</p>
@@ -282,7 +282,7 @@
         <p>Change <c>current_key = chr(key)</c> to <c>current_key = key</c></p>
         <p><url href="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py" visual="https://py3.codeskulptor.org/#examples3_simplegui_key_echo.py"></url></p>
         <program language="python">
-          <input>    
+          <code>    
       import simplegui
       
       current_key = ' '
@@ -298,7 +298,7 @@
       frame.set_keydown_handler(keydown)
       frame.set_draw_handler(draw)
       frame.start()
-          </input>
+          </code>
         </program>
       <p>What occurs when you remove chr() and then click the mouse within the canvas?</p>
       </statement>

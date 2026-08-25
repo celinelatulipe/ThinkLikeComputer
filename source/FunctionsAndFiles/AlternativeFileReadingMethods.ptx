@@ -86,7 +86,7 @@
   <p>The example below shows how to use the readline() method from above and demonstrates how calling this repeatedly
             gets a different line each time, as the file is <term>used up</term>.</p>
   <program label="ac5_8_1" interactive="activecode" language="python" codelens="no">
-    <input>
+    <code>
 olympicsfile = open("olympics.txt", "r")
 
 firstline = olympicsfile.readline()
@@ -95,7 +95,7 @@ secondline = olympicsfile.readline()
 print("the second line of the file is: ", secondline)
 
 olympicsfile.close()
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -117,7 +117,7 @@ olympicsfile.close()
       </p>
     </statement>
     <program label="ac5_8_2_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -129,7 +129,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num_char, 537, "Testing that num_char has the correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -150,7 +150,7 @@ myTests().main()
       </p>
     </statement>
     <program label="ac5_8_3_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -162,7 +162,7 @@ class myTests(TestCaseGui):
       self.assertEqual(num_lines, 11, "Testing that num_lines is assigned to correct value.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -183,7 +183,7 @@ myTests().main()
       </p>
     </statement>
     <program label="ac5_8_4_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 
 =====
 
@@ -194,7 +194,7 @@ class myTests(TestCaseGui):
    def testOne(self):
       self.assertEqual(first_forty, 'Sad upset blue down melancholy somber bi', "Testing that first_forty was created correctly.")
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

@@ -68,11 +68,11 @@
                     <p>Open a new file in IDLE, then type in the following: </p>
                     <p></p>
                     <program language="python">
-                        <input>  
+                        <code>  
                         import turtle
                         wn = turtle.Screen()
                         niki = turtle.Turtle()
-                        </input>
+                        </code>
                     </program>
                 </li>
                 <li>
@@ -91,7 +91,7 @@
                     <p>Edit your program so that your turtle draws a simple picture of a house ⌂ and save this file as <c>house.py</c></p>
                     <p>If you get stuck, add the following code (with comments to describe what the code does):</p>
                     <program language="python">
-                        <input> 
+                        <code> 
                     # draws bottom of house
                     niki.right(90)
                     niki.forward(128)
@@ -107,20 +107,20 @@
                     niki.forward(90)
                     niki.right(90)
                     niki.forward(90)
-                        </input>
+                        </code>
                     </program>
                 </li>
                 <li>
                     <p>Add a comment block at the top of your file.</p>
                     <program language="python">
-                        <input> 
+                        <code> 
                     ################################
                     # First name  Last name
                     # COMP 1000
                     # Week 1 Lab, Part 2
                     # Turtle house drawing 
                     ################################
-                        </input>
+                        </code>
                     </program>
                 </li>
                 <li>

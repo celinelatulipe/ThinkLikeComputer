@@ -127,8 +127,8 @@
     </statement>
     <program xml:id="assess_ch7_4_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     from unittest.gui import TestCaseGui
 
@@ -155,8 +155,8 @@
     </statement>
     <program xml:id="assess_ch7_5_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -175,8 +175,8 @@
     </statement>
     <program xml:id="assess_ch7_6_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -196,8 +196,8 @@
     </statement>
     <program xml:id="assess_ch7_7_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -216,8 +216,8 @@
     </statement>
     <program xml:id="assess_ch7_8_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -235,8 +235,8 @@
     </statement>
     <program xml:id="assess_ch7_9_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -255,8 +255,8 @@
     </statement>
     <program xml:id="assess_ch7_10_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -277,8 +277,8 @@
     </statement>
     <program xml:id="assess_ch7_11_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -298,8 +298,8 @@
     </statement>
     <program xml:id="assess_ch7_12_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -318,8 +318,8 @@
     </statement>
     <program xml:id="assess_ch7_13_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -338,8 +338,8 @@
     </statement>
     <program xml:id="assess_ch7_14_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -366,8 +366,8 @@
     </statement>
     <program xml:id="assess_ch7_15_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -386,8 +386,8 @@
     </statement>
     <program xml:id="assess_ch7_16_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -408,8 +408,8 @@
     </statement>
     <program xml:id="assess_ch7_17_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -428,8 +428,8 @@
     </statement>
     <program xml:id="assess_ch7_18_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -451,8 +451,8 @@
     </statement>
     <program xml:id="assess_ch7_19_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -472,8 +472,8 @@
     </statement>
     <program xml:id="assess_ch7_20_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>
@@ -493,8 +493,8 @@
     </statement>
     <program xml:id="assess_ch7_21_lh_editor" interactive="activecode" language="python">
 
-        <input>
-        </input>
+        <code>
+        </code>
 <tests>
     
 </tests>

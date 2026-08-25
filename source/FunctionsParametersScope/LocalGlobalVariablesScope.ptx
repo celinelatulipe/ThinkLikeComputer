@@ -14,14 +14,14 @@
                 assignment operator. It is called local because this variable only exists inside the function and you cannot use it
                 outside. For example, consider again the <c>square</c> function:</p>
     <program label="ac8_7_1" interactive="activecode" language="python">
-      <input>
+      <code>
 def square(x):
     y = x * x
     return y
 
 z = square(10)
 print(y)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -53,7 +53,7 @@ print(y)
                 local and global variables, and that you really shouldn't do it.</p>
     <p>Look at the following, nonsensical variation of the square function.</p>
     <program label="ac8_7_2" interactive="activecode" language="python">
-      <input>
+      <code>
 def badsquare(x):
     y = x ** power
     return y
@@ -61,7 +61,7 @@ def badsquare(x):
 power = 2
 result = badsquare(10)
 print(result)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -78,7 +78,7 @@ print(result)
                 change variables defined outside the function. Consider the following
                 CodeLens example:</p>
     <program label="clens8_7_1" interactive="codelens" language="python">
-      <input>
+      <code>
 def powerof(x,p):
     power = p   # Another dumb mistake
     y = x ** power
@@ -87,7 +87,7 @@ def powerof(x,p):
 power = 3
 result = powerof(10,2)
 print(result)
-    </input>
+    </code>
     </program>
     <p>Now step through the code. What do you notice about the values of variable <c>power</c>
                 in the local scope compared to the variable <c>power</c> in the global scope?</p>
@@ -105,7 +105,7 @@ print(result)
                 below. Again, you should <em>not</em> do this in your code. The example is here only
                 to cement your understanding of how Python works.</p>
     <program label="clens8_7_2" interactive="codelens" language="python">
-      <input>
+      <code>
 def powerof(x,p):
     global power  # a really...
     power = p     # ...bad idea, but valid code
@@ -116,7 +116,7 @@ power = 3
 result = powerof(10,2)
 print(result)
 print(power)
-    </input>
+    </code>
     </program>
     <p>To cement all of these ideas even further let's look at one final example.
                 Inside the <c>square</c> function we are going to make an assignment to the
@@ -129,7 +129,7 @@ print(power)
                 used as the actual parameter, especially when the two share the same name.
                 But this example demonstrates that that is clearly not how Python operates.</p>
     <program label="clens8_7_3" interactive="codelens" language="python">
-      <input>
+      <code>
 def square(x):
     y = x * x
     x = 0       # assign a new value to the parameter x
@@ -138,7 +138,7 @@ def square(x):
 x = 2
 z = square(x)
 print(z)
-    </input>
+    </code>
     </program>
     <p>
       <term>Check Your Understanding</term>
@@ -169,7 +169,7 @@ print(z)
     <exercise label="question8_7_2">
       <statement>
           <program language="python">
-            <input>
+            <code>
           numbers = [1, 12, 13, 4]
           def foo(bar):
               aug = str(bar) + "street"
@@ -177,7 +177,7 @@ print(z)
 
           for item in numbers:
               print(foo(item))
-             </input>
+             </code>
            </program>
            <p>Which of the following are local variables? Write them in the order that they appear in the code. <var/>  <var/>  </p>
          </statement>
@@ -232,7 +232,7 @@ print(z)
       <statement>
         <p>What would be the result of running the following code?</p>
         <program language="python">
-          <input>
+          <code>
 x = 3 * 2
 y = 1
 
@@ -241,7 +241,7 @@ def subtract(z):
     return y - z
 
 print(subtract(x))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -283,7 +283,7 @@ print(subtract(x))
       <statement>
         <p>What would be the result of running the following code?</p>
         <program language="python">
-          <input>
+          <code>
 def adding(x):
     y = 3
     z = y + x + x
@@ -294,7 +294,7 @@ def producing(x):
     return z
 
 print(producing(adding(4)))
-</input>
+</code>
         </program>
       </statement>
       <choices>
@@ -328,7 +328,7 @@ print(producing(adding(4)))
       <statement>
         <p>What would be the result of running the following code?</p>
         <program language="python">
-          <input>
+          <code>
 x = 9
 
 def adding():
@@ -336,7 +336,7 @@ def adding():
     print(x)
 
 adding()
-</input>
+</code>
         </program>
       </statement>
       <choices>

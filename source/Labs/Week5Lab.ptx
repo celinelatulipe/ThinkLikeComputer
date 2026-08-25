@@ -21,7 +21,7 @@
 
     <program label="lab5_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -53,7 +53,7 @@ alexander.color("red")
 alexander.pendown()
 
 axis()
-        </input>
+        </code>
 <tests>
 
 
@@ -99,7 +99,7 @@ axis()
 
     <program label="lab5_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -120,7 +120,7 @@ RIGHT = 200
 kyra = turtle.Turtle()
 
 #-----Add your code below-----------
-        </input>
+        </code>
 <tests>
 
 
@@ -159,7 +159,7 @@ kyra = turtle.Turtle()
 
     <program label="lab5_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
  ################################################################
  # Student name, ID &amp; lab section
  # Date
@@ -178,7 +178,7 @@ kyra = turtle.Turtle()
 
 
  fileref.close()
-        </input>
+        </code>
 <tests>
 
 

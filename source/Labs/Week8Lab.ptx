@@ -35,7 +35,7 @@
 
     <program label="lab8_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -45,7 +45,7 @@
 num1 = float(input("Please enter a decimal number: "))
 num2 = float(input("Please enter another decimal number: "))
 num3 = float(input("Please enter a third decimal number: "))
-        </input>
+        </code>
 <tests>
 
 
@@ -59,7 +59,7 @@ num3 = float(input("Please enter a third decimal number: "))
 
     <program label="lab8_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -97,7 +97,7 @@ def main():
 
 
 main()
-        </input>
+        </code>
 <tests>
 
 
@@ -128,13 +128,13 @@ main()
 
     <program label="lab8_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
 # Lab 8, Level 3
 ################################################################
-        </input>
+        </code>
 <tests>
 
 

@@ -12,7 +12,7 @@
       <p>Hard-coded answers will receive no credit.</p>
     </statement>
     <program label="assess_ch6_1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 rainfall_mi = "1.65, 1.46, 2.05, 3.03, 3.35, 3.46, 2.83, 3.23, 3.5, 2.52, 2.8, 1.85"
 =====
 from unittest.gui import TestCaseGui
@@ -23,7 +23,7 @@ class myTests(TestCaseGui):
         self.assertEqual(num_rainy_months, 5, "Testing that num_rainy_months has the right value")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -35,13 +35,13 @@ myTests().main()
       <p>Hard-coded answers will receive no credit.</p>
     </statement>
     <program label="assess_ch6_2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
 
 # Write your code here.
 
 
-        </input>
+        </code>
       <tests>
 
 from unittest.gui import TestCaseGui
@@ -62,7 +62,7 @@ myTests().main()
       <p>Hard-coded answers will receive no credit.</p>
     </statement>
     <program label="assess_ch6_3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
 
 
@@ -75,7 +75,7 @@ class myTests(TestCaseGui):
         self.assertEqual(acc_num, 4, "Testing that acc_num has been set to the number of strings that have 'w' in them.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -89,7 +89,7 @@ myTests().main()
       <p>Hard-coded answers will receive no credit.</p>
     </statement>
     <program label="assess_ch6_4_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
 
 
@@ -102,7 +102,7 @@ class myTests(TestCaseGui):
         self.assertEqual(num_a_or_e, 14, "Testing that num_a_or_e has been set to the correct number.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -112,7 +112,7 @@ myTests().main()
       <p>Write code that will count the number of vowels in the sentence <c>s</c> and assign the result to the variable <c>num_vowels</c>. For this problem, vowels are only a, e, i, o, and u. Hint: use the <c>in</c> operator with <c>vowels</c>.</p>
     </statement>
     <program label="assess_ch6_5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
 vowels = ['a','e','i','o','u']
 
@@ -132,7 +132,7 @@ class myTests(TestCaseGui):
        self.assertIn('for', self.getEditorText(), "Testing that you are using a for loop.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -142,7 +142,7 @@ myTests().main()
       <p>Create one conditional so that if <q>Friendly</q> is in <c>w</c>, then <q>Friendly is here!</q> should be assigned to the variable <c>wrd</c>. If it's not, check if <q>Friend</q> is in <c>w</c>. If so, the string <q>Friend is here!</q> should be assigned to the variable <c>wrd</c>, otherwise <q>No variation of friend is in here.</q> should be assigned to the variable <c>wrd</c>. (Also consider: does the order of your conditional statements matter for this problem? Why?)</p>
     </statement>
     <program label="assess_ch6_6_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 w = "Friendship is a wonderful human experience!"
 
 =====
@@ -157,7 +157,7 @@ class myTests(TestCaseGui):
       self.assertIn("elif", self.getEditorText(), "Checking that you used an elif clause.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -167,7 +167,7 @@ myTests().main()
       <p>We have written conditionals for you to use. Create the variable x and assign it some integer so that at the end of the code, <c>output</c> will be assigned the string <c>"Consistently working"</c>.</p>
     </statement>
     <program label="assess_ch6_7_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 if x &gt;= 10:
     output = "working"
 else:
@@ -191,7 +191,7 @@ class myTests(TestCaseGui):
       self.assertIn(x, [7,8,9,10,11,12], "Testing that x was assigned a correct number" )
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -201,7 +201,7 @@ myTests().main()
       <p>Write code so that if <c>"STATS 250"</c> is in the list <c>schedule</c>, then the string <c>"You could be in Information Science!"</c> is assigned to the variable <c>resp</c>. Otherwise, the string <c>"That's too bad."</c> should be assigned to the variable <c>resp</c>.</p>
     </statement>
     <program label="assess_ch6_8_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 schedule = ["SI 106", "STATS 250", "SI 110", "ENGLISH 124/125"]
 
 =====
@@ -215,7 +215,7 @@ class myTests(TestCaseGui):
       self.assertIn("if", self.getEditorText(), "Testing that you used an if clause.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -225,7 +225,7 @@ myTests().main()
       <p>Create the variable <c>z</c> whose value is <c>30</c>. Write code to see if <c>z</c> is greater than <c>y</c>. If so, add 5 to <c>y</c>'s value, otherwise do nothing. Then, multiply <c>z</c> and <c>y</c>, and assign the resulting value to the variable <c>x</c>.</p>
     </statement>
     <program label="assess_ch6_9_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 y = 22
 
 =====
@@ -240,7 +240,7 @@ class myTests(TestCaseGui):
       self.assertEqual(z, 30, "Testing the value of z.")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -250,7 +250,7 @@ myTests().main()
       <p>For each string in <c>wrd_lst</c>, find the number of characters in the string. If the number of characters is less than 6, add 1 to <c>accum</c> so that in the end, <c>accum</c> will contain an integer representing the total number of words in the list that have fewer than 6 characters.</p>
     </statement>
     <program label="assess_ch6_10_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 wrd_lst = ["Hello", "activecode", "Java", "C#", "Python", "HTML and CSS", "Javascript", "Swift", "php"]
 
 =====
@@ -264,7 +264,7 @@ class myTests(TestCaseGui):
       self.assertIn('for ', self.getEditorText(), "Testing that your code has a for loop")
 
 myTests().main()
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -345,7 +345,7 @@ myTests().main()
       <p>Given the following code, what operator should be used so the code works as intended? (Currently states the user is not of legal age) <var/>  </p>
     </statement>  
       
-    <statement>  <input>
+    <statement>  <code>
       MANITOBA_LEGAL_AGE = 18
       my_age = 18
       
@@ -355,7 +355,7 @@ myTests().main()
       else:                  
           print("You are underage in Manitoba") 
   
-      </input> </statement> 
+      </code> </statement> 
     <setup>
       <var>
         <condition string="^\s*&gt;=\s*$">
@@ -377,10 +377,10 @@ myTests().main()
       <p>Given num = 49 on line 3, what value of i will cause line 14 to run? 
         <var/> 
       </p>
-      <note> <p> Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. 
+      <p> Prime numbers are numbers greater than 1 that only have two factors, 1 and the number itself. 
         Notice that in order to reach line 14, line 12 must evaluate to true. 
         Walk through the code to determine what is happening here and what the value will be when line 12 becomes true.
-      </p>  </note>
+      </p>  
     </statement>
     <setup>
       <var>

@@ -26,19 +26,19 @@
     <p>There are several ways to create a new list.  The simplest is to enclose the
                 elements in square brackets ( <c>[</c> and <c>]</c>).</p>
     <program language="python">
-      <input>
+      <code>
 list_of_nums = [10, 20, 30, 40]
 bird_list = ["parrot", "dove", "swallow"]
-</input>
+</code>
     </program>
     <p>The first example is a list of four integers. The second is a list of three
                 strings. As we said above, the elements of a list don't have to be the same type.  The following
                 list contains a string, a float, an integer, and
                 another list.</p>
     <program language="python">
-      <input>
+      <code>
 list_of_things = ["hello", 2.0, 5, [10, 20]]
-</input>
+</code>
     </program>
     <note>
       <p>WP: Don't Mix Types!</p>
@@ -55,21 +55,21 @@ list_of_things = ["hello", 2.0, 5, [10, 20]]
     <p>One way to create a tuple is to write an expression, enclosed in parentheses,
                 that consists of multiple other expressions, separated by commas.</p>
     <program language="python">
-      <input>
+      <code>
 julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
-</input>
+</code>
     </program>
     <p>The key difference between lists and tuples is that a tuple is <term>immutable</term>, meaning that its contents can't be changed after the tuple is
                 created. So, once a tuple is created, it's not possible to add another value to it, to remove a value from it, or replace any of the values in the tuple.</p>
     <p>To create a tuple with a single element (but you're probably not likely to do that too often), you have to include a comma after the item, because without that comma, Python treats the item as a string, float or integer. For example, in the code below, Python treats <c>(5)</c> as an integer in parentheses, but treats <c>(5,)</c> as a tuple:</p>
     <program label="ac9_2_1" interactive="activecode" language="python">
-      <input>
+      <code>
 t = (5,)
 print(type(t))
 
 x = (5)
 print(type(x))
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -88,7 +88,7 @@ print(type(x))
     <title>Adding and Removing Items from Lists</title>
     <p>A different way to build a list is to add items to it one at a time using the append method, like this:</p>
     <program label="ac9_2_5_1" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 my_list = []  # start a new, empty list
@@ -96,13 +96,13 @@ for _ in range(20):
     my_list.append(random.randrange(200, 800))
 
 print(my_list)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>You can also use append to add more items to an existing list. New items are added on to the end of the list:</p>
     <program label="ac9_2_5_2" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 my_list = []  # start a new, empty list
@@ -113,13 +113,13 @@ print(my_list)
 my_list.append(550)
 my_list.append(378)
 print(my_list)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>You can remove items from a list using the remove() method, but you have to make sure the item is in the list before you remove it, otherwise, you will get an error:</p>
     <program label="ac9_2_5_3" interactive="activecode" language="python">
-      <input>
+      <code>
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 print(days)
 if "Monday" in days:
@@ -128,13 +128,13 @@ if "Monday" in days:
 print(days)
 
 days.remove("Saturday") # ERROR!
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>Note that if the item you want to remove is in the list multiple times, the remove method will only remove the first instance of the item:</p>
     <program label="ac9_2_5_4" interactive="activecode" language="python">
-      <input>
+      <code>
 nums = [6, 4, 7, 1, 4, 9, 5, 4, 2, 3]
 print(nums)
 
@@ -142,13 +142,13 @@ if 4 in nums:
      nums.remove(4)
 
 print(nums)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
     <p>There is one other useful method on lists: pop(). Pop removes an item from the end of a list (if you want that item, you need to capture it into a return variable). For example:</p>
     <program label="ac9_2_5_5" interactive="activecode" language="python">
-      <input>
+      <code>
 import random
 
 my_list = []  # create empty list to start
@@ -163,7 +163,7 @@ print(my_list)
 item = my_list.pop()   # save the item popped off the list into a variable
 print(item)
 print(my_list)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

@@ -9,10 +9,10 @@
       <p>Write one for loop to print out each character of the string <c>my_str</c> on a separate line.</p>
     </statement>
     <program label="assess_ch4_1_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 my_str = "MANITOBA"
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -33,9 +33,9 @@ my_str = "MANITOBA"
       <p>Write one for loop to print out each element of the list <c>several_things</c>. Then, write <em>another</em> for loop to print out the TYPE of each element of the list <c>several_things</c>. To complete this problem you should have written two different for loops, each of which iterates over the list <c>several_things</c>, but each of those 2 for loops should have a different result.</p>
     </statement>
     <program label="assess_ch4_2_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -58,11 +58,11 @@ several_things = ["hello", 2, 4, 6.0, 7.5, 234352354, "the end", "", 99]
       <p>Write code that uses iteration to print out <term>the length</term> of each element of the list stored in <c>str_list</c>.</p>
     </statement>
     <program label="assess_ch4_3_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
 
 # Write your code here.
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -82,9 +82,9 @@ str_list = ["hello", "", "goodbye", "wonderful", "I love Python"]
       <p>Write a program that uses the turtle module <term>and</term> a for loop to draw something. It doesn't have to be complicated, but draw something different than we have done in the past. (Hint: if you are drawing something complicated, it could get tedious to watch it draw over and over. Try setting <c>.speed(10)</c> for the turtle to draw fast, or <c>.speed(0)</c> for it to draw super fast with no animation.)</p>
     </statement>
     <program label="assess_ch4_4_editor" interactive="activecode" language="python" codelens="no">
-      <input>
+      <code>
 import turtle
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -94,10 +94,10 @@ import turtle
       <p>Write code to count the number of characters in <c>original_str</c> using the accumulation pattern and assign the answer to a variable <c>num_chars</c>. Do NOT use the <c>len</c> function to solve the problem (if you use it while you are working on this problem, comment it out afterward!)</p>
     </statement>
     <program label="assess_ch4_5_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 original_str = "The quick brown rhino jumped over the extremely lazy fox."
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui
@@ -118,9 +118,9 @@ original_str = "The quick brown rhino jumped over the extremely lazy fox."
       <p>Write code to create a list of numbers from 0 to 67 and assign that list to the variable <c>nums</c>. Do not hard code the list.</p>
     </statement>
     <program label="assess_ch4_7_editor" interactive="activecode" language="python">
-      <input>
+      <code>
 
-        </input>
+        </code>
     <tests>
 
       from unittest.gui import TestCaseGui

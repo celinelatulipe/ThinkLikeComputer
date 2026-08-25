@@ -9,7 +9,7 @@
             In Python, the <c>#</c> token starts a comment.  The rest of the line is ignored.
             Here is a new version of <em>Hello, World!</em>.</p>
   <program label="ac_comment" interactive="activecode" language="python">
-    <input>
+    <code>
 #---------------------------------------------------
 # This demo program shows off how elegant Python is!
 # Written by Joe Soap, December 2010.
@@ -17,7 +17,7 @@
 #---------------------------------------------------
 
 print("Hello, World!")     # Isn't this easy!
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

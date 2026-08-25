@@ -60,10 +60,10 @@
     <p>Take a look at the ActiveCode interpreter in action. Try pressing the <em>Save &amp; Run</em> button below. (If you are not logged
                 in, it will just say <em>Run</em>.)</p>
     <program label="activecode_first_ex" interactive="activecode" language="python">
-      <input>
+      <code>
 print("My first program adds two numbers, 2 and 3:")
 print(2 + 3)
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -89,10 +89,10 @@ print(2 + 3)
                 When we do, think of it as an encouragement to use the CodeLens features to step through the
                 execution of the program to understand how the code is executed. This is really important to do and it will help you learn to &#x2018;Think Like a Computer'.</p>
     <program label="clens_first_example" interactive="codelens" language="python">
-      <input>
+      <code>
 print("My first program adds two numbers, 2 and 3:")
 print(2 + 3)
-    </input>
+    </code>
     </program>
     <p>
       <term>Check your understanding</term>

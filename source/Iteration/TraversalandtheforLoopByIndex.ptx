@@ -5,11 +5,11 @@
   <p>For example, consider the list <c>['apple', 'pear', 'apricot', 'cherry', 'peach']</c>. &#x2018;apple' is at position 0, &#x2018;pear' at position 1, and &#x2018;peach' at position 4.</p>
   <p>Thus, we can iterate through the indexes by generating a sequence of them, using the <c>range</c> function.</p>
   <program label="ac4_11_1" interactive="activecode" language="python">
-    <input>
+    <code>
 fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
 for n in range(5):
     print(n, fruits[n])
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -17,21 +17,21 @@ for n in range(5):
             a very common pattern for traversing any sequence by position. Make sure you understand why the range function behaves
             correctly when using <c>len</c> of the list as its parameter value.</p>
   <program label="ac4_11_2" interactive="activecode" language="python">
-    <input>
+    <code>
 fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
 for n in range(len(fruits)):
     print(n, fruits[n])
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>In some other programming languages, that's the only way to iterate through a sequence, by iterating through the positions and extracting the items at each of the positions. Python code is often easier to read because we don't have to do iteration that way. Compare the iteration above with the more <q>pythonic</q> approach below.</p>
   <program label="ac4_11_3" interactive="activecode" language="python">
-    <input>
+    <code>
 fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
 for fruit in fruits:
     print(fruit)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -43,11 +43,11 @@ for fruit in fruits:
     <statement>
       <p>How many times is the letter p printed by the following statements?</p>
       <program language="python">
-        <input>
+        <code>
 s = "python"
 for idx in range(len(s)):
    print(s[idx % 2])
-</input>
+</code>
       </program>
     </statement>
     <choices>

@@ -5,9 +5,9 @@
   <p>One of the most common forms of reassignment is an <term>update</term> where the new
             value of the variable depends on the old.  For example,</p>
   <program language="python">
-    <input>
+    <code>
 x = x + 1
-</input>
+</code>
   </program>
   <p>This means get the current value of x, add one, and then update x with the new
             value.  The new value of x is the old value of x plus 1.  Although this assignment statement may
@@ -18,12 +18,12 @@ x = x + 1
   <exercise runestone="se_ac2_13_1"/> 
 
   <program label="ac2_13_1" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 6        # initialize x
 print(x)
 x = x + 1    # update x
 print(x)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -37,21 +37,21 @@ print(x)
             that, they usually mean by 1. Sometimes programmers also talk about <term>bumping</term> a variable, which means the same as incrementing it by 1.</p>
   <p>Incrementing and decrementing are such common operations that programming languages often include special syntax for it. In Python <c>+=</c> is used for incrementing, and <c>-=</c> for decrementing. In some other languages, there is even a special syntax <c>++</c> and <c>--</c> for incrementing or decrementing by 1. Python does not have such a special syntax. To increment x by 1 in Python you have to write <c>x += 1</c> or <c>x = x + 1</c>.</p>
   <program label="ac2_13_2" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 6        # initialize x
 print(x)
 x += 3       # increment x by 3; same as x = x + 3
 print(x)
 x -= 1       # decrement x by 1
 print(x)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>Imagine that we wanted to not increment by one each time but instead add together the
             numbers one through ten, but only one at a time.</p>
   <program label="ac2_13_3" interactive="activecode" language="python">
-    <input>
+    <code>
 s = 1
 print(s)
 s = s + 2
@@ -72,7 +72,7 @@ s = s + 9
 print(s)
 s = s + 10
 print(s)
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -84,7 +84,7 @@ print(s)
             easier way to do this kind of task.</p>
   <p>The following turtle example shows some variables used for drawing, but between each use, one of the variables has its value change, resulting in a pattern. Can you predict what the turtle's drawing will look like before you run the code?</p>
   <program label="ac2_13_4" interactive="activecode" language="python">
-    <input>
+    <code>
 import turtle
 wn = turtle.Screen()
 frida = turtle.Turtle()
@@ -101,7 +101,7 @@ frida.home()             # go back to center
 x = x + spacing          # add spacing to x
 frida.goto(x, y)       # draw from center to top, and new x position
 frida.home()             # go back to center
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
@@ -112,11 +112,11 @@ frida.home()             # go back to center
     <statement>
       <p>What is printed when the following statements execute?</p>
       <program language="python">
-        <input>
+        <code>
 x = 12
 x = x - 1
 print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -158,13 +158,13 @@ print(x)
     <statement>
       <p>What is printed when the following statements execute?</p>
       <program language="python">
-        <input>
+        <code>
 x = 12
 x = x - 3
 x = x + 5
 x = x + 1
 print(x)
-</input>
+</code>
       </program>
     </statement>
     <choices>

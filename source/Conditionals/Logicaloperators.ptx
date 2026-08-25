@@ -23,13 +23,13 @@
     <p>Look at the following example. See if you can predict the output. Then, run it to see if your predictions were
               correct:</p>
     <program label="logop_ex1" interactive="activecode" language="python">
-      <input>
+      <code>
 x = True
 y = False
 print(x or y)
 print(x and y)
 print(not x)
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -37,13 +37,13 @@ print(not x)
               example, they are often combined with the comparison operators, as in this example. Again, before you
               run this, see if you can predict the outcome:</p>
     <program label="ac6_3_1" interactive="activecode" language="python">
-      <input>
+      <code>
 x = 5
 print(x &gt; 0 and x &lt; 10)
 
 n = 25
 print(n % 2 == 0 or n % 3 == 0)
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -66,12 +66,12 @@ print(n % 2 == 0 or n % 3 == 0)
               it would be true if Karina went to grad school, it would be true if Karina got a job in industry, it would be true if Karina went to grad
               school <term>and</term> got a job in industry. It would only be false if Karina did neither.</p>
     <program label="ac6_3_2" interactive="activecode" language="python">
-      <input>
+      <code>
 x = 5
 y = 7
 
 print(x &lt; 10 or y &gt; 3)
-          </input>
+          </code>
     <tests>
     </tests>
     </program>
@@ -95,7 +95,7 @@ if answer == 'Y' or answer == 'y':
                 It saves a little processing time. And, as a special bonus, you can take advantage of Python's short-circuiting behavior
                 to shorten your code. Consider the following example:</p>
     <program label="ac_logop_dangerous" interactive="activecode" language="python">
-      <input>
+      <code>
 total_weight = int(input('Enter total weight of luggage:'))
 num_pieces = int(input('Number of pieces of luggage?'))
 
@@ -103,7 +103,7 @@ if total_weight / num_pieces &gt; 50:
    print('Average weight is greater than 50 pounds -&gt; $100 surcharge.')
 
 print('Luggage check complete.')
-        </input>
+        </code>
     <tests>
     </tests>
     </program>
@@ -120,7 +120,7 @@ print('Luggage check complete.')
                 the <c>and</c> operator. Consider the version below, and think about why this <c>if</c> statement is equivalent in its behavior to
                 the previous version with two nested <c>if</c> statements:</p>
     <program label="ac_logop_smarteval" interactive="activecode" language="python">
-      <input>
+      <code>
 total_weight = int(input('Enter total weight of luggage:'))
 num_pieces = int(input('Number of pieces of luggage?'))
 
@@ -128,7 +128,7 @@ if num_pieces != 0 and total_weight / num_pieces &gt; 50:
    print('Average weight is greater than 50 pounds -&gt; $100 surcharge.')
 
 print('Luggage check complete.')
-        </input>
+        </code>
     <tests>
     </tests>
     </program>

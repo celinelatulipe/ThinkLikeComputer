@@ -7,7 +7,7 @@
 
     <program label="ac3_11_1" interactive="activecode" language="python" codelens="no">
     
-        <input>
+        <code>
 import turtle             # allows us to use the turtles library
 wn = turtle.Screen()      # creates a graphics window
 maya = turtle.Turtle()    # create a turtle named maya
@@ -17,7 +17,7 @@ maya.penup()             # tell maya to pick up pen, so maya can move without dr
 maya.forward(25)          # move forward without drawing
 maya.pendown()            # put the pen back down to draw
 maya.forward(50)          # move forward by 50 units
-        </input>
+        </code>
 <tests>
 
 
@@ -105,7 +105,7 @@ maya.forward(50)          # move forward by 50 units
 
     <program label="ac3_11_2" interactive="activecode" language="python" codelens="no">
     
-        <input>
+        <code>
 import turtle
 
 wn = turtle.Screen()
@@ -120,7 +120,7 @@ tess.left(120)
 tess.forward(50)
 
 wn.exitonclick()                # wait for a user click on the canvas
-        </input>
+        </code>
 <tests>
 
 
@@ -162,14 +162,14 @@ wn.exitonclick()                # wait for a user click on the canvas
         <statement>
 
         <p>Consider the following code:</p>
-        <program language="python"><input>
+        <program language="python"><code>
 import turtle
 wn = turtle.Screen()
 alex = turtle.Turtle()
 alex.forward(150)
 alex.left(90)
 alex.forward(75)
-</input></program>
+</code></program>
         <p>What does the line “import turtle” do?</p>
 
         </statement>

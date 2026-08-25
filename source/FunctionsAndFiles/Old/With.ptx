@@ -19,25 +19,25 @@
   <DataFileNode line="39" runestone_options="{'subchapter': 'With', 'chapter': 'Old', 'basecourse': 'PPIE', 'optional': '', 'optclass': '', 'divid': 'mydata.txt', 'qnumber': '', 'cols': 5, 'rows': 20, 'filecontent': '1 2 3\n4 5 6\n', 'hidden': '', 'edit': 'false', 'question_label': '1'}" source="/Users/clatulip/Documents/RunestoneBooks/ThinkLikeComputer/_sources/FunctionsAndFiles/Old/With.rst">
         </DataFileNode>
   <program label="ac9_12_1" interactive="activecode" language="python">
-    <input>
+    <code>
 with open('mydata.txt', 'r') as md:
     for line in md:
         print(line)
 # continue on with other code
-        </input>
+        </code>
     <tests>
     </tests>
   </program>
   <p>The first line of the <title_reference>with</title_reference> statement opens the file and assigns it to the variable <c>md</c>. Then we can iterate over the file in any of the usual ways. When we are done we simply stop indenting and let Python take care of closing the file and cleaning up.</p>
   <p>This is equivalent to code that specifically closes the file at the end, but neatly marks the set of code that can make use of the open file as an indented block, and ensures that the programmer won't forget to include the <c>.close()</c> invocation.</p>
   <program label="ac9_12_2" interactive="activecode" language="python">
-    <input>
+    <code>
 md = open('mydata.txt', 'r')
 for line in md:
     print(line)
 md.close()
 # continue with other code
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

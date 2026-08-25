@@ -19,7 +19,7 @@
 
     <program label="lab4_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -50,7 +50,7 @@ winner.left(45)
 winner.forward(side)
 winner.left(45)
 winner.forward(side)
-        </input>
+        </code>
 <tests>
 
 
@@ -119,7 +119,7 @@ winner.forward(side)
 
     <program label="lab4_level2" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -134,7 +134,7 @@ wn = turtle.Screen() #creates a graphic window
 #-----Add your code below-----------
 
 t1 = turtle.Turtle()
-        </input>
+        </code>
 <tests>
 
 
@@ -171,13 +171,13 @@ t1 = turtle.Turtle()
 
     <program label="lab4_level3" interactive="activecode" language="python">
     
-        <input>
+        <code>
  ################################################################
  # Student name, ID &amp; lab section
  # Date
  # Lab 4, Level 3
  ################################################################
-        </input>
+        </code>
 <tests>
 
 

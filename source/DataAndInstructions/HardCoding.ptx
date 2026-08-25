@@ -16,11 +16,11 @@
   <p>For example, in this following code, if you're asked in an exercise to create a variable <c>zx</c> and assign it the value of
             the sum of the value of <c>y</c> and the value of <c>x</c>, writing <c>zx = 55</c> is <em>hard-coding</em>.</p>
   <program label="ac2_13_11" interactive="activecode" language="python">
-    <input>
+    <code>
 x = 20
 y = 35
 zx = 55 # this is wrong! If x or y were given different values, this would not be their sum
-        </input>
+        </code>
     <tests>
     </tests>
   </program>

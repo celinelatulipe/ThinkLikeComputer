@@ -8,11 +8,11 @@
     <statement>
       <p>What is the type of your iterable?</p>
       <program language="python">
-        <input>
+        <code>
 n = ["word", "phrase", 8, "beam"]
 for item in n:
     print(item)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -54,11 +54,11 @@ for item in n:
     <statement>
       <p>What is the type of your iterable?</p>
       <program language="python">
-        <input>
+        <code>
 t = "couch"
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -100,11 +100,11 @@ for z in t:
     <statement>
       <p>What is the type of your iterable?</p>
       <program language="python">
-        <input>
+        <code>
 y = 18
 for z in y:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -146,11 +146,11 @@ for z in y:
     <statement>
       <p>What is the type of your iterable?</p>
       <program language="python">
-        <input>
+        <code>
 t = ["couch", "chair", "washer", "dryer", "table"]
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -192,11 +192,11 @@ for z in t:
     <statement>
       <p>What is the type of your iterable?</p>
       <program language="python">
-        <input>
+        <code>
 t = "couch"
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -238,11 +238,11 @@ for z in t:
     <statement>
       <p>What's the type of your iterator variable?</p>
       <program language="python">
-        <input>
+        <code>
 t = ["couch", "chair", "washer", "dryer", "table"]
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -284,11 +284,11 @@ for z in t:
     <statement>
       <p>What's the type of your iterator variable in the first iteration?</p>
       <program language="python">
-        <input>
+        <code>
 t = [9, "setter", 3, "wing spiker", 10, "middle blocker"]
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -330,11 +330,11 @@ for z in t:
     <statement>
       <p>What's the type of your iterator variable in the second iteration?</p>
       <program language="python">
-        <input>
+        <code>
 t = [9, "setter", 3, "wing spiker", 10, "middle blocker"]
 for z in t:
     print(z)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -376,11 +376,11 @@ for z in t:
     <statement>
       <p>What's the type of your iterator variable in the final iteration?</p>
       <program language="python">
-        <input>
+        <code>
 red = "colors"
 for blue in red:
     print(blue)
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -420,16 +420,16 @@ for blue in red:
   </exercise>
   <p>As you go through the codelens window, you will be asked a set of questions.</p>
   <program label="clensQuestions4_12_1" interactive="codelens" language="python">
-    <input>
+    <code>
 item = ["M", "I", "S", "S", "O", "U", "R", "I"]
 for val in item:
     val = val + "!"
-    </input>
+    </code>
   </program>
   <program label="clensQuestion4_12_2" interactive="codelens" language="python">
-    <input>
+    <code>
 for n in range(5):
     print(n)
-    </input>
+    </code>
   </program>
 </section>

@@ -83,7 +83,7 @@
     <statement>
       <p>What will the following code output?</p>
       <program language="python">
-        <input>
+        <code>
 def square(x):
     return x*x
 
@@ -94,7 +94,7 @@ def h(y):
     return square(y) + 3
 
 print(h(2))
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -144,7 +144,7 @@ print(h(2))
     <statement>
       <p>What will the following code output?</p>
       <program language="python">
-        <input>
+        <code>
 def square(x):
     return x*x
 
@@ -155,7 +155,7 @@ def h(y):
     return square(y) + 3
 
 print(g(h(2))
-</input>
+</code>
       </program>
     </statement>
     <choices>

@@ -19,11 +19,11 @@
     <title>Attributes</title>
     <p>Each instance can have attributes, sometimes called <term>instance variables</term>. These are just like other variables in Python. We use assignment statements, with an =, to assign values to them. Thus, if alex and tess are variables bound (linked) to two instances of the class Turtle, we can assign values to an attribute, and we can look up those attributes. For example, the following code would print out 1100.</p>
     <program language="python">
-      <input>
+      <code>
       alex.price = 500
       tess.price = 600
       print(alex.price + tess.price)
-      </input>
+      </code>
     </program>
   </subsection>
   <subsection xml:id="debugging-and-modules_methods">

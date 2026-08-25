@@ -43,7 +43,7 @@
 
     <program label="lab10_level1" interactive="activecode" language="python">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -58,7 +58,7 @@ def main():
         print(i, ": ", student_list[i])
 
 main()
-        </input>
+        </code>
 <tests>
 
 
@@ -103,7 +103,7 @@ main()
 
     <program label="lab10_level2" interactive="activecode" language="python" codelens="no">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -123,7 +123,7 @@ def main():
     ari.speed(50) # we need the turtle to go really fast
 
 main()
-        </input>
+        </code>
 <tests>
 
 
@@ -160,7 +160,7 @@ main()
 
     <program label="ac_lab10_level3" interactive="activecode" language="python" codelens="no">
     
-        <input>
+        <code>
 ################################################################
 # Student name, ID &amp; lab section
 # Date
@@ -183,7 +183,7 @@ def main():
     BOTTOM = HEIGHT/2*-1            # bottom edge of canvas
 
 main()
-        </input>
+        </code>
 <tests>
 
 

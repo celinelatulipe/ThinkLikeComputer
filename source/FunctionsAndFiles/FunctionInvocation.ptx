@@ -7,7 +7,7 @@
             the function hello, we won't need to put anything inside the parentheses when we call it. Once we've defined a
             function, we can call it as often as we like and its statements will be executed each time we call it.</p>
   <program label="clens5_3_1" interactive="codelens" language="python">
-    <input>
+    <code>
 def hello():
    print("Hello")
    print("Glad to meet you")
@@ -18,7 +18,7 @@ print(type("hello"))
 hello()
 print("Hey, that just printed two lines with one line of code!")
 hello()  # do it again, just because we can...
-    </input>
+    </code>
   </program>
   <p>Let's take a closer look at what happens when you define a function and when you execute the function.
             Try stepping through the code above.</p>
@@ -130,11 +130,11 @@ hello()  # do it again, just because we can...
     <statement>
       <p>How many lines will be printed out to the console by executing this code?</p>
       <program language="python">
-        <input>
+        <code>
 def hello():
    print("Hello")
    print("Glad to meet you")
-</input>
+</code>
       </program>
     </statement>
     <choices>
@@ -168,7 +168,7 @@ def hello():
     <statement>
       <p>How many lines will be printed out to the console by executing this code?</p>
       <program language="python">
-        <input>
+        <code>
 def hello():
    print("Hello")
    print("Glad to meet you")
@@ -177,7 +177,7 @@ hello()
 print("It works")
 hello()
 hello()
-</input>
+</code>
       </program>
     </statement>
     <choices>
