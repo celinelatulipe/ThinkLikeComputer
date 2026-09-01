@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="iteration_traversal-and-the-for-loop-by-index">
-  <title>Traversal and the <c>for</c> Loop: By Index</title>
+  <title>Traversing the 'for' Loop by Index</title>
   <p>With a for loop, the loop variable is bound, on each iteration, to the next item in a sequence. Sometimes, it is natural to think about iterating through the <em>positions</em>, or <em>indexes</em> of a sequence, rather than through the items themselves.</p>
   <p>For example, consider the list <c>['apple', 'pear', 'apricot', 'cherry', 'peach']</c>. &#x2018;apple' is at position 0, &#x2018;pear' at position 1, and &#x2018;peach' at position 4.</p>
   <p>Thus, we can iterate through the indexes by generating a sequence of them, using the <c>range</c> function.</p>

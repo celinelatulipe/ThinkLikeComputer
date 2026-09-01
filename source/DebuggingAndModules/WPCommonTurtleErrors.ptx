@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="debugging-and-modules_common-turtle-errors">
-  <title>&#x1F469;&#x200D;&#x1F4BB; Common <c>turtle</c> Errors</title>
+  <title>&#x1F469;&#x200D;&#x1F4BB; Common turtle Errors</title>
   <p>Below we'll describe common errors that beginning programmers encounter when writing turtle code.
             Some of these errors can be applied to other instances as well!</p>
   <p>

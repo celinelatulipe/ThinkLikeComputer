@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="debugging-and-modules_the-random-module">
-  <title>The <c>random module</c></title>
+  <title>The random Module</title>
   <subsection xml:id="debugging-and-modules_random-intro">
   <title>Motivation for Randomness</title>
     <p>We often want to use <term>random numbers</term> in programs.  Here are a few typical uses:</p>

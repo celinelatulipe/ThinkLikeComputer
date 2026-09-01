@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="conditionals_the-in-and-not-in-operators">
-  <title>The <c>in</c> and <c>not in</c> operators</title>
+  <title>The 'in' and 'not in' Operators</title>
   <p>The <c>in</c> operator tests if one string is a substring of another:</p>
   <program label="ac6_4_1" interactive="activecode" language="python">
     <code>

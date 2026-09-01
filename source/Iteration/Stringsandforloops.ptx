@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="iteration_strings-and-for-loops">
-  <title>Strings and <c>for</c> loops</title>
+  <title>Strings and for Loops</title>
   <p>Since a string is simply a sequence of characters, the <c>for</c> loop iterates over each character
             automatically. (As always, try to predict what the output will be from this code before you run it.)</p>
   <program xml:id="ac4_6_1_program" label="ac4_6_1" interactive="activecode" language="python">
