@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="functions-parameters-scope_print-vs-return">
-  <title>&#x1F469;&#x200D;&#x1F4BB; Print vs. return</title>
+  <title>Print vs. Return</title>
   <p>Many beginning programmers find the distinction between print and return very confusing, especially since most of the
             illustrations of return values in intro texts like this one show the returned value from a function call by printing
             it, as in <c>print(square(g(2)))</c>.</p>

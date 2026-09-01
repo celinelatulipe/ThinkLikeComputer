@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="conditionals_intro-what-we-can-do-with-turtles-and-conditionals">
-  <title>Intro: What we can do with Turtles and Conditionals</title>
+  <title>Introduction: Fun with Turtles and Conditionals</title>
   <subsection xml:id="conditionals_intro-turtles-section">
   <p>So far, our programs have either been a series of statements which always execute sequentially, operations that are applied to each item in an iterable, or calls to functions. Yet programs frequently need to be more subtle with their behavior. For example, a messaging app might only set a message's title bold if it has not been read by the user. Or a video game needs to update the position of all the characters, except the ones that are asleep. These situations represent choices (bold or not bold?, update or not update?) and in programming, this is done with something called a <term>selection</term> or a <term>conditional statement</term>.</p>
   <p>In the context of turtle drawings, using this kind of statement will allow us to check conditions and change the behavior of the program accordingly. Run the program below a few times and examine the code.</p>

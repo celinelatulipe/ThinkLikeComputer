@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="functions-and-files_iterating-over-lines-in-a-file">
-  <title>Iterating over lines in a file</title>
+  <title>Iterating Over Lines in a File</title>
   <p>We will now use a file as input in a program that will do some data processing. In the program, we will
             examine each line of the file and print it out to the console with some additional text. Because
             <c>readlines()</c> returns a list of lines of text, we can use the <em>for</em> loop to iterate through each line of the file.</p>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="functions-parameters-scope_a-function-that-accumulates">
-  <title>A function that accumulates</title>
+  <title>A Function That Accumulates</title>
   <p>We have used the <c>len</c> function a lot already. If it weren't part of Python, our lives as programmers would have been
             a lot harder.</p>
   <p>Well, actually, not that much harder. Now that we know how to define functions, we could define <c>len</c> ourselves if it

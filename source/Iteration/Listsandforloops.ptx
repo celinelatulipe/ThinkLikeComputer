@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="iteration_lists-and-for-loops">
-  <title>Lists and <c>for</c> loops</title>
+  <title>Lists and for Loops</title>
   <subsection xml:id="iteration_simple-for-loop-example">
     <title>A simple for loop example</title>
     <p>A list is a sequence of items, and in a later chapter, you will learn all about various ways to create, build and edit lists. For now, let's focus on using lists. A <term>list traversal</term> uses a <c>for</c> loop to iterate over each item in the list automatically. Consider this example:</p>

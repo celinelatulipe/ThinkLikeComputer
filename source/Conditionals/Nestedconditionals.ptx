@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <section xml:id="conditionals_nested-conditionals-index-0">
-  <title>Nested conditionals</title>
+  <title>Nested Conditionals</title>
   <p>One conditional can also be <term>nested</term> within another. For example, assume we have two integer variables, <c>x</c> and
             <c>y</c>. The following pattern of selection shows how we might decide how they are related to each other.</p>
   <program language="python">
